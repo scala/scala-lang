@@ -1,1 +1,16 @@
 /* Base stylesheet, also overrides bootstrap */
+body {
+	font-size: 15px;
+}
+
+h1 {
+  font-family: "ff-meta-web-pro";
+  margin-bottom: 12px;
+}
+
+.h3like {
+	font-family: "adelle";
+	font-size: 18px;
+	font-weight: 600;	
+	margin-bottom: 12px;
+}
