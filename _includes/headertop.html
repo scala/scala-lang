@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/stylesheets/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/stylesheets/base.css" type="text/css" />
