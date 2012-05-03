@@ -44,11 +44,11 @@ You can use these fields in the YAML front matter later in your document. For ex
 
     Body text here...
 
-In HTML, `<h1>My page title</h1>` would be rendered for the title.
+`# {{ page.title }}` would be rendered in HTML as, `<h1>My page title</h1>`.
 
 ## Markdown
 
-There are dozens of guides and cheatsheets that cover markdown syntax out there, though this screenshot from the free OSX markdown editor,[Mou](http://mouapp.com/), is an excellent and concise reference:
+There are dozens of guides and cheatsheets that cover markdown syntax out there, though this screenshot from the free OSX markdown editor, [Mou](http://mouapp.com/), is an excellent and concise reference:
 
 ![Mou screen shot](http://mouapp.com/images/Mou_Screenshot_1.png)
 
