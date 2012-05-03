@@ -1,16 +1,39 @@
+---
+---
 /* Base stylesheet, also overrides bootstrap */
-body {
-	font-size: 15px;
-}
+body { font-size: 15px; color:#505050; background: url('{{ site.baseurl }}/resources/images/bg.gif') repeat;}
 
-h1 {
-  font-family: "ff-meta-web-pro";
-  margin-bottom: 12px;
-}
+h1 { font-family: "ff-meta-web-pro"; margin-bottom: 12px; }
 
 .h3like {
+	color: #505050;
 	font-family: "adelle";
 	font-size: 18px;
 	font-weight: 600;	
 	margin-bottom: 12px;
 }
+
+.frontpage-nav li {
+color: #505050;
+display: inline;
+list-style-type: none;
+}
+
+
+nav.mainnav{margin:10px 15px 0 0;float:right}
+
+nav.mainnav li{float:left;height:58px;background:rgba(255,255,255,0.75);-webkit-transition:background .2s linear;-moz-transition:background .2s linear;-o-transition:background .2s linear;transition:background .2s linear;border-top:1px solid transparent;border-bottom:1px solid transparent}
+
+nav.mainnav li:first-child{-webkit-border-top-left-radius:9px;-webkit-border-bottom-left-radius:9px;-moz-border-radius-topleft:9px;-moz-border-radius-bottomleft:9px;border-top-left-radius:9px;border-bottom-left-radius:9px}
+
+nav.mainnav li:last-child{-webkit-border-bottom-right-radius:9px;-webkit-border-top-right-radius:9px;-moz-border-radius-bottomright:9px;-moz-border-radius-topright:9px;border-bottom-right-radius:9px;border-top-right-radius:9px}
+
+nav.mainnav li a{font-family: "ff-meta-web-pro";font-weight:600;padding:20px 30px;display:block;text-align:center;position:relative;text-decoration:none;text-transform:uppercase;color:#3f3f38;text-shadow:1px 1px 0 #fff;font-size:16px;font-weight:700}
+
+nav.mainnav li.current{background:white}
+
+nav.mainnav li:hover{background:#fafafa;background:rgba(255,255,255,0.9)}
+
+nav.mainnav li:not(:first-child) a{border-left:1px solid rgba(0,0,0,0.1)}
+
+nav.mainnav li:not(:last-child) a{border-right:1px solid rgba(255,255,255,0.5)}
