@@ -23,3 +23,35 @@ After cloning, cd into the `scala/scala-lang` directory and run:
     jekyll --server
 
 To see the generated site, just visit `http://localhost:4000`.
+
+## YAML Front Matter
+
+The "YAML Front Matter" is nothing more than the header on each page that you intend for Jekyll to parse. It contains information such as the name of the HTML template (layout) chosen for the specific document, and the title of the document. An example YAML front matter might look like:
+
+    ---
+    layout: page
+    title: My page title
+    ---
+
+You can use these fields in the YAML front matter later in your document. For example, to make a header with the title of the document, in markdown you would write:
+
+    ---
+    layout: page
+    title: My page title
+    ---
+
+    # {{ page.title }}
+
+    Body text here...
+
+In HTML, `<h1>My page title</h1>` would be rendered for the title.
+
+## Markdown
+
+There are dozens of guides and cheatsheets that cover markdown syntax out there, though this screenshot from the free OSX markdown editor,[Mou](http://mouapp.com/), is an excellent and concise reference:
+
+![Mou screen shot](http://mouapp.com/images/Mou_Screenshot_1.png)
+
+### Linking to internal pages
+
+The least error-prone way to link between documents, to link to local images, or anything else: `[link text]({{ site.baseurl }}/path/to/page/page.html)`
