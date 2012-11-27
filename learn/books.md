@@ -17,11 +17,11 @@ listed here.
 <a id="English"></a>English Scala Books
 =======================================
 
-[![](/resources/images/ProgrammingInScala.gif)](http://www.artima.com/shop/programming_in_scala_2ed)
+[![](/resources/img/ProgrammingInScala.gif)](http://www.artima.com/shop/programming_in_scala_2ed)
 
 [**Programming in
 Scala**](http://www.artima.com/shop/programming_in_scala_2ed) 
-– **Available Now**  
+– **Available Now**
 by Martin Odersky, Lex Spoon, and Bill Venners
 
 Being co-written by the language's designer, Martin Odersky, you will
@@ -31,18 +31,18 @@ Scala and a systematic tutorial covering all the features in the
 language. Once you are familiar with the basics of Scala you will
 appreciate having this source of invaluable examples and precise
 explanations of Scala to hand. The book is available
-from [Artima](http://www.artima.com/shop/programming_in_scala_2ed).  
+from [Artima](http://www.artima.com/shop/programming_in_scala_2ed).
 Award winning book - [Jolt Productivity
 award](http://www.drdobbs.com/joltawards/232601431) for Technical Books
 
 
 
-[![](/resources/images/BeginningScala.gif)](http://www.apress.com/book/view/9781430219897)
+[![](/resources/img/BeginningScala.gif)](http://www.apress.com/book/view/9781430219897)
 
 [**Beginning
 Scala**](http://www.apress.com/book/view/9781430219897)
-– **Available Now**  
-by David Pollak.  
+– **Available Now**
+by David Pollak.
 Published by [Apress](http://www.apress.com/book/view/9781430219897) and
 also [available from
 Amazon](http://www.amazon.com/Beginning-Scala-David-Pollak/dp/1430219890/ref=sr_1_1?ie=UTF8&s=books&qid=1233018535&sr=8-1).
@@ -60,12 +60,12 @@ and SAP"
 
 
 
-[![](/resources/images/ProgrammingScala.gif)](http://www.pragprog.com/titles/vsscala/programming-scala)
+[![](/resources/img/ProgrammingScala.gif)](http://www.pragprog.com/titles/vsscala/programming-scala)
 
 [**Programming
 Scala**](http://www.pragprog.com/titles/vsscala/programming-scala)
-– **Available Now**  
-Tackle Multi-Core Complexity on the Java Virtual Machine  
+– **Available Now**
+Tackle Multi-Core Complexity on the Java Virtual Machine
 by Venkat Subramaniam
 
 According to the publisher, The Pragmatic Programmers:
@@ -77,11 +77,11 @@ scalable, highly capable concurrent code.”
 
 
 
-[![](/resources/images/ProgrammingScala-final-border.gif)](http://oreilly.com/catalog/9780596157746/)
+[![](/resources/img/ProgrammingScala-final-border.gif)](http://oreilly.com/catalog/9780596157746/)
 
 [**Programming
 Scala**](http://oreilly.com/catalog/9780596157746/)
-– **Available Now**  
+– **Available Now**
 by Alex Payne and Dean Wampler
 
 Both are industry experts, Alex Payne being the lead API programmer at
@@ -99,12 +99,12 @@ practical needs of enterprise and Internet projects more easily."
 
 
 
-[![](/resources/images/steps-v2.gif)](http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=9780521747585)
+[![](/resources/img/steps-v2.gif)](http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=9780521747585)
 
 [**Steps in
 Scala**](http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=9780521747585)
-– **Available Now**  
-Introduction to Object-Functional Programming  
+– **Available Now**
+Introduction to Object-Functional Programming
 by Christos KK Loverdos and Apostolos Syropoulos
 
 The publisher is [Cambridge University
@@ -122,10 +122,10 @@ functional-oriented natures combined at Scala's core, and so write code
 that is less ‘boilerplate', giving a genuine increase in productivity."
 
 
-[![](/resources/images/icon_Scala_in_Depth_93x116.png)](http://www.manning.com/suereth)
+[![](/resources/img/icon_Scala_in_Depth_93x116.png)](http://www.manning.com/suereth)
 
 [**Scala in Depth**](http://www.manning.com/suereth)
-– **Available Now**  
+– **Available Now**
 by Joshua D. Suereth
 
 Published by [Manning](http://www.manning.com):
@@ -143,10 +143,10 @@ in Scala."
 
 
 
-[![](/resources/images/icon_Scala_in_Action_93x116.png)](http://www.manning.com/raychaudhuri)
+[![](/resources/img/icon_Scala_in_Action_93x116.png)](http://www.manning.com/raychaudhuri)
 
 [**Scala in Action**](http://www.manning.com/raychaudhuri)
-– **Available Sept 2012 (MEAP Available Now)**  
+– **Available Sept 2012 (MEAP Available Now)**
 by Nilanjan Raychaudhuri
 
 Published by [Manning](http://www.manning.com):
@@ -165,11 +165,11 @@ you'll learn to build DSLs and other productivity tools."
 
 
 
-[![](/resources/images/FPiS_93x116.png)](http://manning.com/bjarnason)
+[![](/resources/img/FPiS_93x116.png)](http://manning.com/bjarnason)
 
 [**Functional Programming in
 Scala**](http://manning.com/bjarnason)
-– **Early access MEAP available now**  
+– **Early access MEAP available now**
 by Rúnar Bjarnason, Paul Chiusano, and Tony Morris
 
 Published by [Manning](http://www.manning.com):
@@ -194,11 +194,11 @@ programming."
 <a id="NonEnglish"></a>Non-English Scala Books
 ==============================================
 
-[![](/resources/images/icon_hanser_90x113.png)](http://www.hanser.de/buch.asp?isbn=978-3-446-42399-2&area=Computer)
+[![](/resources/img/icon_hanser_90x113.png)](http://www.hanser.de/buch.asp?isbn=978-3-446-42399-2&area=Computer)
 
 [**Scala**](http://www.hanser.de/buch.asp?isbn=978-3-446-42399-2&area=Computer)
-– **Available Now**  
-Objekt-funktionale Programmierung  
+– **Available Now**
+Objekt-funktionale Programmierung
 by Oliver Braun
 
 Published by [Hanser Computerbuch](http://www.hanser.de):
@@ -216,12 +216,12 @@ an."
 
 
 
-[![](/resources/images/icon_funkt_Grundkurs_91x115.png)](http://www.hanser.de/buch.asp?isbn=978-3-446-42092-2&area=Computer)
+[![](/resources/img/icon_funkt_Grundkurs_91x115.png)](http://www.hanser.de/buch.asp?isbn=978-3-446-42092-2&area=Computer)
 
 [**Grundkurs funktionale Programmierung mit
 Scala**](http://www.hanser.de/buch.asp?isbn=978-3-446-42092-2&area=Computer)
-– **Available Now**  
-Funktionale Programmierung revisited  
+– **Available Now**
+Funktionale Programmierung revisited
 by Lothar Piepmeyer
 
 Published by [Hanser Computerbuch](http://www.hanser.de):
@@ -238,11 +238,11 @@ Abenteuer Lambda!"
 
 
 
-[![](/resources/images/heiko_117x82.jpg)](http://entwickler-press.de/ep/psecom,id,2,buchid,224.html)
+[![](/resources/img/heiko_117x82.jpg)](http://entwickler-press.de/ep/psecom,id,2,buchid,224.html)
 
 [**Durchstarten mit
 Scala**](http://entwickler-press.de/ep/psecom,id,2,buchid,224.html)
-- **Available Now**  
+- **Available Now**
 by Heiko Seeberger and Roman Roelofsen
 
 Published by [entwickler.press](http://entwickler-press.de):
@@ -262,11 +262,11 @@ für eigene Scala-Projekte hat."
 
 
 
-[![](/resources/images/Umsteiger.png)](http://www.oldenbourg-verlag.de/wissenschaftsverlag/scala-umsteiger/9783486596939)
+[![](/resources/img/Umsteiger.png)](http://www.oldenbourg-verlag.de/wissenschaftsverlag/scala-umsteiger/9783486596939)
 
 [**Scala für
 Umsteiger**](http://www.oldenbourg-verlag.de/wissenschaftsverlag/scala-umsteiger/9783486596939)
-– **Available Now**  
+– **Available Now**
 by Friedrich Esser
 
 Published by [Oldenbourg Verlag](http://www.oldenbourg-verlag.de):
@@ -286,12 +286,12 @@ unmittelbarer Einsatz der Sprache möglich ist."
 
 
 
-[![](/resources/images/ProgScalaJP.gif)](http://www.amazon.co.jp/gp/product/4844327453)
+[![](/resources/img/ProgScalaJP.gif)](http://www.amazon.co.jp/gp/product/4844327453)
 
 [**Scalaスケーラブルプログラミング**](http://www.amazon.co.jp/gp/product/4844327453)
-– **Available now**  
- [コンセプト&コーディング]  
- 「Programming in Scala」の日本語訳  
+– **Available now**
+ [コンセプト&コーディング]
+ 「Programming in Scala」の日本語訳
 by Martin Odersky (著), Lex Spoon、Bill Venners (著), 羽生田 栄一
 (監修), 長尾 高弘 (翻訳)
 
@@ -301,11 +301,11 @@ Scalaは、1行コードから大規模プログラムまで書けるスケー�
 
 
 
-[![](/resources/images/icon_jp_scala_div_93x116.png)](http://ec.nikkeibp.co.jp/item/books/P84230.html)
+[![](/resources/img/icon_jp_scala_div_93x116.png)](http://ec.nikkeibp.co.jp/item/books/P84230.html)
 
 [**Scalaプログラミング入門**](http://ec.nikkeibp.co.jp/item/books/P84230.html)
-– **Available Now**  
- 「Beginning Scala」の日本語訳  
+– **Available Now**
+ 「Beginning Scala」の日本語訳
  デイビッド・ポラック (著), 大塚庸史 (翻訳), 羽生田栄一解説 (翻訳)
 
 出版社: [日経BP社](http://corporate.nikkeibp.co.jp)
@@ -314,11 +314,11 @@ Scalaは、1行コードから大規模プログラムまで書けるスケー�
 
 
 
-[![](/resources/images/icon_jp_mo_80x117.png)](http://www.kohgakusha.co.jp/books/detail/978-4-7775-1510-3)
+[![](/resources/img/icon_jp_mo_80x117.png)](http://www.kohgakusha.co.jp/books/detail/978-4-7775-1510-3)
 
 [**はじめてのScala**](http://www.kohgakusha.co.jp/books/detail/978-4-7775-1510-3)
-**Available Now**  
-「関数型+オブジェクト指向」の次世代言語!  
+**Available Now**
+「関数型+オブジェクト指向」の次世代言語!
  清水 美樹 (著)
 
 出版社: [工学社](http://www.kohgakusha.co.jp)
@@ -327,11 +327,11 @@ Scalaは、1行コードから大規模プログラムまで書けるスケー�
 
 
 
-[![](/resources/images/icon_jp_br_92x116.png)](http://www.cutt.co.jp/book/978-4-87783-238-4.html)
+[![](/resources/img/icon_jp_br_92x116.png)](http://www.cutt.co.jp/book/978-4-87783-238-4.html)
 
 [**やさしいScala入門**](http://www.cutt.co.jp/book/978-4-87783-238-4.html)
-– **Available Now**  
-平明な例と演習問題で学ぶ  
+– **Available Now**
+平明な例と演習問題で学ぶ
 著者　日向俊二 
 
 出版社: [カットシステム](http://www.cutt.co.jp)
@@ -343,11 +343,11 @@ Scala」を出力するための単純なプログラムからはじめて徐々
 
 
 
-[![](/resources/images/JP_FunctionalProgrammingWorld_87x118.png)](http://www.amazon.co.jp/gp/product/4774144363)
+[![](/resources/img/JP_FunctionalProgrammingWorld_87x118.png)](http://www.amazon.co.jp/gp/product/4774144363)
 
 [**オブジェクト指向プログラマが次に読む本 -
 Scalaで学ぶ関数脳入門**](http://www.amazon.co.jp/gp/product/4774144363)
-– **Available Now**  
+– **Available Now**
 株式会社テクノロジックアート (著), 長瀬 嘉秀 (監修), 町田 修一 (監修)
 
 出版社: [技術評論社](http://gihyo.jp)
@@ -360,11 +360,11 @@ Scalaで学ぶ関数脳入門**](http://www.amazon.co.jp/gp/product/4774144363)
 
 
 
-[![](/resources/images/jp_leaves_84x114.png)](http://www.amazon.co.jp/gp/product/4797359404)
+[![](/resources/img/jp_leaves_84x114.png)](http://www.amazon.co.jp/gp/product/4797359404)
 
 [**ボクらのScala ～
 次世代Java徹底入門**](http://www.amazon.co.jp/gp/product/4797359404)
-– **Available Now**  
+– **Available Now**
 浅海 智晴 (著)
 
 出版社: [ソフトバンククリエイティブ](http://www.sbcr.jp)
@@ -374,11 +374,11 @@ Scala(スカラ)は記述能力も高く開発効率も高い言語ですが、�
 
 
 
-[![](/resources/images/jp_ProgrammingScala-final-border.png)](http://www.oreilly.co.jp/books/9784873114811/)
+[![](/resources/img/jp_ProgrammingScala-final-border.png)](http://www.oreilly.co.jp/books/9784873114811/)
 
 [**プログラミングScala**](http://www.oreilly.co.jp/books/9784873114811/)
-– **Available Now**  
-「Programming Scala」の日本語訳  
+– **Available Now**
+「Programming Scala」の日本語訳
 Dean Wampler、Alex Payne (著), 株式会社オージス総研
 オブジェクトの広場編集部 (訳)
 
@@ -390,11 +390,11 @@ Toolを使ったScalaの開発について解説しました。Scala 2.7/2.8対�
 
 
 
-[![](/resources/images/JP-Kota_90x117.png)](http://www.shuwasystem.co.jp/products/7980html/2998.html)
+[![](/resources/img/JP-Kota_90x117.png)](http://www.shuwasystem.co.jp/products/7980html/2998.html)
 
 [**オープンソース徹底活用
 Scala実践プログラミング**](http://www.shuwasystem.co.jp/products/7980html/2998.html)
-– **Available Now**  
+– **Available Now**
 小笠原啓、尾崎智仁、関隆、水島宏太、今井敬吾
 
 出版社: [秀和システム](http://www.shuwasystem.co.jp)
@@ -407,11 +407,11 @@ Javaプラットフォーム上で動作するオブジェクト指向と関数�
 
 
 
-[![](/resources/images/swedish_86x115.png)](http://www.studentlitteratur.se/o.o.i.s?id=2474&artnr=33847-01&csid=66&mp=2474)
+[![](/resources/img/swedish_86x115.png)](http://www.studentlitteratur.se/o.o.i.s?id=2474&artnr=33847-01&csid=66&mp=2474)
 
 [**Ett första steg i
 Scala**](http://www.studentlitteratur.se/o.o.i.s?id=2474&artnr=33847-01&csid=66&mp=2474)
-– **Available Now**  
+– **Available Now**
 by Olle Kullberg
 
 Published by [Studentlitteratur](http://www.studentlitteratur.se):
@@ -428,11 +428,11 @@ programmeringsspråk!"
 
 
 
-[![](/resources/images/Pol_89x116.png)](http://www.grzegorzbalcerek.net/jps.html)
+[![](/resources/img/Pol_89x116.png)](http://www.grzegorzbalcerek.net/jps.html)
 
 [**Język programowania
 Scala**](http://www.grzegorzbalcerek.net/jps.html)
-– **Available Now**  
+– **Available Now**
 by Grzegorz Balcerek
 
 "Książka przedstawia język programowania Scala. Jest to

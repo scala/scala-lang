@@ -10,9 +10,6 @@ title: Changelog
 
 No language changes were introduced.
 
-
-
-
 # Changes in Version 2.9.0 (12-May-2011) {: #2.9.0 }
 
 The Scala 2.9.0 codebase includes the following new features and changes:
@@ -24,7 +21,7 @@ Every collection may be converted into a corresponding parallel collection with 
 Depending on the collection in question, `par` may require copying the underlying dataset to create a parallel collection. However, specific collections share their underlying dataset with a parallel collection, making `par` a constant time operation.
 
 Currently available parallel collections are:
-  
+
 * parallel arrays - `scala.collection.parallel.mutable.ParArray`
 * parallel ranges - `scala.collection.parallel.immutable.ParRange`
 * parallel hash maps - `scala.collection.parallel.mutable.ParHashMap`
@@ -41,7 +38,7 @@ The `App` trait is a safer, more powerful alternative to the previous `Applicati
     object Echo extends App {
       println("Echo" + (args mkString " "))
     }
-    
+
 Objects inheriting from the old `Application` trait were almost as convenient to write, but were not thread-safe and were often not optimized by the VM, since the application's body was execited as part of of the object's initialization sequence. Objects inheriting the `App` trait instead make use of Scala 2.9's delayed initialization feature to execute the whole body as part of an inherited `main` method. Another new feature of the `App` scheme is that command line arguments are now accessible via the `args` value (which is inherited from trait `App`)
 
 ## The DelayedInit Trait
@@ -142,9 +139,9 @@ Equality across numeric types is to be consistent across all the primitives type
 ### Packrat parser combinators
 
 With support for packrat parsing, parser combinators are now able to handle left-recursive grammars and will show improved performance for ambiguous productions.
-    
+
 ### Improved XML library
-    
+
 Many bugfixes.
 
 ### Type constructor inference
@@ -166,7 +163,7 @@ Continuations are supported by a compiler plugin, which is now supported as part
 ## Internal improvements
 
 ### New presentation compiler
-   
+
 This new infrastructure, within the Scala compiler, enables IDEs to hook into the compiler to find efficiently information about the structure of the program under editing. This new code offers a better platform for the development of IDE plugins.
 
 ### New build manager
@@ -183,7 +180,7 @@ The compiler now runs as optimised code. In addition, a number of improvements a
 
 A new look-and-feel, automatic comments expansion and wiki-like syntax, as well as compile-time error checking. Read more about changes on the [Scaladoc 2 mini-site](http://lampsvn.epfl.ch/trac/scala/wiki/Scaladoc/).
 
-### Sbaz 2 
+### Sbaz 2
 
 Sbaz includes many bug fixes and enhancements. It now gives better feedback to the user during lengthy downloads and while diagnosing dependency audits, which in turn have been re-factored and enhanced. Sbaz should work properly on Windows using either cmd or cygwin, and is now capable of reliably updating itself. Support for pack200 has been added, in some cases reducing file sizes up to 70%.
 
@@ -237,7 +234,7 @@ A wildcard in a type now binds to the closest enclosing type application.
 For example `List[List[_]]` is now equivalent to the existential type
 
     List[List[t] forSome { type t }]face
-    
+
 In version 2.7.0, the type expanded instead to
 
     List[List[t]] forSome { type t }
@@ -282,7 +279,7 @@ If the object exists already, only the `apply` and `unapply` methods are added t
 Three restrictions on case classes have been removed:
 
 * Case classes can now inherit from other case classes.
-    
+
       case class Foo(x: Int)
       case class Bar(override val x: Int, y: Int) extends Foo(x)
       object test extends Application {
@@ -291,7 +288,7 @@ Three restrictions on case classes have been removed:
           case Foo(x) => println(x)
         }
       }
-    
+
 * Case classes may now be `abstract`
 * Case classes may now come with companion objects:
 
@@ -310,7 +307,7 @@ Three restrictions on case classes have been removed:
 
 The following deprecated features have been removed from the standard Scala library:
 
-| Removed  | Use instead 
+| Removed  | Use instead
 |:--------:|:------------:
 | `All` and `AllRef` (object `scala.Predef`) | `Nothing` and `Null` (available since 2.3.0)
 | element and arity (class `scala.Product`)  | `productElement` and `productArity`
@@ -333,7 +330,7 @@ Mutable variables can now be introduced by a pattern matching definition, just l
 ### Self-types
 
 Self types can now be introduced without defining an alias name for `this`. For example:
-    
+
     class C {
       type T <: Trait
       trait Trait { this: T => ... }
@@ -347,7 +344,7 @@ Self types can now be introduced without defining an alias name for `this`. For 
 
 ### Existential types
 It is now possible to define existential types using the new keyword `forSome`. An existential type has the form `T forSome {Q}` where `Q` is a  sequence of value and/or type declarations. Given the class definitions
-    
+
     class Ref[T]
     abstract class Outer { type T }
 
@@ -400,7 +397,7 @@ Type parameters and abstract type members can now also abstract over type constr
 
     trait Iterable[+t] {
       type MyType[+t] <: Iterable[t] // MyType is a type constructor
-                
+
       def filter(p: t => Boolean): MyType[t] = //...
       def map[s](f: t => s): MyType[s] = //...
     }
@@ -460,14 +457,14 @@ The new notation will displace the special syntax forms `.m()` for abstracting o
 
 It is now possible to use case clauses to define a function value  directly for functions of arities greater than one. Previously,         only unary functions could be defined that way. For example:
 
-    def scalarProduct(xs: Array[Double], ys: Array[Double]) = 
+    def scalarProduct(xs: Array[Double], ys: Array[Double]) =
       (0.0 /: (xs zip ys)) {
         case (a, (b, c)) => a + b * c
       }
-      
-      
-      
-  
+
+
+
+
 # Changes in Version 2.4 (09-Mar-2007) {: #2.4.0 }
 
 ### Object-local private and protected
@@ -508,7 +505,7 @@ It is now explicitly ruled out that case classes can be abstract. The specificat
 
 It is now possible to give an explicit alias name and/or type for the self reference `this`. For instance, in
 
-    class C { self: D => 
+    class C { self: D =>
       ...
     }
 
@@ -531,11 +528,11 @@ It is now possible to combine operators with assignments. For example:
 
 It is now possible to define patterns independently of case classes, using `unapply` methods in extractor objects. Here is an example:
 
-    object Twice {                              
+    object Twice {
       def apply(x: Int): int = x*2
       def unapply(z: Int): Option[int] = if (z%2 == 0) Some(z/2) else None
     }
-    val x = Twice(21) 
+    val x = Twice(21)
     x match { case Twice(n) => Console.println(n) } // prints 21
 
 In the example, `Twice` is an extractor object with two methods:
@@ -566,7 +563,7 @@ It is now possible to use methods which have more than one parameter as infix op
     }
     val c = new C
     c + (1, "abc")
-    
+
 
 ### Deprecated attribute
 
@@ -656,7 +653,7 @@ It is now possible to write multi-line string-literals enclosed in triple quotes
     """this is a
        multi-line
        string literal"""
-   
+
 No escape substitutions except for unicode escapes are performed in such string literals.
 
 
@@ -679,7 +676,7 @@ Scala in its second version is different in some details from the first version 
 The following three words are now reserved; they cannot be used as identifiers
 
     implicit     match     requires
-    
+
 ### Newlines as Statement Separators
 
 Newlines can now be used as statement separators in place of semicolons
@@ -688,7 +685,7 @@ Newlines can now be used as statement separators in place of semicolons
 
 There are some other situations where old constructs no longer work:
 
-#### Pattern matching expressions 
+#### Pattern matching expressions
 
 The `match` keyword now appears only as infix operator between a selector expression and a number of cases, as in:
 
@@ -716,7 +713,7 @@ However, assuming `M` is a trait , it is also legal to write
 The latter expression is treated as equivalent to
 
     class C extends S with M { ... }
-    
+
 where `S` is the superclass of `M`.
 
 #### Regular Expression Patterns
@@ -736,14 +733,14 @@ The recommended syntax of selftype annotations has changed.
 becomes
 
     class C requires T extends B { ... }
-    
+
 That is, selftypes are now indicated by the new `requires` keyword. The old syntax is still available but is considered deprecated.
 
 ### For-comprehensions
 
 For-comprehensions  now admit value and pattern definitions. For example:
 
-    for {  
+    for {
       val x <- List.range(1, 100)
       val y <- List.range(1, x)
       val z = x + y
@@ -757,7 +754,7 @@ Note the definition `val z = x + y` as the third item in the for-comprehension.
 The rules for implicit conversions of methods to functions have been tightened. Previously, a parameterized method used as a value was always implicitly converted to a function. This could lead to unexpected results when method arguments where forgotten. Consider for instance the statement below:
 
     show(x.toString)
-    
+
 where `show` is defined as follows:
 
     def show(x: String) = Console.println(x)
@@ -765,7 +762,7 @@ where `show` is defined as follows:
 Most likely, the programmer forgot to supply an empty argument list `()` to `toString`. The previous Scala version would treat this code as a partially applied method, and expand it to:
 
     show(() => x.toString())
-    
+
 As a result, the address of a closure would be printed instead of the value of `s`.
 
 Scala version 2.0 will apply a conversion from partially applied method to function value only if the expected type of the expression is indeed a function type. For instance, the conversion would not be applied in the code above because the expected type of `show`'s parameter is `String`, not a function type.

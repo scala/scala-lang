@@ -1,7 +1,10 @@
 ---
 ---
-/* Base stylesheet, also overrides bootstrap */
-body { font-size: 15px; color:#505050; background: url('{{ site.baseurl }}/resources/images/bg.gif') repeat;}
+/* ==========================================================================
+   Custom styles, overrides bootstrap
+   ========================================================================== */
+
+body { font-size: 15px; color:#505050; background: url('{{ site.baseurl }}/resources/img/bg.gif') repeat;}
 
 h1 { font-family: "ff-meta-web-pro"; margin-bottom: 12px; }
 
@@ -9,7 +12,7 @@ h1 { font-family: "ff-meta-web-pro"; margin-bottom: 12px; }
 	color: #505050;
 	font-family: "adelle";
 	font-size: 18px;
-	font-weight: 600;	
+	font-weight: 600;
 	margin-bottom: 12px;
 }
 
@@ -37,3 +40,19 @@ nav.mainnav li:hover{background:#fafafa;background:rgba(255,255,255,0.9)}
 nav.mainnav li:not(:first-child) a{border-left:1px solid rgba(0,0,0,0.1)}
 
 nav.mainnav li:not(:last-child) a{border-right:1px solid rgba(255,255,255,0.5)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

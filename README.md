@@ -18,7 +18,7 @@ If in doubt, head over to the [Jekyll wiki](https://github.com/mojombo/jekyll/wi
 
 ## Building
 
-After cloning, cd into the `scala/scala-lang` directory and run: 
+After cloning, cd into the `scala/scala-lang` directory and run:
 
     jekyll --server
 
@@ -56,4 +56,4 @@ There are dozens of guides and cheatsheets that cover markdown syntax out there,
 
 The least error-prone way to link between documents, to link to local images, or anything else: `[link text]({{ site.baseurl }}/path/to/page/page.html)`
 
-Here, `{{ site.baseurl }}` is a site-wide variable that represents the root directory of the static site. So, to display the Scala logo image, located in `resources/images/scala-logo.png`, one must simply write: `![Img alt text]({{ site.baseurl }}/resources/images/scala-logo.png)`
+Here, `{{ site.baseurl }}` is a site-wide variable that represents the root directory of the static site. So, to display the Scala logo image, located in `img/scala-logo.png`, one must simply write: `![Img alt text]({{ site.baseurl }}/resources/img/scala-logo.png)`
