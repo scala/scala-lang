@@ -8,7 +8,7 @@ LinkedIn, UBS and many others do. It is fully compatible with your existing Java
 
 Scala gets its outstanding qualities from its unique combination of features, some of which we introduce here.
 
-##Type-safety, concise Syntax and type inference
+##Type-safety, concise syntax and type inference
 Scala's clean syntax reminds of dynamic languages like Python. Unlike those languages it provides strong type-safety like Java, but unlike Java, Scala does not require you to write down the types yourself. The 
 compiler is smart enough to figure them out for you from the context using a technique called type-inference. Scala code is usually smaller than equivalent Java code by a factor of two.
 
