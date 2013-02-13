@@ -109,11 +109,9 @@ function onEventsAjaxError(jqXHR, textStatus, errorThrown) {
 }
 
 $.ajax({
-	//url: "http://typesafe.com/resources/feedEvents",
-	url: "{{ site.baseurl }}/resources/feedEvents",
+	url: "{{ site.baseurl }}/cgi-bin/typesafe-feed-events",
 	type: "GET",
 	dataType: "json",
-	//crossDomain: true,
 	success: onEventsAjaxSuccess,
 	error: onEventsAjaxError
 });
@@ -189,11 +187,9 @@ function onTrainingsAjaxError(jqXHR, textStatus, errorThrown) {
 }
 
 $.ajax({
-	//url: "http://typesafe.com/resources/feedTrainings",
-	url: "{{ site.baseurl }}/resources/feedTrainings",
+	url: "{{ site.baseurl }}/cgi-bin/typesafe-feed-trainings",
 	type: "GET",
 	dataType: "json",
-	//crossDomain: true,
 	success: onTrainingsAjaxSuccess,
 	error: onTrainingsAjaxError
 });
