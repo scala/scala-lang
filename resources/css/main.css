@@ -22,6 +22,10 @@ display: inline;
 list-style-type: none;
 }
 
+dt {
+	margin-top: 8px;
+}
+
 
 nav.mainnav{margin:10px 15px 0 0;float:right}
 
