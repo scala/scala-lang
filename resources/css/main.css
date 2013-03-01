@@ -792,3 +792,57 @@ color: #fff;
   min-height: 400px;
 }
 
+/*.training-item {
+
+}
+
+.training-description {
+
+}
+
+.training-location {
+
+}
+
+.training-date {
+
+}
+
+.training-trainers {
+
+}
+
+.training-organizer {
+
+}
+---
+istraining: true
+title: Test training
+description: This a cool test training
+link-out: http://www.epfl.ch/
+where: Lausanne, Switzerland
+when: 23 March 2013
+trainers: Sébastien Doeraene
+organizer: EPFL
+status: unknown
+---
+ '<div class="training-item">' +
+          '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
+          '<div class="training-description">'+training.description+'</div>' +
+          '<div class="training-location">'+training.where+'</div>' +
+          '<div class="training-date"><img src="{{ site.baseurl }}/resources/img/icon-date.png" /> '+training.when+'</div>' +
+          '<div class="training-trainers"><span class="by">By</span> <div class="training-trainers-name">'+training.trainers+'</div></div>' +
+          '<div class="training-organizer">'+training.organizer+'</div>' +
+        '</div>';
+
+        '<div class="event-item">' +
+          '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
+          '<div class="event-logo"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></div>' +
+          '<div class="event-location">'+event.location+'</div>' +
+          '<div class="event-date"><img src="{{ site.baseurl }}/resources/img/icon-date.png" /> '+
+            event.start + (event.end ? ' to '+event.end : '') + '</div>' +
+        '</div>';
+
+
+
+*/
