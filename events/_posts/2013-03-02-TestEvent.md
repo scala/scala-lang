@@ -6,5 +6,5 @@ location: Lausanne, Switzerland
 description: This a test event, but cool nevertheless!
 start: 2 March 2013
 end: 4 March 2013
-url: http://www.epfl.ch/
+link-out: http://www.epfl.ch/
 ---

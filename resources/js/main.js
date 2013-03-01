@@ -71,7 +71,7 @@ $(document).ready(function(){
       "location": "{{ event.location }}",
       "start": "{{ event.start }}",
       "end": "{{ event.end }}",
-      "url": "{{ event.url }}",
+      "url": "{{ event.link-out }}",
     },
   {% endif %}
   {% endfor%}
@@ -127,7 +127,7 @@ $(document).ready(function(){
     {
       title: "{{ training.title }}",
       description: "{{ training.description }}",
-      url: "{{ event.url }}",
+      url: "{{ training.link-out }}",
       sessions: [
         {
           where: "{{ training.where }}",
