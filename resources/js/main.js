@@ -66,7 +66,7 @@ $(document).ready(function(){
   }
 
   var scalaLangEvents = [
-  {% for event in site.pages %}{% if event.isevent %}
+  {% for event in site.categories.events limit:5 %}
     {
       "title": "{{ event.title }}",
       "logo": "{{ event.logo }}",
@@ -75,7 +75,7 @@ $(document).ready(function(){
       "end": "{{ event.end }}",
       "url": "{{ event.url }}",
     }{% unless forloop.last %},{% endunless %}
-  {% endif %}{% endfor%}
+  {% endfor%}
   ];
 
   function doPopulateEventsPane(allEvents) {
@@ -120,7 +120,7 @@ $(document).ready(function(){
   }
 
   var scalaLangTrainings = [
-  {% for training in site.pages %}{% if training.istraining %}
+  {% for training in site.categories.training limit:5 %}
     {
       title: "{{ training.title }}",
       description: "{{ training.description }}",
@@ -135,7 +135,7 @@ $(document).ready(function(){
         }
       ]
     }{% unless forloop.last %},{% endunless %}
-  {% endif %}{% endfor%}
+  {% endfor%}
   ];
 
   function keepOnlyOneSession(trainings) {
