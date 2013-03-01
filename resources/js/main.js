@@ -36,7 +36,17 @@ $(document).ready(function(){
 //   parallax.scaling = 0.4; //background moves 40% with the pages
 // });
 
-function populateEventsAndTrainingsPaneWhenLoaded() {
+
+/******************************
+ * Events and trainings feeds *
+ ******************************/
+
+$(document).ready(function(){
+  var $eventsAndTrainingDiv = $('#eventsAndTraining');
+
+  // Stop early if the element does not exist
+  if ($eventsAndTrainingDiv.length == 0)
+    return;
 
   function compareFormattedDates(lhs, rhs) {
     var lhsDate = new Date(lhs);
@@ -181,6 +191,4 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
     error: onTrainingsAjaxError
   });
 
-}
-window.addEventListener("load", populateEventsAndTrainingsPaneWhenLoaded, false);
-
+});
