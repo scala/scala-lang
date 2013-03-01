@@ -67,7 +67,7 @@ While you wait for a book you will find the following resources useful:
 
 ## Scala Programmer
 
-If you are a Scala programmer looking for more examples and help, you will a list of useful resources by following this link. You may want to check out the [community resources]({{ site.baseurl }}/community/) too, or browse the list of the available documentation [on this page](http://www.scala-lang.org/node/197).
+If you are a Scala programmer looking for more examples and help, you will a list of useful resources by following this link. You may want to check out the [community resources]({{ site.baseurl }}/community/) too, or browse the list of the available documentation [on this page](http://docs.scala-lang.org).
 
 
 ## C++, C#, Ruby, Python, Visual Basic, etc Programmer
