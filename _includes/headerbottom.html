@@ -11,7 +11,18 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
+      var f = function(event){
+        _gaq.push(['_trackEvent','Downloads','Download',$(this).attr('href')]);
+      };
+      function endsWith(str, suffix) {
+          return str.indexOf(suffix, str.length - suffix.length) !== -1;
+      }
+      $(function(){
+        $('a').filter(function(){
+          var href = $(this).attr('href');
+          return !endsWith(href,'/') && !endsWith(href,'html');
+        }).on('click',f);
+      });
     </script>
   </head>
   <body>
