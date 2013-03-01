@@ -44,6 +44,9 @@ $(document).ready(function(){
 $(document).ready(function(){
   var $eventsAndTrainingDiv = $('#eventsAndTraining');
 
+  var MAX_EVENTS = 5;
+  var MAX_TRAININGS = 5;
+
   // Stop early if the element does not exist
   if ($eventsAndTrainingDiv.length == 0)
     return;
@@ -81,7 +84,7 @@ $(document).ready(function(){
   function doPopulateEventsPane(allEvents) {
     allEvents.sort(compareEventsByDate);
     var content = "";
-    for (i = 0; i < allEvents.length; i++) {
+    for (i = 0; i < allEvents.length && i < MAX_EVENTS; i++) {
       var event = allEvents[i];
       var thisContent =
         event.title + " in " + event.location + "<br />" +
@@ -140,7 +143,7 @@ $(document).ready(function(){
 
   function keepOnlyOneSession(trainings) {
     var result = new Array();
-    for (i = 0; i < trainings.length; i++) {
+    for (i = 0; i < trainings.length && i < MAX_TRAININGS; i++) {
       var training = trainings[i];
       var firstSession = training.sessions[0];
       result[i] = {
