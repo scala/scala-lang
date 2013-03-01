@@ -62,7 +62,7 @@ Here, `{{ site.baseurl }}` is a site-wide variable that represents the root dire
 
 ## Resources and Workflow
 
-On every commit to the `scala/scala-lang` repository a [jenkins job](https://scala-webapps.epfl.ch/jenkins/view/All/job/scala-lang.org-builder/) will generate the site using jekyll and copy the resulting files to the webserver.
+On every commit to the `scala/scala-lang` repository a [jenkins job](https://scala-webapps.epfl.ch/jenkins/view/All/job/scala-lang.org-builder/) will generate the site using jekyll and copy the resulting files to the webserver. **NOTE**: the `rsync` of this job also deletes whatever is in the webserver directory **with explicit exceptions**: we need to keep the files listed below. Kind of a hack.
 
 There are additional files on the webserver:
   - Subdirectory `scala-lang.org/old` is a static copy of the old website. It was generated once and copied there, and it stays like that.
