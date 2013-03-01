@@ -24,17 +24,11 @@ $(document).ready(function(){
   });
 
   // tweets
-  // $("#tweets").liveTwitter('heathercmiller', {mode: 'user_timeline'});
   $(function(){
     $("#tweets").liveTwitter('scala_lang');
   });
 
 });
-
-// $(window).bind("load", function() {
-//   parallax.background = $(".splash");
-//   parallax.scaling = 0.4; //background moves 40% with the pages
-// });
 
 
 /******************************

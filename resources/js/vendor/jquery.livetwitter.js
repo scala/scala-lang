@@ -301,7 +301,7 @@
                 html += '<div class="row"><div class="span1"><div class="thumbnail">';
                 html += '<img width="' + this.settings.imageSize + '" height="' + this.settings.imageSize + '" src="' + tweet.retweeter_profile_image_url + '" />';
                 html += '</div></div><div  class="span2">';
-                html += '<span class="username">original tweet by </br><a href="' + tweet.retweeter_profile_url + '" rel="external">' + tweet.retweeter_screen_name + '</a></span> ';
+                html += '<span class="username">original tweet by </br><a href="http://twitter.com/#!/' + tweet.retweeter_screen_name + '" rel="external">' + tweet.retweeter_screen_name + '</a></span> ';
                 html += '</div></div>';
               } else {
                 html += '<div class="caret-container"><div class="caret-divider"><div class="caret-outer"></div><div class="caret-inner"></div></div></div>';
