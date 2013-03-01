@@ -23,6 +23,7 @@ listed here.
 Scala**](http://www.artima.com/shop/programming_in_scala_2ed)
 – **Available Now**
 by Martin Odersky, Lex Spoon, and Bill Venners
+- firtst edition [available for free online reading](http://www.artima.com/pins1ed/)
 
 <div class="row">
   <div class="span2">
@@ -154,6 +155,7 @@ you'll learn to build DSLs and other productivity tools."
 Scala**](http://oreilly.com/catalog/9780596157746/)
 – **Available Now**
 by Alex Payne and Dean Wampler
+- also [available for free online reading](http://ofps.oreilly.com/titles/9780596155957/)
 
 <div class="row">
   <div class="span2">
