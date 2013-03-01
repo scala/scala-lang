@@ -24,19 +24,26 @@ $(document).ready(function(){
   });
 
   // tweets
-  // $("#tweets").liveTwitter('heathercmiller', {mode: 'user_timeline'});
   $(function(){
     $("#tweets").liveTwitter('scala_lang');
   });
 
 });
 
-// $(window).bind("load", function() {
-//   parallax.background = $(".splash");
-//   parallax.scaling = 0.4; //background moves 40% with the pages
-// });
 
-function populateEventsAndTrainingsPaneWhenLoaded() {
+/******************************
+ * Events and trainings feeds *
+ ******************************/
+
+$(document).ready(function(){
+  var $eventsAndTrainingDiv = $('#eventsAndTraining');
+
+  var MAX_EVENTS = 5;
+  var MAX_TRAININGS = 5;
+
+  // Stop early if the element does not exist
+  if ($eventsAndTrainingDiv.length == 0)
+    return;
 
   function compareFormattedDates(lhs, rhs) {
     var lhsDate = new Date(lhs);
@@ -56,29 +63,37 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
   }
 
   var scalaLangEvents = [
-  {% for event in site.pages %}{% if event.isevent %}
+  {% for event in site.categories.events %}
+  {% if event.date >= site.time %}{% comment %} No point in including outdated events {% endcomment %}
     {
       "title": "{{ event.title }}",
       "logo": "{{ event.logo }}",
       "location": "{{ event.location }}",
       "start": "{{ event.start }}",
       "end": "{{ event.end }}",
-      "url": "{{ event.url }}",
-    }{% unless forloop.last %},{% endunless %}
-  {% endif %}{% endfor%}
+      "url": "{{ event.link-out }}",
+    },
+  {% endif %}
+  {% endfor%}
   ];
 
   function doPopulateEventsPane(allEvents) {
+    allEvents = allEvents.filter(function (event) {
+      return (event.end ? new Date(event.end) : new Date(event.start)) >= new Date();
+    });
     allEvents.sort(compareEventsByDate);
     var content = "";
-    for (i = 0; i < allEvents.length; i++) {
+    for (i = 0; i < allEvents.length && i < MAX_EVENTS; i++) {
       var event = allEvents[i];
       var thisContent =
-        event.title + " in " + event.location + "<br />" +
-        event.start;
-      if (event.end != "")
-        thisContent += " to " + event.end;
-      $("#eventspane").append("<li>" + thisContent + "</li>");
+        '<div class="event-item">' +
+          '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
+          '<div class="event-logo"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></div>' +
+          '<div class="event-location">'+event.location+'</div>' +
+          '<div class="event-date"><img src="{{ site.baseurl }}/resources/img/icon-date.png" /> '+
+            event.start + (event.end ? ' to '+event.end : '') + '</div>' +
+        '</div>';
+      $("#eventspane").append(thisContent);
     }
   };
 
@@ -110,11 +125,12 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
   }
 
   var scalaLangTrainings = [
-  {% for training in site.pages %}{% if training.istraining %}
+  {% for training in site.categories.training %}
+  {% if training.date >= site.time %}{% comment %} No point in including outdated training sessions {% endcomment %}
     {
       title: "{{ training.title }}",
       description: "{{ training.description }}",
-      url: "{{ event.url }}",
+      url: "{{ training.link-out }}",
       sessions: [
         {
           where: "{{ training.where }}",
@@ -124,13 +140,14 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
           status: "{{ training.status }}"
         }
       ]
-    }{% unless forloop.last %},{% endunless %}
-  {% endif %}{% endfor%}
+    },
+  {% endif %}
+  {% endfor%}
   ];
 
   function keepOnlyOneSession(trainings) {
     var result = new Array();
-    for (i = 0; i < trainings.length; i++) {
+    for (i = 0; i < trainings.length && i < MAX_TRAININGS; i++) {
       var training = trainings[i];
       var firstSession = training.sessions[0];
       result[i] = {
@@ -149,14 +166,23 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
 
   function doPopulateTrainingsPane(allTrainings0) {
     var allTrainings = keepOnlyOneSession(allTrainings0);
+    allTrainings = allTrainings.filter(function (training) {
+      return new Date(training.when) >= new Date();
+    });
     allTrainings.sort(compareTrainingsByDate);
     var content = "";
     for (i = 0; i < allTrainings.length; i++) {
       var training = allTrainings[i];
       var thisContent =
-        training.title + "<br />" + training.when + ", " + training.where +
-        ", by " + training.trainers;
-      $("#trainingspane").append("<li>" + thisContent + "</li>");
+        '<div class="training-item">' +
+          '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
+          '<div class="training-description">'+training.description+'</div>' +
+          '<div class="training-location">'+training.where+'</div>' +
+          '<div class="training-date"><img src="{{ site.baseurl }}/resources/img/icon-date.png" /> '+training.when+'</div>' +
+          '<div class="training-trainers"><span class="by">By</span> <div class="training-trainers-name">'+training.trainers+'</div></div>' +
+          '<div class="training-organizer">'+training.organizer+'</div>' +
+        '</div>';
+      $("#trainingspane").append(thisContent);
     }
   }
 
@@ -181,6 +207,4 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
     error: onTrainingsAjaxError
   });
 
-}
-window.addEventListener("load", populateEventsAndTrainingsPaneWhenLoaded, false);
-
+});

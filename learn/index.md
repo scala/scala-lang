@@ -5,9 +5,23 @@ title: Learn
 
 # Learn Scala
 
-The best way to learn Scala depends on what you know already and the way you prefer to learn things. You will find there are a variety of different resources you can use to speed up the whole process. These include books, tutorials, training courses, presentations, and of course the Scala compiler for practice. Many people find a good combination is to have one of the Scala books at hand and to start right away trying the examples with the Scala Compiler. On the other hand, you may want to get started without a book or take a Scala training course. In that case, you will find on this website resources to help you get right on with the task but, as you may expect, in a somewhat more disjointed way.
+The best way to learn Scala depends on what you know already and the way you prefer to learn things. You will find there are a variety of different resources you can use to speed up the whole process. These include [books]({{ site.baseurl }}/learn/books.html), tutorials, training courses, presentations, and of course the Scala compiler for practice. Many people find a good combination is to have one of the Scala books at hand and to start right away trying the examples with the Scala Compiler. On the other hand, you may want to get started without a book or take a Scala training course. In that case, you will find on this website resources to help you get right on with the task but, as you may expect, in a somewhat more disjointed way.
 
-As your knowledge of Scala grows, you will find there is more advanced material and a very friendly Scala community at hand to help you. They all share a passion for Scala and welcome newcomers warmly. Many have written helpful material for programmers new to Scala, will respond to emails asking for help or are sharing neat new techniques, advanced concepts or tools in one of several Scala forums or personal blogs. Perhaps join [a Scala user group close by](http://www.scala-tribes.org/).
+As your knowledge of Scala grows, you will find there is more advanced material and a very friendly [Scala community]({{ site.baseurl }}/community/) at hand to help you. They all share a passion for Scala and welcome newcomers warmly. Many have written helpful material for programmers new to Scala, will respond to emails asking for help or are sharing neat new techniques, advanced concepts or tools in one of several Scala forums or personal blogs.
+
+
+## The Scala Documentation Site
+
+Your main entry point into online documentation on Scala is the official documentation site, [docs.scala-lang.org](http://docs.scala-lang.org/). It contains a growing number of articles, guides and tutorials.
+
+### Scala Tutorial for Java Programmers
+
+Many things you already know from your Java experience directly carry over to the Scala environment. The [Scala Tutorial for Java Programmers](http://docs.scala-lang.org/tutorials/scala-for-java-programmers.html) is intended for people who already have some programming experience and want an overview of what they can do with Scala.
+
+
+
+## other stuff
+
 
 To know more, just select one of the options below according to your existing experience:
 
@@ -67,7 +81,7 @@ While you wait for a book you will find the following resources useful:
 
 ## Scala Programmer
 
-If you are a Scala programmer looking for more examples and help, you will a list of useful resources by following this link. You may want to check out the [community resources]({{ site.baseurl }}/community/) too, or browse the list of the available documentation [on this page](http://www.scala-lang.org/node/197).
+If you are a Scala programmer looking for more examples and help, you will a list of useful resources by following this link. You may want to check out the [community resources]({{ site.baseurl }}/community/) too, or browse the list of the available documentation [on this page](http://docs.scala-lang.org).
 
 
 ## C++, C#, Ruby, Python, Visual Basic, etc Programmer
