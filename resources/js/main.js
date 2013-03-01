@@ -69,7 +69,8 @@ $(document).ready(function(){
   }
 
   var scalaLangEvents = [
-  {% for event in site.categories.events limit:5 %}
+  {% for event in site.categories.events %}
+  {% if event.date >= site.time %}{% comment %} No point in including outdated events {% endcomment %}
     {
       "title": "{{ event.title }}",
       "logo": "{{ event.logo }}",
@@ -77,11 +78,15 @@ $(document).ready(function(){
       "start": "{{ event.start }}",
       "end": "{{ event.end }}",
       "url": "{{ event.url }}",
-    }{% unless forloop.last %},{% endunless %}
+    },
+  {% endif %}
   {% endfor%}
   ];
 
   function doPopulateEventsPane(allEvents) {
+    allEvents = allEvents.filter(function (event) {
+      return (event.end ? new Date(event.end) : new Date(event.start)) >= new Date();
+    });
     allEvents.sort(compareEventsByDate);
     var content = "";
     for (i = 0; i < allEvents.length && i < MAX_EVENTS; i++) {
@@ -123,7 +128,8 @@ $(document).ready(function(){
   }
 
   var scalaLangTrainings = [
-  {% for training in site.categories.training limit:5 %}
+  {% for training in site.categories.training %}
+  {% if training.date >= site.time %}{% comment %} No point in including outdated training sessions {% endcomment %}
     {
       title: "{{ training.title }}",
       description: "{{ training.description }}",
@@ -137,7 +143,8 @@ $(document).ready(function(){
           status: "{{ training.status }}"
         }
       ]
-    }{% unless forloop.last %},{% endunless %}
+    },
+  {% endif %}
   {% endfor%}
   ];
 
@@ -162,6 +169,9 @@ $(document).ready(function(){
 
   function doPopulateTrainingsPane(allTrainings0) {
     var allTrainings = keepOnlyOneSession(allTrainings0);
+    allTrainings = allTrainings.filter(function (training) {
+      return new Date(training.when) >= new Date();
+    });
     allTrainings.sort(compareTrainingsByDate);
     var content = "";
     for (i = 0; i < allTrainings.length; i++) {
