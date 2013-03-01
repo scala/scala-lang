@@ -1,27 +1,64 @@
-    <ul class="nav">
-      <li><a href="{{ site.baseurl }}/learn/">Learn</a></li>
-      <li><a href="{{ site.baseurl }}/download/">Download</a></li>
-      <li><a href="{{ site.baseurl }}/community/">Community</a></li>
-      <li><a href="{{ site.baseurl }}/contribute/">Contribute</a></li>
-    </ul>
+<ul class="nav">
+    <li>
+        <div class="dropdown">
+            <a class="dropdown-toggle"  role="button" data-toggle="dropdown" data-target="#"
+               href="{{ site.baseurl }}/learn/">
+                Learn
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a href="http://docs.scala-lang.org">Documentation</a>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">API</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ site.baseurl }}/files/archive/api/2.10-latest">2.10</a></li>
+                        <li><a href="{{ site.baseurl }}/files/archive/api/2.9-latest">2.9</a></li>
+                        <li><a href="{{ site.baseurl }}/archives/downloads/distrib/files/nightly/docs/library/index.html">2.11 Nightly</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ site.baseurl }}/sites/default/files/linuxsoft_archives/docu/files/ScalaReference.pdf">Language Spec</a></li>
+                <li><a href="{{ site.baseurl }}/learn/books.html">Books</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="dropdown">
+            <a class="dropdown-toggle"  role="button" data-toggle="dropdown" data-target="#" href="{{ site.baseurl }}/download/">
+                Download
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a href="http://docs.scala-lang.org">Documentation</a>
+                <li><a href="{{ site.baseurl }}/">Releases</a></li>
+                <li><a href="{{ site.baseurl }}/">Getting Started</a></li>
+            </ul>
+        </div>
+    <li>
+        <div class="dropdown">
+            <a href="{{ site.baseurl }}/community/">
+                Community
+            </a>
+        </div>
+    <li>
+        <div class="dropdown">
+            <a class="dropdown-toggle"  role="button" data-toggle="dropdown" data-target="#"
+               href="{{ site.baseurl }}/contribute/">
+                Contribute
+                <b class="caret"></b>
+            </a>
 
-<!--
-<div class="container"
-     style="margin-top: 40px; margin-bottom: 30px;">
-  <div class="row">
-    <div class="span4">
-      <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/resources/img/scala-logo.png"/></a>
-    </div>
-    <div class="span8">
-      <nav class="mainnav">
-        <ul class="frontpage-nav">
-          <li><a href="{{ site.baseurl }}/learn/">Learn</a></li>
-          <li><a href="{{ site.baseurl }}/download/">Download</a></li>
-          <li><a href="{{ site.baseurl }}/community/">Community</a></li>
-          <li><a href="{{ site.baseurl }}/contribute/">Contribute</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</div>
- -->
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a href="http://github.com/scala/scala">Source Code</a>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Contributor Guide</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">Introduction</a></li>
+                        <li><a href="">Workflow</a></li>
+                        <li><a href="">Testing Suite</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://issues.scala-lang.org">Report a Bug</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>

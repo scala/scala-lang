@@ -43,10 +43,6 @@ body {
   src: url('{{ site.baseurl }}/resources/FuturaBT-Bold.ttf');
 }
 
-.container {
-  overflow: hidden;
-}
-
 .navbar-wrap {
   float: right;
   position: relative;
@@ -75,6 +71,18 @@ a.brand {
   height: 100%;
 }
 
+.nav > li> .dropdown > a {
+  display: block;
+}
+.nav > li > .dropdown > a:hover,
+.nav > li > .dropdown > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.nav > li > .dropdown > a > img {
+  max-width: none;
+}
+
 .nav > li {
   position: relative;
   float: left;
@@ -83,8 +91,8 @@ a.brand {
   border: solid 1px rgba(255, 255, 255, 0);
 }
 
-.nav > li > a:link,
-.nav > li > a:visited {
+.nav > li > .dropdown > a:link,
+.nav > li > .dropdown > a:visited {
   position: relative;
   height: 100%;
   display:inline-block;
@@ -122,7 +130,7 @@ a.brand {
   border: solid 1px #dfdfdf;
 }
 
-.nav > li > a:hover {
+.nav > li > .dropdown > a:hover {
   text-decoration: none;
   color: #C11A03;
   /*background-color: #fff;*/
@@ -133,16 +141,15 @@ a.brand {
   transition: color .2s ease-in;
 }
 
-.nav > li:nth-child(2) > a:hover {
+.nav > li:nth-child(2) > .dropdown > a:hover {
   color: #FB6801;
 }
-.nav > li:nth-child(3) > a:hover {
+.nav > li:nth-child(3) > .dropdown > a:hover {
   color: #B1C749;
 }
-.nav > li:nth-child(4) > a:hover {
+.nav > li:nth-child(4) > .dropdown > a:hover {
   color: #10BDCB;
 }
-
 
 .splash {
   /*position:fixed;*/
