@@ -754,6 +754,7 @@ color: #fff;
 
 .scala-lang-twitter a:hover {
   color: #D03F00;
+  text-decoration: none;
 }
 
 .news,
