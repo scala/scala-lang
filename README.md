@@ -59,3 +59,18 @@ The least error-prone way to link between documents, to link to local images, or
 Here, `{{ site.baseurl }}` is a site-wide variable that represents the root directory of the static site. So, to display the Scala logo image, located in `img/scala-logo.png`, one must simply write: `![Img alt text]({{ site.baseurl }}/resources/img/scala-logo.png)`
 
 
+
+## Resources and Workflow
+
+On every commit to the `scala/scala-lang` repository a [jenkins job](https://scala-webapps.epfl.ch/jenkins/view/All/job/scala-lang.org-builder/) will generate the site using jekyll and copy the resulting files to the webserver.
+
+There are additional files on the webserver:
+  - Subdirectory `scala-lang.org/old` is a static copy of the old website. It was generated once and copied there, and it stays like that.
+  - Most of the files in `/home/linuxsoft/archives/scala/` (on chara, accessible through ssh with your LAMP account) are synchronized to the subdirectory `scala-lang.org/files/archive` by another [hourly jenkins job](https://scala-webapps.epfl.ch/jenkins/view/All/job/scala-lang.org-scala-dist-archive-sync/). This folder is used by the nightly and release jenkins jobs to publish scala releases:
+    - distribution files (tarballs etc) in `/`
+      - older distribution files, RCs in `/old/` (not sure how exactly this is split up..)
+    - api docs for distributions in `/api/`
+    - nightly builds in `/nightly/distributions/`
+    - nightly api builds in `/nightly/docs-xxx/`
+    - nightly pdf builds (spec etc) in `/nightly/pdfs`
+
