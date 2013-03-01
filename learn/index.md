@@ -57,7 +57,7 @@ The **Scala interpreter** (also called the REPL) is a very valuable tool for exp
 The Scala IDE and IntelliJ IDEA both support **[Scala worksheets](https://github.com/scala-ide/scala-worksheet/wiki/Getting-Started)**, interactive Scala documents that are continuously evaluated line-by-line. Worksheets are an excellent way to experiment with Scala while still being able to save your code as in file and reuse it later on.
 
 
-## Online learning
+## Online Learning
 
 There are a few interactive tools for trying out Scala, to get a look and feel of the language:
 
@@ -75,7 +75,7 @@ are some schools you can register to:
  * [Scala Training with Typesafe](http://www.typesafe.com/products/training): [Typesafe](http://www.typesafe.com/) and its partners provide regular Scala training courses and Scala consulting in many locations world-wide. They provide expert teachers, including Iulian Dragos, Heiko Seeberger and other certified Scala trainers, to take you through the Scala language in a systematic way either in group classes at their facilities or on your own site.
 
 
-## Older documentation
+## Older Documentation
 
 The documentation below may be a bit outdated, but provides insights into the (historical) design principles of
 the language :
