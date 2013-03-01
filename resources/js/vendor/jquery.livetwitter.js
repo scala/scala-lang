@@ -309,7 +309,7 @@
                 html += '<div class="row"><div class="span1"><div class="thumbnail">';
                 html += '<img width="' + this.settings.imageSize + '" height="' + this.settings.imageSize + '" src="' + tweet.profile_image_url + '" />';
                 html += '</div></div><div class="span2">';
-                html += '<span class="username"><a href="' + tweet.profile_url + '" rel="external">' + tweet.screen_name + '</a></span> ';
+                html += '</br><span class="username"><a href="' + tweet.profile_url + '" rel="external">' + tweet.screen_name + '</a></span> ';
                 html += '</div></div>';
               }
             }
