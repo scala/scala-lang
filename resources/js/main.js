@@ -36,7 +36,20 @@ $(document).ready(function(){
 //   parallax.scaling = 0.4; //background moves 40% with the pages
 // });
 
-function populateEventsAndTrainingsPaneWhenLoaded() {
+
+/******************************
+ * Events and trainings feeds *
+ ******************************/
+
+$(document).ready(function(){
+  var $eventsAndTrainingDiv = $('#eventsAndTraining');
+
+  var MAX_EVENTS = 5;
+  var MAX_TRAININGS = 5;
+
+  // Stop early if the element does not exist
+  if ($eventsAndTrainingDiv.length == 0)
+    return;
 
   function compareFormattedDates(lhs, rhs) {
     var lhsDate = new Date(lhs);
@@ -56,7 +69,7 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
   }
 
   var scalaLangEvents = [
-  {% for event in site.pages %}{% if event.isevent %}
+  {% for event in site.categories.events limit:5 %}
     {
       "title": "{{ event.title }}",
       "logo": "{{ event.logo }}",
@@ -65,13 +78,13 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
       "end": "{{ event.end }}",
       "url": "{{ event.url }}",
     }{% unless forloop.last %},{% endunless %}
-  {% endif %}{% endfor%}
+  {% endfor%}
   ];
 
   function doPopulateEventsPane(allEvents) {
     allEvents.sort(compareEventsByDate);
     var content = "";
-    for (i = 0; i < allEvents.length; i++) {
+    for (i = 0; i < allEvents.length && i < MAX_EVENTS; i++) {
       var event = allEvents[i];
       var thisContent =
         event.title + " in " + event.location + "<br />" +
@@ -110,7 +123,7 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
   }
 
   var scalaLangTrainings = [
-  {% for training in site.pages %}{% if training.istraining %}
+  {% for training in site.categories.training limit:5 %}
     {
       title: "{{ training.title }}",
       description: "{{ training.description }}",
@@ -125,12 +138,12 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
         }
       ]
     }{% unless forloop.last %},{% endunless %}
-  {% endif %}{% endfor%}
+  {% endfor%}
   ];
 
   function keepOnlyOneSession(trainings) {
     var result = new Array();
-    for (i = 0; i < trainings.length; i++) {
+    for (i = 0; i < trainings.length && i < MAX_TRAININGS; i++) {
       var training = trainings[i];
       var firstSession = training.sessions[0];
       result[i] = {
@@ -181,6 +194,4 @@ function populateEventsAndTrainingsPaneWhenLoaded() {
     error: onTrainingsAjaxError
   });
 
-}
-window.addEventListener("load", populateEventsAndTrainingsPaneWhenLoaded, false);
-
+});
