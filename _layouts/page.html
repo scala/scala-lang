@@ -5,8 +5,33 @@ layout: default
 {% include headertop.html %}
 {% include headerbottom.html %}
 
-{% include pagetop.html %}
-{{ content }}
-{% include pagebottom.html %}
+<div class="whitestripe">
+  <div class="container" style="height: 100%">
+    <div class="navbar-wrap">
+      <div class="container" style="position: relative; height: 100%;">
+        <div class="logo">
+          <a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/resources/img/scala-spiral-navbar.png"/></a>
+          <span class="scala-text"><a href="{{ site.baseurl }}/index.html">Scala</a></span>
+        </div>
+        {% include navbar.html %}
+      </div>
+  </div>
+</div>
+  <!-- <div class="graystripe">&nbsp;</div> -->
+  <div class="color-stripe">&nbsp;</div>
+</div>
+
+<div class="page-splash">
+  &nbsp;
+</div>
+<div class="page-container">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+      {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
 
 {% include footer.html %}

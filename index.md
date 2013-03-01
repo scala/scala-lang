@@ -1,5 +1,3 @@
 ---
-layout: page
+layout: frontpage
 ---
-
-{% include frontpage.html %}

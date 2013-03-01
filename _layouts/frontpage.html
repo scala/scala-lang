@@ -1,0 +1,215 @@
+---
+layout: default
+---
+
+{% include headertop.html %}
+{% include headerbottom.html %}
+
+<!-- <div class="graystripe">&nbsp;</div> -->
+<!-- <div class="bluestripe">&nbsp;</div>
+<div class="pop-stripe">&nbsp;</div> -->
+<!-- <div class="greenstripe">&nbsp;</div> -->
+
+<div class="whitestripe">
+  <div class="container" style="height: 100%">
+    <!-- <span class="logo">Scala</span> -->
+    <!-- <h1>Scala</h1> -->
+    {% include navbar.html %}
+  </div>
+  <!-- <div class="graystripe">&nbsp;</div> -->
+  <div class="color-stripe">&nbsp;</div>
+</div>
+
+
+<div class="splash">
+  <div class="darkbluestripe">&nbsp;</div>
+  <div class="container">
+    <div class="row">
+      <div class="span8" style="position: relative;">
+        <div class="scala-title">
+          <span class="theprogramminglanguage">the</span>&nbsp;<span class="scala">Scala</span></br><span class="theprogramminglanguage">Programming Language</span>
+        </div>
+        <div class="splash-text ontop">
+          <h2>Object-Oriented Meets Functional</h2>
+          <p class="splash-pitch">
+            Have the best of both worlds. Construct elegant class hierarchies
+            for maximum code reuse and extensibility, implement their behavior using
+            higher-order functions. Or anything in-between.
+          </p>
+          <a href="{{ site.baseurl }}/what-is-scala.html" class="btn small">Learn More</a>
+        </div>
+      </div>
+      <div class="span4"><div class="scala-spiral"><img src="{{ site.baseurl }}/resources/img/scala-spiral-noise-sm2.png"/></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="wrapper" style="position: relative;">
+  <div class="darkbluestripe">&nbsp;</div>
+  <div class="splash">
+    <div class="splash-content">
+      <div class="container">
+        <div class="row">
+          <div class="splash-text">
+            <h2>Object-Oriented Meets Functional</h2>
+            <p class="splash-pitch">
+              Get the best of both worlds. Construct elegant class hierarchies
+              for maximum code reuse and extensibility, implement their behavior using
+              higher-order functions. Or anything in-between.
+            </p>
+          </div>
+          <div class="scala-spiral">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+<div class="bullet-point-box">
+  <div class="container">
+    <div class="row">
+      <div class="span12 bullet-point">
+        <h2><span>Scala in a Nutshell</span></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-java-interop.png"/>
+        <h3>Seamless Java Interop</h3>
+        <p>Scala runs on the JVM, so Java and Scala stacks can be freely mixed for totally seamless integration.</p>
+      </div>
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-type-inference.png"/>
+        <h3>Type Inference</h3>
+        <p>So the type system doesn't feel so static.</p>
+      </div>
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-parallelism-distribution.png"/>
+        <h3>Parallelism/Distribution</h3>
+        <p>Use data-parallel operations on collections, use actors for concurrency and distribution, or futures for asynchronous programming.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-traits.png"/>
+        <h3>Traits</h3>
+        <p>Combine the flexibility of Java-style interfaces with the power of classes. Think principled multiple-inheritance.</p>
+      </div>
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-pattern-matching.png"/>
+        <h3>Pattern Matching</h3>
+        <p>Think "switch" on steroids. Match against class hierarchies, sequences, and more.</p>
+      </div>
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-functions.png"/>
+        <h3>Higher-Order Functions</h3>
+        <p>Functions are first-class objects. Compose them with guaranteed type safety. Use them anywhere, pass them to anything.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-dsls.png"/>
+        <h3>DSLs</h3>
+        <p>A growable language, Scala enables flexible domain specific languages as libraries.</p>
+      </div>
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-immutability.png"/>
+        <h3>Immutability</h3>
+        <p>Eliminate bugs caused by side effects using immutable variables and a rich library of immutable collection classes.</p>
+      </div>
+      <div class="span4 bullet-point">
+        <img src="{{ site.baseurl }}/resources/img/icon-implicits.png"/>
+        <h3>Extension Methods & Implicits</h3>
+        <p>Add methods to existing classes, even if they're final. no inheritance necessary.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="code-snippet-box">
+  <div class="container">
+    <div class="row">
+      <div class="span12 code-snippet">
+        <p>&nbsp;</p><p>&nbsp;</p>
+        <h2><span>See Scala in Action</span></h2>
+        <p>&nbsp;</p>
+        <!-- Carousel
+        ================================================== -->
+        <div id="codeCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="{{ site.baseurl }}/resources/img/carousel-bg.png" alt="">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Concise and powerful. Higher-order functions on collections.</h1>
+                   <p class="lead">Invoke the higher-order method "partition", which takes a predicate (a function returning a Boolean) as its sole argument, using infix syntax. The two components of the result pair are assigned simultaneously to two new local variables using a tuple pattern. No need for clunky intermediate collections and for-loops.</p>
+                  <img src="{{ site.baseurl }}/resources/img/hof-code.png"/>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{{ site.baseurl }}/resources/img/carousel-bg.png" alt="">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 style="margin-left: 20px">Pattern matching.</h1>
+                  <p class="lead" style="float: left; width: 320px; margin-left: 20px;">Enable pattern matching on classes and singleton objects using the case modifier. Match against trees, extracting its fields using variables in a pattern like "Binary(e, l, r)".
+</p>
+                  <img src="{{ site.baseurl }}/resources/img/patmat-code.png" style="float: right; margin-top: -36px;"/>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{{ site.baseurl }}/resources/img/carousel-bg.png" alt="">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 style="margin-left: 20px">Type Inference, Class Parameters, and String Interpolation.</h1>
+                  <p class="lead" style="float: left; width: 320px; margin-left: 20px;">The type "List[Int]" of "l" is inferred automatically. The primary constructor of class "Person" assigns its arguments to public fields "name" and "age".
+</p>
+                  <img src="{{ site.baseurl }}/resources/img/type-inf-code.png" style="float: right; margin-top: -36px;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#codeCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="right carousel-control" href="#codeCarousel" data-slide="next">&rsaquo;</a>
+        </div><!-- /.carousel -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="events-training-twitter-box">
+  <div class="container">
+    <div class="row">
+      <div class="span12 happening">
+        <p>&nbsp;</p><p>&nbsp;</p>
+        <h2><span>What's going on with the Scala Team</span></h2>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span6">
+        <div class="news">News, Articles, Blog</div>
+        {% include news-feed.html %}
+      </div>
+      <div class="span3">
+        <div class="trainings-events">Events & </br>Training</div>
+        This is for trainings/events
+      </div>
+      <div class="span3">
+        <div class="scala-lang-twitter"><img src="{{ site.baseurl }}/resources/img/twitter-logo.png"/><a href="http://twitter.com/scala_lang">@scala-lang</a></div>
+        <div id="tweets" class="tweets"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="epfl-picture-box">
+  <div class="container">
+  <!-- Some more text here -->
+  </div>
+</div>
+
+{{ content }}
+
+{% include footer.html %}
