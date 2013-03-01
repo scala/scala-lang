@@ -71,7 +71,11 @@ There are a few interactive resources for trying out Scala, to get a look and fe
 If you want to learn Scala in a more official setting, you can always sign up for some quality training. Here below
 are some schools you can register to:
 
- * [Scala Training with Typesafe](http://www.typesafe.com/products/training): [Typesafe](http://www.typesafe.com/) and its partners provide regular Scala training courses and Scala consulting in many locations world-wide. They provide expert teachers, including Iulian Dragos, Heiko Seeberger and other certified Scala trainers, to take you through the Scala language in a systematic way either in group classes at their facilities or on your own site.
+ * [Training from Typesafe](http://www.typesafe.com/products/training): [Typesafe](http://www.typesafe.com/) and its partners provide regular Scala training courses and Scala consulting in many locations world-wide. They provide expert teachers, including Iulian Dragos, Heiko Seeberger and other certified Scala trainers, to take you through the Scala language in a systematic way either in group classes at their facilities or on your own site.
+
+ * [Underscore Training](http://underscoreconsulting.com/training/): [Underscore Consulting](http://underscoreconsulting.com/) is a provider of professional services relating to the Scala programming language. Centered around London, UK, they provide a full range of services including consulting on architecture and design, training for all levels of Scala developers, and a complete software development service.
+
+ * [Escalate Training](http://www.escalatesoft.com/training): [Escalate Software](http://www.escalatesoft.com/) provides professional training and consulting services for teams using the Scala programming language around the Bay Area.
 
 
 ## Older Documentation
