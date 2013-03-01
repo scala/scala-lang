@@ -1,4 +1,4 @@
-{% for p in site.posts limit: 5 %}
+{% for p in site.categories.news limit: 5 %}
   <div class="news-item">
     {% if p.post-type %}
       <div class="news-category">{{ p.post-type }}</div>
