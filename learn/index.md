@@ -15,7 +15,7 @@ As your knowledge of Scala grows, you will find there is more advanced material 
 
 If you are just starting to learn how to code, you will find that a large portion of the material about Scala assumes that you already have some programming experience. There are two valuable resources which we can recommend to programming beginners that will take you directly into the world of Scala:
 
-* The online class [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun), available on coursera. Tought by the creator of Scala, Martin Odersky, this online class takes a somewhat academic approach to teach the fundamentals of functional programming. You will learn a lot of Scala by solving the programming assignments.
+* The online class [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun), available on coursera. Taught by the creator of Scala, Martin Odersky, this online class takes a somewhat academic approach to teach the fundamentals of functional programming. You will learn a lot of Scala by solving the programming assignments.
 * [Kojo](http://www.kogics.net/sf:kojo) is an interactive learning environment that uses Scala programming to explore and play with math, art, music, animations and games.
 
 
@@ -59,13 +59,12 @@ The Scala IDE and IntelliJ IDEA both support **[Scala worksheets](https://github
 
 ## Online Learning
 
-There are a few interactive tools for trying out Scala, to get a look and feel of the language:
+There are a few interactive resources for trying out Scala, to get a look and feel of the language:
 
  * [Functional Programming in Scala](https://www.coursera.org/course/progfun): this is a course about functional
  programming given by Martin Odersky himself in autumn 2012. You can access the course material and exercises by
  signing up for the course. (The course will be given again soon..)
  * [Try Simply Scala](http://www.simplyscala.com/): [Simply Scala](http://www.simplyscala.com/) is a web site where you can interactively try Scala. There you will find a tutorial that gives a rapid overview of the basic language features, the syntax, examples you can run and the ability to try your own code with an interactive interpreter.
- * [Kojo](http://kogics.net/kojo-download) is a Scala development environment designed for use in schools. It comes with a Scala tutorial that gives a rapid overview of the basic language features, the syntax, examples you can run and the ability to try your own code. It is simple to [download and install](http://kogics.net/kojo-download).
 
 ## Training
 
