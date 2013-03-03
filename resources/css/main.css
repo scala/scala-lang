@@ -85,7 +85,6 @@ a.brand {
 .nav > li > .dropdown > a:link,
 .nav > li > .dropdown > a:visited {
   position: relative;
-  height: 100%;
   display:inline-block;
   font-family: 'proxima-nova', sans-serif;
   font-weight: 700;
@@ -96,6 +95,7 @@ a.brand {
   padding: 16px;
   padding-top: 34px;
   font-size: 24px;
+  padding-bottom: 35px;
   -webkit-transition: opacity .1s linear;
   -moz-transition: opacity .1s linear;
   transition: opacity .1s linear;
