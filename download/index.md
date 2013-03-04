@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Download
-path: "/downloads/distrib/files/"
+path: "/files/archive/"
 stable_scala: "scala"
 stable_docs: "scala-docs"
 stable_sources: "scala-sources"
@@ -17,7 +17,7 @@ rc_date: "February 28, 2013"
 We provide different Scala versions for download below. Our
 [changelog](changelog.html) contains the list of changes for each
 version.  The Scala distribution is released under a
-[BSD-like license](/node/146).  New users might want to read the
+[BSD-like license]({{ site.baseurl }}/download/license.html).  New users might want to read the
 [Getting Started](getting-started.html) guide.
 
 
