@@ -23,7 +23,7 @@ listed here.
 Scala**](http://www.artima.com/shop/programming_in_scala_2ed)
 – **Available Now**
 by Martin Odersky, Lex Spoon, and Bill Venners
-- firtst edition [available for free online reading](http://www.artima.com/pins1ed/)
+- first edition [available for free online reading](http://www.artima.com/pins1ed/)
 
 <div class="row">
   <div class="span2">
