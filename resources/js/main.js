@@ -208,3 +208,73 @@ $(document).ready(function(){
   });
 
 });
+
+/**************************
+ * Community tickets feed *
+ **************************/
+
+$(document).ready(function(){
+  var $communityTicketsDiv = $('#communitytickets');
+
+  // Stop early if the element does not exist
+  if ($communityTicketsDiv.length == 0)
+    return;
+
+  function escapeHTML(text) {
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function doPopulateTicketsPane(data) {
+    var headerContent =
+      '<ul>'+
+        '<li>Start at: '+data.startAt+'</li>'+
+        '<li>Max results: '+data.maxResults+'</li>'+
+        '<li>Total: '+data.total+'</li>'+
+      '</ul>';
+    $("#communitytickets").append(headerContent);
+
+    var issues = data.issues;
+    for (i = 0; i < issues.length; i++) {
+      var issue = issues[i];
+      var fields = issue.fields;
+      var thisContent =
+        '<hr /><div class="tickets-item">' +
+          '<div class="tickets-title"><a href="https://issues.scala-lang.org/browse/'+issue.key+'">'+escapeHTML(fields.summary)+'</a></div>' +
+          '<div class="tickets-issuetype"><img src="'+fields.issuetype.iconUrl+'" /> '+escapeHTML(fields.issuetype.name)+'</div>' +
+          '<div class="tickets-priority"><img src="'+fields.priority.iconUrl+'" /> '+escapeHTML(fields.priority.name)+'</div>' +
+          '<div class="tickets-components">'+fields.components.map(function (component) {
+            return '<a href="https://issues.scala-lang.org/browse/SI/component/'+component.id+'">'+escapeHTML(component.name)+'</a>';
+          }).join(', ')+'</div>'+
+          '<div class="tickets-description">'+escapeHTML(fields.description)+'</div>'+
+          //'<div class="tickets-data"><pre>'+JSON.stringify(issue, undefined, 2)+'</pre></div>' +
+        '</div>';
+      $("#communitytickets").append(thisContent);
+    }
+  };
+
+  function onAjaxSuccess(response, textStatus, jqXHR) {
+    doPopulateTicketsPane(response);
+  }
+
+  function onAjaxError(jqXHR, textStatus, errorThrown) {
+    // log the error to the console
+    console.error(
+      "Could not load community tickets from JIRA: " + textStatus, errorThrown);
+  }
+
+  $.ajax({
+    url: "https://issues.scala-lang.org/rest/api/2/search?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component",
+    type: "GET",
+    dataType: "jsonp",
+    jsonp: 'jsonp-callback',
+    crossDomain: true,
+    success: onAjaxSuccess,
+    error: onAjaxError
+  });
+
+});
