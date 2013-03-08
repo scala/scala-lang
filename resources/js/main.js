@@ -220,6 +220,8 @@ $(document).ready(function(){
   if ($communityTicketsDiv.length == 0)
     return;
 
+  var MAX_TICKETS_PER_PAGE = 20;
+
   function escapeHTML(text) {
     return text
       .replace(/&/g, "&amp;")
@@ -230,18 +232,74 @@ $(document).ready(function(){
   }
 
   function doPopulateTicketsPane(data) {
-    var headerContent =
-      '<ul>'+
-        '<li>Start at: '+data.startAt+'</li>'+
-        '<li>Max results: '+data.maxResults+'</li>'+
-        '<li>Total: '+data.total+'</li>'+
-      '</ul>';
-    $("#communitytickets").append(headerContent);
+    var pageCount = Math.ceil(data.total / data.maxResults);
+    var currentPage = Math.floor(data.startAt / data.maxResults) + 1;
+
+    $("#communitytickets").empty();
+
+    var pagerList = $('<ul>');
+
+    for (var i = 0; i <= pageCount+1; i++) {
+      var page, buttonText;
+      if (i == 0) {
+        page = currentPage-1;
+        buttonText = '«';
+      } else if (i > pageCount) {
+        page = currentPage+1;
+        buttonText = '»';
+      } else {
+        page = i;
+        buttonText = i.toString();
+      }
+
+      var valid = (page >= 1) && (page <= pageCount);
+      var item;
+
+      if (valid) {
+        var clickFun = (function(startAt) {
+          return function() {
+            doAjaxQuery(startAt);
+            return false;
+          }
+        })((page-1) * data.maxResults);
+
+        var anchor = $('<a>', {
+          href: '#',
+          text: buttonText,
+          click: clickFun
+        });
+        item = $('<li>', {
+          class: page == currentPage ? 'active' : ''
+        }).append(anchor);
+      } else {
+        var anchor = $('<a>', {
+          href: '#',
+          text: buttonText,
+          click: function() {
+            return false;
+          }
+        });
+        item = $('<li>', {
+          class: 'disabled'
+        }).append(anchor);
+      }
+
+      pagerList.append(item);
+    }
+
+    $("#communitytickets").append(
+      $('<div>', {class: 'pagination'}).append(pagerList)
+    );
 
     var issues = data.issues;
     for (i = 0; i < issues.length; i++) {
       var issue = issues[i];
       var fields = issue.fields;
+
+      /* Note: if you want to add more fields (or remove some), be sure to
+       * update the query URL below, in doAjaxQuery(), so that the 'fields'
+       * parameter contains the list of fields you want to receive.
+       */
       var thisContent =
         '<hr /><div class="tickets-item">' +
           '<div class="tickets-title"><a href="https://issues.scala-lang.org/browse/'+issue.key+'">'+escapeHTML(fields.summary)+'</a></div>' +
@@ -251,8 +309,9 @@ $(document).ready(function(){
             return '<a href="https://issues.scala-lang.org/browse/SI/component/'+component.id+'">'+escapeHTML(component.name)+'</a>';
           }).join(', ')+'</div>'+
           '<div class="tickets-description">'+escapeHTML(fields.description)+'</div>'+
-          //'<div class="tickets-data"><pre>'+JSON.stringify(issue, undefined, 2)+'</pre></div>' +
+          // '<div class="tickets-data"><pre>'+JSON.stringify(issue, undefined, 2)+'</pre></div>' +
         '</div>';
+
       $("#communitytickets").append(thisContent);
     }
   };
@@ -267,14 +326,21 @@ $(document).ready(function(){
       "Could not load community tickets from JIRA: " + textStatus, errorThrown);
   }
 
-  $.ajax({
-    url: "https://issues.scala-lang.org/rest/api/2/search?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component",
-    type: "GET",
-    dataType: "jsonp",
-    jsonp: 'jsonp-callback',
-    crossDomain: true,
-    success: onAjaxSuccess,
-    error: onAjaxError
-  });
+  function doAjaxQuery(startAt) {
+    /* Note: the 'fields' parameter contains the list of fields we use in
+     * the construction of the display, in doPopulateTicketsPane().
+     */
+    $.ajax({
+      url: "https://issues.scala-lang.org/rest/api/2/search?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component&maxResults="+MAX_TICKETS_PER_PAGE+'&startAt='+startAt+'&fields=summary,issuetype,priority,components,description',
+      type: "GET",
+      dataType: "jsonp",
+      jsonp: 'jsonp-callback',
+      crossDomain: true,
+      success: onAjaxSuccess,
+      error: onAjaxError
+    });
+  }
+
+  doAjaxQuery(0);
 
 });
