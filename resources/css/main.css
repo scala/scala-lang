@@ -631,6 +631,10 @@ a.brand {
   min-height: 400px;
 }
 
+pre.prettyprint {
+  overflow: hidden;
+}
+
 /*.training-item {
 
 }
