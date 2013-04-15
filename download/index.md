@@ -18,7 +18,7 @@ We provide different Scala versions for download below. Our
 [changelog](changelog.html) contains the list of changes for each
 version.  The Scala distribution is released under a
 [BSD-like license]({{ site.baseurl }}/download/license.html).  New users might want to read the
-[Getting Started](getting-started.html) guide.
+[Getting Started]({{ site.baseurl }}/documentation/getting-started.html) guide.
 
 
 ## Current Stable Release
@@ -31,18 +31,18 @@ version.  The Scala distribution is released under a
 </tbody></table>
 
 The current version of Scala is **{{ page.stable_version }}**.
-Released on April 14, 2012. 
+Released on April 14, 2012.
 
 | Archive    |       System |         Size |
 |:-----------:|:------------:|-------------:|
-| [{{ page.stable_scala }}-{{ page.stable_version }}.tgz]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.tgz.md5)) | Max OS X, Unix, Cygwin | 23.9 MB   
-| [{{ page.stable_scala }}-{{ page.stable_version }}.msi]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.msi) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.msi.md5)) | Windows (msi installer) | 43.3 MB    
-| [{{ page.stable_scala }}-{{ page.stable_version }}.zip]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.zip) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.zip.md5)) | Windows (zip) | 23.9 MB 
-| [{{ page.stable_scala }}-{{ page.stable_version }}.deb]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.deb) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.deb.md5)) | Debian | 21.0 MB 
-| [{{ page.stable_scala }}-{{ page.stable_version }}.rpm]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.rpm) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.rpm.md5)) | RPM package | 21.0 MB 
-| [{{ page.stable_docs }}-{{ page.stable_version }}.txz]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.txz) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.txz.md5)) | API docs | 1.8 MB 
-| [{{ page.stable_docs }}-{{ page.stable_version }}.zip]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.zip) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.zip.md5)) | API docs | 21.3 MB 
-| [{{ page.stable_sources }}-{{ page.stable_version }}.tgz]({{ page.path }}{{ page.stable_sources }}-{{ page.stable_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_sources }}-{{ page.stable_version }}.tgz.md5)) | sources | 37.6 MB 
+| [{{ page.stable_scala }}-{{ page.stable_version }}.tgz]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.tgz.md5)) | Max OS X, Unix, Cygwin | 23.9 MB
+| [{{ page.stable_scala }}-{{ page.stable_version }}.msi]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.msi) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.msi.md5)) | Windows (msi installer) | 43.3 MB
+| [{{ page.stable_scala }}-{{ page.stable_version }}.zip]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.zip) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.zip.md5)) | Windows (zip) | 23.9 MB
+| [{{ page.stable_scala }}-{{ page.stable_version }}.deb]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.deb) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.deb.md5)) | Debian | 21.0 MB
+| [{{ page.stable_scala }}-{{ page.stable_version }}.rpm]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.rpm) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.rpm.md5)) | RPM package | 21.0 MB
+| [{{ page.stable_docs }}-{{ page.stable_version }}.txz]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.txz) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.txz.md5)) | API docs | 1.8 MB
+| [{{ page.stable_docs }}-{{ page.stable_version }}.zip]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.zip) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.stable_version }}.zip.md5)) | API docs | 21.3 MB
+| [{{ page.stable_sources }}-{{ page.stable_version }}.tgz]({{ page.path }}{{ page.stable_sources }}-{{ page.stable_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_sources }}-{{ page.stable_version }}.tgz.md5)) | sources | 37.6 MB
 
 
 ## Current Maintenance Releases
@@ -62,10 +62,10 @@ recommend our most recent stable version (currently Scala
 
 | Archive    |       System |         Size |
 |:-----------:|:------------:|-------------:|
-| [scala-{{ page.maintenance_version }}-installer.jar]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}-installer.jar) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}-installer.jar.md5)) | lzPack (all platforms )| 39.2 MB 
-| [scala-{{ page.maintenance_version }}.tgz]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.tgz.md5)) | Max OS X, Unix, Cygwin | 20.0 MB   
-| [scala-{{ page.maintenance_version }}.zip]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.zip) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.zip.md5)) | Windows (zip) | 20.0 MB 
-| [scala-{{ page.maintenance_version }}-devel-docs.tgz]({{ page.path }}scala-{{ page.maintenance_version }}-devel-docs.tgz) ([md5]({{ page.path }}scala-{{ page.maintenance_version }}-devel-docs.tgz.md5)) | API docs | 13.5 MB 
+| [scala-{{ page.maintenance_version }}-installer.jar]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}-installer.jar) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}-installer.jar.md5)) | lzPack (all platforms )| 39.2 MB
+| [scala-{{ page.maintenance_version }}.tgz]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.tgz.md5)) | Max OS X, Unix, Cygwin | 20.0 MB
+| [scala-{{ page.maintenance_version }}.zip]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.zip) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.maintenance_version }}.zip.md5)) | Windows (zip) | 20.0 MB
+| [scala-{{ page.maintenance_version }}-devel-docs.tgz]({{ page.path }}scala-{{ page.maintenance_version }}-devel-docs.tgz) ([md5]({{ page.path }}scala-{{ page.maintenance_version }}-devel-docs.tgz.md5)) | API docs | 13.5 MB
 | [scala-{{ page.maintenance_version }}-sources.tgz]({{ page.path }}scala-{{ page.maintenance_version }}-sources.tgz) ([md5]({{ page.path }}scala-{{ page.maintenance_version }}-sources.tgz.md5)) | sources | 40.6 MB
 
 
@@ -95,10 +95,10 @@ Released on {{ page.rc_date }}.
 
 | Archive    |       System |         Size |
 |:-----------:|:------------:|-------------:|
-| [{{ page.stable_scala }}-{{ page.rc_version }}.tgz]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.tgz.md5)) | Max OS X, Unix, Cygwin | 26.9 MB   
-| [{{ page.stable_scala }}-{{ page.rc_version }}.msi]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.msi) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.msi.md5)) | Windows (msi installer) | 50.3 MB    
-| [{{ page.stable_scala }}-{{ page.rc_version }}.zip]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.zip) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.zip.md5)) | Windows (zip) | 26.9 MB 
-| [{{ page.stable_docs }}-{{ page.rc_version }}.txz]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.txz) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.txz.md5)) | API docs | 2.3 MB 
-| [{{ page.stable_docs }}-{{ page.rc_version }}.zip]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.zip) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.zip.md5)) | API docs | 24.8 MB 
+| [{{ page.stable_scala }}-{{ page.rc_version }}.tgz]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.tgz.md5)) | Max OS X, Unix, Cygwin | 26.9 MB
+| [{{ page.stable_scala }}-{{ page.rc_version }}.msi]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.msi) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.msi.md5)) | Windows (msi installer) | 50.3 MB
+| [{{ page.stable_scala }}-{{ page.rc_version }}.zip]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.zip) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.rc_version }}.zip.md5)) | Windows (zip) | 26.9 MB
+| [{{ page.stable_docs }}-{{ page.rc_version }}.txz]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.txz) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.txz.md5)) | API docs | 2.3 MB
+| [{{ page.stable_docs }}-{{ page.rc_version }}.zip]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.zip) ([md5]({{ page.path }}{{ page.stable_docs }}-{{ page.rc_version }}.zip.md5)) | API docs | 24.8 MB
 | [{{ page.stable_sources }}-{{ page.rc_version }}.tgz]({{ page.path }}{{ page.stable_sources }}-{{ page.rc_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_sources }}-{{ page.rc_version }}.tgz.md5)) | sources | 40.0 MB
 

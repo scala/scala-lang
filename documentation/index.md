@@ -5,56 +5,59 @@ title: Learn
 
 # Learning Scala
 
-The best way to learn Scala depends on what you know already and the way you prefer to learn things. There is a variety of resources available including [books]({{ site.baseurl }}/documentation/books.html), tutorials, training courses, presentations, and of course the Scala compiler for practice. Many people find a good combination is to have one of the Scala books at hand and to start right away trying the examples with the Scala Compiler. On the other hand, you may want to get started with a Scala [training course](#training) or using the material available online.
+<div class="container">
+  <div class="row">
+    <div class="span4 doc-block">
+      <h3><a href="{{ site.baseurl }}/documentation/getting-started.html">Getting Started</a></h3>
+      <p>Install Scala on your computer and start writing some Scala code!</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="http://docs.scala-lang.org/overviews/">Overviews/Guides</a></h3>
+      <p>Access detailed documentation on important language features.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></h3>
+      <p>Digest bite-size pieces of the essentials.</p>
+    </div>
+  </div>
 
-As your knowledge of Scala grows, you will find there is more advanced material and a very friendly [Scala community]({{ site.baseurl }}/community/) at hand to help you. They all share a passion for Scala and welcome newcomers warmly. Many have written helpful material for programmers new to Scala, will respond to emails asking for help or are sharing neat new techniques, advanced concepts or tools in one of several Scala forums or personal blogs.
+  <div class="row">
+    <div class="span4 doc-block">
+      <h3><a href="http://www.scala-lang.org/api/current/index.html#package">API</a></h3>
+      <p>Dive straight into the API.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="{{ site.baseurl }}/files/archive/nightly/pdfs/ScalaReference.pdf">Specification [PDF]</a></h3>
+      <p>Get an in-depth overview of the language.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="http://docs.scala-lang.org/glossary/">Glossary</a></h3>
+      <p>Understand Scala's vocabulary.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span4 doc-block">
+      <h3><a href="http://docs.scala-lang.org/cheatsheets/">Cheatsheets</a></h3>
+      <p>Access language constructs quickly.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="http://docs.scala-lang.org/style/">Style Guide</a></h3>
+      <p>Learn how to code elegantly.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="{{ site.baseurl }}/documentation/getting_started.html">Common Scala Questions</a></h3>
+      <p>Dispel your doubts about common Scala features.</p>
+    </div>
+  </div>
+</div>
 
 
-## Scala for Programming Beginners
-
-
-If you are just starting to learn how to code, you will find that a large portion of the material about Scala assumes that you already have some programming experience. There are two valuable resources which we can recommend to programming beginners that will take you directly into the world of Scala:
-
-* The online class [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun), available on coursera. Taught by the creator of Scala, Martin Odersky, this online class takes a somewhat academic approach to teach the fundamentals of functional programming. You will learn a lot of Scala by solving the programming assignments.
-* [Kojo](http://www.kogics.net/sf:kojo) is an interactive learning environment that uses Scala programming to explore and play with math, art, music, animations and games.
-
-
-
+<!-- Keep this text here for now
 ## The Scala Documentation Site
 
 Your main entry point into online documentation on Scala is the official documentation site, [docs.scala-lang.org](http://docs.scala-lang.org/). It contains a growing number of articles, guides and tutorials. The following list highlights some of the most important documents, but the doc site contains much more than that!
-
-### Scala Tutorial for Java Programmers
-
-Many things you already know from your Java experience directly carry over to the Scala environment. The [Scala Tutorial for Java Programmers](http://docs.scala-lang.org/tutorials/scala-for-java-programmers.html) is intended for people who already have some programming experience and want an overview of what they can do with Scala.
-
-
-### Guides for Libraries and Language Features
-
-The section [Guides and Overviews](http://docs.scala-lang.org/overviews/) contains many useful guides about core libraries and features of Scala, for instance about:
-
-* [Scala's Collection Library](http://docs.scala-lang.org/overviews/collections/introduction.html),
-* [Futures and Promises](http://docs.scala-lang.org/overviews/core/futures.html), or
-* [String Interpolation](http://docs.scala-lang.org/overviews/core/string-interpolation.html)
-
-
-### A Tour of Scala
-
-If you want to learn what Scala is all about and what are its most important and distincitve language features, the [Tour of Scala](http://docs.scala-lang.org/tutorials/tour/tour-of-scala.html) is a highly informative document. Note however that a the tour also shows you some of the more advanced features that can be found in Scala, so if you're just beginning, don't worry if you don't understand everything!
-
-
-
-## Getting Scala Up and Running
-
-There are multiple ways to get Scala code compiling and running on your machine. The most widely used tools are:
-
-* Your favorite text editor and the command-line [Scala compiler]({{ site.baseurl }}/download/), see the [Getting Started]({{ site.baseurl }}/download/getting-started.html) guide
-* IDEs for Scala: The [Scala IDE](http://scala-ide.org/), [IntelliJ IDEA](http://www.jetbrains.com/idea/) with the Scala plugin, and [NetBeans IDE](http://netbeans.org/) with the Scala plugin
-* Build tools for Scala: [sbt](http://www.scala-sbt.org/), maven with the [Scala plugin](http://davidb.github.com/scala-maven-plugin/index.html) or the [Scala plugin for gradle](http://www.gradle.org/docs/current/userguide/scala_plugin.html)
-
-The **Scala interpreter** (also called the REPL) is a very valuable tool for experimenting with Scala. It is installed together with the command-line compiler and allows you to interactively write and evaluate Scala expressions.
-
-The Scala IDE and IntelliJ IDEA both support **[Scala worksheets](https://github.com/scala-ide/scala-worksheet/wiki/Getting-Started)**, interactive Scala documents that are continuously evaluated line-by-line. Worksheets are an excellent way to experiment with Scala while still being able to save your code as in file and reuse it later on.
+-->
 
 
 ## Online Learning
@@ -66,17 +69,15 @@ There are a few interactive resources for trying out Scala, to get a look and fe
  signing up for the course. (The course will be given again soon..)
  * [Try Simply Scala](http://www.simplyscala.com/): [Simply Scala](http://www.simplyscala.com/) is a web site where you can interactively try Scala. There you will find a tutorial that gives a rapid overview of the basic language features, the syntax, examples you can run and the ability to try your own code with an interactive interpreter.
 
-## Training
+## Books
 
-If you want to learn Scala in a more official setting, you can always sign up for some quality training. Here below
-are some schools you can register to:
+There are more and more books being published about Scala. [Here]({{ site.baseurl  }}/documentation/books.html), you can find some of the titles. We only list books here which give an introduction to the Scala Language. Books which require knowledge of Scala, in particular books on frameworks like Lift, Play! or Akka are notlisted here.
 
- * [Training from Typesafe](http://www.typesafe.com/products/training): [Typesafe](http://www.typesafe.com/) and its partners provide regular Scala training courses and Scala consulting in many locations world-wide. They provide expert teachers, including Iulian Dragos, Heiko Seeberger and other certified Scala trainers, to take you through the Scala language in a systematic way either in group classes at their facilities or on your own site.
 
- * [Underscore Training](http://underscoreconsulting.com/training/): [Underscore Consulting](http://underscoreconsulting.com/) is a provider of professional services relating to the Scala programming language. Centered around London, UK, they provide a full range of services including consulting on architecture and design, training for all levels of Scala developers, and a complete software development service.
+## Bleeding edge
 
- * [Escalate Training](http://www.escalatesoft.com/training): [Escalate Software](http://www.escalatesoft.com/) provides professional training and consulting services for teams using the Scala programming language around the Bay Area.
-
+If you are interested in finding out about the hottest, most pressing issues of tomorrow in the Scala world, have a look at the
+[Scala Improvement Process (SIP) page](http://docs.scala-lang.org/sips/).
 
 ## Older Documentation
 
