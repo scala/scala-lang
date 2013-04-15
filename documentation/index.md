@@ -5,7 +5,7 @@ title: Learn
 
 # Learning Scala
 
-The best way to learn Scala depends on what you know already and the way you prefer to learn things. There is a variety of resources available including [books]({{ site.baseurl }}/learn/books.html), tutorials, training courses, presentations, and of course the Scala compiler for practice. Many people find a good combination is to have one of the Scala books at hand and to start right away trying the examples with the Scala Compiler. On the other hand, you may want to get started with a Scala [training course](#training) or using the material available online.
+The best way to learn Scala depends on what you know already and the way you prefer to learn things. There is a variety of resources available including [books]({{ site.baseurl }}/documentation/books.html), tutorials, training courses, presentations, and of course the Scala compiler for practice. Many people find a good combination is to have one of the Scala books at hand and to start right away trying the examples with the Scala Compiler. On the other hand, you may want to get started with a Scala [training course](#training) or using the material available online.
 
 As your knowledge of Scala grows, you will find there is more advanced material and a very friendly [Scala community]({{ site.baseurl }}/community/) at hand to help you. They all share a passion for Scala and welcome newcomers warmly. Many have written helpful material for programmers new to Scala, will respond to emails asking for help or are sharing neat new techniques, advanced concepts or tools in one of several Scala forums or personal blogs.
 
