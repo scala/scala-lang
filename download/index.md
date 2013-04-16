@@ -2,11 +2,11 @@
 layout: downloadpage
 title: Download
 path: "/files/archive/"
-stable_scala: "scala"
-stable_docs: "scala-docs"
-stable_sources: "scala-sources"
-stable_version: 2.10.0
-stable_date: "January 4, 2013"
+release_scala: "scala"
+release_docs: "scala-docs"
+release_sources: "scala-sources"
+release_version: 2.10.1
+release_date: "March 13, 2013"
 maintenance_version: 2.9.3
 maintenance_date: "February 28, 2013"
 development_version: 2.11.0-RC2
@@ -14,9 +14,8 @@ development_date: "March 14, 2013"
 ---
 
 
-
-Current stable version
-
+<br/>
+<br/>
 
 <table>
   <tr>

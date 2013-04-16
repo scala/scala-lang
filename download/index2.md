@@ -33,7 +33,7 @@ version.  The Scala distribution is released under a
 The current version of Scala is **{{ page.stable_version }}**.
 Released on April 14, 2012.
 
-| Archive    |       System |         Size |
+| Archive     |       System |         Size |
 |:-----------:|:------------:|-------------:|
 | [{{ page.stable_scala }}-{{ page.stable_version }}.tgz]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.tgz) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.tgz.md5)) | Max OS X, Unix, Cygwin | 23.9 MB
 | [{{ page.stable_scala }}-{{ page.stable_version }}.msi]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.msi) ([md5]({{ page.path }}{{ page.stable_scala }}-{{ page.stable_version }}.msi.md5)) | Windows (msi installer) | 43.3 MB
