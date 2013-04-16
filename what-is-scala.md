@@ -5,84 +5,106 @@ title: What is Scala?
 
 #What is Scala
 
-Scala is an elegant general-purpose programming language on the JVM. As a programmer Scala allows you to express your thoughts in an easy way and thereby makes programming fun again. As a project manager Scala
-makes your developers significantly more productive. Scala is designed for building scalable and reliable applications. You can bet your company on Scala, its community and its ecosystem. Twitter, FourSquare,
-LinkedIn, UBS and many others do. It is fully compatible with your existing Java code base and allows for co-existence or smooth, gradual migration. Typesafe, "the Scala Company" provides commercial support.
+## A Scalable language
 
-Scala gets its outstanding qualities from its unique combination of features, some of which we introduce here.
+Scala is an acronym for "Scalable Language". This means that
+Scala grows with you. You can play with it by typing one-line
+expressions and observing the results.  But you can also rely on it
+for large mission critical systems, as many companies, including
+Twitter, LinkedIn, or Intel do.
 
-##Type-safety, concise syntax and type inference
-Scala's clean syntax reminds of dynamic languages like Python. Unlike those languages it provides strong type-safety like Java, but unlike Java, Scala does not require you to write down the types yourself. The
-compiler is smart enough to figure them out for you from the context using a technique called type-inference. Scala code is usually smaller than equivalent Java code by a factor of two.
+To some, Scala feels like a scripting language. It's syntax is concise
+and low ceremony; it's types get out of the way because the compiler
+can infer them.  There's a REPL and IDE worksheets for quick
+feedback. Developers like it so much that Scala won the ScriptBowl
+contest at the 2012 JavaOne conference.
 
-    // define a variable l and assign a list of integers. Type List[Int] of l is inferred automatically.
-    var l = List( 1, 2, 3, 4 )
+At the same time, Scala is the preferred workhorse language for many
+mission critical server systems. The generated code is on a par with
+Java's and its precise typing means that many problems are caught at
+compile-time rather than after deployment.
 
-    // a common pattern: define a class with a primary constructor and assign its arguments to public members
-    class Person( var name : String, var age : Int )
-    val p = new Person( "John Doe", 34 )
-    println( s"${p.name} is ${p.age} years old" ) // this uses string interpolation
+At the root, the language's scalability is the result of a careful
+integration of object-oriented and functional language concepts.
 
+## Object-Oriented
 
-##Fusion of object-orientation and functional programming
-Scala allows you to choose from both worlds and combine them in smart ways. For example, you can structure your software architecture in an object-oriented way, while writing your algorithms and APIs using the
-appeal of functional programming. Scala offers familiar features like polymorphism, inheritance, sanely restricted multiple-inheritance, higher-order functions, pattern matching and a lot more. A good example of
-the fusion is Scala's collection library. Instead of writing loops over the elements to change them or assign them to a new collection, Scala allows you to express those changes in a more compact way as
-transformations:
+Scala is a pure-bred object-oriented language. Conceptually, every
+value is an object and every operation is a method-call. The language
+supports advanced component architectures through classes and traits.
 
-    var employees = List( new Person( "Frank", 18 ), new Person( "Joachim", 62 ), new Person( "Maria", 48 ), new Person( "Lisa", 36 ) )
+Many traditional design patterns in other languages are already
+natively supported. For instance, singletons are supported through
+object definitions and visitors are supported through pattern
+matching. Using implicit classes, Scala even allows you to add new operations
+to existing classes, no matter whether they come from Scala or Java!
 
-    // name and age of all people above 21 in order of their age.
-    employees.filter( p => p.age > 21 )
-             .sortBy( p => p.age )
-             .map   ( p => s"${p.name} is ${p.age} years old" )
-             .mkString(". ")
-    // results in "Lisa is 36 years old. Maria is 48 years old. Joachim is 62 years old"
+## Functional
 
+Even though it's syntax is fairly conventional, Scala is also a
+full-blown functional language. It has everything you would expect,
+including first-class functions, a library with efficient immutable
+data structures, and a general preference of immutability
+over mutation.
 
-##Immutability
-Scala allows you to be mutable, whenever you want, but gives you the tools to enforce immutability to eliminate mutability side-effects as a source of bugs. Scala offers immutable variables and a rich library of
-immutable collection classes. Methods like add, remove or filter leave the original collection untouched and return an adjusted copy instead. Thereby, if you pass an immutable collection to a method you can be certain that this
-method does not change it in any way.
+Unlike with many traditional functional languages, Scala allows a
+gradual, easy migration to a more functional style. You can start to
+use it as a "Java without semicolons". Over time, you can progress to
+gradually eliminate mutable state in your applications, phasing in
+safe functional composition patterns instead. As Scala programmers we
+believe that this progression is often a good idea. At the same time,
+Scala is not opinionated; you can use it with any style you prefer.
 
-    val x = 5 // val prevents reassignment, use var instead to get a mutable variable
+## Seamless Java Interop
 
-    // filter just returns a modified copy, it does not change the original
-    assert( employees.size == 4 )
-    assert( (employees :+ p).size == 5 )
-    assert( employees.filter( p => p.age > 21 ).size == 3 )
-    assert( employees.size == 4 )
+Scala runs on the JVM. Java and Scala classes can be freely mixed, no
+matter whether they reside in different projects or in the same. They can
+even mutually refer to each other, the Scala compiler contains a
+subset of a Java compiler to make sense of such recursive
+dependencies.
 
-##Parallelization and Distribution
-Scala provides innovative solutions to the software parallelization and distribution problem. In the following the `.par` method converts the employees into a parallel collection, which makes the subsequent map
-call to be executed in parallel on your different cores. Scala's parallel collections use smart, adaptive algorithms to provide a performant distribution.
+Java libraries, frameworks and tools are all available. Build tools
+like ant or maven, IDEs like Eclipse, IntelliJ, or Netbeans,
+frameworks like Spring or Hibernate all work seamlessly with Scala.
+Scala runs on all common JVMs and also on Android.
 
-    scala> { val t = System.nanoTime
-         |   val r = employees.par.map ( p => { /* work */ Thread.sleep(1000); p.age } ).sum
-         |   println( f"${(System.nanoTime-t)/1e6}%.1fms used" ); r
-         | }
-    1004.1ms used
-    res0: Int = 164
+The Scala community is an important part of the Java
+ecosystem. Popular Scala frameworks, including Akka, Finagle, and the
+Play web framework include dual APIs for Java and Scala.
 
-The popular Akka library offers an enterprise-grade message passing implementation for parallel and distributed computing. It is inspired by Erlang's well respected actor model and is often a better alternative
-to manual handling of shared memory and the debugging challenges that come with it.
+## Functions are Objects
 
-##DSLs
-Scala allows libraries to be embedded deeply into Scala, feeling very close to having language support. This provides a very good basis for creating domain specific languages embedded into and interacting with a
-fully-fledged programming language. For example, the message-passing actors library defines a method `receive` to handle incoming messages. The following example shows, that it feels just like a control structure
-supported by the language when it is actually purely library defined.
+Scala's approach is to develop a small set of core constructs that can
+be combined in flexible ways. This applies also to its object-oriented
+and functional natures. Features from both sides are unified to a
+degree where Functional and Object-oriented can be seen as two sides
+of the same coin.
 
-    receive {
-      case SomeMessage      => doSomething()
-      case SomeOtherMessage => doSomethingElse()
-    }
+Some examples: Functions in Scala are objects. The function type is
+just a regular class. The algebraic data types found in languages such
+as Haskell, F# or ML are modelled in Scala as class
+hierarchies. Pattern matching is possible over arbitrary classes.
 
-The BDD library specs allows you to write specifications using legal Scala code, such as the following.
+## Future-Proof
 
-    class helloWorld extends Specification {
-      "'hello world' matches 'h.* w.*'" in {
-         "hello world" must be matching("h.* w.*")
-      }
-    }
+Scala particularly shines when it comes to scalable server software
+that makes use of concurrent and synchronous processing, parallel
+utilization of multiple cores, and distributed processing in the
+cloud.
 
-In Scala libraries can even perform compile-time checks to guarantee certain properties statically, either using Scala's implicit arguments or the new experimental macros feature in Scala 2.10.
+It's functional nature makes it easier to write safe and performant
+multi-threaded code. There's typically less reliance on mutable state
+and Scala's futures and actors provide powerful tools for organizing
+concurrent system at a high-level of abstraction.
+
+## Fun
+
+Maybe most important is that programming in Scala tends to be very
+enjoyable.  No boilerplate, rapid iteration, but at the same time the
+safety of a strong static type system. As [Graham Thackley from the
+Guardian says](http://www.infoq.com/articles/guardian_scala): *"We've found that Scala has enabled us to deliver
+things faster with less code. It's reinvigorated the team."*
+
+If you haven't yet, try it out! [Here are some resources to get
+started](./learn).
+
