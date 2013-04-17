@@ -1,10 +1,6 @@
 ---
 layout: maindownloadpage
 title: Download
-path: "/files/archive/"
-release_scala: "scala"
-release_docs: "scala-docs"
-release_sources: "scala-sources"
 release_version: 2.10.1
 release_date: "March 13, 2013"
 maintenance_version: 2.9.3
