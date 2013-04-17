@@ -8,7 +8,7 @@
 function getOS() {
   var osname = "Unknown OS";
   if (navigator.appVersion.indexOf("Win") != -1) osname = "Windows";
-  if (navigator.appVersion.indexOf("Mac") != -1) osname = "MacOS";
+  if (navigator.appVersion.indexOf("Mac") != -1) osname = "Mac OS";
   if (navigator.appVersion.indexOf("Linux") != -1) osname = "Linux";
   if (navigator.appVersion.indexOf("X11") != -1) osname = "UNIX";
   return osname;
@@ -63,7 +63,7 @@ $(document).ready(function() {
   var imageurl = "/resources/img/scala-small-logo.png";
   if (os == "Windows") {
     imageurl = "/resources/img/logos/Windows_logo.png";
-  } else if (os == "MacOS") {
+  } else if (os == "Mac OS") {
     imageurl = "/resources/img/logos/Apple_logo.png";
   } else if (os == "Linux") {
     imageurl = "/resources/img/logos/Tux_logo.png";
@@ -81,7 +81,7 @@ $(document).ready(function() {
       $('<img>', {src: imageurl})
     ).append(
       $('<br>')
-    ).append("Download Scala")
+    ).append("Download Scala for " + os)
   );
 });
 

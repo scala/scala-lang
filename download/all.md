@@ -1,17 +1,8 @@
 ---
-layout: page
+layout: alldownloadspage
 title: Download Previous Versions
+development_version: 2.11.0-M2
 ---
 
-
-
-This page contains a comprehensive list of previous Scala releases.
-
-{% for item in site.categories.download %}
-
-<div>
-  <a href="{{ item.url }}">{{ item.title }}</a>
-</div>
-
-{% endfor %}
+<!-- This page should be auto-generated -->
 
