@@ -6,32 +6,50 @@ layout: page
 <h3>Download</h3>
 
 <div>
-You can download Scala {{ page.release_version }} for TODO OPERATING-SYSTEM below:
+You can download Scala {{ page.release_version }} for <span id="os_name"></span> below.
 </div>
 
-<div>
-TODO nice big link and image go here
+<br/>
+
+<div class="download-wrapper">
+
+  <div id="download-space" class="download">
+  </div>
+
 </div>
+
+<br/>
+<br/>
 
 {{ content }}
 
 {% if page.show_resources == "true" %}
 
+<div>
+
+{% else %}
+
+<div hidden>
+
+{% endif %}
+
 <h3>Other resources</h3>
 
 <div>
-You can find the download links for the installers, documentation and source code archives for Scala {{ page.release_version }} below.
+You can find the installer download links for other operating systems, as well as documentation and source code archives for Scala {{ page.release_version }} below.
 </div>
+
+<br/>
 
 <table>
 <tr>
-  <td>Archive</td>
-  <td>System</td>
-  <td>Size</td>
+  <td style="font-weight: bold;">Archive</td>
+  <td style="font-weight: bold;">System</td>
+  <td style="font-weight: bold;">Size</td>
 </tr>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.tgz">
+    <a id="#link-tgz" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.tgz">
       {{ page.release_scala }}-{{ page.release_version }}.tgz
     </a>
   </td>
@@ -40,7 +58,7 @@ You can find the download links for the installers, documentation and source cod
 <tr/>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.msi">
+    <a id="#link-msi" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.msi">
       {{ page.release_scala }}-{{ page.release_version }}.msi
     </a>
   </td>
@@ -49,7 +67,7 @@ You can find the download links for the installers, documentation and source cod
 </tr>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.msi">
+    <a id="#link_zip" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.zip">
       {{ page.release_scala }}-{{ page.release_version }}.zip
     </a>
   </td>
@@ -58,7 +76,7 @@ You can find the download links for the installers, documentation and source cod
 </tr>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.deb">
+    <a id="#link-deb" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.deb">
       {{ page.release_scala }}-{{ page.release_version }}.deb
     </a>
   </td>
@@ -67,7 +85,7 @@ You can find the download links for the installers, documentation and source cod
 </tr>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.rpm">
+    <a id="#link-rpm" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.rpm">
       {{ page.release_scala }}-{{ page.release_version }}.rpm
     </a>
   </td>
@@ -76,7 +94,7 @@ You can find the download links for the installers, documentation and source cod
 </tr>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_docs }}-{{ page.release_version }}.txz">
+    <a id="#link-api-txz" href="{{ page.path }}{{ page.release_docs }}-{{ page.release_version }}.txz">
       {{ page.release_docs }}-{{ page.release_version }}.txz
     </a>
   </td>
@@ -85,7 +103,7 @@ You can find the download links for the installers, documentation and source cod
 </tr>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_docs }}-{{ page.release_version }}.zip">
+    <a id="#link-api-zip" href="{{ page.path }}{{ page.release_docs }}-{{ page.release_version }}.zip">
       {{ page.release_docs }}-{{ page.release_version }}.zip
     </a>
   </td>
@@ -94,7 +112,7 @@ You can find the download links for the installers, documentation and source cod
 </tr>
 <tr>
   <td>
-    <a href="{{ page.path }}{{ page.release_sources }}-{{ page.release_version }}.tgz">
+    <a id="#link-src-tgz" href="{{ page.path }}{{ page.release_sources }}-{{ page.release_version }}.tgz">
       {{ page.release_sources }}-{{ page.release_version }}.tgz
     </a>
   </td>
@@ -103,7 +121,7 @@ You can find the download links for the installers, documentation and source cod
 </tr>
 </table>
 
-{% endif %}
+</div>
 
 <br/>
 

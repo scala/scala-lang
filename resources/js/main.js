@@ -1,6 +1,25 @@
 ---
 ---
 
+/*************************
+ * Various functionality
+ ************************/
+
+function getOS() {
+  var osname = "Unknown OS";
+  if (navigator.appVersion.indexOf("Win") != -1) osname = "Windows";
+  if (navigator.appVersion.indexOf("Mac") != -1) osname = "MacOS";
+  if (navigator.appVersion.indexOf("Linux") != -1) osname = "Linux";
+  if (navigator.appVersion.indexOf("X11") != -1) osname = "UNIX";
+  return osname;
+}
+
+
+/***************************
+ * Document initialization
+ **************************/
+
+
 $(document).ready(function(){
   // parallax effect
   $.stellar({
@@ -28,6 +47,40 @@ $(document).ready(function(){
     $("#tweets").liveTwitter('scala_lang');
   });
 
+});
+
+
+/***********************
+ * Download page
+ **********************/
+
+$(document).ready(function() {
+  var os = getOS();
+  if (os == "Unknown OS") os = "UNIX";
+
+  $("#os_name").append(os);
+
+  var imageurl = "/resources/img/scala-small-logo.png";
+  if (os == "Windows") {
+    imageurl = "/resources/img/logos/Windows_logo.png";
+  } else if (os == "MacOS") {
+    imageurl = "/resources/img/logos/Apple_logo.png";
+  } else if (os == "Linux") {
+    imageurl = "/resources/img/logos/Tux_logo.png";
+  }
+
+  var link = document.getElementById("#link-tgz").getAttribute("href");
+  if (os == "Windows") {
+    link = document.getElementById("#link-msi").getAttribute("href");
+  }
+
+  $("#download-space").append(
+    $('<a>', {href: link, class: 'btn download'}).append(
+      $('<img>', {src: imageurl})
+    ).append(
+      $('<br>')
+    ).append("Download Scala")
+  );
 });
 
 
@@ -344,3 +397,7 @@ $(document).ready(function(){
   doAjaxQuery(0);
 
 });
+
+
+
+

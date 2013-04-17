@@ -677,6 +677,25 @@ pre.prettyprint {
   /*color: #96938C;*/
 }
 
+div.download-wrapper {
+  width: 400px;
+  text-align: center;
+}
+
+div.download {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+a.btn.download {
+  background-color: #00B1BF;
+  border-color: #005A61 ;
+  padding: 9px 20px 7px;
+  border-radius: 3px;
+}
+
+a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-color:#00B1BF; color: #FFF; text-shadow: 0 -1px 1px rgba(0, 0, 0, .7); }
+
 
 >>>>>>> Stashed changes
 /*.training-item {
