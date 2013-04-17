@@ -69,10 +69,12 @@ $(document).ready(function() {
     imageurl = "/resources/img/logos/Tux_logo.png";
   }
 
-  var link = document.getElementById("#link-tgz").getAttribute("href");
+  var anchor = document.getElementById("#link-main-unixsys");
   if (os == "Windows") {
-    link = document.getElementById("#link-msi").getAttribute("href");
+    anchor = document.getElementById("#link-main-windows");
   }
+  if (anchor == null) anchor = document.getElementById("#link-main-one4all");
+  var link = anchor.getAttribute("href");
 
   $("#download-space").append(
     $('<a>', {href: link, class: 'btn download'}).append(

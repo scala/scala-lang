@@ -21,7 +21,9 @@ You can download Scala {{ page.release_version }} for <span id="os_name"></span>
 <br/>
 <br/>
 
-{{ content }}
+<h3>Software Requirements</h3>
+
+{{ page.requirements }}
 
 {% if page.show_resources == "true" %}
 
@@ -42,87 +44,31 @@ You can find the installer download links for other operating systems, as well a
 <br/>
 
 <table>
+
 <tr>
   <td style="font-weight: bold;">Archive</td>
   <td style="font-weight: bold;">System</td>
   <td style="font-weight: bold;">Size</td>
 </tr>
+
+{% for resource in page.resources %}
 <tr>
   <td>
-    <a id="#link-tgz" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.tgz">
-      {{ page.release_scala }}-{{ page.release_version }}.tgz
+    <a id="#link{{ resource[0] }}" href="{{ resource[2] }}">
+      {{ resource[1] }}
     </a>
   </td>
-  <td>Max OS X, Unix, Cygwin</td>
-  <td>23.9 MB</td>
+  <td>{{ resource[3] }}</td>
+  <td>{{ resource[4] }}</td>
 <tr/>
-<tr>
-  <td>
-    <a id="#link-msi" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.msi">
-      {{ page.release_scala }}-{{ page.release_version }}.msi
-    </a>
-  </td>
-  <td>Windows (msi installer)</td>
-  <td>43.3 MB</td>
-</tr>
-<tr>
-  <td>
-    <a id="#link_zip" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.zip">
-      {{ page.release_scala }}-{{ page.release_version }}.zip
-    </a>
-  </td>
-  <td>Windows (zip)</td>
-  <td>23.9 MB</td>
-</tr>
-<tr>
-  <td>
-    <a id="#link-deb" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.deb">
-      {{ page.release_scala }}-{{ page.release_version }}.deb
-    </a>
-  </td>
-  <td>Debian</td>
-  <td>21.0 MB</td>
-</tr>
-<tr>
-  <td>
-    <a id="#link-rpm" href="{{ page.path }}{{ page.release_scala }}-{{ page.release_version }}.rpm">
-      {{ page.release_scala }}-{{ page.release_version }}.rpm
-    </a>
-  </td>
-  <td>RPM package</td>
-  <td>21.0 MB</td>
-</tr>
-<tr>
-  <td>
-    <a id="#link-api-txz" href="{{ page.path }}{{ page.release_docs }}-{{ page.release_version }}.txz">
-      {{ page.release_docs }}-{{ page.release_version }}.txz
-    </a>
-  </td>
-  <td>API docs</td>
-  <td>1.8 MB</td>
-</tr>
-<tr>
-  <td>
-    <a id="#link-api-zip" href="{{ page.path }}{{ page.release_docs }}-{{ page.release_version }}.zip">
-      {{ page.release_docs }}-{{ page.release_version }}.zip
-    </a>
-  </td>
-  <td>API docs</td>
-  <td>21.3 MB</td>
-</tr>
-<tr>
-  <td>
-    <a id="#link-src-tgz" href="{{ page.path }}{{ page.release_sources }}-{{ page.release_version }}.tgz">
-      {{ page.release_sources }}-{{ page.release_version }}.tgz
-    </a>
-  </td>
-  <td>sources</td>
-  <td>37.6 MB</td>
-</tr>
+{% endfor %}
+
 </table>
 
 </div>
 
-<br/>
 
+{{ content }}
+
+<br/>
 
