@@ -1,6 +1,25 @@
 ---
 ---
 
+/*************************
+ * Various functionality
+ ************************/
+
+function getOS() {
+  var osname = "Unknown OS";
+  if (navigator.appVersion.indexOf("Win") != -1) osname = "Windows";
+  if (navigator.appVersion.indexOf("Mac") != -1) osname = "Mac OS";
+  if (navigator.appVersion.indexOf("Linux") != -1) osname = "Linux";
+  if (navigator.appVersion.indexOf("X11") != -1) osname = "UNIX";
+  return osname;
+}
+
+
+/***************************
+ * Document initialization
+ **************************/
+
+
 $(document).ready(function(){
   // parallax effect
   $.stellar({
@@ -28,6 +47,42 @@ $(document).ready(function(){
     $("#tweets").liveTwitter('scala_lang');
   });
 
+});
+
+
+/***********************
+ * Download page
+ **********************/
+
+$(document).ready(function() {
+  var os = getOS();
+  if (os == "Unknown OS") os = "UNIX";
+
+  $("#os_name").append(os);
+
+  var imageurl = "/resources/img/scala-small-logo.png";
+  if (os == "Windows") {
+    imageurl = "/resources/img/logos/Windows_logo.png";
+  } else if (os == "Mac OS") {
+    imageurl = "/resources/img/logos/Apple_logo.png";
+  } else if (os == "Linux") {
+    imageurl = "/resources/img/logos/Tux_logo.png";
+  }
+
+  var anchor = document.getElementById("#link-main-unixsys");
+  if (os == "Windows") {
+    anchor = document.getElementById("#link-main-windows");
+  }
+  if (anchor == null) anchor = document.getElementById("#link-main-one4all");
+  var link = anchor.getAttribute("href");
+
+  $("#download-space").append(
+    $('<a>', {href: link, class: 'btn download'}).append(
+      $('<img>', {src: imageurl})
+    ).append(
+      $('<br>')
+    ).append("Download Scala for " + os)
+  );
 });
 
 
@@ -208,3 +263,143 @@ $(document).ready(function(){
   });
 
 });
+
+/**************************
+ * Community tickets feed *
+ **************************/
+
+$(document).ready(function(){
+  var $communityTicketsDiv = $('#communitytickets');
+
+  // Stop early if the element does not exist
+  if ($communityTicketsDiv.length == 0)
+    return;
+
+  var MAX_TICKETS_PER_PAGE = 20;
+
+  function escapeHTML(text) {
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function doPopulateTicketsPane(data) {
+    var pageCount = Math.ceil(data.total / data.maxResults);
+    var currentPage = Math.floor(data.startAt / data.maxResults) + 1;
+
+    $("#communitytickets").empty();
+
+    var pagerList = $('<ul>');
+
+    for (var i = 0; i <= pageCount+1; i++) {
+      var page, buttonText;
+      if (i == 0) {
+        page = currentPage-1;
+        buttonText = '«';
+      } else if (i > pageCount) {
+        page = currentPage+1;
+        buttonText = '»';
+      } else {
+        page = i;
+        buttonText = i.toString();
+      }
+
+      var valid = (page >= 1) && (page <= pageCount);
+      var item;
+
+      if (valid) {
+        var clickFun = (function(startAt) {
+          return function() {
+            doAjaxQuery(startAt);
+            return false;
+          }
+        })((page-1) * data.maxResults);
+
+        var anchor = $('<a>', {
+          href: '#',
+          text: buttonText,
+          click: clickFun
+        });
+        item = $('<li>', {
+          class: page == currentPage ? 'active' : ''
+        }).append(anchor);
+      } else {
+        var anchor = $('<a>', {
+          href: '#',
+          text: buttonText,
+          click: function() {
+            return false;
+          }
+        });
+        item = $('<li>', {
+          class: 'disabled'
+        }).append(anchor);
+      }
+
+      pagerList.append(item);
+    }
+
+    $("#communitytickets").append(
+      $('<div>', {class: 'pagination'}).append(pagerList)
+    );
+
+    var issues = data.issues;
+    for (i = 0; i < issues.length; i++) {
+      var issue = issues[i];
+      var fields = issue.fields;
+
+      /* Note: if you want to add more fields (or remove some), be sure to
+       * update the query URL below, in doAjaxQuery(), so that the 'fields'
+       * parameter contains the list of fields you want to receive.
+       */
+      var thisContent =
+        '<hr /><div class="tickets-item">' +
+          '<div class="tickets-title"><a href="https://issues.scala-lang.org/browse/'+issue.key+'">'+escapeHTML(fields.summary)+'</a></div>' +
+          '<div class="tickets-issuetype"><img src="'+fields.issuetype.iconUrl+'" /> '+escapeHTML(fields.issuetype.name)+'</div>' +
+          '<div class="tickets-priority"><img src="'+fields.priority.iconUrl+'" /> '+escapeHTML(fields.priority.name)+'</div>' +
+          '<div class="tickets-components">'+fields.components.map(function (component) {
+            return '<a href="https://issues.scala-lang.org/browse/SI/component/'+component.id+'">'+escapeHTML(component.name)+'</a>';
+          }).join(', ')+'</div>'+
+          '<div class="tickets-description">'+escapeHTML(fields.description)+'</div>'+
+          // '<div class="tickets-data"><pre>'+JSON.stringify(issue, undefined, 2)+'</pre></div>' +
+        '</div>';
+
+      $("#communitytickets").append(thisContent);
+    }
+  };
+
+  function onAjaxSuccess(response, textStatus, jqXHR) {
+    doPopulateTicketsPane(response);
+  }
+
+  function onAjaxError(jqXHR, textStatus, errorThrown) {
+    // log the error to the console
+    console.error(
+      "Could not load community tickets from JIRA: " + textStatus, errorThrown);
+  }
+
+  function doAjaxQuery(startAt) {
+    /* Note: the 'fields' parameter contains the list of fields we use in
+     * the construction of the display, in doPopulateTicketsPane().
+     */
+    $.ajax({
+      url: "https://issues.scala-lang.org/rest/api/2/search?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component&maxResults="+MAX_TICKETS_PER_PAGE+'&startAt='+startAt+'&fields=summary,issuetype,priority,components,description',
+      type: "GET",
+      dataType: "jsonp",
+      jsonp: 'jsonp-callback',
+      crossDomain: true,
+      success: onAjaxSuccess,
+      error: onAjaxError
+    });
+  }
+
+  doAjaxQuery(0);
+
+});
+
+
+
+

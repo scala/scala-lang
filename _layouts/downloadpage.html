@@ -1,0 +1,74 @@
+---
+layout: page
+---
+
+
+<h3>Download</h3>
+
+<div>
+You can download Scala {{ page.release_version }} for <span id="os_name"></span> below.
+</div>
+
+<br/>
+
+<div class="download-wrapper">
+
+  <div id="download-space" class="download">
+  </div>
+
+</div>
+
+<br/>
+<br/>
+
+<h3>Software Requirements</h3>
+
+{{ page.requirements }}
+
+{% if page.show_resources == "true" %}
+
+<div>
+
+{% else %}
+
+<div hidden>
+
+{% endif %}
+
+<h3>Other resources</h3>
+
+<div>
+You can find the installer download links for other operating systems, as well as documentation and source code archives for Scala {{ page.release_version }} below.
+</div>
+
+<br/>
+
+<table>
+
+<tr>
+  <td style="font-weight: bold;">Archive</td>
+  <td style="font-weight: bold;">System</td>
+  <td style="font-weight: bold;">Size</td>
+</tr>
+
+{% for resource in page.resources %}
+<tr>
+  <td>
+    <a id="#link{{ resource[0] }}" href="{{ resource[2] }}">
+      {{ resource[1] }}
+    </a>
+  </td>
+  <td>{{ resource[3] }}</td>
+  <td>{{ resource[4] }}</td>
+<tr/>
+{% endfor %}
+
+</table>
+
+</div>
+
+
+{{ content }}
+
+<br/>
+

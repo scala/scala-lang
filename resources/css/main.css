@@ -631,6 +631,73 @@ a.brand {
   min-height: 400px;
 }
 
+pre.prettyprint {
+  overflow: hidden;
+}
+
+/* doc blocks on the learn page */
+
+.doc-block {
+  text-align: center;
+  float: left;
+  /*border: 1px solid #000;*/
+}
+
+/*.doc-block > h2 > span {
+  border-width: 0 34px;
+  height: 32px;
+  display: inline-block;
+  line-height: 35px;
+  -moz-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
+  -webkit-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
+  -webkit-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
+  -o-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
+  border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
+  background-color: #191a1a;
+  padding: 0 10px;
+}
+*/
+
+.doc-block > h3 {
+  text-align: center;
+  line-height: normal;
+  font-size: 17pt;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*color: #fff;*/
+}
+
+.doc-block > p {
+  /*text-align: center;*/
+  /*font-family: "kulturista-web", serif;*/
+  margin: 0 15px 15px;
+  font-size: 13pt;
+  line-height: 17pt;
+  /*color: #96938C;*/
+}
+
+div.download-wrapper {
+  width: 400px;
+  text-align: center;
+}
+
+div.download {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+a.btn.download {
+  background-color: #00B1BF;
+  border-color: #005A61 ;
+  padding: 9px 20px 7px;
+  border-radius: 3px;
+}
+
+a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-color:#00B1BF; color: #FFF; text-shadow: 0 -1px 1px rgba(0, 0, 0, .7); }
+
+
+>>>>>>> Stashed changes
 /*.training-item {
 
 }
