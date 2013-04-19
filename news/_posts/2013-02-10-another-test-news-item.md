@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: news
 post-type: announcement
 title: Something was Released!
 ---

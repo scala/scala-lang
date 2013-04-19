@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: news
 post-type: announcement
 title: "New Release!"
 author: Heather Miller

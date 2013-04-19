@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: news
 post-type: blog
 title: "Example of a Link Out"
 author: Heather Miller
