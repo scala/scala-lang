@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: news
 post-type: documentation
 title: "This is Another Test News Item, But This Time With a Longer Title That Will Wrap"
 author: Heather Miller

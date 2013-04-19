@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: news
 post-type: announcement
 title: Test News Item
 author: Heather Miller
