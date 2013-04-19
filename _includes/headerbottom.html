@@ -31,7 +31,24 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
+      var f = function(event){
+        var href = $(this).attr('href');
+        var target = $(this).attr('target');
+        _gaq.push(['_trackEvent','Downloads','Download',href]);
+        if (target === undefined || target.toLowerCase() != '_blank') {
+          setTimeout(function() { location.href = href; }, 200);
+          return false;
+        }
+      };
+      function endsWith(str, suffix) {
+          return str.indexOf(suffix, str.length - suffix.length) !== -1;
+      }
+      $(function(){
+        $('a').filter(function(){
+          var href = $(this).attr('href');
+          return !endsWith(href,'/') && !endsWith(href,'html');
+        }).on('click',f);
+      });
     </script>
   </head>
   <body onload="styleCode()">
