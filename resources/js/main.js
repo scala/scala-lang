@@ -60,6 +60,11 @@ $(document).ready(function() {
 
   $("#os_name").append(os);
 
+  // Do not do any of the following if we're not on a download page
+  // Otherwise a TypeError is raised and disables all other scripts on the page
+  if ($("#download-space").length == 0)
+    return;
+
   var imageurl = "/resources/img/scala-small-logo.png";
   if (os == "Windows") {
     imageurl = "/resources/img/logos/Windows_logo.png";
