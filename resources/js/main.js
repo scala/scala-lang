@@ -66,7 +66,7 @@ $(document).ready(function() {
   } else if (os == "Mac OS") {
     imageurl = "/resources/img/logos/Apple_logo.png";
   } else if (os == "Linux") {
-    imageurl = "/resources/img/logos/Tux_logo.png";
+    imageurl = "/resources/img/logos/Tux.svg";
   }
 
   var anchor = document.getElementById("#link-main-unixsys");
@@ -84,6 +84,26 @@ $(document).ready(function() {
     ).append("Download Scala for " + os)
   );
 });
+
+/***********************
+ * Download Button
+ **********************/
+
+$(document).ready(function() {
+  var os = getOS();
+  if (os == "Unknown OS") os = "UNIX";
+  var hiddenDownload = $("#link-main-unixsys");
+  if (os == "Windows") {
+    hiddenDownload = $("#link-main-windows");
+  }
+  // get the right download link in place
+  var downloadLink = $("#download-link");
+  if (downloadLink.length > 0) {
+    downloadLink.text("Download Scala for " + os);
+    downloadLink.prop("href", hiddenDownload.attr("href"));
+  }
+});
+
 
 
 /******************************

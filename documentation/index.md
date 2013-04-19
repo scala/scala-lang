@@ -74,7 +74,7 @@ There are a few interactive resources for trying out Scala, to get a look and fe
 There are more and more books being published about Scala. [Here]({{ site.baseurl  }}/documentation/books.html), you can find some of the titles. We only list books here which give an introduction to the Scala Language. Books which require knowledge of Scala, in particular books on frameworks like Lift, Play! or Akka are notlisted here.
 
 
-## Bleeding edge
+## Bleeding Edge
 
 If you are interested in finding out about the hottest, most pressing issues of tomorrow in the Scala world, have a look at the
 [Scala Improvement Process (SIP) page](http://docs.scala-lang.org/sips/).
