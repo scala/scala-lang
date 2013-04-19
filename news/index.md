@@ -1,8 +1,9 @@
 ---
-layout: news
+layout: newsbase
 title: News Archive
 ---
 
-# News
-
-TODO Render most recent news item
+{% for p in site.categories.news limit: 1 %}
+  {% assign post = p %}
+  {% include render-news-item.html %}
+{% endfor %}
