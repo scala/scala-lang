@@ -146,7 +146,7 @@ a.brand {
 
 .scala-spiral {
   position: relative;
-  background: url(/*{{ site.baseurl }}/resources/img/scala-spiral-noise-sm2.png*/) no-repeat center;
+  background: /*url({{ site.baseurl }}/resources/img/scala-spiral-noise-sm2.png)*/ no-repeat center;
 }
 
 .scala-spiral > img {
