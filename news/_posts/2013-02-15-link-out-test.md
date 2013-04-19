@@ -1,6 +1,7 @@
 ---
 layout: news
 post-type: blog
+tags: blog-post
 title: "Example of a Link Out"
 author: Heather Miller
 link-out: "http://www.google.com"
