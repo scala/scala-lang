@@ -48,17 +48,6 @@ language ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala)).
 
 Find your local Scala user group on <http://www.scala-tribes.org/>.
 
-### Blogs
-
-* [Artima](http://www.artima.com/index.jsp)
-* [Debasish Ghosh](http://debasishg.blogspot.com/)
-* [James Iry](http://james-iry.blogspot.com/)
-* [Martin Odersky](http://www.artima.com/weblogs/index.jsp?blogger=modersky)
-* [Joakim Ohlrogge](http://johlrogge.wordpress.com/)
-* [David Pollak](http://blog.lostlake.org/)
-* [Daniel Spiewak](http://www.codecommit.com/blog/)
-
-
 ### News
 
 * [Scala at Reddit](http://www.reddit.com/r/scala/)
