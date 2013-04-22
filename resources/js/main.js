@@ -18,7 +18,7 @@ function getOS() {
 /***************************
  * Document initialization
  **************************/
-
+$(document).ready(styleCode);
 
 $(document).ready(function(){
   // parallax effect
