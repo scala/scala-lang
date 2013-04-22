@@ -457,7 +457,7 @@ var f = function(event){
   _gaq.push(['_trackEvent','Downloads','Download',href]);
   if (target === undefined || target.toLowerCase() != '_blank') {
     setTimeout(function() { location.href = href; }, 200);
-    return false;
+    return true;
   }
 };
 function endsWith(str, suffix) {
