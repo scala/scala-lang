@@ -457,7 +457,7 @@ var f = function(event){
   _gaq.push(['_trackEvent','Downloads','Download',href]);
   if (target === undefined || target.toLowerCase() != '_blank') {
     setTimeout(function() { location.href = href; }, 200);
-    return true;
+    return false;
   }
 };
 function endsWith(str, suffix) {
@@ -466,7 +466,7 @@ function endsWith(str, suffix) {
 $(function(){
   $('a').filter(function(){
     var href = $(this).attr('href');
-    return !endsWith(href,'/') && !endsWith(href,'html');
+    return !(endsWith(href,'/') || endsWith(href,'html') || $(this).hasClass('no-analytics'));
   }).click(f);
 });
 
