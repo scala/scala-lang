@@ -1,51 +1,78 @@
 ---
 layout: page
-title: Contribute
+title: Get Involved
 ---
 # Contributing to the Scala project
 
-The Scala programming langauge is an open source project with a very
+The Scala programming language is an open source project with a very
 diverse community, where people from all over the world contribute their work,
 with everyone benefitting from friendly help and advice, and
 kindly helping others in return. So why not join the Scala community and help
 everyone make things better?
 
-The following are typical questions you might ask when first contributing to Scala.
-If you have other questions not addressed here, feel free to ask on the [scala-internals mailing list](http://groups.google.com/group/scala-internals).
+<div class="container">
+  <div class="row">
+    <div class="span4 doc-block">
+      <h3><a href="http://groups.google.com/group/scala-internals">Scala Internals</a></h3>
+      <p>Get a peek into the inners of the Scala compiler.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="{{ site.baseurl }}/get-involved/bug-reporting-guide.html">Report an issue</a></h3>
+      <p>File a bug report or a feature request.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="http://docs.scala-lang.org/contribute.html">Documentation</a></h3>
+      <p>Improve the documentation itself.</p>
+    </div>
+  </div>
 
-<br/>
+  <div class="row">
+    <div class="span4 doc-block">
+      <h3><a href="http://docs.scala-lang.org/sips/sip-submission.html">Write a SIP</a></h3>
+      <p>Write a proposal for extending/improving Scala.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="{{ site.baseurl }}/get-involved/hacker-guide.html">Hacker's guide</a></h3>
+      <p>Learn to write good code and improve your chances of contributing to the Scala galaxy.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12111">Community issues</a></h3>
+      <p>Get cracking on some easy to approach issues.</p>
+    </div>
+  </div>
 
-### I found something that doesn't work as expected. How to file a bug report?
+  <div class="row">
+    <div class="span4 doc-block">
+      <h3><a href="https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12112">Unassigned issues</a></h3>
+      <p>Get serious with some more complex issues.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="{{ site.baseurl }}/get-involved/scala-fame.html">Hall of Fame</a></h3>
+      <p>Track your rockstar status in the community.</p>
+    </div>
+    <div class="span4 doc-block">
+      <h3><a href="{{ site.baseurl }}/get-involved/partest-guide.html">Test your contributions</a></h3>
+      <p>Learn how to run the Scala test suite.</p>
+    </div>
+  </div>
+</div>
 
-[The reporting bugs page](bug-reporting-guide.html) describes the steps to take when you find something that doesn't work
-as expected. Filing in a good bug report increases the chances the ticket is fixed quickly.
 
-<br/>
 
 ### Why contribute a patch to Scala?
 
 Just to name a few common reasons:
  - contributing a patch is the best way to make sure your desired changes will be available in the next Scala version
  - Scala is written in Scala, so going through the source code and patching it will improve your Scala-fu
- - last but not least, you will make it into the [Scala Contribuitor Hall of Fame](scala-fame.html).
+ - last but not least, you will make it into the [Scala Contributor Hall of Fame](scala-fame.html).
 
 <br/>
-
-### I'd like to start hacking the Scala project, how to find something to work on?
-
-Depending on your skillset, you may want to contribute documentation and/or code. Documentation has always been very
-appreciated work in the Scala community, as most code contributions tend to be quite scarce in explanations of how
-things work and how everyone else is supposed to use them. To contribute documentation, have a look at the
-[documentation page](documentation.html).
 
 The main Scala project consists of the standard Scala library, the Scala reflection and macros library,
 the Scala compiler and the Scaladoc tool. This means there's plenty to choose from when deciding what to work on.
 Typically the scaladoc tool provides a low entry point for new committers, so it is a good first step into contributing.
 
 On the Scala bug tracker you will find many bugs that are [marked as good starting points to contributing ("community" bugs)](https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12111) or [that are not currently assigned](https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12112) and that you could pick up. Once you decided on a ticket to look at, see the next step on how to proceed further.
-
-{% comment %} Keep the space in the <div>! Jekyll/Marulu limitation {% endcomment %}
-<div id="communitytickets"> </div>
 
 <br/>
 

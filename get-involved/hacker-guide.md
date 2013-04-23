@@ -269,7 +269,7 @@ After applying the fix and running `ant`, our simple test case in `sandbox/Test.
 ### Verify
 
 Now to make sure that my fix doesn't break anything I need to run the test suite using the `partest` tool we wrote to test Scala.
-Read up [the partest guide](/contribute/partest-guide.html) to learn the details about partest, but in a nutshell you can either
+Read up [the partest guide](partest-guide.html) to learn the details about partest, but in a nutshell you can either
 run `ant test` to go through the entire test suite (30+ minutes) or use wildcards to limit the tests to something manageable:
 
     18:52 ~/Projects/scala/sandbox (ticket/6725)$ cd ../test
@@ -286,12 +286,12 @@ run `ant test` to go through the entire test suite (30+ minutes) or use wildcard
 ## 4. Publish
 
 After development is finished, it's time to publish the code and submit your patch for discussion and potential inclusion into Scala.
-In a nutshell, this involves: 
+In a nutshell, this involves:
 
-  1. making sure that your code and commit messages are of high quality, 
+  1. making sure that your code and commit messages are of high quality,
   2. clicking a few buttons in the Github interface,
   3. assigning one or more reviewers which will look through your pull request.
-  
+
  Let's go into each of these points in more detail.
 
 ### Commit
