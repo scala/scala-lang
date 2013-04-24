@@ -613,6 +613,57 @@ a.brand {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer ul {
+    -moz-box-sizing: content-box;
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 10px 2% 20px 0;
+    width: 22%;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer li {
+  text-align: left;
+}
+
+.footer ul:last-child {
+    padding-right: 0;
+}
+
+.footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer ul li h5 {
+    border-bottom: 1px solid #676767;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+.footer ul li h5 a {
+    font-size: 14px;
+    opacity: 1;
+}
+
 .page-splash {
   position: relative;
   background: url({{ site.baseurl }}/resources/img/swiss-alps-sunset5.jpg) no-repeat center;
