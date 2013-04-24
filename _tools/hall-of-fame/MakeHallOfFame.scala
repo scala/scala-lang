@@ -26,7 +26,8 @@ object MakeHallOfFame {
       "lexspoon",
       "paulp",
       "phaller",
-      "retronym"
+      "retronym",
+      "vigdorchik"
   )
 
   // TODO Expand (and maintain) that list - or fetch it from some source
