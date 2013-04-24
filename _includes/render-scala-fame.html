@@ -1,0 +1,50 @@
+{% comment %}
+Input:
+  famedata: Scala fame data to be rendered
+{% endcomment %}
+
+<h2>{{ famedata.title }}</h2>
+
+{% for cat in famedata.fame-categories %}
+<div class="fame-category" id="fame-category-{{ cat.category }}">
+<h3>{{ cat.category }}</h3>
+
+{% for author in cat.authors limit:10 %}
+<div class="fame-author fame-author-rank-{{ author.rank }}">
+  <div class="fame-author-gravatar">
+    <img src="{{ author.gravatar|escape }}" alt="{{ author.username }}" width="80px" height="80px" />
+  </div>
+  <div class="fame-author-username">
+    <a href="https://github.com/{{ author.username }}">{{ author.username }}</a>
+  </div>
+  <div class="fame-author-stats">
+    <div class="fame-author-stats-commits">{{ author.commits }} commits</div>
+    <div class="fame-author-stats-added">Lines added: {{ author.linesAdded }}</div>
+    <div class="fame-author-stats-deleted">Lines deleted: {{ author.linesDeleted }}</div>
+  </div>
+</div>
+{% endfor %}
+
+</div>
+{% endfor %}
+
+{% assign titledone = false %}
+{% for cat in famedata.fame-categories %}
+{% for author in cat.authors %}
+{% if author.newContributor %}
+
+{% unless titledone %}
+<h2>New contributors of the month</h2>
+<ul>
+{% assign titledone = true %}
+{% endunless %}
+
+  <li><a href="https://github.com/{{ author.username }}">{{ author.username }}</a></li>
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+{% if titledone %}
+</ul>
+{% endif %}
