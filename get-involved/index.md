@@ -74,9 +74,8 @@ Typically the scaladoc tool provides a low entry point for new committers, so it
 
 On the Scala bug tracker you will find many bugs that are [marked as good starting points to contributing ("community" bugs)](https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12111) or [that are not currently assigned](https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12112) and that you could pick up. Once you decided on a ticket to look at, see the next step on how to proceed further.
 
-If you are interested in contributing code, we ask you to complete and
-submit to us the
-[Scala Contributor License Agreement](/resources/pdf/contributor_agreement.pdf),
+If you are interested in contributing code, we ask you to sign the
+[Scala Contributor License Agreement](http://typesafe.com/contribute/cla/scala),
 which allows us to ensure that all code submitted to the project is
 unencumbered by copyrights or patents.
 
@@ -101,7 +100,6 @@ To be moved to hacker-guide.md:
 - Subpages or subsections for contributing for each project (i.e. how to find tickets/features to work on)
 - Building and contributing code (contributor's workflow)
   - link to a proper git etiquette page
-  - link to CLA
   - how to run and use partest
   - compiler page (links to compiler-related docs i.e. reflection/macros/compiler-plugin guides, links to compiler internal videos, and useful info from wiki) (or should this go on docs.scala-lang?)
 - Link to how to make a bug report
@@ -174,9 +172,7 @@ specific ticket on the issue tracker.
 
 ## Contributor's License Agreement
 
-Before we can accept your pull request you have to sign our Contributor's License Agreement (CLA).
-
-TODO: Heather
+Before we can accept your pull request you have to sign our [Contributor's License Agreement (CLA)](http://typesafe.com/contribute/cla/scala).
 
 ## Compiler Internals
 
