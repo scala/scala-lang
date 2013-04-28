@@ -127,7 +127,6 @@ a.brand {
 }
 
 .splash {
-  /*position:fixed;*/
   position: relative;
   background: url({{ site.baseurl }}/resources/img/swiss-alps-sunset5-sm.jpg) no-repeat center;
   -webkit-background-size: cover;
@@ -135,6 +134,7 @@ a.brand {
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
+  min-width:1024px;
   height: 540px;
 }
 
@@ -208,12 +208,15 @@ a.brand {
 }
 
 .bullet-point-box {
+  width: 100%;
+  min-width:1024px;
   min-height: 400px;
   padding: 40px;
 }
 
 .code-snippet-box {
   width: 100%;
+  min-width:1024px;
   background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
   background-color: #fff;
   min-height: 400px;
@@ -226,11 +229,13 @@ a.brand {
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
+  min-width:1024px;
   min-height: 400px;
 }
 
 .events-training-twitter-box {
   width: 100%;
+  min-width:1024px;
   background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
   background-color: #93AAAA;
   min-height: 400px;
