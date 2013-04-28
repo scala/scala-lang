@@ -17,14 +17,11 @@ text-rendering: optimizeLegibility;
 }
 
 html, body {
-  height: 100%;
   width: 100%;
   overflow-x: hidden;
 }
 
 body {
-  width: 100%;
-  min-width:1024px;
   background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
   background-color: rgba(15, 33, 43, 0.9);
   font-family: 'proxima-nova', sans-serif;
