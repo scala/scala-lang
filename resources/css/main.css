@@ -18,9 +18,13 @@ text-rendering: optimizeLegibility;
 
 html, body {
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  min-width:1024px;
   background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
   background-color: rgba(15, 33, 43, 0.9);
   font-family: 'proxima-nova', sans-serif;
@@ -242,7 +246,7 @@ a.brand {
 }
 
 .whitestripe {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 300;
@@ -253,12 +257,12 @@ a.brand {
   background: -moz-linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 95px);
   background: -o-linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 95px);
   background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 95px);
-  margin-bottom: 50px;
+  margin-bottom: -90px;
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
   border-bottom: 1px solid #fff;
-  min-width: 1020px;
+  min-width: 1024px;
   height: 90px;
 }
 
@@ -667,24 +671,6 @@ a.brand {
     opacity: 1;
 }
 
-.page-splash {
-  position: relative;
-  background: url({{ site.baseurl }}/resources/img/swiss-alps-sunset5.jpg) no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 240px;
-}
-
-.page-container {
-  width: 100%;
-  background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
-  background-color: #fff;
-  min-height: 400px;
-}
-
 pre.prettyprint {
   overflow: hidden;
 }
@@ -751,7 +737,6 @@ a.btn.download {
 a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-color:#00B1BF; color: #FFF; text-shadow: 0 -1px 1px rgba(0, 0, 0, .7); }
 
 
->>>>>>> Stashed changes
 /*.training-item {
 
 }
