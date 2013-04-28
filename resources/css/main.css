@@ -556,9 +556,11 @@ a.brand {
 
 .tweet .text a { color: #C32C03; }
 .tweet .text a:hover { color: #008E93; text-decoration: none;}
+.original-tweet > a { color: #fff; font-weight: normal; text-decoration: none; }
+.original-tweet > a:hover { color: #2C3846; }
 .username { position: relative; top: 0px; left: -10px; color: #fff; white-space: nowrap; line-height: 1em;}
-.username a { color: #2C3846; font-weight: bold; text-decoration: none; }
-.username a:hover { color: #C83D00; }
+.username > a { color: #2C3846; font-weight: bold; text-decoration: none; }
+.username > a:hover { color: #C83D00; }
 .triangle { position: relative; bottom: 9px; left: 40px; height: 0px; width: 1px; margin-left: auto; margin-right: auto; border-top: 16px solid rgba(0, 30, 30, 0.7); border-left: none; border-right: 16px solid transparent; border-bottom: none; }
 
 .caret-container{position:relative}
