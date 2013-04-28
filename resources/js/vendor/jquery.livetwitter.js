@@ -314,15 +314,6 @@
               }
             }
 
-            if (this.settings.timeLinks) {
-              html += ' <span class="time">';
-              html += '<a href="' + tweet.url + '" rel="external">';
-              html += this.relativeTime(tweet.created_at);
-              html += '</a></span>';
-            } else {
-              html += ' <span class="time">' + this.relativeTime(tweet.created_at) + '</span>';
-            }
-
             return html;
           },
 
