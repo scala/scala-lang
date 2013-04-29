@@ -5,42 +5,53 @@ layout: default
 {% include headertop.html %}
 {% include headerbottom.html %}
 
-<div class="whitestripe">
+<!-- <div class="whitestripe">
   <div class="container" style="height: 100%">
     {% include navbar.html %}
   </div>
   <div class="color-stripe">&nbsp;</div>
-</div>
-
-
+</div> -->
 
 <div class="splash">
   <div class="darkbluestripe">&nbsp;</div>
   <div class="container">
     <div class="row">
-      <div class="span8" style="position: relative;">
-        <div class="scala-title">
-          <span class="theprogramminglanguage">the</span>&nbsp;<span class="scala">Scala</span></br><span class="theprogramminglanguage">Programming Language</span>
+      <div class="span12">
+        <div class="newlogo">
+          <div class="newlogo-spiral-logo"><img src="{{ site.baseurl }}/resources/img/scala-spiral-white.png"/></div>
+          <div class="newlogo-scala-text">Scala</div>
         </div>
+          {% include navbar.html %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="span8" style="position: relative;">
         <div class="splash-text ontop">
-          <h2>Object-Oriented Meets Functional</h2>
+          <h2 style="font-weight: 700;">Object-Oriented Meets Functional</h2>
           <p class="splash-pitch">
             Have the best of both worlds. Construct elegant class hierarchies
             for maximum code reuse and extensibility, implement their behavior using
             higher-order functions. Or anything in-between.
           </p>
-          <a href="{{ site.baseurl }}/what-is-scala.html" class="btn small">Learn More</a>
-          <a id="download-link" href="{{ site.baseurl }}/files/archive/scala-2.10.1.tgz" class="btn small">Download Scala</a>
-          <div hidden>
-            <a id="link-main-unixsys" href="{{ site.baseurl }}/files/archive/scala-2.10.1.tgz"/>
-            <a id="link-main-windows" href="{{ site.baseurl }}/files/archive/scala-2.10.1.msi"/>
-         </div>
-          <a href="{{ site.baseurl }}/api/" class="btn small">Scala API</a>
+          <a id="learn-more-btn" href="{{ site.baseurl }}/what-is-scala.html">Learn More</a>
+          <!-- <a href="{{ site.baseurl }}/what-is-scala.html" class="btn small">Learn More</a> -->
+          <!-- <a href="{{ site.baseurl }}/api/" class="btn small">Scala API</a> -->
         </div>
       </div>
-      <div class="span4"><div class="scala-spiral"><img src="{{ site.baseurl }}/resources/img/scala-spiral-noise-sm2.png"/></div></div>
+      <div class="span4">
+        <div class="scala-spiral"><img src="{{ site.baseurl }}/resources/img/smooth-spiral.png"/></div>
+      </div>
     </div>
 
+  </div>
+</div>
+<div class="redstripe">&nbsp;</div>
+
+<div class="newwhitestripe">
+  <div class="download-btn-wrap"><a id="download-btn" href="{{ site.baseurl }}/files/archive/scala-2.10.1.tgz">Download</a></div>
+  <div hidden>
+    <a id="link-main-unixsys" href="{{ site.baseurl }}/files/archive/scala-2.10.1.tgz"/>
+    <a id="link-main-windows" href="{{ site.baseurl }}/files/archive/scala-2.10.1.msi"/>
   </div>
 </div>
 

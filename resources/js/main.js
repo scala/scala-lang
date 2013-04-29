@@ -116,11 +116,12 @@ $(document).ready(function() {
     hiddenDownload = $("#link-main-windows");
   }
   // get the right download link in place
-  var downloadLink = $("#download-link");
+  var downloadLink = $("#download-btn");
   if (downloadLink.length > 0) {
-    downloadLink.text("Download Scala for " + os);
+    downloadLink.text("Download for " + os);
     downloadLink.prop("href", hiddenDownload.attr("href"));
   }
+
 });
 
 
