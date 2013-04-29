@@ -19,11 +19,9 @@ function getOS() {
  * Document initialization
  **************************/
 $(document).ready(function(){
-  // parallax effect
-  $.stellar({
-    horizontalScrolling: false,
-    verticalOffset: 40
-  });
+
+  // background image on frontpage
+  $(".splash").backstretch("{{ site.baseurl }}/resources/img/view-leman-opt.jpg");
 
   // code example carousel
   $('.carousel').carousel();

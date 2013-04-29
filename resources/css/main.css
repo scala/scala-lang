@@ -28,7 +28,6 @@ body {
   font-size: 18px;
   color: #000;
   line-height: 1.3em;
-  overflow: auto;
 }
 
 @font-face {
@@ -132,12 +131,11 @@ a.brand {
 */
 .splash {
   position: relative;
-  background: url({{ site.baseurl }}/resources/img/view-leman-opt.jpg) no-repeat center bottom fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden;
+  /*background: url({{ site.baseurl }}/resources/img/view-leman-opt.jpg) no-repeat center bottom fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
   width: 100%;
   min-width:1024px;
   height: 540px;
