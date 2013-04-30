@@ -22,8 +22,7 @@ html, body {
 }
 
 body {
-  background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
-  background-color: rgba(15, 33, 43, 0.9);
+  background-color: #00AFC4;
   font-family: 'proxima-nova', sans-serif;
   font-size: 18px;
   color: #000;
@@ -156,7 +155,7 @@ a.brand {
 
 #download-btn {
   padding: 0 31px;
-  background: #FF4F4F;
+  background: #F84242;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -397,7 +396,7 @@ a.brand {
   position: relative;
   z-index: 10;
   width: 100%;
-  background-color: #FF4F4F;
+  background-color: #F84242;
   height: 4px;
 }
 
@@ -418,8 +417,17 @@ a.brand {
 
 .newwhitestripe {
   width: 100%;
-  background-color: #fff;
+  background-color: #121B21;
   height: 200px;
+}
+
+.newwhitestripe > p {
+  color: #333333;
+  font-family: "museo-slab", serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .greenstripe {
