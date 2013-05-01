@@ -22,7 +22,7 @@ html, body {
 }
 
 body {
-  background-color: #00AFC4;
+  background-color: #073642;
   font-family: 'proxima-nova', sans-serif;
   font-size: 18px;
   color: #000;
@@ -155,7 +155,7 @@ a.brand {
 
 #download-btn {
   padding: 0 31px;
-  background: #F84242;
+  background: #DC322F;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -183,7 +183,7 @@ a.brand {
 
 #learn-more-btn {
   padding: 0 18px;
-  background: #0094DD;
+  background: #859900;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -309,7 +309,6 @@ a.brand {
 .code-snippet-box {
   width: 100%;
   min-width:1024px;
-  background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
   background-color: #fff;
   min-height: 400px;
 }
@@ -396,7 +395,7 @@ a.brand {
   position: relative;
   z-index: 10;
   width: 100%;
-  background-color: #F84242;
+  background-color: #DC322F;
   height: 4px;
 }
 
@@ -417,7 +416,7 @@ a.brand {
 
 .newwhitestripe {
   width: 100%;
-  background-color: #121B21;
+  background-color: #002B36;
   height: 200px;
 }
 
