@@ -151,7 +151,7 @@ a.brand {
 .splash-content {
   z-index: 10;
   position: relative;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .download-btn-wrap {
@@ -1031,6 +1031,31 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   top: 145px;
 }
 
+.for-platform {
+  display: block;
+  position: absolute;
+  width: 118px;
+  text-align: center;
+  top: 46px;
+  /*left: 56px;*/
+  /*right: 0;*/
+  /*margin: 0 auto;*/
+  font-family: "museo-slab", serif;
+  font-size: 12px;
+  font-style: italic;
+  text-transform: none;
+  line-height: 0px;
+  color: #43621B;
+  /*text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);*/
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.for-platform:hover, .central-btn:hover > .for-platform {
+  color: #690B16;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+}
+
 .api {
   text-align: right;
   right: 120px;
@@ -1093,6 +1118,38 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   content: '';
 }
 
+.left-side {
+  z-index: 50;
+  position: absolute;
+  top: 42px;
+  left: 142px;
+  width: 160px;
+  text-align: center;
+  font-family: "museo-slab", serif;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.left-side a {
+  color: #839496;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.left-side a:hover {
+  color: #DC322F;
+}
+
+.getting-started {
+  margin-bottom: 4px;
+  border-bottom: 1px solid #073642;
+}
+
+.dev-releases, .all-releases {
+  margin-bottom: -4px;
+}
 
 /*.training-item {
 
