@@ -26,6 +26,11 @@ $(document).ready(function(){
   $(".marker").mouseover(function(){ $(".tip").show(); });
   $(".marker").mouseout(function(){ $(".tip").hide(); });
 
+  $("#source-code").mouseover(function(){ $(this).find(".toptip").show(); });
+  $("#source-code").mouseout(function(){ $(this).find(".toptip").hide(); });
+  $("#scala-lang-twitter").mouseover(function(){ $(this).find(".toptip").show(); });
+  $("#scala-lang-twitter").mouseout(function(){ $(this).find(".toptip").hide(); });
+
   // code example carousel
   $('.carousel').carousel();
   $(document).keyup(function(event) {

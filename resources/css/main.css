@@ -118,6 +118,14 @@ a.brand {
   transition: background .2s ease-in;
 }
 
+.nav > li > a, img {
+  margin-right: -10px;
+}
+
+.nav > li > a:hover, img {
+  background-color: transparent;
+}
+
 /*.nav > li:nth-child(2) > .dropdown > a:hover {
   color: #FB6801;
 }
@@ -880,7 +888,6 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   font-size: 14px;
   line-height: 1.4em;
   color: #fff;
-
 }
 
 /* arrows - :before and :after */
@@ -1043,6 +1050,50 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   background-color: #002B36;
   margin-top: -173px;
 }
+
+.toptip {
+  display: none;
+  top: -24px;
+  left: -30px;
+  background: rgba(0, 43, 54, 0.6);
+  border-radius: 5px;
+  position: absolute;
+  font-family: "museo-slab", serif;
+  font-size: 12px;
+  color: #fff;
+  width: 100px;
+  line-height: 1.1em;
+  text-align: center;
+  padding: 4px;
+  text-transform: none;
+}
+
+/* arrows - :before and :after */
+/*.toptip:before {
+  position: absolute;
+  display: inline-block;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #eee;
+  border-bottom: 7px solid transparent;
+  border-right-color: rgba(0, 0, 0, 0.2);
+  left: -14px;
+  top: 20px;
+  content: '';
+}*/
+
+.toptip:after {
+  position: absolute;
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(0, 43, 54, 0.6);
+  /*left: -12px;*/
+  left: 48px;
+  bottom: -6px;
+  content: '';
+}
+
+
 /*.training-item {
 
 }
