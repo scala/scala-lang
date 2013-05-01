@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+{% include headertop.html %}
+{% include headerbottom.html %}
+
+<div class="splash">
+  <div class="darkblue-overlay">&nbsp;</div>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="scala-logo">
+          <div class="spiral-logo"><img src="{{ site.baseurl }}/resources/img/scala-spiral-white.png"/></div>
+          <div class="scala-text">Scala</div>
+        </div>
+        {% include navbar.html %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <div class="splash-text ontop">
+          <h2 style="font-weight: 700;">Object-Oriented Meets Functional</h2>
+          <p class="splash-pitch">
+            Have the best of both worlds. Construct elegant class hierarchies
+            for maximum code reuse and extensibility, implement their behavior using
+            higher-order functions. Or anything in-between.
+          </p>
+          <a id="learn-more-btn" href="{{ site.baseurl }}/what-is-scala.html">Learn More</a>
+          <div class="marker">
+            <div class="dot"></div>
+            <div class="pulse"></div>
+          </div>
+          <p>&nbsp;</p>
+          <div class="tip">
+            Scala began life in 2003, created by Martin Odersky and his research group at EPFL next to Lake Geneva and the Alps, in Switzerland. Scala has since grown into a mature open source programming language, used by hundreds of thousands of developers, and is developed and maintained by scores of people all over the world.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container central">
+  <div class="translucent-circle"></div>
+  <div class="opaque-circle"></div>
+  <a class="central-btn download" href="{{ site.baseurl }}/todo.html">Download</a>
+  <a class="central-btn api" href="{{ site.baseurl }}/todo.html">API</a>
+  <div class="big-scala-spiral"><img src="{{ site.baseurl }}/resources/img/smooth-spiral.png"/></div>
+</div>
+
+<div class="darkbluebar">
+  <div class="container">
+    container
+  </div>
+</div>
+
+
+
+{{ content }}
+
+{% include footer.html %}

@@ -21,7 +21,10 @@ function getOS() {
 $(document).ready(function(){
 
   // background image on frontpage
-  $(".splash").backstretch("{{ site.baseurl }}/resources/img/view-leman-opt.jpg");
+  $(".splash").backstretch("{{ site.baseurl }}/resources/img/view-leman-opt2.jpg");
+
+  $(".marker").mouseover(function(){ $(".tip").show(); });
+  $(".marker").mouseout(function(){ $(".tip").hide(); });
 
   // code example carousel
   $('.carousel').carousel();
