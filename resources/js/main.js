@@ -38,27 +38,31 @@ $(document).ready(function(){
   }
 
   // expanding code snippets (front page)
-  function expandSnippetAction(snippet, container) {
+  function expandSnippetAction(snippetID, container) {
     var codeBox = container.find(".row");
 
     function go() {
+      var snippet = $(snippetID).html();
+
       // for positioning the arrow
       var arrow = $(this).parent().siblings(".code-snippet-arrow");
       var centerPoint = $(this).position().left + $(this).width()/2 - arrow.width()/2;
       arrow.css("left", centerPoint);
 
-      var codeSnippetInContainer = codeBox.text();
+      var codeSnippetInContainer = codeBox.html();
 
       if (container.is(":hidden")) {
         arrow.show();
-        codeBox.text(snippet);
+        codeBox.html(snippet);
         container.slideDown();
       } else if (codeSnippetInContainer == snippet) {
         container.slideUp(function() {
           arrow.hide();
         });
       } else {
-        codeBox.text(snippet);
+        var hgt = $(snippetID).height();
+        codeBox.html(snippet);
+        codeBox.animate({height: hgt}, 400);
       }
     }
     return go;
@@ -67,13 +71,13 @@ $(document).ready(function(){
   var row1 = $("#code-snippet-row1");
   var row2 = $("#code-snippet-row2");
 
-  $("#java-interop").click(expandSnippetAction("{% include bullet-java-interop.html %}", row1));
-  $("#type-inference").click(expandSnippetAction("{% include bullet-type-inference.html %}", row1));
-  $("#parallelism-distribution").click(expandSnippetAction("{% include bullet-parallelism-distribution.html %}", row1));
+  $("#java-interop").click(expandSnippetAction("#hidden-java-interop", row1));
+  $("#type-inference").click(expandSnippetAction("#hidden-type-inference", row1));
+  $("#parallelism-distribution").click(expandSnippetAction("#hidden-parallelism-distribution", row1));
 
-  $("#traits").click(expandSnippetAction("{% include bullet-traits.html %}", row2));
-  $("#pattern-matching").click(expandSnippetAction("{% include bullet-pattern-matching.html %}", row2));
-  $("#higher-order-functions").click(expandSnippetAction("{% include bullet-higher-order-functions.html %}", row2));
+  $("#traits").click(expandSnippetAction("#hidden-traits", row2));
+  $("#pattern-matching").click(expandSnippetAction("#hidden-pattern-matching", row2));
+  $("#higher-order-functions").click(expandSnippetAction("#hidden-higher-order-functions", row2));
 
 
 
