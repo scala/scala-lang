@@ -1,1 +1,1 @@
-pattern matching!
+<pre><code>abstract class Tree[T]\ncase class Node[T](elem: T, left: Tree[T], right: Tree[T]) extends Tree[T]\ncase object Leaf extends Tree[Nothing]\n\ndef inOrder[T](t: Tree[T]): List[T] = t match {\n  case Node(e, l, r) => inOrder(l) ::: List(e) ::: inOrder(r)\n  case Leaf          => List()\n}\n</code></pre>
