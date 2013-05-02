@@ -5,6 +5,6 @@ for f in *.scala; do
     echo "converting '$f' to '$fout'"
 
     printf '<pre><code>' > $fout
-    sed -e 's/$/\\n/' $f | tr -d '\n' >> $fout
+    sed -e 's/\"/\\\"/g;s/$/\\n/' $f | tr -d '\n' >> $fout
     printf '</code></pre>' >> $fout
 done
