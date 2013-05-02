@@ -51,7 +51,7 @@ $(document).ready(function(){
 
       if (container.is(":hidden")) {
         arrow.show();
-        codeBox.text(snippet);
+        codeBox.html(snippet);
         container.slideDown();
       } else if (codeSnippetInContainer == snippet) {
         container.slideUp(function() {
