@@ -38,18 +38,25 @@ $(document).ready(function(){
   }
 
   // expanding code snippets (front page)
-  // row 1
   function expandSnippetAction(snippet, container) {
-    var codeBox = container.find("pre");
+    var codeBox = container.find(".row");
 
     function go() {
+      // for positioning the arrow
+      var arrow = $(this).parent().siblings(".code-snippet-arrow");
+      var centerPoint = $(this).position().left + $(this).width()/2 - arrow.width()/2;
+      arrow.css("left", centerPoint);
+
       var codeSnippetInContainer = codeBox.text();
 
       if (container.is(":hidden")) {
+        arrow.show();
         codeBox.text(snippet);
         container.slideDown();
       } else if (codeSnippetInContainer == snippet) {
-        container.slideUp();
+        container.slideUp(function() {
+          arrow.hide();
+        });
       } else {
         codeBox.text(snippet);
       }
@@ -67,6 +74,8 @@ $(document).ready(function(){
   $("#traits").click(expandSnippetAction("{% include bullet-traits.html %}", row2));
   $("#pattern-matching").click(expandSnippetAction("{% include bullet-pattern-matching.html %}", row2));
   $("#higher-order-functions").click(expandSnippetAction("{% include bullet-higher-order-functions.html %}", row2));
+
+
 
   // code example carousel
   $('.carousel').carousel();

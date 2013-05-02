@@ -293,6 +293,16 @@ a.brand {
   min-height: 400px;
 }
 
+.code-snippet-arrow {
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #073642;
+}
+
 .epfl-picture-box {
   background: url({{ site.baseurl }}/resources/img/epfl-bc.jpg) no-repeat center;
   -webkit-background-size: cover;
@@ -535,6 +545,9 @@ a.brand {
 #code-snippet-row1,
 #code-snippet-row2 {
   display: none;
+/*  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #586E75;*/
+  background-color: #002B36;
 }
 
 .carousel-caption {
