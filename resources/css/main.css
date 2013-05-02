@@ -275,6 +275,17 @@ a.brand {
   padding-right: 0px;
 }
 
+.news-events-twitter {
+  width: 100%;
+  min-width:1024px;
+  min-height: 400px;
+  padding: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #E2E9EF;
+  min-height: 300px;
+}
+
 .code-snippet-box {
   width: 100%;
   min-width:1024px;
@@ -462,7 +473,7 @@ a.brand {
 .code-snippet > h2,
 .happening > h2 {
   text-align: center;
-  font-family: 'FuturaBT', sans-serif;
+  font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
   letter-spacing: -0.07em;
   word-spacing: .1em;
@@ -504,11 +515,26 @@ a.brand {
 
 .bullet-point > p {
   text-align: center;
-  font-family: "kulturista-web", serif;
+  font-family: "museo-slab", serif;
+  font-weight: normal;
   margin: 0 15px 15px;
   font-size: 13pt;
   line-height: 17pt;
-  color: #96938C;
+  color: #839496;
+}
+
+#java-interop:hover,
+#type-inference:hover,
+#parallelism-distribution:hover,
+#traits:hover,
+#pattern-matching:hover,
+#higher-order-functions:hover {
+  cursor: pointer;
+}
+
+#code-snippet-row1,
+#code-snippet-row2 {
+  display: none;
 }
 
 .carousel-caption {

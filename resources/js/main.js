@@ -23,6 +23,7 @@ $(document).ready(function(){
   // background image on frontpage
   $(".splash").backstretch("{{ site.baseurl }}/resources/img/view-leman-opt2.jpg");
 
+  // tooltips (front page)
   $(".marker").mouseover(function(){ $(".tip").show(); });
   $(".marker").mouseout(function(){ $(".tip").hide(); });
 
@@ -30,6 +31,42 @@ $(document).ready(function(){
   $("#source-code").mouseout(function(){ $(this).find(".toptip").hide(); });
   $("#scala-lang-twitter").mouseover(function(){ $(this).find(".toptip").show(); });
   $("#scala-lang-twitter").mouseout(function(){ $(this).find(".toptip").hide(); });
+
+  function sameIdCheck(jqueryElem, idString) {
+    if(jqueryElem.is($(idString))) { return true;
+    } else { return false; }
+  }
+
+  // expanding code snippets (front page)
+  // row 1
+  function expandSnippetAction(snippet, container) {
+    var codeBox = container.find("pre");
+
+    function go() {
+      var codeSnippetInContainer = codeBox.text();
+
+      if (container.is(":hidden")) {
+        codeBox.text(snippet);
+        container.slideDown();
+      } else if (codeSnippetInContainer == snippet) {
+        container.slideUp();
+      } else {
+        codeBox.text(snippet);
+      }
+    }
+    return go;
+  }
+
+  var row1 = $("#code-snippet-row1");
+  var row2 = $("#code-snippet-row2");
+
+  $("#java-interop").click(expandSnippetAction("{% include bullet-java-interop.html %}", row1));
+  $("#type-inference").click(expandSnippetAction("{% include bullet-type-inference.html %}", row1));
+  $("#parallelism-distribution").click(expandSnippetAction("{% include bullet-parallelism-distribution.html %}", row1));
+
+  $("#traits").click(expandSnippetAction("{% include bullet-traits.html %}", row2));
+  $("#pattern-matching").click(expandSnippetAction("{% include bullet-pattern-matching.html %}", row2));
+  $("#higher-order-functions").click(expandSnippetAction("{% include bullet-higher-order-functions.html %}", row2));
 
   // code example carousel
   $('.carousel').carousel();
