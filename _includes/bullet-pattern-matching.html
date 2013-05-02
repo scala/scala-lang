@@ -1,1 +1,11 @@
-<pre><code>abstract class Tree[T]\ncase class Node[T](elem: T, left: Tree[T], right: Tree[T]) extends Tree[T]\ncase object Leaf extends Tree[Nothing]\n\ndef inOrder[T](t: Tree[T]): List[T] = t match {\n  case Node(e, l, r) => inOrder(l) ::: List(e) ::: inOrder(r)\n  case Leaf          => List()\n}\n</code></pre>
+<figure class="code">
+  <figcaption>caption!</figcaption>
+  <pre><code>abstract class Tree[T]
+case class Node[T](elem: T, left: Tree[T], right: Tree[T]) extends Tree[T]
+case object Leaf extends Tree[Nothing]
+
+def inOrder[T](t: Tree[T]): List[T] = t match {
+  case Node(e, l, r) => inOrder(l) ::: List(e) ::: inOrder(r)
+  case Leaf          => List()
+}</pre></code>
+</figure>

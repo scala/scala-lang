@@ -13,6 +13,10 @@ pre.prettyprint {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  -webkit-border-radius: 0px 0px 4px 4px;
+  -moz-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
+  border-top: 0px;
 }
 
 /* Specify class=linenums on a pre to get line numbering */
