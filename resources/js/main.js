@@ -47,7 +47,7 @@ $(document).ready(function(){
       var centerPoint = $(this).position().left + $(this).width()/2 - arrow.width()/2;
       arrow.css("left", centerPoint);
 
-      var codeSnippetInContainer = codeBox.text();
+      var codeSnippetInContainer = codeBox.html();
 
       if (container.is(":hidden")) {
         arrow.show();
@@ -58,7 +58,7 @@ $(document).ready(function(){
           arrow.hide();
         });
       } else {
-        codeBox.text(snippet);
+        codeBox.html(snippet);
       }
     }
     return go;
