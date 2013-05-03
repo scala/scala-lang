@@ -1,1 +1,14 @@
-parallelism!
+<figure class="code">
+  <figcaption>Parallelism</figcaption>
+  <pre><code>// Compute the greatest common divisor of `a` and `b`.
+def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
+
+// Use parallel collections to compute and count relative primes in parallel.
+val nums = 1 to 10000
+val relPrimesPerNum = for (i <- nums.par) yield {
+  (1 to i) count { j => gcd(i, j) == 1 }
+}
+val relPrimesTotal = relPrimesPerNum.sum
+
+println(relPrimesTotal)</code></pre>
+</figure>

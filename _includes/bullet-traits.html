@@ -1,1 +1,17 @@
-traits!
+<figure class="code">
+  <figcaption>Traits</figcaption>
+  <pre><code>// A trait for printing an object to standard out.
+trait StdoutPrinter {
+  def print = println(this.toString)
+}
+
+// A common pattern:
+// Define a class with a primary constructor and assign its arguments to public members.
+case class Person(val name: String, val age: Int) {
+  override def toString = name + " is " + age + " years old"
+}
+
+val p = new Person("John Doe", 34) with StdoutPrinter
+p.print</code></pre>
+</figure>
+

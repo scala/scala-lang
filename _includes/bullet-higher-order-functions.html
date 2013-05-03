@@ -1,5 +1,8 @@
 <figure class="code">
   <figcaption>Higher-order functions</figcaption>
   <pre><code>val people: Array[Person]
+
+// Partition `people` into two arrays `minors` and `adults`.
+// Use the higher-order function `(_.age < 18)` as a predicate for partitioning.
 val (minors, adults) = people partition (_.age < 18)</code></pre>
 </figure>
