@@ -1,5 +1,5 @@
 <figure class="code">
-  <figcaption>caption!</figcaption>
+  <figcaption>Java interoperability</figcaption>
   <pre><code>import java.io.{PrintStream,FileOutputStream}
 
 val people: Array[Person]
@@ -10,5 +10,5 @@ val ps = new PrintStream(new FileOutputStream("log.txt"))
 // Print contents of `people` to `log.txt`.
 people foreach { p =>
   ps.println(s"${p.name} is ${p.age} years old")  // uses string interpolation
-}</pre></code>
+}</code></pre>
 </figure>
