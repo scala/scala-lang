@@ -294,6 +294,16 @@ a.brand {
   border-top: 20px solid #073642;
 }
 
+.code-snippet-arrow.hover {
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #17404A;
+}
+
 #code-snippet-row1 > .container > .row,
 #code-snippet-row2 > .container > .row {
   padding-top: 32px;

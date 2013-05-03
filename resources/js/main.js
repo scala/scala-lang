@@ -56,6 +56,7 @@ $(document).ready(function(){
 
       if (container.is(":hidden")) {
         arrow.show();
+        arrow.addClass("hover");
         codeBox.html(snippet);
         container.slideDown();
       } else if (codeSnippetInContainer == snippet) {
@@ -64,6 +65,7 @@ $(document).ready(function(){
         });
       } else {
         var hgt = $(snippetID).height();
+        arrow.addClass("hover");
         codeBox.html(snippet);
         codeBox.animate({height: hgt}, 400);
       }
@@ -81,6 +83,32 @@ $(document).ready(function(){
   $("#traits").click(expandSnippetAction("#hidden-traits", row2));
   $("#pattern-matching").click(expandSnippetAction("#hidden-pattern-matching", row2));
   $("#higher-order-functions").click(expandSnippetAction("#hidden-higher-order-functions", row2));
+
+  // arrow color hack for hover-overs
+  function arrowMouseover (snippetID, container) {
+
+    function go () {
+      var codeSnippetInContainer = container.find(".row").html();
+      var snippet = $(snippetID).html();
+      if (codeSnippetInContainer == snippet) {
+        var arrow = $(this).parent().siblings(".code-snippet-arrow");
+        arrow.addClass("hover");
+      }
+    }
+    return go;
+  }
+  function arrowMouseout () {
+    var arrow = $(this).parent().siblings(".code-snippet-arrow");
+    arrow.removeClass("hover");
+  }
+
+  $("#java-interop").hover(arrowMouseover("#hidden-java-interop", row1), arrowMouseout);
+  $("#type-inference").hover(arrowMouseover("#hidden-type-inference", row1), arrowMouseout);
+  $("#parallelism-distribution").hover(arrowMouseover("#hidden-parallelism-distribution", row1), arrowMouseout);
+
+  $("#traits").hover(arrowMouseover("#hidden-traits", row2), arrowMouseout);
+  $("#pattern-matching").hover(arrowMouseover("#hidden-pattern-matching", row2), arrowMouseout);
+  $("#higher-order-functions").hover(arrowMouseover("#hidden-higher-order-functions", row2), arrowMouseout);
 
   // code example carousel
   $('.carousel').carousel();
