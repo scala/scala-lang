@@ -266,15 +266,6 @@ a.brand {
   width: 600px;
 }
 
-.bullet-point-box {
-  width: 100%;
-  min-width:1024px;
-  min-height: 400px;
-  padding: 40px;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .news-events-twitter {
   width: 100%;
   min-width:1024px;
@@ -497,37 +488,38 @@ a.brand {
 
 .btn.small:hover, .btn.small:focus { background-color:#58ccd5; border-color:#00B1BF; color: #FFF; text-shadow: 0 -1px 1px rgba(0, 0, 0, .7); }
 
-.bullet-point > h2,
-.code-snippet > h2,
-.happening > h2 {
-  text-align: center;
-  font-family: 'proxima-nova', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -0.07em;
-  word-spacing: .1em;
-  color: #121b21;
-  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
-  font-size: 10pt;
-  color: #fff;
+.bullet-point-box {
+  width: 100%;
+  min-width:1024px;
+  min-height: 400px;
+  padding-top: 16px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 40px;
 }
 
 .bullet-point {
   text-align: center;
 }
 
-.bullet-point > h2 > span,
-.code-snippet > h2 > span,
-.happening > h2 > span {
+.bullet-point > h2 {
+  /*font-family: 'proxima-nova', sans-serif;*/
+  font-family: "museo-slab", serif;
+  font-size: 20px;
+  color: #839496;
+  font-weight: normal;
+  font-style: italic;
+  /*text-transform: uppercase;*/
+  margin-bottom: 26px;
+  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
+}
+
+.bullet-point > h2 > span {
   border-width: 0 34px;
   height: 32px;
   display: inline-block;
   line-height: 35px;
-  -moz-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
-  -webkit-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
-  -webkit-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
-  -o-border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
-  border-image: url({{ site.baseurl }}/resources/img/diamond.png) 0 34 repeat;
-  background-color: #191a1a;
+  background-color: #073642;
   padding: 0 10px;
 }
 
