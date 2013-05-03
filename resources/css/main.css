@@ -1106,11 +1106,12 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
 }
 
 .scala-version {
-  font-size: 18px;
-  font-weight: normal;
+  line-height: 0.9em;
+  font-size: 36px;
+  font-weight: 100;
   z-index: 99;
   background: transparent;/*rgba(7, 54, 66, 0.5);*/
-  top: 260px;
+  top: 265px;
   left:0;
   right:0;
   margin-left:auto;
@@ -1119,20 +1120,20 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   width: 120px;
   text-align: center;
   font-family: "museo-slab", serif;
-  color: rgba(255, 255, 255, 0.9);
-  font-style: italic;
+  color: rgba(255, 255, 255, 1);
   text-transform: none;
   padding: 0 16px;
 }
 
 .scala-version:hover {
  background: transparent;
- cursor: default;
+ cursor: text;
 }
 
 .superbold {
   font-weight: 900;
   font-style: normal;
+  font-size: 28px;
 }
 
 .download {
