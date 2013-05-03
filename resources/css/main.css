@@ -1105,6 +1105,36 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   color:#FFF;
 }
 
+.scala-version {
+  font-size: 18px;
+  font-weight: normal;
+  z-index: 99;
+  background: transparent;/*rgba(7, 54, 66, 0.5);*/
+  top: 260px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  /*left: 320px;*/
+  width: 120px;
+  text-align: center;
+  font-family: "museo-slab", serif;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  text-transform: none;
+  padding: 0 16px;
+}
+
+.scala-version:hover {
+ background: transparent;
+ cursor: default;
+}
+
+.superbold {
+  font-weight: 900;
+  font-style: normal;
+}
+
 .download {
   left: 120px;
   top: 145px;
