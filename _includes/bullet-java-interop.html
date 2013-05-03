@@ -1,5 +1,14 @@
 <figure class="code">
   <figcaption>caption!</figcaption>
-  <pre><code>def increment(xs: List[Int]): List[Int] =
-        xs.map(_ + 1)</pre></code>
+  <pre><code>import java.io.{PrintStream,FileOutputStream}
+
+val people: Array[Person]
+
+// Create Java output streams for writing to `log.txt`.
+val ps = new PrintStream(new FileOutputStream("log.txt"))
+
+// Print contents of `people` to `log.txt`.
+people foreach { p =>
+  ps.println(s"${p.name} is ${p.age} years old")  // uses string interpolation
+}</pre></code>
 </figure>
