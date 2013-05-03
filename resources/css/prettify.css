@@ -1,11 +1,19 @@
-.com { color: #93a1a1; }
-.lit { color: #195f91; }
-.pun, .opn, .clo { color: #93a1a1; }
-.fun { color: #dc322f; }
-.str, .atv { color: #268bd2; }
-.kwd, .tag { color: #195f91; }
-.typ, .atn, .dec, .var { color: #CB4B16; }
-.pln { color: rgba(0, 0, 0, 0.75); /*#93a1a1*/ }
+
+.prettyprint { background-color: #073642; }
+.prettyprint code { color: #839496; }
+.prettyprint .pln { color: inherit; }
+.prettyprint .str, .prettyprint .atv { color: #2aa198; }
+.prettyprint .lit { color: #D33682;}
+.prettyprint .kwd { color: #859900; }
+.prettyprint .com,
+.prettyprint .dec { color: #586e75; font-style: italic; }
+.prettyprint .typ { color: #268BD2; }
+.prettyprint .pun { color: inherit; }
+.prettyprint .opn { color: inherit; }
+.prettyprint .clo { color: inherit; }
+.prettyprint .tag { color: #268bd2; font-weight: bold; }
+.prettyprint .atn { color: inherit; }
+
 pre.prettyprint {
   background: #fefbf3;
   padding: 9px;
@@ -21,7 +29,7 @@ pre.prettyprint {
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin: 0 0 0 40px; } /* IE indents via margin-left */
-ol.linenums li { color: rgba(0,0,0,.15); line-height: 20px; }
+ol.linenums > li { color: rgba(67, 94, 101, 0.6); line-height: 20px; }
 /* Alternate shading for lines */
 li.L1, li.L3, li.L5, li.L7, li.L9 {  }
 
@@ -43,5 +51,3 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 */
-
-/*.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{*//*padding:2px;border:1px solid #888*//*}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}*/

@@ -46,7 +46,7 @@ $(document).ready(function(){
 
       // for positioning the arrow
       var arrow = $(this).parent().siblings(".code-snippet-arrow");
-      var centerPoint = $(this).position().left + $(this).width()/2 - arrow.width()/2;
+      var centerPoint = $(this).position().left + $(this).width()/2;
       arrow.css("left", centerPoint);
 
       var codeSnippetInContainer = codeBox.html();
