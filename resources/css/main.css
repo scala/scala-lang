@@ -533,7 +533,7 @@ a.brand {
   font-weight: normal;
   font-style: italic;
   /*text-transform: uppercase;*/
-  margin-bottom: 26px;
+  margin-bottom: 0px;
   background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
 }
 
@@ -544,6 +544,29 @@ a.brand {
   line-height: 35px;
   background-color: #073642;
   padding: 0 10px;
+}
+
+.bullet-point > p.click {
+  padding: 0px;
+  margin-bottom: 26px;
+  color: #17404A;
+  font-family: "museo-slab", serif;
+  font-size: 12px;
+  color: #3d626b;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.bullet-point > p.click:before {
+  content: "\2767";
+  display: inline-block;
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform:matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.bullet-point > p.click:after {
+  content: "\2767";
 }
 
 .bullet-point > h3 {
