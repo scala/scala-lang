@@ -500,7 +500,20 @@ a.brand {
 
 .bullet-point {
   text-align: center;
+  height: 100%;
 }
+
+.bullet-point.span12:hover {
+  background: #073642;
+}
+
+.bullet-point:hover {
+  background: rgba(41, 75, 83, 0.5);
+}
+
+/*.bullet-point > h3.highlighted {
+  color: #859900;
+}*/
 
 .bullet-point > h2 {
   /*font-family: 'proxima-nova', sans-serif;*/

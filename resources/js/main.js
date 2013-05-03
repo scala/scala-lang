@@ -32,10 +32,13 @@ $(document).ready(function(){
   $("#scala-lang-twitter").mouseover(function(){ $(this).find(".toptip").show(); });
   $("#scala-lang-twitter").mouseout(function(){ $(this).find(".toptip").hide(); });
 
-  function sameIdCheck(jqueryElem, idString) {
-    if(jqueryElem.is($(idString))) { return true;
-    } else { return false; }
-  }
+  // same height hack for scala in a nutshell boxes
+  var boxes = $('.bullet-point').not(".span12");
+  maxHeight = Math.max.apply(
+    Math, boxes.map(function() {
+        return $(this).height();
+  }).get());
+  boxes.height(maxHeight);
 
   // expanding code snippets (front page)
   function expandSnippetAction(snippetID, container) {
@@ -78,8 +81,6 @@ $(document).ready(function(){
   $("#traits").click(expandSnippetAction("#hidden-traits", row2));
   $("#pattern-matching").click(expandSnippetAction("#hidden-pattern-matching", row2));
   $("#higher-order-functions").click(expandSnippetAction("#hidden-higher-order-functions", row2));
-
-
 
   // code example carousel
   $('.carousel').carousel();
