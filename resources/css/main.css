@@ -505,7 +505,7 @@ a.brand {
   padding-top: 16px;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .bullet-point {
@@ -604,6 +604,18 @@ a.brand {
 /*  border-top: 1px solid rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid #586E75;*/
   background-color: #002B36;
+}
+
+.where-to-learn-more {
+  padding-top: 20px;
+  margin-bottom: 26px;
+  color: #17404A;
+  font-family: "museo-slab", serif;
+  font-size: 12px;
+  color: #3d626b;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
 }
 
 .carousel-caption {
@@ -1195,14 +1207,14 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   text-decoration: none;
 }
 
-.left-side a, .right-side a {
+.left-side a, .right-side a, .where-to-learn-more a {
   color: #839496;
   font-weight: normal;
   font-style: italic;
   text-decoration: none;
 }
 
-.left-side a:hover, .right-side a:hover {
+.left-side a:hover, .right-side a:hover, .where-to-learn-more a:hover {
   color: #DC322F;
 }
 
