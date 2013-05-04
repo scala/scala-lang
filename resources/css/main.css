@@ -277,6 +277,17 @@ a.brand {
   min-height: 300px;
 }
 
+.highlighted-events {
+  width: 100%;
+  min-width:1024px;
+  min-height: 400px;
+  padding: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #002B36;
+  min-height: 100px;
+}
+
 .code-snippet-box {
   width: 100%;
   min-width:1024px;
@@ -1120,13 +1131,14 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
   width: 120px;
   text-align: center;
   font-family: "museo-slab", serif;
-  color: rgba(255, 255, 255, 1);
+  color: #174753;
   text-transform: none;
   padding: 0 16px;
 }
 
 .scala-version:hover {
  background: transparent;
+ color: #174753;
  cursor: text;
 }
 
