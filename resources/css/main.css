@@ -280,12 +280,46 @@ a.brand {
 .highlighted-events {
   width: 100%;
   min-width:1024px;
-  min-height: 400px;
-  padding: 40px;
+  /*padding: 40px;*/
   padding-left: 0px;
   padding-right: 0px;
   background-color: #002B36;
-  min-height: 100px;
+  height: 180px;
+}
+
+#scaladays {
+  height: 180px;
+  width: 480px;
+  background: url({{ site.baseurl }}/resources/img/scaladays2.png) no-repeat;
+}
+
+#scaladays-register-btn {
+  margin-top: 120px;
+  margin-left: 180px;
+  padding: 0 18px;
+  background: #DC322F; /*brighter color: 97BE49*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font: 700 14px/28px 'proxima-nova', sans-serif;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+#scaladays-register-btn:hover {
+  background:#576D74;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  text-shadow:none;
+  color:#FFF;
 }
 
 .code-snippet-box {
