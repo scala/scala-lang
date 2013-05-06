@@ -288,9 +288,31 @@ a.brand {
 }
 
 #scaladays {
+  float: left;
   height: 180px;
   width: 480px;
   background: url({{ site.baseurl }}/resources/img/scaladays2.png) no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  #scaladays {
+    background-image: url('{{ site.baseurl }}/resources/img/scaladays2@2x.png');
+    background-size: 480px 180px;
+  }
+}
+
+#scala2013 {
+  float: right;
+  height: 180px;
+  width: 450px;
+  background: url({{ site.baseurl }}/resources/img/scala2013.png) no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  #scala2013 {
+    background-image: url('{{ site.baseurl }}/resources/img/scala2013@2x.png');
+    background-size: 450px 180px;
+  }
 }
 
 #scaladays-register-btn {
@@ -313,6 +335,35 @@ a.brand {
 }
 
 #scaladays-register-btn:hover {
+  background:#576D74;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  text-shadow:none;
+  color:#FFF;
+}
+
+#scala2013-register-btn {
+  margin-top: 134px;
+  margin-left: 140px;
+  padding: 0 18px;
+  background: #DC322F; /*brighter color: 97BE49*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font: 700 14px/28px 'proxima-nova', sans-serif;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+#scala2013-register-btn:hover {
   background:#576D74;
   -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
   box-shadow:none;
