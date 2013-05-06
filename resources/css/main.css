@@ -23,8 +23,8 @@ html, body {
 
 body {
   background-color: #073642;
-  font-family: 'proxima-nova', sans-serif;
-  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
   color: #000;
   line-height: 1.3em;
 }
@@ -87,7 +87,7 @@ a.brand {
   position: relative;
   display:inline-block;
   font-family: 'proxima-nova', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
@@ -263,7 +263,7 @@ a.brand {
   margin: 0;
   margin-bottom: 14px;
   color: #fff;
-  width: 600px;
+  width: 560px;
 }
 
 .news-events-twitter {
@@ -346,7 +346,7 @@ a.brand {
 
 #scala2013-register-btn {
   margin-top: 134px;
-  margin-left: 140px;
+  margin-left: 134px;
   padding: 0 18px;
   background: #DC322F; /*brighter color: 97BE49*/
   -moz-border-radius: 5px;
@@ -458,38 +458,6 @@ a.brand {
   height: 90px;
 }
 
-.logo {
-  display: inline;
-  z-index: 1400;
-  position: relative;
-  float: left;
-}
-
-.logo > .scala-text {
-  position: relative;
-  display: block-inline;
-  height: 90px;
-  vertical-align: middle;
-  color: #fff;
-  font-family: 'proxima-nova', sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  color: rgba(43, 43, 43, 1);
-  font-size: 80px;
-  line-height: 36px;
-  margin-left: -10px;
-}
-
-.logo > .scala-text > a:link,
-.logo > .scala-text > a:visited {
-  color: rgba(43, 43, 43, 1);
-}
-
-.logo > .scala-text > a:hover {
-  color: rgba(43, 43, 43, 1);
-  text-decoration: none;
-}
-
 .redstripe {
   position: relative;
   z-index: 10;
@@ -557,43 +525,6 @@ a.brand {
   box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset;
 }
 
-
-.btn {
-  background-color: #CD706D;
-  padding: 14px 20px 13px;
-  border: 1px solid #8C4443;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .3);
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
-  color: #FFF;
-  font-family: 'proxima-nova', sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, .5);
-  cursor: pointer;
-  -moz-transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .15) 0, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, .15) 0, rgba(255, 255, 255, 0) 100%);
-  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .15) 0, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, .15) 0, rgba(255, 255, 255, 0) 100%);
-}
-
-.btn.small {
-  float: left;
-  background-color: #00B1BF;
-  border-color: #005A61 ;
-  padding: 9px 20px 7px;
-  border-radius: 3px;
-}
-
-.btn.small:hover, .btn.small:focus { background-color:#58ccd5; border-color:#00B1BF; color: #FFF; text-shadow: 0 -1px 1px rgba(0, 0, 0, .7); }
-
 .bullet-point-box {
   width: 100%;
   min-width:1024px;
@@ -622,7 +553,6 @@ a.brand {
 }*/
 
 .bullet-point > h2 {
-  /*font-family: 'proxima-nova', sans-serif;*/
   font-family: "museo-slab", serif;
   font-size: 20px;
   color: #839496;
@@ -714,39 +644,6 @@ a.brand {
   text-align: center;
 }
 
-.carousel-caption {
-  height: 100%;
-  background-color: transparent;
-}
-
-.carousel-control {
-  top: 50%;
-  opacity: 0.2;
-}
-
-.carousel-control:hover {
-  opacity: 0.4;
-}
-
-.carousel-caption > h1 {
-  font-size: 20pt;
-  font-family: 'proxima-nova', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.carousel-caption p {
-  line-height: normal;
-  color: #7F7F7F;
-  margin-bottom: 12px;
-}
-
-.lead {
-  font-family: "kulturista-web", serif;
-  line-height: normal;
-  font-weight: normal;
-}
-
 .news-item {
   color: #2C3846;
   border-bottom: solid 2px #2C3846;
@@ -760,7 +657,8 @@ a.brand {
   font-size: 14px;
   line-height: 1.5em;
   text-transform: uppercase;
-  font-family: 'proxima-nova', sans-serif;
+  /*font-family: 'proxima-nova', sans-serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   padding-bottom: .5em;
@@ -813,9 +711,9 @@ a.brand {
 .tweet { position: relative; }
 
 .tweet .text {
-  font-size: 16px;
+  font-size: 14px;
   min-height: 20px;
-  padding: 19px;
+  padding: 14px;
   background-color: rgba(245, 245, 245, 0.6);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -830,18 +728,18 @@ a.brand {
 
 .tweet .text a { color: #C32C03; }
 .tweet .text a:hover { color: #008E93; text-decoration: none;}
-.original-tweet > a { color: #fff; font-weight: normal; text-decoration: none; }
+.original-tweet > a { color: #839496; font-weight: normal; text-decoration: none; }
 .original-tweet > a:hover { color: #2C3846; }
-.username { position: relative; top: 0px; left: -10px; color: #fff; white-space: nowrap; line-height: 1em;}
+.username { position: relative; top: 0px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
 .username > a { color: #2C3846; font-weight: bold; text-decoration: none; }
 .username > a:hover { color: #C83D00; }
 .triangle { position: relative; bottom: 9px; left: 40px; height: 0px; width: 1px; margin-left: auto; margin-right: auto; border-top: 16px solid rgba(0, 30, 30, 0.7); border-left: none; border-right: 16px solid transparent; border-bottom: none; }
 
 .caret-container{position:relative}
 .caret-divider{position:absolute;top:0;left:28px;width:16px;height:8px}
-.caret-container .caret-divider{top:-11px}
+.caret-container .caret-divider{top:-10px}
 .caret-divider .caret-outer,.caret-divider .caret-inner{position:absolute;width:0;height:0;vertical-align:text-bottom;border-style:solid}
-.caret-divider .caret-outer{border-top:8px solid #ddd;border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent;top:0;left:0;z-index:10}
+.caret-divider .caret-outer{border-top:8px solid rgba(245, 245, 245, 0.6);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent;top:0;left:0;z-index:10}
 .caret-divider .caret-inner{border-top:7px solid rgba(245, 245, 245, 0);border-right:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid transparent;top:0;left:1px;z-index:11}
 
 .thumbnail {
@@ -859,7 +757,8 @@ a.brand {
 .scala-lang-twitter {
   color: #fff;
   font-size: 32px;
-  font-family: 'proxima-nova', sans-serif;
+  /*font-family: 'proxima-nova', sans-serif;*/
+  /*font-family: 'Source Sans Pro', sans-serif;*/
   font-weight: bold;
   /*text-transform: uppercase;*/
   margin-bottom: 12px;
@@ -975,7 +874,8 @@ pre.prettyprint {
   text-align: center;
   line-height: normal;
   font-size: 17pt;
-  font-family: 'proxima-nova', sans-serif;
+  /*font-family: 'proxima-nova', sans-serif;*/
+  /*font-family: 'Source Sans Pro', sans-serif;*/
   font-weight: bold;
   text-transform: uppercase;
   /*color: #fff;*/
