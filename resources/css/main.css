@@ -25,7 +25,7 @@ body {
   background-color: #073642;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  color: #000;
+  color: #586E75;
   line-height: 1.3em;
 }
 
@@ -273,7 +273,7 @@ a.brand {
   padding: 40px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: #E2E9EF;
+  background-color: #FDF6E3; /* gentle, light blueish: #E2E9EF;*/
   min-height: 300px;
 }
 
@@ -346,7 +346,7 @@ a.brand {
 
 #scala2013-register-btn {
   margin-top: 134px;
-  margin-left: 134px;
+  margin-left: 130px;
   padding: 0 18px;
   background: #DC322F; /*brighter color: 97BE49*/
   -moz-border-radius: 5px;
@@ -714,33 +714,33 @@ a.brand {
   font-size: 14px;
   min-height: 20px;
   padding: 14px;
-  background-color: rgba(245, 245, 245, 0.6);
+  background-color: rgba(255, 255, 255, 1);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  /*-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);*/
+  /*-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);*/
+  /*box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);*/
   color: #2C3846;
   text-shadow: 0 1px 0 #fff;
   margin-top: 10px;
 }
 
-.tweet .text a { color: #C32C03; }
-.tweet .text a:hover { color: #008E93; text-decoration: none;}
+.tweet .text a { color: #DC322F; }
+.tweet .text a:hover { color: #859900; text-decoration: none;}
 .original-tweet > a { color: #839496; font-weight: normal; text-decoration: none; }
-.original-tweet > a:hover { color: #2C3846; }
-.username { position: relative; top: 0px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
-.username > a { color: #2C3846; font-weight: bold; text-decoration: none; }
-.username > a:hover { color: #C83D00; }
+.original-tweet > a:hover { color: #073642; }
+.username { position: relative; top: 9px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
+.username > a { color: #073642; font-weight: bold; text-decoration: none; }
+.username > a:hover { color: #DC322F; }
 .triangle { position: relative; bottom: 9px; left: 40px; height: 0px; width: 1px; margin-left: auto; margin-right: auto; border-top: 16px solid rgba(0, 30, 30, 0.7); border-left: none; border-right: 16px solid transparent; border-bottom: none; }
 
 .caret-container{position:relative}
 .caret-divider{position:absolute;top:0;left:28px;width:16px;height:8px}
 .caret-container .caret-divider{top:-10px}
 .caret-divider .caret-outer,.caret-divider .caret-inner{position:absolute;width:0;height:0;vertical-align:text-bottom;border-style:solid}
-.caret-divider .caret-outer{border-top:8px solid rgba(245, 245, 245, 0.6);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent;top:0;left:0;z-index:10}
-.caret-divider .caret-inner{border-top:7px solid rgba(245, 245, 245, 0);border-right:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid transparent;top:0;left:1px;z-index:11}
+.caret-divider .caret-outer{border-top:8px solid rgba(255, 255, 255, 1);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent;top:0;left:0;z-index:10}
+.caret-divider .caret-inner{border-top:7px solid rgba(255, 255, 255, 0);border-right:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid transparent;top:0;left:1px;z-index:11}
 
 .thumbnail {
   padding: 0;
