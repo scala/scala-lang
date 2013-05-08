@@ -33,12 +33,15 @@ $(document).ready(function(){
   $("#scala-lang-twitter").mouseout(function(){ $(this).find(".toptip").hide(); });
 
   // same height hack for scala in a nutshell boxes
-  var boxes = $('.bullet-point').not(".span12");
-  maxHeight = Math.max.apply(
-    Math, boxes.map(function() {
-        return $(this).height();
-  }).get());
-  boxes.height(maxHeight);
+  function makeAllBoxesSameHeight(boxes) {
+    maxHeight = Math.max.apply(
+      Math, boxes.map(function() {
+          return $(this).height();
+    }).get());
+    boxes.height(maxHeight);
+  }
+  var nutshell = $(".bullet-point").not(".span12");
+  makeAllBoxesSameHeight(nutshell);
 
   // expanding code snippets (front page)
   function expandSnippetAction(snippetID, container) {

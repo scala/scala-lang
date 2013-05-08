@@ -57,7 +57,7 @@
         settings = $.extend({
           mode:      'user_timeline', // Mode, valid options are: 'search', 'user_timeline', 'list', 'home_timeline'
           rate:      15000,    // Refresh rate in ms
-          limit:     5,       // Limit number of results
+          limit:     4,       // Limit number of results
           imageSize: 70,       // Size of image in pixels
           refresh:   false,
           timeLinks: true,
@@ -287,7 +287,7 @@
 
           // Renders a tweet to HTML
           renderTweet: function (tweet) {
-            var html = '<div class="tweet tweet-' + tweet.id + '">';
+            var html = '<div class="tweet-container"><div class="tweet tweet-' + tweet.id + '">';
 
             html += '<p class="text"> ';
             html += this.parseText(tweet.text);
@@ -313,6 +313,9 @@
                 html += '</div></div>';
               }
             }
+
+            // closing the tweet-container div
+            html += '</div>';
 
             return html;
           },

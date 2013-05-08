@@ -266,15 +266,26 @@ a.brand {
   width: 560px;
 }
 
-.news-events-twitter {
+.news {
   width: 100%;
   min-width:1024px;
   min-height: 400px;
   padding: 40px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: #FDF6E3; /* gentle, light blueish: #E2E9EF;*/
+  background-color: #fff; /* gentle, light blueish: #E2E9EF;*/
   min-height: 300px;
+}
+
+.twitter {
+  width: 100%;
+  min-width:1024px;
+  min-height: 400px;
+  padding: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #FDF6E3;
+  min-height: 180px;
 }
 
 .highlighted-events {
@@ -718,6 +729,20 @@ a.brand {
 }
 
 .tweets { position: relative; }
+
+.tweet-container {
+  position: relative;
+  float: left;
+  width: 220px;
+  height: 230px;
+  margin-right: 20px;
+  vertical-align: bottom;
+}
+
+.tweet-container:last-child {
+  margin-right: 0px;
+}
+
 .tweet { position: relative; }
 
 .tweet .text {
@@ -785,7 +810,7 @@ a.brand {
   text-decoration: none;
 }
 
-.news,
+/*.news,
 .trainings-events {
   color: #fff;
   font-size: 32px;
@@ -795,7 +820,7 @@ a.brand {
   margin-bottom: 24px;
   text-shadow: 0 2px 0 #000;
   line-height: 1.1em;
-}
+}*/
 
 .footer {
   text-align: center;
