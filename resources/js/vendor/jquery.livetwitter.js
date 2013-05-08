@@ -298,7 +298,7 @@
               if (typeof tweet.retweeter_screen_name!='undefined') {
                 html += '<div class="caret-container"><div class="caret-divider"><div class="caret-outer"></div><div class="caret-inner"></div></div></div>';
              // html += '<span class="triangle"></span>';
-                html += '<div class="row"><div class="span1"><div class="thumbnail">';
+                html += '<div class="row bottom-anchored"><div class="span1"><div class="thumbnail">';
                 html += '<img width="' + this.settings.imageSize + '" height="' + this.settings.imageSize + '" src="' + tweet.retweeter_profile_image_url + '" />';
                 html += '</div></div><div  class="span2">';
                 html += '<span class="username"><span class="original-tweet"><a href="' + tweet.url + '">original tweet</a></span> by </br><a href="http://twitter.com/#!/' + tweet.retweeter_screen_name + '" rel="external">' + tweet.retweeter_screen_name + '</a></span> ';
