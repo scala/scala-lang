@@ -266,6 +266,17 @@ a.brand {
   width: 560px;
 }
 
+.training {
+  width: 100%;
+  min-width:1024px;
+  min-height: 400px;
+  padding: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #174753;
+  min-height: 60px;
+}
+
 .news {
   width: 100%;
   min-width:1024px;
