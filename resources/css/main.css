@@ -739,9 +739,9 @@ a.brand {
 .tweet .text a { color: #DC322F; }
 .tweet .text a:hover { color: #859900; text-decoration: none;}
 .original-tweet > a { color: #839496; font-weight: normal; text-decoration: none; }
-.original-tweet > a:hover { color: #073642; }
-.username { position: relative; top: 9px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
-.username > a { color: #073642; font-weight: bold; text-decoration: none; }
+.original-tweet > a:hover { color: #DC322F; }
+.username { position: relative; top: 6px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
+.username > a { color: #657B83; font-weight: bold; text-decoration: none; }
 .username > a:hover { color: #DC322F; }
 .triangle { position: relative; bottom: 9px; left: 40px; height: 0px; width: 1px; margin-left: auto; margin-right: auto; border-top: 16px solid rgba(0, 30, 30, 0.7); border-left: none; border-right: 16px solid transparent; border-bottom: none; }
 
@@ -759,9 +759,9 @@ a.brand {
 }
 .thumbnail > img {
   margin-left: 4px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
 }
 
 .scala-lang-twitter {
