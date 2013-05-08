@@ -1,21 +1,50 @@
-{% for p in site.categories.news limit: 5 %}
-  <div class="news-item">
-    {% if p.post-type %}
-      <div class="news-category">{{ p.post-type }}</div>
-    {% endif %}
-    {% if p.link-out %}
-      <div class="news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
+<div class="span6">
+  {% for p in site.categories.news limit: 1 %}
+    <div class="news-item">
+      {% if p.post-type %}
+        <div class="news-category">{{ p.post-type }}</div>
+      {% endif %}
+      {% if p.link-out %}
+        <div class="news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
+      {% else %}
+        <div class="news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></div>
+      {% endif %}
+      {% if p.author %}
+        <div class="news-author"><span class="by">By</span> <div class="news-author-name">{{ p.author }}</div></div>
+      {% endif %}
+      <div class="news-date"><img src="{{ site.baseurl }}/resources/img/icon-date2.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
+      {% if p.short %}
+        <div class="news-body">{{ p.short }}</div>
+      {% else %}
+        <div class="news-body">{{ p.content | strip_html | truncatewords: 30 }}</div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+<div class="span6">
+  {% for p in site.categories.news limit: 5 %}
+    {% if forloop.first %}
+      {% comment %} DO NOTHING {% endcomment %}
     {% else %}
-      <div class="news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></div>
+      <div class="recent-news-item">
+        {% if p.post-type %}
+          <div class="recent-news-category">{{ p.post-type }}</div>
+        {% endif %}
+        {% if p.link-out %}
+          <div class="recent-news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
+        {% else %}
+          <div class="recent-news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></div>
+        {% endif %}
+        {% if p.author %}
+          <div class="recent-news-author"><span class="by">By</span> <div class="news-author-name">{{ p.author }}</div></div>
+        {% endif %}
+        <div class="recent-news-date"><img src="{{ site.baseurl }}/resources/img/icon-date2.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
+        {% if p.short %}
+          <div class="recent-news-body">{{ p.short }}</div>
+        {% else %}
+          <div class="recent-news-body">{{ p.content | strip_html | truncatewords: 30 }}</div>
+        {% endif %}
+      </div>
     {% endif %}
-    {% if p.author %}
-      <div class="news-author"><span class="by">By</span> <div class="news-author-name">{{ p.author }}</div></div>
-    {% endif %}
-    <div class="news-date"><img src="{{ site.baseurl }}/resources/img/icon-date2.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
-    {% if p.short %}
-      <div class="news-body">{{ p.short }}</div>
-    {% else %}
-      <div class="news-body">{{ p.content | strip_html | truncatewords: 30 }}</div>
-    {% endif %}
-  </div>
-{% endfor %}
+  {% endfor %}
+</div>
