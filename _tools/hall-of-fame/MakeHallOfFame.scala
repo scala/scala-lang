@@ -23,11 +23,19 @@ object MakeHallOfFame {
       "gkossakowski",
       "JamesIry",
       "jsuereth",
-      "lexspoon",
       "paulp",
       "phaller",
       "retronym",
-      "vigdorchik"
+      "vigdorchik",
+      "huitseeker",
+      "jboner",
+      "viktorklang",
+      "patriknw",
+      "rkuhn",
+      "bantonsson",
+      "pvlugter",
+      "henrikengstrom",
+      "szeiger"
   )
 
   // TODO Expand (and maintain) that list - or fetch it from some source
@@ -40,7 +48,14 @@ object MakeHallOfFame {
       "odersky",
       "TiarkRompf",
       "VladUreche",
-      "xeno-by"
+      "xeno-by",
+      "namin",
+      "cvogt",
+      "manojo",
+      "vjovanov",
+      "sjrd",
+      "sstucki",
+
   )
 
   class Author(val username: String, val gravatar: String) {
