@@ -32,6 +32,10 @@ $(document).ready(function(){
   $("#scala-lang-twitter").mouseover(function(){ $(this).find(".toptip").show(); });
   $("#scala-lang-twitter").mouseout(function(){ $(this).find(".toptip").hide(); });
 
+  // get current year and put it in span
+  var currYear = new Date().getFullYear()
+  $(".current-year").text(currYear);
+
   // same height hack for scala in a nutshell boxes
   function makeAllBoxesSameHeight(boxes) {
     maxHeight = Math.max.apply(
