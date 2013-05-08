@@ -26,7 +26,6 @@ object MakeHallOfFame {
       "paulp",
       "phaller",
       "retronym",
-      "vigdorchik",
       "huitseeker",
       "jboner",
       "viktorklang",
@@ -54,8 +53,7 @@ object MakeHallOfFame {
       "manojo",
       "vjovanov",
       "sjrd",
-      "sstucki",
-
+      "sstucki"
   )
 
   class Author(val username: String, val gravatar: String) {
