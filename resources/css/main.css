@@ -839,8 +839,25 @@ a.brand {
 }*/
 
 .footer {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  background: #002B36;
+  /*text-align: center;*/
+  color: #fff;
+  padding-top: 20px;
+}
+
+.copyright {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.2em;
+  /*font-family: "museo-slab", serif;*/
+  position: relative;
+  float: left;
+}
+
+.footer > p {
+  vertical-align: bottom;
 }
 
 .footer ul {
@@ -849,11 +866,11 @@ a.brand {
     list-style: none outside none;
     margin: 0;
     padding: 10px 2% 20px 0;
-    width: 22%;
+    width: 235px;
 }
 
 .footer a {
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff;
     font-size: 12px;
     text-decoration: none;
 }
@@ -863,6 +880,7 @@ a.brand {
 }
 
 .footer li {
+  /*font-family: "museo-slab", serif;*/
   text-align: left;
 }
 
@@ -871,8 +889,9 @@ a.brand {
 }
 
 .footer ul li a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 12px;
+    /*color: rgba(255, 255, 255, 0.7);*/
+    color: #839496;
+    font-size: 14px;
     text-decoration: none;
 }
 
@@ -881,13 +900,16 @@ a.brand {
 }
 
 .footer ul li h5 {
-    border-bottom: 1px solid #676767;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.9);
+    /*border-bottom: 1px solid rgba(131, 148, 150, 0.6);*/
+    /*color: rgba(255, 255, 255, 0.9);*/
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 18px;
     line-height: 20px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    color: #fff;
+    /*margin-bottom: 10px;*/
+    /*padding-bottom: 10px;*/
+    /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);*/
+    text-transform: uppercase;
 }
 .footer ul li h5 a {
     font-size: 14px;
