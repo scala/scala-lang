@@ -118,7 +118,9 @@ a.brand {
   transition: background .2s ease-in;
 }
 
-.nav > li > a, img {
+.nav > li > a,
+#source-code > a > img,
+#scala-lang-twitter > a > img {
   margin-right: -10px;
 }
 
