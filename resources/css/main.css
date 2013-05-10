@@ -29,11 +29,6 @@ body {
   line-height: 1.3em;
 }
 
-@font-face {
-  font-family: FuturaBT;
-  src: url('{{ site.baseurl }}/resources/FuturaBT-Bold.ttf');
-}
-
 .navbar-wrap {
   float: right;
   position: relative;
@@ -914,6 +909,20 @@ a.brand {
 .footer ul li h5 a {
     font-size: 14px;
     opacity: 1;
+}
+
+.scala-logo-footer {
+  margin-top: 10px;
+}
+
+.made-with-love {
+  display: block;
+  color: #839496;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 12px;
+  vertical-align: middle;
 }
 
 pre.prettyprint {
