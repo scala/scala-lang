@@ -1,6 +1,7 @@
-<div class="span6">
+<div class="span7">
+  <h2 class="whats-new">What's New</h2>
   {% for p in site.categories.news limit: 1 %}
-    <div class="news-item">
+    <div class="news-item newsbox">
       {% if p.post-type %}
         <div class="news-category">{{ p.post-type }}</div>
       {% endif %}
@@ -12,23 +13,25 @@
       {% if p.author %}
         <div class="news-author"><span class="by">By</span> <div class="news-author-name">{{ p.author }}</div></div>
       {% endif %}
-      <div class="news-date"><img src="{{ site.baseurl }}/resources/img/icon-date2.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
+      <div class="news-date"><img src="{{ site.baseurl }}/resources/img/date-icon.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
       {% if p.short %}
         <div class="news-body">{{ p.short }}</div>
       {% else %}
-        <div class="news-body">{{ p.content | strip_html | truncatewords: 30 }}</div>
+        <div class="news-body">{{ p.content | truncatewords: 330 }}</div>
       {% endif %}
     </div>
   {% endfor %}
 </div>
-<div class="span6">
+<div class="span5 newsbox">
+  <h2 class="recently">Recently...</h2>
+  <div class="recent-news-items">
   {% for p in site.categories.news limit: 5 %}
     {% if forloop.first %}
       {% comment %} DO NOTHING {% endcomment %}
     {% else %}
       <div class="recent-news-item">
         {% if p.post-type %}
-          <div class="recent-news-category">{{ p.post-type }}</div>
+          <span class="recent-news-category">{{ p.post-type }}</span>
         {% endif %}
         {% if p.link-out %}
           <div class="recent-news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
@@ -36,15 +39,18 @@
           <div class="recent-news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></div>
         {% endif %}
         {% if p.author %}
-          <div class="recent-news-author"><span class="by">By</span> <div class="news-author-name">{{ p.author }}</div></div>
+          <div class="recent-news-author"><span class="by">By</span> <div class="recent-news-author-name">{{ p.author }}</div></div>
         {% endif %}
-        <div class="recent-news-date"><img src="{{ site.baseurl }}/resources/img/icon-date2.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
+        <div class="recent-news-date"><img style="margin-top: -3px;" src="{{ site.baseurl }}/resources/img/recent-date-icon.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
         {% if p.short %}
           <div class="recent-news-body">{{ p.short }}</div>
         {% else %}
-          <div class="recent-news-body">{{ p.content | strip_html | truncatewords: 30 }}</div>
+          <div class="recent-news-body">{{ p.content | strip_html | truncatewords: 25 }}</div>
         {% endif %}
       </div>
     {% endif %}
   {% endfor %}
+  </div>
+  <!-- <a class="more-news">More News</div> -->
+  <a class="rss" href=""><img src="{{ site.baserul }}/resources/img/rss-icon.png"></a>
 </div>

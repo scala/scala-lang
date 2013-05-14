@@ -47,6 +47,9 @@ $(document).ready(function(){
   var nutshell = $(".bullet-point").not(".span12");
   makeAllBoxesSameHeight(nutshell);
 
+  // var newsBoxes = $(".newsbox");
+  // makeAllBoxesSameHeight(newsBoxes);
+
   // expanding code snippets (front page)
   function expandSnippetAction(snippetID, container) {
     var codeBox = container.find(".row");
