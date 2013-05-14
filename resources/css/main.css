@@ -856,22 +856,23 @@ a.brand {
 }
 
 .footer ul {
-    -moz-box-sizing: content-box;
-    float: left;
-    list-style: none outside none;
-    margin: 0;
-    padding: 10px 2% 20px 0;
-    width: 235px;
+  -moz-box-sizing: content-box;
+  float: left;
+  list-style: none outside none;
+  margin: 0;
+  padding: 10px 0 20px 0;
+  width: 235px;
 }
 
 .footer a {
-    color: #fff;
-    font-size: 12px;
-    text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+  color: #DC352E;
+  text-decoration: none;
 }
 
 .footer li {
@@ -891,7 +892,7 @@ a.brand {
 }
 
 .footer ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .footer ul li h5 {
@@ -912,7 +913,10 @@ a.brand {
 }
 
 .scala-logo-footer {
-  margin-top: 10px;
+  position: relative;
+  float: right;
+  margin-top: 70px;
+  margin-right: 20px;
 }
 
 .made-with-love {
