@@ -123,23 +123,8 @@ a.brand {
   background-color: transparent;
 }
 
-/*.nav > li:nth-child(2) > .dropdown > a:hover {
-  color: #FB6801;
-}
-.nav > li:nth-child(3) > .dropdown > a:hover {
-  color: #B1C749;
-}
-.nav > li:nth-child(4) > .dropdown > a:hover {
-  color: #10BDCB;
-}
-*/
 .splash {
   position: relative;
-  /*background: url({{ site.baseurl }}/resources/img/view-leman-opt.jpg) no-repeat center bottom fixed;*/
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
   width: 100%;
   min-width:1024px;
   height: 540px;
@@ -294,15 +279,6 @@ h2.whats-new {
   font-weight: normal;
   font-style: italic;
 }
-
-/*h2.newshdr > span {
-  border-width: 0 34px;
-  height: 32px;
-  display: inline-block;
-  line-height: 35px;
-  background-color: #fff;
-  padding: 0 10px;
-}*/
 
 .twitter {
   width: 100%;
@@ -516,43 +492,6 @@ h2.twitterhdr > span {
   min-height: 400px;
 }
 
-.events-training-twitter-box {
-  width: 100%;
-  min-width:1024px;
-  background: url({{ site.baseurl }}/resources/img/transparent_noise.png) repeat;
-  background-color: #93AAAA;
-  min-height: 400px;
-}
-
-.whitestripe {
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: 300;
-  background: #eee;
-  background: rgba(255,255,255,0.95);
-  background: -webkit-gradient(linear, 50% 0%, 50% 95, color-stop(0%, rgba(255,255,255,0.95)), color-stop(100%, rgba(255,255,255,0.85)));
-  background: -webkit-linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 95px);
-  background: -moz-linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 95px);
-  background: -o-linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 95px);
-  background: linear-gradient(rgba(255,255,255,0.95) 0px,rgba(255,255,255,0.85) 95px);
-  margin-bottom: -90px;
-  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  border-bottom: 1px solid #fff;
-  min-width: 1024px;
-  height: 90px;
-}
-
-.redstripe {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  background-color: #DC322F;
-  height: 4px;
-}
-
 .darkblue-overlay {
   z-index: 2;
   position: absolute;
@@ -560,28 +499,6 @@ h2.twitterhdr > span {
   background-color: rgba(15, 33, 43, 0.4);
   height: 100%;
   bottom: 0px;
-}
-
-.newwhitestripe {
-  width: 100%;
-  background-color: #002B36;
-  height: 120px;
-  margin-top: -140px;
-}
-
-.newwhitestripe > p {
-  color: #333333;
-  font-family: "museo-slab", serif;
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.greenstripe {
-  width: 100%;
-  background-color: #97C93C;
-  height: 8px;
 }
 
 .ontop {
@@ -592,24 +509,6 @@ h2.twitterhdr > span {
 .splash-overlay {
   height: 100%;
   width: 100%;
-}
-
-.color-stripe {
-  position: relative;
-  height: 0.5em;
-  background-color: #cde35b;
-  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #C11A03), color-stop(50%, #C11A03), color-stop(50%, #FB6801), color-stop(70%, #FB6801), color-stop(70%, #B1C749), color-stop(85%, #B1C749), color-stop(85%, #10BDCB), color-stop(100%, #10BDCB));
-
-  background: -webkit-linear-gradient(left, #C11A03 0%,#C11A03 50%,#FB6801 50%,#FB6801 70%,#B1C749 70%,#B1C749 85%,#10BDCB 85%,#10BDCB 100%);
-  background: -moz-linear-gradient(left, #C11A03 0%,#C11A03 50%,#FB6801 50%,#FB6801 70%,#B1C749 70%,#B1C749 85%,#10BDCB 85%,#10BDCB 100%);
-  background: -o-linear-gradient(left, #C11A03 0%,#C11A03 50%,#FB6801 50%,#FB6801 70%,#B1C749 70%,#B1C749 85%,#10BDCB 85%,#10BDCB 100%);
-  -pie-background: linear-gradient(left, #C11A03 0%,#C11A03 50%,#FB6801 50%,#FB6801 70%,#B1C749 70%,#B1C749 85%,#10BDCB 85%,#10BDCB 100%);
-  background: linear-gradient(left, #C11A03 0%,#C11A03 50%,#FB6801 50%,#FB6801 70%,#B1C749 70%,#B1C749 85%,#10BDCB 85%,#10BDCB 100%);
-
-  background-position: 50% 0;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.25) inset;
 }
 
 .bullet-point-box {
