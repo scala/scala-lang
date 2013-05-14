@@ -36,9 +36,6 @@
       {% comment %} DO NOTHING {% endcomment %}
     {% else %}
       <div class="recent-news-item">
-        {% if p.post-type %}
-          <span class="recent-news-category">{{ p.post-type }}</span>
-        {% endif %}
         {% if p.link-out %}
           <div class="recent-news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
         {% else %}
@@ -47,7 +44,10 @@
         {% if p.author %}
           <div class="recent-news-author"><span class="by">By</span> <div class="recent-news-author-name">{{ p.author }}</div></div>
         {% endif %}
-        <div class="recent-news-date"><img style="margin-top: -3px;" src="{{ site.baseurl }}/resources/img/recent-date-icon.png" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
+        <div class="recent-news-date"><img style="margin-top: -3px;" src="{{ site.baseurl }}/resources/img/recent-date-icon.png" /> {{ p.date | date: "%A, %B %d, %Y" }}
+        {% if p.post-type %}
+          <span class="recent-news-category">{{ p.post-type }}</span>
+        {% endif %}</div>
         {% if p.short %}
           <div class="recent-news-body">{{ p.short }}</div>
         {% else %}
