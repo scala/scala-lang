@@ -248,6 +248,95 @@ a.brand {
   width: 560px;
 }
 
+.events {
+  width: 100%;
+  min-width:1024px;
+  min-height: 400px;
+  padding: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #174753;
+  min-height: 60px;
+}
+
+.events > .container > .row > .span2 {
+  margin-left: 19px;
+}
+
+.upcoming-events {
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  color: #566D74;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-right: 2px solid rgba(86, 109, 116, 1);
+  /*margin-left: 0px;*/
+}
+
+.event-title {
+  position: relative;
+  width: 100%;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.event-title > a:link,
+.event-title > a:visited {
+  color: #fff;
+}
+
+.event-title > a:hover {
+  color: #839496;
+  text-decoration: none;
+}
+
+.event-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.event-logo {
+  position: absolute;
+  left: 0px;
+  min-height:100%;
+  height:100%;
+  width: 40px;
+  margin-right: 6px;
+}
+
+.event-logo > a > img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.event-date-loc {
+  float: right;
+  width: 90px;
+  /*height: 100%;*/
+  /*position: absolute;*/
+  /*right: 0;*/
+}
+
+.event-date {
+  color: #839496;
+  font-family: "museo-slab", serif;
+  font-size: 14px;
+}
+
+.event-location {
+  color: #576D74;
+  font-family: "museo-slab", serif;
+  font-size: 14px;
+}
+
 .training {
   width: 100%;
   min-width:1024px;
