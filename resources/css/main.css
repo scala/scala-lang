@@ -818,6 +818,19 @@ h2.twitterhdr > span {
 
 .news-body, .recent-news-body {
   line-height: 1.4em;
+  color: #586E75;
+}
+
+.news-body > p > a:link,
+.news-body > p > a:visited,
+.recent-news-body > p > a:link,
+.recent-news-body > p > a:visited {
+  color: #DC322F;
+}
+
+.news-body > p > a:hover,
+.recent-news-body > p > a:hover {
+  color: #174753;
 }
 
 .recent-news-item:first-child {

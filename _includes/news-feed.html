@@ -25,7 +25,7 @@
 <div class="span5 newsbox">
   <h2 class="recently">Recently...</h2>
   <div class="recent-news-items">
-  {% for p in site.categories.news limit: 5 %}
+  {% for p in site.categories.news limit: 4 %}
     {% if forloop.first %}
       {% comment %} DO NOTHING {% endcomment %}
     {% else %}
