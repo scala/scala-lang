@@ -289,12 +289,72 @@ a.brand {
   width: 100%;
   min-width:1024px;
   min-height: 400px;
-  padding: 40px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   padding-left: 0px;
   padding-right: 0px;
   background-color: #E2E9EF; /*yellowish: #FDF6E3*/
   min-height: 180px;
+  text-align: center;
 }
+
+h2.twitterhdr {
+  font-family: "museo-slab", serif;
+  font-size: 20px;
+  color: #657B83;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
+}
+
+h2.twitterhdr > span {
+  border-width: 0 34px;
+  height: 32px;
+  display: inline-block;
+  line-height: 35px;
+  background-color: #E2E9EF;
+  padding: 0 10px;
+}
+
+#twitter-btn {
+  padding: 0 18px;
+  background: #859900; /*brighter color: 97BE49*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font: 700 14px/28px 'proxima-nova', sans-serif;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+#twitter-btn:hover {
+  background:#DC322F;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  text-shadow:none;
+  color:#FFF;
+}
+
+.see-more-tweets {
+  color: #657B83;
+  font-family: "museo-slab", serif;
+  font-size: 12px;
+  color: #3d626b;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+}
+
 
 .highlighted-events {
   width: 100%;
@@ -580,15 +640,6 @@ a.brand {
   /*text-transform: uppercase;*/
   margin-bottom: 0px;
   background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
-}
-
-.bullet-point > h2 > span {
-  border-width: 0 34px;
-  height: 32px;
-  display: inline-block;
-  line-height: 35px;
-  background-color: #073642;
-  padding: 0 10px;
 }
 
 .bullet-point > p.click {
