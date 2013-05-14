@@ -279,6 +279,7 @@ a.brand {
   min-width:1024px;
   min-height: 400px;
   padding: 40px;
+  padding-top: 20px;
   padding-left: 0px;
   padding-right: 0px;
   background-color: #fff; /* gentle, light blueish: #E2E9EF;*/
@@ -362,17 +363,6 @@ h2.twitterhdr > span {
   text-shadow:none;
   color:#FFF;
 }
-
-.see-more-tweets {
-  color: #657B83;
-  font-family: "museo-slab", serif;
-  font-size: 12px;
-  color: #3d626b;
-  font-weight: normal;
-  font-style: italic;
-  text-align: center;
-}
-
 
 .highlighted-events {
   width: 100%;
@@ -769,6 +759,7 @@ h2.twitterhdr > span {
   line-height: 1.1em;
   font-size: 22px;
   color: #174753;
+  margin-bottom: 10px;
 }
 
 .news-title > a:link,
@@ -816,6 +807,10 @@ h2.twitterhdr > span {
   margin-top: -5px;
 }
 
+.news-body {
+  margin-top: 14px;
+}
+
 .news-body, .recent-news-body {
   line-height: 1.4em;
   color: #586E75;
@@ -831,6 +826,42 @@ h2.twitterhdr > span {
 .news-body > p > a:hover,
 .recent-news-body > p > a:hover {
   color: #174753;
+}
+
+#archive-btn {
+  padding: 0 18px;
+  background: #859900; /*brighter color: 97BE49*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font: 700 14px/28px 'proxima-nova', sans-serif;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+#archive-btn:hover {
+  background:#DC322F;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  text-shadow:none;
+  color:#FFF;
+}
+
+.post-news, .see-more-tweets {
+  font-family: "museo-slab", serif;
+  font-size: 12px;
+  color: #3d626b;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
 }
 
 .recent-news-item:first-child {
