@@ -271,23 +271,23 @@ a.brand {
   text-transform: uppercase;
   font-weight: bold;
   border-right: 2px solid rgba(86, 109, 116, 1);
-  /*margin-left: 0px;*/
 }
 
 .event-title {
   position: relative;
   width: 100%;
-  font-family: 'proxima-nova', sans-serif;
+  /*font-family: 'proxima-nova', sans-serif;*/
+  font-family: "museo-slab", serif;
   font-size: 18px;
   line-height: 20px;
-  color: #fff;
-  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  /*text-transform: uppercase;*/
   font-weight: bold;
 }
 
 .event-title > a:link,
 .event-title > a:visited {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .event-title > a:hover {
@@ -346,6 +346,16 @@ a.brand {
   padding-right: 0px;
   background-color: #E2E9EF; /*dark bluish #174753*/
   min-height: 60px;
+}
+
+.upcoming-training {
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(101, 123, 131, 0.4);
+  text-transform: uppercase;
+  font-weight: bold;
+  border-right: 2px solid rgba(101, 123, 131, 0.4);
 }
 
 .news {
