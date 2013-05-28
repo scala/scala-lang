@@ -353,6 +353,7 @@ a.brand {
 }
 
 .training {
+  position: relative;
   width: 100%;
   min-width:1024px;
   min-height: 400px;
@@ -364,21 +365,28 @@ a.brand {
   min-height: 60px;
 }
 
-.training-item {
+.training-item-wrap {
   position: relative;
   float: left;
-  width: 180px;
+  min-height: 100px;
   margin-right: 8px;
+  width: 180px;
+}
+.training-item {
+  position: absolute;
+  bottom: 0px;
 }
 
-.training-item:last-child {
+.training-item-wrap:last-child {
   margin-right: 0px;
 }
 
 .training-date {
   position: relative;
-  height: 60px;
   float: left;
+  bottom: 0px;
+  height: 60px;
+  margin-right: 8px;
 }
 
 .date {
@@ -448,7 +456,7 @@ a.brand {
 
 .training-float-right {
   position: relative;
-  float: right;
+  float: left;
   height: 60px;
   width: 130px;
 }
