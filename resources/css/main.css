@@ -346,42 +346,6 @@ a.brand {
   line-height: 1.1em;
 }
 
-/*.event-title {
-  position: relative;
-  width: 100%;
-  font-family: "museo-slab", serif;
-  font-size: 18px;
-  line-height: 20px;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: bold;
-}*/
-
-/*.event-title > a:link,
-.event-title > a:visited {
-  color: rgba(255, 255, 255, 0.6);
-}*/
-
-/*.event-title > a:hover {
-  color: #839496;
-  text-decoration: none;
-}*/
-
-/*.event-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}*/
-
-/*.event-logo {
-  position: absolute;
-  left: 0px;
-  min-height:100%;
-  height:100%;
-  width: 40px;
-  margin-right: 6px;
-}*/
-
 .event-logo {
   position: relative;
   float: left;
@@ -394,23 +358,6 @@ a.brand {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-
-/*.event-date-loc {
-  float: right;
-  width: 90px;
-}*/
-
-/*.event-date {
-  color: #839496;
-  font-family: "museo-slab", serif;
-  font-size: 14px;
-}*/
-
-/*.event-location {
-  color: #576D74;
-  font-family: "museo-slab", serif;
-  font-size: 14px;
-}*/
 
 .training {
   position: relative;
