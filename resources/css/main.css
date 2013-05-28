@@ -368,9 +368,10 @@ a.brand {
   padding-top: 26px;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   background-color: #E2E9EF; /*dark bluish #174753*/
   min-height: 60px;
+  text-align: center;
 }
 
 .upcoming-training {
@@ -404,6 +405,7 @@ a.brand {
   min-height: 100px;
   margin-right: 8px;
   width: 180px;
+  text-align: left;
 }
 .training-item {
   position: absolute;
@@ -515,7 +517,37 @@ a.brand {
   line-height: 1.1em;
 }
 
+.center {
+  text-align: center;
+}
 
+#training-btn {
+  margin-top: 32px;
+  padding: 0 18px;
+  background: #859900; /*brighter color: 97BE49*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font: 700 14px/28px 'proxima-nova', sans-serif;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+#training-btn:hover {
+  background:#DC322F;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  text-shadow:none;
+  color:#FFF;
+}
 
 .news {
   width: 100%;
@@ -1012,13 +1044,23 @@ h2.twitterhdr > span {
   color:#FFF;
 }
 
-.post-news, .see-more-tweets {
+.post-news, .see-more-tweets, .add-training {
   font-family: "museo-slab", serif;
   font-size: 12px;
   color: #3d626b;
   font-weight: normal;
   font-style: italic;
   text-align: center;
+}
+
+.add-training a:link,
+.add-training a:visited {
+  color: #3d626b;
+}
+
+.add-training a:hover {
+  color: #DC322F;
+  text-decoration: none;
 }
 
 .recent-news-item:first-child {
