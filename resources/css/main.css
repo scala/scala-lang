@@ -252,7 +252,7 @@ a.brand {
   width: 100%;
   min-width:1024px;
   min-height: 400px;
-  padding: 40px;
+  padding: 26px;
   padding-left: 0px;
   padding-right: 0px;
   background-color: #174753;
@@ -264,13 +264,28 @@ a.brand {
 }
 
 .upcoming-events {
-  font-family: 'proxima-nova', sans-serif;
-  font-size: 24px;
-  line-height: 28px;
-  color: #566D74;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-right: 2px solid rgba(86, 109, 116, 1);
+  text-align: center;
+}
+
+.upcoming-events > h2 {
+  font-family: "museo-slab", serif;
+  font-size: 20px;
+  color: #839496;
+  font-weight: normal;
+  font-style: italic;
+  /*text-transform: uppercase;*/
+  margin-bottom: 12px;
+  margin-top: 0px;
+  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
+}
+
+.upcoming-events > h2 > span {
+  border-width: 0 34px;
+  height: 32px;
+  display: inline-block;
+  line-height: 35px;
+  background-color: #174753;
+  padding: 0 10px;
 }
 
 .event-title {
@@ -341,14 +356,125 @@ a.brand {
   width: 100%;
   min-width:1024px;
   min-height: 400px;
-  padding: 40px;
+  padding-top: 26px;
   padding-left: 0px;
   padding-right: 0px;
+  padding-bottom: 40px;
   background-color: #E2E9EF; /*dark bluish #174753*/
   min-height: 60px;
 }
 
-.upcoming-training {
+.training-item {
+  position: relative;
+  float: left;
+  width: 180px;
+  margin-right: 8px;
+}
+
+.training-item:last-child {
+  margin-right: 0px;
+}
+
+.training-date {
+  position: relative;
+  height: 60px;
+  float: left;
+}
+
+.date {
+  text-align: center;
+  font-family: 'proxima-nova', sans-serif;
+  text-transform: uppercase;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.month {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.1em;
+  width: 40px;
+  background-color: #DC322F;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -khtml-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.day {
+  font-family: "museo-slab", serif;
+  line-height: 1.2em;
+  color:#174753;
+  font-size: 20px;
+}
+
+.year {
+  /*font-family: 'proxima-nova', sans-serif;*/
+  color:#174753;
+  font-weight: bold;
+  text-align: center;
+  width: 40px;
+}
+
+.training-title {
+  margin-bottom: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.1em;
+}
+
+.training-title a:link,
+.training-title a:visited {
+  color: #174753;
+}
+
+.training-title a:hover {
+  color: #DC322F;
+  text-decoration: none;
+}
+
+.training-float-right {
+  position: relative;
+  float: right;
+  height: 60px;
+  width: 130px;
+}
+
+.training-float-right,
+.training-trainers-name,
+.training-location,
+.training-organizer {
+  word-wrap: break-word;
+}
+
+.training-location {
+  font-family: 'proxima-nova', sans-serif;
+  text-transform: uppercase;
+  /*font-weight: bold;*/
+  /*color: rgba(101, 123, 131, 0.7);*/
+}
+
+.training-trainers-name {
+  font-family: "museo-slab", serif;
+  color: #839496;
+  font-size: 13px;
+  line-height: 1.1em;
+}
+
+/*.upcoming-training {
   font-family: 'proxima-nova', sans-serif;
   font-size: 24px;
   line-height: 28px;
@@ -356,6 +482,31 @@ a.brand {
   text-transform: uppercase;
   font-weight: bold;
   border-right: 2px solid rgba(101, 123, 131, 0.4);
+}*/
+
+.upcoming-training {
+  text-align: center;
+}
+
+.upcoming-training > h2 {
+  font-family: "museo-slab", serif;
+  font-size: 20px;
+  color: #657B83;
+  font-weight: normal;
+  font-style: italic;
+  /*text-transform: uppercase;*/
+  /*margin-bottom: 12px;*/
+  margin-top: 0px;
+  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
+}
+
+.upcoming-training > h2 > span {
+  border-width: 0 34px;
+  height: 32px;
+  display: inline-block;
+  line-height: 35px;
+  background-color: #E2E9EF;
+  padding: 0 10px;
 }
 
 .news {

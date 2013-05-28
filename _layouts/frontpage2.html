@@ -164,10 +164,15 @@ layout: default
 <div class="events">
   <div class="container">
     <div class="row">
-      <div class="span2 upcoming-events">
-        Upcoming Events
+      <div class="span12 upcoming-events">
+        <h2><span>Upcoming Events</span></h2>
       </div>
-      <div class="span2">
+    </div>
+    <div class="row">
+<!--       <div class="span2 upcoming-events">
+        Upcoming Events
+      </div> -->
+      <div class="span3">
         <div class="event-title"><a href="">NEScala</a></div>
         <div class="event-container">
           <div class="event-logo"><a href=""><img src="{{ site.baseurl }}/resources/img/nescala-logo.png"></a></div>
@@ -177,7 +182,7 @@ layout: default
           </div>
         </div>
       </div>
-      <div class="span2">
+      <div class="span3">
         <div class="event-title"><a href="">Flatmap Oslo</a></div>
         <div class="event-container">
           <div class="event-logo"><a href=""><img src="{{ site.baseurl }}/resources/img/nescala-logo.png"></a></div>
@@ -187,7 +192,7 @@ layout: default
           </div>
         </div>
       </div>
-      <div class="span2">
+      <div class="span3">
         <div class="event-title"><a href="">PhillyETE</a></div>
         <div class="event-container">
           <div class="event-logo"><a href=""><img src="{{ site.baseurl }}/resources/img/nescala-logo.png"></a></div>
@@ -197,7 +202,7 @@ layout: default
           </div>
         </div>
       </div>
-      <div class="span2">
+      <div class="span3">
         <div class="event-title"><a href="">JavaOne</a></div>
         <div class="event-container">
           <div class="event-logo"><a href=""><img src="{{ site.baseurl }}/resources/img/nescala-logo.png"></a></div>
@@ -207,7 +212,7 @@ layout: default
           </div>
         </div>
       </div>
-      <div class="span2">
+<!--       <div class="span2">
         <div class="event-title"><a href="">Devoxx</a></div>
         <div class="event-container">
           <div class="event-logo"><a href=""><img src="{{ site.baseurl }}/resources/img/nescala-logo.png"></a></div>
@@ -216,7 +221,7 @@ layout: default
             <div class="event-location">Philly, USA</div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -224,12 +229,83 @@ layout: default
 <div class="training">
   <div class="container">
     <div class="row">
-      <div class="span2 upcoming-training">
-        Upcoming Training
+      <div class="span12 upcoming-training">
+        <h2><span>Upcoming Training</span></h2>
+      </div>
+      <div class="span12">
+
+        <div class="training-item">
+          <div class="training-title"><a href="">Fast Track to Scala</a></div>
+          <div class="training-date">
+            <div class="date"><div class="month">Sep</div><div class="day">21</div></div><div class="year">2013</div>
+          </div>
+          <div class="training-float-right">
+            <div class="training-location">New York</div>
+            <div class="training-trainers-name">By Brendan McAdams</div>
+            <div class="training-organizer">SkillsMatter</div>
+          </div>
+        </div>
+
+        <div class="training-item">
+          <div class="training-title"><a href="">Fast Track to Scala</a></div>
+          <div class="training-date">
+            <div class="date"><div class="month">Sep</div><div class="day">21</div></div><div class="year">2013</div>
+          </div>
+          <div class="training-float-right">
+            <div class="training-location">New York</div>
+            <div class="training-trainers-name">By Brendan McAdams</div>
+            <div class="training-organizer">via Marakana</div>
+          </div>
+        </div>
+
+        <div class="training-item">
+          <div class="training-title"><a href="">Fast Track to Scala</a></div>
+          <div class="training-date">
+            <div class="date"><div class="month">Sep</div><div class="day">21</div></div><div class="year">2013</div>
+          </div>
+          <div class="training-float-right">
+            <div class="training-location">London</div>
+            <div class="training-trainers-name">By Nilanjan Raychaudhuri</div>
+            <div class="training-organizer">via Skills Matter</div>
+          </div>
+        </div>
+
+        <div class="training-item">
+          <div class="training-title"><a href="">Scaling Up and Out With Akka</a></div>
+          <div class="training-date">
+            <div class="date"><div class="month">Sep</div><div class="day">21</div></div><div class="year">2013</div>
+          </div>
+          <div class="training-float-right">
+            <div class="training-location">San Francisco</div>
+            <div class="training-trainers-name">By Brendan McAdams</div>
+            <div class="training-organizer">via Skills Matter</div>
+          </div>
+        </div>
+
+        <div class="training-item">
+          <div class="training-title"><a href="">Fast Track to Scala</a></div>
+          <div class="training-date">
+            <div class="date"><div class="month">Sep</div><div class="day">21</div></div><div class="year">2013</div>
+          </div>
+          <div class="training-float-right">
+            <div class="training-location">New York</div>
+            By <div class="training-trainers-name">Brendan McAdams</div>
+            <div class="training-organizer">SkillsMatter</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<!--  '<div class="training-item">' +
+          '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
+          '<div class="training-description">'+training.description+'</div>' +
+          '<div class="training-location">'+training.where+'</div>' +
+          '<div class="training-date"><img src="{{ site.baseurl }}/resources/img/icon-date.png" /> '+training.when+'</div>' +
+          '<div class="training-trainers"><span class="by">By</span> <div class="training-trainers-name">'+training.trainers+'</div></div>' +
+          '<div class="training-organizer">'+training.organizer+'</div>' +
+        '</div>'; -->
 
 <div class="news">
   <div class="container">
