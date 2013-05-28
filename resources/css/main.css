@@ -252,7 +252,9 @@ a.brand {
   width: 100%;
   min-width:1024px;
   min-height: 400px;
-  padding: 26px;
+  padding-top: 26px;
+  padding-left: 0px;
+  padding-right: 0px;
   padding-bottom: 6px;
   background-color: #174753;
   min-height: 60px;
@@ -260,7 +262,6 @@ a.brand {
 
 .upcoming-events {
   text-align: center;
-  margin-left: 0px;
 }
 
 .upcoming-events > h2 {
@@ -287,7 +288,7 @@ a.brand {
 .event-item-wrap {
   position: relative;
   float: left;
-  min-height: 70px;
+  min-height: 78px;
   margin-right: 8px;
   margin-top: 16px;
   width: 180px;
