@@ -253,18 +253,14 @@ a.brand {
   min-width:1024px;
   min-height: 400px;
   padding: 26px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-bottom: 6px;
   background-color: #174753;
   min-height: 60px;
 }
 
-.events > .container > .row > .span2 {
-  margin-left: 19px;
-}
-
 .upcoming-events {
   text-align: center;
+  margin-left: 0px;
 }
 
 .upcoming-events > h2 {
@@ -288,42 +284,109 @@ a.brand {
   padding: 0 10px;
 }
 
+.event-item-wrap {
+  position: relative;
+  float: left;
+  min-height: 70px;
+  margin-right: 8px;
+  margin-top: 16px;
+  width: 180px;
+}
+
+.event-item-wrap:last-child {
+  margin-right: 0px;
+}
+
+.event-item {
+  position: absolute;
+  bottom: 0px;
+}
+
 .event-title {
+  margin-bottom: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.event-title a:link,
+.event-title a:visited {
+  color: #A2B5BA;
+}
+
+.event-title a:hover {
+  color: #DC322F;
+  text-decoration: none;
+}
+
+.event-float-right {
+  position: relative;
+  float: left;
+  height: 60px;
+  width: 130px;
+}
+
+.event-float-right,
+.event-location,
+.event-date {
+  word-wrap: break-word;
+}
+
+.event-location {
+  font-family: 'proxima-nova', sans-serif;
+  text-transform: uppercase;
+  /*font-weight: bold;*/
+  /*color: rgba(101, 123, 131, 0.7);*/
+}
+
+.event-date {
+  font-family: "museo-slab", serif;
+  color: #839496;
+  font-size: 13px;
+  line-height: 1.1em;
+}
+
+/*.event-title {
   position: relative;
   width: 100%;
-  /*font-family: 'proxima-nova', sans-serif;*/
   font-family: "museo-slab", serif;
   font-size: 18px;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.7);
-  /*text-transform: uppercase;*/
   font-weight: bold;
-}
+}*/
 
-.event-title > a:link,
+/*.event-title > a:link,
 .event-title > a:visited {
   color: rgba(255, 255, 255, 0.6);
-}
+}*/
 
-.event-title > a:hover {
+/*.event-title > a:hover {
   color: #839496;
   text-decoration: none;
-}
+}*/
 
-.event-container {
+/*.event-container {
   position: relative;
   height: 100%;
   width: 100%;
   overflow: hidden;
-}
+}*/
 
-.event-logo {
+/*.event-logo {
   position: absolute;
   left: 0px;
   min-height:100%;
   height:100%;
   width: 40px;
   margin-right: 6px;
+}*/
+
+.event-logo {
+  position: relative;
+  float: left;
+  bottom: 0px;
+  margin-right: 8px;
 }
 
 .event-logo > a > img {
@@ -332,25 +395,22 @@ a.brand {
   border-radius: 5px;
 }
 
-.event-date-loc {
+/*.event-date-loc {
   float: right;
   width: 90px;
-  /*height: 100%;*/
-  /*position: absolute;*/
-  /*right: 0;*/
-}
+}*/
 
-.event-date {
+/*.event-date {
   color: #839496;
   font-family: "museo-slab", serif;
   font-size: 14px;
-}
+}*/
 
-.event-location {
+/*.event-location {
   color: #576D74;
   font-family: "museo-slab", serif;
   font-size: 14px;
-}
+}*/
 
 .training {
   position: relative;
@@ -363,6 +423,31 @@ a.brand {
   padding-bottom: 40px;
   background-color: #E2E9EF; /*dark bluish #174753*/
   min-height: 60px;
+}
+
+.upcoming-training {
+  text-align: center;
+}
+
+.upcoming-training > h2 {
+  font-family: "museo-slab", serif;
+  font-size: 20px;
+  color: #657B83;
+  font-weight: normal;
+  font-style: italic;
+  /*text-transform: uppercase;*/
+  /*margin-bottom: 12px;*/
+  margin-top: 0px;
+  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
+}
+
+.upcoming-training > h2 > span {
+  border-width: 0 34px;
+  height: 32px;
+  display: inline-block;
+  line-height: 35px;
+  background-color: #E2E9EF;
+  padding: 0 10px;
 }
 
 .training-item-wrap {
@@ -482,40 +567,7 @@ a.brand {
   line-height: 1.1em;
 }
 
-/*.upcoming-training {
-  font-family: 'proxima-nova', sans-serif;
-  font-size: 24px;
-  line-height: 28px;
-  color: rgba(101, 123, 131, 0.4);
-  text-transform: uppercase;
-  font-weight: bold;
-  border-right: 2px solid rgba(101, 123, 131, 0.4);
-}*/
 
-.upcoming-training {
-  text-align: center;
-}
-
-.upcoming-training > h2 {
-  font-family: "museo-slab", serif;
-  font-size: 20px;
-  color: #657B83;
-  font-weight: normal;
-  font-style: italic;
-  /*text-transform: uppercase;*/
-  /*margin-bottom: 12px;*/
-  margin-top: 0px;
-  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
-}
-
-.upcoming-training > h2 > span {
-  border-width: 0 34px;
-  height: 32px;
-  display: inline-block;
-  line-height: 35px;
-  background-color: #E2E9EF;
-  padding: 0 10px;
-}
 
 .news {
   width: 100%;
