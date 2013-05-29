@@ -292,6 +292,7 @@ a.brand {
 }
 
 .events {
+  position: relative;
   text-align: center;
   width: 100%;
   min-width:1024px;
@@ -299,7 +300,7 @@ a.brand {
   padding-top: 26px;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 26px;
+  padding-bottom: 60px;
   background-color: #174753;
   min-height: 60px;
 }
@@ -333,10 +334,25 @@ a.brand {
   position: relative;
   float: left;
   text-align: left;
-  min-height: 78px;
+  min-height: 80px;
   margin-right: 8px;
-  margin-top: 16px;
-  width: 180px;
+  width: 160px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /*border-top: solid 3px #174753;*/
+  border-top: solid 3px #fff;
 }
 
 .event-item-wrap:last-child {
@@ -349,10 +365,11 @@ a.brand {
 }
 
 .event-title {
-  margin-bottom: 6px;
+  overflow: hidden;
+  margin-bottom: 4px;
   font-size: 17px;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 0.95em;
 }
 
 .event-title a:link,
@@ -362,15 +379,17 @@ a.brand {
 }
 
 .event-title a:hover {
-  color: #DC322F;
+  /*color: #DC322F;*/
+  color: #72D0EB;
   text-decoration: none;
 }
 
 .event-float-right {
+  overflow: hidden;
   position: relative;
   float: left;
-  height: 60px;
-  width: 130px;
+  height: 54px;
+  width: 128px;
 }
 
 .event-float-right,
@@ -402,12 +421,15 @@ a.brand {
   float: left;
   bottom: 0px;
   margin-right: 8px;
+  height: 54px;
 }
 
 .event-logo > a > img {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  width: 34px;
+  height: 34px;
 }
 
 .training {
@@ -452,12 +474,29 @@ a.brand {
 }
 
 .training-item-wrap {
+  padding: 10px;
   position: relative;
   float: left;
-  min-height: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  /*background: rgba(23, 71, 83, 0.1);*/
+  min-height: 90px;
   margin-right: 8px;
-  width: 180px;
+  width: 160px;
   text-align: left;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /*border-top: solid 3px #174753;*/
+  border-top: solid 3px #fff;
 }
 .training-item {
   position: absolute;
@@ -472,7 +511,7 @@ a.brand {
   position: relative;
   float: left;
   bottom: 0px;
-  height: 60px;
+  height: 70px;
   margin-right: 8px;
 }
 
@@ -480,8 +519,8 @@ a.brand {
   text-align: center;
   font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   background-color: #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -493,7 +532,7 @@ a.brand {
   font-size: 14px;
   font-weight: 800;
   line-height: 1.1em;
-  width: 40px;
+  width: 34px;
   background-color: #DC322F;
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
@@ -513,7 +552,7 @@ a.brand {
   font-family: "museo-slab", serif;
   line-height: 1.2em;
   color:#174753;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .year {
@@ -521,14 +560,15 @@ a.brand {
   color:#174753;
   font-weight: bold;
   text-align: center;
-  width: 40px;
+  width: 34px;
 }
 
 .training-title {
-  margin-bottom: 6px;
+  overflow: hidden;
+  margin-bottom: 4px;
   font-size: 17px;
   font-weight: bold;
-  line-height: 1.1em;
+  line-height: 0.95em;
 }
 
 .training-title a:link,
@@ -544,10 +584,12 @@ a.brand {
 }
 
 .training-float-right {
+  overflow: hidden;
   position: relative;
   float: left;
-  height: 60px;
-  width: 130px;
+  /*min-height: 60px;*/
+  height: 70px;
+  width: 128px;
 }
 
 .training-float-right,
@@ -577,6 +619,7 @@ a.brand {
 }
 
 .training-organizer {
+  position: relative;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -1133,6 +1176,10 @@ h2.twitterhdr > span {
 }
 
 .add-event {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
   color: rgba(255, 255, 255, 0.2);
   /*color: #839496;*/
 }
