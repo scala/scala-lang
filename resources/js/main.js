@@ -359,6 +359,7 @@ $(document).ready(function(){
   }
 
   function doPopulateTrainingsPane(allTrainings0) {
+    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
     var allTrainings = keepOnlyOneSession(allTrainings0);
     allTrainings = allTrainings.filter(function (training) {
       return new Date(training.when) >= new Date();
@@ -367,14 +368,23 @@ $(document).ready(function(){
     var content = "";
     for (i = 0; i < allTrainings.length; i++) {
       var training = allTrainings[i];
+      var trainingDate = Date(training.when);
+      var month = monthNames[trainingDate.getMonth()]);
+      var day = trainingDate.getDate();
+      var year = trainingDate.getFullYear();
       var thisContent =
-        '<div class="training-item">' +
-          '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
-          '<div class="training-description">'+training.description+'</div>' +
-          '<div class="training-location">'+training.where+'</div>' +
-          '<div class="training-date"><img src="{{ site.baseurl }}/resources/img/icon-date.png" /> '+training.when+'</div>' +
-          '<div class="training-trainers"><span class="by">By</span> <div class="training-trainers-name">'+training.trainers+'</div></div>' +
-          '<div class="training-organizer">'+training.organizer+'</div>' +
+        '<div class="training-item-wrap">' +
+          '<div class="training-item">' +
+            '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
+            '<div class="training-date">' +
+               '<div class="date"><div class="month">'+month+'</div><div class="day">'+day+'</div></div><div class="year">'+year+'</div>' +
+            '</div>'+
+            '<div class="training-float-right">' +
+              '<div class="training-location">'+training.where+'</div>' +
+              '<div class="training-trainers-name"> By '+training.trainers+'</div>' +
+              '<div class="training-organizer">'+training.organizer+'</div>' +
+            '</div>' +
+          '</div>' +
         '</div>';
       $("#trainingspane").append(thisContent);
     }
