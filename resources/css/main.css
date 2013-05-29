@@ -58,6 +58,20 @@ body {
   margin-top: 22px;
 }
 
+.darkbluetopbar > .container > .navbar-wrap > .container > ul.nav > li > a {
+  text-shadow: none;
+}
+
+.darkbluetopbar > .container > .navbar-wrap > .container > ul.nav > li#source-code > .toptip,
+.darkbluetopbar > .container > .navbar-wrap > .container > ul.nav > li#scala-lang-twitter > .toptip {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.darkbluetopbar > .container > .navbar-wrap > .container > ul.nav > li#source-code > .toptip:after,
+.darkbluetopbar > .container > .navbar-wrap > .container > ul.nav > li#scala-lang-twitter > .toptip:after {
+  border-top: 6px solid rgba(0, 0, 0, 0.3);
+}
+
 .navbar-wrap {
   float: right;
   position: relative;
