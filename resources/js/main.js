@@ -276,12 +276,16 @@ $(document).ready(function(){
     for (i = 0; i < allEvents.length && i < MAX_EVENTS; i++) {
       var event = allEvents[i];
       var thisContent =
-        '<div class="event-item">' +
-          '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
-          '<div class="event-logo"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></div>' +
-          '<div class="event-location">'+event.location+'</div>' +
-          '<div class="event-date"><img src="{{ site.baseurl }}/resources/img/icon-date.png" /> '+
-            event.start + (event.end ? ' to '+event.end : '') + '</div>' +
+        '<div class="event-item-wrap">' +
+          '<div class="event-item">' +
+            '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
+            '<div class="event-logo"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></div>' +
+            '<div class="event-float-right">' +
+              '<div class="event-location">'+event.location+'</div>' +
+              '<div class="event-date">'+
+                event.start + (event.end ? ' to '+event.end : '') + '</div>' +
+              '</div>' +
+          '</div>' +
         '</div>';
       $("#eventspane").append(thisContent);
     }
