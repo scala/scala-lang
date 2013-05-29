@@ -249,13 +249,14 @@ a.brand {
 }
 
 .events {
+  text-align: center;
   width: 100%;
   min-width:1024px;
   min-height: 400px;
   padding-top: 26px;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 6px;
+  padding-bottom: 26px;
   background-color: #174753;
   min-height: 60px;
 }
@@ -288,6 +289,7 @@ a.brand {
 .event-item-wrap {
   position: relative;
   float: left;
+  text-align: left;
   min-height: 78px;
   margin-right: 8px;
   margin-top: 16px;
@@ -521,7 +523,8 @@ a.brand {
   text-align: center;
 }
 
-#training-btn {
+#training-btn,
+#event-btn {
   margin-top: 32px;
   padding: 0 18px;
   background: #859900; /*brighter color: 97BE49*/
@@ -539,7 +542,8 @@ a.brand {
   text-shadow: none;
 }
 
-#training-btn:hover {
+#training-btn:hover,
+#event-btn:hover {
   background:#DC322F;
   -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
   box-shadow:none;
@@ -1044,7 +1048,10 @@ h2.twitterhdr > span {
   color:#FFF;
 }
 
-.post-news, .see-more-tweets, .add-training {
+.post-news,
+.see-more-tweets,
+.add-training,
+.add-event {
   font-family: "museo-slab", serif;
   font-size: 12px;
   color: #3d626b;
@@ -1053,12 +1060,22 @@ h2.twitterhdr > span {
   text-align: center;
 }
 
+.add-event {
+  color: #839496;
+}
+
+.add-event a:link,
+.add-event a:visited {
+  color: #839496;
+}
+
 .add-training a:link,
 .add-training a:visited {
   color: #3d626b;
 }
 
-.add-training a:hover {
+.add-training a:hover,
+.add-event a:hover {
   color: #DC322F;
   text-decoration: none;
 }
