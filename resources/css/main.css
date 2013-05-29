@@ -203,7 +203,7 @@ a.brand {
   float: left;
   z-index: 2;
   margin-top: 40px;
-  width: 200px;
+  /*width: 200px;*/
 }
 
 .spiral-logo {
