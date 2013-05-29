@@ -404,7 +404,7 @@ a.brand {
   padding-top: 26px;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   background-color: #72D0EB; /*#E2E9EF;*/ /*dark bluish #174753*/
   min-height: 60px;
   text-align: center;
@@ -1110,18 +1110,31 @@ h2.twitterhdr > span {
   text-align: center;
 }
 
+.add-training {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  color: rgba(23, 71, 83, 0.3);
+}
+
 .add-event {
-  color: #839496;
+  color: rgba(255, 255, 255, 0.2);
+  /*color: #839496;*/
 }
 
 .add-event a:link,
 .add-event a:visited {
-  color: #839496;
+  /*color: #839496;*/
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .add-training a:link,
 .add-training a:visited {
-  color: #3d626b;
+  /*color: #3d626b;*/
+  /*color: #225966;*/
+  color: rgba(23, 71, 83, 0.5);
+  /*border-bottom: solid 1px #DC322F;*/
 }
 
 .add-training a:hover,
