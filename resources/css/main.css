@@ -29,6 +29,35 @@ body {
   line-height: 1.3em;
 }
 
+.darkstrip {
+  width: 100%;
+  height: 20px;
+  /*background-color: #1A232B;*/
+  background-color: #002B36;
+}
+
+.darkbluetopbar {
+  width: 100%;
+  height: 80px;
+  background-color: #073642;
+  /*background-color: #002B36;*/
+  /*background-color: #2F353E;*/
+}
+
+.midbluebar {
+  width: 100%;
+  height: 60px;
+  background-color: #72D0EB;
+}
+
+.darkbluetopbar > .container > .navbar-wrap > .container > .scala-logo {
+  margin-top: 20px;
+}
+
+.darkbluetopbar > .container > .navbar-wrap > .container > ul.nav {
+  margin-top: 22px;
+}
+
 .navbar-wrap {
   float: right;
   position: relative;
@@ -314,7 +343,8 @@ a.brand {
 
 .event-title a:link,
 .event-title a:visited {
-  color: #A2B5BA;
+  /*color: #A2B5BA;*/
+  color: #fff;
 }
 
 .event-title a:hover {
@@ -338,6 +368,10 @@ a.brand {
 .event-location {
   font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
+  /*color: #839496;*/
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 600;
+  /*color: rgba(114, 208, 235, 0.8);*/ /*#72D0EB;*/
   /*font-weight: bold;*/
   /*color: rgba(101, 123, 131, 0.7);*/
 }
@@ -371,7 +405,7 @@ a.brand {
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 30px;
-  background-color: #E2E9EF; /*dark bluish #174753*/
+  background-color: #72D0EB; /*#E2E9EF;*/ /*dark bluish #174753*/
   min-height: 60px;
   text-align: center;
 }
@@ -383,13 +417,15 @@ a.brand {
 .upcoming-training > h2 {
   font-family: "museo-slab", serif;
   font-size: 20px;
-  color: #657B83;
+  /*color: #657B83;*/
+  color: #fff;
+  /*text-shadow: 1px 1px 0px #50B8E1;*/
   font-weight: normal;
   font-style: italic;
   /*text-transform: uppercase;*/
   /*margin-bottom: 12px;*/
   margin-top: 0px;
-  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
+  background: url({{ site.baseurl }}/resources/img/white-line.png) center repeat-x;
 }
 
 .upcoming-training > h2 > span {
@@ -397,7 +433,7 @@ a.brand {
   height: 32px;
   display: inline-block;
   line-height: 35px;
-  background-color: #E2E9EF;
+  background-color: #72D0EB;
   padding: 0 10px;
 }
 
@@ -484,6 +520,8 @@ a.brand {
 .training-title a:link,
 .training-title a:visited {
   color: #174753;
+  /*color: #002B36;*/
+  /*color: #fff;*/
 }
 
 .training-title a:hover {
@@ -508,15 +546,24 @@ a.brand {
 .training-location {
   font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  /*color: #002B36;*/
   /*font-weight: bold;*/
   /*color: rgba(101, 123, 131, 0.7);*/
 }
 
 .training-trainers-name {
   font-family: "museo-slab", serif;
-  color: #839496;
+  /*color: #839496;*/
+  /*color: #F2F5F8;*/
+  color: rgba(255, 255, 255, 1);
   font-size: 13px;
   line-height: 1.1em;
+}
+
+.training-organizer {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .center {
@@ -582,7 +629,7 @@ h2.whats-new {
   padding-bottom: 40px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: #E2E9EF; /*yellowish: #FDF6E3*/
+  background-color: #72D0EB; /*#E2E9EF;*/ /*yellowish: #FDF6E3*/
   min-height: 180px;
   text-align: center;
 }
@@ -590,12 +637,13 @@ h2.whats-new {
 h2.twitterhdr {
   font-family: "museo-slab", serif;
   font-size: 20px;
-  color: #657B83;
+  color: #fff;
+  /*color: #657B83;*/
   font-weight: normal;
   font-style: italic;
   text-align: center;
   margin-bottom: 10px;
-  background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
+  background: url({{ site.baseurl }}/resources/img/white-line.png) center repeat-x;
 }
 
 h2.twitterhdr > span {
@@ -603,7 +651,7 @@ h2.twitterhdr > span {
   height: 32px;
   display: inline-block;
   line-height: 35px;
-  background-color: #E2E9EF;
+  background-color: #72D0EB;
   padding: 0 10px;
 }
 
@@ -909,7 +957,8 @@ h2.twitterhdr > span {
   display: none;
 /*  border-top: 1px solid rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid #586E75;*/
-  background-color: #002B36;
+  background-color: #002B36;72D0EB
+  /*background-color: #72D0EB;*/
 }
 
 .where-to-learn-more {
@@ -1013,7 +1062,8 @@ h2.twitterhdr > span {
 .news-body > p > a:visited,
 .recent-news-body > p > a:link,
 .recent-news-body > p > a:visited {
-  color: #DC322F;
+  /*color: #DC322F;*/
+  color: #00b0e3;
 }
 
 .news-body > p > a:hover,
@@ -1158,7 +1208,8 @@ h2.twitterhdr > span {
 .recent-news-author-name,
 .recent-news-author > .by {
   display: inline;
-  color: #DC322F;
+  /*color: #DC322F;*/
+  color: #00b0e3;
   font-family: "museo-slab", serif;
 }
 
@@ -1244,7 +1295,8 @@ h2.twitterhdr > span {
   text-align: left;
   min-height: 20px;
   padding: 14px;
-  background-color: rgba(255, 255, 255, 1); /*rgba(253, 246, 227, 1)*/
+  background-color: #F2F5F8;
+  /*background-color: rgba(255, 255, 255, 1); /*rgba(253, 246, 227, 1)*/*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1258,11 +1310,11 @@ h2.twitterhdr > span {
 
 .tweet .text a { color: #DC322F; }
 .tweet .text a:hover { color: #859900; text-decoration: none;}
-.original-tweet { font-family: "museo-slab", serif; font-size: 13px; padding-top: 8px;}
-.original-tweet > a { color: #839496; font-weight: normal; text-decoration: none; }
+.original-tweet { font-family: "museo-slab", serif; font-size: 13px; padding-top: 8px; color: #fff;}
+.original-tweet > a { color: #fff; /*color: #839496;*/ font-weight: normal; text-decoration: none; }
 .original-tweet > a:hover { color: #DC322F; }
 .username { position: relative; top: 10px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
-.username > a { color: #657B83; font-weight: bold; text-decoration: none; }
+.username > a { color: #fff; /*color: #657B83;*/ font-weight: bold; text-decoration: none; }
 .username > a:hover { color: #DC322F; }
 .triangle { position: relative; bottom: 9px; left: 40px; height: 0px; width: 1px; margin-left: auto; margin-right: auto; border-top: 16px solid rgba(0, 30, 30, 0.7); border-left: none; border-right: 16px solid transparent; border-bottom: none; }
 .bottom-anchored { position: absolute; bottom: 0px; }
@@ -1272,8 +1324,11 @@ h2.twitterhdr > span {
 .caret-divider{ position:absolute;top:0;left:28px;width:16px;height:8px}
 .caret-container .caret-divider{top:-10px}
 .caret-divider .caret-outer,.caret-divider .caret-inner{position:absolute;width:0;height:0;vertical-align:text-bottom;border-style:solid}
-.caret-divider .caret-outer{border-top:8px solid rgba(255, 255, 255, 1);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent;top:0;left:0;z-index:10}
+/*.caret-divider .caret-outer{border-top:8px solid rgba(255, 255, 255, 1);border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent;top:0;left:0;z-index:10}*/
+/*.caret-divider .caret-inner{border-top:7px solid rgba(255, 255, 255, 0);border-right:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid transparent;top:0;left:1px;z-index:11}*/
+.caret-divider .caret-outer{border-top:8px solid #F2F5F8;border-right:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid transparent;top:0;left:0;z-index:10}
 .caret-divider .caret-inner{border-top:7px solid rgba(255, 255, 255, 0);border-right:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid transparent;top:0;left:1px;z-index:11}
+
 
 .thumbnail {
   padding: 0;
@@ -1869,4 +1924,8 @@ figcaption {
   border-left-color: #a5a5a5;
   border-right-color: #a5a5a5;
   border-bottom: 0;
+}
+
+.page-container {
+  background-color: #fff;
 }
