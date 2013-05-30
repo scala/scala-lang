@@ -2025,14 +2025,14 @@ figcaption {
   height: 100%;
   float: left;
   display: block;
-  width: 642px;
+  width: 610px;
   background: white;
   padding-top: 24px;
   padding-left: 9999em;
   margin-left: -9999em;
   top: -50px;
   padding-top: 18px;
-  padding-right: 18px;
+  padding-right: 40px;
   line-height: 20px;
   z-index: 100;
   margin-right: 0px;
@@ -2040,9 +2040,14 @@ figcaption {
   padding-bottom: 50px;
   /*padding-bottom:100%;*/
   /*margin-bottom:-100%;*/
-  /*-moz-box-shadow:    2px 2px 0px #50B8E1;
-  -webkit-box-shadow: 2px 2px 0px #50B8E1;
-  box-shadow:         2px 2px 0px #50B8E1;*/
+  -moz-box-shadow:    3px 3px 0px rgba(0, 43, 54, 0.06); /*#50B8E1;*/
+  -webkit-box-shadow: 3px 3px 0px rgba(0, 43, 54, 0.06); /*#50B8E1;*/
+  box-shadow:         3px 3px 0px rgba(0, 43, 54, 0.06); /*#50B8E1;*/
+  line-height: 1.5em;
+}
+
+.main-page-column > p {
+
 }
 
 .sidebar {
@@ -2067,6 +2072,11 @@ figcaption {
   bottom: auto;
   /*padding-bottom:100%;*/
   /*margin-bottom:-100%;*/
+}
+
+.sidebar-inner {
+  width: 320px;
+  padding: 30px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -2100,3 +2110,24 @@ figcaption {
 .lift-footer {
   margin-top: -50px;
 }
+
+#page-title {
+  /*font-weight: 100;*/
+  margin-top: 20px;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  /*color: #2797b7;*/
+  /*color: #50B8E1;*/
+  /*color: rgba(7, 54, 66, 0.3);*/
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 43, 54, 0.15);
+}
+
+div#toc { margin-left: -16px; width: 100%; }
+div#toc ul { list-style: none; margin: 0 0 5px 16px; }
+div#toc ul li { padding-bottom: 8px; line-height: 105%; font-weight: bold; width: 100%; }
+div#toc ul ul { list-style: disc; }
+div#toc ul ul ul { list-style: square; }
+div#toc ul li ul li { padding-bottom: 0px; line-height: 18px; font-weight: normal; }

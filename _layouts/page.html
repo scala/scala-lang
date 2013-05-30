@@ -1,5 +1,6 @@
 ---
 layout: default
+toc: true
 ---
 
 {% include headertop.html %}
@@ -22,7 +23,7 @@ layout: default
 
 <div class="midbluebar">
   <div class="container">
-    <h2>{{ page.title }}</h2>
+    <h2 id="page-title">{{ page.title }}</h2>
   </div>
 </div>
 
@@ -34,7 +35,9 @@ layout: default
             {{ content }}
           </div>
           <div class="sidebar">
-            yay hooray
+            <div class="sidebar-inner">
+              <div id="toc"></div>
+            </div>
           </div>
           <div style="clear:both"></div>
       <!-- </div> -->
