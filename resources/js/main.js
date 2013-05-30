@@ -226,13 +226,11 @@ $(document).ready(function() {
  ******************************/
 
 $(document).ready(function(){
-  var $eventsAndTrainingDiv = $('#eventsAndTraining');
-
   var MAX_EVENTS = 5;
   var MAX_TRAININGS = 5;
 
-  // Stop early if the element does not exist
-  if ($eventsAndTrainingDiv.length == 0)
+  // Stop early if the element does not exist, i.e., we're not on the front page
+  if ($('#eventspane').length == 0)
     return;
 
   function compareFormattedDates(lhs, rhs) {
@@ -296,7 +294,7 @@ $(document).ready(function(){
         '<div class="event-item-wrap">' +
           '<div class="event-item">' +
             '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
-            '<div class="event-logo"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></div>' +
+            '<div class="event-logo"><a href="'+event.url+'"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></a></div>' +
             '<div class="event-float-right">' +
               '<div class="event-location">'+event.location+'</div>' +
               '<div class="event-date">'+
@@ -385,7 +383,7 @@ $(document).ready(function(){
     var content = "";
     for (i = 0; i < allTrainings.length; i++) {
       var training = allTrainings[i];
-      var trainingDate = Date(training.when);
+      var trainingDate = new Date(training.when);
       var month = monthNames[trainingDate.getMonth()];
       var day = trainingDate.getDate();
       var year = trainingDate.getFullYear();
