@@ -282,7 +282,9 @@ $(document).ready(function(){
         var eventEnd = new Date(event.end);
         var endMonth = monthNames[eventEnd.getMonth()];
         var endDay =  eventEnd.getDate();
-        if ((startMonth == endMonth) && (startDay != endDay)) {
+        if ((startMonth == endMonth) && (startDay == endDay)) {
+          var date = startMonth + ' ' + startDay + ' ' + year;
+        } else if (startMonth == endMonth) {
           var date = startMonth + ' ' + startDay + '-' + endDay + ' ' + year;
         } else {
           var date = startMonth + ' ' + startDay + ' - ' + endMonth + ' ' + endDay + ' ' + year;
