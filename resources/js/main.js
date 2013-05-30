@@ -226,13 +226,11 @@ $(document).ready(function() {
  ******************************/
 
 $(document).ready(function(){
-  var $eventsAndTrainingDiv = $('#eventsAndTraining');
-
   var MAX_EVENTS = 5;
   var MAX_TRAININGS = 5;
 
-  // Stop early if the element does not exist
-  if ($eventsAndTrainingDiv.length == 0)
+  // Stop early if the element does not exist, i.e., we're not on the front page
+  if ($('#eventspane').length == 0)
     return;
 
   function compareFormattedDates(lhs, rhs) {
