@@ -368,7 +368,7 @@ $(document).ready(function(){
     var content = "";
     for (i = 0; i < allTrainings.length; i++) {
       var training = allTrainings[i];
-      var trainingDate = Date(training.when);
+      var trainingDate = new Date(training.when);
       var month = monthNames[trainingDate.getMonth()];
       var day = trainingDate.getDate();
       var year = trainingDate.getFullYear();
