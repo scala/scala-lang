@@ -210,7 +210,7 @@ object MakeHallOfFame {
     }
     val postDateStr = "%04d-%02d-01" format (postYear, postMonth)
 
-    val fileName = s"../../get-involved/scala-fame-data/_posts/${postDateStr}-scala-fame-${thisMonthStr}.md"
+    val fileName = s"../../contribute/scala-fame-data/_posts/${postDateStr}-scala-fame-${thisMonthStr}.md"
 
     progress("Writing output to " + fileName)
 

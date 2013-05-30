@@ -17,7 +17,7 @@ everyone make things better?
       <p>Get a peek into the inners of the Scala compiler.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/get-involved/bug-reporting-guide.html">Report an issue</a></h3>
+      <h3><a href="{{ site.baseurl }}/contribute/bug-reporting-guide.html">Report an issue</a></h3>
       <p>File a bug report or a feature request.</p>
     </div>
     <div class="span4 doc-block">
@@ -32,7 +32,7 @@ everyone make things better?
       <p>Write a proposal for extending/improving Scala.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/get-involved/hacker-guide.html">Hacker's guide</a></h3>
+      <h3><a href="{{ site.baseurl }}/contribute/hacker-guide.html">Hacker's guide</a></h3>
       <p>Learn to write good code and improve your chances of contributing to the Scala galaxy.</p>
     </div>
     <div class="span4 doc-block">
@@ -47,11 +47,11 @@ everyone make things better?
       <p>Get serious with some more complex issues.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/get-involved/scala-fame.html">Hall of Fame</a></h3>
+      <h3><a href="{{ site.baseurl }}/contribute/scala-fame.html">Hall of Fame</a></h3>
       <p>Track your rockstar status in the community.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/get-involved/partest-guide.html">Test your contributions</a></h3>
+      <h3><a href="{{ site.baseurl }}/contribute/partest-guide.html">Test your contributions</a></h3>
       <p>Learn how to run the Scala test suite.</p>
     </div>
   </div>
