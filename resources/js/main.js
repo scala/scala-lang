@@ -274,23 +274,23 @@ $(document).ready(function(){
     var content = "";
     for (i = 0; i < allEvents.length && i < MAX_EVENTS; i++) {
       var event = allEvents[i];
+
       var eventStart = new Date(event.start);
       var startMonth = monthNames[eventStart.getMonth()];
-      var startDay = eventStart.getDate();
-      var year = eventStart.getFullYear();
+      var startDay   = eventStart.getDate();
+      var year       = eventStart.getFullYear();
+      var prefix     = startMonth + ' ' + startDay
+      var date       = prefix + ' ' + year;
+
       if (event.end) {
         var eventEnd = new Date(event.end);
         var endMonth = monthNames[eventEnd.getMonth()];
         var endDay =  eventEnd.getDate();
-        if ((startMonth == endMonth) && (startDay == endDay)) {
-          var date = startMonth + ' ' + startDay + ' ' + year;
-        } else if (startMonth == endMonth) {
-          var date = startMonth + ' ' + startDay + '-' + endDay + ' ' + year;
+        if (startMonth == endMonth && startDay != endDay) {
+          date = prefix + '-' + endDay + ' ' + year;
         } else {
-          var date = startMonth + ' ' + startDay + ' - ' + endMonth + ' ' + endDay + ' ' + year;
+          date = prefix + ' - ' + endMonth + ' ' + endDay + ' ' + year;
         }
-      } else {
-        var date = startMonth + ' ' + startDay + ' ' + year;
       }
       var thisContent =
         '<div class="event-item-wrap">' +
