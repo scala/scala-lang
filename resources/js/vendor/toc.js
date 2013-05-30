@@ -19,10 +19,11 @@
  */
 
 (function($) {
-  /*
-   * The TOC plugin dynamically builds a table of contents from the headings in
-   * a document and prepends legal-style section numbers to each of the headings.
-   */
+
+    /*
+     * The TOC plugin dynamically builds a table of contents from the headings in
+     * a document and prepends legal-style section numbers to each of the headings.
+     */
     $.fn.toc = function(options) {
         var opts = $.extend({}, $.fn.toc.defaults, options);
         var toc = this.append('<ul></ul>').children('ul');
@@ -34,7 +35,7 @@
         }
 
         return this.each(function() {
-          $(opts.context + ' :header').not(opts.exclude).each(function() {
+            $(opts.context + ' :header').not(opts.exclude).each(function() {
                 var $this = $(this);
                 for (var i = 6; i >= 1; i--) {
                     if ($this.is('h' + i)) {
@@ -45,6 +46,9 @@
                                 $this.attr('id', generateId($this.text()));
                             }
                             $this.text(addNumeration(headers, 'h' + i, $this.text()));
+                        }
+                        if (opts.autoId && !$this.attr('id')) {
+                            $this.attr('id', generateId($this.text()));
                         }
                         appendToTOC(toc, indexes['h' + i], $this.attr('id'), $this.text());
                     }
@@ -59,28 +63,28 @@
      */
     function checkContainer(header, toc) {
         if (header === 0 && toc.find(':last').length !== 0 && !toc.find(':last').is('ul')) {
-          toc.find('li:last').append('<ul></ul>');
-      }
+            toc.find('li:last').append('<ul></ul>');
+        }
     };
 
     /*
      * Updates headers numeration.
      */
-  function updateNumeration(headers, header) {
-      $.each(headers, function(i, val) {
-          if (i === header)  {
-              ++headers[i];
-          } else if (i > header) {
-              headers[i] = 0;
-          }
-      });
-  };
+    function updateNumeration(headers, header) {
+        $.each(headers, function(i, val) {
+            if (i === header)  {
+                ++headers[i];
+            } else if (i > header) {
+                headers[i] = 0;
+            }
+        });
+    };
 
     /*
      * Generate an anchor id from a string by replacing unwanted characters.
      */
     function generateId(text) {
-        return text.replace(/[ <#\/\\?&]/g, '_');
+        return text.replace(/[ <#\/\\?&.,():;]/g, '_');
     };
 
     /*
@@ -106,7 +110,7 @@
 
         for (var i = 1; i < index; i++) {
             if (parent.find('> li:last > ul').length === 0) {
-                parent.append('<li><ul></ul></li>');
+                parent.append('<li style="list-style: none;"><ul></ul></li>');
             }
             parent = parent.find('> li:last > ul:first');
         }
@@ -121,7 +125,7 @@
     $.fn.toc.defaults = {
         exclude: 'h1, h5, h6',
         context: '',
-        autoId: false,
-        numerate: true
+        autoId: true,
+        numerate: false
     };
 })(jQuery);
