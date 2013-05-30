@@ -277,7 +277,7 @@ $(document).ready(function(){
         '<div class="event-item-wrap">' +
           '<div class="event-item">' +
             '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
-            '<div class="event-logo"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></div>' +
+            '<div class="event-logo"><a href="'+event.url+'"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></a></div>' +
             '<div class="event-float-right">' +
               '<div class="event-location">'+event.location+'</div>' +
               '<div class="event-date">'+
