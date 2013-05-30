@@ -17,6 +17,7 @@ text-rendering: optimizeLegibility;
 }
 
 html, body {
+  height:100%;
   width: 100%;
   overflow-x: hidden;
 }
@@ -46,7 +47,7 @@ body {
 
 .midbluebar {
   width: 100%;
-  height: 60px;
+  height: 110px;
   background-color: #72D0EB;
 }
 
@@ -552,7 +553,7 @@ a.brand {
   font-family: "museo-slab", serif;
   line-height: 1.2em;
   color:#174753;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .year {
@@ -1450,6 +1451,8 @@ h2.twitterhdr > span {
 }*/
 
 .footer {
+  position: relative;
+  z-index: 10;
   background: #002B36;
   /*text-align: center;*/
   color: #fff;
@@ -2001,6 +2004,99 @@ figcaption {
 }
 
 .page-container {
-  background-color: #fff;
-  padding-bottom: 40px;
+  position: relative;
+  background: #F2F5F8;
+  /*background-color: #fff;*/
+  /*padding-bottom: 40px;*/
+}
+
+.clearall {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.main-page-column {
+  position: relative;
+  height: 100%;
+  float: left;
+  display: block;
+  width: 642px;
+  background: white;
+  padding-top: 24px;
+  padding-left: 9999em;
+  margin-left: -9999em;
+  top: -50px;
+  padding-top: 18px;
+  padding-right: 18px;
+  line-height: 20px;
+  z-index: 100;
+  margin-right: 0px;
+  min-height: 540px;
+  padding-bottom: 50px;
+  /*padding-bottom:100%;*/
+  /*margin-bottom:-100%;*/
+  /*-moz-box-shadow:    2px 2px 0px #50B8E1;
+  -webkit-box-shadow: 2px 2px 0px #50B8E1;
+  box-shadow:         2px 2px 0px #50B8E1;*/
+}
+
+.sidebar {
+  width: 300px;
+  min-height: 100%;
+  min-height: 540px;
+  height: 100%;
+  display: inline;
+  float: left;
+  position: relative;
+  margin-left: 0px !important;
+  background: #F2F5F8;
+  /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAA3CAIAAACOzY2FAAAAGXRFW…mG/O7d/K5RCTPmcvsn1JI4jGDLd94St8vl0sjQr/kTYACTBxZhQxdWHAAAAABJRU5ErkJggg==);*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 24px 9999em 72px 20px;
+  padding-bottom: 50px;
+  position: relative;
+  margin-right: -9999em;
+  top: auto;
+  bottom: auto;
+  /*padding-bottom:100%;*/
+  /*margin-bottom:-100%;*/
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .sidebar {
+        margin-left: 0px !important;
+    }
+    html.safari .sidebar,
+    html.chrome25 .sidebar {
+        margin-left: 640px !important;
+    }
+
+    .section .search .sidebar,
+    .section-users .sidebar {
+        margin-left: 0 !important;
+    }
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.lift-footer {
+  margin-top: -50px;
 }
