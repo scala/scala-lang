@@ -402,6 +402,7 @@ a.brand {
 .event-location {
   font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
+  line-height: 0.95em;
   /*color: #839496;*/
   color: rgba(255, 255, 255, 0.65);
   font-weight: 600;
@@ -421,7 +422,7 @@ a.brand {
   position: relative;
   float: left;
   bottom: 0px;
-  margin-right: 8px;
+  margin-right: 4px;
   height: 54px;
 }
 
@@ -601,6 +602,7 @@ a.brand {
 }
 
 .training-location {
+  white-space: nowrap;
   font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
