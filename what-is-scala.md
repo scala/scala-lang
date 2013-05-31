@@ -1,9 +1,8 @@
 ---
 layout: page
 title: What is Scala?
+by: Martin Odersky
 ---
-
-#What is Scala
 
 ## A Scalable language
 

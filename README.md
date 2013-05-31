@@ -74,3 +74,18 @@ There are additional files on the webserver:
     - nightly api builds in `/nightly/docs-xxx/`
     - nightly pdf builds (spec etc) in `/nightly/pdfs`
 
+## Templates
+
+We have the following (general) templates:
+_(Note that this is not an exhaustive list.)_
+
+#### page.html
+
+Example YAML front matter with all possible fields:
+
+    ---
+    layout: page
+    title: I Haz Build: An Autobiography of the Build Kitten
+    by: Scala Jenkins (Build Kitty)
+    ---
+

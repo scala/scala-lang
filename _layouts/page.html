@@ -23,7 +23,7 @@ toc: true
 
 <div class="midbluebar">
   <div class="container">
-    <h2 id="page-title">{{ page.title }}</h2>
+    <h1 id="page-title">{{ page.title }}</h1>
   </div>
 </div>
 
@@ -32,6 +32,9 @@ toc: true
     <!-- <div class="row"> -->
       <!-- <div class="span12"> -->
           <div class="main-page-column">
+            {% if page.by %}
+              <div class="written">Written By: <span class="by">{{ page.by }}</span></div>
+            {% endif %}
             {{ content }}
           </div>
           <div class="sidebar">
