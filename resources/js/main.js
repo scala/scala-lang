@@ -356,34 +356,36 @@ $(document).ready(function(){
   {% endfor%}
   ];
 
-  function keepOnlyOneSession(trainings) {
+  function flattenSessions(trainings) {
     var result = new Array();
-    for (i = 0; i < trainings.length && i < MAX_TRAININGS; i++) {
+    for (i = 0; i < trainings.length; i++) {
       var training = trainings[i];
-      var firstSession = training.sessions[0];
-      result[i] = {
-        title: training.title,
-        description: training.description,
-        url: training.url,
-        where: firstSession.where,
-        when: firstSession.when,
-        trainers: firstSession.trainers,
-        organizer: firstSession.organizer,
-        status: firstSession.status
-      };
+      for (j = 0; j < training.sessions.length; j++) {
+        var session = training.sessions[j];
+        result.push({
+          title: training.title,
+          description: training.description,
+          url: training.url,
+          where: session.where,
+          when: session.when,
+          trainers: session.trainers,
+          organizer: session.organizer,
+          status: session.status
+        });
+      }
     }
     return result;
   }
 
   function doPopulateTrainingsPane(allTrainings0) {
     var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-    var allTrainings = keepOnlyOneSession(allTrainings0);
+    var allTrainings = flattenSessions(allTrainings0);
     allTrainings = allTrainings.filter(function (training) {
       return new Date(training.when) >= new Date();
     });
     allTrainings.sort(compareTrainingsByDate);
     var content = "";
-    for (i = 0; i < allTrainings.length; i++) {
+    for (i = 0; i < allTrainings.length && i < MAX_TRAININGS; i++) {
       var training = allTrainings[i];
       var trainingDate = new Date(training.when);
       var month = monthNames[trainingDate.getMonth()];
