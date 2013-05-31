@@ -2079,6 +2079,7 @@ figcaption {
   font-family: "museo-slab", serif;
   color: #DC322F;
   font-weight: 400;
+  line-height: 1.1em;
 }
 
 .main-page-column > h3 {
@@ -2088,7 +2089,8 @@ figcaption {
   /*color: #073642;*/
   color: #859900;
   text-transform: uppercase;
-  margin-bottom: 0px;
+  /*margin-bottom: 0px;*/
+  line-height: 1.1em;
 }
 
 .main-page-column > h4 {
