@@ -105,5 +105,5 @@ Guardian says](http://www.infoq.com/articles/guardian_scala): *"We've found that
 things faster with less code. It's reinvigorated the team."*
 
 If you haven't yet, try it out! [Here are some resources to get
-started](./learn).
+started](./documentation).
 

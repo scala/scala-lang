@@ -2075,6 +2075,30 @@ figcaption {
 .main-page-column > p + ul,
 .main-page-column > p + ol { margin-top: -24px; }
 
+.main-page-column > h2 {
+  font-family: "museo-slab", serif;
+  color: #DC322F;
+  font-weight: 400;
+}
+
+.main-page-column > h3 {
+  font-family: "museo-slab", serif;
+  /*font-weight: 400;*/
+  font-size: 20px;
+  /*color: #073642;*/
+  color: #859900;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.main-page-column > h4 {
+  font-size: 18px;
+  color: #073642;
+  font-family: 'proxima-nova', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
 .written {
   font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
