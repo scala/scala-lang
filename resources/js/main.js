@@ -289,7 +289,7 @@ $(document).ready(function(){
         if (startMonth == endMonth && startDay != endDay) {
           date = prefix + '-' + endDay + ' ' + year;
         } else if (startMonth == endMonth && startDay == endDay) {
-          date = prefix + year;
+          date = prefix + ' ' + year;
         } else {
           date = prefix + ' - ' + endMonth + ' ' + endDay + ' ' + year;
         }
