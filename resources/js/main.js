@@ -288,6 +288,8 @@ $(document).ready(function(){
         var endDay =  eventEnd.getDate();
         if (startMonth == endMonth && startDay != endDay) {
           date = prefix + '-' + endDay + ' ' + year;
+        } else if (startMonth == endMonth && startDay == endDay) {
+          date = prefix + year;
         } else {
           date = prefix + ' - ' + endMonth + ' ' + endDay + ' ' + year;
         }
