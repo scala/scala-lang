@@ -2157,10 +2157,31 @@ figcaption {
   font-size: 15px;
 }
 
+.main-page-column a:link,
+.main-page-column a:visited {
+  color: #27B3D9;
+  -webkit-transition: color .1s ease-in;
+  -moz-transition: color .1s ease-in;
+  -ms-transition: color .1s ease-in;
+  -o-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+  border-bottom: 2px solid #F2F5F8;
+}
+
+.main-page-column a:hover {
+  color: #DC322F;
+  text-decoration: none;
+  -webkit-transition: color .1s ease-in;
+  -moz-transition: color .1s ease-in;
+  -ms-transition: color .1s ease-in;
+  -o-transition: color .1s ease-in;
+  transition: color .1s ease-in;
+}
+
 code {
   /*background-color: #f6f6f6;*/
   background-color: #F2F5F8;
-  color: #8fa4af;
+  color: #7e9cab;
   display: inline;
   font-size: 0.9em;
   margin: 0 3px 0 3px;

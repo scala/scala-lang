@@ -85,11 +85,8 @@ The documentation below may be a bit outdated, but provides insights into the (h
 the language :
 
  * [Brief Scala Tutorial](http://www.scala-lang.org/docu/files/ScalaTutorial.pdf): a 20 page introduction to scala and some of the basic concepts and a good place to start. You will find more code examples [here](http://www.scala-lang.org/node/219).
-
  * [Scala By Example](http://www.scala-lang.org/docu/files/ScalaByExample.pdf): takes you through the Scala features with many examples. It does assume that you are already familiar with the basic Scala syntax and a basic understanding of functional programming. It is an excellent way to expand your knowledge and skill.
-
  * [Scala Overview](http://www.scala-lang.org/docu/files/ScalaOverview.pdf): this is a paper summarizing the features of the Scala Language in a formal and concise way. An excellent reference for language researchers or advanced programmers.
-
  * [Java to Scala with the Help of Experts](http://www.scala-lang.org/node/960): a collection of some of the almost endless supply of tips available for Java programmers new to Scala. There are also mini-blog series designed to take you through many of the important features of the Scala language in a friendly way.
 
 ## Research
