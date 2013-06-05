@@ -2073,7 +2073,7 @@ figcaption {
 }
 
 .main-page-column > p + ul,
-.main-page-column > p + ol { margin-top: -24px; }
+.main-page-column > p + ol { margin-top: -14px; }
 
 .main-page-column > h2 {
   font-family: "museo-slab", serif;
@@ -2087,6 +2087,7 @@ figcaption {
   font-weight: 400;
   color: #27b3d9;
   line-height: 1.1em;
+  padding-top: 12px;
 }
 
 .main-page-column > h4 {
@@ -2110,7 +2111,8 @@ figcaption {
   margin-bottom: 0px;
 }
 
-.main-page-column > ol {
+.main-page-column > ol,
+.main-page-column > ul {
     counter-reset: li;
     margin-left: 0;
     padding-left: 0;
@@ -2119,11 +2121,12 @@ figcaption {
 }
 
 
-.main-page-column > ol > li {
+.main-page-column > ol > li,
+.main-page-column > ul > li {
     position: relative;
-    margin:0 0 6px 2em;
-    padding:4px 8px;
-    list-style:none;
+    margin: 0 0 6px 2em;
+    padding: 4px 8px;
+    list-style: none;
 }
 
 .main-page-column > ol > li:before {
@@ -2146,6 +2149,26 @@ figcaption {
   font-weight: bold;
   font-family: "Helvetica Neue", Arial, sans-serif;
   text-align: center;
+}
+
+.main-page-column > ul > li {
+  list-style: disc;
+  line-height: 1.3em;
+  font-size: 15px;
+}
+
+code {
+  /*background-color: #f6f6f6;*/
+  background-color: #F2F5F8;
+  color: #8fa4af;
+  display: inline;
+  font-size: 0.9em;
+  margin: 0 3px 0 3px;
+  padding: 0 2px 0 2px;
+  border: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
 
 .written {
