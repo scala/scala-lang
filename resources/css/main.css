@@ -2075,6 +2075,8 @@ figcaption {
 .main-page-column > p + ul,
 .main-page-column > p + ol { margin-top: -14px; }
 
+.main-page-column > ul > li > p { margin-bottom: 0px; }
+
 .main-page-column > h2 {
   font-family: "museo-slab", serif;
   color: #DC322F;
