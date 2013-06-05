@@ -50,6 +50,10 @@ a:hover {
   transition: color .1s ease-in;
 }
 
+.span12 > a > img {
+  border-bottom: none;
+}
+
 .darkstrip {
   width: 100%;
   height: 20px;
@@ -271,6 +275,10 @@ a.brand {
   z-index: 2;
   margin-top: 40px;
   /*width: 200px;*/
+}
+
+.scala-logo > a {
+  border-bottom: none;
 }
 
 .spiral-logo {
@@ -1416,7 +1424,7 @@ h2.twitterhdr > span {
 }
 
 .tweet .text a { color: #DC322F; border: none; }
-.tweet .text a:hover { color: #F2F5F8; text-decoration: none;}
+.tweet .text a:hover { color: #00b0e3; text-decoration: none;}
 .original-tweet { font-family: "museo-slab", serif; font-size: 13px; padding-top: 8px; color: #fff;}
 .original-tweet > a { color: #fff; /*color: #839496;*/ font-weight: normal; text-decoration: none; border: none; }
 .original-tweet > a:hover { color: #DC322F; }
@@ -1513,7 +1521,7 @@ h2.twitterhdr > span {
   list-style: none outside none;
   margin: 0;
   padding: 10px 0 20px 0;
-  width: 235px;
+  width: 188px;
 }
 
 .footer a {
@@ -2079,7 +2087,7 @@ figcaption {
   padding-left: 9999em;
   margin-left: -9999em;
   top: -50px;
-  padding-top: 18px;
+  padding-top: 28px;
   padding-right: 40px;
   line-height: 20px;
   z-index: 100;
@@ -2338,4 +2346,5 @@ div#toc ul li { padding-bottom: 8px; line-height: 105%; font-weight: bold; width
 div#toc ul ul { list-style: disc; }
 div#toc ul ul ul { list-style: square; }
 div#toc ul li ul li { padding-bottom: 0px; line-height: 18px; font-weight: normal; margin-left: 6px; }
+div#toc > ul > li > ul > li:before { content: '\2713'; margin: 0 1em; }
 div#toc ul > li + ul > li { margin-top: 12px; }
