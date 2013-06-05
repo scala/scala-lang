@@ -2084,21 +2084,68 @@ figcaption {
 
 .main-page-column > h3 {
   font-family: "museo-slab", serif;
-  /*font-weight: 400;*/
-  font-size: 20px;
-  /*color: #073642;*/
-  color: #859900;
-  text-transform: uppercase;
-  /*margin-bottom: 0px;*/
+  font-weight: 400;
+  color: #27b3d9;
   line-height: 1.1em;
 }
 
 .main-page-column > h4 {
-  font-size: 18px;
+  font-size: 19px;
   color: #073642;
   font-family: 'proxima-nova', sans-serif;
   text-transform: uppercase;
   margin-bottom: 4px;
+}
+
+.main-page-column > h5 {
+  font-size: 16px;
+  font-family: 'proxima-nova', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.main-page-column > h6 {
+  font-size: 16px;
+  color: #073642;
+  margin-bottom: 0px;
+}
+
+.main-page-column > ol {
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
+    line-height: 1.5em;
+    margin-top: 1em;
+}
+
+
+.main-page-column > ol > li {
+    position: relative;
+    margin:0 0 6px 2em;
+    padding:4px 8px;
+    list-style:none;
+}
+
+.main-page-column > ol > li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: -2px;
+  left: -2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 12px;
+  margin-top: 3px;
+  padding: 4px 4px 4px 4px;
+  color: #fff;
+  background: #859900;
+  border-radius: 60px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
 }
 
 .written {

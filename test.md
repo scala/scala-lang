@@ -18,7 +18,7 @@ I'm a paragraph!! I'm a paragraph!! I'm a paragraph!!
 I'm a paragraph!! I'm a paragraph!! I'm a paragraph!!
 I'm a paragraph!! I'm a paragraph!! I'm a paragraph!!
 
-![kitten](http://placekitten.com/200/300)
+<!-- ![kitten](http://placekitten.com/200/300) -->
 
 ### Test Header 3
 
