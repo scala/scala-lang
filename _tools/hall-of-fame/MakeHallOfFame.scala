@@ -110,6 +110,14 @@ object MakeHallOfFame {
     (cal.get(YEAR), cal.get(MONTH)+1)
   }
 
+  def timestampToDateStr(timestamp: Long): String = {
+    import java.util.Calendar._
+    val date = new java.util.Date(timestamp)
+    val cal = new java.util.GregorianCalendar()
+    cal.setTime(date)
+    "%04d-%02d-%02d" format (cal.get(YEAR), cal.get(MONTH)+1, cal.get(DAY_OF_MONTH))
+  }
+
   def loadSourceDataString(): String = {
     progress("Downloading source data")
     val source = Source.fromURL(new URL(
@@ -140,7 +148,8 @@ object MakeHallOfFame {
 
       for {
         M(week) <- jsonWeeks
-        S(date) = week("w")
+        D(dateTimestamp) = week("w")
+        date = timestampToDateStr(dateTimestamp.toLong * 1000)
         if isWeekOfThisMonth(date)
         I(commits) = week("c")
         I(added) = week("a")
