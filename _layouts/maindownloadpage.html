@@ -12,12 +12,15 @@ To see a detailed list of changes for each version of Scala please refer to the 
 Note that the different major releases of Scala (e.g. Scala 2.9.3 and Scala 2.10.1) are not binary compatible.
 
 <table>
+
+  {% for release in page.other_releases %}
+
   <tr>
-    <td><a href="/download/{{ page.maintenance_version }}.html" class="btn small" style="width: 400px;">Current maintenance release - Scala {{ page.maintenance_version }}</a></td>
+    <td><a href="/download/{{ release[2] }}.html" class="btn small" style="width: 400px;">{{ release[1] }} - Scala {{ release[2] }}</a></td>
   </tr>
-  <tr>
-    <td><a href="/download/{{ page.development_version }}.html" class="btn small" style="width: 400px;">Current development release - Scala {{ page.development_version }}</a></td>
-  </tr>
+
+  {% endfor %}
+
 </table>
 <table><tbody>
   <tr>
