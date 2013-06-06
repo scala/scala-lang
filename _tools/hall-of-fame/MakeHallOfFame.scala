@@ -44,6 +44,7 @@ object MakeHallOfFame {
       "hubertp",
       "lrytz",
       "magarciaEPFL",
+      "namin",
       "odersky",
       "TiarkRompf",
       "VladUreche",
