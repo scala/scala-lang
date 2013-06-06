@@ -5,8 +5,11 @@ Input:
 
 <h2>{{ famedata.title }}</h2>
 
+<div class="container">
+<div class="row">
+
 {% for cat in famedata.fame-categories %}
-<div class="fame-category" id="fame-category-{{ cat.category }}">
+<div class="span4 fame-category" id="fame-category-{{ cat.category }}">
 <h3>{{ cat.category }}</h3>
 
 {% for author in cat.authors limit:10 %}
@@ -27,6 +30,9 @@ Input:
 
 </div>
 {% endfor %}
+
+</div>
+</div>
 
 {% assign titledone = false %}
 {% for cat in famedata.fame-categories %}
