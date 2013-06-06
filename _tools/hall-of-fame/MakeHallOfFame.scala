@@ -180,7 +180,7 @@ object MakeHallOfFame {
       outln("    authors:")
       var rank = 0
       var rankCommits = -1
-      for (author <- authorsByCategory(category)) {
+      for (author <- authorsByCategory.getOrElse(category, Nil)) {
         if (author.commits != rankCommits) {
           rank += 1
           rankCommits = author.commits
