@@ -4,7 +4,105 @@ title: Changelog
 
 ---
 
-<!-- [ [2.9.0](#2.9.0) | [2.8.0](#2.8.0) | [2.7.2](#2.7.2) | [2.7.1](#2.7.1) | [2.7.0](#2.7.0) | [2.6.1](#2.6.1) | [2.6.0](#2.6.0) | [2.5.0](#2.5.0) | [2.4.0](#2.4.0) | [2.3.2](#2.3.2) | [2.3.0](#2.3.0) | [2.1.8](#2.1.8) | [2.1.7](#2.1.7) | [2.1.5](#2.1.5) | [2.0](#2.0) ] -->
+<!-- [ [2.10.0](#2.10.0) | [2.9.0](#2.9.0) | [2.8.0](#2.8.0) | [2.7.2](#2.7.2) | [2.7.1](#2.7.1) | [2.7.0](#2.7.0) | [2.6.1](#2.6.1) | [2.6.0](#2.6.0) | [2.5.0](#2.5.0) | [2.4.0](#2.4.0) | [2.3.2](#2.3.2) | [2.3.0](#2.3.0) | [2.1.8](#2.1.8) | [2.1.7](#2.1.7) | [2.1.5](#2.1.5) | [2.0](#2.0) ] -->
+
+# Changes in Version 2.10.0
+
+The Scala 2.10.0 codebase includes the following new features and changes: 
+
+## Value Classes
+
+A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
+See: http://docs.scala-lang.org/overviews/core/value-classes.html
+
+## Implicit Classes
+
+The `implicit` modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
+See: http://docs.scala-lang.org/sips/pending/implicit-classes.html
+
+## String Interpolation
+
+Example:
+    
+    val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")
+    
+See more: http://docs.scala-lang.org/overviews/core/string-interpolation.html
+
+## Futures and Promises
+
+Asynchronously get some JSON:
+
+    for (req <- WS.url(restApiUrl).get()) yield (req.json \ "users").as[List[User]] (uses play!)
+
+See more: http://docs.scala-lang.org/overviews/core/futures.html
+
+## Dynamic and applyDynamic
+
+`x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
+See: http://docs.scala-lang.org/sips/pending/type-dynamic.html
+
+## Dependent method types
+
+    def identity(x: AnyRef): x.type = x // the return type says we return exactly what we got
+
+## New ByteCode emitter based on ASM
+
+- Can target JDK 1.5, 1.6 and 1.7
+- Emits 1.6 bytecode by default
+- Old 1.5 backend is deprecated
+
+## A new Pattern Matcher
+
+- rewritten from scratch to generate more robust code (no more exponential blow-up!)
+- code generation and analyses are now independent (the latter can be turned off with -Xno-patmat-analysis)
+
+## Scaladoc Improvements
+
+- Implicits (-implicits flag)
+- Diagrams (-diagrams flag, requires graphviz)
+- Groups (-groups)
+
+## Modularized Language features
+
+Get on top of the advanced Scala features used in your codebase by explicitly importing them.
+See: http://docs.scala-lang.org/sips/pending/modularizing-language-features.html
+
+## Parallel Collections are now configurable with custom thread pools
+
+See: http://docs.scala-lang.org/overviews/parallel-collections/overview.html
+
+## Akka Actors now part of the distribution
+
+The original Scala actors are now deprecated.
+See the actors migration project for more information.
+
+## Performance Improvements
+
+- Faster inliner
+- `Range#sum` is now O(1)
+- Update of `ForkJoin` library
+- Fixes in immutable `TreeSet`/`TreeMap`
+- Improvements to `PartialFunction`s
+- Addition of `???` and `NotImplementedError`
+- Addition of `IsTraversableOnce` + `IsTraversableLike` type classes for extension methods
+- Deprecations and cleanup
+- Floating point and octal literal syntax deprecation
+- Removed `scala.dbc`
+- Experimental features
+
+
+The following exciting -- experimental -- features are part of 2.10.0:
+
+### Scala Reflection
+
+See: https://docs.google.com/document/d/1Z1VhhNPplbUpaZPIYdc0_EUv5RiGQ2X4oqp0i-vz1qw/edit#heading=h.pqwdkl
+
+### Macros
+
+See: http://docs.scala-lang.org/overviews/macros/overview.html
+
+The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them! A lot of developers have already come up with very cool applications for them.
+
 
 # Changes in Version 2.9.1 to 2.9.2
 
