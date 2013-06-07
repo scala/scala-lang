@@ -2326,25 +2326,19 @@ code {
   margin-top: -50px;
 }
 
-#page-title {
-  /*font-weight: 100;*/
-  margin-top: 20px;
-  font-family: 'proxima-nova', sans-serif;
-  font-size: 32px;
-  line-height: 20px;
-  color: #fff;
-  /*color: #2797b7;*/
-  /*color: #50B8E1;*/
-  /*color: rgba(7, 54, 66, 0.3);*/
-  text-transform: uppercase;
-  text-shadow: 1px 1px 0px rgba(0, 43, 54, 0.15);
-}
+#page-title {   /*font-weight: 100;*/   margin-top: 20px;   font-family:
+'proxima-nova', sans-serif;   font-size: 32px;   line-height: 20px;   color:
+#fff;   /*color: #2797b7;*/   /*color: #50B8E1;*/   /*color: rgba(7, 54, 66,
+0.3);*/   text-transform: uppercase;   text-shadow: 1px 1px 0px rgba(0, 43,
+54, 0.15); }
 
 div#toc { margin-left: -16px; width: 100%; }
 div#toc ul { list-style: none; margin: 0 0 5px 16px; }
 div#toc ul li { padding-bottom: 8px; line-height: 105%; font-weight: bold; width: 100%; }
+div#toc > ul > li > a:link, div#toc > ul > li > a:visited { color: #073642; }
+
 div#toc ul ul { list-style: disc; }
 div#toc ul ul ul { list-style: square; }
 div#toc ul li ul li { padding-bottom: 0px; line-height: 18px; font-weight: normal; margin-left: 6px; }
-div#toc > ul > li > ul > li:before { content: '\2713'; margin: 0 1em; }
+/*div#toc > ul > li > ul > li:before { content: '\2713'; margin: 0 1em; }*/
 div#toc ul > li + ul > li { margin-top: 12px; }
