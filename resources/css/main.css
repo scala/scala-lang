@@ -2278,6 +2278,7 @@ code {
 .sidebar-inner {
   width: 320px;
   padding: 30px;
+  padding-top: 18px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -2358,8 +2359,8 @@ div#toc ul > li + ul > li { margin-top: 12px; }
 
 .contents {
   font-family: "museo-slab", serif;
-  font-size: 14px;
-  color: #a2bac6;
+  font-size: 17px;
+  color: #9ab0bb;
   font-style: italic;
   margin-left: -6px;
   margin-bottom: 10px;
