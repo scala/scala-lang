@@ -2122,6 +2122,7 @@ figcaption {
   color: #DC322F;
   font-weight: 400;
   line-height: 1.1em;
+  margin-top: 28px;
 }
 
 .main-page-column > h3 {
@@ -2129,7 +2130,7 @@ figcaption {
   font-weight: 400;
   color: #27b3d9;
   line-height: 1.1em;
-  padding-top: 12px;
+  margin-top: 28px;
 }
 
 .main-page-column > h4 {
