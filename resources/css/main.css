@@ -1582,20 +1582,6 @@ h2.twitterhdr > span {
   margin-right: 20px;
 }
 
-.made-with-love {
-  display: block;
-  color: #839496;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-transform: uppercase;
-  margin-top: 10px;
-  font-size: 12px;
-  vertical-align: middle;
-}
-
-pre.prettyprint {
-  overflow: hidden;
-}
-
 /* doc blocks on the learn page */
 
 .doc-block {
@@ -2369,3 +2355,12 @@ div#toc ul ul ul { list-style: square; }
 div#toc ul li ul li { padding-bottom: 0px; line-height: 18px; font-weight: normal; padding-left: 8px; }
 /*div#toc > ul > li > ul > li:before { content: '\2713'; margin: 0 1em; }*/
 div#toc ul > li + ul > li { margin-top: 12px; }
+
+.contents {
+  font-family: "museo-slab", serif;
+  font-size: 14px;
+  color: #a2bac6;
+  font-style: italic;
+  margin-left: -6px;
+  margin-bottom: 10px;
+}

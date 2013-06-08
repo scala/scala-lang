@@ -1,6 +1,6 @@
 
 .prettyprint { background-color: #073642; }
-.prettyprint code { color: #839496; }
+.prettyprint code { color: #839496; white-space: nowrap;  overflow: auto; }
 .prettyprint .pln { color: inherit; }
 .prettyprint .str, .prettyprint .atv { color: #2aa198; }
 .prettyprint .lit { color: #D33682;}
@@ -15,11 +15,9 @@
 .prettyprint .atn { color: inherit; }
 
 pre.prettyprint {
+  overflow-x: scroll;
   padding: 9px;
   border: 1px solid #073642;
-/*  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-  box-shadow: 0 1px 2px rgba(0,0,0,.1);*/
   -webkit-border-radius: 0px 0px 4px 4px;
   -moz-border-radius: 0px 0px 4px 4px;
   border-radius: 0px 0px 4px 4px;
@@ -28,25 +26,4 @@ pre.prettyprint {
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin: 0 0 0 40px; } /* IE indents via margin-left */
-ol.linenums > li { color: rgba(67, 94, 101, 0.6); line-height: 20px; }
-/* Alternate shading for lines */
-li.L1, li.L3, li.L5, li.L7, li.L9 {  }
-
-/*
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #fdf6e3;
-$yellow:    #b58900;
-$orange:    #cb4b16;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
-*/
+ol.linenums > li { color: rgba(67, 94, 101, 0.6); line-height: 20px; width: 100%; s}
