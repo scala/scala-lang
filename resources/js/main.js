@@ -158,29 +158,6 @@ function styleCode() {
   if (a) { prettyPrint() }
 }
 
-
-function moveScroller() {
-  var a = function() {
-    var topOfScroll = $(window).scrollTop();
-    var topOfSidebar = $(".sidebar").offset().top;
-    var sidebarInner = $(".sidebar-inner");
-    var bottomOfSidebarInner = $(".sidebar-inner").offset().top + $(".sidebar-inner").outerHeight();
-    var topOfFooter = $(".footer").offset().top - 10;
-    var footerHeight = $(".footer").outerHeight();
-    if (topOfScroll > topOfSidebar) {
-      if (bottomOfSidebarInner > topOfFooter) {
-        sidebarInner.css({position:"fixed",bottom:footerHeight,top:""});
-      } else {
-        sidebarInner.css({position:"fixed",top:"10px",bottom:""});
-      }
-    } else {
-      sidebarInner.css({position:"relative",top:""});
-    }
-  };
-  $(window).scroll(a);a()
-}
-moveScroller();
-
 /***********************
  * Download page
  **********************/
