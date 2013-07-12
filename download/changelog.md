@@ -6,29 +6,29 @@ title: Changelog
 
 <!-- [ [2.10.0](#2.10.0) | [2.9.0](#2.9.0) | [2.8.0](#2.8.0) | [2.7.2](#2.7.2) | [2.7.1](#2.7.1) | [2.7.0](#2.7.0) | [2.6.1](#2.6.1) | [2.6.0](#2.6.0) | [2.5.0](#2.5.0) | [2.4.0](#2.4.0) | [2.3.2](#2.3.2) | [2.3.0](#2.3.0) | [2.1.8](#2.1.8) | [2.1.7](#2.1.7) | [2.1.5](#2.1.5) | [2.0](#2.0) ] -->
 
-# Changes in Version 2.10.0
+## Changes in Version 2.10.0
 
-The Scala 2.10.0 codebase includes the following new features and changes: 
+The Scala 2.10.0 codebase includes the following new features and changes:
 
-## Value Classes
+### Value Classes
 
 A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
 See: http://docs.scala-lang.org/overviews/core/value-classes.html
 
-## Implicit Classes
+### Implicit Classes
 
 The `implicit` modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
 See: http://docs.scala-lang.org/sips/pending/implicit-classes.html
 
-## String Interpolation
+### String Interpolation
 
 Example:
-    
+
     val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")
-    
+
 See more: http://docs.scala-lang.org/overviews/core/string-interpolation.html
 
-## Futures and Promises
+### Futures and Promises
 
 Asynchronously get some JSON:
 
@@ -36,47 +36,47 @@ Asynchronously get some JSON:
 
 See more: http://docs.scala-lang.org/overviews/core/futures.html
 
-## Dynamic and applyDynamic
+### Dynamic and applyDynamic
 
 `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
 See: http://docs.scala-lang.org/sips/pending/type-dynamic.html
 
-## Dependent method types
+### Dependent method types
 
     def identity(x: AnyRef): x.type = x // the return type says we return exactly what we got
 
-## New ByteCode emitter based on ASM
+### New ByteCode emitter based on ASM
 
 - Can target JDK 1.5, 1.6 and 1.7
 - Emits 1.6 bytecode by default
 - Old 1.5 backend is deprecated
 
-## A new Pattern Matcher
+### A new Pattern Matcher
 
 - rewritten from scratch to generate more robust code (no more exponential blow-up!)
 - code generation and analyses are now independent (the latter can be turned off with -Xno-patmat-analysis)
 
-## Scaladoc Improvements
+### Scaladoc Improvements
 
 - Implicits (-implicits flag)
 - Diagrams (-diagrams flag, requires graphviz)
 - Groups (-groups)
 
-## Modularized Language features
+### Modularized Language features
 
 Get on top of the advanced Scala features used in your codebase by explicitly importing them.
 See: http://docs.scala-lang.org/sips/pending/modularizing-language-features.html
 
-## Parallel Collections are now configurable with custom thread pools
+### Parallel Collections are now configurable with custom thread pools
 
 See: http://docs.scala-lang.org/overviews/parallel-collections/overview.html
 
-## Akka Actors now part of the distribution
+### Akka Actors now part of the distribution
 
 The original Scala actors are now deprecated.
 See the actors migration project for more information.
 
-## Performance Improvements
+### Performance Improvements
 
 - Faster inliner
 - `Range#sum` is now O(1)
@@ -93,26 +93,26 @@ See the actors migration project for more information.
 
 The following exciting -- experimental -- features are part of 2.10.0:
 
-### Scala Reflection
+#### Scala Reflection
 
 See: https://docs.google.com/document/d/1Z1VhhNPplbUpaZPIYdc0_EUv5RiGQ2X4oqp0i-vz1qw/edit#heading=h.pqwdkl
 
-### Macros
+#### Macros
 
 See: http://docs.scala-lang.org/overviews/macros/overview.html
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them! A lot of developers have already come up with very cool applications for them.
 
 
-# Changes in Version 2.9.1 to 2.9.2
+## Changes in Version 2.9.1 to 2.9.2
 
 No language changes were introduced.
 
-# Changes in Version 2.9.0 (12-May-2011) {: #2.9.0 }
+## Changes in Version 2.9.0 (12-May-2011) {: #2.9.0 }
 
 The Scala 2.9.0 codebase includes the following new features and changes:
 
-## Parallel Collections
+### Parallel Collections
 
 Every collection may be converted into a corresponding parallel collection with the new `par` method. Parallel collections utilize multicore processors by implementing bulk operations such as `foreach`, `map`, `filter` etc. in parallel. Parallel collections are located in the package `scala.collection.parallel`.
 
@@ -129,7 +129,7 @@ Currently available parallel collections are:
 
 The method `seq` is used to convert from a parallel collection to a corresponding sequential collection. This method is always efficient (O(1)).
 
-## The App Trait
+### The App Trait
 
 The `App` trait is a safer, more powerful alternative to the previous `Application` trait, which has now been deprecated. The new recommended way to write a top-level application is like this:
 
@@ -139,7 +139,7 @@ The `App` trait is a safer, more powerful alternative to the previous `Applicati
 
 Objects inheriting from the old `Application` trait were almost as convenient to write, but were not thread-safe and were often not optimized by the VM, since the application's body was execited as part of of the object's initialization sequence. Objects inheriting the `App` trait instead make use of Scala 2.9's delayed initialization feature to execute the whole body as part of an inherited `main` method. Another new feature of the `App` scheme is that command line arguments are now accessible via the `args` value (which is inherited from trait `App`)
 
-## The DelayedInit Trait
+### The DelayedInit Trait
 
 The `DelayedInit` trait provides another tool to customize initialization sequences of classes and objects. If a class or object inherits from this trait, all its initialization code is packed in a closure and forwarded as an argument to a method named `delayedInit` which is defined as an abstract method in trait `DelayedInit`.
 
@@ -147,11 +147,11 @@ Implementations of `delayedInit` have thus full freedom when to execute the init
 
 Note that only initialization code contained in classes and objects is passed to `DelayedInit`; initialization code contained in traits is not affected.
 
-## Repl Improvements
+### Repl Improvements
 
 Improvements in jline, the repl input handler. More robust cursor handling, bash-style ctrl-R history search, new commands like `:imports`, `:implicits`, `:keybindings`. On platforms with the necessary runtime support, `:javap` will disassemble any class including repl-defined ones. A long-running repl command can now be interrupted via ctrl-C without terminating the repl session. Improved programmability: the repl classloader exposes repl-defined classes via their given names.
 
-## Scala Runner
+### Scala Runner
 
 Scala code can now be executed in any of the following ways:
 
@@ -161,15 +161,15 @@ Scala code can now be executed in any of the following ways:
 * `scala <sourcefile>` will, if the contents are not a script, find a single main method in a top level object and run that. This allows the same file to be used with scalac and to be run directly.
 * `scala -save <sourcefile>` will create a jar file with the compiled source, which is then reusable and can be run as `scala <jarfile>`
 
-## Java Interop
+### Java Interop
 
 * The `@strictfp` annotation is now supported.
 * Various fixes in `JavaConverters` and `JavaConversions` for smoother interoperation.
 * Primitive types and their boxed versions are now implicitly converted bidirectionally.
 
-## Other features
+### Other features
 
-### Generalized try-catch-finally
+#### Generalized try-catch-finally
 
 <pre><b>try</b> <em>body</em>
 <b>catch</b> <em>handler</em>
@@ -178,122 +178,122 @@ Scala code can now be executed in any of the following ways:
 
 Here, *body* and *cleanup* can be arbitrary expressions, and *handler* can be any expression which evaluates to a valid exception handler (which is: `PartialFunction[Throwable, T]`).
 
-### New packages
+#### New packages
 
 `scala.sys` and `scala.sys.process`, which are imported from `sbt.Process`.
 
-### New methods in collections
+#### New methods in collections
 
 `collectFirst`, `maxBy`, `minBy`, `span`, `inits`, `tails`, `permutations`, `combinations`, `subsets`
 
-### AnyRef specialization
+#### AnyRef specialization
 
 It is now possible to specialize on type parameters for subtypes of `AnyRef` (`class Foo[@specialize(AnyRef) T](arr: Array[T]) { ... })`, which allows for more efficient array indexing and updates.
 
-# Changes in Version 2.8.1
+## Changes in Version 2.8.1
 
 No language changes were introduced.
 
-# Changes in Version 2.8.0 (14-Jul-2010) {: #2.8.0 }
+## Changes in Version 2.8.0 (14-Jul-2010) {: #2.8.0 }
 
 Scala 2.8.0 is a significantly innovative release, which contains a large amount of fixes and introduces many new features:
 
-### Redesigned collection library
+#### Redesigned collection library
 
 The collection library has undergone a complete overhaul for Scala 2.8, offering a more coherent and efficient design, while maintaining virtually complete compatibility with existing sources. Detailed information [here](http://www.scala-lang.org/sid/3).
 
-### New array implementation, manifests for polymorphic arrays
+#### New array implementation, manifests for polymorphic arrays
 
 Handling of arrays has been simplified and optimized in Scala 2.8. The previous compiler magic has been replaced by a more systematic and predictable implementation in terms of implicit conversions. Detailed information [here](http://www.scala-lang.org/sid/7).
 
-### Type specialization
+#### Type specialization
 
 Scala 2.8 adds specialized type parameters, which enable the compiler to generate transparently multiple versions of a given definition, and to use the most specific version whenever the static type information at a call site allows it. Detailed information [here](http://www.scala-lang.org/sid/9).
 
-### Named and default arguments
+#### Named and default arguments
 
 Named arguments improve the readability of method calls with many arguments. Default arguments reduce code duplication, and enable "copy" methods for case classes, useful to generate quickly modified copies of case classes. Detailed information [here](http://www.scala-lang.org/sid/1).
 
-### Package objects
+#### Package objects
 
 Packages can now contain besides classes and objects also methods, fields or type aliases. These are added to a package by declaring a package object. More capabilities might be added to package objects in subsequent releases.
 
-### Beefed up Scala Swing libraries, better documentation
+#### Beefed up Scala Swing libraries, better documentation
 
 Components publish key events, input events can be consumed, refactored window subhierarchy, additional demos, Swing listeners are installed lazily, more complete component caching, minor refactorings, bugfixes, more Scaladocs. Detailed information [here](http://www.scala-lang.org/sid/8).
 
-### Revamped REPL
+#### Revamped REPL
 
 Many bugfixes. Tab-completion for all packages on the classpath, as well as object and instance methods and fields, including type aliases and package objects. Searchable history, integrated shell access, and a power mode which offers direct access to compiler internals.
 
-### Implicits changes
+#### Implicits changes
 
 We have refined the implicit resolution process so that resolution is now able to determine type variables.
 
-### Improved equality
+#### Improved equality
 
 Equality across numeric types is to be consistent across all the primitives types, while also adhering to the equals/hashCode contract. Numeric comparisons will have the same results as they would between Java primitives.
 
-### Packrat parser combinators
+#### Packrat parser combinators
 
 With support for packrat parsing, parser combinators are now able to handle left-recursive grammars and will show improved performance for ambiguous productions.
 
-### Improved XML library
+#### Improved XML library
 
 Many bugfixes.
 
-### Type constructor inference
+#### Type constructor inference
 
 Type inference has been extended to deal with type constructors, so that, in certain cases, you can omit type parameter lists that contain higher-kinded types (aka type constructors, e.g., `List`).
 
-### Improved Annotations
+#### Improved Annotations
 
 Scala 2.8 adds support for nested java annotations. For annotations on fields, it is now possible to specify which synthetic members (getter / setter) will have the annotation. Documentation about Scala annotations can be found [here](http://www.scala-lang.org/sid/5).
 
-### Enhanced actors
+#### Enhanced actors
 
 New Reactors provide more lightweight, purely event-based actors with optional, implicit sender identification. Support for actors with daemon-style semantics was added. Actors can be configured to use the efficient JSR166y fork/join pool, resulting in significant performance improvements on 1.6 JVMs. Schedulers are now pluggable and easier to customize.
 
-### Support for continuations
+#### Support for continuations
 
 Continuations are supported by a compiler plugin, which is now supported as part of the main distribution.
 
-## Internal improvements
+### Internal improvements
 
-### New presentation compiler
+#### New presentation compiler
 
 This new infrastructure, within the Scala compiler, enables IDEs to hook into the compiler to find efficiently information about the structure of the program under editing. This new code offers a better platform for the development of IDE plugins.
 
-### New build manager
+#### New build manager
 
 The new feature used by for example Eclipse to detect intelligently changes in the files and compile only necessary Scala sources, instead of performing clean build on whole projects. This technique enables to significantly reduce the compilation time on bigger projects.
 
-### Speed improvements
+#### Speed improvements
 
 The compiler now runs as optimised code. In addition, a number of improvements and fine-tunings have further improved the compiler speed up to 50%.
 
-## Additional tools
+### Additional tools
 
-### Scaladoc 2
+#### Scaladoc 2
 
 A new look-and-feel, automatic comments expansion and wiki-like syntax, as well as compile-time error checking. Read more about changes on the [Scaladoc 2 mini-site](http://lampsvn.epfl.ch/trac/scala/wiki/Scaladoc/).
 
-### Sbaz 2
+#### Sbaz 2
 
 Sbaz includes many bug fixes and enhancements. It now gives better feedback to the user during lengthy downloads and while diagnosing dependency audits, which in turn have been re-factored and enhanced. Sbaz should work properly on Windows using either cmd or cygwin, and is now capable of reliably updating itself. Support for pack200 has been added, in some cases reducing file sizes up to 70%.
 
-### Scalap
+#### Scalap
 
 A new `scalap`, contributed by the community, is included. The new `scalap` is aware of package objects and can decompile them by using `<package_name>.package`.
 
-### Scala IDE for Eclipse
+#### Scala IDE for Eclipse
 
 The IDE has been extensively reworked with much functionality moved into the Scala compiler where it can be better maintained and reused by non-Eclipse IDEs and other tools. The integration with Eclipse's JDT has been deepened, and much previously Scala-specific behaviour and functionality is now provided directly by the JDT leading to across the board improvements. The Scala IDE for Eclipse is now [hosted at Assembla](http://www.scala-ide.org).
 
 
 
 
-# Changes in 2.7.3 to 2.7.7
+## Changes in 2.7.3 to 2.7.7
 
 No language changes were introduced.
 
@@ -301,21 +301,21 @@ No language changes were introduced.
 
 
 
-# Changes in Version 2.7.2 (10-Nov-2008) {: #2.7.2 }
+## Changes in Version 2.7.2 (10-Nov-2008) {: #2.7.2 }
 
-### Generic Signatures
+#### Generic Signatures
 
 The Scala compiler now generates Java's generic signatures, so that Scala generics are visible to Java.
 
-### Java/Scala Combined Projects
+#### Java/Scala Combined Projects
 
 The compiler can now parse (but not translate) Java source files. This makes it possible to have mixed Java/Scala projects with recursive dependencies between them. In such a project, you can submit first all the Java and Scala sources to the Scala compiler. In a second step, the Java sources are compiled using the Scala generated .class files and the Scala sources are compiled again using the Java generated .class files.
 
-### ScalaSwing
+#### ScalaSwing
 
 Another major addition is the first beta version of the ScalaSwing library, which is now bundled with the distribution.
 
-### Scala Collections
+#### Scala Collections
 
 There are new implementations of collection classes, contributed by David MacIver: `IntMap`, `LongMap`, and `TreeHashMap` (immutable), ArrayStack and `OpenHashMap` (mutable).
 
@@ -323,9 +323,9 @@ There are new implementations of collection classes, contributed by David MacIve
 
 
 
-# Changes in Version 2.7.1 (09-Apr-2008) {: #2.7.1 }
+## Changes in Version 2.7.1 (09-Apr-2008) {: #2.7.1 }
 
-### Change in Scoping Rules for Wildcard Placeholders in Types
+#### Change in Scoping Rules for Wildcard Placeholders in Types
 
 A wildcard in a type now binds to the closest enclosing type application.
 
@@ -339,7 +339,7 @@ In version 2.7.0, the type expanded instead to
 
 The new convention corresponds exactly to the way wildcards in Java are interpreted.
 
-### No Contractiveness Requirement for Implicits
+#### No Contractiveness Requirement for Implicits
 
 The contractiveness requirement for implicit method definitions has been dropped. Instead it is checked for each implicit expansion         individually that the expansion does not result in a cycle or a tree of infinitely growing types.
 
@@ -347,9 +347,9 @@ The contractiveness requirement for implicit method definitions has been dropped
 
 
 
-# Changes in Version 2.7.0 (07-Feb-2008) {: #2.7.0 }
+## Changes in Version 2.7.0 (07-Feb-2008) {: #2.7.0 }
 
-### Java Generics
+#### Java Generics
 
 Scala now supports [Java generic types](http://en.wikipedia.org/wiki/Generics_in_Java) by default:
 
@@ -359,7 +359,7 @@ Scala now supports [Java generic types](http://en.wikipedia.org/wiki/Generics_in
 
 This translation works if `-target:jvm-1.5` is specified, which is the new default. For any other target, Java generics are not         recognized. To ensure upgradability of Scala codebases, extraneous type parameters for Java classes under [scalac](http://www.scala-lang.org/docu/files/tools/scalac.html) `-target:jvm-1.4` are simply ignored. For instance, when compiling with `>-target:jvm-1.4`, a Scala type such as `ArrayList[String]` is simply treated as the unparameterized type `ArrayList`>.
 
-### Case Classes
+#### Case Classes
 
 The Scala compiler generates now for every case class a companion extractor object. For instance, given the case class:
 
@@ -401,7 +401,7 @@ Three restrictions on case classes have been removed:
       }
 
 
-### Removed features
+#### Removed features
 
 The following deprecated features have been removed from the standard Scala library:
 
@@ -417,15 +417,15 @@ The following deprecated features have been removed from the standard Scala libr
 
 
 
-# Changes in Version 2.6.1 (30-Nov-2007) {: #2.6.1 }
+## Changes in Version 2.6.1 (30-Nov-2007) {: #2.6.1 }
 
-### Mutable variables introduced by pattern binding
+#### Mutable variables introduced by pattern binding
 Mutable variables can now be introduced by a pattern matching definition, just like values can. For example:
 
     var (x, y) = if (positive) (1, 2) else (-1, -3)
     var hd :: tl = mylist
 
-### Self-types
+#### Self-types
 
 Self types can now be introduced without defining an alias name for `this`. For example:
 
@@ -438,9 +438,9 @@ Self types can now be introduced without defining an alias name for `this`. For 
 
 
 
-# Changes in Version 2.6 (27-Jul-2007) {: #2.6.0 }
+## Changes in Version 2.6 (27-Jul-2007) {: #2.6.0 }
 
-### Existential types
+#### Existential types
 It is now possible to define existential types using the new keyword `forSome`. An existential type has the form `T forSome {Q}` where `Q` is a  sequence of value and/or type declarations. Given the class definitions
 
     class Ref[T]
@@ -451,7 +451,7 @@ one may for example write the following existential types
     Ref[T] forSome { type T <: java.lang.Number }
     Ref[x.T] forSome { val x: Outer }
 
-### Lazy values
+#### Lazy values
 
 It is now possible to define lazy value declarations using the new modifier `lazy`.
 
@@ -463,7 +463,7 @@ It is now possible to define lazy value declarations using the new modifier `laz
     println("t0 <= t2: " + (t0 <= t2))  //true
     println("t1 <= t2: " + (t1 <= t2))  //false (lazy evaluation of t1)
 
-### Structural types
+#### Structural types
 
 It is now possible to declare structural types using type refinements. For example:
 
@@ -477,7 +477,7 @@ It is now possible to declare structural types using type refinements. For examp
     test(new File("test.txt"))
     test(new java.io.File("test.txt"))
 
-### Deprecated features
+#### Deprecated features
 
 * The old-style syntax of for-comprehensions has been deprecated.
 * The `requires` clause has been deprecated; use `{ self: T =>; ... }` instead.
@@ -487,9 +487,9 @@ It is now possible to declare structural types using type refinements. For examp
 
 
 
-# Changes in Version 2.5 (02-May-2007) {: #2.5.0 }
+## Changes in Version 2.5 (02-May-2007) {: #2.5.0 }
 
-### Type constructor polymorphism
+#### Type constructor polymorphism
 
 Type parameters and abstract type members can now also abstract over type constructors. This allows a more precise `Iterable` interface:
 
@@ -506,7 +506,7 @@ Type parameters and abstract type members can now also abstract over type constr
 
 This definition of `Iterable` makes explicit that mapping a function over a certain structure (e.g., a `List`>) will yield the same structure (containing different elements).
 
-### Early object initialization
+#### Early object initialization
 
 It is now possible to initialize some fields of an object before any parent constructors are called. This is particularly useful for traits, which do not have normal constructor parameters. For example:
 
@@ -522,7 +522,7 @@ It is now possible to initialize some fields of an object before any parent cons
 
 In the code above, the field `name` is initialized before the constructor of `Greeting` is called. Therefore, field `msg` in class `Greeting` is properly initialized to `"How are you, Bob"`.
 
-### `for`-comprehensions, revised
+#### `for`-comprehensions, revised
 
 The syntax of `for`-comprehensions has been changed. For example:
 
@@ -536,7 +536,7 @@ Thus a `for`-comprehension now starts with a (possibly guarded) generator follow
 
 The old syntax is still available but will be deprecated in the future.
 
-### Implicit anonymous functions
+#### Implicit anonymous functions
 
 It is now possible to define anonymous functions using underscores in parameter position. For instance, the expressions in the left         column are each function values which expand to the anonymous functions on their right.
 
@@ -551,7 +551,7 @@ As a special case, a partially unapplied method is now designated `m _` instead 
 
 The new notation will displace the special syntax forms `.m()` for abstracting over method receivers and `&m` for treating an unapplied method as a function value. For the time being, the old syntax forms are still available, but they will be deprecated in the future.
 
-### Pattern matching anonymous functions, refined
+#### Pattern matching anonymous functions, refined
 
 It is now possible to use case clauses to define a function value  directly for functions of arities greater than one. Previously,         only unary functions could be defined that way. For example:
 
@@ -563,13 +563,13 @@ It is now possible to use case clauses to define a function value  directly for 
 
 
 
-# Changes in Version 2.4 (09-Mar-2007) {: #2.4.0 }
+## Changes in Version 2.4 (09-Mar-2007) {: #2.4.0 }
 
-### Object-local private and protected
+#### Object-local private and protected
 
 The `private` and `protected` modifiers now accept a `[this]` qualifier. A definition `M` which is labelled         `private[this]` is private, and in addition can be accessed only from within the current object. That is, the only legal prefixes         for `M` are `this` or `C.this`. Analogously, a definition `M` which is labelled `protected[this]` is protected, and in         addition can be accessed only from within the current object.
 
-### Tuples, revised
+#### Tuples, revised
 
 The syntax for tuples has been changed from `{...}` to `(...)`. For any sequence of types T<sub>1</sub>, ..., T<sub>n</sub>,
 
@@ -579,27 +579,27 @@ Analogously, for any sequence of expressions or patterns x<sub>1</sub>, ..., x<s
 
 `(`x<sub>1</sub>, ..., x<sub>n</sub>`)` is a shorthand for `Tuplen(`x<sub>1</sub>, ..., x<sub>n</sub>`)`.
 
-### Access modifiers for primary constructors
+#### Access modifiers for primary constructors
 
 The primary constructor of a class can now be marked `private` or `protected`. If such an access modifier is given, it comes between the name of the class and its value parameters. For example:
 
     class C[T] private (x: T) { ... }
 
-### Annotations
+#### Annotations
 
 The support for attributes has been extended and its syntax changed. Attributes are now called *annotations*. The syntax has been changed to follow Java's conventions, e.g. `@annotation` instead of `[attribute]`. The old syntax is still available but will be         deprecated in the future.
 
 Annotations are now serialized so that they can be read by compile-time or run-time tools. Class `scala.Annotation` has two         sub-traits which are used to indicate how annotations are retained. Instances of an annotation class inheriting from trait         `scala.ClassfileAnnotation` will be stored in the generated class files. Instances of an annotation class inheriting from trait         `scala.StaticAnnotation` will be visible  to the Scala type-checker in every compilation unit where the annotated symbol is accessed.
 
-### Decidable Subtyping
+#### Decidable Subtyping
 
 The implementation of subtyping has been changed to prevent infinite recursions. Termination of subtyping is now ensured by a new         restriction of class graphs to be finitary.
 
-### Case classes cannot be abstract
+#### Case classes cannot be abstract
 
 It is now explicitly ruled out that case classes can be abstract. The specification was silent on this point before, but did not explain how abstract case classes were treated. The Scala compiler allowed the idiom.
 
-### New syntax for self aliases and self types
+#### New syntax for self aliases and self types
 
 It is now possible to give an explicit alias name and/or type for the self reference `this`. For instance, in
 
@@ -609,7 +609,7 @@ It is now possible to give an explicit alias name and/or type for the self refer
 
 the name `self` is introduced as an alias for `this` within `C` and the self type of `C` is assumed to be `D`. This construct is introduced now in order to replace eventually both the qualified this construct `C.this` and the `requires` clause in Scala.
 
-### Assignment Operators
+#### Assignment Operators
 
 It is now possible to combine operators with assignments. For example:
 
@@ -620,9 +620,9 @@ It is now possible to combine operators with assignments. For example:
 
 
 
-# Changes in Version 2.3.2 (23-Jan-2007) {: #2.3.2 }
+## Changes in Version 2.3.2 (23-Jan-2007) {: #2.3.2 }
 
-### Extractors
+#### Extractors
 
 It is now possible to define patterns independently of case classes, using `unapply` methods in extractor objects. Here is an example:
 
@@ -641,7 +641,7 @@ In the example, `Twice` is an extractor object with two methods:
 
 In the second-to-last line, `Twice`'s `apply` method   is used to construct a number `x`. In the last line, `x` is tested against the pattern `Twice(n)`. This pattern succeeds for even numbers and assigns to the variable `n` one half of the number that was tested. The pattern match makes use of the `unapply` method of object `Twice`. More details on extractors can be found in the paper [Matching Objects with Patterns](http://www.scala-lang.org/docu/files/MatchingObjectsWithPatterns-TR.pdf) by Emir, Odersky and Williams
 
-### Tuples
+#### Tuples
 
 A new lightweight syntax for tuples has been introduced. For any sequence of types `{`T<sub>1</sub> ,.., T<sub>n</sub>`}`,
 
@@ -652,7 +652,7 @@ Analogously, for any sequence of expressions or patterns x<sub>1</sub>,.., x<sub
 `{`x<sub>1</sub> ,.., x<sub>n</sub>`}` is a shorthand for `Tuplen(`x<sub>1</sub> ,.., x<sub>n</sub>`)`.
 
 
-### Infix operators of greater arities
+#### Infix operators of greater arities
 
 It is now possible to use methods which have more than one parameter as infix operators. In this case, all method arguments are written as a normal parameter list in parentheses. Example:
 
@@ -663,7 +663,7 @@ It is now possible to use methods which have more than one parameter as infix op
     c + (1, "abc")
 
 
-### Deprecated attribute
+#### Deprecated attribute
 
 A new standard attribute `deprecated` is available. If a member definition is marked with this attribute, any reference to the     member will cause a "deprecated" warning message to be emitted.
 
@@ -671,9 +671,9 @@ A new standard attribute `deprecated` is available. If a member definition is ma
 
 
 
-# Changes in Version 2.3.0 (23-Nov-2006) {: #2.3.0 }
+## Changes in Version 2.3.0 (23-Nov-2006) {: #2.3.0 }
 
-### Procedures
+#### Procedures
 
 A simplified syntax for functions returning `Unit` has been introduced. Scala now allows the following shorthands:
 
@@ -681,11 +681,11 @@ A simplified syntax for functions returning `Unit` has been introduced. Scala no
 
 `def f(params) { … } ` for `def f(params): Unit = { … }`.
 
-### Type Patterns
+#### Type Patterns
 
 The syntax of types in patterns has been refined. Scala now distinguishes between type variables (starting with a lower case letter) and types as type arguments in patterns. Type variables are bound in the pattern. Other type arguments are, as in previous versions, erased. The Scala compiler will now issue an "`unchecked`" warning at places where type erasure might compromise type-safety.
 
-### Standard Types
+#### Standard Types
 
 The recommended names for the two bottom classes in Scala's type hierarchy have changed as follows:
 
@@ -697,9 +697,9 @@ The old names are still available as type aliases.
 
 
 
-# Changes in Version 2.1.8 (23-Aug-2006) {: #2.1.8 }
+## Changes in Version 2.1.8 (23-Aug-2006) {: #2.1.8 }
 
-### Visibility Qualifier for protected
+#### Visibility Qualifier for protected
 
 Protected members can now have a visibility qualifier, e.g., `protected[<qualifier>]`. In particular, one can now simulate package protected access as in Java writing
 
@@ -707,11 +707,11 @@ Protected members can now have a visibility qualifier, e.g., `protected[<qualifi
 
 where `P` would name the package containing `X`.
 
-### Relaxation of Private Access
+#### Relaxation of Private Access
 
 Private members of a class can now be referenced from the companion module of the class and vice versa.
 
-### Implicit Lookup
+#### Implicit Lookup
 
 The lookup method for implicit definitions has been generalized. When searching for an implicit definition matching a type `T`, now are considered
 
@@ -724,7 +724,7 @@ The lookup method for implicit definitions has been generalized. When searching 
 
 one would now look in the companion modules (aka static parts) of `HashSet`, `List`, `Int`, and `String`. Before, it was just the static part of `HashSet`.
 
-### Tightened Pattern Match
+#### Tightened Pattern Match
 
 A typed pattern match with a singleton type `p.type` now tests whether the selector value is reference-equal to `p`. For example:
 
@@ -742,9 +742,9 @@ This will match the second case and hence will print `"q"`. Before, the singleto
 
 
 
-# Changes in Version 2.1.7 (19-Jul-2006) {: #2.1.7 }
+## Changes in Version 2.1.7 (19-Jul-2006) {: #2.1.7 }
 
-### Multi-Line string literals
+#### Multi-Line string literals
 
 It is now possible to write multi-line string-literals enclosed in triple quotes. Example
 
@@ -757,33 +757,33 @@ No escape substitutions except for unicode escapes are performed in such string 
 
 
 
-# Changes in Version 2.1.5 (24-May-2006) {: #2.1.5 }
+## Changes in Version 2.1.5 (24-May-2006) {: #2.1.5 }
 
-### Class Literals
+#### Class Literals
 
 There is a new syntax for class literals: For any class type `C`, `classOf[C]` designates the run-time representation of         `C`.
 
 
 
-# Changes in Version 2.0 (12-Mar-2006) {: #2.0 }
+## Changes in Version 2.0 (12-Mar-2006) {: #2.0 }
 
 Scala in its second version is different in some details from the first version of the language. There have been several additions and some old idioms are no longer supported. This section summarizes the main changes.
 
-### New Keywords
+#### New Keywords
 
 The following three words are now reserved; they cannot be used as identifiers
 
     implicit     match     requires
 
-### Newlines as Statement Separators
+#### Newlines as Statement Separators
 
 Newlines can now be used as statement separators in place of semicolons
 
-### Syntax Restrictions
+#### Syntax Restrictions
 
 There are some other situations where old constructs no longer work:
 
-#### Pattern matching expressions
+##### Pattern matching expressions
 
 The `match` keyword now appears only as infix operator between a selector expression and a number of cases, as in:
 
@@ -794,7 +794,7 @@ The `match` keyword now appears only as infix operator between a selector expres
 
 Variants such as `expr.match {...}` or just `match {...}` are no longer supported.
 
-#### `with` in `extends` clauses
+##### `with` in `extends` clauses
 
 The idiom
 
@@ -814,7 +814,7 @@ The latter expression is treated as equivalent to
 
 where `S` is the superclass of `M`.
 
-#### Regular Expression Patterns
+##### Regular Expression Patterns
 
 The only form of regular expression pattern that is currently supported is a sequence pattern, which might end in a sequence wildcard `_*`. Example:
 
@@ -822,7 +822,7 @@ The only form of regular expression pattern that is currently supported is a seq
 
 It is at current not clear whether this is a permanent restriction. We are evaluating the possibility of re-introducing full regular expression patterns in Scala.
 
-### Selftype Annotations
+#### Selftype Annotations
 
 The recommended syntax of selftype annotations has changed.
 
@@ -834,7 +834,7 @@ becomes
 
 That is, selftypes are now indicated by the new `requires` keyword. The old syntax is still available but is considered deprecated.
 
-### For-comprehensions
+#### For-comprehensions
 
 For-comprehensions  now admit value and pattern definitions. For example:
 
@@ -847,7 +847,7 @@ For-comprehensions  now admit value and pattern definitions. For example:
 
 Note the definition `val z = x + y` as the third item in the for-comprehension.
 
-### Conversions
+#### Conversions
 
 The rules for implicit conversions of methods to functions have been tightened. Previously, a parameterized method used as a value was always implicitly converted to a function. This could lead to unexpected results when method arguments where forgotten. Consider for instance the statement below:
 
@@ -888,11 +888,11 @@ Scala version 2.0 also relaxes the rules of overriding with respect to empty par
 
 Previously this definition would have been rejected, because the `toString` method as inherited from `java.lang.Object` takes an empty parameter list.
 
-### Class Parameters
+#### Class Parameters
 
 A class parameter may now be prefixed by `val` or `var`.
 
-### Private Qualifiers
+#### Private Qualifiers
 
 Previously, Scala had three levels of visibility: *private*, *protected* and *public*. There was no way to restrict accesses to members of the current package, as in Java. Scala 2 now defines access qualifiers that let one express this level of visibility, among others. In the definition
 
@@ -900,7 +900,7 @@ Previously, Scala had three levels of visibility: *private*, *protected* and *pu
 
 access to `f` is restricted to all code within the class or package `C` (which must contain the definition of `f`)
 
-### Changes in the Mixin Model
+#### Changes in the Mixin Model
 
 The model which details mixin composition of classes has changed significantly. The main differences are:
 
@@ -910,10 +910,10 @@ The model which details mixin composition of classes has changed significantly. 
 
 The new mixin model is explained in more detail in the [Scala Language Specification](/?q=node/35).
 
-### Implicit Parameters
+#### Implicit Parameters
 
 Views in Scala 1.0 have been replaced by the more general concept of implicit parameters
 
-### Flexible Typing of Pattern Matching
+#### Flexible Typing of Pattern Matching
 
 The new version of Scala implements more flexible typing rules when it comes to pattern matching over heterogeneous class hierarchies. A *heterogeneous class hierarchy* is  one where subclasses inherit a common superclass with different         parameter types. With the new rules in Scala version 2.0 one can perform pattern matches over such hierarchies with more precise         typings that keep track of the information gained by comparing the types of a selector and a matching pattern. This gives Scala capabilities analogous to guarded algebraic data types.
