@@ -4,8 +4,6 @@ title: License
 toc: false
 ---
 
-# Scala License
-
 Copyright (c) 2002-<span class="current-year"></span> EPFL, Lausanne, unless otherwise specified.
 All rights reserved.
 
