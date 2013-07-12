@@ -3,8 +3,6 @@ layout: page-full-width
 title: Learn
 ---
 
-# Learning Scala
-
 <div class="container">
   <div class="row">
     <div class="span4 doc-block">
@@ -46,7 +44,7 @@ title: Learn
       <p>Learn how to code elegantly.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/documentation/getting_started.html">Common Scala Questions</a></h3>
+      <h3><a href="http://docs.scala-lang.org/tutorials/">Common Scala Questions</a></h3>
       <p>Dispel your doubts about common Scala features.</p>
     </div>
   </div>
@@ -67,7 +65,7 @@ There are a few interactive resources for trying out Scala, to get a look and fe
  * [Functional Programming in Scala](https://www.coursera.org/course/progfun): this is a course about functional
  programming given by Martin Odersky himself in autumn 2012. You can access the course material and exercises by
  signing up for the course. (The course will be given again soon..)
- * [Try Simply Scala](http://www.simplyscala.com/): [Simply Scala](http://www.simplyscala.com/) is a web site where you can interactively try Scala. There you will find a tutorial that gives a rapid overview of the basic language features, the syntax, examples you can run and the ability to try your own code with an interactive interpreter.
+ * [Try Scala In Your Browser!](http://www.simplyscala.com/): [Simply Scala](http://www.simplyscala.com/) is a web site where you can interactively run the Scala interpreter in your browser! There you will find a tutorial that gives a rapid overview of the basic language features, the syntax, examples you can run and the ability to try your own code with an interactive interpreter.
 
 ## Books
 
@@ -89,9 +87,9 @@ the language :
  * [Scala Overview](http://www.scala-lang.org/docu/files/ScalaOverview.pdf): this is a paper summarizing the features of the Scala Language in a formal and concise way. An excellent reference for language researchers or advanced programmers.
  * [Java to Scala with the Help of Experts](http://www.scala-lang.org/node/960): a collection of some of the almost endless supply of tips available for Java programmers new to Scala. There are also mini-blog series designed to take you through many of the important features of the Scala language in a friendly way.
 
-## Research
+<!-- ## Research
 
 Scala is also a very useful language to do research on/in. You can find Scala-related publications at the
 [LAMP research page](http://lamp.epfl.ch/publications). Other Scala-related research material can be found on the
 [Scala Days](http://days2012.scala-lang.org/) website and the [Scala2013](http://lampwww.epfl.ch/~hmiller/scala2013/) workshop website. For an in-depth view of the technical details of the language, you may also find of interest the [Scala Language Specification]({{ site.baseurl }}/files/archive/nightly/pdfs/ScalaReference.pdf).
-
+ -->
