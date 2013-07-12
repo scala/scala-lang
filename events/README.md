@@ -47,7 +47,7 @@ It's easiest to just include actual image files for your logo in your pull reque
 1. a "normal" logo, 40 x 40 pixels. Named, for example, like so: `my-conference.png` (pngs and jpgs are OK to upload)
 2. a "retina" logo, 80 x 80 pixels, **the same as the "normal" logo, just 2x larger**. Named, for example, like so: `my-conference@2x.png`. (Note that it must be identically named to the "normal" logo, but with `@2x` in addition.)
 
-Including a relative path to an image look like this:
+Including a relative path to a logo looks like this:
 
     ---
     isevent: true
