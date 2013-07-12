@@ -1,8 +1,8 @@
 ---
 layout: page
 title: License
+toc: false
 ---
-
 
 # Scala License
 
