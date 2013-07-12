@@ -28,7 +28,7 @@ link-out: http://thestrangeloop.com/
 And a small description of each field, in case it is not already obvious:
 
 *   `title`: short title of the event
-*   `logo`: URL of the logo of the event. It should be a square image.
+*   `logo`: URL of the logo of the event. It should be a square image [which follows the below rules](#logo-images).
 *   `location`: obvious
 *   `description`: a longer description of the event. It does not appear on the
     front page per se, but could be useful some day
@@ -39,3 +39,10 @@ And a small description of each field, in case it is not already obvious:
 The ending date is optional, and defaults to the starting date.
 
 When you are done, send us a pull request!
+
+### Logo Images
+
+It's easiest to just include actual image files for your logo in your pull request. To do this, you must upload two images:
+
+1. a "normal" logo, 40 x 40 pixels. Named, for example, like so: `my-conference.png` (pngs and jpgs are OK to upload)
+2. a "retina" logo, 80 x 80 pixels, **the same as the "normal" logo, just 2x larger**. Named, for example, like so: `my-conference@2x.png`. (Note that it must be identically named to the "normal" logo, but with `@2x` in addition.)
