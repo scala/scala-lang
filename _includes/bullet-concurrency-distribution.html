@@ -13,7 +13,7 @@ println("Meanwhile, the main thread goes on!")</code></pre>
 <p>
 In this example, the <code>future{}</code> construct evaluates its argument asynchronously, and returns
 a handle to the asynchronous result as a <code>Future[Int]</code>.
-For comprehensions can be used to register new callbacks (to post new things to do) when the future is
+For-comprehensions can be used to register new callbacks (to post new things to do) when the future is
 completed, i.e., when the computation is finished.
 And since all this is executed asynchronously, without blocking, the main
 program thread can continue doing other work in the meantime.
