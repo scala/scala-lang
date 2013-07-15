@@ -72,6 +72,8 @@
       $(document).ready(function(){
         $('#toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
         function moveScroller() {
+          if ($(".sidebar").length == 0)
+            return;
           var a = function() {
             var topOfScroll = $(window).scrollTop();
             var topOfSidebar = $(".sidebar").offset().top;
