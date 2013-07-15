@@ -3,7 +3,7 @@ Borrowed from
 http://gleichmann.wordpress.com/2009/10/21/scala-in-practice-composing-traits-lego-style/
 {% endcomment %}
 
-<figure class="code">
+<figure class="code traits" style="width: 450px;">
   <figcaption>Traits</figcaption>
   <pre><code>abstract class Spacecraft {
   def engage(): Unit
@@ -30,10 +30,12 @@ class StarCruiser extends Spacecraft
 }</code></pre>
 </figure>
 
-<div class="snippet-explanation"><p>
-Multiple traits can be mixed in a class to combine their interface and their
-behavior.
-Here, a StarCruiser is a Spacecraft with a CommandoBridge that knows how to
-engage the ship (provided a means to speed up) and a PulseEngine that
+<div class="snippet-explanation">
+  <h3>Flexibly Combine Interface & Behavior</h3>
+  <p>
+In Scala, <i>multiple traits</i> can be mixed into a class to combine their interface and their
+behavior.</p>
+<p>Here, a <code>StarCruiser</code> is a <code>Spacecraft</code> with a <code>CommandoBridge</code> that knows how to
+engage the ship (provided a means to speed up) and a <code>PulseEngine</code> that
 specifies how to speed up.
 </p></div>

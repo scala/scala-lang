@@ -2268,3 +2268,38 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   margin-left: -6px;
   margin-bottom: 10px;
 }
+
+.traits {
+  float: left;
+}
+
+.snippet-explanation {
+  position: relative;
+  float: left;
+  width: 420px;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 1.3em;
+}
+
+.snippet-explanation > h3 {
+  font-family: "museo-slab", serif;
+  font-weight: normal;
+  /*margin: 0 15px 15px;*/
+  /*font-size: 13pt;*/
+  /*line-height: 17pt;*/
+  color: #fff;
+}
+
+.snippet-explanation > p {
+  margin-bottom: 18px;
+}
+
+.snippet-explanation > p > code {
+  background: rgba(88, 110, 117, 0.2);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: solid 1px rgba(88, 110, 117, 0.2);
+  color: rgba(38, 139, 210, 0.8);
+}
