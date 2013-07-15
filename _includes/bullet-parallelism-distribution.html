@@ -1,14 +1,18 @@
 <figure class="code">
   <figcaption>Parallelism</figcaption>
-  <pre><code>// Compute the greatest common divisor of `a` and `b`.
-def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
-
-// Use parallel collections to compute and count relative primes in parallel.
-val nums = 1 to 10000
-val relPrimesPerNum = for (i <- nums.par) yield {
-  (1 to i) count { j => gcd(i, j) == 1 }
-}
-val relPrimesTotal = relPrimesPerNum.sum
-
-println(relPrimesTotal)</code></pre>
+  <pre><code>val x = future(someExpensiveComputation())
+val y = future(someOtherExpensiveComputation())
+val z = for (a <- x; b <- y) yield a*b
+for (c <- z)
+  println("Result: " + c)
+println("Meanwhile, the main thread goes on!")</code></pre>
 </figure>
+
+<div class="snippet-explanation"><p>
+The `future()` constructs evaluates its argument asynchronously, and returns
+a handle to the asynchronous result as a `Future[Int]`.
+For comprehensions can be used to post new things to do when the future is
+completed, i.e., when the computation is finished.
+And since all this is executed asynchronously, without blocking, the main
+thread can continue its job in the meantime.
+</p></div>
