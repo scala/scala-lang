@@ -1,17 +1,39 @@
+{% comment %}
+Borrowed from
+http://gleichmann.wordpress.com/2009/10/21/scala-in-practice-composing-traits-lego-style/
+{% endcomment %}
+
 <figure class="code">
   <figcaption>Traits</figcaption>
-  <pre><code>// A trait for printing an object to standard out.
-trait StdoutPrinter {
-  def print = println(this.toString)
+  <pre><code>abstract class Spacecraft {
+  def engage(): Unit
 }
-
-// A common pattern:
-// Define a class with a primary constructor and assign its arguments to public members.
-case class Person(val name: String, val age: Int) {
-  override def toString = name + " is " + age + " years old"
+trait CommandoBridge extends Spacecraft {
+  def engage(): Unit = {
+    for (_ <- 1 to 3)
+      speedUp()
+  }
+  def speedUp(): Unit
 }
-
-val p = new Person("John Doe", 34) with StdoutPrinter
-p.print</code></pre>
+trait PulseEngine extends Spacecraft {
+  val maxPulse: Int
+  var currentPulse: Int = 0
+  def speedUp(): Unit = {
+    if (currentPulse < maxPulse)
+      currentPulse += 1
+  }
+}
+class StarCruiser extends Spacecraft
+                     with CommandoBridge
+                     with PulseEngine {
+  val maxPulse = 200
+}</code></pre>
 </figure>
 
+<div class="snippet-explanation"><p>
+Multiple traits can be mixed in a class to combine their interface and their
+behavior.
+Here, a StarCruiser is a Spacecraft with a CommandoBridge that knows how to
+engage the ship (provided a means to speed up) and a PulseEngine that
+specifies how to speed up.
+</p></div>
