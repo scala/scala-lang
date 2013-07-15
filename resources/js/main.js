@@ -455,6 +455,10 @@ $(document).ready(function(){
       .replace(/'/g, "&#039;");
   }
 
+  function truncateWords(text, words) {
+    return text.split(" ").splice(0, words).join(" ");
+  }
+
   function doPopulateTicketsPane(data) {
     var pageCount = Math.ceil(data.total / data.maxResults);
     var currentPage = Math.floor(data.startAt / data.maxResults) + 1;
@@ -532,7 +536,7 @@ $(document).ready(function(){
           '<div class="tickets-components">'+fields.components.map(function (component) {
             return '<a href="https://issues.scala-lang.org/browse/SI/component/'+component.id+'">'+escapeHTML(component.name)+'</a>';
           }).join(', ')+'</div>'+
-          '<div class="tickets-description">'+escapeHTML(fields.description)+'</div>'+
+          '<div class="tickets-description">'+truncateWords(escapeHTML(fields.description), 50)+'</div>'+
           // '<div class="tickets-data"><pre>'+JSON.stringify(issue, undefined, 2)+'</pre></div>' +
         '</div>';
 
