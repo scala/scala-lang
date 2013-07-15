@@ -88,7 +88,7 @@ $(document).ready(function(){
 
   $("#java-interop").click(expandSnippetAction("#hidden-java-interop", row1));
   $("#type-inference").click(expandSnippetAction("#hidden-type-inference", row1));
-  $("#parallelism-distribution").click(expandSnippetAction("#hidden-parallelism-distribution", row1));
+  $("#concurrency-distribution").click(expandSnippetAction("#hidden-concurrency-distribution", row1));
 
   $("#traits").click(expandSnippetAction("#hidden-traits", row2));
   $("#pattern-matching").click(expandSnippetAction("#hidden-pattern-matching", row2));
@@ -114,7 +114,7 @@ $(document).ready(function(){
 
   $("#java-interop").hover(arrowMouseover("#hidden-java-interop", row1), arrowMouseout);
   $("#type-inference").hover(arrowMouseover("#hidden-type-inference", row1), arrowMouseout);
-  $("#parallelism-distribution").hover(arrowMouseover("#hidden-parallelism-distribution", row1), arrowMouseout);
+  $("#concurrency-distribution").hover(arrowMouseover("#hidden-concurrency-distribution", row1), arrowMouseout);
 
   $("#traits").hover(arrowMouseover("#hidden-traits", row2), arrowMouseout);
   $("#pattern-matching").hover(arrowMouseover("#hidden-pattern-matching", row2), arrowMouseout);

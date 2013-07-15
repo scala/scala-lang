@@ -812,7 +812,7 @@ h2.twitterhdr > span {
 
 #hidden-java-interop,
 #hidden-type-inference,
-#hidden-parallelism-distribution,
+#hidden-concurrency-distribution,
 #hidden-traits,
 #hidden-pattern-matching,
 #hidden-higher-order-functions {
@@ -941,7 +941,7 @@ h2.twitterhdr > span {
 
 #java-interop:hover,
 #type-inference:hover,
-#parallelism-distribution:hover,
+#concurrency-distribution:hover,
 #traits:hover,
 #pattern-matching:hover,
 #higher-order-functions:hover {
@@ -2269,7 +2269,7 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   margin-bottom: 10px;
 }
 
-.traits {
+.traits, .concurrency {
   float: left;
 }
 
