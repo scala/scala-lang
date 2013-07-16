@@ -393,7 +393,7 @@ $(document).ready(function(){
       var day = trainingDate.getDate();
       var year = trainingDate.getFullYear();
       var thisContent =
-        '<div class="training-item-wrap">' +
+        '<div class="training-item-wrap" onclick="window.location=\''+training.url+'\'">' +
           '<div class="training-item">' +
             '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
             '<div class="training-date">' +
