@@ -1,3 +1,10 @@
+http://www.scala-lang.org/node/273 -> what-is-scala.html
+http://www.scala-lang.org/node/1305 -> documentation/
+http://www.scala-lang.org/node/1707 -> community/
+http://www.scala-lang.org/node/199 -> community/
+http://www.scala-lang.org/downloads -> download/
+http://www.scala-lang.org/node/43 -> download/changelog.html
+http://www.scala-lang.org/archive -> news/
 http://www.scala-lang.org/2.10.2 -> news/2013/06/06/release-notes-v2.10.2.html
 http://www.scala-lang.org/2.10.2-RC2 -> news/2013/05/31/release-notes-v2.10.2-RC2.html
 http://www.scala-lang.org/2.11.0-M3 ->news/2013/05/29/release-notes-v2.11.0-M3.html
