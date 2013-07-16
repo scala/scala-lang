@@ -65,7 +65,7 @@
     <!-- Bootstrap JS -->
     <script src="{{ site.baseurl }}/resources/js/vendor/bootstrap.min.js" type="text/javascript" ></script>
 
-    {% if page.toc %}
+    {% unless page.layout == 'page' %}
     <!-- table of contents JS -->
     <script src="{{ site.baseurl }}/resources/js/vendor/toc.js" type="text/javascript" ></script>
     <script type="text/javascript">
@@ -96,7 +96,7 @@
         moveScroller();
       })
     </script>
-    {% endif %}
+    {% endunless %}
 
     <!-- Custom javascript -->
     <script src="{{ site.baseurl }}/resources/js/main.js" type="text/javascript"></script>

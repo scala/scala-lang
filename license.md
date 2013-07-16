@@ -1,7 +1,6 @@
 ---
-layout: page
-title: License
-toc: false
+layout: page-no-toc
+title: Scala License
 ---
 
 Copyright (c) 2002-<span class="current-year"></span> EPFL, Lausanne, unless otherwise specified.
