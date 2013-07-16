@@ -294,7 +294,7 @@ $(document).ready(function(){
         }
       }
       var thisContent =
-        '<div class="event-item-wrap">' +
+        '<div class="event-item-wrap" onclick="window.location=\''+event.url+'\'">' +
           '<div class="event-item">' +
             '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
             '<div class="event-logo"><a href="'+event.url+'"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></a></div>' +
