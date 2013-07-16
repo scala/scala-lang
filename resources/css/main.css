@@ -409,12 +409,6 @@ a.brand {
   border: none;
 }
 
-.event-title a:hover {
-  /*color: #DC322F;*/
-  color: #72D0EB;
-  text-decoration: none;
-}
-
 .event-float-right {
   overflow: hidden;
   position: relative;
@@ -524,13 +518,13 @@ a.brand {
   padding: 10px;
   position: relative;
   float: left;
-  background: rgba(255, 255, 255, 0.15);
+  /*background: rgba(255, 255, 255, 0.15);*/
   /*background: rgba(23, 71, 83, 0.1);*/
   min-height: 90px;
   margin-right: 8px;
   width: 160px;
   text-align: left;
-  -moz-border-radius-bottomleft: 5px;
+/*  -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
   -o-border-bottom-left-radius: 5px;
   -ms-border-bottom-left-radius: 5px;
@@ -542,9 +536,22 @@ a.brand {
   -ms-border-bottom-right-radius: 5px;
   -khtml-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  /*border-top: solid 3px #174753;*/
-  border-top: solid 3px #fff;
+  border-top: solid 3px #fff;*/
 }
+
+.training-item-wrap:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  -ms-transition: background .3s ease-in-out;
+  -o-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+}
+
 .training-item {
   position: absolute;
   bottom: 0px;
@@ -622,11 +629,6 @@ a.brand {
 .training-title a:visited {
   color: #174753;
   border: none;
-}
-
-.training-title a:hover {
-  color: #DC322F;
-  text-decoration: none;
 }
 
 .training-float-right {
@@ -885,17 +887,12 @@ h2.twitterhdr > span {
   background: rgba(41, 75, 83, 0.5);
 }
 
-/*.bullet-point > h3.highlighted {
-  color: #859900;
-}*/
-
 .bullet-point > h2 {
   font-family: "museo-slab", serif;
   font-size: 20px;
   color: #839496;
   font-weight: normal;
   font-style: italic;
-  /*text-transform: uppercase;*/
   margin-bottom: 0px;
   background: url({{ site.baseurl }}/resources/img/gray-line.png) center repeat-x;
 }
