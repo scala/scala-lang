@@ -137,7 +137,40 @@ $(document).ready(function(){
 
   // tweets
   $(function(){
-    $("#tweets").liveTwitter('scala_lang');
+    $("#tweets").tweetMachine('', {
+      backendScript: 'http://35541hpv124015.ikoula.com/~sjrd/temp/jquery-tweetMachine/ajax/getFromTwitter.php?callback=?',
+      endpoint: 'statuses/user_timeline',
+      user_name: 'scala_lang',
+      include_retweets: true,
+      exclude_replies: false,
+      limit: 5,
+      autoRefresh: false,
+      tweetFormat: '\
+        <div class="tweet-container">\
+          <div class="tweet">\
+            <p class="text content"></p>\
+          </div>\
+          <div class="caret-container">\
+            <div class="caret-divider">\
+              <div class="caret-outer"></div>\
+              <div class="caret-inner"></div>\
+            </div>\
+          </div>\
+          <div class="raw bootom-anchored">\
+            <div class="span1">\
+              <div class="thumbnail">\
+                <img class="avatar" width="70" height="70" src="" />\
+              </div>\
+            </div>\
+            <div class="span2 lh1em">\
+              <span class="tweet-username">\
+                <a href="" class="username" rel="external"></a>\
+              </span>\
+            </div>\
+          </div>\
+        </div>\
+      '
+    });
   });
 
 });

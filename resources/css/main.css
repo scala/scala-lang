@@ -1340,9 +1340,9 @@ h2.twitterhdr > span {
 .original-tweet { font-family: "museo-slab", serif; font-size: 13px; padding-top: 8px; color: #fff;}
 .original-tweet > a { color: #fff; /*color: #839496;*/ font-weight: normal; text-decoration: none; border: none; }
 .original-tweet > a:hover { color: #DC322F; }
-.username { position: relative; top: 10px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
-.username > a { color: #fff; /*color: #657B83;*/ font-weight: bold; text-decoration: none; border: none; }
-.username > a:hover { color: #DC322F; border: none; }
+.tweet-username { position: relative; top: 10px; left: -10px; color: #839496; white-space: nowrap; line-height: 1em;}
+.tweet-username > a { color: #fff; /*color: #657B83;*/ font-weight: bold; text-decoration: none; border: none; }
+.tweet-username > a:hover { color: #DC322F; border: none; }
 .triangle { position: relative; bottom: 9px; left: 40px; height: 0px; width: 1px; margin-left: auto; margin-right: auto; border-top: 16px solid rgba(0, 30, 30, 0.7); border-left: none; border-right: 16px solid transparent; border-bottom: none; }
 .bottom-anchored { position: absolute; bottom: 0px; }
 .lh1em { line-height: 1em; }
