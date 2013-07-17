@@ -258,13 +258,6 @@ $(document).ready(function() {
  ******************************/
 
 $(document).ready(function(){
-  var MAX_EVENTS = 5;
-  var MAX_TRAININGS = 5;
-
-  // Stop early if the element does not exist, i.e., we're not on the front page
-  if ($('#eventspane').length == 0)
-    return;
-
   function compareFormattedDates(lhs, rhs) {
     var lhsDate = new Date(lhs);
     var rhsDate = new Date(rhs);
@@ -277,6 +270,17 @@ $(document).ready(function(){
   }
 
   // EVENTS
+
+  (function() {
+
+  // Stop early if the element does not exist, i.e., we're not on the front page
+  if ($('#eventspane').length == 0)
+    return;
+  var isFrontPage = $('.events').length != 0;
+  var additionalClass =
+    isFrontPage ? 'event-item-front-page' : 'event-item-event-page';
+
+  var MAX_EVENTS = isFrontPage ? 5 : 15;
 
   function compareEventsByDate(lhs, rhs) {
     return compareFormattedDates(lhs.start, rhs.start);
@@ -327,7 +331,7 @@ $(document).ready(function(){
         }
       }
       var thisContent =
-        '<div class="event-item-wrap" onclick="window.location=\''+event.url+'\'">' +
+        '<div class="event-item-wrap '+additionalClass+'" onclick="window.location=\''+event.url+'\'">' +
           '<div class="event-item">' +
             '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
             '<div class="event-logo"><a href="'+event.url+'"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></a></div>' +
@@ -363,7 +367,21 @@ $(document).ready(function(){
     error: onEventsAjaxError
   });
 
+  })();
+
   // TRAININGS
+
+  (function() {
+
+  // Stop early if the element does not exist, i.e.,
+  // we're not on the front page nor on the Trainings page
+  if ($('#trainingspane').length == 0)
+    return;
+  var isFrontPage = $('.training').length != 0;
+  var additionalClass =
+    isFrontPage ? 'training-item-front-page' : 'traning-item-training-page';
+
+  var MAX_TRAININGS = isFrontPage ? 5 : 15;
 
   function compareTrainingsByDate(lhs, rhs) {
     return compareFormattedDates(lhs.when, rhs.when);
@@ -426,7 +444,7 @@ $(document).ready(function(){
       var day = trainingDate.getDate();
       var year = trainingDate.getFullYear();
       var thisContent =
-        '<div class="training-item-wrap" onclick="window.location=\''+training.url+'\'">' +
+        '<div class="training-item-wrap '+additionalClass+'" onclick="window.location=\''+training.url+'\'">' +
           '<div class="training-item">' +
             '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
             '<div class="training-date">' +
@@ -463,6 +481,8 @@ $(document).ready(function(){
     success: onTrainingsAjaxSuccess,
     error: onTrainingsAjaxError
   });
+
+  })();
 
 });
 
