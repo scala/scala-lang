@@ -1,5 +1,4 @@
 ---
-isevent: true
 title: Another event
 location: Lausanne, Switzerland
 description: Wow! Another cool event!

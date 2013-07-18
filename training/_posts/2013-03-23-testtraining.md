@@ -1,5 +1,4 @@
 ---
-istraining: true
 title: Test training
 description: This a cool test training
 link-out: http://www.epfl.ch/

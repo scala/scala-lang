@@ -15,7 +15,6 @@ example that you can copy-and-paste.
 
 ```
 ---
-istraining: true
 title: Fast Track to Scala
 description: Get up to speed in Scala in no time
 link-out: http://typesafe.com/how/training/fasttracktoscala

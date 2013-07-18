@@ -1,5 +1,4 @@
 ---
-isevent: true
 title: Lambda Jam
 logo: /resources/img/lambda-jam.png
 location: Chicago

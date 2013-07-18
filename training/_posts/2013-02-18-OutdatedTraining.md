@@ -1,5 +1,4 @@
 ---
-istraining: true
 title: Outdated training
 description: This outdated training should not appear in the JavaScript
 link-out: http://www.epfl.ch/

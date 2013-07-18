@@ -15,7 +15,6 @@ example that you can copy-and-paste.
 
 ```
 ---
-isevent: true
 title: Strange Loop
 logo: https://si0.twimg.com/profile_images/1883816998/slsquare.jpg
 location: St Louis
@@ -51,7 +50,6 @@ It's easiest to just include actual image files for your logo in your pull reque
 Including a relative path to a logo looks like this:
 
     ---
-    isevent: true
     title: ICFP
     logo: /resources/img/icfp.png
     location: Boston

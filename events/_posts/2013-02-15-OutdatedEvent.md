@@ -1,5 +1,4 @@
 ---
-isevent: true
 title: Outdated event
 logo: http://photos.osmek.com/95149
 location: Lausanne, Switzerland
