@@ -201,6 +201,14 @@ $(document).ready(function() {
 
   $("#os_name").append(os);
 
+  $("#main-download-button").each(function() {
+    var unixLink = "{{ site.scala_maindownload_unix }}";
+    var windowsLink = "{{ site.scala_maindownload_windows }}";
+    var link = (os == "Windows") ? windowsLink : unixLink;
+    this.setAttribute("href", link);
+    $(this).append($('<p>', {class: 'for-platform'}).text("for "+os));
+  });
+
   // Do not do any of the following if we're not on a download page
   // Otherwise a TypeError is raised and disables all other scripts on the page
   if ($("#download-space").length == 0)
