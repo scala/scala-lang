@@ -1,3 +1,4 @@
+http://www.scala-lang.org/node/146 -> license.html
 http://www.scala-lang.org/node/273 -> what-is-scala.html
 http://www.scala-lang.org/node/1305 -> documentation/
 http://www.scala-lang.org/node/1707 -> community/
