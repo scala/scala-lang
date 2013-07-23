@@ -213,6 +213,74 @@ a.brand {
   margin-top: -36px;
 }
 
+#download-button {
+  display: block;
+  position: relative;
+  width: 175px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  background-color: #dc322f;
+  color: white;
+  border-radius: 25px;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 30px auto 50px;
+}
+#download-button span {
+  display: inline-block;
+  position: relative;
+  width: 111px;
+  height: inherit;
+  vertical-align: 6px;
+  text-align: left;
+  -webkit-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
+     -moz-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
+      -ms-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
+       -o-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
+          transition: all 300ms cubic-bezier(.6, 0, .6, 1);
+  -webkit-transform: translateX(-115px); 
+     -moz-transform: translateX(-115px); 
+      -ms-transform: translateX(-115px); 
+       -o-transform: translateX(-115px); 
+          transform: translateX(-115px);
+}
+#download-button:hover .slider {
+  padding-left: 20px;
+}
+#download-button .icon {
+  width: 26px;
+  height: 26px;
+  margin: 7px;
+  border-radius: 20px;
+  padding: 0;
+  background: url({{ site.baseurl }}/resources/img/download.png) 0 0 no-repeat;
+  box-shadow: 1px 1px 0 rgba(0,0,0,.3);
+  vertical-align: -7px;
+}
+#download-button:hover span {
+  -webkit-transform: translateX(0); 
+     -moz-transform: translateX(0); 
+      -ms-transform: translateX(0); 
+       -o-transform: translateX(0); 
+          transform: translateX(0);
+}
+#download-button:hover .icon {
+  background-position-y: -26px;
+}
+#download-button:hover .slider {
+  margin-right: 0;
+}
+#download-button.windows .icon {
+  background-position-x: -26px;
+}
+#download-button.unix .icon {
+  background-position-x: -52px;
+}
+
+
+
 #download-btn {
   padding: 0 31px;
   background: #DC322F;
@@ -1537,10 +1605,10 @@ h2.twitterhdr > span {
   /*color: #96938C;*/
 }
 
-div.download-wrapper {
+/*div.download-wrapper {
   width: 400px;
   text-align: center;
-}
+}*/
 
 div.download {
   margin-top: 10px;

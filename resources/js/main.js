@@ -199,29 +199,19 @@ $(document).ready(function() {
   var os = getOS();
   if (os == "Unknown OS") os = "UNIX";
 
-  $("#os_name").append(os);
+  var osLabel = os.replace(/\s/g, '').toLowerCase();
 
-  $("#main-download-button").each(function() {
-    var unixLink = "{{ site.scala_maindownload_unix }}";
-    var windowsLink = "{{ site.scala_maindownload_windows }}";
-    var link = (os == "Windows") ? windowsLink : unixLink;
-    this.setAttribute("href", link);
-    $(this).append($('<p>', {class: 'for-platform'}).text("for "+os));
+  $("#main-download-button, #download-button").each(function() {
+    var unixLink = "{{ site.scala_maindownload_unix }}",
+        windowsLink = "{{ site.scala_maindownload_windows }}",
+        link = (os == "Windows") ? windowsLink : unixLink;
+    $(this).attr("href", link).addClass(osLabel);
   });
 
   // Do not do any of the following if we're not on a download page
   // Otherwise a TypeError is raised and disables all other scripts on the page
   if ($("#download-space").length == 0)
     return;
-
-  var imageurl = "/resources/img/scala-small-logo.png";
-  if (os == "Windows") {
-    imageurl = "/resources/img/logos/Windows_logo.png";
-  } else if (os == "Mac OS") {
-    imageurl = "/resources/img/logos/Apple_logo.png";
-  } else if (os == "Linux") {
-    imageurl = "/resources/img/logos/Tux.svg";
-  }
 
   var anchor = document.getElementById("#link-main-unixsys");
   if (os == "Windows") {
@@ -656,7 +646,8 @@ var f = function(event){
   }
 };
 function endsWith(str, suffix) {
-    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+    if (str && suffix)
+      return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
 $(function(){
   $('a').filter(function(){
