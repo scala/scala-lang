@@ -156,17 +156,13 @@ $(document).ready(function(){
               <div class="caret-inner"></div>\
             </div>\
           </div>\
-          <div class="raw bootom-anchored">\
-            <div class="span1">\
-              <div class="thumbnail">\
-                <img class="avatar" width="70" height="70" src="" />\
-              </div>\
+          <div class="raw bottom-anchored">\
+            <div class="avatar-wrapper">\
+              <img class="avatar" width="50" height="50" src="" />\
             </div>\
-            <div class="span2 lh1em">\
-              <span class="tweet-username">\
-                <a href="" class="username" rel="external"></a>\
-              </span>\
-            </div>\
+            <span class="tweet-username">\
+              <a href="" class="username" rel="external"></a>\
+            </span>\
           </div>\
         </div>\
       '
