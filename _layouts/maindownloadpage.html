@@ -11,23 +11,13 @@ You can find the links to prior versions or the latest development version below
 To see a detailed list of changes for each version of Scala please refer to the <a href="{{ site.baseurl }}/download/changelog.html">changelog</a>.
 Note that the different major releases of Scala (e.g. Scala 2.9.3 and Scala 2.10.1) are not binary compatible.
 
-<table>
-
+<ul>
   {% for release in page.other_releases %}
-
-  <tr>
-    <td><a href="/download/{{ release[2] }}.html" class="btn small" style="width: 400px;">{{ release[1] }} - Scala {{ release[2] }}</a></td>
-  </tr>
-
+  <li><a href="/download/{{ release[2] }}.html">{{ release[1] }} - Scala {{ release[2] }}</a></li>
   {% endfor %}
-
-</table>
-<table><tbody>
-  <tr>
-    <td><a href="changelog.html" class="btn small" style="width: 100px;">Changelog</a></td>
-    <td><a href="all.html" class="btn small" style="width: 256px;">All previous Scala Releases</a></td>
-  </tr>
-</tbody></table>
+  <li><a href="changelog.html">Changelog</a></li>
+  <li><a href="all.html">All previous Scala Releases</a></li>
+</ul>
 
 <br/>
 

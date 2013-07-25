@@ -213,6 +213,10 @@ $(document).ready(function() {
   if ($("#download-space").length == 0)
     return;
 
+  $("#download-button, #getting-started-popup").click(function() {
+    $("#getting-started-popup").toggleClass("open");
+  });
+
   var anchor = document.getElementById("#link-main-unixsys");
   if (os == "Windows") {
     anchor = document.getElementById("#link-main-windows");
