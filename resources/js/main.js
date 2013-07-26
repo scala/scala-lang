@@ -149,17 +149,13 @@ $(document).ready(function(){
               <div class="caret-inner"></div>\
             </div>\
           </div>\
-          <div class="raw bootom-anchored">\
-            <div class="span1">\
-              <div class="thumbnail">\
-                <img class="avatar" width="70" height="70" src="" />\
-              </div>\
+          <div class="raw bottom-anchored">\
+            <div class="avatar-wrapper">\
+              <img class="avatar" width="50" height="50" src="" />\
             </div>\
-            <div class="span2 lh1em">\
-              <span class="tweet-username">\
-                <a href="" class="username" rel="external"></a>\
-              </span>\
-            </div>\
+            <span class="tweet-username">\
+              <a href="" class="username" rel="external"></a>\
+            </span>\
           </div>\
         </div>\
       '
@@ -192,14 +188,13 @@ $(document).ready(function() {
   var os = getOS();
   if (os == "Unknown OS") os = "UNIX";
 
-  $("#os_name").append(os);
+  var osLabel = os.replace(/\s/g, '').toLowerCase();
 
-  $("#main-download-button").each(function() {
-    var unixLink = "{{ site.scala_maindownload_unix }}";
-    var windowsLink = "{{ site.scala_maindownload_windows }}";
-    var link = (os == "Windows") ? windowsLink : unixLink;
-    this.setAttribute("href", link);
-    $(this).append($('<p>', {class: 'for-platform'}).text("for "+os));
+  $("#main-download-button, #download-button").each(function() {
+    var unixLink = "{{ site.scala_maindownload_unix }}",
+        windowsLink = "{{ site.scala_maindownload_windows }}",
+        link = (os == "Windows") ? windowsLink : unixLink;
+    $(this).attr("href", link).addClass(osLabel);
   });
 
   // Do not do any of the following if we're not on a download page
@@ -207,14 +202,9 @@ $(document).ready(function() {
   if ($("#download-space").length == 0)
     return;
 
-  var imageurl = "/resources/img/scala-small-logo.png";
-  if (os == "Windows") {
-    imageurl = "/resources/img/logos/Windows_logo.png";
-  } else if (os == "Mac OS") {
-    imageurl = "/resources/img/logos/Apple_logo.png";
-  } else if (os == "Linux") {
-    imageurl = "/resources/img/logos/Tux.svg";
-  }
+  $("#download-button, #getting-started-popup").click(function() {
+    $("#getting-started-popup").toggleClass("open");
+  });
 
   var anchor = document.getElementById("#link-main-unixsys");
   if (os == "Windows") {
@@ -649,7 +639,8 @@ var f = function(event){
   }
 };
 function endsWith(str, suffix) {
-    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+    if (str && suffix)
+      return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
 $(function(){
   $('a').filter(function(){
