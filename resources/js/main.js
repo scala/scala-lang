@@ -120,20 +120,13 @@ $(document).ready(function(){
   $("#pattern-matching").hover(arrowMouseover("#hidden-pattern-matching", row2), arrowMouseout);
   $("#higher-order-functions").hover(arrowMouseover("#hidden-higher-order-functions", row2), arrowMouseout);
 
-  // code example carousel
-  $('.carousel').carousel();
-  $(document).keyup(function(event) {
-    switch (event.keyCode) {
-      case 37: // lef t
-        $('.carousel').carousel('prev');
-        break;
-      case 39: // right
-        $('.carousel').carousel('next');
-        break;
-      default:
-        break;
-    }
-  });
+  // truncate main visible news item if it exceeds height of sidebar
+  var sideboxHgt = $(".recent-news-items").height();
+  var mainboxHgt = $(".newsbox.left").height();
+  if (sideboxHgt < mainboxHgt) {
+    $(".newsbox.left").height(sideboxHgt);
+    $(".shadow").css('display','block');
+  }
 
   // tweets
   $(function(){

@@ -1,7 +1,7 @@
 <div class="span7">
   <h2 class="whats-new">What's New</h2>
   {% for p in site.categories.news limit: 1 %}
-    <div class="news-item newsbox">
+    <div class="news-item newsbox left">
       {% if p.post-type %}
         <div class="news-category">{{ p.post-type }}</div>
       {% endif %}
@@ -17,12 +17,19 @@
       {% if p.short %}
         <div class="news-body">{{ p.short }}</div>
       {% else %}
-        <div class="news-body">{{ p.content | truncatewords: 330 }}</div>
+        <div class="news-body">{{ p.content }}</div>
+      {% endif %}
+    </div>
+    <div class="shadow">
+      {% if p.link-out %}
+        <div class="more"><a href="{{ p.link-out }}">more...</a></div>
+      {% else %}
+        <div class="more"><a href="{{ site.baseurl }}{{ p.url }}">more...</a></div>
       {% endif %}
     </div>
   {% endfor %}
 </div>
-<div class="span5 newsbox">
+<div class="span5 newsbox right">
   <h2 class="recently">Recently...</h2>
   <div class="recent-news-items">
   {% for p in site.categories.news limit: 4 %}

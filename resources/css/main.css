@@ -981,7 +981,7 @@ h2.twitterhdr > span {
 
 .news-item {
   color: #839496;
-  border-bottom: solid 2px #93A1A1;
+  /*border-bottom: solid 2px #93A1A1;*/
   padding-bottom: 8px;
   margin-bottom: 32px;
 }
@@ -2313,3 +2313,42 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   border: solid 1px rgba(88, 110, 117, 0.2);
   color: rgba(38, 139, 210, 0.8);
 }
+
+.newsbox.left { overflow: hidden; }
+
+.shadow {
+  display: none;
+  position: relative;
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: -webkit-gradient(linear, top, bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 1)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  margin-top: -234px;
+  height: 200px;
+  width: 100%;
+  border-bottom: solid 2px #93A1A1;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.shadow > .more {
+  position: relative;
+  padding-top: 176px;
+}
+
+.shadow > .more > a {
+  color: #839499;
+  font-family: "museo-slab", serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.1em;
+  border-bottom: none;
+}
+
+.shadow > .more > a:hover {
+  color: #DC322F;
+}
+
