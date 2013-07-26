@@ -131,7 +131,7 @@ $(document).ready(function(){
   // tweets
   $(function(){
     $("#tweets").tweetMachine('', {
-      backendScript: 'http://35541hpv124015.ikoula.com/~sjrd/temp/jquery-tweetMachine/ajax/getFromTwitter.php?callback=?',
+      backendScript: 'http://www3.scala-lang.org/webscripts/ajax/getFromTwitter.php?callback=?',
       endpoint: 'statuses/user_timeline',
       user_name: 'scala_lang',
       include_retweets: true,
