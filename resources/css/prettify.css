@@ -1,6 +1,6 @@
 
 .prettyprint { background-color: #073642; }
-.prettyprint code { color: #839496; white-space: nowrap;  overflow: auto; }
+.prettyprint code { color: #839496;  overflow: auto; }
 .prettyprint .pln { color: inherit; }
 .prettyprint .str, .prettyprint .atv { color: #2aa198; }
 .prettyprint .lit { color: #D33682;}
