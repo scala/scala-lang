@@ -136,7 +136,7 @@ $(document).ready(function(){
       user_name: 'scala_lang',
       include_retweets: true,
       exclude_replies: false,
-      limit: 5,
+      limit: 4,
       autoRefresh: false,
       tweetFormat: '\
         <div class="tweet-container">\
