@@ -2403,7 +2403,7 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   margin-bottom: 10px;
 }
 
-.traits, .concurrency, .java-interop-wrapper {
+.traits, .concurrency, .java-interop-wrapper, .type-inference {
   float: left;
 }
 
