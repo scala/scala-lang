@@ -233,15 +233,15 @@ a.brand {
   height: inherit;
   vertical-align: 6px;
   text-align: left;
-  -webkit-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
-     -moz-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
-      -ms-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
-       -o-transition: all 300ms cubic-bezier(.6, 0, .6, 1); 
+  -webkit-transition: all 300ms cubic-bezier(.6, 0, .6, 1);
+     -moz-transition: all 300ms cubic-bezier(.6, 0, .6, 1);
+      -ms-transition: all 300ms cubic-bezier(.6, 0, .6, 1);
+       -o-transition: all 300ms cubic-bezier(.6, 0, .6, 1);
           transition: all 300ms cubic-bezier(.6, 0, .6, 1);
-  -webkit-transform: translateX(-115px); 
-     -moz-transform: translateX(-115px); 
-      -ms-transform: translateX(-115px); 
-       -o-transform: translateX(-115px); 
+  -webkit-transform: translateX(-115px);
+     -moz-transform: translateX(-115px);
+      -ms-transform: translateX(-115px);
+       -o-transform: translateX(-115px);
           transform: translateX(-115px);
 }
 #download-button:hover .slider {
@@ -258,10 +258,10 @@ a.brand {
   vertical-align: -7px;
 }
 #download-button:hover span {
-  -webkit-transform: translateX(0); 
-     -moz-transform: translateX(0); 
-      -ms-transform: translateX(0); 
-       -o-transform: translateX(0); 
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
           transform: translateX(0);
 }
 #download-button:hover .icon {
@@ -2403,7 +2403,7 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   margin-bottom: 10px;
 }
 
-.traits, .concurrency {
+.traits, .concurrency, .java-interop-wrapper, .type-inference {
   float: left;
 }
 
