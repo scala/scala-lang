@@ -15,7 +15,7 @@ Input:
 {% for author in cat.authors limit:10 %}
 <div class="fame-author fame-author-rank-{{ author.rank }}">
   <div class="fame-author-gravatar">
-    <img src="{{ author.gravatar|escape }}" alt="{{ author.username }}" width="80px" height="80px" />
+    <img src="{{ author.gravatar|escape }}" alt="{{ author.username }}" style="width: 80px; height: 80px;" />
   </div>
   <div class="fame-author-username">
     <a href="https://github.com/{{ author.username }}">{{ author.username }}</a>
