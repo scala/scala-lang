@@ -190,7 +190,7 @@ $(document).ready(function() {
 
   var osLabel = os.replace(/\s/g, '').toLowerCase();
 
-  $("#main-download-button, #download-button").each(function() {
+  $("#main-download-button").each(function() {
     var unixLink = "{{ site.scala_maindownload_unix }}",
         windowsLink = "{{ site.scala_maindownload_windows }}",
         link = (os == "Windows") ? windowsLink : unixLink;
@@ -199,12 +199,12 @@ $(document).ready(function() {
 
   // Do not do any of the following if we're not on a download page
   // Otherwise a TypeError is raised and disables all other scripts on the page
-  if ($("#download-space").length == 0)
+  if ($("#download-button").length == 0)
     return;
 
-  $("#download-button, #getting-started-popup").click(function() {
+  /*$("#download-button, #getting-started-popup").click(function() {
     $("#getting-started-popup").toggleClass("open");
-  });
+  });*/
 
   var anchor = document.getElementById("#link-main-unixsys");
   if (os == "Windows") {
@@ -213,13 +213,7 @@ $(document).ready(function() {
   if (anchor == null) anchor = document.getElementById("#link-main-one4all");
   var link = anchor.getAttribute("href");
 
-  $("#download-space").append(
-    $('<a>', {href: link, class: 'btn download'}).append(
-      $('<img>', {src: imageurl})
-    ).append(
-      $('<br>')
-    ).append("Download Scala for " + os)
-  );
+  $("#download-button").attr("href", link).addClass(osLabel);
 });
 
 /***********************
