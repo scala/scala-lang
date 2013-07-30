@@ -576,6 +576,10 @@ a.brand {
   /*color: rgba(101, 123, 131, 0.7);*/
 }
 
+.events-page .event-location {
+  color: #174753;
+}
+
 .event-date {
   font-family: "museo-slab", serif;
   color: #839496;

@@ -3,4 +3,4 @@ layout: page
 title: Upcoming events
 ---
 
-<div id="eventspane"> </div>
+<div id="eventspane" class="events-page"> </div>
