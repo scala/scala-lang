@@ -378,7 +378,8 @@ a.brand {
 
 #download-btn:hover {
   background:#333;
-  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -webkit-transition:all 0.3s ease-in-out;
   box-shadow:none;
   -webkit-box-shadow:none;
   -moz-box-shadow:none;
@@ -386,7 +387,7 @@ a.brand {
   color:#FFF;
 }
 
-#learn-more-btn {
+.learn-more-btn {
   padding: 0 18px;
   background: #859900; /*brighter color: 97BE49*/
   -moz-border-radius: 5px;
@@ -396,17 +397,18 @@ a.brand {
   text-decoration: none !important;
   font: 700 14px/28px 'proxima-nova', sans-serif;
   display: inline-block;
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   text-shadow: none;
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
-#learn-more-btn:hover {
+.learn-more-btn:hover {
   background:#DC322F;
-  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  -moz-transition:all 0.3s ease-in-out;
+  -webkit-transition:all 0.3s ease-in-out;
   box-shadow:none;
   -webkit-box-shadow:none;
   -moz-box-shadow:none;
@@ -1136,8 +1138,11 @@ h2.twitterhdr > span {
   font-size: 12px;
   color: #3d626b;
   font-weight: normal;
-  font-style: italic;
   text-align: center;
+}
+
+.where-to-learn-more p {
+  font-style: italic;
 }
 
 .news-item {
@@ -1238,7 +1243,7 @@ h2.twitterhdr > span {
   color: #174753;
 }*/
 
-#archive-btn {
+.archive-btn {
   padding: 0 18px;
   background: #859900; /*brighter color: 97BE49*/
   -moz-border-radius: 5px;
@@ -1248,7 +1253,7 @@ h2.twitterhdr > span {
   text-decoration: none !important;
   font: 700 14px/28px 'proxima-nova', sans-serif;
   display: inline-block;
-  color: #fff;
+  color: #fff !important;
   cursor: pointer;
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1256,14 +1261,14 @@ h2.twitterhdr > span {
   border-bottom: none;
 }
 
-#archive-btn:hover {
+.archive-btn:hover {
   background:#DC322F;
   -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
   box-shadow:none;
   -webkit-box-shadow:none;
   -moz-box-shadow:none;
   text-shadow:none;
-  color:#FFF;
+  color: #fff !important;
 }
 
 .post-news,
@@ -2059,7 +2064,7 @@ a.for-platform {
   text-decoration: none;
 }
 
-.left-side a, .right-side a, .where-to-learn-more a {
+.left-side a, .right-side a, .where-to-learn-more a.italicize {
   color: #839496;
   font-weight: normal;
   font-style: italic;
@@ -2067,7 +2072,7 @@ a.for-platform {
   border: none;
 }
 
-.left-side a:hover, .right-side a:hover, .where-to-learn-more a:hover {
+.left-side a:hover, .right-side a:hover, .where-to-learn-more a.italicize:hover {
   color: #DC322F;
 }
 
