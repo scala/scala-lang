@@ -10,7 +10,7 @@ http://gleichmann.wordpress.com/2009/10/21/scala-in-practice-composing-traits-le
 }
 trait CommandoBridge extends Spacecraft {
   def engage(): Unit = {
-    for (_ <- 1 to 3)
+    for (_ &lt;- 1 to 3)
       speedUp()
   }
   def speedUp(): Unit
@@ -31,7 +31,7 @@ class StarCruiser extends Spacecraft
 </figure>
 
 <div class="snippet-explanation">
-  <h3>Flexibly Combine Interface & Behavior</h3>
+  <h3>Flexibly Combine Interface &amp; Behavior</h3>
   <p>
 In Scala, <i>multiple traits</i> can be mixed into a class to combine their interface and their
 behavior.</p>
