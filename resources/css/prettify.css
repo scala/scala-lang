@@ -15,7 +15,7 @@
 .prettyprint .atn { color: inherit; }
 
 pre.prettyprint {
-  overflow-x: scroll;
+  overflow-x: auto;
   padding: 9px;
   border: 1px solid #073642;
   -webkit-border-radius: 0px 0px 4px 4px;
