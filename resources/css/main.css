@@ -244,6 +244,10 @@ a.brand {
        -o-transform: translateX(-115px);
           transform: translateX(-115px);
 }
+#download-button .version-long {
+  font-size: 18px;
+  margin-left: -7px;
+}
 #download-button:hover .slider {
   padding-left: 20px;
 }

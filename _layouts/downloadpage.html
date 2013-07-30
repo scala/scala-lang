@@ -11,7 +11,7 @@ layout: page
   <a id="download-button">
     <span class="slider">Download</span>
     <span class="icon"></span>
-    <span class="version">Scala {{ page.release_version }}</span>
+    <span class="version{% if page.release_version.size > 7 %}-long{% endif %}">Scala {{ page.release_version }}</span>
   </a>
 </div>
 
