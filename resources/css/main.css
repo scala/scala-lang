@@ -817,6 +817,12 @@ a.brand {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.trainings-page .training-trainers-name,
+.trainings-page .training-location,
+.trainings-page .training-organizer {
+  color: #839496;
+}
+
 .center {
   text-align: center;
 }

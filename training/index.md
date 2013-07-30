@@ -3,4 +3,4 @@ layout: page
 title: Training
 ---
 
-<div id="trainingspane"> </div>
+<div id="trainingspane" class="trainings-page"> </div>
