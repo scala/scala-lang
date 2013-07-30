@@ -264,17 +264,39 @@ a.brand {
        -o-transform: translateX(0);
           transform: translateX(0);
 }
-#download-button:hover .icon {
-  background-position-y: -26px;
-}
 #download-button:hover .slider {
   margin-right: 0;
+}
+/* Ideally, we would have only this:
+#download-button:hover .icon {
+  background-position-y: -26px;
 }
 #download-button.windows .icon {
   background-position-x: -26px;
 }
 #download-button.unix .icon {
   background-position-x: -52px;
+}
+ * but Firefox does not support background-position-{x,y}
+ * so we have the following cartesian product instead:
+ */
+#download-button.macos .icon {
+  background-position: 0 0;
+}
+#download-button.windows .icon {
+  background-position: -26px 0;
+}
+#download-button.unix .icon {
+  background-position: -52px 0;
+}
+#download-button.macos:hover .icon {
+  background-position: 0 -26px;
+}
+#download-button.windows:hover .icon {
+  background-position: -26px -26px;
+}
+#download-button.unix:hover .icon {
+  background-position: -52px -26px;
 }
 
 #getting-started-popup {
