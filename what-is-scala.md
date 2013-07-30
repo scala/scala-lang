@@ -100,7 +100,7 @@ concurrent system at a high-level of abstraction.
 
 Maybe most important is that programming in Scala tends to be very
 enjoyable.  No boilerplate, rapid iteration, but at the same time the
-safety of a strong static type system. As [Graham Thackley from the
+safety of a strong static type system. As [Graham Tackley from the
 Guardian says](http://www.infoq.com/articles/guardian_scala): *"We've found that Scala has enabled us to deliver
 things faster with less code. It's reinvigorated the team."*
 
