@@ -817,6 +817,10 @@ a.brand {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.trainings-page .training-item-wrap {
+  margin-top: 30px;
+}
+
 .trainings-page .training-trainers-name,
 .trainings-page .training-location,
 .trainings-page .training-organizer {
