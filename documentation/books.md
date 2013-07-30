@@ -33,7 +33,7 @@ by Martin Odersky, Lex Spoon, and Bill Venners
     </a>
     </div>
   </div>
-  <div class="span10">
+  <div class="span8" style="padding-top: 15px;">
 Being co-written by the language's designer, Martin Odersky, you will
 find it provides additional depth and clarity to the diverse features of
 the language. The book provides both an authoritative reference for
@@ -63,7 +63,7 @@ Published by [Addison-Wesley](http://www.pearsoned.co.uk/Imprints/Addison-Wesley
     </a>
     </div>
   </div>
-  <div class="span10">
+  <div class="span8" style="padding-top: 15px;">
 
 What you get:
 
@@ -101,7 +101,7 @@ Published by [Manning](http://www.manning.com):
     </a>
     </div>
   </div>
-  <div class="span10">
+  <div class="span8" style="padding-top: 15px;">
 
 "While information about the Scala language is abundant, skilled
 practitioners, great examples, and insight into the best practices of
@@ -133,7 +133,7 @@ Published by [Manning](http://www.manning.com):
     </a>
     </div>
   </div>
-  <div class="span10">
+  <div class="span8" style="padding-top: 15px;">
 
 "Scala in Action is a comprehensive tutorial that introduces Scala
 through clear explanations and numerous hands-on examples. Because Scala
@@ -165,7 +165,7 @@ by Alex Payne and Dean Wampler
     </a>
     </div>
   </div>
-  <div class="span10">
+  <div class="span8" style="padding-top: 15px;">
 
 Both are industry experts, Alex Payne being the lead API programmer at
 Twitter, a social networking service based on
@@ -199,7 +199,7 @@ by Venkat Subramaniam
     </a>
     </div>
   </div>
-  <div class="span10">
+  <div class="span8" style="padding-top: 15px;">
 
 According to the publisher, The Pragmatic Programmers:
 
@@ -250,7 +250,7 @@ Published by [entwickler.press](http://entwickler-press.de):
     </a>
     </div>
   </div>
-  <div class="span10">
+  <div class="span8" style="padding-top: 15px;">
 
 "Dieses Buch bietet allen Scala-Interessierten und Einsteigern einen
 praxisnahen und zielgerichteten Weg, um Scala zu lernen. Dabei legen die
