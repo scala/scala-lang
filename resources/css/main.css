@@ -576,6 +576,8 @@ a.brand {
   /*color: rgba(101, 123, 131, 0.7);*/
 }
 
+.events-page .event-title > a,
+.events-page .event-date,
 .events-page .event-location {
   color: #174753;
 }
