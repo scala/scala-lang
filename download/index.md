@@ -5,8 +5,7 @@ release_version: 2.10.2
 release_date: "June 6, 2013"
 other_releases: [
   ["maintenance_version", "Current maintenance release", 2.9.3, "February 28, 2013"],
-  ["development_version", "Current development release", 2.11.0-M4, "July 11, 2013"],
-  ["nightly_version", "Nightly build", 2.11.0-latest, ""]
+  ["development_version", "Current development release", 2.11.0-M4, "July 11, 2013"]
 ]
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires the Java runtime version 1.6 or later, which can be downloaded <a href='http://www.java.com/'>here</a>."
 resources: [
@@ -17,6 +16,7 @@ resources: [
 
 <!-- for safekeeping
   ["rc_version", "Current release candidate", 2.10.2-RC2, "May 31, 2013"],
+  ["nightly_version", "Nightly build", 2.11.0-latest, ""]
 -->
 
 <!-- This page should be auto-generated - it is the main download page of the latest stable release -->
