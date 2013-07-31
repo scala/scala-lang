@@ -1581,6 +1581,7 @@ h2.twitterhdr > span {
   /*text-align: center;*/
   color: #fff;
   padding-top: 20px;
+  margin-top: -50px;
 }
 
 .copyright {
@@ -2391,10 +2392,6 @@ code {
   content: "";
   clear: both;
   height: 0;
-}
-
-.lift-footer {
-  margin-top: -50px;
 }
 
 #page-title {   /*font-weight: 100;*/   margin-top: 20px;   font-family:

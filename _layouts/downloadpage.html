@@ -49,7 +49,7 @@ You can find the installer download links for other operating systems, as well a
   {% endunless %}
 </tr></thead>
 
-<body>
+<tbody>
 {% for resource in page.resources %}
 <tr>
   <td>
@@ -61,7 +61,7 @@ You can find the installer download links for other operating systems, as well a
   {% unless page.dont_show_sizes %}
   <td>{{ resource[4] }}</td>
   {% endunless %}
-<tr/>
+</tr>
 {% endfor %}
 </tbody>
 
