@@ -1,0 +1,4 @@
+[submodule "language-ref"]
+	path = language-ref
+	url = git@github.com:iainmcgin/scala-ref-markdown.git
+	branch = gh-pages
