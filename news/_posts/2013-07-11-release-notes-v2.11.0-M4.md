@@ -7,7 +7,7 @@ The [fourth development milestone](https://github.com/scala/scala/releases/v2.11
 
 It brings the following [goodness](https://github.com/scala/scala/issues?direction=desc&labels=reviewed&milestone=18&page=1&sort=comments&state=closed):
 
-- initial version of a new experimental back-end based on ASM by [@magarciaEPFL](https://github.com/magarciaEPFL) ([[#2620](https://github.com/scala/scala/pull/2620)](https://github.com/scala/scala/pull/2620))
+- initial version of a new experimental back-end based on ASM by [@magarciaEPFL](https://github.com/magarciaEPFL) ([#2620](https://github.com/scala/scala/pull/2620))
 - [quasiquotes](http://docs.scala-lang.org/overviews/macros/quasiquotes.html) by [@densh](https://github.com/densh) ([#2714](https://github.com/scala/scala/pull/2714))
 - a more modular standard library: scala.xml and scala.util.parsing now come in separate jars ([#2704](https://github.com/scala/scala/pull/2704))
   - we now also use a bog-standard [jline 2.11](https://github.com/jline/jline2/tree/jline-2.11)
