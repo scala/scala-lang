@@ -19,7 +19,7 @@ trait PulseEngine extends Spacecraft {
   val maxPulse: Int
   var currentPulse: Int = 0
   def speedUp(): Unit = {
-    if (currentPulse < maxPulse)
+    if (currentPulse &lt; maxPulse)
       currentPulse += 1
   }
 }
