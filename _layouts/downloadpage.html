@@ -39,16 +39,17 @@ You can find the installer download links for other operating systems, as well a
 
 <br/>
 
-<table>
+<table class="table">
 
-<tr>
-  <td style="font-weight: bold;">Archive</td>
-  <td style="font-weight: bold;">System</td>
+<thead><tr>
+  <th>Archive</th>
+  <th>System</th>
   {% unless page.dont_show_sizes %}
-  <td style="font-weight: bold;">Size</td>
+  <th>Size</th>
   {% endunless %}
-</tr>
+</tr></thead>
 
+<body>
 {% for resource in page.resources %}
 <tr>
   <td>
@@ -62,6 +63,7 @@ You can find the installer download links for other operating systems, as well a
   {% endunless %}
 <tr/>
 {% endfor %}
+</tbody>
 
 </table>
 
