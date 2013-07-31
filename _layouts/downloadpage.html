@@ -3,7 +3,7 @@ layout: page
 ---
 
 <p class="center">
-  Download the Scala {{ page.release_version }} for your system
+  Download Scala {{ page.release_version }} for your system
   (<a href="./all.html">All downloads</a>).
 </p>
 
@@ -44,7 +44,9 @@ You can find the installer download links for other operating systems, as well a
 <tr>
   <td style="font-weight: bold;">Archive</td>
   <td style="font-weight: bold;">System</td>
+  {% unless page.dont_show_sizes %}
   <td style="font-weight: bold;">Size</td>
+  {% endunless %}
 </tr>
 
 {% for resource in page.resources %}
@@ -55,7 +57,9 @@ You can find the installer download links for other operating systems, as well a
     </a>
   </td>
   <td>{{ resource[3] }}</td>
+  {% unless page.dont_show_sizes %}
   <td>{{ resource[4] }}</td>
+  {% endunless %}
 <tr/>
 {% endfor %}
 
