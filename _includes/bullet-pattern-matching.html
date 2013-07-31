@@ -1,12 +1,12 @@
 <figure class="code pattern-matching" style="width: 500px; float: right;">
   <figcaption>Pattern matching</figcaption>
   <pre><code>// Define a set of case classes for representing binary trees.
-sealed abstract class Tree[+A]
-case class Node[+A](elem: A, left: Tree[A], right: Tree[A]) extends Tree[A]
-case object Leaf extends Tree[Nothing]
+sealed abstract class Tree
+case class Node(elem: Int, left: Tree, right: Tree) extends Tree
+case object Leaf extends Tree
 
 // Return the in-order traversal sequence of a given tree.
-def inOrder[A](t: Tree[A]): List[A] = t match {
+def inOrder(t: Tree): List[Int] = t match {
   case Node(e, l, r) => inOrder(l) ::: List(e) ::: inOrder(r)
   case Leaf          => List()
 }</code></pre>
@@ -20,7 +20,7 @@ types. They implicitly equip the class with meaningful <code>toString</code>,
 ability to be deconstructed with <em>pattern matching</em>.</p>
 <p>
 In this example, we define a small set of case classes that represent binary
-trees of a generic type <code>A</code>.
+trees of integers (the generic version is omitted for simplicity here).
 In <code>inOrder</code>, the <code>match</code> construct chooses the right
 branch, depending on the type of <code>t</code>, and at the same time
 deconstructs the arguments of a <code>Node</code>.
