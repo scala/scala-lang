@@ -3,7 +3,7 @@ layout: page-no-toc
 title: Scala License
 ---
 
-Copyright (c) 2002-<span class="current-year"></span> EPFL, Lausanne, unless otherwise specified.
+Copyright (c) 2002-<span class="current-year">&nbsp;</span> EPFL, Lausanne, unless otherwise specified.
 All rights reserved.
 
 This software was developed by the Programming Methods Laboratory of the
