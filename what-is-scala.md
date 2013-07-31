@@ -12,8 +12,8 @@ expressions and observing the results.  But you can also rely on it
 for large mission critical systems, as many companies, including
 Twitter, LinkedIn, or Intel do.
 
-To some, Scala feels like a scripting language. It's syntax is concise
-and low ceremony; it's types get out of the way because the compiler
+To some, Scala feels like a scripting language. Its syntax is concise
+and low ceremony; its types get out of the way because the compiler
 can infer them.  There's a REPL and IDE worksheets for quick
 feedback. Developers like it so much that Scala won the ScriptBowl
 contest at the 2012 JavaOne conference.
@@ -91,7 +91,7 @@ that makes use of concurrent and synchronous processing, parallel
 utilization of multiple cores, and distributed processing in the
 cloud.
 
-It's functional nature makes it easier to write safe and performant
+Its functional nature makes it easier to write safe and performant
 multi-threaded code. There's typically less reliance on mutable state
 and Scala's futures and actors provide powerful tools for organizing
 concurrent system at a high-level of abstraction.
