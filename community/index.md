@@ -49,3 +49,4 @@ Scala is an active topic on StackOverflow [Scala on StackOverflow](http://stacko
 * [Community Wiki](https://wiki.scala-lang.org/display/SW/Welcome+to+the+Scala+Wiki%21)
 * [Scala School](http://twitter.github.com/scala_school/)
 * [Effective Scala](http://twitter.github.com/effectivescala/)
+* [Scala Puzzlers](http://scalapuzzlers.com/)
