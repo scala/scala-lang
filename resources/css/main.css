@@ -2520,3 +2520,8 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   color: #DC322F;
 }
 
+.centerclear {
+  display: block;
+  margin: 0 auto;
+  clear: both;
+}
