@@ -1,3 +1,8 @@
+#!/usr/bin/env ruby
+# by Ricky Elrod (gh: @CodeBlock)
+# Licensed under the same license as the same license as
+# the scala/scala-lang repository from which this script originates.
+
 require 'httparty'
 require 'json'
 require 'paint'
