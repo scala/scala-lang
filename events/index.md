@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-no-toc
 title: Upcoming events
 ---
 
