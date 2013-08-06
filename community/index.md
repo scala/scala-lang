@@ -50,3 +50,4 @@ Scala is an active topic on StackOverflow [Scala on StackOverflow](http://stacko
 * [Scala School](http://twitter.github.com/scala_school/)
 * [Effective Scala](http://twitter.github.com/effectivescala/)
 * [Scala Puzzlers](http://scalapuzzlers.com/)
+* [Interactive Tour](http://scalatutorials.com/tour)
