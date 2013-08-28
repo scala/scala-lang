@@ -9,7 +9,7 @@ have Jekyll installed.)
 A blog article is a larger instructional/opinion/informational original piece.
 An example is the blog article that we published about running our first
 Coursera course in December 2012,
-_(Functional Programming Principles in Scala: Impressions and Statistics)[http://docs.scala-lang.org/news/functional-programming-principles-in-scala-impressions-and-statistics.html]_.
+_[Functional Programming Principles in Scala: Impressions and Statistics](http://docs.scala-lang.org/news/functional-programming-principles-in-scala-impressions-and-statistics.html)_.
 News items
 or announcements on the other hand are just that – short news flashes
 announcing something, whether it be a new release, a new project, a new
@@ -22,16 +22,18 @@ in the same place on the front page of scala-lang.org)
 
 ## Workflow
 
-1. Create a markdown file in the `/news/_posts` directory of this repository named according to the convention: `YYYY-MM-DD-name-for-your-news-item.md`
-2. Add some YAML frontmatter. For example: (Note that you can specify `post-type` to be either `news` or `announcement`!)
+- Create a markdown file in the `/news/_posts` directory of this repository named according to the convention: `YYYY-MM-DD-name-for-your-news-item.md`
+- Add some YAML frontmatter. For example: (Note that you can specify `post-type` to be either `news` or `announcement`!)
 
+```
       ---
       layout: news
       post-type: news
       by: Joe Schmoe
       title: Uber Cool New Release!
       ---
+```
 
-3. Write your post in markdown following the front matter.
-4. Run Jekyll locally and double-check your article for formatting and correctness! To do so, simply run `jekyll serve --watch` from the root of the repository. Note that the `--watch` option enables incremental rebuilding, so each time you change a file, the site is regenerated and re-served. To visit your news item, go to: `localhost:4000/path/to/your/news/item`
-5. Make a pull request!
+- Write your post in markdown following the front matter.
+- Run Jekyll locally and double-check your article for formatting and correctness! To do so, simply run `jekyll serve --watch` from the root of the repository. Note that the `--watch` option enables incremental rebuilding, so each time you change a file, the site is regenerated and re-served. To visit your news item, go to: `localhost:4000/path/to/your/news/item`
+- Make a pull request!
