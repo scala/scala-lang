@@ -5,7 +5,6 @@ by: "Martin Odersky"
 title: "New Online Courses"
 ---
 
-<br>
 Last year, the Scala team and I developed a massive open online course
 for Principles of Functional Programming in Scala on the Coursera
 platform.  We were blown away by the success of that course. So far,

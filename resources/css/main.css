@@ -2187,6 +2187,11 @@ figcaption {
   border-top-right-radius: 5px;
 }
 
+.main-page-column > p:nth-of-type(1) {
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
 .main-page-column > p {
   margin-bottom: 20px;
 }
