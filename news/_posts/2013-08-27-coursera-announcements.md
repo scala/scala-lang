@@ -1,11 +1,11 @@
 ---
 layout: news
 post-type: news
-author: "Martin Odersky"
+by: "Martin Odersky"
 title: "New Online Courses"
 ---
 
-
+<br>
 Last year, the Scala team and I developed a massive open online course
 for Principles of Functional Programming in Scala on the Coursera
 platform.  We were blown away by the success of that course. So far,
@@ -47,5 +47,4 @@ online tutorial platform, students can enroll in small groups with
 an expert tutor who will give detailed feedback on programming
 techniques in their homework assignments and elsewhere.
 
-Martin Odersky
 
