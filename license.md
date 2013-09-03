@@ -4,7 +4,6 @@ title: Scala License
 ---
 
 Copyright (c) 2002-<span class="current-year">&nbsp;</span> EPFL<br>
-Copyright (c) 2011-<span class="current-year">&nbsp;</span> Typesafe, Inc.
 
 All rights reserved.
 
