@@ -21,7 +21,7 @@ title: Learn
 
   <div class="row">
     <div class="span4 doc-block">
-      <h3><a href="http://www.scala-lang.org/api/current/index.html#package">API</a></h3>
+      <h3><a href="{{ site.baseurl }}/documentation/api.html">API</a></h3>
       <p>Dive straight into the API.</p>
     </div>
     <div class="span4 doc-block">
