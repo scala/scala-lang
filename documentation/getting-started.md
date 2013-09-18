@@ -19,7 +19,7 @@ If you are just starting to learn how to code, you will find that a large portio
 
 There are multiple ways to get Scala code compiling and running on your machine. The most widely used tools are:
 
-* Your favorite text editor and the command-line [Scala compiler]({{ site.baseurl }}/download/), see the [Getting Started]({{ site.baseurl }}/download/getting-started.html) guide
+* Your favorite text editor and the command-line [Scala compiler]({{ site.baseurl }}/download/)
 * IDEs for Scala: The [Scala IDE](http://scala-ide.org/), [IntelliJ IDEA](http://www.jetbrains.com/idea/) with the Scala plugin, and [NetBeans IDE](http://netbeans.org/) with the Scala plugin
 * Build tools for Scala: [sbt](http://www.scala-sbt.org/), maven with the [Scala plugin](http://davidb.github.com/scala-maven-plugin/index.html) or the [Scala plugin for gradle](http://www.gradle.org/docs/current/userguide/scala_plugin.html)
 
