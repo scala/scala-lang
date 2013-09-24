@@ -22,6 +22,8 @@ There are multiple ways to get Scala code compiling and running on your machine.
 * Your favorite text editor and the command-line [Scala compiler]({{ site.baseurl }}/download/), see the [Getting Started]({{ site.baseurl }}/download/getting-started.html) guide
 * IDEs for Scala: The [Scala IDE](http://scala-ide.org/), [IntelliJ IDEA](http://www.jetbrains.com/idea/) with the Scala plugin, and [NetBeans IDE](http://netbeans.org/) with the Scala plugin
 * Build tools for Scala: [sbt](http://www.scala-sbt.org/), maven with the [Scala plugin](http://davidb.github.com/scala-maven-plugin/index.html) or the [Scala plugin for gradle](http://www.gradle.org/docs/current/userguide/scala_plugin.html)
+* [Typesafe Activator](http://typesafe.com/platform/getstarted) is a one-click way to get started creating applications with Scala, Akka and Play Framework. Activator comes with [dozens of templates](http://typesafe.com/activator/templates) to help you get started quickly. [Create your own template](http://typesafe.com/activator/template/contribute) to help programmers discover and quickly get up to speed with your own project, or [contribute to Activator itself](https://github.com/typesafehub/activator/)!
+
 
 The **Scala interpreter** (also called the REPL) is a very valuable tool for experimenting with Scala. It is installed together with the command-line compiler and allows you to interactively write and evaluate Scala expressions.
 
