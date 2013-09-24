@@ -22,7 +22,7 @@ were opened on [GitHub](https://github.com/scala/scala) of which 72 were merged 
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12216).
 
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.10.3-RC2 built right in is available through the following update-site:
+The Scala IDE with Scala 2.10.3-RC3 built right in is available through the following update-site:
 
 * [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/)
 
