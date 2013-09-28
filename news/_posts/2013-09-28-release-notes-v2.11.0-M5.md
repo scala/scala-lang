@@ -3,15 +3,15 @@ layout: news
 post-type: announcement
 title: "Scala 2.11.0-M5 is now available!"
 ---
-The [fofth development milestone](https://github.com/scala/scala/releases/v2.11.0-M5) of Scala 2.11 is now available for [download](/download/2.11.0-M5.html)!
+The [fifth development milestone](https://github.com/scala/scala/releases/v2.11.0-M5) of Scala 2.11 is now available for [download](/download/2.11.0-M5.html)!
 
 It brings the following [goodness](https://github.com/scala/scala/issues?direction=desc&labels=reviewed&milestone=20&page=1&sort=comments&state=closed):
 
-  - Pattern matcher: extractors became name-based thanks to @paulp (#2848)
-  - @adriaanm continues his modularization effort: [scala.xml](https://github.com/scala/scala-xml) and [scala.util.parsing](https://github.com/scala/scala-parser-combinators) live in separate repositories now (#2855)
-  - more bits of experimental backend based on ASM by @magarciaEPFL (#2711)
-  - improvements to stacktrace printing in REPL by @som-snytt and @qerub (#2877 and #2824)
-  - clarification of Scala license (#2881)
+- Pattern matcher: extractors became name-based thanks to [@paulp](https://github.com/paulp) ([#2848](https://github.com/scala/scala/pull/2848))
+- [@adriaanm](https://github.com/adriaanm) continues our modularization effort: [scala.xml](https://github.com/scala/scala-xml) and [scala.util.parsing](https://github.com/scala/scala-parser-combinators) live in separate repositories now ([#2855](https://github.com/scala/scala/pull/2855))
+- more bits of experimental backend based on ASM by [@magarciaEPFL](https://github.com/magarciaEPFL) ([#2711](https://github.com/scala/scala/pull/2711))
+- improvements to stacktrace printing in REPL by [@som-snytt](https://github.com/som-snytt) and [@qerub](https://github.com/qerub) ([#2877](https://github.com/scala/scala/pull/2877) and [#2824](https://github.com/scala/scala/pull/2824))
+- clarification of Scala license ([#2881](https://github.com/scala/scala/pull/2881))
 
 We're working on an [overview of the Scala 2.11 release](http://docs.scala-lang.org/scala/2.11/) -- [PRs](https://github.com/scala/scala/blob/gh-pages/2.11/index.markdown) welcome!
 
