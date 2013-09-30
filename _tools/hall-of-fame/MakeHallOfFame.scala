@@ -141,7 +141,7 @@ object MakeHallOfFame {
       M(author0) <- authors
       M(authorData) = author0("author")
       S(username) = authorData("login")
-      S(gravatar) = authorData("gravatar")
+      S(gravatar) = authorData("avatar")
       I(totalCommits) = author0("total")
       L(jsonWeeks) = author0("weeks")
     } yield {
