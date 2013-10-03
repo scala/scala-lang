@@ -5,7 +5,7 @@ title: Scala API Docs
 
 ## Latest releases
 
-* [Scala 2.10.2](http://www.scala-lang.org/files/archive/api/2.10.2/)
+* [Scala 2.10.3](http://www.scala-lang.org/files/archive/api/2.10.3/)
 * [Scala 2.11.0-M5](http://www.scala-lang.org/files/archive/api/2.11.0-M5/)
 
 ## Nightly builds
@@ -18,6 +18,7 @@ title: Scala API Docs
 * [Scala 2.11.0-M4](http://www.scala-lang.org/files/archive/api/2.11.0-M4/)
 * [Scala 2.11.0-M3](http://www.scala-lang.org/files/archive/api/2.11.0-M3/)
 * [Scala 2.11.0-M2](http://www.scala-lang.org/files/archive/api/2.11.0-M2/)
+* [Scala 2.10.2](http://www.scala-lang.org/files/archive/api/2.10.2/)
 * [Scala 2.10.1](http://www.scala-lang.org/files/archive/api/2.10.1/)
 * [Scala 2.9.3](http://www.scala-lang.org/files/archive/api/2.9.3/)
 * [Scala 2.9.2](http://www.scala-lang.org/files/archive/api/2.9.2/)
