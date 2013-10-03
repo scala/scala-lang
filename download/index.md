@@ -1,7 +1,7 @@
 ---
 layout: maindownloadpage
 title: Download
-release_version: 2.10.2
+release_version: 2.10.3
 release_date: "June 6, 2013"
 other_releases: [
   ["maintenance_version", "Current maintenance release", 2.9.3, "February 28, 2013"],
