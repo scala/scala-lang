@@ -12,6 +12,7 @@ resources: [
   ["-main-unixsys", "scala-2.10.3.tgz",         "/files/archive/scala-2.10.3.tgz",         "Max OS X, Unix, Cygwin",   "20 MB"],
   ["-main-windows", "scala-2.10.3.msi",         "/files/archive/scala-2.10.3.msi",         "Windows (msi installer)",  "60 MB"]
 ]
+show_activator: "true"
 activator_version: 1.0.8
 activator_download: "http://downloads.typesafe.com/typesafe-activator/1.0.8/typesafe-activator-1.0.8.zip"
 ---

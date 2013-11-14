@@ -4,11 +4,26 @@ layout: page
 
 
 <div class="row-fluid">
+  
+  {% if page.show_activator == "true" %}
+
   <div class="span6">
     <p class="center">
       Get the latest Scala distribution<br>
       (<a href="./all.html">All downloads</a>).
     </p>
+
+  {% else %}
+
+  <div class="span12">
+    <p class="center">
+      Download Scala {{ page.release_version }} for your system
+      (<a href="./all.html">All downloads</a>).
+    </p>
+
+  {% endif %}
+
+    
 
     <div class="download-wrapper">
       <a id="download-button" class="download-button">
@@ -18,6 +33,8 @@ layout: page
       </a>
     </div>
   </div>
+  
+  {% if page.show_activator == "true" %}
   <div class="span6">
     <p class="center">
       Get Activator: Scala with templates<br> to get started
@@ -31,6 +48,8 @@ layout: page
       </a>
     </div>
   </div>
+  {% endif %}
+
 </div>
 
 <h3>Software Requirements</h3>
