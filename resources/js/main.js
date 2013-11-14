@@ -214,6 +214,7 @@ $(document).ready(function() {
   var link = anchor.getAttribute("href");
 
   $("#download-button").attr("href", link).addClass(osLabel);
+  $("#download-button-activator").addClass(osLabel);
 });
 
 /***********************

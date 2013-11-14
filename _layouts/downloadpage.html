@@ -2,17 +2,35 @@
 layout: page
 ---
 
-<p class="center">
-  Download Scala {{ page.release_version }} for your system
-  (<a href="./all.html">All downloads</a>).
-</p>
 
-<div class="download-wrapper">
-  <a id="download-button">
-    <span class="slider">Download</span>
-    <span class="icon"></span>
-    <span class="version{% if page.release_version.size > 7 %}-long{% endif %}">Scala {{ page.release_version }}</span>
-  </a>
+<div class="row-fluid">
+  <div class="span6">
+    <p class="center">
+      Get the latest Scala distribution<br>
+      (<a href="./all.html">All downloads</a>).
+    </p>
+
+    <div class="download-wrapper">
+      <a id="download-button" class="download-button">
+        <span class="slider">Download</span>
+        <span class="icon"></span>
+        <span class="version{% if page.release_version.size > 7 %}-long{% endif %}">Scala {{ page.release_version }}</span>
+      </a>
+    </div>
+  </div>
+  <div class="span6">
+    <p class="center">
+      Get Activator: Scala with templates<br> to get started
+    </p>
+
+    <div class="download-wrapper">
+      <a id="download-button-activator" class="download-button" href="{{ page.activator_download  }}">
+        <span class="slider">Download</span>
+        <span class="icon"></span>
+        <span class="version{% if page.activator_version.size > 4 %}-long{% endif %}">Activator {{ page.activator_version }}</span>
+      </a>
+    </div>
+  </div>
 </div>
 
 <h3>Software Requirements</h3>
