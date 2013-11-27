@@ -2,18 +2,51 @@
 layout: page
 ---
 
-<p class="center">
-  Download Scala {{ page.release_version }} for your system
-  (<a href="./all.html">All downloads</a>).
-</p>
+<h3 style="margin-top: 0px;">Choose one of three ways to get started with Scala!</h3>
 
-<div class="download-wrapper">
-  <a id="download-button">
-    <span class="slider">Download</span>
-    <span class="icon"></span>
-    <span class="version{% if page.release_version.size > 7 %}-long{% endif %}">Scala {{ page.release_version }}</span>
-  </a>
+<div class="bigcircle-wrapper">
+  <div class="bigcircle" style="float: left;">1</div>
+  <div class="bigcircle-content" style="float: left;">
+    <p class="center">
+      Download Scala {{ page.release_version }} binaries for your system
+      (<a href="./all.html">All downloads</a>).
+    </p>
+
+    <div class="download-wrapper">
+      <a id="download-button" style="margin-top: 12px;">
+        <span class="slider">Download</span>
+        <span class="icon"></span>
+        <span class="version{% if page.release_version.size > 7 %}-long{% endif %}">Scala {{ page.release_version }}</span>
+      </a>
+    </div>
+  </div>
 </div>
+
+<div class="bigcircle-wrapper">
+  <div class="bigcircle" style="float: right;">2</div>
+  <div class="bigcircle-content" style="float: right; margin-top: 32px;">
+    <p class="center" style="text-align: right;">
+      <a href="">Get started with Typesafe Activator</a>
+      <br/>
+      Typesafe Activator is a browser-based or command-line<br/>
+      tool that helps developers get started with Scala.
+    </p>
+  </div>
+</div>
+
+<div class="bigcircle-wrapper" style="height: 90px;">
+  <div class="bigcircle" style="float: left;">3</div>
+  <div class="bigcircle-content" style="float: left; margin-top: 34px;">
+    <p class="center" style="text-align: left;">
+      <a href="">Install one of the Scala IDEs</a>
+      <br/>
+      <a href="">The Scala IDE</a> (based on Eclipse), <a href="">IntelliJ IDEA with the Scala plugin</a>,</br>
+      or <a href="">NetBeans IDE with the Scala plugin</a>.
+    </p>
+  </div>
+</div>
+
+<p>&nbsp;</p>
 
 <h3>Software Requirements</h3>
 
