@@ -2533,6 +2533,7 @@ div#toc ul > li + ul > li { margin-top: 12px; }
 
 
 .bigcircle-wrapper {
+  overflow: auto;
   position: relative;
 }
 
@@ -2559,8 +2560,23 @@ div#toc ul > li + ul > li { margin-top: 12px; }
 }
 
 .bigcircle-content {
+  overflow: auto;
   margin-top: 24px;
   margin-bottom: 24px;
   height: 90px;
   position: relative;
+}
+
+.h3-style {
+  position: relative;
+  font-family: "museo-slab", serif;
+  font-weight: 400;
+  color: #27b3d9;
+  line-height: 1.1em;
+  font-size: 24.5px;
+  text-align: center;
+}
+
+.tilde {
+  color: rgba(226, 232, 235, 1);
 }
