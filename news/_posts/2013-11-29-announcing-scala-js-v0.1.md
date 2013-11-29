@@ -5,20 +5,19 @@ title: "Announcing Scala.js v0.1"
 by: "Sébastien Doeraene"
 ---
 
-It is my great pleasure to announce [Scala.js](http://www.scala-js.org/) v0.1.
-Introduced to the world during the 4th Scala Days in June 2013, Scala.js has
-reached relative stability (although it is not production-ready!) that deserves
-its first non-snapshot release.
+We're excited to announce the first release of [Scala.js](http://www.scala-js.org/), v0.1!
+Scala.js was introduced during the 4th Scala Days in June 2013, and has now
+reached relative stability. While we don't yet feel that Scala.js is production-ready, we
+think that it nonetheless deserves its first non-snapshot release.
 
-Scala.js is a compiler from Scala to JavaScript. It allows you to write your
-Web application entirely in Scala!
+Scala.js is a compiler from Scala to JavaScript. It allows you to write your entire
+web application in Scala and simply compile to JavaScript!
 
 ## Get started!
 
-Find all information on how to get started with Scala.js
+All information on how to get started with Scala.js is available
 [on the Website](http://www.scala-js.org/).
-You will also find there: documentation, mailing list, third-party libraries
-and tools, and so on.
+Documentation, a mailing list, third-party libraries and tools, are all available.
 
 ## Outstanding features
 
