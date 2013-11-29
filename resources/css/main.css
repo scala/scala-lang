@@ -224,7 +224,7 @@ a.brand {
   white-space: nowrap;
   font-size: 20px;
   font-weight: 700;
-  margin: 30px auto 50px;
+  margin: 30px auto 0px;
 }
 #download-button span {
   display: inline-block;
@@ -2560,10 +2560,8 @@ div#toc ul > li + ul > li { margin-top: 12px; }
 }
 
 .bigcircle-content {
-  overflow: auto;
   margin-top: 24px;
   margin-bottom: 24px;
-  height: 90px;
   position: relative;
 }
 
@@ -2579,4 +2577,10 @@ div#toc ul > li + ul > li { margin-top: 12px; }
 
 .tilde {
   color: rgba(226, 232, 235, 1);
+}
+
+.install {
+  font-size: 11px;
+  font-style: italic;
+  text-align: center;
 }
