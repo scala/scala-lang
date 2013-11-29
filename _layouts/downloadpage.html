@@ -2,17 +2,53 @@
 layout: page
 ---
 
-<p class="center">
-  Download Scala {{ page.release_version }} for your system
-  (<a href="./all.html">All downloads</a>).
-</p>
+<div class="h3-style" style="margin-top: 0px;">Choose one of three ways to get started with Scala!</div>
 
-<div class="download-wrapper">
-  <a id="download-button">
-    <span class="slider">Download</span>
-    <span class="icon"></span>
-    <span class="version{% if page.release_version.size > 7 %}-long{% endif %}">Scala {{ page.release_version }}</span>
-  </a>
+<div class="bigcircle-wrapper">
+  <div class="bigcircle" style="float: left;">1</div>
+  <div class="bigcircle-content" style="float: left;">
+    <p class="center">
+      Download Scala {{ page.release_version }} binaries for your system
+      (<a href="./all.html">All downloads</a>).
+    </p>
+
+    <div class="download-wrapper">
+      <a id="download-button" style="margin-top: 12px;">
+        <span class="slider">Download</span>
+        <span class="icon"></span>
+        <span class="version{% if page.release_version.size > 7 %}-long{% endif %}">Scala {{ page.release_version }}</span>
+      </a>
+    </div>
+    <p class="install"><a href="{{ site.baseurl }}/download/install.html">Need help installing?</a></p>
+  </div>
+</div>
+
+<div class="h3-style" style="color: #073642;"><i><span class="tilde">~</span> or <span class="tilde">~</span></i></div>
+
+<div class="bigcircle-wrapper">
+  <div class="bigcircle" style="float: right;">2</div>
+  <div class="bigcircle-content" style="float: right; margin-top: 32px;">
+    <p class="center" style="text-align: right;">
+      <a href="http://typesafe.com/activator"><b>Get started with Typesafe Activator</b></a>
+      <br/>
+      Typesafe Activator is a browser-based or command-line<br/>
+      tool that helps developers get started with Scala.
+    </p>
+  </div>
+</div>
+
+<div class="h3-style" style="color: #073642;"><i><span class="tilde">~</span> or <span class="tilde">~</span></i></div>
+
+<div class="bigcircle-wrapper">
+  <div class="bigcircle" style="float: left;">3</div>
+  <div class="bigcircle-content" style="float: left; margin-top: 34px;">
+    <p class="center" style="text-align: left;">
+      <a href="http://scala-ide.org/"><b>Install one of the Scala IDEs</b></a>
+      <br/>
+      <a href="http://scala-ide.org/">The Scala IDE</a> (based on Eclipse), <a href="http://www.jetbrains.com/idea/">IntelliJ IDEA with the Scala plugin</a>,</br>
+      or <a href="http://netbeans.org/">NetBeans IDE with the Scala plugin</a>.
+    </p>
+  </div>
 </div>
 
 <h3>Software Requirements</h3>

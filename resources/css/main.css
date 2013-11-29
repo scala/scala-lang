@@ -224,7 +224,7 @@ a.brand {
   white-space: nowrap;
   font-size: 20px;
   font-weight: 700;
-  margin: 30px auto 50px;
+  margin: 30px auto 0px;
 }
 #download-button span {
   display: inline-block;
@@ -2529,4 +2529,58 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   display: block;
   margin: 0 auto;
   clear: both;
+}
+
+
+.bigcircle-wrapper {
+  overflow: auto;
+  position: relative;
+}
+
+.bigcircle {
+  font-size: 48px;
+  top: -2px;
+  left: -2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 24px;
+  margin-left: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 32px;
+  color: #fff;
+  background: rgba(226, 232, 235, 0.8);
+  border-radius: 180px;
+  width: 90px;
+  height: 90px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+
+.bigcircle-content {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.h3-style {
+  position: relative;
+  font-family: "museo-slab", serif;
+  font-weight: 400;
+  color: #27b3d9;
+  line-height: 1.1em;
+  font-size: 24.5px;
+  text-align: center;
+}
+
+.tilde {
+  color: rgba(226, 232, 235, 1);
+}
+
+.install {
+  font-size: 11px;
+  font-style: italic;
+  text-align: center;
 }
