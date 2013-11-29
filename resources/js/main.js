@@ -447,7 +447,9 @@ $(document).ready(function(){
   }
 
   function onTrainingsAjaxSuccess(response, textStatus, jqXHR) {
-    var allTrainings = scalaLangTrainings.concat(response);
+    var allTrainings = scalaLangTrainings;
+    for (var i in response)
+      allTrainings = allTrainings.concat(response[i]);
     doPopulateTrainingsPane(allTrainings);
   }
 
