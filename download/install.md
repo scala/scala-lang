@@ -10,7 +10,7 @@ Start the Scala interpreter (aka the "REPL") by launching `scala` from where
 it was unarchived. Start the Scala compiler by launching `scalac` from where
 it was unarchived.
 
-#### Path and Environment
+## Path and Environment
 
 For quick access, add `scala` and `scalac` to your path. For example:
 
@@ -20,3 +20,10 @@ For quick access, add `scala` and `scalac` to your path. For example:
 |             | `$PATH`          | `$PATH:$SCALA_HOME/bin`
 | Windows     | `%SCALA_HOME%`   | `c:\Progra~1\Scala`
 |             | `%PATH%`         | `%PATH%;%SCALA_HOME%\bin`
+
+## Get Started with Scala
+
+Check out the 
+["first lines of clode" section of our getting started guide](http://scala-lang.org/documentation/getting-started.html#your_first_lines_of_code) 
+to take your first steps in Scala.
+
