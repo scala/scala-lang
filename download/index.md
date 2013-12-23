@@ -4,9 +4,8 @@ title: Download
 release_version: 2.10.3
 release_date: "June 6, 2013"
 other_releases: [
-  ["development_version", "Current 2.10.x release candidate", 2.10.4-RC1, "December 23, 2013"],
-  ["development_version", "Current development release", 2.11.0-M7, "November 27, 2013"],
   ["maintenance_version", "Current maintenance release", 2.9.3, "February 28, 2013"],
+  ["development_version", "Current development release", 2.11.0-M7, "November 27, 2013"]
 ]
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires the Java runtime version 1.6 or later, which can be downloaded <a href='http://www.java.com/'>here</a>."
 resources: [
