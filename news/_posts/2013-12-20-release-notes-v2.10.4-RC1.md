@@ -29,7 +29,7 @@ Before reporting a bug, please have a look at these [known issues](https://issue
 ### Scala IDE for Eclipse
 The Scala IDE with this release built right in is available through the following update-site:
 
-* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/)
+* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/next/e38/scala210/dev/site/) (The url is different from the usual one, note the `next/`.)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
