@@ -13,7 +13,7 @@ We are very happy to announce the first release candidate of Scala 2.10.4!
 If no serious blocking issues are found this will become the final 2.10.4 version.
 
 <!-- Substitute both version numbers here! -->
-The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.4-RC1.html) or from [Maven Central](http://search.maven.org/#search|ga|1|g:"org.scala-lang" AND v:"2.10.4-RC1").
+The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.4-RC1.html) or from [Maven Central](http://search.maven.org/#search|ga|1|g:%22org.scala-lang%22%20AND%20v%3A%222.10.4-RC1%22).
 
 The Scala team and contributors [fixed 23 issues since 2.10.3](https://issues.scala-lang.org/issues/?filter=12308)!
 
