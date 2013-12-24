@@ -17,7 +17,7 @@ The release is available for download from [scala-lang.org](http://scala-lang.or
 
 The Scala team and contributors [fixed 23 issues since 2.10.3](https://issues.scala-lang.org/issues/?filter=12308)!
 
-In total, 
+In total,
 [39 RC1 pull requests](https://github.com/scala/scala/issues?milestone=22&state=closed)
 were merged on [GitHub](https://github.com/scala/scala).
 
@@ -245,4 +245,3 @@ sha | Title
 [733b3220c9](https://github.com/scala/scala/commit/733b3220c9) | <notextile>SI-7815 Dealias before deeming method type as dependent</notextile>
 
 
-      
