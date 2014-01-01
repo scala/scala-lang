@@ -40,7 +40,7 @@ to existing classes, no matter whether they come from Scala or Java!
 
 ## Functional
 
-Even though it's syntax is fairly conventional, Scala is also a
+Even though its syntax is fairly conventional, Scala is also a
 full-blown functional language. It has everything you would expect,
 including first-class functions, a library with efficient immutable
 data structures, and a general preference of immutability
