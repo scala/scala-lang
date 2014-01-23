@@ -1,8 +1,8 @@
 ---
 layout: news
 post-type: news
-author: "Martin Odersky"
 title: "10 Years of Scala"
+by: "Martin Odersky"
 ---
 The first release of Scala
 [happened ten years ago](http://article.gmane.org/gmane.comp.lang.scala/17)
