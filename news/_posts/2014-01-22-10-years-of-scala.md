@@ -22,7 +22,7 @@ In particular, there were:
 * Early users who told the world about it: John Pretty, Miles Sabin, David Pollak, Dick Wall, Bill Venners, David McIver, Josh Suereth, Jonas Bonér, Viktor Klang, James Iry, Daniel Sobral and many others.
 * Phil Bagwell, who designed our core collection structures, and was a great spokesperson for the community.
 * Paul Phillips, who put in amazing work over many years.
-* The many active open-source committers, including Simon Ochsenreiter, Denys Shabalin, Pavel Pavlov, DominiqueGruntz, Rex Kerr.
+* The many active open-source committers, including Simon Ochsenreither, Denys Shabalin, Pavel Pavlov, Dominik Gruntz, Rex Kerr.
 * The Typesafe Scala team: Adriaan Moors, Jason Zaugg, Greg Kossakowski.
 * The people working hard on giving us good tooling: Scala IDE, IntelliJ, NetBeans, SBT, Ensime.
 * Lalit Pant, for making Scala accessible to children and Shadaj Laddad for showing how much fun Scala can be.
