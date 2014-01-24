@@ -89,8 +89,8 @@ You can find the installer download links for other operating systems, as well a
 {% for resource in page.resources %}
 <tr>
   <td>
-    <a id="#link{{ resource[0] }}" href="{{ resource[2] }}">
-      {{ resource[1] }}
+    <a id="#link{{ resource[0] | liquify }}" href="{{ resource[2] | liquify }}">
+      {{ resource[1] | liquify }}
     </a>
   </td>
   <td>{{ resource[3] }}</td>

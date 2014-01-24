@@ -10,8 +10,8 @@ other_releases: [
 ]
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires the Java runtime version 1.6 or later, which can be downloaded <a href='http://www.java.com/'>here</a>."
 resources: [
-  ["-main-unixsys", "scala-2.10.3.tgz",         "/files/archive/scala-2.10.3.tgz",         "Max OS X, Unix, Cygwin",   "20 MB"],
-  ["-main-windows", "scala-2.10.3.msi",         "/files/archive/scala-2.10.3.msi",         "Windows (msi installer)",  "60 MB"]
+  ["-main-unixsys", "scala-{{page.release_version}}.tgz",         "/files/archive/scala-{{page.release_version}}.tgz",         "Max OS X, Unix, Cygwin",   "20 MB"],
+  ["-main-windows", "scala-{{page.release_version}}.msi",         "/files/archive/scala-{{page.release_version}}.msi",         "Windows (msi installer)",  "60 MB"]
 ]
 ---
 
