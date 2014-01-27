@@ -19,7 +19,7 @@ All information on how to get started with Scala.js is available
 [on the Website](http://www.scala-js.org/).
 Documentation, a mailing list, third-party libraries and tools, are all available.
 
-## Outstanding features
+## Noteworthy features
 
 *   Support all of Scala (including macros!),
     modulo [a few semantic differences](http://www.scala-js.org/doc/semantics.html)

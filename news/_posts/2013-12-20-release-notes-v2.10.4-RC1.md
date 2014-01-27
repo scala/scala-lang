@@ -3,12 +3,6 @@ layout: news
 post-type: announcement
 title: "Scala 2.10.4-RC1 is now available!"
 ---
-<!--
-Things to update:
- - create new jira filters for fixed bugs, known issues,
- - link to closed milestone (after clearing milestone of un-merged PRs with https://github.com/adriaanm/binfu/blob/master/hubfu.sh#L29)
- - versions to search-replace: 2.10.4-RC1 (current release), 2.10.3 (previous release)
--->
 We are very happy to announce the first release candidate of Scala 2.10.4!
 If no serious blocking issues are found this will become the final 2.10.4 version.
 
