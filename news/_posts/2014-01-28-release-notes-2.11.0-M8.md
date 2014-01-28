@@ -2,7 +2,9 @@
 layout: news
 post-type: announcement
 title: "Scala 2.11.0-M8 is now available!"
+
 ---
+
 We are pleased to announce the final milestone release of Scala 2.11.0!
 
 Please do try out this release to help us find any regressions before the first release candidate, which is scheduled for February 18.
@@ -35,41 +37,27 @@ Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettin
 This release contains all of the bug fixes and improvements made in the 2.10 series, as well as:
 
 * Modularization
-
   * The core Scala standard library jar has shed 20% of its bytecode. The modules for xml, parsing, and swing are available individually or via [scala-library-all](http://search.maven.org/#artifactdetails%7Corg.scala-lang%7Cscala-library-all%7C2.11.0-M8%7Cpom).
-
   * The compiler has been internally modularized, to separate the presentation compiler, scaladoc
       and the REPL. In this release, all of these modules are still packaged in scala-compiler.jar.
       We plan to ship them in separate JARs in 2.12.x.
 * Slimming down
-
   * The experimental .NET backend has been removed from the compiler.
-
   * In Scala 2.10.0, new implementations of the Pattern Matcher and the Bytecode Emitter
       were shipped. We have now removed the old implementations.
-
   * scala-actors is now deprecated; we advise users to follow the steps in the [Actors Migration Guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors, which have been included in the distribution since 2.10.0.
-
   * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)
 * Language
-
   * Case classes with > 22 parameters are now supported [SI-7296](https://issues.scala-lang.org/browse/SI-7296)
-
   * Infer bounds of existential types [SI-1786](https://issues.scala-lang.org/browse/SI-1786)
 * REPL
-
   * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [Andrew Marki](https://github.com/som-snytt)!)
-
   * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
-
   * The interpreter can now be embedded as a JSR-166 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, [Raphael Jolly](https://github.com/rjolly)!)
 * Performance
-
   * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
-
   * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)
 * Warnings
-
   * Warn about unused private / local terms and types, and unused imports, under `-Xlint`. This will even tell you
       when a local `var` could be a `val`. (We might move these warnings to a separate command line option before
       the final release, your feedback is welcome here.)
@@ -88,11 +76,11 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
 13 | <notextile>Som Snytt</notextile>
 11 | <notextile>Paul Phillips</notextile>
 10 | <notextile>Rex Kerr</notextile>
-9 | <notextile>VladimirNik</notextile>
+9 | <notextile>Vladimir Nikolaev</notextile>
 8 | <notextile>Mirco Dotta</notextile>
 7 | <notextile>Miguel Garcia</notextile>
-7 | <notextile>R&radic;&ordm;diger Klaehn</notextile>
-5 | <notextile>Fran&radic;&szlig;ois Garillot</notextile>
+7 | <notextile>R&uuml;diger Klaehn</notextile>
+5 | <notextile>Fran&ccedil;ois Garillot</notextile>
 4 | <notextile>Simon Schaefer</notextile>
 4 | <notextile>Luc Bourlier</notextile>
 3 | <notextile>Denys Shabalin</notextile>
