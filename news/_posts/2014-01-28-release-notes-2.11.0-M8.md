@@ -3,12 +3,6 @@ layout: news
 post-type: announcement
 title: "Scala 2.11.0-M8 is now available!"
 ---
-<!-- comment at the top because it breaks the markdown parser when it's where we'd actually like it...
-Things to update:
-- replace 2.11.0-M8 by actual version
-- link to closed milestone (after clearing milestone of un-merged PRs with https://github.com/adriaanm/binfu/blob/master/hubfu.sh#L29)
--->
-
 We are pleased to announce the final milestone release of Scala 2.11.0!
 
 Please do try out this release to help us find any regressions before the first release candidate, which is scheduled for February 18.
