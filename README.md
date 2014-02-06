@@ -20,7 +20,7 @@ If in doubt, head over to the [Jekyll wiki](https://github.com/mojombo/jekyll/wi
 
 After cloning, cd into the `scala/scala-lang` directory and run:
 
-    jekyll --server
+    jekyll serve
 
 To see the generated site, just visit `http://localhost:4000`.
 
