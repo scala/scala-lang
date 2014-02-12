@@ -42,8 +42,74 @@ be thoroughly reviewed.
 
 * * *
 
-### Scala language
+### Miniboxing for Breeze and Spire
 
+A very tricky question in compilers is how to translate high level
+generic code, such as classes with type parameters to optimized low
+level code. Researchers have proposed many translations in the last 25
+years, yet we can't claim to have a perfect solution. This is because
+generic code is uniform at a high level, but its low level translation
+requires optimized non-uniform representations to obtain good
+performance. Thus we have an inherent tension between uniformity and
+optimality.
+
+In the context of the Java Virtual Machine, [miniboxing][mb1] is a new
+translation that sidesteps the shortcomings of previous approaches,
+while maintaing the optimality of the low level non-uniform code. It
+builds on the specialization transformation, which is already included
+in the [Scala compiler][mb2], but produces too much bytecode to be
+useful in practical applications. Although miniboxing is developed for
+the Scala language, the same transformation could also be implemented
+in [Java][mb3] and in other JVM languages, such as [IBM's X10][mb4],
+[JetBrains' Kotlin][mb5]  and [RedHat's Ceylon][mb6].
+
+The miniboxing transformation matches optimal performance in
+microbenchmarks, but in order to make a significant impact in the
+Scala community, it needs to be prove itself on large benchmarks, such
+as the [spire numeric abstractions library][mb7] and the [breeze numeric
+processing library][mb8]. In this context, the tasks for this project
+are:
+
+- develop the necessary mechanisms around the miniboxing plugin to
+  allow running the spire and breeze benchmarks
+- identify slowdowns caused by the miniboxing translation and
+- propose and implement solutions to improve the performance.
+
+This project requires familiarity with compilers (requirement: having
+taken at least one Compilers course), the Scala programming language
+(requirement: having taken the [Functional Programming in Scala][mb9]
+course) and with [Java bytecode][mb10]. Note that acceptance for this
+project is conditioned by the successful completion of a challenge,
+which will be explained once you apply for the project. A big plus is
+having contributed to OSS software writen in Scala.
+
+#### Resources
+- [the miniboxing plugin website][mb1]
+- [a paper explaining the generic code translation challenges and the
+  miniboxing transformation][mb11]
+- [miniboxing plugin on github][mb12] -- a compiler plugin that
+  introduces the miniboxing transformation in the compiler pipeline
+- [spire numeric abstractions library][mb7] on github
+- [breeze numerical processing, machine learning and natural language
+  processing library][mb8] on github
+
+Keywords:  generic code translation, miniboxing, specialization
+
+Mentored by [Vlad Ureche][mb13].
+
+[mb1]: http://scala-miniboxing.org/
+[mb2]: http://github.com/scala/scala
+[mb3]: http://docs.oracle.com/javase/7/docs/technotes/guides/language/index.html
+[mb4]: http://x10-lang.org
+[mb5]: http://kotlin.jetbrains.org/
+[mb6]: http://ceylon-lang.org/
+[mb7]: https://github.com/non/spire
+[mb8]: https://github.com/scalanlp/breeze
+[mb9]: https://www.coursera.org/course/progfun
+[mb10]: http://en.wikipedia.org/wiki/Java_bytecode
+[mb11]: http://infoscience.epfl.ch/record/188060
+[mb12]: https://github.com/miniboxing/miniboxing-plugin
+[mb13]: http://people.epfl.ch/vlad.ureche
 
 ## Requirements and Guidelines
 
@@ -52,7 +118,7 @@ be thoroughly reviewed.
 This is the fifth time the Scala project has applied to the Summer of
 Code, and from last years experience, increased popularity of the
 language and stories of other mentor organizations we expect a high
-number of applications. First, be aware of the following: 
+number of applications. First, be aware of the following:
 
 *   Make sure that you understand, fulfill and agree to the general
     [Google Summer of Code rules](http://www.google-melange.com/gsoc/document/show/gsoc_program/google/gsoc2014/help_page)
