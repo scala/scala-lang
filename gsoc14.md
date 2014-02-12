@@ -111,6 +111,115 @@ Mentored by [Vlad Ureche][mb13].
 [mb12]: https://github.com/miniboxing/miniboxing-plugin
 [mb13]: http://people.epfl.ch/vlad.ureche
 
+### MacroGL library
+
+OpenGL is a cross-language, multi-platform API for rendering 2D and 3D
+computer graphics. The API interacts with a GPU to achieve
+hardware-accelerated rendering. OpenGL is used heavily in the industry
+and is constantly evolving. On the JVM, namely Scala and Java, you can
+currently use OpenGL by relying either on the JOGL library (Java
+OpenGL) or LWJGL (Lightweight Java Game Library). Both libraries are
+low-level bindings on top of OpenGL - these libraries are ports of the
+C-like OpenGL API to Java.
+
+While this is highly configurable, programming with these low-level
+constructs may be cumbersome.
+
+- OpenGL state has to be manually set up before performing the desired
+  task, and then reverted to previous state once the task is done
+- Creating OpenGL objects like buffers, textures or shader programs
+  requires a large number of API calls and imperative state changes,
+  while it could be done declaratively for typical programs
+- Communicating values to shader programs requires imperative API
+  calls and dealing with the layout of shader variables in the OpenGL
+  programs
+- Error states have to be queried manually and there are not
+  exceptions being thrown, let alone error messages other than numeric
+  error codes.
+
+All this results in a lot of boilerplate code that is hard to understand, maintain and debug.
+
+The [MacroGL library](https://github.com/storm-enroute/macrogl) is a
+high-level API that allows writing more structured, yet efficient
+OpenGL code. Here are some of its features.
+
+- It provides structured constructs for setting transformation
+  matrices, OpenGL settings, textures, programs, buffers, and in
+  general setting up the rendering pipeline
+
+        for {
+          _ <- enabling(GL_CULL_FACE)
+          _ <- using.matrix(scene.camera.projectionMatrix)
+          _ <- using.matrix(scene.camera.modelviewMatrix)
+          _ <- using.texture(GL_TEXTURE0, shadowChannel)
+          b <- using.framebuffer(screenBuffer)
+          _ <- b.attachTexture2D(GL_COLOR_ATTACHMENT_0, screenChannel, 0)
+        } objectBuffer.render()
+
+  These for-comprehensions use Scala Macros to inline the
+  state-handling code and avoid object allocations for closures.
+
+- It prefers convention over configuration when declaratively
+  instantiating OpenGL objects like shaders:
+
+        val glowFilter = new Program("glowfilter")(
+          Program.Shader.Vertex(resources("glowfilter.vert")),
+          Program.Shader.Fragment(resources("glowfilter.frag"))
+        )
+
+- It allows easy communication between the Scala program and the
+  shaders:
+
+        glowFilter.uniform.width = width
+        glowFilter.uniform.height = height
+
+- Supports Vector and Matrix types
+- easier error querying
+- easy access to many rendering pipeline settings
+
+The current MacroGL functionality is, however, restricted to core
+OpenGL features. We would like to extend the library to completely
+cover the OpenGL API. Some of the features missing:
+- texture types - 1D, 3D, cube maps, texture arrays, mipmapping
+- tessellation and geometry shaders
+- implementing missing buffer types and consolidating the existing
+  buffer types
+- facilities efficiently uploading images to textures
+- we want to use the quasiquoting features of Scala 2.11 to simplify
+  macros in MacroGL and bring them more up-to-date
+- optional exception throwing when an error state is detected,
+  governed by ErrorPolicy typeclasses (must be turned off for
+  performance after development)
+- structured constructs for geometry rendering
+- allow a richer set of uniform variable types for shaders (currently
+  MacroGL API only supports integers, floats, float vectors and float
+  matrices)
+- avoiding boxing in some places, such as setting uniform variables
+  for shaders
+- implementing more Vector and Matrix types (e.g. integers), divide
+  them into mutable and immutable versions
+- parsing common 3d model formats and producing buffers
+
+The goal of this project is to provide a set of higher-level
+abstractions and a Scala-based API that works with JOGL, while in the
+same time retaining most of the performance and efficiency of
+JOGL. This should allow Scala programmer to write safer and more
+reliable OpenGL code which is also easier to understand and maintain.
+
+The final goal is to produce and document a usable, concise and
+powerful open source library for writing OpenGL programs more
+efficiently in Scala. Deliverables are the following:
+- implemented most of missing features described above and merged them
+  into the main distribution
+- MacroGL ported from Scala 2.10 to Scala 2.11, leaving 2.11 as the
+  development version
+- detailed documentation in form of a GitHub page, containing API
+  docs, overview of different features with descriptions, a getting
+  started guide, and several example use cases
+
+Mentored by [Aleksandar
+Prokopec](http://people.epfl.ch/aleksandar.prokopec)
+
 ## Requirements and Guidelines
 
 ### General Student Application Requirements
