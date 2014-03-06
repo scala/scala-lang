@@ -49,7 +49,7 @@ The following Scala projects have already been released against 2.11.0-RC1! We'd
     "com.typesafe.akka" %% "akka-actor"  % "2.3.0-RC4"
     "org.scalaz"        %% "scalaz-core" % "7.0.6"    
 
-NOTE: RC1 ships with akka-actor 2.3.0-RC4 (the final is out now, but wasn't yet available when RC1 was cut). The next Scala 2.11 RC will ship with (the identical) akka-actor 2.3.0 final.
+NOTE: RC1 ships with akka-actor 2.3.0-RC4 (the final is out now, but wasn't yet available when RC1 was cut). The next Scala 2.11 RC will ship with akka-actor 2.3.0 final.
 
 ### Cross-building with sbt 0.13
 When cross-building between Scala versions, you often need to vary the versions of your dependencies. In particular, the new scala modules (such as scala-xml) are no longer included in scala-library, so you'll have to add an explicit dependency on it to use Scala's xml support.
