@@ -4,15 +4,13 @@ post-type: announcement
 title: "Scala 2.11.0-RC1 is now available!"
 ---
 
-We are very pleased to announce the first release candidate of Scala 2.11.0!
+We are very pleased to announce the first release candidate of Scala 2.11.0! Download it now from [scala-lang.org](http://scala-lang.org/download/2.11.0-RC1.html) or via [Maven Central](http://search.maven.org/%23search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-RC1%22).
 
 Please do try out this release candidate to help us find any serious regressions before the final release. The next release candidate will be cut on Monday March 17, if there are no unresolved blocker bugs at noon (PST). Subsequent RCs will be released on a weekly schedule, with Monday at noon (PST) being the cut-off for blocker bug reports. Our goal is to have no more than three RCs for this release -- please help us achieve this by testing your project soon!
 
-For production use, we recommend the latest stable release, 2.10.3 (soon 2.10.4).
+Code that compiled on 2.10.x without deprecation warnings should compile on 2.11.x (we do no guarantee this for experimental APIs, such as reflection). If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression). We are working with the community to ensure availability of the core projects of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, to allow us to keep improving the Scala standard library.
 
-If your code compiled on 2.10.x without deprecation warnings (and did not use experimental APIs such as reflection), it should compile on 2.11.x. If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression). We are working with the community to ensure availability of the core artifacts of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, so that we can keep improving the Scala standard library.
-
-Scala 2.11.0-RC1 is available for download from [scala-lang.org](http://scala-lang.org/download/2.11.0-RC1.html) or from [Maven Central](http://search.maven.org/%23search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-RC1%22). The detailed releases notes are below as well as on [GitHub](https://github.com/scala/scala/releases/v2.11.0-RC1).
+For production use, we recommend the latest stable release, 2.10.3 (2.10.4 final coming soon).
 
 <!--break-->
 
@@ -22,7 +20,7 @@ The Scala team and contributors [fixed 544 bugs](https://issues.scala-lang.org/i
 
 Since the last milestone, we fixed [133 issues](https://issues.scala-lang.org/issues/?jql=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.11.0-RC1%22+AND+status+%3D+CLOSED+ORDER+BY+priority+DESC) via [154 merged pull requests](https://github.com/scala/scala/issues?milestone=27&state=closed).
 
-A big thank you to everyone who's helped make this release possible by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and  -- of course -- submitting and reviewing pull requests! You are all awesome.
+A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and -- of course -- submitting and reviewing pull requests! You are all awesome.
 
 Concretely, between Jan 2013 and today, [69 contributors](https://github.com/scala/scala/graphs/contributors?from=2013-1-1&to=2014-03-01&type=c) have helped improve Scala!
 
@@ -41,13 +39,15 @@ Before reporting a bug, please have a look at these [known issues](https://issue
 The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/dev/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 ### Available projects
-The following Scala projects have already been released against 2.11.0-RC1! We'd love to include your project once it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
+The following Scala projects have already been released against 2.11.0-RC1! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
-    "org.scalacheck"    %% "scalacheck"  % "1.11.3"   
-    "org.scalatest"     %% "scalatest"   % "2.1.0"    
-    "org.specs2"        %% "specs2"      % "2.3.9"    
-    "com.typesafe.akka" %% "akka-actor"  % "2.3.0-RC4"
-    "org.scalaz"        %% "scalaz-core" % "7.0.6"    
+    "org.scalacheck"    %% "scalacheck"         % "1.11.3"
+    "org.scalafx"       %% "scalafx"            % "1.0.0-R8"
+    "org.scalatest"     %% "scalatest"          % "2.1.0"
+    "org.specs2"        %% "specs2"             % "2.3.9"
+    "com.typesafe.akka" %% "akka-actor"         % "2.3.0-RC4"
+    "org.scalaz"        %% "scalaz-core"        % "7.0.6"
+    "com.nocandysw"     %% "platform-executing" % "0.5.0"
 
 NOTE: RC1 ships with akka-actor 2.3.0-RC4 (the final is out now, but wasn't yet available when RC1 was cut). The next Scala 2.11 RC will ship with akka-actor 2.3.0 final.
 
@@ -106,8 +106,8 @@ Deprecation is essential to two of the 2.11.x series' three themes ([faster/smal
 
 The following language "warts" have been deprecated:
 
-* [SI-7605](https://issues.scala-lang.org/browse/SI-7605) Procedure syntax.
-* [SI-5479](https://issues.scala-lang.org/browse/SI-5479) DelayedInit. We will continue support for the important `extends App` idiom. ([More details and a proposed alternative.](https://issues.scala-lang.org/browse/SI-4330?jql=labels%20%3D%20delayedinit%20AND%20resolution%20%3D%20unresolved))
+* [SI-7605](https://issues.scala-lang.org/browse/SI-7605) Procedure syntax (only under -Xfuture).
+* [SI-5479](https://issues.scala-lang.org/browse/SI-5479) DelayedInit. We will continue support for the important `extends App` idiom. We won't drop `DelayedInit` until there's a replacement for important use cases. ([More details and a proposed alternative.](https://issues.scala-lang.org/browse/SI-4330?jql=labels%20%3D%20delayedinit%20AND%20resolution%20%3D%20unresolved))
 * [SI-6455](https://issues.scala-lang.org/browse/SI-6455) Rewrite of `.withFilter` to `.filter`: you must implement `withFilter` to be compatible with for-comprehensions.
 * [SI-8035](https://issues.scala-lang.org/browse/SI-8035) Automatic insertion of `()` on missing argument lists.
 * [SI-6675](https://issues.scala-lang.org/browse/SI-6675) Auto-tupling in patterns.
@@ -175,7 +175,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
 * REPL
   * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [@som-snytt](https://github.com/som-snytt)!)
   * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
-  * The interpreter can now be embedded as a JSR-166 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, [Raphael Jolly](https://github.com/rjolly)!)
+  * The interpreter can now be embedded as a JSR-223 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, [Raphael Jolly](https://github.com/rjolly)!)
 * Warnings
   * Warn about unused private / local terms and types, and unused imports, under `-Xlint`. This will even tell you when a local `var` could be a `val`.
 * Slimming down the compiler
@@ -185,4 +185,4 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
 
 
 ### License clarification
-Scala is now distributed under the standard 3-clause BSD license. Originally, the same 3-clause BSD license was adopted, but slightly reworded over the years and the "Scala License" was born. We're now back to the standard formulation to avoid confusion.
+Scala is now distributed under the standard 3-clause BSD license. Originally, the same 3-clause BSD license was adopted, but slightly reworded over the years, and the "Scala License" was born. We're now back to the standard formulation to avoid confusion.
