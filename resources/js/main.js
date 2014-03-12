@@ -190,12 +190,15 @@ $(document).ready(function() {
 
   var osLabel = os.replace(/\s/g, '').toLowerCase();
 
-  $("#main-download-button").each(function() {
-    var unixLink = "{{ site.scala_maindownload_unix }}",
-        windowsLink = "{{ site.scala_maindownload_windows }}",
-        link = (os == "Windows") ? windowsLink : unixLink;
-    $(this).attr("href", link).addClass(osLabel);
-  });
+  // Removing the automatic download on the front page in favor of a
+  // link to the download page so people can see that activator is also
+  // a valid download choice.
+  // $("#main-download-button").each(function() {
+  //   var unixLink = "{{ site.scala_maindownload_unix }}",
+  //       windowsLink = "{{ site.scala_maindownload_windows }}",
+  //       link = (os == "Windows") ? windowsLink : unixLink;
+  //   $(this).attr("href", link).addClass(osLabel);
+  // });
 
   // Do not do any of the following if we're not on a download page
   // Otherwise a TypeError is raised and disables all other scripts on the page
@@ -220,21 +223,21 @@ $(document).ready(function() {
  * Main Page Download Button
  **********************/
 
-$(document).ready(function() {
-  var os = getOS();
-  if (os == "Unknown OS") os = "UNIX";
-  var hiddenDownload = $("#link-main-unixsys");
-  if (os == "Windows") {
-    hiddenDownload = $("#link-main-windows");
-  }
-  // get the right download link in place
-  var downloadLink = $("#download-btn");
-  if (downloadLink.length > 0) {
-    downloadLink.text("Download for " + os);
-    downloadLink.prop("href", hiddenDownload.attr("href"));
-  }
+// $(document).ready(function() {
+//   var os = getOS();
+//   if (os == "Unknown OS") os = "UNIX";
+//   var hiddenDownload = $("#link-main-unixsys");
+//   if (os == "Windows") {
+//     hiddenDownload = $("#link-main-windows");
+//   }
+//   // get the right download link in place
+//   var downloadLink = $("#download-btn");
+//   if (downloadLink.length > 0) {
+//     downloadLink.text("Download for " + os);
+//     downloadLink.prop("href", hiddenDownload.attr("href"));
+//   }
 
-});
+// });
 
 
 

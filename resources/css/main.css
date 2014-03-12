@@ -250,8 +250,10 @@ a.brand {
 }
 #download-button:hover .slider {
   padding-left: 20px;
+  margin-right: 0;
 }
-#download-button .icon {
+#download-button .icon,
+#download-button .activator .icon {
   width: 26px;
   height: 26px;
   margin: 7px;
@@ -268,9 +270,14 @@ a.brand {
        -o-transform: translateX(0);
           transform: translateX(0);
 }
-#download-button:hover .slider {
-  margin-right: 0;
+#download-button:hover.activator span {
+  -webkit-transform: translateX(24px);
+     -moz-transform: translateX(24px);
+      -ms-transform: translateX(24px);
+       -o-transform: translateX(24px);
+          transform: translateX(24px);
 }
+
 /* Ideally, we would have only this:
 #download-button:hover .icon {
   background-position-y: -26px;
@@ -301,6 +308,9 @@ a.brand {
 }
 #download-button.unix:hover .icon {
   background-position: -52px -26px;
+}
+#download-button.activator .icon {
+  background-position: 0 -26px;
 }
 
 #getting-started-popup {
