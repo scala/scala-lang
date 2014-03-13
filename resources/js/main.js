@@ -18,6 +18,7 @@ function getOS() {
 /***************************
  * Document initialization
  **************************/
+
 $(document).ready(function(){
 
   // background image on frontpage
@@ -185,6 +186,16 @@ function styleCode() {
  **********************/
 
 $(document).ready(function() {
+
+  // get the most up-to-date version of activator
+  $.getJSON("https://activator-prod.herokuapp.com/latest?callback=?", function(data) {
+   // update the page with the latest values
+   if (data.version != undefined) {
+     var activatorLink = $("#download-button.activator")
+     activatorLink.prop("href", "http://downloads.typesafe.com/typesafe-activator/" + data.version + "/typesafe-activator-" + data.version + ".zip")
+   }
+  })
+
   var os = getOS();
   if (os == "Unknown OS") os = "UNIX";
 
