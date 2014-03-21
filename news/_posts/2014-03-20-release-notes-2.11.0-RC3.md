@@ -42,19 +42,23 @@ The Scala IDE with this release built in is [available from this update site](ht
 The following Scala projects have already been released against 2.11.0-RC3! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
     "org.scalacheck"         %% "scalacheck"         % "1.11.3"
+    "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
+    "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
+    "com.github.scopt"       %% "scopt"              % "3.2.0"
+    "org.scalatest"          %% "scalatest"          % "2.1.2"
+    "org.specs2"             %% "specs2"             % "2.3.10"
+    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
+    "org.scala-lang.modules" %% "scala-async"        % "0.9.0"
 
 The following projects were released against 2.11.0-RC1, with an RC3 build hopefully following soon:
 
-    "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "org.scalatest"          %% "scalatest"          % "2.1.0"
-    "org.specs2"             %% "specs2"             % "2.3.9"
-    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
     "com.sksamuel.scrimage"  %% "scrimage"           % "1.3.16"
+
 
 ### Cross-building with sbt 0.13
 When cross-building between Scala versions, you often need to vary the versions of your dependencies. In particular, the new scala modules (such as scala-xml) are no longer included in scala-library, so you'll have to add an explicit dependency on it to use Scala's xml support.
