@@ -5,7 +5,6 @@ title: "Scala 2.10.4 is now available!"
 ---
 We are very happy to announce the final release of Scala 2.10.4!
 
-<!-- Substitute both version numbers here! -->
 The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.4.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20AND%20v%3A2.10.4).
 
 The Scala team and contributors [fixed 33 issues since 2.10.3](https://issues.scala-lang.org/issues/?filter=12502)!
@@ -13,8 +12,6 @@ The Scala team and contributors [fixed 33 issues since 2.10.3](https://issues.sc
 In total, 
 [36 RC1 pull requests](https://github.com/scala/scala/issues?milestone=22&state=closed), [12 RC2 pull requests](https://github.com/scala/scala/issues?milestone=28&state=closed) and [3 RC3 pull requests](https://github.com/scala/scala/issues?milestone=30&state=closed)
 were merged on [GitHub](https://github.com/scala/scala).
-
-<!--break-->
 
 ### Known Issues
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?filter=12503).
