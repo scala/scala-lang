@@ -14,6 +14,3 @@ resources: [
   ["-main-windows", "scala-2.10.4.msi",         "/files/archive/scala-2.10.4.msi",         "Windows (msi installer)",  "60 MB"]
 ]
 ---
-
-<!-- This page should be auto-generated - it is the main download page of the latest stable release -->
-
