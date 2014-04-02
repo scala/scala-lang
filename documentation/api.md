@@ -5,7 +5,7 @@ title: Scala API Docs
 
 ## Latest releases
 
-* [Scala 2.10.3](http://www.scala-lang.org/api/2.10.3/)
+* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 * Scala 2.11.0-RC3
   * [Library API](http://www.scala-lang.org/api/2.11.0-RC3/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.0-RC3/scala-compiler/)
