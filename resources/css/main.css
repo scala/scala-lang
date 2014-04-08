@@ -1,3 +1,5 @@
+---
+---
 /* ==========================================================================
    Custom styles, overrides bootstrap
    ========================================================================== */
@@ -2595,4 +2597,102 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   font-size: 11px;
   font-style: italic;
   text-align: center;
+}
+
+.highlighted-events {
+  width: 100%;
+  min-width:1024px;
+  /*padding: 40px;*/
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #002B36;
+  height: 180px;
+}
+
+#scaladays {
+  float: left;
+  height: 180px;
+  width: 450px;
+  background: url({{ site.baseurl }}/resources/img/scaladays2014.png) no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  #scaladays {
+    background-image: url('{{ site.baseurl }}/resources/img/scaladays2014@2x.png');
+    background-size: 450px 180px;
+  }
+}
+
+#scalawksp {
+  float: right;
+  height: 180px;
+  width: 450px;
+  background: url({{ site.baseurl }}/resources/img/scala2014.png) no-repeat;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  #scalawksp {
+    background-image: url('{{ site.baseurl }}/resources/img/scala2014@2x.png');
+    background-size: 450px 180px;
+  }
+}
+
+#scaladays-register-btn {
+  margin-top: 124px;
+  margin-left: 240px;
+  padding: 0 18px;
+  background: #DC322F; /*brighter color: 97BE49*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font: 700 14px/28px 'proxima-nova', sans-serif;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: none;
+  border: 0;
+}
+
+#scaladays-register-btn:hover {
+  background:#576D74;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  text-shadow:none;
+  color:#FFF;
+}
+
+#scalawksp-register-btn {
+  margin-top: 124px;
+  margin-left: 80px;
+  padding: 0 18px;
+  background: #DC322F; /*brighter color: 97BE49*/
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font: 700 14px/28px 'proxima-nova', sans-serif;
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  text-shadow: none;
+  border: 0;
+}
+
+#scalawksp-register-btn:hover {
+  background:#576D74;
+  -moz-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  text-shadow:none;
+  color:#FFF;
 }
