@@ -17,6 +17,7 @@ title: Scala API Docs
 * [Compiler API](http://www.scala-lang.org/files/archive/nightly/docs-master/compiler/)
 
 ## Previous releases
+* Scala 2.11.0-RC3: [Library API](http://www.scala-lang.org/api/2.11.0-RC3/), [Compiler API](http://www.scala-lang.org/api/2.11.0-RC3/scala-compiler/), [Reflection API](http://www.scala-lang.org/api/2.11.0-RC3/scala-reflect/)
 * Scala 2.11.0-RC1: [Library API](http://www.scala-lang.org/api/2.11.0-RC1/), [Compiler API](http://www.scala-lang.org/api/2.11.0-RC1/scala-compiler/), [Reflection API](http://www.scala-lang.org/api/2.11.0-RC1/scala-reflect/)
 * [Scala 2.11.0-M8](http://www.scala-lang.org/api/2.11.0-M8/)
 * [Scala 2.11.0-M7](http://www.scala-lang.org/api/2.11.0-M7/)
