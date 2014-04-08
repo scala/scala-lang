@@ -47,15 +47,17 @@ The Scala IDE with this release built in is [available from this update site](ht
 ### Available projects
 The following Scala projects have already been released against 2.11.0-RC4! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
+    "org.scalacheck"         %% "scalacheck"         % "1.11.3"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
     "org.scalatest"          %% "scalatest"          % "2.1.3"
     "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
+    "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
+    "com.chuusia"            %% "shapeless"          % "1.2.4"
+    "org.scala-macros"       %% "paradise"           % "2.0.0-M7"
 
 The following projects were released against 2.11.0-RC3, with an RC4 build hopefully following soon:
 
-    "org.scalacheck"         %% "scalacheck"         % "1.11.3"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "com.github.scopt"       %% "scopt"              % "3.2.0"
     "org.specs2"             %% "specs2"             % "2.3.10"
     "org.scalaz"             %% "scalaz-core"        % "7.0.6"
@@ -64,6 +66,8 @@ The following projects were released against 2.11.0-RC3, with an RC4 build hopef
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
     "com.sksamuel.scrimage"  %% "scrimage"           % "1.3.16"
+    "org.scala-stm"          %% "scala-stm"          % "0.7"
+    "org.monifu"             %% "monifu"             % "0.4"
 
 ### Cross-building with sbt 0.13
 When cross-building between Scala versions, you often need to vary the versions of your dependencies. In particular, the new scala modules (such as scala-xml) are no longer included in scala-library, so you'll have to add an explicit dependency on it to use Scala's xml support.
