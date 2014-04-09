@@ -52,15 +52,16 @@ The following Scala projects have already been released against 2.11.0-RC4! We'd
     "org.scalatest"          %% "scalatest"          % "2.1.3"
     "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
-    "com.chuusia"            %% "shapeless"          % "1.2.4"
-    "org.scala-macros"       %% "paradise"           % "2.0.0-M7"
+    "com.chuusai"            %% "shapeless"          % "1.2.4"
+    "com.chuusai"            %% "shapeless"          % "2.0.0"
+    "org.scalamacros"        %% "paradise"           % "2.0.0-M7"
+    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
+    "org.specs2"             %% "specs2"             % "2.3.10"
 
 The following projects were released against 2.11.0-RC3, with an RC4 build hopefully following soon:
 
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
     "com.github.scopt"       %% "scopt"              % "3.2.0"
-    "org.specs2"             %% "specs2"             % "2.3.10"
-    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
