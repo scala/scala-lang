@@ -57,6 +57,9 @@ The following Scala projects have already been released against 2.11.0-RC4! We'd
     "org.scalamacros"        %% "paradise"           % "2.0.0-M7"
     "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "org.specs2"             %% "specs2"             % "2.3.10"
+    "com.propensive"         %% "rapture-core"       % "0.9.0"
+    "com.propensive"         %% "rapture-json"       % "0.9.1"
+    "com.propensive"         %% "rapture-io"         % "0.9.1"
 
 The following projects were released against 2.11.0-RC3, with an RC4 build hopefully following soon:
 
