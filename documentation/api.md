@@ -5,11 +5,11 @@ title: Scala API Docs
 
 ## Latest releases
 
-* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 * Scala 2.11.0
   * [Library API](http://www.scala-lang.org/api/2.11.0/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.0/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.0/scala-reflect/)
+* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 
 ## Nightly builds
 
