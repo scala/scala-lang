@@ -3,12 +3,6 @@ layout: news
 post-type: announcement
 title: "Scala 2.11.0-RC4 is now available!"
 ---
-<!-- comment at the top because it breaks the markdown parser when it's where we'd actually like it...
-Things to update:
-- replace 2.11.0-RC4 by actual version,
-- milestone=32 by actual milestone number
-- bug/PR counts
--->
 
 We are very pleased to announce Scala 2.11.0-RC4, the next release candidate of Scala 2.11.0! Download it now from [scala-lang.org](http://scala-lang.org/download/2.11.0-RC4.html) or via [Maven Central](http://search.maven.org/%23search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-RC4%22).
 

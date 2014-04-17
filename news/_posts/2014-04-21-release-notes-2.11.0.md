@@ -3,13 +3,7 @@ layout: news
 post-type: announcement
 title: "Scala 2.11.0 is now available!"
 ---
-<!-- comment at the top because it breaks the markdown parser when it's where we'd actually like it...
-Things to update:
-- replace 2.11.0-RCX-1 by previous version,
-- replace 2.11.0-RCX by actual version,
-- milestone=32 by actual milestone number
-- bug/PR counts
--->
+
 
 We are very pleased to announce the final release of Scala 2.11.0! Download it now from [scala-lang.org](http://scala-lang.org/download/2.11.0.html) or via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22).
 
@@ -46,11 +40,12 @@ The following Scala projects have already been released against 2.11.0! We'd lov
 
     "org.scalacheck"         %% "scalacheck"         % "1.11.3"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
+    "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
+    "org.scalikejdbc"        %% "scalikejdbc-interpolation" % "2.0.0-beta1"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
     "org.scalatest"          %% "scalatest"          % "2.1.3"
-    "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "com.chuusai"            %% "shapeless"          % "1.2.4"
     "com.chuusai"            %% "shapeless"          % "2.0.0"
@@ -193,7 +188,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * A new experimental way of compiling closures, implemented by [@JamesIry](https://github.com/JamesIry). With `-Ydelambdafy:method` anonymous functions are compiled faster, with a smaller bytecode footprint. This works by keeping the function body as a private (static, if no `this` reference is needed) method of the enclosing class, and at the last moment during compilation emitting a small anonymous class that `extends FunctionN` and delegates to it. This sets the scene for a smooth migration to Java 8-style lambdas (not yet implemented).
   * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
 * Compiler Performance
-  * Incremental compilation has been improved significantly. To try it out, upgrade to sbt 0.13.2-M2 and add `incOptions := incOptions.value.withNameHashing(true)` to your build! Other build tools are also supported. More info at [this sbt issue](https://github.com/sbt/sbt/issues/1010) -- that's where most of the work happened. More features are planned, e.g. [class-based tracking](https://github.com/sbt/sbt/issues/1104).
+  * Incremental compilation has been improved significantly. To try it out, upgrade to sbt 0.13.2 and add `incOptions := incOptions.value.withNameHashing(true)` to your build! Other build tools are also supported. More info at [this sbt issue](https://github.com/sbt/sbt/issues/1010) -- that's where most of the work happened. More features are planned, e.g. [class-based tracking](https://github.com/sbt/sbt/issues/1104).
   * We've been optimizing the batch compiler's performance as well, and will continue to work on this during the 2.11.x cycle.
   * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)    
 * IDE
