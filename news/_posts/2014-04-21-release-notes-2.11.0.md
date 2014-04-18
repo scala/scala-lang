@@ -5,11 +5,15 @@ title: "Scala 2.11.0 is now available!"
 ---
 
 
-We are very pleased to announce the final release of Scala 2.11.0! Download it now from [scala-lang.org](http://scala-lang.org/download/2.11.0.html) or via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22).
+We are very pleased to announce the final release of Scala 2.11.0! 
 
-There have been no code changes since RC4, just improvements to documentation and version bump to the most recent stable version of Akk actors. Here's [difference between the release and RC4](https://github.com/scala/scala/compare/v2.11.0-RC4...v2.11.0).
+  - Try it out right now with [Typesafe Activator](http://typesafe.com/activator/template/hello-scala-2_11)
+  - Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.0.html)
+  - Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22)
 
-Code that compiled on 2.10.x without deprecation warnings should compile on 2.11.x (we do no guarantee this for experimental APIs, such as reflection). If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression). We are working with the community to ensure availability of the core projects of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, to allow us to keep improving the Scala standard library.
+There have been no code changes since RC4, just improvements to documentation and version bump to the most recent stable version of Akka actors. Here's [difference between the release and RC4](https://github.com/scala/scala/compare/v2.11.0-RC4...v2.11.0).
+
+Code that compiled on 2.10.x without deprecation warnings should compile on 2.11.x (we do not guarantee this for experimental APIs, such as reflection). If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression). We are working with the community to ensure availability of the core projects of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, to allow us to keep improving the Scala standard library.
 
 <!--break-->
 
@@ -17,11 +21,9 @@ The Scala 2.11.x series targets Java 6, with (evolving) experimental support for
 
 The Scala team and contributors [fixed 613 bugs](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20>%3D%20"Scala%202.11.0-M1"%20and%20fixVersion%20<%3D%20"Scala%202.11.0"%20and%20resolution%20%3D%20fixed) that are exclusive to Scala 2.11.0! We also backported as many as possible. With the release of 2.11, 2.10 backports will be dialed back.
 
-Since the last RC, we fixed [11 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20fixVersion%20%3D%20"Scala%202.11.0"%20AND%20resolution%20%3D%20fixed%20ORDER%20BY%20priority%20DESC) via [37 merged pull requests](https://github.com/scala/scala/issues?milestone=37&state=closed).
-
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and -- of course -- submitting and reviewing pull requests! You are all awesome.
 
-Concretely, according to `git log --no-merges --oneline master --not 2.10.x --format='%aN'  | sort | uniq -c | sort -rn`, 111 people contributed code, tests, and/or documentation to Scala 2.11.x: Paul Phillips,  Jason Zaugg,  Eugene Burmako,  Adriaan Moors,  A. P. Marki,  Simon Ochsenreither,  Den Shabalin,  Miguel Garcia,  Denys Shabalin,  James Iry,  Iain McGinniss,  Rex Kerr,  Grzegorz Kossakowski,  Vladimir Nikolaev,  Eugene Vigdorchik,  François Garillot,  Mirco Dotta,  Rüdiger Klaehn,  Raphael Jolly,  Simon Schaefer,  Kenji Yoshida,  Paolo Giarrusso,  Luc Bourlier,  Antoine Gourlay,  Hubert Plociniczak,  Aleksandar Prokopec,  Lex Spoon,  Andrew Phillips,  Vlad Ureche,  Sébastien Doeraene,  Josh Suereth,  Jean-Remi Desjardins,  Vojin Jovanovic,  Viktor Klang,  Valerian,  Prashant Sharma,  Pavel Pavlov,  Michael Thorpe,  Jan Niehusmann,  Heejong Lee,  George Leontiev,  Daniel C. Sobral,  Christoffer Sawicki,  yllan,  rjfwhite,  Volkan Yazıcı,  Ruslan Shevchenko,  Robin Green,  Roberto Tyley,  Olivier Blanvillain,  Mark Harrah,  Lukas Rytz,  James Ward,  Iulian Dragos,  Ilya Maykov,  Eugene Yokota,  Erik Osheim,  Dan Hopkins,  Chris Hodapp,  Antonio Cunei,  Andriy Polishchuk,  Alexander Clare,  杨博,  srinivasreddy,  secwall,  nermin,  martijnhoekstra,  kurnevsky,  jinfu-leng,  folone,  Yaroslav Klymko,  Xusen Yin,  Trent Ogren,  Tobias Schlatter,  Thomas Geier,  Stuart Golodetz,  Stefan Zeiger,  Scott Carey,  Samy Dindane,  Sagie Davidovich,  Runar Bjarnason,  Roland Kuhn,  Robert Nix,  Robert Ladstätter,  Rike-Benjamin Schuppner,  Rajiv,  Philipp Haller,  Nada Amin,  Mike Morearty,  Michael Bayne,  Luke Cycon,  Lee Mighdoll,  Konstantin Fedorov,  Julio Santos,  Julien Richard-Foy,  Juha Heljoranta,  Johannes Rudolph,  Jiawei Li,  Jentsch,  Jason Swartz,  James Roper,  Heather Miller,  Havoc Pennington,  Evgeny Kotelnikov,  Dmitry Petrashko,  Dmitry Bushev,  David Hall,  Daniel Darabos,  Dan Rosen,  Cody Allen,  Carlo Dapor,  Brian McKenna,  Andrey Kutejko,  Alden Torres.
+Concretely, according to `git log --no-merges --oneline master --not 2.10.x --format='%aN'  | sort | uniq -c | sort -rn`, 111 people contributed code, tests, and/or documentation to Scala 2.11.x: Paul Phillips,  Jason Zaugg,  Eugene Burmako,  Adriaan Moors,  A. P. Marki,  Simon Ochsenreither,  Den Shabalin,  Miguel Garcia,  James Iry,  Iain McGinniss,  Rex Kerr,  Grzegorz Kossakowski,  Vladimir Nikolaev,  Eugene Vigdorchik,  François Garillot,  Mirco Dotta,  Rüdiger Klaehn,  Raphael Jolly,  Simon Schaefer,  Kenji Yoshida,  Paolo Giarrusso,  Luc Bourlier,  Antoine Gourlay,  Hubert Plociniczak,  Aleksandar Prokopec,  Lex Spoon,  Andrew Phillips,  Vlad Ureche,  Sébastien Doeraene,  Josh Suereth,  Jean-Remi Desjardins,  Vojin Jovanovic,  Viktor Klang,  Valerian,  Prashant Sharma,  Pavel Pavlov,  Michael Thorpe,  Jan Niehusmann,  Heejong Lee,  George Leontiev,  Daniel C. Sobral,  Christoffer Sawicki,  yllan,  rjfwhite,  Volkan Yazıcı,  Ruslan Shevchenko,  Robin Green,  Roberto Tyley,  Olivier Blanvillain,  Mark Harrah,  Lukas Rytz,  James Ward,  Iulian Dragos,  Ilya Maykov,  Eugene Yokota,  Erik Osheim,  Dan Hopkins,  Chris Hodapp,  Antonio Cunei,  Andriy Polishchuk,  Alexander Clare,  杨博,  srinivasreddy,  secwall,  nermin,  martijnhoekstra,  kurnevsky,  jinfu-leng,  folone,  Yaroslav Klymko,  Xusen Yin,  Trent Ogren,  Tobias Schlatter,  Thomas Geier,  Stuart Golodetz,  Stefan Zeiger,  Scott Carey,  Samy Dindane,  Sagie Davidovich,  Runar Bjarnason,  Roland Kuhn,  Robert Nix,  Robert Ladstätter,  Rike-Benjamin Schuppner,  Rajiv,  Philipp Haller,  Nada Amin,  Mike Morearty,  Michael Bayne,  Luke Cycon,  Lee Mighdoll,  Konstantin Fedorov,  Julio Santos,  Julien Richard-Foy,  Juha Heljoranta,  Johannes Rudolph,  Jiawei Li,  Jentsch,  Jason Swartz,  James Roper,  Heather Miller,  Havoc Pennington,  Evgeny Kotelnikov,  Dmitry Petrashko,  Dmitry Bushev,  David Hall,  Daniel Darabos,  Dan Rosen,  Cody Allen,  Carlo Dapor,  Brian McKenna,  Andrey Kutejko,  Alden Torres.
 
 Thank you all very much.
 
@@ -33,31 +35,39 @@ Please [file any bugs you encounter](https://issues.scala-lang.org/secure/Create
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20fixVersion%20%21%3D%20%22Scala%202.11.0-RC3%22%20AND%20affectedVersion%20%3D%20%22Scala%202.11.0%22%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/dev/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 ### Available projects
 The following Scala projects have already been released against 2.11.0! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
-    "org.scalacheck"         %% "scalacheck"         % "1.11.3"
-    "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
-    "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
-    "org.scalikejdbc"        %% "scalikejdbc-interpolation" % "2.0.0-beta1"
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.3"
+    "org.scalatest"                    %% "scalatest"                 % "2.1.3"
+    "org.scalautils"                   %% "scalautils"                % "2.1.3"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.3.2"
+    "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.0.3"
+    "org.scala-lang.modules"           %% "scala-async"               % "0.9.1"
+    "org.scalikejdbc"                  %% "scalikejdbc-interpolation" % "2.0.0-beta1"
+    "com.softwaremill.scalamacrodebug" %% "macros"                    % "0.4"
+    "com.softwaremill.macwire"         %% "macros"                    % "0.6"
+    "com.chuusai"                      %% "shapeless"                 % "1.2.4"
+    "com.chuusai"                      %% "shapeless"                 % "2.0.0"
+    "org.nalloc"                       %% "optional"                  % "0.1.0"
+    "org.scalaz"                       %% "scalaz-core"               % "7.0.6"
+    "com.nocandysw"                    %% "platform-executing"        % "0.5.0"
+    "com.qifun"                        %% "stateless-future"          % "0.1.1"
+    "com.github.scopt"                 %% "scopt"                     % "3.2.0"
+    "com.dongxiguo"                    %% "fastring"                  % "0.2.4"
+    "com.github.seratch"               %% "ltsv4s"                    % "1.0.0"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
-    "org.scalatest"          %% "scalatest"          % "2.1.3"
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
-    "com.chuusai"            %% "shapeless"          % "1.2.4"
-    "com.chuusai"            %% "shapeless"          % "2.0.0"
     "org.scalamacros"        %% "paradise"           % "2.0.0-M7"
-    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "org.specs2"             %% "specs2"             % "2.3.10"
     "com.propensive"         %% "rapture-core"       % "0.9.0"
     "com.propensive"         %% "rapture-json"       % "0.9.1"
     "com.propensive"         %% "rapture-io"         % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "com.github.scopt"       %% "scopt"              % "3.2.0"
-    "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
