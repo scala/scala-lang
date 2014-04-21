@@ -14,4 +14,3 @@ resources: [
   ["-main-windows", "scala-2.11.0.msi", "http://downloads.typesafe.com/scala/2.11.0/scala-2.11.0.msi", "Windows (msi installer)", "89.00M"],
 ]
 ---
-
