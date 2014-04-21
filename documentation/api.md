@@ -9,6 +9,8 @@ title: Scala API Docs
   * [Library API](http://www.scala-lang.org/api/2.11.0/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.0/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.0/scala-reflect/)
+  * [Parser Combinators API](http://www.scala-lang.org/api/2.11.0/parser-combinators/)
+  * [XML API](http://www.scala-lang.org/api/2.11.0/xml/)
 * [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 
 ## Nightly builds
