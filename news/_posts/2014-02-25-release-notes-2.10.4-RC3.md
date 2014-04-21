@@ -6,7 +6,6 @@ title: "Scala 2.10.4-RC3 is now available!"
 We are very happy to announce the third release candidate of Scala 2.10.4!
 If no serious blocking issues are found this will become the final 2.10.4 version.
 
-<!-- Substitute both version numbers here! -->
 The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.4-RC3.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20AND%20v%3A2.10.4-RC3).
 
 The Scala team and contributors [fixed 31 issues since 2.10.3](https://issues.scala-lang.org/issues/?filter=12416)!
