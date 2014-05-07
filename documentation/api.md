@@ -8,7 +8,13 @@ title: Scala API Docs
 * Scala 2.11.0
   * [Library API](http://www.scala-lang.org/api/2.11.0/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.0/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.11.0/scala-reflect/)
+  * [Reflection API](http://www.scala-lang.org/api/2.11.0/scala-reflect/#scala.reflect.package)
+  * Scala Modules
+    * [XML API](http://www.scala-lang.org/api/2.11.0/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.11.0/scala-parser-combinators/)
+    * [Actors API](http://www.scala-lang.org/api/2.11.0/scala-actors/#scala.actors.package) (deprecated)
+    * [Swing API](http://www.scala-lang.org/api/2.11.0/scala-swing/#scala.swing.package)
+    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.0/scala-continuations-library/#scala.util.continuations.package)
 * [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 
 ## Nightly builds
