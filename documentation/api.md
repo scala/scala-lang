@@ -5,6 +5,24 @@ title: Scala API Docs
 
 ## Latest releases
 
+* Scala 2.11.1
+  * [Library API](http://www.scala-lang.org/api/2.11.1/)
+  * [Compiler API](http://www.scala-lang.org/api/2.11.1/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.11.1/scala-reflect/#scala.reflect.package)
+  * Scala Modules
+    * [XML API](http://www.scala-lang.org/api/2.11.1/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.11.1/scala-parser-combinators/)
+    * [Actors API](http://www.scala-lang.org/api/2.11.1/scala-actors/#scala.actors.package) (deprecated)
+    * [Swing API](http://www.scala-lang.org/api/2.11.1/scala-swing/#scala.swing.package)
+    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.1/scala-continuations-library/#scala.util.continuations.package)
+* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
+
+## Nightly builds
+
+* [Library API](http://www.scala-lang.org/files/archive/nightly/docs-master/library/)
+* [Compiler API](http://www.scala-lang.org/files/archive/nightly/docs-master/compiler/)
+
+## Previous releases
 * Scala 2.11.0
   * [Library API](http://www.scala-lang.org/api/2.11.0/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.0/scala-compiler/)
@@ -15,14 +33,6 @@ title: Scala API Docs
     * [Actors API](http://www.scala-lang.org/api/2.11.0/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.0/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.0/scala-continuations-library/#scala.util.continuations.package)
-* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
-
-## Nightly builds
-
-* [Library API](http://www.scala-lang.org/files/archive/nightly/docs-master/library/)
-* [Compiler API](http://www.scala-lang.org/files/archive/nightly/docs-master/compiler/)
-
-## Previous releases
 * [Scala 2.10.3](http://www.scala-lang.org/api/2.10.3/)
 * [Scala 2.10.2](http://www.scala-lang.org/api/2.10.2/)
 * [Scala 2.10.1](http://www.scala-lang.org/api/2.10.1/)
