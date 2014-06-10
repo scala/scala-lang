@@ -213,6 +213,32 @@ scalable, highly capable concurrent code.”
 
 <br />
 
+[**Scala Puzzlers**](http://www.artima.com/shop/scala_puzzlers)
+– **Available June 2014 (PrePrint Available Now)**
+by Andrew Phillips and Nermin Šerifović
+
+Published by [Artima Press](http://www.artima.com/index.jsp):
+
+<div class="row">
+  <div class="span2">
+    <div align="center">
+    <a href="http://www.artima.com/shop/scala_puzzlers">
+      <img src="/resources/img/books/puzzlersCover117x89.gif" alt="">
+    </a>
+    </div>
+  </div>
+  <div class="span8" style="padding-top: 15px;">
+
+"Getting code to do what we want it to do is perhaps the essence of our purpose as developers. 
+So there are few things more intriguing or important than code that we think we understand, but that behaves rather contrary to our expectations.
+
+Scala Puzzlers is a collection of such examples in Scala. It is not only an entertaining and instructive way of understanding this highly expressive language better. It will also help you recognize many counter-intuitive traps and pitfalls and prevent them from inflicting further production bug hunt stress on Scala developers."
+  </div>
+</div>
+
+<br />
+
+
 [**Beginning
 Scala**](http://www.apress.com/book/view/9781430219897)
 – **Available Now**
