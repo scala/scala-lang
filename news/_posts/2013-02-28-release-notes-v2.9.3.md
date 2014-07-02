@@ -2,6 +2,7 @@
 layout: news
 post-type: announcement
 title: "Scala 2.9.3 is now available!"
+permalink: /news/2.9.3
 ---
 We are happy to announce the final release of 2.9.3 in the Scala 2.9.x maintenance series!
 
