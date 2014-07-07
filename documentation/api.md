@@ -19,8 +19,8 @@ title: Scala API Docs
 
 ## Nightly builds
 
-* [Library API](http://www.scala-lang.org/files/archive/nightly/docs-master/library/)
-* [Compiler API](http://www.scala-lang.org/files/archive/nightly/docs-master/compiler/)
+* [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
+* [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
 
 ## Previous releases
 * Scala 2.11.0
