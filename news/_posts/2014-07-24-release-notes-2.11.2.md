@@ -2,7 +2,7 @@
 layout: news
 post-type: announcement
 title: "Scala 2.11.2 is now available!"
-permalink: /news/2.11.1
+permalink: /news/2.11.2
 ---
 We are very pleased to announce the release of Scala 2.11.2!
 
