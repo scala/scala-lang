@@ -613,11 +613,9 @@ $(document).ready(function(){
      * the construction of the display, in doPopulateTicketsPane().
      */
     $.ajax({
-      url: "https://issues.scala-lang.org/rest/api/2/search?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component&maxResults="+MAX_TICKETS_PER_PAGE+'&startAt='+startAt+'&fields=summary,issuetype,priority,components,description',
+      url: "http://www.scala-lang.org/cgi-bin/community-tickets?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component&maxResults="+MAX_TICKETS_PER_PAGE+'&startAt='+startAt+'&fields=summary,issuetype,priority,components,description',
       type: "GET",
-      dataType: "jsonp",
-      jsonp: 'jsonp-callback',
-      crossDomain: true,
+      dataType: "json",
       success: onAjaxSuccess,
       error: onAjaxError
     });
