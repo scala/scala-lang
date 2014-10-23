@@ -359,7 +359,7 @@ $(document).ready(function(){
   }
 
   $.ajax({
-    url: "{{ site.baseurl }}/cgi-bin/typesafe-feed-events",
+    url: "{{ site.baseurl }}/resources/php/typesafe-feed-events.php",
     type: "GET",
     dataType: "json",
     success: onEventsAjaxSuccess,
@@ -476,7 +476,7 @@ $(document).ready(function(){
   }
 
   $.ajax({
-    url: "{{ site.baseurl }}/cgi-bin/typesafe-feed-trainings",
+    url: "{{ site.baseurl }}/resources/php/typesafe-feed-trainings.php",
     type: "GET",
     dataType: "json",
     success: onTrainingsAjaxSuccess,
