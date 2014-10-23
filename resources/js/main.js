@@ -613,7 +613,7 @@ $(document).ready(function(){
      * the construction of the display, in doPopulateTicketsPane().
      */
     $.ajax({
-      url: "{{ site.baseurl }}/cgi-bin/community-tickets?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component&maxResults="+MAX_TICKETS_PER_PAGE+'&startAt='+startAt+'&fields=summary,issuetype,priority,components,description',
+      url: "{{ site.baseurl }}/resources/php/community-tickets.php?jql=project+in+%28SI,SUGGEST%29+AND+status+%3D+Open+AND+labels+%3D+community+ORDER+BY+component&maxResults="+MAX_TICKETS_PER_PAGE+'&startAt='+startAt+'&fields=summary,issuetype,priority,components,description',
       type: "GET",
       dataType: "json",
       success: onAjaxSuccess,
