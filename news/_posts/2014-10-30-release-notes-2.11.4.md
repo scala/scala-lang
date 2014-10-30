@@ -32,7 +32,7 @@ We have [analyzed](https://groups.google.com/d/msg/scala-internals/SSD9BNJaFbU/r
 
 A large number of Scala projects have been released against Scala 2.11. Please refer to the list of [libraries and frameworks available for Scala 2.11](https://github.com/scala/make-release-notes/blob/2.11.x/projects-2.11.md).
 
-A release of the Scala IDE that includes Scala 2.11.2 will be available shortly [on their download site](http://scala-ide.org/download/sdk.html).
+A release of the Scala IDE that includes Scala 2.11.4 is available [on their download site](http://scala-ide.org/download/milestone.html).
 
 ### Release Notes for the Scala 2.11 Series
 
