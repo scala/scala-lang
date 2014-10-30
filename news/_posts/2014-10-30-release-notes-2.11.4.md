@@ -8,7 +8,7 @@ We are very pleased to announce the release of Scala 2.11.4!
 
 * Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
 * Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.4.html)
-* Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.2%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.4%22)
+* Obtain it via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.4%22)
 
 Scala 2.11.4 is a bugfix release that is binary compatible with previous releases in the Scala 2.11 series.
 The changes include:
