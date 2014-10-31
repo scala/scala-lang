@@ -19,11 +19,11 @@ time (see [#3902](https://github.com/scala/scala/pull/3902). Kudos to [@gourlays
 * [Scala specification](http://www.scala-lang.org/files/archive/spec/2.11/) received a fair amount of love and became much more beatiful.  It has got syntax highlighting ([#3984](https://github.com/scala/scala/pull/3984)), linkable headers, and a side bar with TOC ([#3996](https://github.com/scala/scala/pull/3996)). A few final touches has been merged that fix typos and mistakes stemming from automatic Latex to Markdown conversion we've done a while ago. Thanks attention for details [@gourlaysama](https://github.com/gourlaysama), [@som-snytt](https://github.com/som-snytt) and [roberthoedicke](https://github.com/roberthoedicke)!
 * Non-deterministic pattern matching warnings has been fixed ([SI-7746](https://issues.scala-lang.org/browse/SI-7746)). Many thanks to [@gbasler](https://github.com/gbasler) for diving deep ([#3954](https://github.com/scala/scala/pull/3954])) into logical formulas constructed by our pattern matcher implementation!
 
-Compared to 2.11.2, this release resolves [54 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20(%22Scala%202.11.3%22%2C%20%22Scala%202.11.4%22)%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC). We reviewed and merged 120 [pull](https://github.com/scala/scala/pulls?q=is%3Apr+milestone%3A2.11.3) [requests](https://github.com/scala/scala/pulls?q=is%3Apr+milestone%3A2.11.4).
+Compared to 2.11.2, this release resolves [54 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20(%22Scala%202.11.3%22%2C%20%22Scala%202.11.4%22)%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC). Out of 120, we merged 95 pull requests: [90 for 2.11.3](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.3), and [5 for 2.11.4](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.4).
 
-The next minor Scala 2.11 release will be available in about a month, or sooner if prompted by a serious issue.
+The next minor Scala 2.11 release will be available before the end of the year, or sooner if prompted by a serious issue.
 
-### Do not use Scala 2.11.3
+### Do Not Use Scala 2.11.3
 Due to a [binary incompatibility](https://issues.scala-lang.org/browse/SI-8899) in Scala 2.11.3, we recommend upgrading to Scala 2.11.4, which resolves the incompatibility, as well as another [blocker issue](https://issues.scala-lang.org/browse/SI-8900) that was discovered in the days after the 2.11.3 release.
 
 We have [analyzed](https://groups.google.com/d/msg/scala-internals/SSD9BNJaFbU/rACBkHrs2JEJ) the mistakes that lead to the breakage (human error), and are taking measures to prevent this from happening again. We apologize for the inconvenience, and thank everyone who was involved in reporting and diagnosing these critical issues.
@@ -43,9 +43,7 @@ The release notes for the Scala 2.11 series, which also apply to the current min
 
 ### Contributors
 
-A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and submitting and reviewing pull requests!
-You are all awesome.
+A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and submitting and reviewing pull requests! You are all awesome.
 
-According to `git shortlog -sn --no-merges v2.11.2..v2.11.4`, 35 people contributed code to this minor release:
+According to `git shortlog -sn --no-merges v2.11.2..v2.11.4`, 35 people contributed to this minor release:
 Lukas Rytz, Adriaan Moors, Antoine Gourlay, A. P. Marki, Jason Zaugg, Robert Hoedicke, Eugene Burmako, Rex Kerr, Max Bileschi, Brian McKenna, Grzegorz Kossakowski, Maks Atygaev, Evgeny Vereshchagin, Simon Ochsenreither, Dominik Gruntz, Masato Sogame, Gerard Basler, Dan Garrette, Artem Stasuk, David Turner, Iulian Dragos, Jeroen ter Voorde, Kato Kazuyoshi, Konstantin Fedorov, Krystian Nowak, Lukas Elmer, Malte Isberner, Paolo Giarrusso, Paweł Wiejacha, Robert Hoedicke, dgruntz, Roman Janusz, harryhuk, Michał Pociecha.
-
