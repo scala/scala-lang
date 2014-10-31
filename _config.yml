@@ -1,7 +1,5 @@
 title: The Scala Programming Language
 
-scalaversion: "2.11.2"
-devscalaversion: 2.11.2"
-# scala_maindownload_unix: "/files/archive/scala-2.11.2.tgz"
-# scala_maindownload_windows: "/files/archive/scala-2.11.2.msi"
+scalaversion: "2.11.4"
+devscalaversion: 2.11.4"
 baseurl: ""
