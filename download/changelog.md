@@ -911,7 +911,7 @@ The model which details mixin composition of classes has changed significantly. 
 * Member resolution and super accesses are now both defined in terms of a *class linearization*.
 * Scala's notion of method overloading has been generalized; in particular, it is now possible to have overloaded variants of the           same method in a subclass and in a superclass, or in several different mixins. This makes method overloading in Scala conceptually the same as in Java.
 
-The new mixin model is explained in more detail in the [Scala Language Specification](/?q=node/35).
+The new mixin model is explained in more detail in the [Scala Language Specification](/files/archive/spec/2.11/).
 
 #### Implicit Parameters
 
