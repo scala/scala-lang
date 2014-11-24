@@ -25,7 +25,7 @@ title: Learn
       <p>Dive straight into the API.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/files/archive/nightly/pdfs/ScalaReference.pdf">Specification [PDF]</a></h3>
+      <h3><a href="{{ site.baseurl }}/files/archive/spec/2.11/">Specification</a></h3>
       <p>Get an in-depth overview of the language.</p>
     </div>
     <div class="span4 doc-block">
