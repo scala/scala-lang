@@ -14,8 +14,7 @@ listed here.
 - [Non-English Books](#NonEnglish)
 
 
-<a id="English"></a>
-### English Scala Books
+<h3 id="English">English Scala Books</h3>
 
 [**Programming in
 Scala**](http://www.artima.com/shop/programming_in_scala_2ed)
@@ -279,8 +278,7 @@ Scala**](http://manning.com/bjarnason)
 by Rúnar Bjarnason, Paul Chiusano, and Tony Morris
 
 
-<a id="NonEnglish"></a>
-### Non-English Scala Books
+<h3 id="NonEnglish">Non-English Scala Books</h3>
 
 [**Durchstarten mit
 Scala**](http://entwickler-press.de/ep/psecom,id,2,buchid,224.html)
