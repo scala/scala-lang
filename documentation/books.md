@@ -3,8 +3,6 @@ layout: page
 title: Books
 ---
 
-# Books
-
 There are more and more books being published about Scala. Here are some
 of the titles with their availability. We only list books here which give
 an introduction to the Scala Language. Books which require knowledge of
