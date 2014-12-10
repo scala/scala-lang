@@ -10,11 +10,11 @@ Scala, in particular books on frameworks like Lift, Play! or Akka are not
 listed here.
 
 
-- [English Books](#English)
-- [Non-English Books](#NonEnglish)
+- [English Books](#english_scala_books)
+- [Non-English Books](#nonenglish_scala_books)
 
 
-<h3 id="English">English Scala Books</h3>
+### English Scala Books
 
 [**Programming in
 Scala**](http://www.artima.com/shop/programming_in_scala_2ed)
@@ -278,7 +278,7 @@ Scala**](http://manning.com/bjarnason)
 by Rúnar Bjarnason, Paul Chiusano, and Tony Morris
 
 
-<h3 id="NonEnglish">Non-English Scala Books</h3>
+### Non-English Scala Books
 
 [**Durchstarten mit
 Scala**](http://entwickler-press.de/ep/psecom,id,2,buchid,224.html)
