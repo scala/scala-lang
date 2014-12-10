@@ -239,6 +239,29 @@ Scala Puzzlers is a collection of such examples in Scala. It is not only an ente
 <br />
 
 
+[**Learning Concurrent Programming in Scala**](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)
+– **Available Now**
+by Aleksandar Prokopec
+
+Published by [Packt Publishing](https://www.packtpub.com/):
+
+<div class="row">
+  <div class="span2">
+    <div align="center">
+    <a href="https://www.packtpub.com/application-development/learning-concurrent-programming-scala">
+      <img src="/resources/img/books/learningConcurrentProgrammingCover120x149.jpg" alt="">
+    </a>
+    </div>
+  </div>
+  <div class="span8" style="padding-top: 15px;">
+
+"This book is a must-have tutorial for software developers aiming to write concurrent programs in Scala, or broaden their existing knowledge of concurrency. It will give you an insight into the best practices necessary to build concurrent programs in Scala using modern, high-level concurrency libraries. It starts by introducing you to the foundations of concurrent programming on the JVM, outlining the basics of the Java Memory Model, and then shows some of the classic building blocks of concurrency, such as the atomic variables, thread pools, and concurrent data structures, along with the caveats of traditional concurrency. It then walks you through different high-level concurrency abstractions, each tailored toward a specific class of programming tasks. Finally, the book presents an overview of when to use which concurrency library and demonstrates how they all work together."
+  </div>
+</div>
+
+<br />
+
+
 [**Beginning
 Scala**](http://www.apress.com/book/view/9781430219897)
 – **Available Now**
