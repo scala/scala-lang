@@ -12,10 +12,10 @@ We are very pleased to announce the release of Scala 2.11.5!
 
 Scala 2.11.5 is a bugfix release that is binary compatible with previous releases in the Scala 2.11 series. We would like to highlight the following changes:
 
- - @heathermiller's [SI-6502 Reenables loading jars into the running REPL](https://github.com/scala/scala/pull/4051)
- - @mpociecha's [The alternative, flat representation of classpath elements](https://github.com/scala/scala/pull/4176)
- - @gbasler's [Avoid the 'CNF budget exceeded' exception via smarter translation into CNF](https://github.com/scala/scala/pull/4078)
- - @adriaanm's [SAMmy: eta-expansion, overloading, existentials](https://github.com/scala/scala/pull/4101)
+ - heathermiller's [SI-6502 Reenables loading jars into the running REPL](https://github.com/scala/scala/pull/4051)
+ - mpociecha's [The alternative, flat representation of classpath elements](https://github.com/scala/scala/pull/4176)
+ - gbasler's [Avoid the 'CNF budget exceeded' exception via smarter translation into CNF](https://github.com/scala/scala/pull/4078)
+ - adriaanm's [SAMmy: eta-expansion, overloading, existentials](https://github.com/scala/scala/pull/4101)
  - A great number of documentation improvements -- thank you (and, to those appearing for the first time in our release notes, welcome!): @kanielc, @lymia, @stevegury, @vigdorchik, @gourlaysama, @ichoran, @retronym, @xuwei-k, @dickwall, @phaller.
 
 Compared to 2.11.4, this release resolves [74 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.5%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC). Out of 132, we [merged 110 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.5). Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.5%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.5%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.
