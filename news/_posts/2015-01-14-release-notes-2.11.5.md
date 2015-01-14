@@ -19,7 +19,7 @@ Scala 2.11.5 is a bugfix release that is binary compatible with previous release
 
 Compared to 2.11.4, this release resolves [74 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.5%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC). Out of 132, we [merged 110 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.5). Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.5%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.5%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.
 
-The next minor Scala 2.11 release will be available before the end of the year, or sooner if prompted by a serious issue.
+In 2015, 2.11 minor releases will be released quarterly, or sooner if prompted by a serious issue.
 
 ### Scala IDE
 The current release of Scala IDE includes Scala 2.11.5 is available on the [download site](http://scala-ide.org/download/sdk.html) (or as an update to version 4.0 of the plugin).
