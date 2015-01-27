@@ -13,7 +13,7 @@ We are very pleased to announce the release of Scala 2.11.4!
 Scala 2.11.4 is a bugfix release that is binary compatible with previous releases in the Scala 2.11 series.
 The changes include:
 
-* Scala shell (REPL) is more friendly to Crtl+D. It leaves your terminal in a clean state and suggests using `:quit` the next
+* Scala shell (REPL) is more friendly to Ctrl+D. It leaves your terminal in a clean state and suggests using `:quit` the next
 time (see [#3902](https://github.com/scala/scala/pull/3902)). Kudos to [@gourlaysama](https://github.com/gourlaysama)!
 * REPL uses different colors when printing references to vals and types. Pass `-Dscala.color` to enable that behavior (see [#3993](https://github.com/scala/scala/pull/3993)). Thanks to [@puffnfresh](https://github.com/puffnfresh)!
 * [The Scala specification](http://www.scala-lang.org/files/archive/spec/2.11/) received a fair amount of love and became much more beautiful. It has got syntax highlighting ([#3984](https://github.com/scala/scala/pull/3984)), linkable headers, and a side bar with TOC ([#3996](https://github.com/scala/scala/pull/3996)). A few final touches has been merged that fix typos and mistakes stemming from automatic Latex to Markdown conversion we've done a while ago. Thanks for attention to details [@gourlaysama](https://github.com/gourlaysama), [@som-snytt](https://github.com/som-snytt) and [roberthoedicke](https://github.com/roberthoedicke)!
