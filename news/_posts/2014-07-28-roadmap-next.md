@@ -4,17 +4,17 @@ post-type: announcement
 title: "Scala: Next Steps"
 permalink: /news/roadmap-next
 ---
-As with every living programming language, Scala will continue to evolve. This document describes where the core Scala team sees the language going in the medium term and where we plan to invest our efforts. 
+As with every living programming language, Scala will continue to evolve. This document describes where the core Scala team sees the language going in the medium term and where we plan to invest our efforts.
 
 In a nutshell, our main goals are to make the language and its libraries simpler to understand, more robust, and better performing. The features described in this document span the next three major releases of the Scala distribution. Naturally, the planning for later releases is more tentative and fluid than for earlier ones.
 
-# Scala 2.12
+## Scala 2.12
 
 Scala 2.12’s main theme is Java 8 interoperability. It will support Java 8 lambdas and streams and will allow easy cross calls with these features in both directions. We recently published a [detailed feature list and roadmap](http://www.scala-lang.org/news/2.12-roadmap) for this release.
 
 We have not yet decided on version numbers for the releases beyond 2.12, so for the time being we will use opera names as designators.
 
-# Scala "Aida"
+## Scala "Aida"
 
 This release focuses on improving the standard library.
 
@@ -34,7 +34,7 @@ Backwards compatibility and migration strategy: The changes to collections might
 Prototypes of the new collection functionality and meta-programming libraries will be made available as separate libraries in the Scala 2.12 timeframe, so that projects can experiment with the new features early.
 
 
-# Scala "Don Giovanni"
+## Scala "Don Giovanni"
 
 The main focus for this release is the Scala programming language and its compiler. The new version should provide clear improvements in simplicity, usability and stability, while at the same time staying backwards compatible with current usage of the language.
 
