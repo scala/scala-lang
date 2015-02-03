@@ -18,7 +18,7 @@ At its core, Scala.js is a compiler from Scala to JavaScript.
 It compiles `.scala` files to a single optimized and minimized `.js` file per application.
 The resulting JavaScript code is vanilla ECMAScript 5.1, which therefore works everywhere – on any OS, any browser, or even on Node.js.
 Just like regular Scala, you get all the powerful language features that you know and love: type inference, classes, traits and objects, pattern matching, the collections library, implicits, etc.
-And, in the same way that Scala is fully interoperable with Java, Scala.js is fully interoperable with JavaScript. Scala.js can interoperate with JavaScript either in a statically-typed way, or by falling back to dynamic type checks.
+And, in the same way that Scala is fully interoperable with Java, Scala.js is fully interoperable with JavaScript. Scala.js can interoperate with JavaScript either in a statically or dynamically-typed way.
 
 While that all sounds great, a compiler would be nothing without an ecosystem of libraries and tools. Scala.js has that covered too!
 
