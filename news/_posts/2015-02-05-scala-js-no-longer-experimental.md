@@ -7,35 +7,35 @@ title: Scala.js no longer experimental
 
 Today, we [announced the release of Scala.js v0.6.0](http://www.scala-js.org/news/2015/02/05/announcing-scalajs-0.6.0/), the Scala to JavaScript compiler, and dropped the experimental flag associated to it.
 Yes, you read it right: Scala.js is no longer experimental!
-After exactly 2 years of development, we can finally call it production-ready.
+After exactly 2 years of development, we finally feel comfortable calling it production-ready.
 
-Note that Scala.js is not part of the Typesafe Reactive platform.
-Therefore, although we call it production-ready, Typesafe does not provide any commercial support for Scala.js.
+_Note, however, that Scala.js is not part of the Typesafe Reactive platform.
+Thus, although we consider Scala.js production-ready, Typesafe does not provide any commercial support for it._
 
 ## More than a compiler, an entire ecosystem
 
 At its core, Scala.js is a compiler from Scala to JavaScript.
-It compiles .scala files to a single optimized and minimized .js file per application.
-The resulting JavaScript code is plain old ECMAScript 5.1, and hence works everywhere: on any OS, any browser, or even on Node.js.
-Just like regular Scala, you get all the powerful language features that we know and love: type inference, classes, traits and objects, pattern matching, the collections library, implicits, and your personal favorite.
-And, as Scala is fully interoperable with Java, so is Scala.js with JavaScript, in a statically-typed way, or falling back to dynamically-typed code if you want.
+It compiles `.scala` files to a single optimized and minimized `.js` file per application.
+The resulting JavaScript code is vanilla ECMAScript 5.1, which therefore works everywhere – on any OS, any browser, or even on Node.js.
+Just like regular Scala, you get all the powerful language features that you know and love: type inference, classes, traits and objects, pattern matching, the collections library, implicits, etc.
+And, in the same way that Scala is fully interoperable with Java, Scala.js is fully interoperable with JavaScript. Scala.js can interoperate with JavaScript either in a statically-typed way, or by falling back to dynamic type checks.
 
-A compiler would be nothing without an ecosystem of libraries and tools, though, and we've got that covered too.
+While that all sounds great, a compiler would be nothing without an ecosystem of libraries and tools. Scala.js has that covered too!
 
-On the tooling side, you get to use your favorite IDE to develop in Scala.js: IntelliJ IDEA and Eclipse are known to work well, but there is no reason that any other editor wouldn't work.
-You get syntax highlighting, code completion (even for JavaScript libraries and the DOM!), jump-to-definition, and pretty much everything you could think of.
+You can use your favorite IDE to develop in Scala.js, and from experience, we can report that IntelliJ IDEA and Eclipse both provide a flawless development experience. Other editors should also work well.
+With Scala.js tooling, you get syntax highlighting, code completion (even for JavaScript libraries and the DOM!), jump-to-definition, and most other features you come to expect in a Scala tooling environment.
 After all, *Scala.js is just Scala*.
-Your IDE won't be able to run or debug Scala.js code, though; for that, you can use a browser, and you can even step through your Scala code because Scala.js emits [source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/).
+Though, your IDE won't be able to run or debug Scala.js code. For that, you can use a browser, and you can even step through your Scala code because Scala.js emits [source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/).
 
-To build Scala.js libraries and applications, there is an sbt plugin, which gives you the same comfort and development speed as with Scala/JVM.
+Building Scala.js libraries and applications is easy –  there is an sbt plugin, which gives you the same comfort and development speed as with Scala on the JVM.
 It can even run unit tests automatically with either Rhino, Node.js or PhantomJS, according to your needs.
 
 Scala.js also has a growing ecosystem of libraries, which you can depend on through Maven dependencies (`libraryDependencies` in sbt).
 They cover UI frameworks, statically-typed client-server communication, reactive extensions, and so on.
-Even some of the popular Scala libraries such as Shapeless and Scalaz cross-compile with Scala.js.
+Several popular Scala community libraries such as Shapeless and Scalaz cross-compile with Scala.js.
 
-Finally, Scala.js has a thriving community of nice and helpful people.
-Ask questions [on StackOverflow](http://stackoverflow.com/questions/tagged/scala.js), discuss [on the mailing list](https://groups.google.com/forum/#!forum/scala-js), and come hang around [in the Gitter chat room](https://gitter.im/scala-js/scala-js).
+Finally, we're proud that Scala.js has a thriving community of nice and helpful people.
+Ask questions [on StackOverflow](http://stackoverflow.com/questions/tagged/scala.js), discuss [on the mailing list](https://groups.google.com/forum/#!forum/scala-js), and discuss with us [in the Gitter chat room](https://gitter.im/scala-js/scala-js).
 
 ## Why Scala.js is awesome
 
@@ -74,7 +74,7 @@ Here are also a few selected quotes from the mailing list discussion.
 > Scala might be a nice language, but you've never been able to use it to make anything cool that a non-backend-systems person would understand.
 > [...]
 > With Scala.js, you can easily create small Scala applications and email the tiny 100kb executables (or just the link to them) to anyone, who can run them on any modern device, even smartphones.
-> Made a cute game? A fun visualization? An animated sequence? Now you can show the world. 
+> Made a cute game? A fun visualization? An animated sequence? Now you can show the world.
 >
 > Scala's no longer just for distributed systems people and type-theorists!
 > -- <cite>Li Haoyi</cite>
@@ -118,20 +118,20 @@ Here are also a few selected quotes from the mailing list discussion.
 > Scala.js is simply the best option available on browsers today, if you're looking for a language with a powerful yet flexible type system.
 > -- <cite>Xavier Cho</cite>
 
-## Why removing the experimental flag now?
+## Why remove the experimental flag now?
 
-Many Scala.js users would say that it has been production-ready for quite some time, now.
+Many Scala.js users would say that it has been production-ready for quite some time already.
 Possibly as early as 0.5.0, which was released in June 2014.
 So why do we choose to remove the experimental flag now?
 What has changed?
 
-The big difference is *stability* in terms of several aspects:
+The big difference is several different aspects of *stability*:
 
 * The semantics of the language are settled. They may still evolve in a backward compatible way (defining previously undefined behaviors), but will otherwise not change anymore.
 * The standard library of Scala.js (the `scala.scalajs.js` package) will remain backward source and binary compatible.
 * The sbt builds will remain backward source compatible.
 
-Of course, we must still be able to evolve the library and the builds, so things might become deprecated, and eventually removed, but will do so on a very slow pace.
+Of course, we must still be able to evolve the library and the builds, so things might become deprecated, and eventually removed, but will do so at a slower pace than before.
 
 All things considered, this means that the code you write today, for Scala.js 0.6.0, will continue to work throughout 0.6.x and 1.x.y unchanged.
 
@@ -139,15 +139,15 @@ All things considered, this means that the code you write today, for Scala.js 0.
 It seems like these properties satisfy to the requirements of a 1.0.0 version.
 What are you hiding?"
 
-If, on all the user-visible aspects, everything is now stable, it is still not true for one almost-implementation detail: the format of the intermediate files of Scala.js, the `.sjsir` files.
-These files are basically the Scala.js equivalent of `.class` files for the JVM.
-We're not yet completely sure of their format, and we suspect we might still want to change it in the couple coming months.
-Now, changing this format means breaking binary compatibility (by definition), and therefore would require a change in major version number.
-So we're reserving ourselves a last chance of modifying these without jumping straight to 2.0.0.
+While from all user-visible points of view Scala.js is stable, there remains just one quasi-implementation detail which might have to change in future versions – the format of the intermediate files of Scala.js, the `.sjsir` files.
+These files are essentially the Scala.js equivalent of `.class` files for the JVM.
+We're not yet completely certain that we're settled on their format, so we'd like to reserve the possibility of changing it in the coming months.
+Doing so means breaking binary compatibility (by definition), and therefore would require a change in major version number.
+So we're not yet jumping to version 1.0.0 just yet – this is so that we may give ourselves one last chance to modify the Scala.js intermediate format before we make the leap to our first major version.
 
-But otherwise, every other aspect of Scala.js is as stable as it get before getting widespread adoption.
+Though, rest assured! We're confident that Scala.js is otherwise stable and ready for widespread adoption.
 
-### Getting started
+## Getting started
 
 There are three main ways to get started with Scala.js:
 
@@ -156,4 +156,4 @@ There are three main ways to get started with Scala.js:
 * The online sandbox [Scala.jsFiddle](http://www.scala-js-fiddle.com/)
 
 So go ahead!
-Use it, love it, and build the Web applications of the future!
+Use it, love it, and build the web applications of the future!
