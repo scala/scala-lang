@@ -62,7 +62,7 @@ Here are also a few selected quotes from the mailing list discussion.
 > having the compiler type-check your code makes it *much* quicker to get complex, sophisticated systems up and running.
 >
 > Also, having the same language, end-to-end, is fabulous.
-> [...]
+> \[...\]
 > With Scala.js, for the first time ever, I have a single solid, strongly-typed language that I can use throughout the system -- from the fiddly details of the UI, through the API definitions and the front-end web server, to the Akka middleware and the database back end.
 > That's really kind of amazing.
 > It is also why I personally think Scala.js is the killer app for Scala as a language.
@@ -72,7 +72,7 @@ Here are also a few selected quotes from the mailing list discussion.
 
 > In a lot of ways, Scala.js frees your Scala code from the confines of the headless Linux server that it's been running on for years.
 > Scala might be a nice language, but you've never been able to use it to make anything cool that a non-backend-systems person would understand.
-> [...]
+> \[...\]
 > With Scala.js, you can easily create small Scala applications and email the tiny 100kb executables (or just the link to them) to anyone, who can run them on any modern device, even smartphones.
 > Made a cute game? A fun visualization? An animated sequence? Now you can show the world.
 >
@@ -101,7 +101,7 @@ Here are also a few selected quotes from the mailing list discussion.
 
 <p></p>
 
-> [...] Scala.js has one of the smartest and most responsive communities I have ever seen.
+> \[...\] Scala.js has one of the smartest and most responsive communities I have ever seen.
 > You, Li Haoyi, and many other posters here have contributed to making this platform welcoming to newcomers.
 > The help I've received here has encouraged me to learn Scala proper, as well as many interesting functional programming concepts.
 > -- <cite>Travis Good</cite>
