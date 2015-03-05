@@ -5,6 +5,24 @@ title: Scala API Docs
 
 ## Latest releases
 
+* Scala 2.11.6
+  * [Library API](http://www.scala-lang.org/api/2.11.6/)
+  * [Compiler API](http://www.scala-lang.org/api/2.11.6/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.11.6/scala-reflect/#scala.reflect.package)
+  * Scala Modules
+    * [XML API](http://www.scala-lang.org/api/2.11.6/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.11.6/scala-parser-combinators/)
+    * [Actors API](http://www.scala-lang.org/api/2.11.6/scala-actors/#scala.actors.package) (deprecated)
+    * [Swing API](http://www.scala-lang.org/api/2.11.6/scala-swing/#scala.swing.package)
+    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.6/scala-continuations-library/#scala.util.continuations.package)
+* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
+
+## Nightly builds
+
+* [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
+* [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
+
+## Previous releases
 * Scala 2.11.5
   * [Library API](http://www.scala-lang.org/api/2.11.5/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.5/scala-compiler/)
@@ -15,14 +33,6 @@ title: Scala API Docs
     * [Actors API](http://www.scala-lang.org/api/2.11.5/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.5/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.5/scala-continuations-library/#scala.util.continuations.package)
-* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
-
-## Nightly builds
-
-* [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
-* [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
-
-## Previous releases
 * Scala 2.11.4
   * [Library API](http://www.scala-lang.org/api/2.11.4/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.4/scala-compiler/)
