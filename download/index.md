@@ -4,9 +4,9 @@ title: Download
 release_version: 2.11.6
 release_date: "March 5, 2015"
 other_releases: [
-  ["maintenance_version", "Current 2.9.x maintenance release", 2.9.3, "February 28, 2013"],
-  ["maintenance_version", "Current 2.10.x maintenance release", 2.10.4, "March 24, 2014"],
-  ["development_version", "Current 2.11.x release", 2.11.6, "January 14, 2015"]
+  ["maintenance_version", "Last 2.9.x maintenance release", 2.9.3, "February 28, 2013"],
+  ["maintenance_version", "Last 2.10.x maintenance release", 2.10.5, "March 5, 2015"],
+  ["development_version", "Current 2.11.x release", 2.11.6, "March 5, 2015"]
 ]
 requirements: "The Scala software distribution can be installed on any platform with a <a href='http://www.java.com/'>Java runtime</a>, version 1.6 or later."
 resources: [

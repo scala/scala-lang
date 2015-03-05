@@ -15,7 +15,7 @@ title: Scala API Docs
     * [Actors API](http://www.scala-lang.org/api/2.11.6/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.6/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.6/scala-continuations-library/#scala.util.continuations.package)
-* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
+* [Scala 2.10.5](http://www.scala-lang.org/api/2.10.5/)
 
 ## Nightly builds
 
@@ -73,6 +73,7 @@ title: Scala API Docs
     * [Actors API](http://www.scala-lang.org/api/2.11.0/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.0/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.0/scala-continuations-library/#scala.util.continuations.package)
+* [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 * [Scala 2.10.3](http://www.scala-lang.org/api/2.10.3/)
 * [Scala 2.10.2](http://www.scala-lang.org/api/2.10.2/)
 * [Scala 2.10.1](http://www.scala-lang.org/api/2.10.1/)
