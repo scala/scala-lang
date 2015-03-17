@@ -43,17 +43,17 @@ Coordination of contribution efforts takes place on the
 <p>Update and expand the capabilities of the core (and associated) Scala libraries.</p>
 </div>
 <div class="span4 doc-block">
+<h4><a href="./tools.html">IDE and Build Tools</a></h4>
+<p>Enhance the Scala tools with features for build tools, IDE plug-ins and other related projects.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="span4 doc-block">
 <h4><a href="./guide.html#larger-changes-new-features">Compiler/Language</a></h4>
 <p>Larger language features and compiler enhancements including language specification and SIPs.</p>
 </div>
 </div>
-
-<!--<div class="row">
-<div class="span4 doc-block">
-<h4><a href="./tools.html">Tools</a></h4>
-<p>Enhance the Scala tooling ecosystem with features for build tools, IDE plug-ins and other related tools.</p>
-</div>
-</div> -->
 </div>
 
 ### Community Tickets
@@ -90,7 +90,7 @@ various contributor activities:
 <p>All bugs marked with the label <em>community</em>.</p>
 </div>
 <div class="span4 doc-block">
-<h4><a href="https://issues.scala-lang.org/issues/?filter=12111">All Issues</a></h4>
+<h4><a href="https://issues.scala-lang.org/issues/?filter=13009">All Issues</a></h4>
 <p>Bugs + Enhancements marked with the label <em>community</em>.</p>
 </div>
 </div>
