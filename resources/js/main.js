@@ -416,7 +416,7 @@ $(document).ready(function(){
         result.push({
           title: training.title,
           description: training.description,
-          url: training.url,
+          url: session.url,
           where: session.where,
           when: session.when,
           trainers: session.trainers,
