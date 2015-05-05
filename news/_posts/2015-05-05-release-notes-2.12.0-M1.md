@@ -44,7 +44,7 @@ The following changes are planned for Scala 2.12:
   Scala 2.12 will also ship with a new inliner and bytecode optimizer.
   We keep track of issues and work items for the new optimizer on the [scala-opt repostiory issue tracker](https://github.com/scala-opt/scala/issues).
 
-The above list is incomplete and will be extendend during the Scala 2.12 milestone cycle.
+The above list is incomplete and will be extended during the Scala 2.12 milestone cycle.
 
 Up the current milestone, the Scala team and contributors [fixed 47 bugs](https://issues.scala-lang.org/browse/SI-9200?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%222.12.0-M1%22%20and%20fixVersion%20%3C%3D%20%222.12.0%22%20and%20resolution%20%3D%20fixed) that are exclusive to Scala 2.12.0.
 During the development cycle of Scala 2.12, we will continue to backport issues to 2.11 whenever feasible.
