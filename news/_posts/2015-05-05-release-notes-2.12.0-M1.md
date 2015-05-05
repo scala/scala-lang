@@ -31,6 +31,7 @@ Scala 2.12 contains all of the bug fixes and improvements made in the 2.11 serie
 At the current stage in the milestone cycle, Scala 2.12 is still very similar to Scala 2.11.
 
 The following changes are planned for Scala 2.12:
+
   * Java 8 style closures.
     The Scala compiler will emit closure classes (lambdas) in the same manner as Java 8.
     The design notes for this feature are available in [this gist](https://gist.github.com/retronym/0178c212e4bacffed568).
@@ -84,6 +85,7 @@ Deprecation is closely linked to source and binary compatibility. We say two ver
 #### Removed Modules
 
 The following modules have been removed from the Scala 2.12 distribution:
+
   * The Scala actors library is no longer released with Scala 2.12.
     We recommend that you use the [Akka actors library](http://akka.io/) instead.
     To migrate your code, follow the [Scala actors migration guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) before upgrading your project to Scala 2.12.
