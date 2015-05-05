@@ -32,17 +32,17 @@ At the current stage in the milestone cycle, Scala 2.12 is still very similar to
 
 The following changes are planned for Scala 2.12:
 
-  * Java 8 style closures.
-    The Scala compiler will emit closure classes (lambdas) in the same manner as Java 8.
-    The design notes for this feature are available in [this gist](https://gist.github.com/retronym/0178c212e4bacffed568).
-  * Lambda syntax for SAM types.
-    Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
-    This feature is already avalable in Scala 2.11 using the `-Xexperimental` compiler option.
-    It improves the experience of using libraries written for Java 8 in Scala.
-  * New backend and optimizer.
-    The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
-    Scala 2.12 will also ship with a new inliner and bytecode optimizer.
-    We keep track of issues and work items for the new optimizer on the [scala-opt repostiory issue tracker](https://github.com/scala-opt/scala/issues).
+* Java 8 style closures.
+  The Scala compiler will emit closure classes (lambdas) in the same manner as Java 8.
+  The design notes for this feature are available in [this gist](https://gist.github.com/retronym/0178c212e4bacffed568).
+* Lambda syntax for SAM types.
+  Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
+  This feature is already avalable in Scala 2.11 using the `-Xexperimental` compiler option.
+  It improves the experience of using libraries written for Java 8 in Scala.
+* New backend and optimizer.
+  The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
+  Scala 2.12 will also ship with a new inliner and bytecode optimizer.
+  We keep track of issues and work items for the new optimizer on the [scala-opt repostiory issue tracker](https://github.com/scala-opt/scala/issues).
 
 The above list is incomplete and will be extendend during the Scala 2.12 milestone cycle.
 
@@ -86,12 +86,12 @@ Deprecation is closely linked to source and binary compatibility. We say two ver
 
 The following modules have been removed from the Scala 2.12 distribution:
 
-  * The Scala actors library is no longer released with Scala 2.12.
-    We recommend that you use the [Akka actors library](http://akka.io/) instead.
-    To migrate your code, follow the [Scala actors migration guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) before upgrading your project to Scala 2.12.
-  * The Scala distribution archives and the `scala-library-all` maven dependency no longer inlcude Akka actors.
-    To use the Akka actors library, add it to your project [as a dependency](http://doc.akka.io/docs/akka/2.3.10/intro/getting-started.html).
-  * The continuations plugin is no longer shipped with the Scala 2.12 distribution.
+* The Scala actors library is no longer released with Scala 2.12.
+  We recommend that you use the [Akka actors library](http://akka.io/) instead.
+  To migrate your code, follow the [Scala actors migration guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) before upgrading your project to Scala 2.12.
+* The Scala distribution archives and the `scala-library-all` maven dependency no longer inlcude Akka actors.
+  To use the Akka actors library, add it to your project [as a dependency](http://doc.akka.io/docs/akka/2.3.10/intro/getting-started.html).
+* The continuations plugin is no longer shipped with the Scala 2.12 distribution.
 
 
 #### Contributors
