@@ -50,7 +50,7 @@ You can use these fields in the YAML front matter later in your document. For ex
 
 There are dozens of guides and cheatsheets that cover markdown syntax out there, though this screenshot from the free OSX markdown editor, [Mou](http://mouapp.com/), is an excellent and concise reference:
 
-![Mou screen shot](http://mouapp.com/images/Mou_Screenshot_1.png)
+![Mou screen shot](http://25.io/mou/img/1.png)
 
 ### Linking to internal pages
 
