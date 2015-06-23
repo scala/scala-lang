@@ -11,7 +11,7 @@ other_releases: [
 ]
 requirements: "The Scala software distribution can be installed on any platform with a <a href='http://www.java.com/'>Java runtime</a>, version 1.6 or later."
 resources: [
-  ["-main-unixsys", "scala-2.11.7.tgz", "http://downloads.typesafe.com/scala/2.11.7/scala-2.11.7.tgz", "Max OS X, Unix, Cygwin", "25.87M"],
+  ["-main-unixsys", "scala-2.11.7.tgz", "http://downloads.typesafe.com/scala/2.11.7/scala-2.11.7.tgz", "Mac OS X, Unix, Cygwin", "25.87M"],
   ["-main-windows", "scala-2.11.7.msi", "http://downloads.typesafe.com/scala/2.11.7/scala-2.11.7.msi", "Windows (msi installer)", "107.88M"]
 ]
 ---
