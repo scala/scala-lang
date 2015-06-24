@@ -9,7 +9,7 @@ We are very pleased to announce the availability of Scala 2.11.7!
 We would like to highlight the following changes:
 
 * Exhaustivity checking for pattern matching is now much snappier -- thank you @gbasler! ([SI-9181](https://issues.scala-lang.org/browse/SI-9181))
-* Scala REPL now 200x more embeddable. You're welcome, Apache Spark! ([#4563](https://github.com/scala/scala/pull/4563), [SI-7747](https://issues.scala-lang.org/browse/SI-7747))
+* A 300x more embeddable Scala REPL, brought to you by a team effort with Apache Spark. Thank you @ScrapCodes, @retronym & co! ([#4548](https://github.com/scala/scala/pull/4548), [#4563](https://github.com/scala/scala/pull/4563))
 * Scala also &lt;3 INDYs -- experiment with all our favorite new Java 8 features [as follows](https://github.com/scala/make-release-notes/blob/2.11.x/experimental-backend.md) and get an exclusive sneak preview of 2.12.0-M2!
 * Oh, and [the spec](http://www.scala-lang.org/files/archive/spec/2.11/) is now much spiffier! Thanks, @soc!
 
