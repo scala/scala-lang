@@ -8,10 +8,10 @@ We are very pleased to announce the availability of Scala 2.11.7!
 
 We would like to highlight the following changes:
 
-  - Exhaustivity checking for pattern matching is now much snappier -- thank you @gbasler! ([SI-9181](https://issues.scala-lang.org/browse/SI-9181))
-  - Scala REPL now 200x more embeddable. You're welcome, Apache Spark! ([#4563](https://github.com/scala/scala/pull/4563), [SI-7747](https://issues.scala-lang.org/browse/SI-7747))
-  - Scala also <3 INDYs -- experiment with all our favorite new Java 8 features [as follows](https://github.com/scala/make-release-notes/blob/2.11.x/experimental-backend.md) and get an exclusive sneak preview of 2.12.0-M2!
-  - Oh, and [the spec](http://www.scala-lang.org/files/archive/spec/2.11/) is now much spiffier! Thanks, @soc!
+* Exhaustivity checking for pattern matching is now much snappier -- thank you @gbasler! ([SI-9181](https://issues.scala-lang.org/browse/SI-9181))
+* Scala REPL now 200x more embeddable. You're welcome, Apache Spark! ([#4563](https://github.com/scala/scala/pull/4563), [SI-7747](https://issues.scala-lang.org/browse/SI-7747))
+* Scala also <3 INDYs -- experiment with all our favorite new Java 8 features [as follows](https://github.com/scala/make-release-notes/blob/2.11.x/experimental-backend.md) and get an exclusive sneak preview of 2.12.0-M2!
+* Oh, and [the spec](http://www.scala-lang.org/files/archive/spec/2.11/) is now much spiffier! Thanks, @soc!
 
 Compared to 2.11.6, this release resolves [53 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.7%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We [merged 124 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.7) (out of 157).  Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.7%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.7%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.
 
@@ -29,14 +29,14 @@ According to `git shortlog -sn --no-merges v2.11.6..v2.11.7`, 36 people contribu
 
 Scala releases are available through a variety of channels, including (but not limited to):
 
-  - Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
-  - Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.7.html)
-  - Bump the `scalaVersion` setting in your SBT-based project
-  - Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.7%22)
+* Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
+* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.7.html)
+* Bump the `scalaVersion` setting in your SBT-based project
+* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.7%22)
 
 ### Scala 2.11 Notes
 
 The [release notes for Scala 2.11.1](http://scala-lang.org/news/2.11.1) have important information applicable to the whole 2.11 series, such as:
 
-  - Details on new features, important changes and deprecations since Scala 2.10.
-  - The specification of binary compatibility between minor releases.
+* Details on new features, important changes and deprecations since Scala 2.10.
+* The specification of binary compatibility between minor releases.
