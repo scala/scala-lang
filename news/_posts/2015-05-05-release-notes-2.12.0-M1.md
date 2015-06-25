@@ -6,10 +6,6 @@ title: "Scala 2.12.0-M1 is now available!"
 ---
 We are very pleased to announce the release of Scala 2.12.0-M1!
 
-<!-- To be added:
-* Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
--->
-
 * Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-M1.html)
 * Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20AND%20v%3A2.12.0-M1)
 
