@@ -38,7 +38,7 @@ The following changes are planned for Scala 2.12:
 * New backend and optimizer.
   The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
   Scala 2.12 will also ship with a new inliner and bytecode optimizer.
-  We keep track of issues and work items for the new optimizer on the [scala-opt repostiory issue tracker](https://github.com/scala-opt/scala/issues).
+  We keep track of issues and work items for the new optimizer on the [scala-opt repository issue tracker](https://github.com/scala-opt/scala/issues).
 
 The above list is incomplete and will be extended during the Scala 2.12 milestone cycle.
 
@@ -96,7 +96,7 @@ A big thank you to everyone who's helped improve Scala by reporting bugs, improv
 You are all magnificent.
 
 According to `git shortlog -sn --no-merges 2.11.x..v2.12.0-M1`, 33 people contributed to this major release:
-Jason Zaugg, Lukas Rytz, A. P. Marki, Rex Kerr, Kato Kazuyoshi, Max Bileschi, jxcoder, François Garillot, rubyu, Adriaan Moors, Dominik Gruntz, Evgeny Vereshchagin, Marc Siegel, Masato Sogame, Simon Ochsenreither, Todd Vierling, Viktor Klang, cchantep, Denton Cockburn, Paolo Giarrusso, Denis Rosset, Roman Hargrave, Rui Gonçalves, Shadaj, harryhuk, Steven Scott, Antoine Gourlay, Aleksandar Prokopec, Lukas Elmer, Erlend Hamnaberg, Maks Atygaev, Malte Isberner, dgruntz.
+Jason Zaugg, Lukas Rytz, A. P. Marki, Rex Kerr, Kato Kazuyoshi, Max Bileschi, jxcoder, François Garillot, rubyu, Adriaan Moors, Dominik Gruntz, Evgeny Vereshchagin, Marc Siegel, Masato Sogame, Simon Ochsenreither, Todd Vierling, Viktor Klang, cchantep, Denton Cockburn, Paolo Giarrusso, Denis Rosset, Roman Hargrave, Rui Gonçalves, Shadaj, harryhuk, Steven Scott, Antoine Gourlay, Aleksandar Prokopec, Lukas Elmer, Erlend Hamnaberg, Maks Atygaev, Malte Isberner, dgruntz.
 Thank you!
 
 These release notes are [hosted on GitHub](https://github.com/scala/make-release-notes/blob/2.12.x/hand-written.md) and are continuously updated during the Scala 2.12.0 release cycle.
