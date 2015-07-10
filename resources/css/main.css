@@ -2055,8 +2055,7 @@ a.for-platform {
   position: absolute;
   top: 42px;
   left: 142px;
-  width: 164px;
-  text-align: center;
+  width: 170px;
   font-family: "museo-slab", serif;
   font-size: 12px;
   font-style: italic;
@@ -2069,8 +2068,7 @@ a.for-platform {
   position: absolute;
   top: 42px;
   right: 142px;
-  width: 164px;
-  text-align: center;
+  width: 160px;
   font-family: "museo-slab", serif;
   font-size: 12px;
   font-style: italic;
@@ -2092,6 +2090,7 @@ a.for-platform {
 .getting-started {
   margin-bottom: 4px;
   border-bottom: 1px solid #073642;
+  text-align: center;
 }
 
 .dev-releases, .all-releases {
