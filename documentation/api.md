@@ -16,14 +16,14 @@ title: Scala API Docs
     * [Swing API](http://www.scala-lang.org/api/2.11.7/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.7/scala-continuations-library/#scala.util.continuations.package)
 * [Scala 2.10.5](http://www.scala-lang.org/api/2.10.5/)
-* Scala 2.12.0-M1
-  * [Library API](http://www.scala-lang.org/api/2.12.0-M1/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.0-M1/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.0-M1/scala-reflect/#scala.reflect.package)
+* Scala 2.12.0-M2
+  * [Library API](http://www.scala-lang.org/api/2.12.0-M2/)
+  * [Compiler API](http://www.scala-lang.org/api/2.12.0-M2/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.12.0-M2/scala-reflect/#scala.reflect.package)
   * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.0-M1/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0-M1/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.0-M1/scala-swing/#scala.swing.package)
+    * [XML API](http://www.scala-lang.org/api/2.12.0-M2/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0-M2/scala-parser-combinators/)
+    * [Swing API](http://www.scala-lang.org/api/2.12.0-M2/scala-swing/#scala.swing.package)
 
 ## Nightly builds
 
