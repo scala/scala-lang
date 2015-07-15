@@ -22,7 +22,7 @@ Beginning with 2.12.0-M2, the Scala 2.12 series targets Java 8. Programs written
 
 ### Source compatibility
 
-2.12 is mostly source compatible with 2.11.  Code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org).
+Scala 2.12 is mostly source compatible with 2.11.  Code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org).
 
 ### Binary compatibility
 
@@ -30,7 +30,7 @@ Since Scala 2.11, minor releases of Scala are binary compatible with each other.
 Scala 2.12 will continue this tradition: every 2.12.x release will be binary compatible with 2.12.0.
 Milestone releases and release candidates, however, are **not** binary compatible with any other release.
 
-2.12 is not and will not be binary compatible with the 2.11.x series.  This allows us to keep improving the Scala compiler and standard library.  We are working with the community to ensure that core projects in the Scala eco-system become available for 2.12.  Please refer to this growing [list of libraries and frameworks](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
+Scala 2.12 is not and will not be binary compatible with the 2.11.x series.  This allows us to keep improving the Scala compiler and standard library.  We are working with the community to ensure that core projects in the Scala eco-system become available for 2.12.  Please refer to this growing [list of libraries and frameworks](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
 
 The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies that applied to 2.11 will apply to 2.12 as well.
 
