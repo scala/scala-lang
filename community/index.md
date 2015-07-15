@@ -8,7 +8,7 @@ title: Community
 
 Developers in countries all over the world are using Scala for a large variety of applications across a broad range of industries. Popular ways to connect with the Scala community are via mailing lists or IRC channels, listed below.
 
-Though there are plenty of opportunities to connect face-to-face with others in the community-- for example, via local [Scala Meetups](http://scala.meetup.com/), or local [Scala user groups](http://www.scala-tribes.org).
+Though there are plenty of opportunities to connect face-to-face with others in the community-- for example, via local [Scala Meetups](http://scala.meetup.com/), or local [Scala user groups](http://scala.space/).
 
 
 ## Mailing Lists
@@ -38,7 +38,7 @@ Chat Scala anytime on the [Scala IRC channel](http://webchat.freenode.net/?rando
 
 ## User Groups
 
-Find your local Scala user group on <http://www.scala-tribes.org/>.
+Find your local Scala user group on [Scala Space](http://scala.space/).
 
 ## StackOverflow
 
