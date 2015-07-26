@@ -10,7 +10,7 @@ title: Blog
 
 
 <ul class="post-list">
-  {% for p in site.categories.news %}
+  {% for p in site.categories.blog %}
     {% if p.post-type == 'blog' %}
       <li>
         {% if p.link-out %}
