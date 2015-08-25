@@ -11,6 +11,8 @@ Popular ways to connect with the Scala community include mailing lists, chat roo
 
 Scala has the following primary mailing lists. For those lists that existed before they were migrated to Google Groups, see the links for complete archives on Gmane.
 
+The Scala mailing lists are covered by the [Scala Code of Conduct](http://docs.scala-lang.org/conduct.html).
+
  * **[Scala-User](http://groups.google.com/group/scala-user)**: the main forum for questions and discussions about the Scala programming ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.user)). In particular, newbie questions and programming experiences and questions should go to this list.
  * **[Scala-Language](http://groups.google.com/group/scala-language)**: the main forum for discussions and news about the Scala language ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala)).
  * **[Scala-Announce](http://groups.google.com/group/scala-announce)**: announcements of new Scala releases, packages and
