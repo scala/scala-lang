@@ -55,3 +55,4 @@ Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/
 * [Effective Scala](http://twitter.github.com/effectivescala/)
 * [Scala Puzzlers](http://scalapuzzlers.com/)
 * [Interactive Tour](http://scalatutorials.com/tour)
+* [Awesome Scala](https://github.com/lauris/awesome-scala)
