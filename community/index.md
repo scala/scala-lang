@@ -4,11 +4,7 @@ title: Community
 
 ---
 
-<!-- You will enjoy being part of the Scala community. Developers in countries all over the world are using Scala for a large variety of applications across a broad range industies. They are enthusiastic, share a passion for Scala are extremely welcoming to new comers. You will find friendly, knowlegeable people ready to help you from the moment you start learning Scala to the time you become an expert programmer yourself. Some share their experience in blogs, others through the Scala e-mail lists, by participating in Open Development projects, at user group meetings or at Scala conferences. Naturally, the best way to get to know the community is to listen and start talking to them. -->
-
-Developers in countries all over the world are using Scala for a large variety of applications across a broad range of industries. Popular ways to connect with the Scala community are via mailing lists and chat rooms, listed below.
-
-Though there are plenty of opportunities to connect face-to-face with others in the community-- for example, via local [Scala Meetups](http://scala.meetup.com/), or local [Scala user groups](http://scala.space/).
+Popular ways to connect with the Scala community include mailing lists, chat rooms, user groups, and conferences.
 
 
 ## Mailing Lists
@@ -45,9 +41,13 @@ IRC users can chat about Scala anytime on the [Scala IRC channel](http://webchat
 
 Find your local Scala user group on [Scala Space](http://scala.space/).
 
-## StackOverflow
+## Conferences
 
-Scala is an active topic on StackOverflow [Scala on StackOverflow](http://stackoverflow.com/questions/tagged/scala), a programmer Q&A site.
+See our [events page](/events/).
+
+## Stack Overflow
+
+Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/tagged/scala), a very popular programmer Q&A site.
 
 ## Other Community-Powered Resources
 
