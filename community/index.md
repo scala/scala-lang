@@ -9,7 +9,7 @@ Popular ways to connect with the Scala community include mailing lists, chat roo
 
 ## Mailing Lists
 
-Scala has the following primary mailing lists. For those lists that existed before they were migrated to Google Groups, see the links for complete archives on Gmane.
+Scala has the following primary mailing lists.
 
 The Scala mailing lists are covered by the [Scala Code of Conduct](http://docs.scala-lang.org/conduct.html).
 
@@ -29,6 +29,8 @@ The Scala mailing lists are covered by the [Scala Code of Conduct](http://docs.s
  * **[Scala-XML](http://groups.google.com/group/scala-xml)**: interest group devoted to the Scala XML infrastructure
  ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.xml)).
  * **[Scala-SIPs](http://groups.google.com/group/scala-sips)**: interest group devoted to the Scala Improvement Process (SIP) proposals.
+
+The "Archive at Gmane" links include messages predating the migration to Google Groups.
 
 ## Chat Rooms
 
