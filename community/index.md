@@ -43,7 +43,7 @@ IRC users can chat about Scala anytime on the [Scala IRC channel](http://webchat
 
 ## User Groups
 
-Find your local Scala user group on [Scala Space](http://scala.space/).
+Find your local Scala user group on [Scala Space](http://scala.space/) or on Meetup's [Scala meetup list](http://scala.meetup.com/).
 
 ## Conferences
 
