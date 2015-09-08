@@ -55,6 +55,7 @@ Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/
 
 ## Other Community-Powered Resources
 
+* [Scala Exercises](http://scala-exercises.47deg.com/)
 * [Scala School](http://twitter.github.com/scala_school/)
 * [Effective Scala](http://twitter.github.com/effectivescala/)
 * [Scala Puzzlers](http://scalapuzzlers.com/)
