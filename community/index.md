@@ -9,28 +9,34 @@ Popular ways to connect with the Scala community include mailing lists, chat roo
 
 ## Mailing Lists
 
-Scala has the following primary mailing lists.
-
 The Scala mailing lists are covered by the [Scala Code of Conduct](http://docs.scala-lang.org/conduct.html).
 
- * **[Scala-User](http://groups.google.com/group/scala-user)**: the main forum for questions and discussions about the Scala programming ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.user)). In particular, newbie questions and programming experiences and questions should go to this list.
- * **[Scala-Language](http://groups.google.com/group/scala-language)**: the main forum for discussions and news about the Scala language ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala)).
- * **[Scala-Announce](http://groups.google.com/group/scala-announce)**: announcements of new Scala releases, packages and
- applications ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.announce)).
- * **[Scala-Debate](http://groups.google.com/group/scala-debate)**: a more relaxed list for questions and discussions
- ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.debate)). In particular, the following should go to this list:
-    * questions and suggestions around the future of Scala.
-    * trails of discussions that started in scala but become too specialized to be of interest to most readers.
-    * topics where you suspect that only a few people would be interested.
- * **[Scala-Tools](http://groups.google.com/group/scala-tools)**: the main forum for discussions about the Scala tools
- contributed by the community ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.tools)).
- * **[Scala-Internals](http://groups.google.com/group/scala-internals)**: discussions about the core internal design and implementation of the Scala system. This list is mainly used by developers who commit code to the Scala code base, but it is open to the general public in the interest of transparency. Please only post new threads if you commit to the Scala code base, and you need to discuss the internals of the Scala system. Bug reports, feature requests, and general discussions should go to the other lists instead
- ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.internals)).
- * **[Scala-XML](http://groups.google.com/group/scala-xml)**: interest group devoted to the Scala XML infrastructure
- ([Archive at Gmane](http://dir.gmane.org/gmane.comp.lang.scala.xml)).
- * **[Scala-SIPs](http://groups.google.com/group/scala-sips)**: interest group devoted to the Scala Improvement Process (SIP) proposals.
+This is our most beginner-friendly list:
 
-The "Archive at Gmane" links include messages predating the migration to Google Groups.
+ * **[Scala-User](http://groups.google.com/group/scala-user)**: the main forum for questions and discussions, including beginner questions, about programming in Scala. Any question can and should receive a courteous and insightful answer.
+
+This list is low-traffic and all posts are moderated:
+
+ * **[Scala-Announce](http://groups.google.com/group/scala-announce)**: announcements of new Scala releases, tools, libraries, and other resources.
+
+Other, more specialized lists:
+
+ * **[Scala-Language](http://groups.google.com/group/scala-language)**: discussions about the Scala language itself. Why Scala is the way it is, and how it could be different.
+ * **[Scala-Debate](http://groups.google.com/group/scala-debate)**: the "any topic goes" list. While professional courtesy and respect must be maintained, discussion and speculation on controversial topics and “what-if” type questions can occur. Threads sometimes migrate here from other lists if they become too specialized, lengthy, or contentious.
+ * **[Scala-Tools](http://groups.google.com/group/scala-tools)**: specifically for tooling around Scala, such as editors and build tools.
+ * **[Scala-SIPs](http://groups.google.com/group/scala-sips)**: interest group devoted to Scala Improvement Process (SIP) and Scala Library Improvement Process (SLIP) proposals.  If you want to see what’s coming down the pipe and you’d like to be involved, this is the mailing list for you.
+
+And most specialized of all:
+
+ * **[Scala-Internals](http://groups.google.com/group/scala-internals)**: for discussing development work on the Scala compiler and standard library. Core maintainers and active open-source contributors are both welcome. (If you're not sure if your thread belongs here, ask a contributor, or try another list first.)
+
+### No Job Postings
+
+Job listings are not allowed on the mailing lists.  While we're all very glad to see more and more Scala jobs, please confine these listings to more appropriate forums.
+
+### Older archives
+
+The following "Archive at Gmane" links include messages predating the migration to Google Groups: [scala-user](http://dir.gmane.org/gmane.comp.lang.scala.user), [scala-announce](http://dir.gmane.org/gmane.comp.lang.scala.announce), [scala-language](http://dir.gmane.org/gmane.comp.lang.scala), [scala-debate](http://dir.gmane.org/gmane.comp.lang.scala.debate), [scala-tools](http://dir.gmane.org/gmane.comp.lang.scala.tools), [scala-internals](http://dir.gmane.org/gmane.comp.lang.scala.internals).
 
 ## Chat Rooms
 
