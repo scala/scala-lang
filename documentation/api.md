@@ -15,7 +15,7 @@ title: Scala API Docs
     * [Actors API](http://www.scala-lang.org/api/2.11.7/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.7/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.7/scala-continuations-library/#scala.util.continuations.package)
-* [Scala 2.10.5](http://www.scala-lang.org/api/2.10.5/)
+* [Scala 2.10.6](http://www.scala-lang.org/api/2.10.6/)
 * Scala 2.12.0-M2
   * [Library API](http://www.scala-lang.org/api/2.12.0-M2/)
   * [Compiler API](http://www.scala-lang.org/api/2.12.0-M2/scala-compiler/)
@@ -91,6 +91,7 @@ title: Scala API Docs
     * [Actors API](http://www.scala-lang.org/api/2.11.0/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.0/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.0/scala-continuations-library/#scala.util.continuations.package)
+* [Scala 2.10.5](http://www.scala-lang.org/api/2.10.5/)
 * [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 * [Scala 2.10.3](http://www.scala-lang.org/api/2.10.3/)
 * [Scala 2.10.2](http://www.scala-lang.org/api/2.10.2/)
