@@ -40,10 +40,14 @@ The following "Archive at Gmane" links include messages predating the migration 
 
 ## Chat Rooms
 
-There are two main [Gitter](https://gitter.im) channels for Scala:
+The main [Gitter](https://gitter.im) room for Scala is:
 
-* **[scala/scala/scala-user](https://gitter.im/scala/scala/scala-user)**: like the scala-user mailing list. Questions, general discussion, etc.
-* **[scala/scala](https://gitter.im/scala/scala)**: like the scala-internals mailing list. For Scala contributors to discuss language internals.
+* **[scala/scala](https://gitter.im/scala/scala)**: like the scala-user mailing list. Questions, general discussion, etc.
+
+Other, more specialized rooms include:
+
+* **[scala/contributors](https://gitter.im/scala/contributors)**: like the scala-internals mailing list. For Scala contributors to discuss language internals.
+* **[scala/slip](https://gitter.im/scala/slip)**: for discussion of SLIPs and SIPs (Scala Library and Scala Improvement Process) proposals
 
 IRC users can chat about Scala anytime on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
 
