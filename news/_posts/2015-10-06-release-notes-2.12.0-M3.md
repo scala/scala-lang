@@ -76,6 +76,7 @@ There are a number of improvements:
 * Complete bean getters without typing `get`: try `(d: java.util.Date).day<TAB>`
 * Find members by typing any CamelCased part of the name: try `classOf[String].typ<TAB>` to get `getAnnotationsByType`, `getComponentType` and others
 * Complete non-qualified names, including types: try `def f(s: Str<TAB>`
+* Press tab twice to see the method signature: try `List(1,2,3).part<TAB>`, which completes to `List(1,2,3).partition`; press tab again to display `def partition(p: Int => Boolean): (List[Int], List[Int])`
 
 Thanks to @som-snytt for helping out with this work!
 
