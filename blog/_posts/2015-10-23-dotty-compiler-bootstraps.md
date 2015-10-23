@@ -60,7 +60,7 @@ Over the coming weeks and months, we plan to work on the following topics:
 
 If you want to get your hands dirty with any of this, now is a good
 moment to get involved! Join the team of contributors, including
-Guillaume Martres (@smarter), Ondrey Lhotak (@olhotak), Samuel Gruetter (@samuelgruetter),
+Dmitry Petrashko (@DarkDimius) Guillaume Martres (@smarter), Ondrey Lhotak (@olhotak), Samuel Gruetter (@samuelgruetter),
 Vera Salvis (@vsalvis) and Jason Zaugg (@retronym).
 
 To get started: <https://github.com/lampepfl/dotty>.
