@@ -2,10 +2,10 @@
 layout: blog
 post-type: blog
 by: Martin Odersky and Dmitry Petrashko
-title: We Got LiftOff! The Dotty Compiler for Scala bootstraps.
+title: We got liftoff! The Dotty compiler for Scala bootstraps.
 ---
 
-## We Got Liftoff!
+## We got liftoff!
 
 The [Dotty project](https://github.com/lampepfl/dotty)
 is a platform to develop new technology for Scala
@@ -14,7 +14,7 @@ Its compiler is a new design intended to reflect the
 lessons we learned from work with the Scala compiler. A clean redesign
 today will let us iterate faster with new ideas in the future.
 
-Today we reached an important milestone: The Dotty compiler can
+Today we reached an important milestone: the Dotty compiler can
 compile itself, and the compiled compiler can act as a drop-in for the
 original one. This is what one calls a *bootstrap*.
 
@@ -35,7 +35,7 @@ go unnoticed, precisely because every part of a compiler feeds into
 other parts and all together are necessary to produce a correct
 translation.
 
-## Are We Done Yet?
+## Are we done yet?
 
 Far from it! The compiler is still very rough. A lot more work is
 needed to
@@ -48,7 +48,7 @@ needed to
  - remove restrictions on what Scala code can be compiled,
  - help in migrating Scala code that will have to be changed.
 
-## What Are the Next Steps?
+## What are the next steps?
 
 Over the coming weeks and months, we plan to work on the following topics:
 
