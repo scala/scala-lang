@@ -60,11 +60,11 @@ Over the coming weeks and months, we plan to work on the following topics:
 
 If you want to get your hands dirty with any of this, now is a good
 moment to get involved! Join the team of contributors, including
-Dmitry Petrashko ([https://github.com/DarkDimius](@DarkDimius)),
-Guillaume Martres ([https://github.com/smarter](@smarter)),
-Ondrey Lhotak ([https://github.com/olhotak](@olhotak)),
-Samuel Gruetter ([https://github.com/samuelgruetter](@samuelgruetter)),
-Vera Salvis ([https://github.com/vsalvis](@vsalvis)),
-and Jason Zaugg ([https://github.com/retronym](@retronym)).
+Dmitry Petrashko ([@DarkDimius](https://github.com/DarkDimius)),
+Guillaume Martres ([@smarter](https://github.com/smarter)),
+Ondrey Lhotak ([@olhota](khttps://github.com/olhotak)),
+Samuel Gruetter ([@samuelgruetter](https://github.com/samuelgruetter)),
+Vera Salvis ([@vsalvis](https://github.com/vsalvis)),
+and Jason Zaugg ([@retronym](https://github.com/retronym)).
 
 To get started: <https://github.com/lampepfl/dotty>.
