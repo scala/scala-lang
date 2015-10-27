@@ -65,6 +65,7 @@ There are a few interactive resources for trying out Scala, to get a look and fe
  * [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun), free on Coursera. This is a course about functional programming given by Martin Odersky himself. You can access the course material and exercises by
  signing up for the course.
  * [Principles of Reactive Programming](https://www.coursera.org/course/reactive), free on Coursera. This is a course about concurrency and event-based asynchronous programming in Scala. You can access the course material and exercises by signing up for the course.
+ * **Try Scala In Your Browser!**: There are a handful of websites where you can interactively run Scala code in your browser! Have a look at [scala-js-fiddle](http://www.scala-js-fiddle.com/), [Scala Kata](http://www.scalakata.com/), and [Scastie](http://scastie.org/) for more.
  * [Independent Courseware](http://scalacourses.com), take a series of online Scala courses ranging from beginner to advanced for a fee.
 
 ## Books
