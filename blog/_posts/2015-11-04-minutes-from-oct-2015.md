@@ -5,11 +5,11 @@ by: Hamish Dickson
 title: Minutes from Oct 2015 SIP/SLIP Meeting
 ---
 
-# SIP SLIP meeting October 2015
+# SIP/SLIP meeting, October 2015
 
-Thanks to @hamishdickson for these extensive minutes.
+Thanks to @hamishdickson for compiling these extensive minutes.
 
-[A video recording of this meeting is available](https://www.youtube.com/watch?v=vonlAh2tmnw)
+[A video recording of this meeting is available](https://www.youtube.com/watch?v=vonlAh2tmnw).
 
 # Welcomes and apologies
 
@@ -20,14 +20,16 @@ Thanks to @hamishdickson for these extensive minutes.
 - @heathermiller is "otherwise engaged"
 
 # 1. New Google Calendar
+
 @dickwall has set up a google calendar for slip:
+
 - So far it only has the monthly meetings on there, but that will grow
 - It's public so people can know when the next slip meeting is
 - The scalaslip@gmail.com calendar which you can add in google calendars under the "add a friends calendar" option
 
 # 2. Expert groups
 ## 2.1 Getting updates from expert groups
-@dickwall can't email everyone for expert groups, it's simply not a goer. One idea is to create an event 
+@dickwall can't email everyone for expert groups, it's simply not a goer. One idea is to create an event
 in the new Google calendar (probably the Friday before the meeting) and ask an expert group representative
 to come to that and provide an update before the next slip meeting.
 
@@ -41,8 +43,9 @@ Ideally, an expert group should be self-formed from people with the desire, know
 on a task, then go and do it.
 
 Actions:
-- @dickwall to create a blog post about this issue, he will send it to the Scala elders first so they 
-can voice any opinions
+
+- @dickwall to create a blog post about this issue, he will send it to the Scala elders first so they
+  can voice any opinions
 - someone should check if misconstruisem is a word
 
 
@@ -58,7 +61,8 @@ use "dormant", but thinks this is too passive-aggressive. People agree and @oder
 Link to issue: https://github.com/scala/slip/issues/24
 
 Notes:
-- Parser Combinators is not in the standard library, but is a standard module and while good, it has 
+
+- Parser Combinators is not in the standard library, but is a standard module and while good, it has
 some issues.
 - @lihaoyi has a lib called FastParse (https://github.com/lihaoyi/fastparse), fairly similar in design
 to Parser Combinators but faster and currently better maintained.
@@ -68,11 +72,11 @@ to Parser Combinators but faster and currently better maintained.
 consulted to see if FastParse meets all the needs met by Parser Combinators.
 - @odersky points out that Parser Combinators isn't a central module, meaning we could actually have
 both modules for a while
-- Note parser Combinators are mainly community maintained, not primarily maintained by TypeSafe or EPFL
+- Note Parser Combinators are mainly community maintained, not primarily maintained by Typesafe or EPFL
 (obv retain an interest)
 
 Actions:
-- Talk to Anton Gullett about FastParse doing everything required by Parser Combinators
+- Talk to @gourlaysama about FastParse doing everything required by Parser Combinators
 - Invite @lihaoyi to take action if he wants to
 
 
@@ -82,6 +86,7 @@ Link to issue: https://github.com/scala/slip/issues/23
 Owner: @jsuereth
 
 Notes:
+
 - @jsuereth spent weekend on @odersky's strawman proposal (as did Daniel)
 - there are a few comments to take care of
 - wants to get a fuller proposal out, comments from @DarkDimius (Dmitry)
@@ -99,6 +104,7 @@ view @odersky says that's reasonable
 - @sjrd points out scala-js optimization issues
 
 Actions:
+
 - @jsuereth and @sjrd to take scala-js optimization issues offline
 - @dickwall to create a new issue to track optimization issue
 
@@ -108,10 +114,11 @@ Link to issue: https://github.com/scala/slip/issues/22
 Owner: @retronym
 
 Notes:
+
 - @SethTisue is going to ask what @retronym actually wanted/intended to happen with async with regards to
 the standard library, i.e. if he wanted to include it.
 - @dickwall thinks he heard something about issues on Windows, but no one else knew about this.
-- @retronym thinks it's not quite ready for a slip yet. He has a round of work planned over the next
+- @retronym thinks it's not quite ready for a SLIP yet. He has a round of work planned over the next
 few months that will include technical improvements to the lib and improved documentation.
 - This is on hold for now, but expected to be in better shape in a few months.
 
@@ -123,7 +130,7 @@ Link to issue: https://github.com/scala/slip/issues/21
 
 Notes:
 - @dickwall has had no time to look at it
-- @dickwall mentions he is wary of being perceived as the SLIP manager and working on issues. Could be seen 
+- @dickwall mentions he is wary of being perceived as the SLIP manager and working on issues. Could be seen
 as a conflict of interest
 
 Actions:
@@ -133,10 +140,12 @@ None discussed
 Link to issue: https://github.com/scala/slip/issues/19
 
 Notes:
+
 - This is a long thread. All agree that's a good thing
 - @lihaoyi came up with a good set of questions - first real step in getting this slip going
 
 Actions:
+
 - @dickwall will reach out to someone and say "can you actually answer these questions?", maybe @lihaoyi
 or someone else in the thread
 - @dickwall to put all this in a blog post
@@ -146,6 +155,7 @@ or someone else in the thread
 Link to issue: https://github.com/scala/slip/issues/12
 
 Notes:
+
 - nothing changed - on hold
 
 Actions:
@@ -155,6 +165,7 @@ None discussed
 Link to issue: https://github.com/scala/slip/issues/10
 
 Notes:
+
 - There has been little movement on this issue mainly for motivational reasons. It sounds like there
 are varying opinions about what the ideal outcome of this issue is.
 - @SethTisue pointed out that escaping quotes in string interpolation is a common newbie FAQ, so there is
@@ -164,6 +175,7 @@ whole world's problems.
 - Note, there two similar issues here, one to do with quotes and another to do with backticks
 
 Actions:
+
 - Allocate hibernate tag
 - @jsuereth will reach out to @som-snytt to talk about the next steps here
 
@@ -173,9 +185,11 @@ Link to issue: https://github.com/scala/slip/issues/8
 Owner: @Eran
 
 Notes:
+
 - General aim is to see what we can pull in from the Spire library (https://github.com/non/spire)
 
 Actions
+
 - Allocate hibernate tag
 - Probably an update from @Eran would be good
 
@@ -185,31 +199,35 @@ Link to issue: https://github.com/scala/slip/issues/6
 Owner: @haroldl
 
 Notes:
+
 - @haroldl is still keen on this
 - nothing specific heard about progress, give the hibernate tag until more is known
 
 Actions:
+
 - @dickwall to reach out and chat to @haroldl and see how things are going
 
 ## Gather, list, contact interested parties for an Either/Or/Xor/Validation etc SLIP and possible expert group
 Link to issue: https://github.com/scala/slip/issues/5
 
 Notes:
+
 - Either all the way through to validation
 - From last meeting, the expert group had an action item of trying out each others libraries. This hasn't
 happened due to holidays etc, carry this over
 
 Actions:
+
 - Expert group to try out each other's libraries
 
 # AOB
 
 - collections doesn't have any tracking - @dickwall to set something up and ping him with any links/info on
-gitter and he will collect them and put them into an issue with some links. Expects lots of discussion
+Gitter and he will collect them and put them into an issue with some links. Expects lots of discussion
 - @jsuereth theory: things will die down or start an expert group and actively working on it
 - will be fun to analyse trade offs and performance
 - issue will have experimentation label
 - @jsuereth - call for help, for some sort of source compatibility checker for these libs where you can shove in
 these new libs and see if things still compile to give us a notion of what we're breaking
 - @dickwall - can we take existing unit tests for collections, clone them off and use them for new collection lib
-- rex ker? has a collection test suite for TypeSafe so he's on that - should be on expert group
+- @Ichoran (Rex Kerr) has a collection test suite for Typesafe so he's on that - should be on expert group
