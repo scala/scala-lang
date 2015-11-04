@@ -14,7 +14,7 @@ Thanks to [@hamishdickson](http://github.com/hamishdickson) for compiling these 
 # Welcomes and apologies
 
 - Welcome to [@sjrd](http://github.com/sjrd) who joins us
-- [@odersky,](http://github.com/odersky,) [@jsuereth,](http://github.com/jsuereth,) [@dickwall](http://github.com/dickwall) and [@SethTisue](http://github.com/SethTisue) are all there
+- [@odersky](http://github.com/odersky), [@jsuereth](http://github.com/jsuereth), [@dickwall](http://github.com/dickwall) and [@SethTisue](http://github.com/SethTisue) are all there
 - [@dickwall](http://github.com/dickwall) gloats about his holiday
 - [@non](http://github.com/non) has the flu
 - [@heathermiller](http://github.com/heathermiller) is "otherwise engaged"
