@@ -80,6 +80,7 @@ Finding libraries:
 * [Awesome Scala](https://github.com/lauris/awesome-scala) is "a community driven list of useful Scala libraries, frameworks and software"
 * [Tools and Libraries](https://wiki.scala-lang.org/display/SW/Tools+and+Libraries), a page on the (now mostly retired) Scala wiki, also lists and categorizes Scala libraries
 * [Typelevel.org](http://typelevel.org) provides an assortment of popular libraries and extensions to Scala.
+* [Trending Scala repositories](https://github.com/trending?l=scala&since=monthly) on GitHub
 
 Staying current:
 
