@@ -75,13 +75,13 @@ Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/
 
 ## Community Libraries and Tools
 
-finding libraries:
+Finding libraries:
 
 * [Awesome Scala](https://github.com/lauris/awesome-scala) is "a community driven list of useful Scala libraries, frameworks and software"
-* the [Tools and Libraries page](https://wiki.scala-lang.org/display/SW/Tools+and+Libraries) on the (now mostly retired) Scala wiki also lists and categorizes Scala libraries
+* [Tools and Libraries](https://wiki.scala-lang.org/display/SW/Tools+and+Libraries), a page on the (now mostly retired) Scala wiki, also lists and categorizes Scala libraries
 * [Typelevel.org](http://typelevel.org) provides an assortment of popular libraries and extensions to Scala.
 
-staying current:
+Staying current:
 
 * [implicit.ly](http://implicit.ly) announces new versions of Scala libraries as they become available
 * [Scala-Announce](http://groups.google.com/group/scala-announce) also has release announcements
