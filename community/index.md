@@ -6,6 +6,8 @@ title: Community
 
 Popular ways to connect with the Scala community include mailing lists, chat rooms, user groups, and conferences.
 
+The community is also the source of many libraries, tools, and other resources around Scala.
+
 
 ## Mailing Lists
 
@@ -63,11 +65,23 @@ See our [events page](/events/).
 
 Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/tagged/scala), a very popular programmer Q&A site.
 
-## Other Community-Powered Resources
+## Community-Powered Learning Resources
 
 * [Scala Exercises](http://scala-exercises.47deg.com/)
 * [Scala School](http://twitter.github.com/scala_school/)
 * [Effective Scala](http://twitter.github.com/effectivescala/)
 * [Scala Puzzlers](http://scalapuzzlers.com/)
 * [Interactive Tour](http://scalatutorials.com/tour)
-* [Awesome Scala](https://github.com/lauris/awesome-scala)
+
+## Community Libraries and Tools
+
+finding libraries:
+
+* [Awesome Scala](https://github.com/lauris/awesome-scala) is "a community driven list of useful Scala libraries, frameworks and software"
+* the [Tools and Libraries page](https://wiki.scala-lang.org/display/SW/Tools+and+Libraries) on the (now mostly retired) Scala wiki also lists and categorizes Scala libraries
+* [Typelevel.org](http://typelevel.org) provides an assortment of popular libraries and extensions to Scala.
+
+staying current:
+
+* [implicit.ly](http://implicit.ly) announces new versions of Scala libraries as they become available
+* [Scala-Announce](http://groups.google.com/group/scala-announce) also has release announcements
