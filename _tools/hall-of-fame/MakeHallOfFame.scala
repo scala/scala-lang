@@ -123,7 +123,7 @@ object MakeHallOfFame {
   def loadSourceDataString(): String = {
     progress("Downloading source data")
     val source = Source.fromURL(new URL(
-        "https://github.com/scala/scala/graphs/contributors-data"))
+        "https://api.github.com/repos/scala/scala/stats/contributors"))
     try source.mkString
     finally source.close()
   }
@@ -142,7 +142,7 @@ object MakeHallOfFame {
       M(author0) <- authors
       M(authorData) = author0("author")
       S(username) = authorData("login")
-      S(gravatar) = authorData("avatar")
+      S(gravatar) = authorData("avatar_url")
       I(totalCommits) = author0("total")
       L(jsonWeeks) = author0("weeks")
     } yield {
