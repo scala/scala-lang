@@ -34,7 +34,8 @@ object MakeHallOfFame {
       "bantonsson",
       "pvlugter",
       "henrikengstrom",
-      "szeiger"
+      "szeiger",
+      "SethTisue"
   )
 
   // TODO Expand (and maintain) that list - or fetch it from some source
