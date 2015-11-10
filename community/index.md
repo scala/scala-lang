@@ -65,6 +65,18 @@ See our [events page](/events/).
 
 Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/tagged/scala), a very popular programmer Q&A site.
 
+## Sources of Scala News
+
+Official:
+
+* [News page](http://www.scala-lang.org/news/) and [blog](http://www.scala-lang.org/blog/) on this site
+* [@Scala_lang](https://twitter.com/scala_lang) on Twitter
+
+Community:
+
+* [Scala Times](http://scalatimes.com) weekly Scala newspaper
+* [The Scalawags](http://scalawags.tv) monthly podcast
+
 ## Community-Powered Learning Resources
 
 * [Scala Exercises](http://scala-exercises.47deg.com/)
