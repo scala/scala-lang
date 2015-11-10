@@ -69,7 +69,7 @@ Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/
 
 Official:
 
-* [News page](http://www.scala-lang.org/news/) on this site
+* [News page](http://www.scala-lang.org/news/) and [blog](http://www.scala-lang.org/blog/) on this site
 * [@Scala_lang](https://twitter.com/scala_lang) on Twitter
 
 Community:
