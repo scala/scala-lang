@@ -451,7 +451,7 @@ $(document).ready(function(){
             '</div>'+
             '<div class="training-float-right">' +
               '<div class="training-location">'+training.where+'</div>' +
-              '<div class="training-trainers-name"> By '+training.trainers+'</div>' +
+              (training.trainers == null ? '' : ('<div class="training-trainers-name"> By '+training.trainers+'</div>')) +
               '<div class="training-organizer">'+training.organizer+'</div>' +
             '</div>' +
           '</div>' +
