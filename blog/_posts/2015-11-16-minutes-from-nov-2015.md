@@ -7,7 +7,7 @@ title: Minutes from Nov 2015 SIP/SLIP Meeting
 
 # SIP/SLIP meeting, November 2015
 
-[A video recording of this meeting is available](https://www.youtube.com/watch?v=RJAwDhB3Vr8).
+[A video recording of this meeting](https://www.youtube.com/watch?v=RJAwDhB3Vr8) is available.
 
 # Welcomes and apologies
 Today we have [@dickwall](http://github.com/dickwall), [@sjrd](http://github.com/sjrd), [@SethTisue](http://github.com/SethTisue), [@heathermiller](http://github.com/heathermiller), [@non](http://github.com/non) and [@odersky](http://github.com/odersky).
@@ -22,7 +22,7 @@ Link to SLIP: [https://github.com/scala/slip/pull/2](https://github.com/scala/sl
 Notes:
 
 - nothing has changed on this one, [@dickwall](http://github.com/dickwall) suggests hibernate tag
-- believe this has been replaced/depricated by the larger IO library discussion
+- believe this has been replaced/deprecated by the larger IO library discussion
 
 ## Unsigned integer data types
 Link to SLIP: [https://github.com/scala/slip/pull/30](https://github.com/scala/slip/pull/30)
@@ -68,16 +68,16 @@ Next steps:
 - [@som-snytt](http://github.com/som-snytt) has code that looks like it works and does what this SLIP says it should
 - the next question is is this good enough? Does this need to be taken further? The issue is that now implicits can behave differently in for comprehensions than outside. The committee are concerned about corner cases and would like Scala's features to be consistent
 - it's decided that this needs to be extended to a general pattern, and [@odersky](http://github.com/odersky) is keen on that work being done
-- [@SethTisue](http://github.com/SethTisue) doesn't know what the likelihood of [@som-snytt](http://github.com/som-snytt) taking the rest of this work on - the for comprehension was the only version that he has time for. If he doesn't have time, then hopefully the community will be able to help
+- [@SethTisue](http://github.com/SethTisue) doesn't know what the likelihood of [@som-snytt](http://github.com/som-snytt) taking the rest of this work on - the for comprehension might be the only version that he has time for. If he doesn't have time, then hopefully the community will be able to help
 
 Open question:
 
-- [@odersky](http://github.com/odersky)in Dotty, want to enforce that every implicit has an explicitly given type because it's very confusing that implicits get lost due to the order of local type inference
-- how will that work in a for? The natural thing would be for an implicit not to have a result type.. will we have to enforce that?
+- [@odersky](http://github.com/odersky) in Dotty, want to enforce that every implicit has an explicitly given type because it's very confusing that implicits get lost due to the order of local type inference
+- how will that work in a `for`? The natural thing would be for an implicit not to have a result type.. will we have to enforce that?
 
 Actions:
 
-- [@SethTisue](http://github.com/SethTisue) to post instructions on the SLIP PR on how to use a specific Scala SNAPSHOT so people can try out the current implementation
+- [@SethTisue](http://github.com/SethTisue) to post instructions on the SLIP PR on how to use a specific Scala build so people can try out the current implementation
 
 
 ## Implicit enrichment of `scala.util.Either` to support monadic bias
@@ -85,7 +85,7 @@ Link to SLIP: [https://github.com/scala/slip/pull/20](https://github.com/scala/s
 
 Notes:
 
-- The way we left this from last time, people generally didn't want this, but [@swaldman](https://github.com/swaldman) has gone ahead and provided a proposal for this
+- The way we left this from last time, we were unsure where it stood, but [@swaldman](https://github.com/swaldman) has gone ahead and provided a proposal for this
 - [@SethTisue](http://github.com/SethTisue) should consider this SLIP in the context of other SLIPs going on at the moment
 
 Actions:
@@ -114,7 +114,7 @@ Link to SLIP: [https://github.com/scala/slip/issues/23](https://github.com/scala
 
 Notes:
 
-- @jsuereth is out for this meeting - he is really the one that can update us on this issue
+- [@jsuereth](http://github.com/jsuereth) is out for this meeting - he is really the one that can update us on this issue
 - hold this until next month
 - this issue is linked to the collection overhaul and it needs to be decided if this should be done separately or if it should be rolled into a larger change
 
@@ -172,16 +172,13 @@ Homework:
 - SLIP committee reads the proposal
 - review in December SLIP meeting
 
-Actions:
 
-- [@heathermiller](http://github.com/heathermiller) points out that there are some formatting issues. Can the author fix these?
-
-
-# JSON AST, The Scala standard library and the SLIP process
+# JSON AST, Scala standard library, and the SLIP process
+Link to issue and document: [https://github.com/scala/slip/issues/31](https://github.com/scala/slip/issues/31)
 
 [A SLIP proposing a standard JSON AST](https://github.com/scala/slip/pull/28) deviated quickly from the purpose of the SLIP and started a long discussion about what should and should not be in a Scala standard library. This and other discussions seem to really stem from the fact that it isn't clear what should go where in the Scala ecosystem.
 
-[@odersky](http://github.com/odersky) has since created a document on this topic called ["What should go into the standard library"](https://docs.google.com/document/d/1XBUnQ4kM4QtxIXGerP1fLbVBcVrlx0YYpybeQpmVY0w/edit?usp=sharing) which proposes a new structure for Scala and it's libraries. [@odersky](http://github.com/odersky) would like people to comment on the document using [Gitter](https://gitter.im/scala/slip).
+[@odersky](http://github.com/odersky) has since created a document on this topic called "What should go into the standard library" (link above) which proposes a new structure for Scala and it's libraries. Comments are invited.
 
 The document proposes a solution similar to Haskell:
 
@@ -234,6 +231,7 @@ Splitting out core:
 
 
 [@sjrd](http://github.com/sjrd):
+
 - there is a contradiction saying platform maintainers should decide what goes into the Scala namespace and the wish to have several platforms
 - if you want the best part to be something different and you have Several groups of people organizing platforms, everyone in these groups will decide what to put in "their" Scala namespace and that's not the point of a namespace
 - [@heathermiller](http://github.com/heathermiller) assume other platforms (other than the Scala.org platform) would have to use another namespace
@@ -241,7 +239,7 @@ Splitting out core:
 
 Actions:
 
-- [@dickwall](http://github.com/dickwall) create new issue to track this: https://github.com/scala/slip/issues/31
+- [@dickwall](http://github.com/dickwall) created new issue to track this: https://github.com/scala/slip/issues/31
 - The community should read [@odersky](http://github.com/odersky)'s document and let the SLIP know their thoughts/questions/comments
 
 ## ... so what about JSON AST question/discussion
@@ -250,13 +248,13 @@ Link to SLIP: [https://github.com/scala/slip/pull/28](https://github.com/scala/s
 Notes:
 
 - [@SethTisue](http://github.com/SethTisue) from the SLIP meeting point of view, shall we give it a number and essentially encourage this being discussed?
-- [@dickwall](http://github.com/dickwall) points out that this shouldn't have a SLIP number as yet (some misunderstanding there on the SLIP discussion)
+- [@dickwall](http://github.com/dickwall) points out that this shouldn't have been initially submitted with a SLIP number (some misunderstanding there on the SLIP discussion)
 
-- note, there isn't an implementation of this yet
+note, the implementation of this isn't completely finished yet.
 
 
-- [@non](http://github.com/non) we can all agree this is interesting enough/there has been enough debate for this to be given a SLIP number
-- [@dickwall](http://github.com/dickwall) given number 28, but won't be accepted as a SLIP until some conclusion can be reached on where it's position is
+- [@non](http://github.com/non) we can all agree this is interesting enough/there has been enough debate for this to be given a SLIP number and become "active"
+- [@dickwall](http://github.com/dickwall) given number 28, but won't be "accepted" until some conclusion can be reached on where it's position is
 
 people think this is a good idea, but it would be a platform library change in the new set up
 
@@ -270,7 +268,7 @@ a discussion needs to happen around that
 
 Also, should this go into the Scala namespace?
 
-[@SethTisue](http://github.com/SethTisue) points out that part the reason the reaction of this was hard to gage was it wasn't clear if people realized this wasn't for core (it's not).
+[@SethTisue](http://github.com/SethTisue) points out that part the reason the reaction of this was hard to gauge was it wasn't clear if people realized this wasn't for core (it's not).
 
 [@heathermiller](http://github.com/heathermiller) even we are confused about what is and isn't core
 
@@ -283,6 +281,6 @@ Actions:
 
 # AOB
 - Sadly, [@dickwall](http://github.com/dickwall) is to step aside from the committee meetings but will continue to help with some of the process work. This is [@dickwall](http://github.com/dickwall)'s last committee meeting
-- [@SethTisue](http://github.com/SethTisue) will run the Hangout part of the committee meetings
+- [@SethTisue](http://github.com/SethTisue) will set up and moderate the December meeting
 - all agree [@dickwall](http://github.com/dickwall) has done a great job and thank him
 - [@odersky](http://github.com/odersky) how do we find a new moderator? Suggests they email the other SLIP members to see if they can find a new moderator/find volunteers
