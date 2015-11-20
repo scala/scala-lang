@@ -1,0 +1,103 @@
+
+  <div class="footer">
+  <div class="container">
+    <ul>
+      <li><h5>Documentation</h5></li>
+      <li><a href="{{ site.baseurl }}/documentation/getting-started.html">Getting Started</a></li>
+      <li><a href="http://www.scala-lang.org/api/current/index.html#package">API</a></li>
+      <li><a href="http://docs.scala-lang.org/overviews/">Overviews/Guides</a></li>
+      <li><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></li>
+      <li><a href="{{ site.baseurl }}/files/archive/spec/2.11/">Language Specification</a></li>
+    </ul>
+    <ul>
+      <li><h5>Download</h5></li>
+        <li><a href="/download/">Stable Release</a></li>
+        <li><a href="/download/{{ site.devscalaversion }}.html">Development Release</a></li>
+    </ul>
+    <ul>
+      <li><h5>Community</h5></li>
+      <li><a href="{{ site.baseurl }}/community/index.html#mailing_lists">Mailing lists</a></li>
+      <li><a href="{{ site.baseurl }}/community/index.html#irc">Social Media</a></li>
+    </ul>
+    <ul>
+      <li><h5>Contribute</h5></li>
+      <li><a href="{{ site.baseurl }}/contribute/bug-reporting-guide.html">Report an Issue</a></li>
+      <li><a href="{{ site.baseurl }}/contribute">How to Help</a></li>
+      <li><a href="{{ site.baseurl }}/contribute/hacker-guide.html">Contributor's Guide</a></li>
+      <li><a href="{{ site.baseurl }}/contribute/scala-fame.html">Contributor's Hall of Fame</a></li>
+    </ul>
+    <ul>
+      <li><h5>Scala</h5></li>
+      <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+      <li><a href="{{ site.baseurl }}/news">News Archive</a></li>
+      <li><a href="{{ site.baseurl }}/license.html">Scala License</a></li>
+    </ul>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <a style="float: left; margin-right: 8px;" href="http://www.epfl.ch"><img src="{{ site.baseurl }}/resources/img/epfl-logo.png" alt="EPFL logo" /></a>
+        <p style="float: left;"><br/>Copyright &copy; 2002-<span class="current-year"></span> École Polytechnique Fédérale de Lausanne
+        (EPFL)<br/> Lausanne, Switzerland</p>
+      </div>
+      <div class="scala-logo-footer">
+        <img src="{{ site.baseurl }}/resources/img/scala-logo-red-footer.png" alt="Scala footer logo" />
+      </div>
+    </div> <!-- container -->
+    </div> <!-- footer -->
+
+    <!-- prettify  js -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/prettify/prettify.js" type="text/javascript" ></script>
+    <script src="{{ site.baseurl }}/resources/js/vendor/prettify/lang-scala.js" type="text/javascript" ></script>
+
+    <!-- jquery js -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/jquery-1.8.3.min.js" type="text/javascript" ></script>
+    <script src="{{ site.baseurl }}/resources/js/vendor/jquery.stellar.min.js" type="text/javascript" ></script>
+    <script src="{{ site.baseurl }}/resources/js/vendor/tweetMachine.min.js" type="text/javascript" ></script>
+
+    <!-- modernizr js -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript" ></script>
+
+    <!-- retina js -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/retina.js" type="text/javascript" ></script>
+
+    <!-- backstretch js -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/jquery.backstretch.min.js" type="text/javascript" ></script>
+
+    <!-- Bootstrap JS -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/bootstrap.min.js" type="text/javascript" ></script>
+
+    {% unless page.layout == 'page' %}
+    <!-- table of contents JS -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/toc.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
+        function moveScroller() {
+          if ($(".sidebar").length == 0 || $(".sidebar-inner").length == 0)
+            return;
+          var a = function() {
+            var topOfScroll = $(window).scrollTop();
+            var topOfSidebar = $(".sidebar").offset().top;
+            var sidebarInner = $(".sidebar-inner");
+            var bottomOfSidebarInner = $(".sidebar-inner").offset().top + $(".sidebar-inner").outerHeight();
+            var topOfFooter = $(".footer").offset().top - 10;
+            var footerHeight = $(".footer").outerHeight();
+            if (topOfScroll > topOfSidebar) {
+              if (bottomOfSidebarInner > topOfFooter) {
+                sidebarInner.css({position:"fixed",bottom:footerHeight,top:""});
+              } else {
+                sidebarInner.css({position:"fixed",top:"10px",bottom:""});
+              }
+            } else {
+              sidebarInner.css({position:"relative",top:""});
+            }
+          };
+          $(window).scroll(a);a()
+        }
+        moveScroller();
+      })
+    </script>
+    {% endunless %}
+
+    <!-- Custom javascript -->
+    <script src="{{ site.baseurl }}/resources/js/main.js" type="text/javascript"></script>
