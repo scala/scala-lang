@@ -14,8 +14,8 @@ title: Learn
       <p>Access detailed documentation on important language features.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></h3>
-      <p>Digest bite-size pieces of the essentials.</p>
+      <h3><a href="http://docs.scala-lang.org/tutorials/scala-for-java-programmers.html">Tutorial</a></h3>
+      <p>This Scala tutorial for Java developers gets you up to speed.</p>
     </div>
   </div>
 
@@ -29,7 +29,7 @@ title: Learn
       <p>Get an in-depth overview of the language.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/glossary/">Glossary</a></h3>
+      <h3><a href="{{ site.baseurl }}/documentation/glossary/">Glossary</a></h3>
       <p>Understand Scala's vocabulary.</p>
     </div>
   </div>
@@ -44,8 +44,8 @@ title: Learn
       <p>Learn how to code elegantly.</p>
     </div>
     <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/tutorials/">Common Scala Questions</a></h3>
-      <p>Dispel your doubts about common Scala features.</p>
+      <h3><a href="{{ site.baseurl }}/documentation/faq/">Common Questions</a></h3>
+      <p>Frequent questions and answers about the Scala and its ecosystem.</p>
     </div>
   </div>
 </div>
