@@ -1,6 +1,8 @@
 /** This script makes the Hall of Fame for the elapsed month.
  *  It should be run every 1st day of the month, in the working tree, and
  *  then a commit with the changes should be pushed to scala-lang.
+ *
+ *  Relevant API doc is https://developer.github.com/v3/repos/statistics/
  */
 
 import java.net.URL
@@ -35,7 +37,8 @@ object MakeHallOfFame {
       "pvlugter",
       "henrikengstrom",
       "szeiger",
-      "SethTisue"
+      "SethTisue",
+      "lrytz"
   )
 
   // TODO Expand (and maintain) that list - or fetch it from some source
@@ -43,7 +46,6 @@ object MakeHallOfFame {
       "axel22",
       "heathermiller",
       "hubertp",
-      "lrytz",
       "magarciaEPFL",
       "namin",
       "odersky",
