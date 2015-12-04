@@ -35,7 +35,8 @@ object MakeHallOfFame {
       "pvlugter",
       "henrikengstrom",
       "szeiger",
-      "SethTisue"
+      "SethTisue",
+      "lrytz"
   )
 
   // TODO Expand (and maintain) that list - or fetch it from some source
@@ -43,7 +44,6 @@ object MakeHallOfFame {
       "axel22",
       "heathermiller",
       "hubertp",
-      "lrytz",
       "magarciaEPFL",
       "namin",
       "odersky",
