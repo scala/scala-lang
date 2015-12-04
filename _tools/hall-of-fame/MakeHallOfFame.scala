@@ -1,6 +1,8 @@
 /** This script makes the Hall of Fame for the elapsed month.
  *  It should be run every 1st day of the month, in the working tree, and
  *  then a commit with the changes should be pushed to scala-lang.
+ *
+ *  Relevant API doc is https://developer.github.com/v3/repos/statistics/
  */
 
 import java.net.URL
