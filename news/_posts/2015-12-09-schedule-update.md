@@ -24,6 +24,7 @@ both online and in person at Scala Days NYC and Berlin!
 As always, getting new Scala versions out the door is a collective effort between Typesafe, EPFL, and the Scala user community.
 
 Areas where participation is welcome include:
+
   - Library authors: we encourage you to publish your libraries for 2.12.0-M3 and later milestones.
     If you do publish, please [list your library](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
   - Library authors: if (the latest version of) your library isn't included in the 2.12 community build,
@@ -54,20 +55,24 @@ make the last push to complete 2.12.0-RC1 according to this schedule.
 
 
 ### Future 2.12.x
+
   - 2.12.0-M4   Jan 25, 2016 (ca. 12 work-weeks after M3)
   - 2.12.0-M5   Apr 25, 2016 (one year after M1, as in 2.11.x)
   - 2.12.0-RC1  May 30, 2016 (one month after last milestone, between Scala Days NYC and Berlin)
 
 ### Future 2.11.x
+
   - 2.11.8      Feb 8,  2016 (tentative date -- definitely between 2.12.0-M4 and M5)
   - 2.11.9      Q3,     2016 (last planned 2.11.x release, >2 years after 2.11.1)
 
 ### Past 2.12.x
+
   - 2.12.0-M1   May 4,  2015
   - 2.12.0-M2   Jul 15, 2015
   - 2.12.0-M3   Oct 6,  2015
 
 ### Past 2.11.x
+
   - 2.11.0-M1   Jan 7,  2013
   - 2.11.0-M7   Nov 18, 2013
   - 2.11.0-M8   Jan 21, 2014 (one year after M1)
@@ -77,6 +82,7 @@ make the last push to complete 2.12.0-RC1 according to this schedule.
   - 2.11.7      Jun 23, 2015 (just one year after 2.11.1; 2.10.1-2.10.5 took two years)
 
 ### 2.10.x
+
   - 2.10.0 Dec 19, 2012
   - 2.10.1 Mar 12, 2013
   - 2.10.2 Jun 6,  2013
