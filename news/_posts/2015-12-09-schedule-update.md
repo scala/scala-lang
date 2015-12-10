@@ -53,42 +53,42 @@ we've worked extra hard to improve 2.11.x before shifting our focus to 2.12.x, w
 make the last push to complete 2.12.0-RC1 according to this schedule.
 
 
-|                 |                 |                                                                       |
-|-----------------|-----------------|-----------------------------------------------------------------------|
-| **Future 2.12.x**   |                 |                                                                       |
-|                 |                 |                                                                       |
-|  2.12.0-M4      | Jan 25, 2016    | ca. 12 work-weeks after M3                                            |
-|  2.12.0-M5      | Apr 25, 2016    | one year after M1, as in 2.11.x                                       |
-|  2.12.0-RC1     | May 30, 2016    | one month after last milestone, between Scala Days NYC and Berlin     |
-|                 |                 |                                                                       |
-| **Future 2.11.x**   |                 |                                                                       |
-|                 |                 |                                                                       |
-|  2.11.8         | Feb 8, 2016     | tentative date -- definitely between 2.12.0-M4 and M5                 |
-|  2.11.9         | Q3, 2016        | last planned 2.11.x release, >2 years after 2.11.1                    |
-|                 |                 |                                                                       |
-| **Past 2.12.x**     |                 |                                                                       |
-|                 |                 |                                                                       |
-|   2.12.0-M1     | May 4, 2015     |                                                                       |
-|   2.12.0-M2     | Jul 15, 2015    |                                                                       |
-|   2.12.0-M3     | Oct 6, 2015     |                                                                       |
-|                 |                 |                                                                       |
-| **Past 2.11.x**     |                 |                                                                       |
-|                 |                 |                                                                       |
-|   2.11.0-M1     | Jan 7, 2013     |                                                                       |
-|   2.11.0-M7     | Nov 18, 2013    |                                                                       |
-|   2.11.0-M8     | Jan 21, 2014    | one year after M1                                                     |
-|   2.11.0-RC1    | Feb 28, 2014    | one month after last milestone                                        |
-|   2.11.0        | Apr 16, 2014    | six weeks after RC1                                                   |
-|   2.11.1        | May 20, 2014    |                                                                       |
-|   2.11.7        | Jun 23, 2015    | just one year after 2.11.1; 2.10.1-2.10.5 took two years              |
-|                 |                 |                                                                       |
-| **2.10.x**          |                 |                                                                       |
-|                 |                 |                                                                       |
-|   2.10.0        | Dec 19, 2012    |                                                                       |
-|   2.10.1        | Mar 12, 2013    |                                                                       |
-|   2.10.2        | Jun 6, 2013     |                                                                       |
-|   2.10.3        | Sep 27, 2013    |                                                                       |
-|   2.10.4        | Mar 18, 2014    |                                                                       |
-|   2.10.5        | Mar 4, 2015     | EOL two years after 2.10.1                                            |
-|   2.10.6        | Sep 18, 2015    | resolve license incompatibility                                       |
+|                   |                 |                                                                       |
+|-------------------|-----------------|-----------------------------------------------------------------------|
+| **Future 2.12.x** |                 |                                                                       |
+|                   |                 |                                                                       |
+|  2.12.0-M4        | *Jan 25, 2016*  | ca. 12 work-weeks after M3                                            |
+|  2.12.0-M5        | *Apr 25, 2016*  | one year after M1, as in 2.11.x                                       |
+|  2.12.0-RC1       | *May 30, 2016*  | one month after last milestone                                        |
+|                   |                 |                                                                       |
+| **Future 2.11.x** |                 |                                                                       |
+|                   |                 |                                                                       |
+|  2.11.8           | *Feb 8, 2016*   | between 2.12.0-M4 and M5                                              |
+|  2.11.9           | *Q3, 2016*      | last planned 2.11.x release, >2 years after 2.11.1                    |
+|                   |                 |                                                                       |
+| **Past 2.12.x**   |                 |                                                                       |
+|                   |                 |                                                                       |
+|   2.12.0-M1       | *May 4, 2015*   |                                                                       |
+|   2.12.0-M2       | *Jul 15, 2015*  |                                                                       |
+|   2.12.0-M3       | *Oct 6, 2015*   |                                                                       |
+|                   |                 |                                                                       |
+| **Past 2.11.x**   |                 |                                                                       |
+|                   |                 |                                                                       |
+|   2.11.0-M1       | *Jan 7, 2013*   |                                                                       |
+|   2.11.0-M7       | *Nov 18, 2013*  |                                                                       |
+|   2.11.0-M8       | *Jan 21, 2014*  | one year after M1                                                     |
+|   2.11.0-RC1      | *Feb 28, 2014*  | one month after last milestone                                        |
+|   2.11.0          | *Apr 16, 2014*  | six weeks after RC1                                                   |
+|   2.11.1          | *May 20, 2014*  |                                                                       |
+|   2.11.7          | *Jun 23, 2015*  | just 1 year after 2.11.1! (2.10.1-2.10.5 took two years)              |
+|                   |                 |                                                                       |
+| **2.10.x**        |                 |                                                                       |
+|                   |                 |                                                                       |
+|   2.10.0          | *Dec 19, 2012*  |                                                                       |
+|   2.10.1          | *Mar 12, 2013*  |                                                                       |
+|   2.10.2          | *Jun 6, 2013*   |                                                                       |
+|   2.10.3          | *Sep 27, 2013*  |                                                                       |
+|   2.10.4          | *Mar 18, 2014*  |                                                                       |
+|   2.10.5          | *Mar 4, 2015*   | EOL two years after 2.10.1                                            |
+|   2.10.6          | *Sep 18, 2015*  | resolve license incompatibility                                       |
 
