@@ -49,13 +49,13 @@ The `scala` command starts an interactive shell where Scala expressions are inte
     Type :help for more information.
 
     scala> object HelloWorld {
-        |   def main(args: Array[String]) {
+        |   def main(args: Array[String]) = {
         |     println("Hello, world!")
         |   }
         | }
     defined module HelloWorld
 
-    scala> HelloWorld.main(null)
+    scala> HelloWorld.main(Array.empty)
     Hello, world!
 
     scala>:q
