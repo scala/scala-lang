@@ -24,16 +24,17 @@ both online and in person at Scala Days NYC and Berlin!
 As always, getting new Scala versions out the door is a collective effort between Typesafe, EPFL, and the Scala user community.
 
 Areas where participation is welcome include:
-* Library authors: we encourage you to publish your libraries for 2.12.0-M3 and later milestones.
+
+ - Library authors: we encourage you to publish your libraries for 2.12.0-M3 and later milestones.
     If you do publish, please [list your library](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
-* Library authors: if (the latest version of) your library isn't included in the 2.12 community build,
+ - Library authors: if (the latest version of) your library isn't included in the 2.12 community build,
     we have [documented](https://github.com/scala/community-builds/wiki) how to add it. We’ll be happy to help,
     as the community build is helping us catch more regressions than ever. As always, we're counting on your help with testing
     before we go into RC mode! (The [2.12 community build config](https://github.com/scala/community-builds/blob/2.12.x/common.conf) 
     lists which version of each built project, and whether its test suite is being exercised.)
-* Reviewing [pull requests in the Scala repository](https://github.com/scala/scala/pulls), where 2.12.x is now the default branch.
+ - Reviewing [pull requests in the Scala repository](https://github.com/scala/scala/pulls), where 2.12.x is now the default branch.
     Strong motivation will be needed before we merge anything but important bug fixes to the 2.11.x branch.
-* Documentation updates and reviewing help are much appreciated at the [scala-lang](https://github.com/scala/scala-lang/pulls) 
+ - Documentation updates and reviewing help are much appreciated at the [scala-lang](https://github.com/scala/scala-lang/pulls) 
     and [docs.scala-lang](https://github.com/scala/scala.github.com/pulls) repos.
 
 You can talk to us about 2.12 on the [scala-internals mailing list](https://groups.google.com/forum/%23!forum/scala-internals) 
@@ -54,33 +55,38 @@ make the last push to complete 2.12.0-RC1 according to this schedule.
 
 
 ### Future 2.12.x
-* 2.12.0-M4   Jan 25, 2016 (ca. 12 work-weeks after M3)
-* 2.12.0-M5   Apr 25, 2016 (one year after M1, as in 2.11.x)
-* 2.12.0-RC1  May 30, 2016 (one month after last milestone, between Scala Days NYC and Berlin)
+
+ - 2.12.0-M4   Jan 25, 2016 (ca. 12 work-weeks after M3)
+ - 2.12.0-M5   Apr 25, 2016 (one year after M1, as in 2.11.x)
+ - 2.12.0-RC1  May 30, 2016 (one month after last milestone, between Scala Days NYC and Berlin)
 
 ### Future 2.11.x
-* 2.11.8      Feb 8,  2016 (tentative date -- definitely between 2.12.0-M4 and M5)
-* 2.11.9      Q3,     2016 (last planned 2.11.x release, >2 years after 2.11.1)
+
+ - 2.11.8      Feb 8,  2016 (tentative date -- definitely between 2.12.0-M4 and M5)
+ - 2.11.9      Q3,     2016 (last planned 2.11.x release, >2 years after 2.11.1)
 
 ### Past 2.12.x
-* 2.12.0-M1   May 4,  2015
-* 2.12.0-M2   Jul 15, 2015
-* 2.12.0-M3   Oct 6,  2015
+
+ - 2.12.0-M1   May 4,  2015
+ - 2.12.0-M2   Jul 15, 2015
+ - 2.12.0-M3   Oct 6,  2015
 
 ### Past 2.11.x
-* 2.11.0-M1   Jan 7,  2013
-* 2.11.0-M7   Nov 18, 2013
-* 2.11.0-M8   Jan 21, 2014 (one year after M1)
-* 2.11.0-RC1  Feb 28, 2014 (one month after last milestone)
-* 2.11.0      Apr 16, 2014 (six weeks after RC1)
-* 2.11.1      May 20, 2014
-* 2.11.7      Jun 23, 2015 (just one year after 2.11.1; 2.10.1-2.10.5 took two years)
+
+ - 2.11.0-M1   Jan 7,  2013
+ - 2.11.0-M7   Nov 18, 2013
+ - 2.11.0-M8   Jan 21, 2014 (one year after M1)
+ - 2.11.0-RC1  Feb 28, 2014 (one month after last milestone)
+ - 2.11.0      Apr 16, 2014 (six weeks after RC1)
+ - 2.11.1      May 20, 2014
+ - 2.11.7      Jun 23, 2015 (just one year after 2.11.1; 2.10.1-2.10.5 took two years)
 
 ### 2.10.x
-* 2.10.0 Dec 19, 2012
-* 2.10.1 Mar 12, 2013
-* 2.10.2 Jun 6,  2013
-* 2.10.3 Sep 27, 2013
-* 2.10.4 Mar 18, 2014
-* 2.10.5 Mar 4,  2015 (EOL two years after 2.10.1)
-* 2.10.6 Sep 18, 2015 (resolve license incompatibility)
+
+ - 2.10.0 Dec 19, 2012
+ - 2.10.1 Mar 12, 2013
+ - 2.10.2 Jun 6,  2013
+ - 2.10.3 Sep 27, 2013
+ - 2.10.4 Mar 18, 2014
+ - 2.10.5 Mar 4,  2015 (EOL two years after 2.10.1)
+ - 2.10.6 Sep 18, 2015 (resolve license incompatibility)
