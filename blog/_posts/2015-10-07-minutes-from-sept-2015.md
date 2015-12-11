@@ -5,13 +5,13 @@ by: Dick Wall
 title: Minutes from Sept SIP/SLIP Meeting
 ---
 
-# SIP/SLIP Meeting, Sept 10th 2015
+## SIP/SLIP Meeting, Sept 10th 2015
 
-### Next Committee Meeting:
+#### Next Committee Meeting:
 
 Monday Oct 12th, 4.30pm GMT. [Google Hangout Event](https://plus.google.com/u/5/events/ci1hc0tn9jf0v45a9qdd7a520j8)
 
-### Video of Sept Meeting
+#### Video of Sept Meeting
 [Video of last meeting](https://plus.google.com/u/5/events/cvv4in7eq5tf4rus2ve0jodvo5c)
 
 ## Opening Matters
@@ -37,4 +37,3 @@ A number of SIPs and SLIPs were considered, with the following decisions:
 * Either/Validation is proceeding but no SLIP proposal or number yet. Progress can be tracked in [Issue 5](https://github.com/scala/slip/issues/5)
 * Scala IO improvements likewise are just getting started, but can be tracked in [Issue 19](https://github.com/scala/slip/issues/19)
 * [SLIP 27](https://github.com/scala/slip/blob/master/text/0027-collection-view-redesign.md) has been assigned to a Views redesign proposed by Josh Suereth. Please note that this SLIP is now open for public review for the period of at least one month. This does not block implementation work in the meantime, but may require changes based on the outcome of the public review. The progress of this SLIP will be tracked under [Issue 23](https://github.com/scala/slip/issues/23).
-

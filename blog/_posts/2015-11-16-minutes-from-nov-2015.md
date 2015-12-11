@@ -5,18 +5,18 @@ by: Hamish Dickson
 title: Minutes from Nov 2015 SIP/SLIP Meeting
 ---
 
-# SIP/SLIP meeting, November 2015
+## SIP/SLIP meeting, November 2015
 
 [A video recording of this meeting](https://www.youtube.com/watch?v=RJAwDhB3Vr8) is available.
 
-# Welcomes and apologies
+## Welcomes and apologies
 Today we have [@dickwall](http://github.com/dickwall), [@sjrd](http://github.com/sjrd), [@SethTisue](http://github.com/SethTisue), [@heathermiller](http://github.com/heathermiller), [@non](http://github.com/non) and [@odersky](http://github.com/odersky).
 
 [@jsuereth](http://github.com/jsuereth) is unable to make it.
 
-# November milestone issues
+## November milestone issues
 
-## Adding scala.io.Target
+### Adding scala.io.Target
 Link to SLIP: [https://github.com/scala/slip/pull/2](https://github.com/scala/slip/pull/2)
 
 Notes:
@@ -24,7 +24,7 @@ Notes:
 - nothing has changed on this one, [@dickwall](http://github.com/dickwall) suggests hibernate tag
 - believe this has been replaced/deprecated by the larger IO library discussion
 
-## Unsigned integer data types
+### Unsigned integer data types
 Link to SLIP: [https://github.com/scala/slip/pull/30](https://github.com/scala/slip/pull/30)
 
 Owner: [@sjrd](http://github.com/sjrd)
@@ -53,7 +53,7 @@ Actions:
 - [@dickwall](http://github.com/dickwall) will create a tag for public review and add it to this SLIP
 
 
-##  Implicits in for comprehensions/pattern matches SIP tracking
+###  Implicits in for comprehensions/pattern matches SIP tracking
 Link to SLIP: [https://github.com/scala/slip/issues/6](https://github.com/scala/slip/issues/6)
 
 Notes:
@@ -80,7 +80,7 @@ Actions:
 - [@SethTisue](http://github.com/SethTisue) to post instructions on the SLIP PR on how to use a specific Scala build so people can try out the current implementation
 
 
-## Implicit enrichment of `scala.util.Either` to support monadic bias
+### Implicit enrichment of `scala.util.Either` to support monadic bias
 Link to SLIP: [https://github.com/scala/slip/pull/20](https://github.com/scala/slip/pull/20)
 
 Notes:
@@ -92,7 +92,7 @@ Actions:
 
 - [@swaldman](https://github.com/swaldman) to co-ordinate this with other SLIPs
 
-## Collections overhaul
+### Collections overhaul
 Link to SLIP: [https://github.com/scala/slip/issues/27](https://github.com/scala/slip/issues/27)
 
 Notes:
@@ -100,7 +100,7 @@ Notes:
 - not much activity this month
 - active, hold fire until next meeting
 
-## scala-parser-combinators vs fastparse
+### scala-parser-combinators vs fastparse
 Link to SLIP: [https://github.com/scala/slip/issues/24](https://github.com/scala/slip/issues/24)
 
 Notes:
@@ -109,7 +109,7 @@ Notes:
 - [@SethTisue](http://github.com/SethTisue) impression from [@lihaoyi](https://github.com/lihaoyi) is that he's ok with FastParse going into the standard module, but he probably doesn't have the time
 - [@odersky](http://github.com/odersky) agrees we're blocked until someone can do this really
 
-## SLIP 27 Tracking
+### SLIP 27 Tracking
 Link to SLIP: [https://github.com/scala/slip/issues/23](https://github.com/scala/slip/issues/23)
 
 Notes:
@@ -118,7 +118,7 @@ Notes:
 - hold this until next month
 - this issue is linked to the collection overhaul and it needs to be decided if this should be done separately or if it should be rolled into a larger change
 
-## Scala IO fix-up/overhaul
+### Scala IO fix-up/overhaul
 Link to SLIP: [https://github.com/scala/slip/issues/19](https://github.com/scala/slip/issues/19)
 
 Notes:
@@ -127,7 +127,7 @@ Notes:
 - [@dickwall](http://github.com/dickwall) is nearly done with his blog post, discussed in the last meeting
 - not ready for hibernate just yet
 
-## Establish a fair survey mechanism for SLIPs?
+### Establish a fair survey mechanism for SLIPs?
 Link to SLIP: [https://github.com/scala/slip/issues/29](https://github.com/scala/slip/issues/29)
 
 Notes:
@@ -145,7 +145,7 @@ Notes:
 
 [@dickwall](http://github.com/dickwall) closes issue, but happy for it to be reopened as and when it's needed
 
-## Gather, list, contact interested parties for an Either/Or/Xor/Validation etc SLIP and possible expert group
+### Gather, list, contact interested parties for an Either/Or/Xor/Validation etc SLIP and possible expert group
 Link to SLIP: [https://github.com/scala/slip/issues/5](https://github.com/scala/slip/issues/5)
 
 Notes:
@@ -153,13 +153,13 @@ Notes:
 - [@non](http://github.com/non) no update on this, know people are to do research on this, but it hasn't happened yet (people get busy)
 - not given hibernated tag
 
-## SIP: Auto-uncurry n-ary functions
+### SIP: Auto-uncurry n-ary functions
 
 There is no SIP tracking issue as yet, but information can be found here: [https://github.com/lampepfl/dotty/issues/897](https://github.com/lampepfl/dotty/issues/897)
 
 No issue created as yet, but [@odersky](http://github.com/odersky) will create one if needed
 
-## SIP for supporting named type arguments and partial type argument lists
+### SIP for supporting named type arguments and partial type argument lists
 Link to SLIP: [https://github.com/scala/scala.github.com/pull/456](https://github.com/scala/scala.github.com/pull/456)
 
 Notes:
@@ -173,7 +173,8 @@ Homework:
 - review in December SLIP meeting
 
 
-# JSON AST, Scala standard library, and the SLIP process
+
+## JSON AST, Scala standard library, and the SLIP process
 Link to issue and document: [https://github.com/scala/slip/issues/31](https://github.com/scala/slip/issues/31)
 
 [A SLIP proposing a standard JSON AST](https://github.com/scala/slip/pull/28) deviated quickly from the purpose of the SLIP and started a long discussion about what should and should not be in a Scala standard library. This and other discussions seem to really stem from the fact that it isn't clear what should go where in the Scala ecosystem.
@@ -242,7 +243,7 @@ Actions:
 - [@dickwall](http://github.com/dickwall) created new issue to track this: https://github.com/scala/slip/issues/31
 - The community should read [@odersky](http://github.com/odersky)'s document and let the SLIP know their thoughts/questions/comments
 
-## ... so what about JSON AST question/discussion
+### ... so what about JSON AST question/discussion
 Link to SLIP: [https://github.com/scala/slip/pull/28](https://github.com/scala/slip/pull/28)
 
 Notes:
@@ -279,7 +280,7 @@ Actions:
 - SLIP give a number (28)
 
 
-# AOB
+## AOB
 - Sadly, [@dickwall](http://github.com/dickwall) is to step aside from the committee meetings but will continue to help with some of the process work. This is [@dickwall](http://github.com/dickwall)'s last committee meeting
 - [@SethTisue](http://github.com/SethTisue) will set up and moderate the December meeting
 - all agree [@dickwall](http://github.com/dickwall) has done a great job and thank him

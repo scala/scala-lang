@@ -5,7 +5,7 @@ by: Dick Wall
 title: SIP/SLIP Summary, July 27th 2015
 ---
 
-# SIP/SLIP Summary, July 27th 2015
+## SIP/SLIP Summary, July 27th 2015
 
 ### Next Committee Meeting:
 

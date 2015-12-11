@@ -5,7 +5,7 @@ by: Dick Wall
 title: Minutes from Aug SIP/SLIP Meeting
 ---
 
-# SIP/SLIP Meeting, Aug 20th 2015
+## SIP/SLIP Meeting, Aug 20th 2015
 
 ### Video of Aug Meeting
 [Video of Aug meeting](https://plus.google.com/u/5/events/cfh933nkhhq0pe7h23c9v4csk6o)
@@ -23,4 +23,3 @@ A number of SIPs and SLIPs were considered, with the following decisions:
 
 * [Either and the larger Validation library questions](https://github.com/scala/slip/issues/5) are large enough to merit the formation of an expert group to discuss the options. Bill Venners has volunteered to coordinate the group.
 * All existing SIPs and SLIPs were captured in [github issues](https://github.com/scala/slip/issues) for tracking.
-
