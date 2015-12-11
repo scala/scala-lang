@@ -10,15 +10,15 @@ title: Blog
 
 
 <ul class="post-list">
-  {% for p in site.categories.blog %}
+  {% for p in site.posts %}
     {% if p.post-type == 'blog' %}
       <li>
         {% if p.link-out %}
-          <a href="{{ p.link-out }}">{{ p.title }}</a>
+          <b><a href="{{ p.link-out }}">{{ p.title }}</a></b>
         {% else %}
-          <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
+          <b><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></b>
         {% endif %}
-          <span class="date">( {{ p.date | date: "%A, %B %d, %Y" }} )</span>
+          <br><span class="news-archive-date">{{ p.date | date: "%A, %B %d, %Y" }}</span>
       </li>
     {% endif %}
   {% endfor %}

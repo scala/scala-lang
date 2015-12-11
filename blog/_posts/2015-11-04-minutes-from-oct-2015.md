@@ -5,13 +5,13 @@ by: Hamish Dickson
 title: Minutes from Oct 2015 SIP/SLIP Meeting
 ---
 
-# SIP/SLIP meeting, October 2015
+## SIP/SLIP meeting, October 2015
 
 Thanks to [@hamishdickson](http://github.com/hamishdickson) for compiling these extensive minutes.
 
 [A video recording of this meeting is available](https://www.youtube.com/watch?v=vonlAh2tmnw).
 
-# Welcomes and apologies
+## Welcomes and apologies
 
 - Welcome to [@sjrd](http://github.com/sjrd) who joins us
 - [@odersky](http://github.com/odersky), [@jsuereth](http://github.com/jsuereth), [@dickwall](http://github.com/dickwall) and [@SethTisue](http://github.com/SethTisue) are all there
@@ -19,7 +19,7 @@ Thanks to [@hamishdickson](http://github.com/hamishdickson) for compiling these 
 - [@non](http://github.com/non) has the flu
 - [@heathermiller](http://github.com/heathermiller) is "otherwise engaged"
 
-# 1. New Google Calendar
+## 1. New Google Calendar
 
 [@dickwall](http://github.com/dickwall) has set up a google calendar for slip:
 
@@ -27,14 +27,14 @@ Thanks to [@hamishdickson](http://github.com/hamishdickson) for compiling these 
 - It's public so people can know when the next slip meeting is
 - The scalaslip@gmail.com calendar which you can add in google calendars under the "add a friends calendar" option
 
-# 2. Expert groups
+## 2. Expert groups
 
-## 2.1 Getting updates from expert groups
+### 2.1 Getting updates from expert groups
 [@dickwall](http://github.com/dickwall) can't email everyone for expert groups, it's simply not a goer. One idea is to create an event
 in the new Google calendar (probably the Friday before the meeting) and ask an expert group representative
 to come to that and provide an update before the next slip meeting.
 
-## 2.2 Role of expert groups
+### 2.2 Role of expert groups
 [@dickwall](http://github.com/dickwall) raises a point that was brought up on the IO overhaul discussion, where people feel they have
 been assigned to an expert group and given work to do without asking. This is entirely not what anyone
 intended and [@dickwall](http://github.com/dickwall) is going to write a blog post about the aim of expert groups, how they are formed
@@ -50,15 +50,15 @@ Actions:
 - someone should check if misconstruisem is a word
 
 
-# 3. SLIPs without recent activity
+## 3. SLIPs without recent activity
 Some SLIPs have had no activity in the last couple of months, it would be good if we can somehow track
 this. [@dickwall](http://github.com/dickwall) suggests are create a github tag to track SLIP issues like this. His initial idea is to
 use "dormant", but thinks this is too passive-aggressive. People agree and [@odersky](http://github.com/odersky) suggests "hibernate"
 (which sticks).
 
-# 4. October milestone issues
+## 4. October milestone issues
 
-## Scala Parser Combinators vs FastParse
+### Scala Parser Combinators vs FastParse
 Link to issue: https://github.com/scala/slip/issues/24
 
 Notes:
@@ -81,7 +81,7 @@ Actions:
 - Invite [@lihaoyi](http://github.com/lihaoyi) to take action if he wants to
 
 
-## SLIP 27
+### SLIP 27
 Link to issue: https://github.com/scala/slip/issues/23
 
 Owner: [@jsuereth](http://github.com/jsuereth)
@@ -109,7 +109,7 @@ Actions:
 - [@jsuereth](http://github.com/jsuereth) and [@sjrd](http://github.com/sjrd) to take scala-js optimization issues offline
 - [@dickwall](http://github.com/dickwall) to create a new issue to track optimization issue
 
-## SLIP 22 - Async
+### SLIP 22 - Async
 Link to issue: https://github.com/scala/slip/issues/22
 
 Owner: [@retronym](http://github.com/retronym)
@@ -126,7 +126,7 @@ few months that will include technical improvements to the lib and improved docu
 Actions:
 None discussed
 
-## Revisit by-name parameters
+### Revisit by-name parameters
 Link to issue: https://github.com/scala/slip/issues/21
 
 Notes:
@@ -137,7 +137,7 @@ as a conflict of interest
 Actions:
 None discussed
 
-## Scala IO fix/overhaul
+### Scala IO fix/overhaul
 Link to issue: https://github.com/scala/slip/issues/19
 
 Notes:
@@ -152,7 +152,7 @@ or someone else in the thread
 - [@dickwall](http://github.com/dickwall) to put all this in a blog post
 
 
-## SIP 24 and 25 - trait parameters and repeating by-names
+### SIP 24 and 25 - trait parameters and repeating by-names
 Link to issue: https://github.com/scala/slip/issues/12
 
 Notes:
@@ -162,7 +162,7 @@ Notes:
 Actions:
 None discussed
 
-## Possible SIP for changes to escapes in string interpolation (double quotes inside of a string interpolation)
+### Possible SIP for changes to escapes in string interpolation (double quotes inside of a string interpolation)
 Link to issue: https://github.com/scala/slip/issues/10
 
 Notes:
@@ -180,7 +180,7 @@ Actions:
 - Allocate hibernate tag
 - [@jsuereth](http://github.com/jsuereth) will reach out to [@som-snytt](http://github.com/som-snytt) to talk about the next steps here
 
-## Binary Literals, Underscores in Literals SIP/SLIP tracking
+### Binary Literals, Underscores in Literals SIP/SLIP tracking
 Link to issue: https://github.com/scala/slip/issues/8
 
 Owner: [@non](http://github.com/non)
@@ -194,7 +194,7 @@ Actions
 - Allocate hibernate tag
 - Probably an update from [@non](http://github.com/non) would be good
 
-## Implicits in for comprehensions/pattern matches SIP tracking
+### Implicits in for comprehensions/pattern matches SIP tracking
 Link to issue: https://github.com/scala/slip/issues/6
 
 Owner: [@haroldl](http://github.com/haroldl)
@@ -208,7 +208,7 @@ Actions:
 
 - [@dickwall](http://github.com/dickwall) to reach out and chat to [@haroldl](http://github.com/haroldl) and see how things are going
 
-## Gather, list, contact interested parties for an Either/Or/Xor/Validation etc SLIP and possible expert group
+### Gather, list, contact interested parties for an Either/Or/Xor/Validation etc SLIP and possible expert group
 Link to issue: https://github.com/scala/slip/issues/5
 
 Notes:
@@ -221,7 +221,7 @@ Actions:
 
 - Expert group to try out each other's libraries
 
-# AOB
+## AOB
 
 - collections doesn't have any tracking - [@dickwall](http://github.com/dickwall) to set something up and ping him with any links/info on
 Gitter and he will collect them and put them into an issue with some links. Expects lots of discussion
