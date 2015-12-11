@@ -22,7 +22,7 @@ If you are just starting to learn how to code, you will find that a large portio
 As a first example, we use the standard "Hello, world!" program to demonstrate the use of the Scala tools without knowing too much about the language.
 
     object HelloWorld {
-      def main(args: Array[String]) {
+      def main(args: Array[String]): Unit = {
         println("Hello, world!")
       }
     }
@@ -49,13 +49,13 @@ The `scala` command starts an interactive shell where Scala expressions are inte
     Type :help for more information.
 
     scala> object HelloWorld {
-        |   def main(args: Array[String]) = {
+        |   def main(args: Array[String]): Unit = {
         |     println("Hello, world!")
         |   }
         | }
     defined module HelloWorld
 
-    scala> HelloWorld.main(Array.empty)
+    scala> HelloWorld.main(Array())
     Hello, world!
 
     scala>:q
