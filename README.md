@@ -12,21 +12,23 @@ This site uses a Jekyll, a Ruby framework. The required Jekyll version is 1.5.1.
 
 There are two ways to run Jekyll to build the site:
 
-* using Bundler, so Jekyll and accompanying gems are installed only inside this directory
 * using globally installed Jekyll and accompanying gems
+* using Bundler, so Jekyll and accompanying gems are installed only inside this directory
 
-The latter method is the one currently actually used on
-scala-lang.org, but the former method may be more convenient for users
-who are comfortable using Bundler and who don't want anything else
+The former method is the one currently actually used on
+scala-lang.org. The latter method may be more convenient for users who
+are comfortable using Bundler and who don't want anything else
 installed system-wide.
 
-### Building with Bundler
+### Building with global Jekyll
 
-`cd` into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./bundle-vendor/bundle`.
+Install Jekyll 1.5.1 on your system using RubyGems:
 
-Start the server in the context of the bundle:
+    gem install jekyll -v 1.5.1
 
-    bundle exec jekyll serve
+After cloning, cd into the directory where you cloned this repository and run:
+
+    jekyll serve
 
 and watch the output. You should see something like:
 
@@ -37,15 +39,13 @@ and watch the output. You should see something like:
            Generating... done.
       Auto-regeneration: enabled for '/Users/ben/src/scala-lang'
 
-### Building with global Jekyll
+### Building with Bundler
 
-You can install Jekyll 1.5.1 on your system without involving Bundler by using RubyGems:
+`cd` into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./bundle-vendor/bundle`.
 
-    gem install jekyll -v 1.5.1
+Start the server in the context of the bundle:
 
-After cloning, cd into the directory where you cloned this repository and run:
-
-    jekyll serve
+    bundle exec jekyll serve
 
 from this point, everything else should be the same, regardless of which method
 you used to run Jekyll.
