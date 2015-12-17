@@ -2703,3 +2703,10 @@ div#toc ul > li + ul > li { margin-top: 12px; }
   font-size: 12px;
   color: #93a1a1;
 }
+
+.article-date {
+  font-family: 'proxima-nova', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(0, 43, 54, 0.35);
+}

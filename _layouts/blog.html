@@ -33,6 +33,7 @@ toc: true
     <!-- <div class="row"> -->
       <!-- <div class="span12"> -->
           <div class="main-page-column">
+            <div class="article-date">{{ page.date | date: "%B %-d, %Y" }}</div>
             {% if page.by %}
               <div class="written">Written By: <span class="by">{{ page.by }}</span></div>
             {% endif %}
