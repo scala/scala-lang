@@ -10,7 +10,7 @@ This site uses a Jekyll, a Ruby framework. You'll need Ruby and Bundler installe
 
 ## Building & Viewing
 
-cd into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./vendor/bundle`.
+cd into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./bundle-vendor/bundle`.
 
 Start the server in the context of the bundle:
 
