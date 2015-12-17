@@ -3,12 +3,11 @@ layout: page
 title: The Scala Code of Conduct
 ---
 
-This Code of Conduct covers our behaviour as contributors/comitters of
-the Scala Team, as well as those participating in any Scala moderated
-forum, mailing list, wiki, web site, IRC channel, hackathon, public
-meeting or private correspondence.  (See the
-[list of community fora](http://www.scala-lang.org/community/)
-on the main Scala site.)
+This Code of Conduct covers our behaviour as contributors/committers of
+the Scala team, as well as those participating in any Scala moderated
+forum, mailing list, wiki, web site, Gitter or IRC room, hackathon, public
+meeting or private correspondence.  (See our
+[list of community fora](community/).)
 
 Scala moderators are appointed by EPFL / Typesafe to maintain the
 health of the community and will arbitrate in any dispute over the
@@ -45,17 +44,17 @@ Snide comments, like the following:
 
 are generally unhelpful.  What you could have said:
 
-> I think perhaps my point was unclear.  Let's rehash:
+> I think perhaps my point was unclear.  Let me expand:
 
 ## (2) Be Courteous
 
- Whether posting to a mailing list, or submitting a bug report we value your
- contribution to Scala. When working with another’s work, be courteous and
- professional. It’s not courteous to demand responses, insult pull requests
- or post condescending bug reports. In that same vein, avoid posting messages
- with little to no content on the mailing list. We have a lot of people in
- the community, let’s keep our signal to noise ratio high, and set emotions
- aside before coming to the table.
+Whether posting to a mailing list, or submitting a bug report we value your
+contribution to Scala. When working with another’s work, be courteous and
+professional. It’s not courteous to demand responses, insult pull requests
+or post condescending bug reports. In that same vein, avoid posting messages
+with little to no content on the mailing list. We have a lot of people in
+the community, let’s keep our signal-to-noise ratio high, and set emotions
+aside before coming to the table.
 
 ## (3) Be Excellent
 
@@ -74,7 +73,6 @@ incomplete work is often of negative benefit. At the same time, contributors
 will come and go, as with any open source community. If a contributor needs
 to drop something, take measures to ensure someone else is willing to pick
 it up, or notify the other maintainers.
-
 
 ## Violating the Code
 
