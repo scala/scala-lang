@@ -77,6 +77,10 @@ Community:
 * [Scala Times](http://scalatimes.com) weekly Scala newspaper
 * [The Scalawags](http://scalawags.tv) monthly podcast
 
+Many Scala users are active on Twitter for sharing Scala-related news
+items and opinions.  Ask your Scala friends who they follow on Twitter
+(besides @Scala_lang!).
+
 ## Community-Powered Learning Resources
 
 * [Scala Exercises](http://scala-exercises.47deg.com/)
