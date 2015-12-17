@@ -61,7 +61,7 @@ you have to execute `chcp 65001`. This command is best added to the `jekyll.bat`
 
 Regardless of your method of running Jekyll, the generated site is available at `http://localhost:4000`.
 
-Jekyll will automatically watch for changes on the filesystem. When you change a file, the console will show that jekyll is regenerating. Wait until it says `done` to refresh your browser.
+If you add `--watch` to your Jekyll command line, Jekyll will automatically watch for changes on the filesystem. When you change a file, the console will show that jekyll is regenerating. Wait until it says `done` to refresh your browser.
 
 ## YAML Front Matter
 
