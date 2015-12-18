@@ -11,7 +11,7 @@ The community is also the source of many libraries, tools, and other resources a
 
 ## Mailing Lists
 
-The Scala mailing lists are covered by the [Scala Code of Conduct](http://docs.scala-lang.org/conduct.html).
+The Scala mailing lists are covered by the [Scala Code of Conduct](../conduct.html).
 
 This is our most beginner-friendly list:
 
