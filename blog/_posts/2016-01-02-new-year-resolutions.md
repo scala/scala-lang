@@ -47,7 +47,7 @@ I have been as guilty of complication as everybody else. Is
 constraints of embedding special types such as arrays and strings in a
 collection library? At the time it looked like this to me, but I now
 think with more effort we might be able come up with a solution that
-works as well and is simpler. Another example, where I have doubts, if
+works as well and is simpler. Another example, where I have doubts if
 not regrets are the `/:` and `:\` operators in scala.collections.
 They are cute synonyms for folds, and I am still fond of the analogy
 with falling dominoes they evoke. But in retrospect I think maybe they
