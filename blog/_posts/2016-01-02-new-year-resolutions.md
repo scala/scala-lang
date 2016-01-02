@@ -6,7 +6,7 @@ title: New Year Resolutions
 ---
 
 For most of us, the change of the year is an occasion for thinking
-about what we missed last year and where we want to improve. I decided
+about what we missed doing last year and where we want to improve. I decided
 there are a couple of things where I would like to do better in 2016
 than in 2015. The first is that I would like to do more blogging and
 writing in general. I have been pretty silent for most of the last
@@ -37,7 +37,7 @@ means we have a large spectrum of choice how to write a Scala
 application or library. It's very important for all of us to use this
 power wisely, and to promote simplicity of usage wherever possible.
 Unfortunately, most of us fall too all too easily into the complexity
-trap, as the Alex's Payne's tweet sums up very nicely.
+trap, as Alex's Payne's tweet sums it up very nicely.
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">“Complexity is like a bug light for smart people. We can&#39;t resist it, even though we know it&#39;s bad for us.” <a href="https://t.co/V9Izi573CF">https://t.co/V9Izi573CF</a></p>&mdash; Alex Payne (@al3x) <a href="https://twitter.com/al3x/status/683036775942496256">January 1, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
