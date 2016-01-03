@@ -45,7 +45,7 @@ trap, as Alex Payne's tweet sums it up very nicely.
 I have been as guilty of complication as everybody else. Is
 `CanBuildFrom` the most appropriate solution to deal with the
 constraints of embedding special types such as arrays and strings in a
-collection library? It is a powerful mechanism obtaining a uniform
+collection library? It achieves its purpose of providing a uniform
 user-level API on disparate datatypes. But I now think with more
 effort we might be able come up with a solution that works as well and
 is simpler. Another example, where I have doubts if not regrets are
