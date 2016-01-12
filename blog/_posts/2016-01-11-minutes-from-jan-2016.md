@@ -17,7 +17,7 @@ Today we have [@SethTisue](http://github.com/SethTisue), [@sjrd](http://github.c
 
 ### SIP for supporting named type arguments and partial type argument lists
 
-Link to SLIP: [https://github.com/scala/scala.github.com/pull/456](https://github.com/scala/scala.github.com/pull/456)
+Link to SIP: [https://github.com/scala/scala.github.com/pull/456](https://github.com/scala/scala.github.com/pull/456)
 
 Proposal by [@ahmadsalim](https://github.com/ahmadsalim)
 
