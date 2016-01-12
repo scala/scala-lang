@@ -65,6 +65,10 @@ See our [events page](/events/).
 
 Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/tagged/scala), a very popular programmer Q&A site.
 
+## Reddit
+
+There is a large and active Scala community on the [/r/Scala](http://reddit.com/r/scala) subreddit.
+
 ## Sources of Scala News
 
 Official:
