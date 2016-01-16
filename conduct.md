@@ -9,16 +9,18 @@ forum, mailing list, wiki, web site, Gitter or IRC room, hackathon, public
 meeting or private correspondence.  (See our
 [list of community fora](community/).)
 
-Scala moderators are appointed by EPFL / Typesafe to maintain the
+Scala moderators are appointed by EPFL and Typesafe to maintain the
 health of the community and will arbitrate in any dispute over the
 conduct of a member of the community.
 
 Note: This should not be interpreted like a legal document.  It's a statement
 of intent, and a guideline for collaboration.
 
-The code of conduct consists of a few simple rules:
+The code of conduct consists of some hard-and-fast rules and some guidelines:
 
-## (1) Be Respectful
+## Rules
+
+### (1) Be Respectful
 
 The Scala community is made up of a diverse set of individuals and
 backgrounds. Everyone can make a contribution to Scala. Disagreement is no
@@ -46,7 +48,7 @@ are generally unhelpful.  What you could have said:
 
 > I think perhaps my point was unclear.  Let me expand:
 
-## (2) Be Courteous
+### (2) Be Courteous
 
 Whether posting to a mailing list, or submitting a bug report we value your
 contribution to Scala. When working with another’s work, be courteous and
@@ -56,7 +58,13 @@ with little to no content on the mailing list. We have a lot of people in
 the community, let’s keep our signal-to-noise ratio high, and set emotions
 aside before coming to the table.
 
-## (3) Be Excellent
+## Guidelines
+
+We didn't want our code to consist only of things that aren't allowed.
+Here are some guidelines about how our community can be not just
+good, but great:
+
+### (3) Strive for Excellence
 
 Strive to improve in all things. Strive to better Scala, and improve
 understanding. Improve your own teaching styles. Change the way we think about
@@ -64,7 +72,7 @@ code design. Scala is a gateway into a new world of software design, and we’re
 constantly learning new things and opening new avenues. Keep an open mind
 to try new things, and strive to improve what we already know.
 
-## (4) Be Thorough
+### (4) Be Thorough
 
 No matter what it is, responding to a question, fixing a bug, writing a
 proposal, make sure the contribution is thorough. Don’t leave things half
