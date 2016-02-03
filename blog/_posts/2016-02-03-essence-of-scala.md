@@ -56,7 +56,7 @@ types `T` to terms `t` and formal _evaluation rules_ that describe how a
 program is evaluated. The main difference between the Wadlerfest paper
 and the prior technical report lies in the form of these evaluation
 rules. The technical report uses a "big step" semantics, i.e. it
-defines an abstract of interpreter that explains how terms map to
+defines an interpreter that explains how terms map to
 values. The Wadlerfest paper uses a more common "small step"
 semantics, i.e. it explains evaluation as step-wise rewritings of
 terms. To do this, it needs to restrict terms to be in [A-normal
@@ -78,8 +78,8 @@ you can have conflicting definitions. For instance you might have an abstract
 type declaration in a base class with two conflicting aliases in subclasses:
 
      trait Base { type A }
-     trait Sub1 { type A = String }
-     trait Sub2 { type A = Int }
+     trait Sub1 extends Base { type A = String }
+     trait Sub2 extends Base { type A = Int }
 
 Now, if you combine `Sub1` and `Sub2` in one class, you get a conflict, since the type `A` is supposed to be equal to both `String` and `Int`. If you do
 not detect the conflict and assume the equalities at face value you
@@ -92,7 +92,7 @@ Now, the problem is that one cannot always detect these
 inconsistencies, at least not by a local analysis that does not need
 to look at the whole program. What's worse, once you have an
 inconsistent set of definitions you can use these definitions to
-"prove" their own consistency - much like an mathematical theory that
+"prove" their own consistency - much like a mathematical theory that
 assumes `true = false` can "prove" every proposition including its own
 correctness.
 
@@ -149,5 +149,5 @@ project are important.
     This lets us put other constructs of the Scala language to the test,
     either to increase our confidence that they are indeed sound, or
     to show that they are unsound. In my next blog I will
-    present some of the things we have discovered by that exercise.
+    present some of the issues we have discovered by that exercise.
 
