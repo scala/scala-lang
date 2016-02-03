@@ -43,7 +43,7 @@ by DOT is described by the following abstract grammar:
                       { def a: T }           Method declaration
                       { type T >: T1 <: T2 } Type declaration
                       T1 & T2                Intersection
-                      { x => T }             Recursio
+                      { x => T }             Recursion
 
 The grammar uses several kinds of names:
 
