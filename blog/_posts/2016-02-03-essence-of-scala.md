@@ -13,10 +13,10 @@ it's DOT, the calculus of dependent object types, that underlies Scala.
 A [paper on DOT](http://infoscience.epfl.ch/record/215280) will be
 presented in April at [Wadlerfest](http://events.inf.ed.ac.uk/wf2016),
 an event celebrating Phil Wadler's 60th birthday. There's also a prior
-[technical report](http://arxiv.org/abs/1510.05216v1) by Tiark Rompf
-and Nada Amin describing a slightly different version of the
-calculus. Each version describes a proof of type soundness that has
-been machine-checked for correctness.
+technical report (["From F to DOT"](http://arxiv.org/abs/1510.05216))
+by Tiark Rompf and Nada Amin describing a slightly different version
+of the calculus. Each paper describes a proof of type soundness that
+has been machine-checked for correctness.
 
 ## The DOT calculus
 
@@ -64,7 +64,7 @@ form](https://en.wikipedia.org/wiki/A-normal_form), that is, every
 intermediate term is abstracted out in a local definition.
 
 The following _type soundness_ property was shown in each case with a
-mechanized proof:
+mechanized, (i.e. machine-checked) proof:
 
 > If a term `t` has type `T`, and the evaluation of `t` terminates, then
   the result of the evaluation will be a value `v` of type `T`.
@@ -72,7 +72,7 @@ mechanized proof:
 ## Difficulties
 
 Formulating the precise soundness theorem and proving it was unexpectedly hard,
-because it uncovered a problem complex that had not been
+because it uncovered some technical challenges that had not been
 studied in depth before. In DOT - as well as in many programming languages -
 you can have conflicting definitions. For instance you might have an abstract
 type declaration in a base class with two conflicting aliases in subclasses:
@@ -80,8 +80,10 @@ type declaration in a base class with two conflicting aliases in subclasses:
      trait Base { type A }
      trait Sub1 extends Base { type A = String }
      trait Sub2 extends Base { type A = Int }
+     trait Bad extends Sub1 with Sub2
 
-Now, if you combine `Sub1` and `Sub2` in one class, you get a conflict, since the type `A` is supposed to be equal to both `String` and `Int`. If you do
+Now, if you combine `Sub1` and `Sub2` in trait `Bad` you get a conflict,
+since the type `A` is supposed to be equal to both `String` and `Int`. If you do
 not detect the conflict and assume the equalities at face value you
 get `String = A = Int`, hence by transitivity `String = Int`! Once you
 are that far, you can of course engineer all sorts of situations where
@@ -149,5 +151,5 @@ project are important.
     This lets us put other constructs of the Scala language to the test,
     either to increase our confidence that they are indeed sound, or
     to show that they are unsound. In my next blog I will
-    present some of the issues we have discovered by that exercise.
+    present some of the issues  we have discovered by that exercise.
 
