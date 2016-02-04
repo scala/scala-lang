@@ -1,5 +1,4 @@
 ---
-category: event
 title: Data Day Texas
 logo: /resources/img/data-day.png
 location: Austin

@@ -1,5 +1,4 @@
 ---
-category: event
 title: FP Exchange
 logo: /resources/img/fp-exchange.png
 location: London

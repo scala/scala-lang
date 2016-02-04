@@ -1,75 +1,62 @@
 <div class="span7">
   <h2 class="whats-new">What's New</h2>
-  <!-- This is a horrendous way to filter out elements in an array. Blasphemy. Blame Liquid. -->
-  {% assign maxCount = 1 %}
-  {% assign count = 0 %}
-  {% for p in site.posts %}
-    {% if p.category != "events" and count < maxCount %}
-      {% assign count = count | plus: 1 %}
-      {% assign firstTitle = p.title %}
-      <div class="news-item newsbox left">
-        {% if p.post-type %}
-          <div class="news-category">{{ p.post-type }}</div>
-        {% endif %}
-        {% if p.link-out %}
-          <div class="news-title"><a href="{{ p.link-out }}">{{ p.title }}{{ page.category }}</a></div>
-        {% else %}
-          <div class="news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}{{ page.category }}</a></div>
-        {% endif %}
-        {% if p.author %}
-          <div class="news-author"><span class="by">By</span> <div class="news-author-name">{{ p.author }}</div></div>
-        {% endif %}
-        <div class="news-date"><img src="{{ site.baseurl }}/resources/img/date-icon.png" alt="date icon" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
-        {% if p.short %}
-          <div class="news-body">{{ p.short }}</div>
-        {% else %}
-          <div class="news-body">{{ p.content }}</div>
-        {% endif %}
-      </div>
-      <div class="shadow">
-        {% if p.link-out %}
-          <div class="more"><a href="{{ p.link-out }}">more...</a></div>
-        {% else %}
-          <div class="more"><a href="{{ site.baseurl }}{{ p.url }}">more...</a></div>
-        {% endif %}
-      </div>
-    {% endif %}
+  {% for p in site.categories.news limit: 1 %}
+    <div class="news-item newsbox left">
+      {% if p.post-type %}
+        <div class="news-category">{{ p.post-type }}</div>
+      {% endif %}
+      {% if p.link-out %}
+        <div class="news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
+      {% else %}
+        <div class="news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></div>
+      {% endif %}
+      {% if p.author %}
+        <div class="news-author"><span class="by">By</span> <div class="news-author-name">{{ p.author }}</div></div>
+      {% endif %}
+      <div class="news-date"><img src="{{ site.baseurl }}/resources/img/date-icon.png" alt="date icon" /> {{ p.date | date: "%A, %B %d, %Y" }}</div>
+      {% if p.short %}
+        <div class="news-body">{{ p.short }}</div>
+      {% else %}
+        <div class="news-body">{{ p.content }}</div>
+      {% endif %}
+    </div>
+    <div class="shadow">
+      {% if p.link-out %}
+        <div class="more"><a href="{{ p.link-out }}">more...</a></div>
+      {% else %}
+        <div class="more"><a href="{{ site.baseurl }}{{ p.url }}">more...</a></div>
+      {% endif %}
+    </div>
   {% endfor %}
 </div>
 <div class="span5 newsbox right">
   <h2 class="recently">Recently...</h2>
   <div class="recent-news-items">
-    <!-- This is a horrendous way to filter out elements in an array. Blasphemy. Blame Liquid. -->
-    {% assign maxCount = 3 %}
-    {% assign count = 0 %}
-    {% for p in site.posts %}
-      {% if p.category != "event" and p.title != firstTitle and count < maxCount %}
-        {% assign count = count | plus: 1 %}
-        {% if forloop.first %}
-          {% comment %} DO NOTHING {% endcomment %}
+  {% for p in site.categories.news limit: 4 %}
+    {% if forloop.first %}
+      {% comment %} DO NOTHING {% endcomment %}
+    {% else %}
+      <div class="recent-news-item">
+        {% if p.link-out %}
+          <div class="recent-news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
         {% else %}
-          <div class="recent-news-item">
-            {% if p.link-out %}
-              <div class="recent-news-title"><a href="{{ p.link-out }}">{{ p.title }}</a></div>
-            {% else %}
-              <div class="recent-news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></div>
-            {% endif %}
-            {% if p.author %}
-              <div class="recent-news-author"><span class="by">By</span> <div class="recent-news-author-name">{{ p.author }}</div></div>
-            {% endif %}
-            <div class="recent-news-date"><img style="margin-top: -3px;" src="{{ site.baseurl }}/resources/img/recent-date-icon.png" alt="date-icon" /> {{ p.date | date: "%A, %B %d, %Y" }}
-            {% if p.post-type %}
-              <span class="recent-news-category">{{ p.post-type }}</span>
-            {% endif %}</div>
-            {% if p.short %}
-              <div class="recent-news-body">{{ p.short }}</div>
-            {% else %}
-              <div class="recent-news-body">{{ p.content | strip_html | truncatewords: 25 }}</div>
-            {% endif %}
-          </div>
+          <div class="recent-news-title"><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></div>
         {% endif %}
-      {% endif %}
-    {% endfor %}
+        {% if p.author %}
+          <div class="recent-news-author"><span class="by">By</span> <div class="recent-news-author-name">{{ p.author }}</div></div>
+        {% endif %}
+        <div class="recent-news-date"><img style="margin-top: -3px;" src="{{ site.baseurl }}/resources/img/recent-date-icon.png" alt="date-icon" /> {{ p.date | date: "%A, %B %d, %Y" }}
+        {% if p.post-type %}
+          <span class="recent-news-category">{{ p.post-type }}</span>
+        {% endif %}</div>
+        {% if p.short %}
+          <div class="recent-news-body">{{ p.short }}</div>
+        {% else %}
+          <div class="recent-news-body">{{ p.content | strip_html | truncatewords: 25 }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
   </div>
   <!-- <a class="more-news">More News</div> -->
   <a class="rss" href="{{ site.baseurl }}/feed/index.xml"><img src="{{ site.baserul }}/resources/img/rss-icon.png" alt="date-icon" ></a>
@@ -77,7 +64,7 @@
 <div class="span12">
   <div class="post-news">
     For more, visit our<br/>
-    <a class="archive-btn" href="{{ site.baseurl }}/news/" title="Archive">News archive</a>
+    <a class="archive-btn" href="{{ site.baseurl }}/news/" title="News archive">News archive</a>
     or
     <a class="archive-btn" href="{{ site.baseurl }}/blog/" title="News archive">Blog</a>
   </div>

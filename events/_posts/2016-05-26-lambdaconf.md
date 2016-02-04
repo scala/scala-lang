@@ -1,5 +1,4 @@
 ---
-category: event
 title: LambdaConf 2016
 logo: /resources/img/lambdaconf.png
 location: Boulder, Colorado

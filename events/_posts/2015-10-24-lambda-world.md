@@ -1,5 +1,4 @@
 ---
-category: event
 title: Lambda World
 logo: /resources/img/lambda-world.png
 location: Cadiz, Spain

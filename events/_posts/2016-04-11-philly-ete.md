@@ -1,5 +1,4 @@
 ---
-category: event
 title: Philly ETE
 logo: /resources/img/phillyete2014.png
 location: Philadelphia

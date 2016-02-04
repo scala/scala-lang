@@ -1,5 +1,4 @@
 ---
-category: event
 title: Scala Downunder 2014
 logo: /resources/img/scala-downunder.png
 location: Auckland, New Zealand
