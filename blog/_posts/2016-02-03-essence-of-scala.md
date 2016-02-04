@@ -13,7 +13,7 @@ it's DOT, the calculus of dependent object types, that underlies Scala.
 A [paper on DOT](http://infoscience.epfl.ch/record/215280) will be
 presented in April at [Wadlerfest](http://events.inf.ed.ac.uk/wf2016),
 an event celebrating Phil Wadler's 60th birthday. There's also a prior
-technical report (["From F to DOT"](http://arxiv.org/abs/1510.05216))
+technical report ([From F to DOT](http://arxiv.org/abs/1510.05216))
 by Tiark Rompf and Nada Amin describing a slightly different version
 of the calculus. Each paper describes a proof of type soundness that
 has been machine-checked for correctness.
@@ -51,20 +51,10 @@ The grammar uses several kinds of names:
     a      for (parameterless) methods
     A      for types
 
-The full calculus adds to this syntax formal _typing rules_ that assign
-types `T` to terms `t` and formal _evaluation rules_ that describe how a
-program is evaluated. The main difference between the Wadlerfest paper
-and the prior technical report lies in the form of these evaluation
-rules. The technical report uses a "big step" semantics, i.e. it
-defines an interpreter that explains how terms map to
-values. The Wadlerfest paper uses a more common "small step"
-semantics, i.e. it explains evaluation as step-wise rewritings of
-terms. To do this, it needs to restrict terms to be in [A-normal
-form](https://en.wikipedia.org/wiki/A-normal_form), that is, every
-intermediate term is abstracted out in a local definition.
-
-The following _type soundness_ property was shown in each case with a
-mechanized, (i.e. machine-checked) proof:
+The full calculus adds to this syntax formal _typing rules_ that
+assign types `T` to terms `t` and formal _evaluation rules_ that
+describe how a program is evaluated. The following _type soundness_
+property was shown with a mechanized, (i.e. machine-checked) proof:
 
 > If a term `t` has type `T`, and the evaluation of `t` terminates, then
   the result of the evaluation will be a value `v` of type `T`.
@@ -151,5 +141,5 @@ project are important.
     This lets us put other constructs of the Scala language to the test,
     either to increase our confidence that they are indeed sound, or
     to show that they are unsound. In my next blog I will
-    present some of the issues  we have discovered by that exercise.
+    present some of the issues we have discovered through that exercise.
 
