@@ -1,4 +1,5 @@
 ---
+category: event
 title: Flatmap Oslo
 logo: /resources/img/flatmap-oslo-new.png
 location: Oslo

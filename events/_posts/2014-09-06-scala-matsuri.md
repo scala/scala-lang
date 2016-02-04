@@ -1,4 +1,5 @@
 ---
+category: event
 title: Scala Matsuri 2014
 logo: /resources/img/scala-matsuri.png
 location: Tokyo

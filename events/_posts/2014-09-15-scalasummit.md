@@ -1,4 +1,5 @@
 ---
+category: event
 title: Scala Summit
 logo: /resources/img/scalasummit2014.png
 location: Crested Butte

@@ -1,4 +1,5 @@
 ---
+category: event
 title: Scala Days NYC
 logo: /resources/img/scaladays-15.png
 location: New York City

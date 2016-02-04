@@ -1,4 +1,5 @@
 ---
+category: event
 title: ScalaSphere
 logo: /resources/img/scalasphere.png
 location: Kraków

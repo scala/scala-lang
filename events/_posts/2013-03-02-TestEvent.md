@@ -1,4 +1,5 @@
 ---
+category: event
 title: Test event
 logo: http://photos.osmek.com/95149
 location: Lausanne, Switzerland

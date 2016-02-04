@@ -1,4 +1,5 @@
 ---
+category: event
 title: Code Mesh
 logo: /resources/img/code-mesh.png
 location: London
