@@ -4,7 +4,7 @@
   {% assign maxCount = 1 %}
   {% assign count = 0 %}
   {% for p in site.posts %}
-    {% if p.category != "events" and count < maxCount %}
+    {% if p.category != "event" and count < maxCount %}
       {% assign count = count | plus: 1 %}
       {% assign firstTitle = p.title %}
       <div class="news-item newsbox left">
