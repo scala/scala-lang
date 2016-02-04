@@ -1,5 +1,4 @@
 ---
-category: event
 title: ScalaDays AMS
 logo: /resources/img/scaladays-15.png
 location: Amsterdam

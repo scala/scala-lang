@@ -1,5 +1,4 @@
 ---
-category: event
 title: Scala eXchange
 logo: /resources/img/scalaexchange.png
 location: London

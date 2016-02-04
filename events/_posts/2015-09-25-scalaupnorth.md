@@ -1,5 +1,4 @@
 ---
-category: event
 title: Scala Up North
 logo: /resources/img/scalaupnorth.png
 location: Toronto

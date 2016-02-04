@@ -1,5 +1,4 @@
 ---
-category: event
 title: Scala World
 logo: /resources/img/scala-world.png
 location: Lake District, UK

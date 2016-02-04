@@ -1,5 +1,4 @@
 ---
-category: event
 title: LambdaConf 2015
 logo: https://pbs.twimg.com/profile_images/556200337095143426/h3lXvOaS_400x400.png
 location: Boulder, Colorado

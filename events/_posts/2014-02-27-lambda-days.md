@@ -1,5 +1,4 @@
 ---
-category: event
 title: Lambda Days
 logo: /resources/img/lambda-days.png
 location: Kraków
