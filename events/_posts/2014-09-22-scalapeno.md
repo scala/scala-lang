@@ -1,4 +1,5 @@
 ---
+category: event
 title: Scalapeño 2014
 logo: /resources/img/scalapeno2014-logo.png
 location: Tel-Aviv

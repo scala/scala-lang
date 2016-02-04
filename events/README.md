@@ -15,6 +15,7 @@ example that you can copy-and-paste.
 
 ```
 ---
+category: event
 title: Strange Loop
 logo: https://si0.twimg.com/profile_images/1883816998/slsquare.jpg
 location: St Louis
@@ -27,6 +28,7 @@ link-out: http://thestrangeloop.com/
 
 And a small description of each field, in case it is not already obvious:
 
+*   `category: event`, this is obligatory, don't leave it out!
 *   `title`: short title of the event
 *   `logo`: URL of the logo of the event. It should be a square image [which follows the below rules](#logo-images).
 *   `location`: obvious
@@ -50,6 +52,7 @@ It's easiest to just include actual image files for your logo in your pull reque
 Including a relative path to a logo looks like this:
 
     ---
+    category: event
     title: ICFP
     logo: /resources/img/icfp.png
     location: Boston

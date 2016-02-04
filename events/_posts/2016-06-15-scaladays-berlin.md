@@ -1,4 +1,5 @@
 ---
+category: event
 title: Scala Days Berlin
 logo: /resources/img/scaladays-15.png
 location: Berlin

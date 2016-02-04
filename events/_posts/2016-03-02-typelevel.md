@@ -1,4 +1,5 @@
 ---
+category: event
 title: Typelevel Summit US
 logo: /resources/img/typelevel.png
 location: Philadelphia

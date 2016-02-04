@@ -1,4 +1,5 @@
 ---
+category: event
 title: Scala by the Bay
 logo: /resources/img/scalabythebay.png
 location: San Francisco

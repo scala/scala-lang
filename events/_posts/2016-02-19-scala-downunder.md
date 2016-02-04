@@ -1,4 +1,5 @@
 ---
+category: event
 title: Scala Downunder 2016
 logo: /resources/img/scala-downunder.png
 location: Auckland, New Zealand

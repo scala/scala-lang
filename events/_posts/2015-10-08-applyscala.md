@@ -1,4 +1,5 @@
 ---
+category: event
 title: apply(Scala)
 logo: ""
 location: Amsterdam

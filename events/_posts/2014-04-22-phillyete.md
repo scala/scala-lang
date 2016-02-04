@@ -1,4 +1,5 @@
 ---
+category: event
 title: PhillyETE
 logo: /resources/img/phillyete2014.png
 location: Philadelphia

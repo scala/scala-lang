@@ -1,4 +1,5 @@
 ---
+category: event
 title: Another event
 location: Lausanne, Switzerland
 description: Wow! Another cool event!

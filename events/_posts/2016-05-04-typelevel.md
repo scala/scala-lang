@@ -1,4 +1,5 @@
 ---
+category: event
 title: Typelevel Summit Europe
 logo: /resources/img/typelevel.png
 location: Oslo

@@ -1,4 +1,5 @@
 ---
+category: event
 title: ScalaDays SF
 logo: /resources/img/scaladays-15.png
 location: San Francisco
