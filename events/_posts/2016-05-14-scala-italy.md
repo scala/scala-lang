@@ -1,7 +1,7 @@
 ---
 category: event
 title: Scala Italy
-logo: http://www.scala-italy.it/src/app/assets/images/logo.png
+logo: /resources/img/scala-italy.jpeg
 location: Venice, Italy
 description: The only Italian conference on Scala.
 start: 14 May 2016
