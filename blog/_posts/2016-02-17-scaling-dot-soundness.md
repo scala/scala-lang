@@ -133,7 +133,7 @@ because they invalidate some idioms in type-level programming. For
 instance, the cute trick of making Scala's type system Turing complete
 by having it [simulate SK
 combinators](https://michid.wordpress.com/2010/01/29/scala-type-level-encoding-of-the-ski-calculus/)
-would not longer work since that one relies on unrestricted type
+would no longer work since that one relies on unrestricted type
 projections. The same holds for some of the encodings of type-level
 arithmetic.
 
