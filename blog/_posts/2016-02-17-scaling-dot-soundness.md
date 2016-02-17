@@ -50,8 +50,7 @@ categories:
         lazy val p: S = p
         ... p.T ...
 
-    Note that trying to access the lazy value `p` would result in an infinite loop. But using `p` in a type does not force its evaluation, so we might never evaluate `p`. Since `p` is not initialized
-with a `new`, bad bounds for `T` would go undetected.
+    Note that trying to access the lazy value `p` would result in an infinite loop. But using `p` in a type does not force its evaluation, so we might never evaluate `p`. Since `p` is not initialized with a `new`, bad bounds for `T` would go undetected.
 
  2. The prefix value might be initialized to `null`, as in
 
@@ -62,7 +61,7 @@ with a `new`, bad bounds for `T` would go undetected.
     with a `new` so we know nothing about the bounds of `T`.
 
  3. The prefix might be a type `T` in a type projection `T # A`, where `T`
-   is not associated with a runtime value.
+    is not associated with a runtime value.
 
 We can in fact construct soundness issues in all of these cases. Look
 at the discussion for issues [#50](https://github.com/lampepfl/dotty/issues/50)
@@ -118,23 +117,32 @@ an exception or `System.exit` call before reaching the initialization
 point of `f`. It's a valid question whether type soundness guarantees
 should extend to this class of "strange" programs. We might want to
 draw the line here and resort to runtime checks or exclude "strange"
-programs from any soundness guarantees we can give.
+programs from any soundness guarantees we can give. The research community
+has coined the term [soundiness](http://soundiness.org/) for
+this kind of approach and has [advocated](http://cacm.acm.org/magazines/2015/2/182650-in-defense-of-soundiness/fulltext) for it.
 
 The necessary restrictions on type projection `T # A` are problematic
-because they invalidate a common idiom in type-level programming. To
-ease the transition, we will continue to allow unrestricted type
-projections for a while under a flag, even though they are
-potentially unsound. In the current dotty compiler, that flag is a
-language import `-language:Scala2`, but it could be something
-different for other compilers, e.g. `-unsafe`.  Maybe we can find
-rules that are less restrictive than the ones we have now, and are
-still sound.  But one aspect should be non-negotiable: Any fundamental
-deviations from the principles laid down by DOT needs to be proven
-mechanically correct just like DOT was. We have achieved a lot with
-the DOT proofs, so we should make sure not to back-slide. And if the
-experience of the past 10 years has taught us one thing, it is that
-the meta theory of type systems has many more surprises in store than
-one might think. That's why mechanical proofs are essential.
+because they invalidate some idioms in type-level programming. For
+instance, the cute trick of making Scala's type system Turing complete
+by having it [simulate SK
+combinators](https://michid.wordpress.com/2010/01/29/scala-type-level-encoding-of-the-ski-calculus/)
+would not longer work since that one relies on unrestricted type
+projections. The same holds for some of the encodings of type-level
+arithmetic.
+
+To ease the transition, we will continue for a while to allow unrestricted type
+projections under a flag, even though they are potentially
+unsound. In the current dotty compiler, that flag is a language import
+`-language:Scala2`, but it could be something different for other
+compilers, e.g. `-unsafe`.  Maybe we can find rules that are less
+restrictive than the ones we have now, and are still sound.  But one
+aspect should be non-negotiable: Any fundamental deviations from the
+principles laid down by DOT needs to be proven mechanically correct
+just like DOT was. We have achieved a lot with the DOT proofs, so we
+should make sure not to back-slide. And if the experience of the past
+10 years has taught us one thing, it is that the meta theory of type
+systems has many more surprises in store than one might think. That's
+why mechanical proofs are essential.
 
 
 
