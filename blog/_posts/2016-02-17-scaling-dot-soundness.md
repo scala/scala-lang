@@ -3,6 +3,7 @@ layout: blog
 post-type: blog
 by: Martin Odersky
 title: Scaling DOT to Scala: Soundness
+disqus: true
 ---
 
 In my [last
