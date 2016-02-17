@@ -2,7 +2,7 @@
 layout: blog
 post-type: blog
 by: Martin Odersky
-title: Scaling DOT to Scala: Soundness
+title: Scaling DOT to Scala - Soundness
 disqus: true
 ---
 
@@ -10,8 +10,11 @@ In my [last
 blog](http://www.scala-lang.org/blog/2016/02/03/essence-of-scala.html)
 I introduced DOT, a minimal calculus that underlies much of Scala.
 DOT is much more than an academic exercise, because it gives us
-guidelines how to design a sound type system for full Scala. As was
-argued in the previous blog post, the danger a path-dependent type
+guidelines how to design a sound type system for full Scala.
+
+## Recap: The Problem of Bad Bounds
+
+As was argued in the previous blog post, the danger a path-dependent type
 system like Scala's faces is inconsistent bounds or aliases. For
 instance, you might have a type alias
 
@@ -38,6 +41,8 @@ to check for good bounds when objects are _created_ with `new`, and
 that check is easy: When objects are created, we know their class and
 we can insist that all nested types in that class are aliases or
 have consistent bounds. So far so good.
+
+## Loopholes Caused by Scaling Up
 
 But if we want to scale up the DOT result for full Scala, several
 loopholes open up. These come all down to the fact that the prefix of
@@ -85,6 +90,8 @@ other type, this means you can convert an arbitrary expression to have
 any type you choose. Such a feat is an impossible promise, of
 course. The promise is usually broken at run-time by failing with a
 `ClassCastException`.
+
+## Plugging the Loopholes
 
 To get back to soundness we need to plug the loopholes. Some of the
 necessary measures are taken in pull request [#1051](https://github.com/lampepfl/dotty/issues/1051).
