@@ -7,10 +7,10 @@ disqus: true
 ---
 
 In my [last
-blog](http://www.scala-lang.org/blog/2016/02/03/essence-of-scala.html)
+blog post](http://www.scala-lang.org/blog/2016/02/03/essence-of-scala.html)
 I introduced DOT, a minimal calculus that underlies much of Scala.
 DOT is much more than an academic exercise, because it gives us
-guidelines how to design a sound type system for full Scala.
+guidelines on how to design a sound type system for full Scala.
 
 ## Recap: The Problem of Bad Bounds
 
