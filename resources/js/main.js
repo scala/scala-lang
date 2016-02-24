@@ -192,7 +192,7 @@ $(document).ready(function() {
    // update the page with the latest values
    if (data.version != undefined) {
      var activatorLink = $("#download-button.activator")
-     activatorLink.prop("href", "http://downloads.typesafe.com/typesafe-activator/" + data.version + "/typesafe-activator-" + data.version + ".zip")
+     activatorLink.prop("href", "http://downloads.lightbend.com/typesafe-activator/" + data.version + "/typesafe-activator-" + data.version + ".zip")
    }
   })
 
