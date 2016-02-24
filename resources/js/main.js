@@ -353,7 +353,7 @@ $(document).ready(function(){
   function onEventsAjaxError(jqXHR, textStatus, errorThrown) {
     // log the error to the console
     console.error(
-      "Could not load Typesafe event feed: " + textStatus, errorThrown);
+      "Could not load Lightbend event feed: " + textStatus, errorThrown);
     // but at least display events from scala-lang
     doPopulateEventsPane(scalaLangEvents);
   }
@@ -470,7 +470,7 @@ $(document).ready(function(){
   function onTrainingsAjaxError(jqXHR, textStatus, errorThrown) {
     // log the error to the console
     console.error(
-      "Could not load Typesafe training feed: " + textStatus, errorThrown);
+      "Could not load Lightbend training feed: " + textStatus, errorThrown);
     // but at least display trainings from scala-lang
     doPopulateTrainingsPane(scalaLangTrainings);
   }

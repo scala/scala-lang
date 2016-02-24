@@ -9,7 +9,7 @@ forum, mailing list, wiki, web site, Gitter or IRC room, hackathon, public
 meeting or private correspondence.  (See our
 [list of community fora](community/).)
 
-Scala moderators are appointed by EPFL and Typesafe to maintain the
+Scala moderators are appointed by EPFL and Lightbend to maintain the
 health of the community and will arbitrate in any dispute over the
 conduct of a member of the community.
 
