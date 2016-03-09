@@ -4,6 +4,7 @@ post-type: announcement
 permalink: /news/2.11.8
 title: "Scala 2.11.8 is now available!"
 ---
+
 We are pleased to announce the availability of Scala 2.11.8!
 
 Significant changes since 2.11.7 include:
