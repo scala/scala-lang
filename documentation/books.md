@@ -4,9 +4,11 @@ title: Books
 ---
 
 There are more and more books being published about Scala. Here are some
-of the titles with their availability. We only list books here which give
-an introduction to the Scala Language. Books which require knowledge of
-Scala, in particular books on frameworks like Lift, Play! or Akka are not
+of the titles with their availability.
+
+We only list books here which give
+an introduction to the Scala language. Books which assume knowledge of
+Scala, in particular books on frameworks like Lift, Play! or Akka, are not
 listed here.
 
 
@@ -17,7 +19,7 @@ listed here.
 ### English Scala Books
 
 [**Programming in
-Scala**](http://www.artima.com/shop/programming_in_scala_2ed)
+Scala**, 2nd ed.](http://www.artima.com/shop/programming_in_scala_2ed)
 – **Available Now**
 by Martin Odersky, Lex Spoon, and Bill Venners
 - first edition [available for free online reading](http://www.artima.com/pins1ed/)
@@ -253,6 +255,52 @@ Published by [Packt Publishing](https://www.packtpub.com/):
   <div class="span8" style="padding-top: 15px;">
 
 "This book is a must-have tutorial for software developers aiming to write concurrent programs in Scala, or broaden their existing knowledge of concurrency. It will give you an insight into the best practices necessary to build concurrent programs in Scala using modern, high-level concurrency libraries. It starts by introducing you to the foundations of concurrent programming on the JVM, outlining the basics of the Java Memory Model, and then shows some of the classic building blocks of concurrency, such as the atomic variables, thread pools, and concurrent data structures, along with the caveats of traditional concurrency. It then walks you through different high-level concurrency abstractions, each tailored toward a specific class of programming tasks. Finally, the book presents an overview of when to use which concurrency library and demonstrates how they all work together."
+  </div>
+</div>
+
+<br />
+
+[**Scala for Data Science**](https://www.packtpub.com/big-data-and-business-intelligence/scala-data-science/?utm_source=&utm_medium=pod&utm_campaign=1785281372)
+– **Available Now**
+by Pascal Bugnion
+
+Published by [Packt Publishing](https://www.packtpub.com/):
+
+<div class="row">
+  <div class="span2">
+    <div align="center">
+    <a href="https://www.packtpub.com/big-data-and-business-intelligence/scala-data-science/?utm_source=&utm_medium=pod&utm_campaign=1785281372">
+      <img src="/resources/img/books/scalaForDataScience.jpg" alt="">
+    </a>
+    </div>
+  </div>
+  <div class="span8" style="padding-top: 15px;">
+
+"This book will introduce you to the libraries for ingesting, storing, manipulating, processing, and visualizing data in Scala. Packed with real-world examples and interesting data sets, this book will teach you to ingest data from flat files and web APIs and store it in a SQL or NoSQL database. It will show you how to design scalable architectures to process and modelling your data, starting from simple concurrency constructs such as parallel collections and futures, through to actor systems and Apache Spark. [...] Finally, you will learn how to build beautiful interactive visualizations using web frameworks."
+
+  </div>
+</div>
+
+<br />
+
+
+[**Building a Recommendation Engine with Scala**](https://www.packtpub.com/application-development/building-recommendation-engine-scala/)
+– **Available Now**
+by Saleem A. Ansari
+
+Published by [Packt Publishing](https://www.packtpub.com/):
+
+<div class="row">
+  <div class="span2">
+    <div align="center">
+    <a href="https://www.packtpub.com/application-development/building-recommendation-engine-scala/">
+      <img src="/resources/img/books/buildingRecommendationEngine.jpg" alt="">
+    </a>
+    </div>
+  </div>
+  <div class="span8" style="padding-top: 15px;">
+
+"This book provides you with the Scala knowledge you need to build a recommendation engine. You'll be introduced to Scala and other related tools to set the stage for the project and familiarise yourself with the different stages in the data processing pipeline \[...\] You'll also discover different machine learning algorithms using MLLib."
   </div>
 </div>
 
