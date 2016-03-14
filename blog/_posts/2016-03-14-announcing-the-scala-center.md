@@ -12,7 +12,7 @@ improve the language, its tools and its documentation. It will also help develop
 learn the language through massive open online courses, seminars and other activities.
 
 
-## Why A Center?
+## Why a Center?
 
 Scala has seen a steady rise in adoption. This is reflected in the
 [number of open Scala jobs](http://www.indeed.com/jobtrends/scala.html) and in Google's
@@ -21,7 +21,7 @@ In the [Redmonk rankings](http://sogrady-media.redmonk.com/sogrady/files/2016/02
 the language currently ranks 14th. Overall, we estimate that more than
 half a million developers are using Scala.
 
-Scala is the technology of choice for vibrant open-source ecosystem,
+Scala is the technology of choice for a vibrant open-source ecosystem,
 including popular platforms and frameworks such as
 [Spark](http://spark.apache.org/), [Kafka](http://kafka.apache.org/),
 [Akka](akka.io), [Finagle](https://twitter.github.io/finagle),
@@ -29,7 +29,7 @@ including popular platforms and frameworks such as
 [Play](https://www.playframework.com/), to name just a few.
 
 The large user base and the diversity of projects built on Scala mean
-that there are many demands on the language and its tool set. There is also a large pool of capable and motivated contributors. The first mission of the Scala center is to consult with
+that there are many demands on the language and its tool set. There is also a large pool of capable and motivated contributors. The first mission of the Scala Center is to consult with
 the user community, define common goals, and organize contributions
 and its own resources to achieve these goals.
 
@@ -39,7 +39,7 @@ from other languages and requires some conscious investment in
 learning the language to reap most of it benefits. Learning Scala, if
 done right, is much more than just internalizing syntax. It usually
 deeply affects the way developers think about their activity. We have
-pioneered open online education, with more than 400'000 registrations
+pioneered open online education, with more than 400,000 registrations
 to our MOOCs on Coursera. The Scala Center will take over and enlarge
 these efforts, integrating them in a specialization that teaches
 functional programming and data analysis using Scala and Spark.
@@ -50,17 +50,17 @@ The Scala Center is a designated unit at EPFL, independent from the
 Scala research group (LAMP). Its first two officers are executive director Heather Miller,
 and principal engineer Jon Pretty. The Center is funded by EPFL and a group of industrial
 members. The initial industrial founding members of the center are:
-Goldman Sachs, IBM, Lightbend, Nitro, Verizon. We are keen to
+Goldman Sachs, IBM, Lightbend, Nitro, and Verizon. We are keen to
 welcome other members in the future.
 
-## Relationship with the Community
+## Relationship with the community
 
 The Center aims in helping and complementing existing entities in the
 Scala ecosystem. In particular:
 
 Lightbend (formerly Typesafe) will continue to maintain and evolve the
 stable Scala distribution. Lightbend is a founding member of the
-center and its engineers are looking forward to participate in its
+center and its engineers are looking forward to participating in its
 projects.
 
 Existing open source projects and platforms will work as before. The
@@ -70,14 +70,16 @@ of projects of common interest, subject to its available resources.
 
 One specific project where it looks like we have enough interest and
 pledges of funding is [Scala.js](http://www.scala-js.org/).  Scala.js
-is developed so far by my lab at EPFL (specifically Sebastien Doeraene
+is developed so far by the lab at EPFL (specifically Sébastien Doeraene
 and Nicolas Stucki) with the help of outside contributors, including Lightbend.
 The Scala Center should be a
 logical platform to put this great work on a more stable basis.
 
-## Please Contribute!
+## Please contribute!
 
-We are starting out now with a rough direction and expect that most details of the Center’s working will become clearer once we have gained some experience in our activities. For now, we are soliciting the community for help. If you have time or funding to contribute, and would like to work on a project that is useful to the community at large, please join us in the [Scala Center gitter channel](https://gitter.im/scala/center) and get involved!
+We are starting out now with a rough direction and expect that most details of the Center’s working will become clearer once we have gained some experience in our activities. For now, we are soliciting the community for help.
+
+If you have time or funding to contribute, and would like to work on a project that is useful to the community at large, please join us in the [Scala Center gitter channel](https://gitter.im/scala/center) and get involved!
 
 
 
