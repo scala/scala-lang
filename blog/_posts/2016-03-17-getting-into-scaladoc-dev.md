@@ -60,10 +60,8 @@ Have a look there for a more complete overview.
 
 Simple:
 
-```bash
-$ git clone git@github.com:scala/scala.git && cd scala
-$ ant docs # "ant docs.lib" if you just want the standard library
-```
+    $ git clone git@github.com:scala/scala.git && cd scala
+    $ ant docs # "ant docs.lib" if you just want the standard library
 
 ## Where to begin ##
 
@@ -82,32 +80,24 @@ That's where you'd want to put new things (it is also where `index.js` etc live!
 **How can I see my changes?** You have two options, if you changed the markup -
 you'll need to regenerate the docs:
 
-```bash
-$ ant docs.clean && ant docs
-```
+    $ ant docs.clean && ant docs
 
 When the changes are to scripts or style sheets I use a small `Makefile` in the
 root of the project. This makefile will simply copy the resources to the same location
 as the generated docs:
 
-```make
-all:
-    cp src/scaladoc/scala/tools/nsc/doc/html/resource/lib/{index.css,index.js,template.css,template.js,diagrams.css,diagrams.js} build/scaladoc/library/lib/
-```
+    all:
+        cp src/scaladoc/scala/tools/nsc/doc/html/resource/lib/{index.css,index.js,template.css,template.js,diagrams.css,diagrams.js} build/scaladoc/library/lib/
 
 Regenerating the docs all the time is a pain - if you just want to generate
 them for a single file, do this:
 
-```bash
-$ ant quick.bin
-$ build/quick/bin/scaladoc path/to/source/File.scala
-```
+    $ ant quick.bin
+    $ build/quick/bin/scaladoc path/to/source/File.scala
 
 Lastly, before you open your pull request - test your changes!
 
-```bash
-$ ant test.scaladoc
-```
+    $ ant test.scaladoc
 
 ## Where to really begin ##
 
