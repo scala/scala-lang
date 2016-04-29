@@ -2,7 +2,7 @@
 layout: blog
 post-type: blog
 by: Jon Pretty
-title: Scala Center Appoints a Community Representative to the Advisory Board
+title: Scala Center Appoints Community Representative
 ---
 
 At Scala Days, the Scala Center will hold its first Advisory Board meeting. The
