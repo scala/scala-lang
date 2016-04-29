@@ -2412,11 +2412,19 @@ code {
   height: 0;
 }
 
-#page-title {   /*font-weight: 100;*/   margin-top: 20px;   font-family:
-'proxima-nova', sans-serif;   font-size: 32px;   line-height: 20px;   color:
-#fff;   /*color: #2797b7;*/   /*color: #50B8E1;*/   /*color: rgba(7, 54, 66,
-0.3);*/   text-transform: uppercase;   text-shadow: 1px 1px 0px rgba(0, 43,
-54, 0.15); }
+#page-title {
+  /*font-weight: 100;*/
+  margin-top: 16px;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 32px;
+  line-height: 24px;
+  color: #fff;
+  /*color: #2797b7;*/
+  /*color: #50B8E1;*/
+  /*color: rgba(7, 54, 66,0.3);*/
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(0, 43,54, 0.15);
+}
 
 div#toc { margin-left: -16px; width: 100%; }
 div#toc ul { list-style: none; margin: 0 0 5px 8px; }
