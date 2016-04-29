@@ -12,15 +12,26 @@ This site uses a Jekyll, a Ruby framework. The required Jekyll version is 1.5.1.
 
 There are two ways to run Jekyll to build the site:
 
-* using globally installed Jekyll and accompanying gems
-* using Bundler, so Jekyll and accompanying gems are installed only inside this directory
+1. using Bundler, so Jekyll and accompanying gems are installed only inside this directory
+2. using globally installed Jekyll and accompanying gems
 
-The former method is the one currently actually used on
-scala-lang.org. The latter method may be more convenient for users who
-are comfortable using Bundler and who don't want anything else
-installed system-wide.
+The latter method is the one currently actually used on scala-lang.org. The
+former method is likely most convenient for users who already have a different
+version of Jekyll installed, or who are comfortable using Bundler and who don't
+want anything else installed system-wide.
 
-### Building with global Jekyll
+### Option 1) Building with Bundler
+
+`cd` into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./bundle-vendor/bundle`.
+
+Start the server in the context of the bundle:
+
+    bundle exec jekyll serve
+
+from this point, everything else should be the same, regardless of which method
+you used to run Jekyll.
+
+### Option 2) Building with global Jekyll
 
 Install Jekyll 1.5.1 on your system using RubyGems:
 
@@ -38,17 +49,6 @@ and watch the output. You should see something like:
       Incremental build: enabled
            Generating... done.
       Auto-regeneration: enabled for '/Users/ben/src/scala-lang'
-
-### Building with Bundler
-
-`cd` into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./bundle-vendor/bundle`.
-
-Start the server in the context of the bundle:
-
-    bundle exec jekyll serve
-
-from this point, everything else should be the same, regardless of which method
-you used to run Jekyll.
 
 ### Windows and UTF-8
 
