@@ -80,7 +80,7 @@ property that values of type `T` can be compared to values of type
 
     trait Eq[-T, -U]
 
-That is, `Eq` is a pure marker trait two type parameters and without
+That is, `Eq` is a pure marker trait with two type parameters and without
 any members.  Developers can define equality classes by giving
 implicit `Eq` instances. Here is a simple one:
 
@@ -124,10 +124,10 @@ Details are explained in the
 
 Here are some nice properties of the proposal
 
- 1. It is _opt-in_. To get safe checking, developers have to annotate classes that should
-     allow comparisons only between their instances with `@equalityClass`, or they have to define implicit
+ 1. It is _opt-in_. To get safe checking, developers have to annotate with `@equalityClass` classes that should
+     allow comparisons only between their instances, or they have to define implicit
     `Eq` instances by hand.
- 2. It is backwards compatible. Without `@equalityClass` annotations equality works as before.
+ 2. It is backwards compatible. Without developer-provided `Eq` instances, equality works as before.
  3. It carries no run-time cost compared to universal equality. Indeed the run-time behavior of
      equality is not affected at all.
  4. It has no problems with parametricity, variance, or bottom types.
@@ -139,11 +139,9 @@ The scheme effectively leads to a partition of the former universe of
 types into sets of types. Values with types in the same partition can
 be compared among themselves but values with types in different
 partitions cannot.
-
 An `@equalityClass` annotation on a type creates a new partition. All
 types that do not have any `Eq` instances (except `eqAny`, that is)
 form together another partition.
-
 So instead of a single _universe_ of values that can be compared to
 each other we get a _multiverse_ of partitions. Hence the name of the
 proposal: **Multiversal Equality**.
