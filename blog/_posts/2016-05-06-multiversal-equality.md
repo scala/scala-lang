@@ -96,7 +96,7 @@ This states that `Option` values can be compared if their elements can be compar
 It's foreseen that such `Eq` instances can be generated automatically. If we add
 an annotation `@equalityClass` to `Option` like this
 
-      `equalityClass` class Option[+T] { ... }
+      @equalityClass class Option[+T] { ... }
 
 then the `eqOption` definition above would be generated automatically in `Option`'s companion object.
 
