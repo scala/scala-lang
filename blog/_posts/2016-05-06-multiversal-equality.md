@@ -8,14 +8,13 @@ disqus: true
 
 I have been working recently on making equality tests using `==` and
 `!=` safer in Scala. This has led to a [Language Enhancement
-Proposal](https://github.com/lampepfl/dotty/issues/1247). This blog
-post gives an overview of the proposal.
+Proposal](https://github.com/lampepfl/dotty/issues/1247) which I summarize in this blog.
 
 ## Why Change Equality?
 
 Scala prides itself of its strong static type system. Its type discipline is particularly useful when it comes to refactoring. Indeed, it's possible to write programs in such a way that refactoring problems show up with very high probability as type errors. This is essential for being able to refactor with the confidence that nothing will break. And the ability to do such refactorings is jn turn very important for keeping code bases from rotting.
 
-Of course, getting such a robust code base requires the cooperation of the developers. They should avoid type `Any`, casts, stringly typed logic, and more generally any operation over loose types that do not capture the important properties of a value. Unfortunately, there is one area in Scala where such loose types are very hard to avoid: That's equality. Comparisons with `==` and `!=` are _universal_. They compare any two values, no matter what their types are. This causes real problems for writing code and more problems for refactoring it.
+Of course, getting such a robust code base requires the cooperation of the developers. They should avoid type `Any`, casts, [stringly typed](http://c2.com/cgi/wiki?StringlyTyped) logic, and more generally any operation over loose types that do not capture the important properties of a value. Unfortunately, there is one area in Scala where such loose types are very hard to avoid: That's equality. Comparisons with `==` and `!=` are _universal_. They compare any two values, no matter what their types are. This causes real problems for writing code and more problems for refactoring it.
 
 For instance, one might want to introduce a proxy for some data structure so that instead of accessing the data structure directly one goes through the proxy. The proxy and the underlying data would have different types. Normally this should be an easy refactoring. If one passes by accident a proxy for the underlying type or _vice versa_ the type checker will flag the error. However, if one accidentally compares a proxy with the underlying type using `==` or a pattern match, the program is still valid, but will just always say `false`. This is a real worry in practice. I recently abandoned a desirable extensive refactoring because I feared that it would be too hard to track down such errors.
 
@@ -75,7 +74,7 @@ element values.
 The best known way to characterize such relationships is with type
 classes. Implicit values of a trait `Eq[T, U]` can capture the
 property that values of type `T` can be compared to values of type
-`U`. Here's the definition of `EQ`
+`U`. Here's the definition of `Eq`
 
     package scala
 
