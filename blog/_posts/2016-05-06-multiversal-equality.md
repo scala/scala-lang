@@ -74,7 +74,7 @@ element values.
 The best known way to characterize such relationships is with type
 classes. Implicit values of a trait `Eq[T, U]` can capture the
 property that values of type `T` can be compared to values of type
-`U`. Here's the definition of `EQ`
+`U`. Here's the definition of `Eq`
 
     package scala
 
