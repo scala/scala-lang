@@ -12,7 +12,7 @@ Proposal](https://github.com/lampepfl/dotty/issues/1247) which I summarize in th
 
 ## Why Change Equality?
 
-Scala prides itself of its strong static type system. Its type discipline is particularly useful when it comes to refactoring. Indeed, it's possible to write programs in such a way that refactoring problems show up with very high probability as type errors. This is essential for being able to refactor with the confidence that nothing will break. And the ability to do such refactorings is jn turn very important for keeping code bases from rotting.
+Scala prides itself of its strong static type system. Its type discipline is particularly useful when it comes to refactoring. Indeed, it's possible to write programs in such a way that refactoring problems show up with very high probability as type errors. This is essential for being able to refactor with the confidence that nothing will break. And the ability to do such refactorings is in turn very important for keeping code bases from rotting.
 
 Of course, getting such a robust code base requires the cooperation of the developers. They should avoid type `Any`, casts, [stringly typed](http://c2.com/cgi/wiki?StringlyTyped) logic, and more generally any operation over loose types that do not capture the important properties of a value. Unfortunately, there is one area in Scala where such loose types are very hard to avoid: That's equality. Comparisons with `==` and `!=` are _universal_. They compare any two values, no matter what their types are. This causes real problems for writing code and more problems for refactoring it.
 
