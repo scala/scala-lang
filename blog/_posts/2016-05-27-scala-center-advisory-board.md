@@ -43,8 +43,8 @@ advisor to the board.
 The board will meet four times a year, usually via a conference call to keep
 costs down, but when there's an opportunity (hopefully at least once a year) we
 will hold physical meetings. We organized our first meeting to take place at
-Scala Days in New York, as most of the sponsors were attending. (The sponsors
-who couldn't be there in person this time joined the meeting over Google
+Scala Days in New York, as most of the board members were attending. (Those who
+couldn't be there in person this time joined the meeting over Google
 Hangouts.)
 
 Before our first meeting, we were a little apprehensive - despite our
@@ -91,7 +91,7 @@ is rewritten and resubmitted at the next meeting.
 
 I mentioned at the beginning that it's important for the Advisory Board to make
 good on its promise, but it's just as important that we are *seen* to be doing
-so.  So the whole Advisory Board process is open, and we will publish the
+so. So the whole Advisory Board process is open, and we will publish the
 proposals and minutes from each meeting. You will be able to see these in the
 Advisory Board's [Github
 repository](https://github.com/scalacenter/advisoryboard/) in the next few
@@ -99,19 +99,26 @@ days.
 
 ## The First Meeting
 
-During the first meeting, we also elected Seth Tisue as the secretary, and his
-minutes will be published in the next few days. The meeting itself was a
-success. We deferred one proposal until the next meeting (which will take place
-in August), but adopted four others.
-
 As the process was new for all of the members and less time was available for
-members to prepare proposals, we made the concession to allow proposals to be
-presented *at* the meeting (without prior submission), but in future, proposals
-must be submitted to the repository at least a week before the meeting to give
-all the members an opportunity to consider them before meeting.
+preparing proposals, we made the concession to allow proposals to be presented
+*at* the meeting (without prior submission), but in future, we will require
+that proposals be submitted to the repository at least a week before the
+meeting to give all the members an opportunity to consider them before meeting.
+
+During the first meeting, we also elected Seth Tisue as the secretary, and his
+minutes will be published in the next few days.
+
+The meeting itself was a success! We deferred one proposal until the next
+meeting (which will take place in August), but adopted four others:
+
+ - to clarify the governance of Scala, including the SIP/SLIP process,
+ - to define a migration path from Scala 2.x to Dotty,
+ - to create a new unpaid "publicity chair" role for the Scala Center, and
+ - to ensure continuation of support of Scala.js.
+
+Over the coming weeks, we will be taking steps to ensure these recommendations
+come to fruition.
 
 It was a lot of work to get this far, but, after our first successful meeting,
 I'm very much looking forward to the next one!
-
-
 
