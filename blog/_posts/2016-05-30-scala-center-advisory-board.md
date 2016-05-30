@@ -5,8 +5,6 @@ by: Jon Pretty
 title: The Scala Center Advisory Board
 ---
 
-# The Scala Center Advisory Board
-
 Part of the role of the Scala Center is to run the Advisory Board, a quarterly
 forum for our sponsors to discuss, guide and challenge the direction of the
 Scala Center and how it influences the Scala community and ecosystem.
