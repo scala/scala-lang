@@ -6,3 +6,6 @@ devscalaversion: "2.12.0-M5"
 baseurl: ""
 markdown: kramdown
 exclude: [bundle-vendor]
+
+kramdown:
+  input: GFM
