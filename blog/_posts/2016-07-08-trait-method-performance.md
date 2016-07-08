@@ -12,7 +12,7 @@ Recently we observed that [33e7106](https://github.com/scala/scala/commit/33e710
 slowdown of the Scala compiler. This post logs what we learned in trying to understand the cause of
 this regression.
 
-Thans to [Dmitry Petrashko](https://twitter.com/darkdimius) and
+Thanks to [Dmitry Petrashko](https://twitter.com/darkdimius) and
 [Jason Zaugg](https://twitter.com/retronym) for reviews, inputs, ideas, hints, suggestions and
 references.
 
