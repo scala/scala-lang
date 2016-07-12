@@ -488,7 +488,7 @@ We found a few interesting behaviors of the JVM optimizer.
   methods.
 
 While we can reproduce certain slowdowns when using default methods in micro-benchmarks, this does
-give an answer why we observe a 20% performance regression when running the Scala compiler on
+not answer definitively why we observe a 20% performance regression when running the Scala compiler on
 default methods without forwarders. The fact that the JIT compiler fails to perform certain
 optimizations may be the reason, but we don't have any evidence or proof to relate the two
 observations.
