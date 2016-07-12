@@ -445,7 +445,7 @@ This code does the following:
 - The loop counter is increased by the constant `0x10` (decimal 16), corresponding to the 16
   unfolded iterations.
 - The loop counter is compared against `0x3d9` (decimal 985): if it is smaller, another round of
-  of the unfolded loop can be executed (the loop ends at 1000). Otherwise execution continues in
+  the unfolded loop can be executed (the loop ends at 1000). Otherwise execution continues in
   a different location that performs single loop iterations.
 
 The interesting observation here is that the field `c.v` is only written once per 16 iterations.
