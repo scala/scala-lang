@@ -320,14 +320,14 @@ callsite is megamorphic. We measure how much time an invocation of one default m
 Adding an overriding forwarder method to the subclasses does not change this result, the slowdown
 per additional interface remains. So this seems not to be the reason for the performance regression.
 
-### Back to CHA
+### Back to default methods
 
 Googling a little bit more about the performance of default methods, I found a relevant
 [post on SO](http://stackoverflow.com/questions/30312096/java-default-methods-is-slower-than-the-same-code-but-in-an-abstract-class)
 containing a nice benchmark.
 
 I simplified the example into the
-[benchmark `NoCHAPreventsOptimization`](https://github.com/lrytz/benchmarks/blob/master/src/main/java/traitEncodings/NoCHAPreventsOptimization.java),
+[benchmark `DefaultMethodPreventsOptimization`](https://github.com/lrytz/benchmarks/blob/master/src/main/java/traitEncodings/DefaultMethodPreventsOptimization.java),
 which is relatively small:
 
     interface I {
@@ -348,6 +348,11 @@ which is relatively small:
 The benchmark shows that `c.v = x; c.accessDefault()` is 3x slower than
 `c.v = x; c.accessVirtual()` or `c.v = x; c.accessForward()`.
 
+#### A look at the assembly
+
+(This section was revised later, thanks to [Paolo Giarrusso](https://twitter.com/blaisorblade) for
+his feedback!)
+
 As noted in comments on the StackOverflow thread, everything is inlined in all three benchmarks,
 so the difference is not due to inlining. We can observe that the assembly generated for the
 `accessDefault` case is less optimized than in the other cases. Here is the output of JMH's
@@ -360,16 +365,96 @@ so the difference is not due to inlining. We can observe that the assembly gener
 In fact, the assembly for the `accessVirtual` and `accessForward` cases is identical.
 
 One answer on the SO thread suggests that lack of CHA for the default method case prevents
-eliminating a type guard, which in turn prevents optimizations on the field write and read.
-Somebody with more experience in assembly code than me could certainly verify that.
+eliminating a type guard, which in turn prevents optimizations on the field write and read. A later
+comment points out that this does not seem to be the case.
 
-I did not do any further research to find out what kind of optimizations depend on CHA, or if it is
-really the lack of CHA that causes the code not to be optimized properly. For my convenience, let's
-say that's beyond the scope of this post. If you have any insights or references on this topic,
-please get in touch or post a comment!
+The benchmark basically measures the following loop:
 
-It seems that the lack of certain optimizations for default methods is the most likely source for
-the slowdowns we notice when running the Scala compiler.
+    int r = 0;
+    for (int x = 0; x < N; x++) {
+      c.v = x;
+      r += c.v // field acces either through a default or a virtual method
+    }
+
+Comparing the assembly code of the loop when using the default method or the virtual method, Paolo
+identified one interesting difference. When using the default method, the loop body consists of the
+following instructions:
+
+    mov  %edi,0x10(%rax)   ;*putfield v
+    add  0x10(%r13),%edx   ;*iadd
+    inc  %edi              ;*iinc
+
+By default the JVM outputs the AT&T assembly syntax, so instructions have the form
+`mnemonic src dst`. The `%edi` register contains the loop counter `x`, `%edx` contains the result
+`r`.
+
+- The first instruction writes `x` into the field `c.v`: `%rax` contains the address of object
+  `c`, the field `v` is located at offset `0x10`.
+- The second instruction reads the field `c.v` and adds the value to `x`. Note that this time,
+  register `%r13` is used to access object `c`. There are two registers that contain the same
+  object address, but the JIT compiler does not seem to know this fact.
+- The last line increases the loop counter.
+
+Comparing that to the loop body assembly when using a virtual method to access the field:
+
+    mov  %r8d,0x10(%r10)   ;*putfield v
+    add  %r8d,%edx         ;*iadd
+    inc  %r8d              ;*iinc
+
+Here, `%r8d` contains the loop counter `x`. Note that there is only one memory access: the JIT
+compiler identified that the memory read accesses the same location that was just written, so it
+uses the register already containing the value.
+
+The full assembly code is actually a lot larger than just a loop around the three instructions shown
+above. For one, there is infrastructure code added by JMH to measure times and to make sure values
+are consumed. But the main reason is loop unrolling. The faster assembly (when using the virtual
+method) contains the following loop:
+
+    ↗ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ add    %r8d,%edx
+    │ mov    %r8d,%r11d
+    │ add    $0xf,%r11d
+    │ mov    %r11d,0x10(%r10)   ;*putfield v
+    │ add    $0x78,%edx         ;*iadd
+    │ add    $0x10,%r8d         ;*iinc
+    │ cmp    $0x3d9,%r8d
+    ╰ jl     <loop-start>
+
+This code does the following:
+
+- The register `%r8d` still contains the loop counter `x`, so the loop adds `x` to `r` (`%edx`)
+  16 times (without increasing `x` in between).
+- Then it stores the value of `x` into `%r11d`, adds the constant `0xf` (decimal 15) to make up
+  for the folded iterations and stores that value into the field `c.v`.
+- The constant `0x78` (decimal 120) is added to the result `r` to make up for the fact that the
+  loop counter was not increased (0 + 1 + 2 + ... + 15 = 120).
+- The loop counter is increased by the constant `0x10` (decimal 16), corresponding to the 16
+  unfolded iterations.
+- The loop counter is compared against `0x3d9` (decimal 985): if it is smaller, another round of
+  of the unfolded loop can be executed (the loop ends at 1000). Otherwise execution continues in
+  a different location that performs single loop iterations.
+
+The interesting observation here is that the field `c.v` is only written once per 16 iterations.
+
+The slower assembly (when using the default method) also contains an unfolded loop, but the memory
+location `c.x` is written **and** read in every iteration (instead of only written in every 16th).
+Again, the problem seems to be that the JIT compiler does not know that two registers contain the
+same memory address for object `c`. The unfolded loop also uses a lot of registers, it even seems to
+make use of SSE registers (`%xmm1`, ...) as 32 bit registers.
 
 ## Summary
 
@@ -386,14 +471,27 @@ We found a few interesting behaviors of the JVM optimizer.
   based on type profiling. This means that a default method at a megamorphic callsite is never
   inlined, even if the method does not have any overrides.
 
+- The JIT does not combine the knowledge of type profiles and CHA. Assume a type profile shows that
+  a certain callsite has 3 receiver types at run-time, so it is megamorphic. Also assume that there
+  exist multiple versions (overrides / implementations) of the selected method, but CHA shows that
+  method resolution for the 3 types in question always yields the same implementation. In principle
+  the method could be inlined in this case, but this is not currently implemented.
+
+- Interface method lookup slows down by the number of interfaces a class implements.
+
 - The JVM fails to perform certain optimizations when default methods are used. We could show in a
   benchmark that moving a method from a parent class into a parent interface can degrade performance
   significantly. Adding an override to a subclass which invokes the default method using a `super`
   call restores the performance.
 
-  We did not investigate what are the underlying reasons that cause the slowdown in this example.
+  The assembly code reveals that the JVM fails to eliminate memory accesses when using the default
+  methods.
 
-- Interface method lookup slows down by the number of interfaces a class implements.
+While we can reproduce certain slowdowns when using default methods in micro-benchmarks, this does
+give an answer why we observe a 20% performance regression when running the Scala compiler on
+default methods without forwarders. The fact that the JIT compiler fails to perform certain
+optimizations may be the reason, but we don't have any evidence or proof to relate the two
+observations.
 
 ## References
 
