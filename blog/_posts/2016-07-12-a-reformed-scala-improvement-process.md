@@ -21,7 +21,7 @@ Importantly, the new SIP process creates a _SIP process lead_ role, who's respon
 
 #### Attend the next SIP meeting!
 
-Our first SIP meeting with the revised process will take place tomorrow. It's open for anyone to watch, via Google on-air Hangouts. Want to watch? Just head over to our [G+ event](https://plus.google.com/events/c11vhomo86lkejevfkrm6uls900) and subscribe.
+Our first SIP meeting with the revised process will take place tomorrow. It's open for anyone to watch or to participate in (it's possible to ask questions, live!), via Google on-air Hangouts. Want to watch and/or participate? Just head over to our [G+ event](https://plus.google.com/events/c11vhomo86lkejevfkrm6uls900) and subscribe.
 
 **July 2016 SIP Meeting**: Wednesday, July 13, 17:00 CEST (European) / 8:00 PDT (Pacific)
 
