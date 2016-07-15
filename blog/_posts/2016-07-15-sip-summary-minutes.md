@@ -2,7 +2,7 @@
 layout: blog
 post-type: blog
 by: Jorge Vicente Cantero
-title: A Reformed Scala Improvement Process
+title: SIP Committee Numbers 2 SIPs and Updates 3 Others
 ---
 
 Yesterday the Scala Center ran its first SIP meeting under the [newly reformed SIP
