@@ -2,7 +2,7 @@
 layout: blog
 post-type: blog
 by: Jorge Vicente Cantero
-title: SIP Committee Numbers 2 SIPs and Updates 3 Others
+title: SIP Meeting Results: 2 SIPs Numbered and 3 SIPs Updated
 ---
 
 Yesterday the Scala Center ran its first SIP meeting under the [newly reformed SIP
