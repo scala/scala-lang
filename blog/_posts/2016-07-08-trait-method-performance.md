@@ -247,7 +247,7 @@ If the callsite is polymorphic:
 
 - The M4 encoding (`addForwarded`) is slow because the forwarder cannot beinlined. This the known
   issue of trait methods leading to megamorphic callsites that exists in Scala 2.11.x and older.
-- The 33e7106 (`addDefaultStatic`) and M5 (`addDefault`) encodings are also slow: the default
+- The 33e7106 (`addDefault`) and M5 (`addDefaultStatic`) encodings are also slow: the default
   method is not inlined (checked with `-XX:+PrintInlining` and by comparing with a method marked
   `DONT_INLINE`). We will explore this in detail later.
 
