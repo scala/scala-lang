@@ -456,6 +456,18 @@ Again, the problem seems to be that the JIT compiler does not know that two regi
 same memory address for object `c`. The unfolded loop also uses a lot of registers, it even seems to
 make use of SSE registers (`%xmm1`, ...) as 32 bit registers.
 
+#### And CHA, again
+
+[Aleksey Shipilёv](https://twitter.com/shipilev) kindly took a look at the example and managed to
+narrow it down further. Using the JVM option `-XX:-UseCHA`, he observed that the C2 compiler
+generates the slower bytecode (with two memory accesses per iteration) also for virtual methods when
+CHA is disabled. This was reported in a [new ticket](https://bugs.openjdk.java.net/browse/JDK-8161334).
+
+This limitation may be accidential, i.e., the loop optimizer should probably perform the same no
+matter if inlining was CHA- or profile-based. But the example shows that for now, the lack of CHA
+for default methods causes optimizations (other than inlining) to fail, which may result in
+significant slowdowns.
+
 ## Summary
 
 We found a few interesting behaviors of the JVM optimizer.
