@@ -2,11 +2,12 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text" xml:lang="en">{{ site.root_desc }}</title>
+  <id>http://www.scala-lang.org/blog/</id>
+  <title type="text" xml:lang="en">{{ site.title }} :: Blog</title>
   <link type="application/atom+xml" href="http://www.scala-lang.org/feed/blog.xml" rel="self"/>
-  <link type="text" href="http://www.scala-lang.org/" rel="alternate"/>
+  <link type="text/html" href="http://www.scala-lang.org/blog/" rel="alternate"/>
+
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://www.scala-lang.org/</id>
   <author>
     <name>École Polytechnique Fédérale de Lausanne</name>
   </author>
