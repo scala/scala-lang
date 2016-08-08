@@ -19,15 +19,15 @@ listed here.
 ### English Scala Books
 
 [**Programming in
-Scala**, 2nd ed.](http://www.artima.com/shop/programming_in_scala_2ed)
-– **Available Now**
+Scala**, 3rd ed.](http://booksites.artima.com/programming_in_scala_3ed)
+– **Updated for Scala 2.12**
 by Martin Odersky, Lex Spoon, and Bill Venners
 - first edition [available for free online reading](http://www.artima.com/pins1ed/)
 
 <div class="row">
   <div class="span2">
     <div align="center">
-    <a href="http://www.artima.com/shop/programming_in_scala_2ed">
+    <a href="http://booksites.artima.com/programming_in_scala_3ed">
       <img src="/resources/img/books/ProgrammingInScala.gif" alt="">
     </a>
     </div>
@@ -39,8 +39,8 @@ the language. The book provides both an authoritative reference for
 Scala and a systematic tutorial covering all the features in the
 language. Once you are familiar with the basics of Scala you will
 appreciate having this source of invaluable examples and precise
-explanations of Scala to hand. The book is available
-from <a href="http://www.artima.com/shop/programming_in_scala_2ed">Artima</a>.
+explanations of Scala on hand. The book is available
+from <a href="http://booksites.artima.com/programming_in_scala_3ed">Artima</a>.
 Award winning book - <a href="http://www.drdobbs.com/joltawards/232601431">Jolt Productivity award</a>
 for Technical Books
   </div>
