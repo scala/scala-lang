@@ -330,17 +330,18 @@ $(document).ready(function(){
         }
       }
       var thisContent =
-        '<div class="event-item-wrap '+additionalClass+'" onclick="window.location=\''+event.url+'\'">' +
+        '<a class="event-item-wrap '+additionalClass+'" href="'+event.url+'">' +
           '<div class="event-item">' +
-            '<div class="event-title"><a href="'+event.url+'">'+event.title+'</a></div>' +
-            '<div class="event-logo"><a href="'+event.url+'"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></a></div>' +
+            '<div class="event-title">'+event.title+'</div>' +
+            '<div class="event-logo"><img class="event-logo" src="'+event.logo+'" alt="Logo" /></div>' +
             '<div class="event-float-right">' +
               '<div class="event-location">'+event.location+'</div>' +
               '<div class="event-date">'+
-                date + '</div>' +
+                date +
               '</div>' +
+            '</div>' +
           '</div>' +
-        '</div>';
+        '</a>';
       $("#eventspane").append(thisContent);
     }
   };
@@ -443,9 +444,9 @@ $(document).ready(function(){
       var day = trainingDate.getDate();
       var year = trainingDate.getFullYear();
       var thisContent =
-        '<div class="training-item-wrap '+additionalClass+'" onclick="window.location=\''+training.url+'\'">' +
+        '<a class="training-item-wrap '+additionalClass+'" href="'+training.url+'">' +
           '<div class="training-item">' +
-            '<div class="training-title"><a href="'+training.url+'">'+training.title+'</a></div>' +
+            '<div class="training-title">'+training.title+'</div>' +
             '<div class="training-date">' +
                '<div class="date"><div class="month">'+month+'</div><div class="day">'+day+'</div></div><div class="year">'+year+'</div>' +
             '</div>'+
@@ -455,7 +456,7 @@ $(document).ready(function(){
               '<div class="training-organizer">'+training.organizer+'</div>' +
             '</div>' +
           '</div>' +
-        '</div>';
+        '</a>';
       $("#trainingspane").append(thisContent);
     }
   }

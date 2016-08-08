@@ -522,7 +522,6 @@ a.brand {
 }
 
 .event-item-wrap {
-  cursor: pointer;
   position: relative;
   float: left;
   text-align: left;
@@ -559,11 +558,6 @@ a.brand {
   font-size: 17px;
   font-weight: bold;
   line-height: 0.95em;
-}
-
-.event-title a:link,
-.event-title a:visited {
-  /*color: #A2B5BA;*/
   color: #fff;
   border: none;
 }
@@ -594,7 +588,7 @@ a.brand {
   /*color: rgba(101, 123, 131, 0.7);*/
 }
 
-.events-page .event-title > a,
+.events-page .event-title,
 .events-page .event-date,
 .events-page .event-location {
   color: #174753;
@@ -615,7 +609,7 @@ a.brand {
   height: 54px;
 }
 
-.event-logo > a > img {
+.event-logo > img {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -705,7 +699,6 @@ a.brand {
 }
 
 .training-item-wrap:hover {
-  cursor: pointer;
   background: rgba(255, 255, 255, 0.15);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -788,10 +781,6 @@ a.brand {
   font-size: 17px;
   font-weight: bold;
   line-height: 0.95em;
-}
-
-.training-title a:link,
-.training-title a:visited {
   color: #174753;
   border: none;
 }
