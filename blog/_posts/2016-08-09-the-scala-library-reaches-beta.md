@@ -5,7 +5,7 @@ by: Guillaume Massé
 title: "Scala Library Index Reaches Beta!"
 ---
 
-Today, the Scala Center team is very proud to announce that [The Scala Package Index](https://index.scala-lang.org/), or Scaladex for short, has reached beta v1! This means we're now confident that Scaladex is now in state where it is ready for widespread use. Scaladex now supports most major features in addition to serving as an index of the known Scala ecosystem; self-updating, reindexing, user editing of published libraries (keywords, documentation links, and artifact deprecation), and more, even as we work to iron out user experience. In particular we'd like to thank contributors [Ronald Marske](https://github.com/Scyks), and [Rafa Paradela](https://github.com/rafaparadela) and [Israel Pérez](https://github.com/israelperezglez) from [47 Degrees](http://www.47deg.com/) in helping us to reach this milestone!
+Today, the Scala Center team is very proud to announce that [The Scala Package Index](https://index.scala-lang.org/), or Scaladex for short, has reached beta v1! This means we're now confident that Scaladex is now in state where it is ready for widespread use. Scaladex now supports most major features we planned for it, in addition to serving as an index of the known Scala ecosystem; self-updating, reindexing, user editing of published libraries (keywords, documentation links, and artifact deprecation), and more, even as we work to iron out user experience. In particular we'd like to thank contributors [Ronald Marske](https://github.com/Scyks), and [Rafa Paradela](https://github.com/rafaparadela) and [Israel Pérez](https://github.com/israelperezglez) from [47 Degrees](http://www.47deg.com/) in helping us to reach this milestone!
 
 Here's a quick walkthrough we put together of some of Scaladex's main features:
 
@@ -23,7 +23,7 @@ Projects can also be edited and tagged with keywords, to help in searching, and 
 
 The Index is also similar to a DNS (Domain Name Server). With a project or artifact name, you can find the exact release to paste into your sbt, Gradle, or Maven builds.
 
-One can imagine many more features for us to include in Scaladex, such. As always, if you have any ideas or wishes, let us know in our [Gitter channel](https://gitter.im/scalacenter/scaladex)!
+One can imagine many more features for us to include in Scaladex– for example, an API that tools could query Scaladex for compatibility information between libraries. As always, if you have any ideas or wishes, let us know in our [Gitter channel](https://gitter.im/scalacenter/scaladex)!
 
 ## How does it work?
 
