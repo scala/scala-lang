@@ -104,7 +104,8 @@ that proposals be submitted to the repository at least a week before the
 meeting to give all the members an opportunity to consider them before meeting.
 
 During the first meeting, we also elected Seth Tisue as the secretary, and his
-minutes will be published in the next few days.
+minutes ~~will be published in the next few days~~ have been published
+[here](https://scala.epfl.ch/records.html).
 
 The meeting itself was a success! We deferred one proposal until the next
 meeting (which will take place in August), but adopted four others:
