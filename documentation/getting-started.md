@@ -15,7 +15,7 @@ If you are just starting to learn how to code, you will find that a large portio
 * The online class [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun), available on coursera. Taught by the creator of Scala, Martin Odersky, this online class takes a somewhat academic approach to teach the fundamentals of functional programming. You will learn a lot of Scala by solving the programming assignments.
 * [Kojo](http://www.kogics.net/sf:kojo) is an interactive learning environment that uses Scala programming to explore and play with math, art, music, animations and games.
 
-##Your first lines of code
+## Your first lines of code
 
 ### The "Hello, world!" Program
 
