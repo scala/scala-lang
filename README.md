@@ -1,4 +1,4 @@
-# SCALA-LANG.ORG
+# scala-lang.org
 
 This repository contains the _static_ source of [scala-lang.org](http://scala-lang.org). It does not contain the source of any content found under the [docs.scala-lang.org](http://docs.scala-lang.org) subdomain (instead, visit the [scala.github.com repo](http://github.com/scala/scala.github.com) for that source).
 
@@ -12,8 +12,8 @@ This site uses a Jekyll, a Ruby framework. The required Jekyll version is 3.1.6.
 
 There are two ways to run Jekyll to build the site:
 
-1. using Bundler, so Jekyll and accompanying gems are installed only inside this directory
-2. using globally installed Jekyll and accompanying gems
+1. Using [Bundler], so Jekyll and accompanying gems are installed only inside this directory.
+2. Using globally-installed Jekyll and accompanying gems.
 
 The latter method is the one currently actually used on scala-lang.org. The
 former method is likely most convenient for users who already have a different
@@ -28,7 +28,7 @@ Start the server in the context of the bundle:
 
     bundle exec jekyll serve
 
-from this point, everything else should be the same, regardless of which method
+From this point, everything else should be the same, regardless of which method
 you used to run Jekyll.
 
 ### Option 2) Building with global Jekyll
@@ -37,7 +37,7 @@ Install Jekyll 3.1.6 on your system using RubyGems:
 
     gem install jekyll -v 3.1.6
 
-After cloning, cd into the directory where you cloned this repository and run:
+After cloning, `cd` into the directory where you cloned this repository and run:
 
     jekyll serve
 
@@ -72,7 +72,7 @@ The "YAML Front Matter" is nothing more than the header on each page that you in
     title: My page title
     ---
 
-You can use these fields in the YAML front matter later in your document. For example, to make a header with the title of the document, in markdown you would write:
+You can use these fields in the YAML front matter later in your document. For example, to make a header with the title of the document, in Markdown you would write:
 
     ---
     layout: page
@@ -87,7 +87,7 @@ You can use these fields in the YAML front matter later in your document. For ex
 
 ## Markdown
 
-There are dozens of guides and cheatsheets that cover markdown syntax out there, though this screenshot from the free OSX markdown editor, [Mou](http://mouapp.com/), is an excellent and concise reference:
+There are dozens of guides and cheatsheets that cover Markdown syntax out there, though this screenshot from the free OS X Markdown editor, [Mou](http://mouapp.com/), is an excellent and concise reference:
 
 ![Mou screen shot](http://25.io/mou/img/1.png)
 
@@ -128,3 +128,4 @@ Example YAML front matter with all possible fields:
     by: Scala Jenkins (Build Kitty)
     ---
 
+[Bundler]: http://bundler.io/
