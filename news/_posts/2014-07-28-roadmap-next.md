@@ -2,7 +2,7 @@
 layout: news
 post-type: announcement
 title: "Scala: Next Steps"
-permalink: /news/roadmap-next
+permalink: /news/roadmap-next.html
 ---
 As with every living programming language, Scala will continue to evolve. This document describes where the core Scala team sees the language going in the medium term and where we plan to invest our efforts.
 

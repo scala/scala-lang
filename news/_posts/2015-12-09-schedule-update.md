@@ -2,7 +2,7 @@
 layout: news
 post-type: announcement
 title: "2016 Scala Release Schedule update"
-permalink: /news/2016-schedule
+permalink: /news/2016-schedule.html
 ---
 
 With 2016 rapidly approaching, it's time for an update on our plans for Scala next year!
