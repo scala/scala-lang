@@ -13,7 +13,7 @@ The most notable changes since M5 are:
 
   - [#5135](https://github.com/scala/scala/pull/5135): Either is now
     right-biased
-  - [SI-4826](https://issues.scala-lang.org/browse/SI-7187): Scaladoc now
+  - [SI-4826](https://issues.scala-lang.org/browse/SI-4826): Scaladoc now
     supports doc comments in Java sources
   - [SI-7187](https://issues.scala-lang.org/browse/SI-7187): Eta-expansion of
     zero-argument method values is now deprecated
