@@ -140,7 +140,7 @@ The procedure is the same for C1 and C2, it uses the invocation counter that is 
 compilation decisions (previous section).
 
 Dmitry points out that a method being inlined might already be compiled, in which case the compiled
-assembly will be inlinied. The size limits for inlining are controlled by a different parameter in
+assembly will be inlined. The size limits for inlining are controlled by a different parameter in
 this case, see
 [this thread](https://groups.google.com/forum/#!msg/mechanical-sympathy/8ARGnMds7tU/p4rxkhi-vgcJ)
 and [this ticket](https://bugs.openjdk.java.net/browse/JDK-6316156) for reference.
@@ -245,7 +245,7 @@ The penalty for having either forwarder is similar.
 
 If the callsite is polymorphic:
 
-- The M4 encoding (`addForwarded`) is slow because the forwarder cannot beinlined. This the known
+- The M4 encoding (`addForwarded`) is slow because the forwarder cannot be inlined. This the known
   issue of trait methods leading to megamorphic callsites that exists in Scala 2.11.x and older.
 - The 33e7106 (`addDefault`) and M5 (`addDefaultStatic`) encodings are also slow: the default
   method is not inlined (checked with `-XX:+PrintInlining` and by comparing with a method marked
@@ -255,7 +255,7 @@ For comparison, an invocation of `addInherited` is inlined and therefore much fa
 inherited virtual method is not treated in the same way as an inherited default method. The next
 section goes into details why this is the case.
 
-*Note:* for the question why the 33e7106 ecoding causes a 20% performance regression, this cannot be
+*Note:* for the question why the 33e7106 encoding causes a 20% performance regression, this cannot be
 the reason. We found out that `addDefault` is slower than it could be in the polymorphic case, but
 it is not slower than the M4 encoding.
 
@@ -463,7 +463,7 @@ narrow it down further. Using the JVM option `-XX:-UseCHA`, he observed that the
 generates the slower bytecode (with two memory accesses per iteration) also for virtual methods when
 CHA is disabled. This was reported in a [new ticket](https://bugs.openjdk.java.net/browse/JDK-8161334).
 
-This limitation may be accidential, i.e., the loop optimizer should probably perform the same no
+This limitation may be accidental, i.e., the loop optimizer should probably perform the same no
 matter if inlining was CHA- or profile-based. But the example shows that for now, the lack of CHA
 for default methods causes optimizations (other than inlining) to fail, which may result in
 significant slowdowns.
