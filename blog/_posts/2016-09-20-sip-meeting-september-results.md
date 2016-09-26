@@ -25,7 +25,7 @@ During the meeting, the Committee discussed the following proposals:
     provides all the machinery for meta to work, though, they will be accepted
     together. [Inline](https://github.com/lampepfl/dotty/pull/1492) has already
     been implemented in Dotty. Iulian Dragos and Josh Suereth, the reviewers of
-    the proposal, explain the Committee's reaction [here]().
+    the proposal, explain the Committee's reaction [here](https://github.com/scala/scala.github.com/pull/567).
 -   [SIP-21: Spores](http://docs.scala-lang.org/sips/pending/spores.html).
     Originally proposed in 2013, spores are functions that allow programmers to
     control the captured environment. Among several advantages, they allow
@@ -48,7 +48,7 @@ During the meeting, the Committee discussed the following proposals:
     report [here](https://github.com/scala/scala.github.com/pull/548).
 -   [SIP-27: Trailing Commas](http://docs.scala-lang.org/sips/pending/trailing-commas.html).
 		The trailing commas proposal was acknowledged and numbered by the Committee
-		three months ago. This time, Dale Wijnand, his author, was invited as a
+		three months ago. This time, Dale Wijnand, the author, was invited as a
 		guest and took part in the discussion. After some insightful discussions by the community
 		[here](https://github.com/scala/scala.github.com/pull/533) and
 		[there](https://gitter.im/scala/slip), and much more debate in our
