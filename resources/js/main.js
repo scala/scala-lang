@@ -393,13 +393,13 @@ $(document).ready(function(){
     {
       title: "{{ training.title }}",
       description: "{{ training.description }}",
-      url: "{{ training.link-out }}",
       sessions: [
         {
           where: "{{ training.where }}",
           when: "{{ training.when }}",
           trainers: "{{ training.trainers }}",
           organizer: "{{ training.organizer }}",
+          url: "{{ training.link-out }}",
           status: "{{ training.status }}"
         }
       ]
@@ -417,7 +417,7 @@ $(document).ready(function(){
         result.push({
           title: training.title,
           description: training.description,
-          url: training.url,
+          url: session.url,
           where: session.where,
           when: session.when,
           trainers: session.trainers,
