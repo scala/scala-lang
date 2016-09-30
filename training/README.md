@@ -15,6 +15,7 @@ example that you can copy-and-paste.
 
 ```
 ---
+category: event
 title: Fast Track to Scala
 description: Get up to speed in Scala in no time
 link-out: http://typesafe.com/how/training/fasttracktoscala
@@ -27,6 +28,7 @@ organizer: Typesafe
 
 And a small description of each field, in case it is not already obvious:
 
+*   `category: event`, this is obligatory, don't leave it out!
 *   `title`: short title of the training
 *   `description`: a longer description of the training. It does not appear on
     the front page per se, but could be useful some day
