@@ -32,7 +32,8 @@ It doesn't really make sense to put this in a `try`-block for two reasons:
 So let's say we compile this file using scalac, we get something like:
 
 <pre>
-test.scala:2: warning: A try without a catch or finally is equivalent to putting its body in a block; no exceptions are handled.
+test.scala:2: warning: A try without a catch or finally is equivalent to putting
+its body in a block; no exceptions are handled.
      try {
        ^
        one warning found
