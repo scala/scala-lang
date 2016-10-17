@@ -48,6 +48,12 @@ The main [Gitter](https://gitter.im) room for Scala is:
 
 Other, more specialized rooms include:
 
+* **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby) and [spark-scala/questions](https://gitter.im/spark-scala/questions), for discussions and questions about using Scala for Spark programming
+
+There are many other rooms devoted to individual Scala libraries and technologies.
+
+Rooms about the future of Scala:
+
 * **[scala/contributors](https://gitter.im/scala/contributors)**: like the scala-internals mailing list. For Scala contributors to discuss language internals.
 * **[scala/slip](https://gitter.im/scala/slip)**: for discussion of SLIPs and SIPs (Scala Library and Scala Improvement Process) proposals
 
