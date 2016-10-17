@@ -48,6 +48,8 @@ interacting with the proof assistant, Isabelle, from Scala. All this experience
 gives Lars a deep understanding of Scala, both as a language and through some
 of its the most advanced applications.
 
-We shall be very happy to welcome Lars, as one of the co-founders of Typelevel,
-to the next meeting, which is currently scheduled for late November.
+The Scala Center shall be very happy to welcome Lars, as one of the founders of
+Typelevel, to the Advisory Board, and at the next meeting (currently scheduled
+for late November) we shall put his appointment to the existing membership for
+approval. We have every expectation he will be a valuable asset to the board!
 
