@@ -48,6 +48,6 @@ interacting with the proof assistant, Isabelle, from Scala. All this experience
 gives Lars a deep understanding of Scala, both as a language and through some
 of its the most advanced applications.
 
-We shall be very happy to welcome Lars to the next meeting, which is currently
-scheduled for late November.
+We shall be very happy to welcome Lars, as one of the co-founders of Typelevel,
+to the next meeting, which is currently scheduled for late November.
 
