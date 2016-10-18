@@ -51,7 +51,7 @@ As with previous 2.12 builds, the new trait encoding may make some
 trait-based code run slower. We've investigated this issue in depth,
 and have implemented important improvements in RC2.
 Compile times may still be longer in 2.12 than 2.11. Please let us know
-if you notice any perfomance regresions. We will continue to tweak
+if you notice any performance regressions. We will continue to tweak
 the bytecode we emit during the 2.12.x cycle to get the best performance out of the JVM.
 
 We welcome feedback from the Scala community helping to isolate unusual slowdowns.
