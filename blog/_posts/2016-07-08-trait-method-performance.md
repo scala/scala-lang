@@ -128,7 +128,7 @@ several heuristics (implemented in
 methods `should_inline`, `should_not_inline` and `try_to_inline`). A simplified summary:
 
 - Trivial methods (6 bytes by default, `MaxTrivialSize`) are always inlined.
-- Methods up to 35 bytes (`MaxInlineSize`) invoked between 1 and 250 (`MinInliningThreshold`) are
+- Methods up to 35 bytes (`MaxInlineSize`) invoked more than 250 (`MinInliningThreshold`) times are
   inlined.
 - Methods up to 325 bytes (`FreqInlineSize`) are inlined if the callsite is "hot" (or "frequent"),
   which means it is invoked more than 20 times (no command-line flag in release versions) per one
