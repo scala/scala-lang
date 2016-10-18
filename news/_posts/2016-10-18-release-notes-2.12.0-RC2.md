@@ -21,29 +21,13 @@ Here are the [most noteworthy fixes](https://github.com/scala/scala/pulls?q=is%3
   - [#5430](https://github.com/scala/scala/pull/5430) Emit `object` in method like `lazy val`;
   - [#5442](https://github.com/scala/scala/pull/5442) [SI-9943](https://issues.scala-lang.org/browse/SI-9943) `sealed` class does not yield SAM type;
 
-
-The most notable changes since M5 are:
-
-  - [#5135](https://github.com/scala/scala/pull/5135): Either is now
-    right-biased
-  - [SI-4826](https://issues.scala-lang.org/browse/SI-4826): Scaladoc now
-    supports doc comments in Java sources
-  - [SI-7187](https://issues.scala-lang.org/browse/SI-7187): Eta-expansion of
-    zero-argument method values is now deprecated
-  - [#5307](https://github.com/scala/scala/pull/5307): Reduced interference
-    from SAMs when inferring function types in the presence of overload
-  - [#5141](https://github.com/scala/scala/pull/5141) /
-    [#5294](https://github.com/scala/scala/pull/5294): Refactoring
-    of `def`, `val`, and `lazy val` handling, fixing assorted corner
-    cases and inconsistencies
-  - [#5311](https://github.com/scala/scala/pull/5311): Scala is now built with
-    sbt instead of Ant (affects only contributors, not users)
+The [RC1 release notes](http://scala-lang.org/news/2.12.0-RC1) have a list of important changes since M5.
 
 
 In total, we merged [29 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-RC2).
 This milestone resolves [6 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-RC2%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) and [9 scala-dev issues](https://github.com/scala/scala-dev/milestone/9?closed=1).
 
-As usual for Scala pre-releases, 2.12.0-RC2 is not guaranteed to be binary compatible with any other Scala version, including any 2.12 milestones.
+As usual for Scala pre-releases, 2.12.0-RC2 is not guaranteed to be binary compatible with any other Scala version, including any 2.12 milestones and release candidates.
 
 ### Known issues
 
@@ -112,7 +96,7 @@ The following optimizations are available:
 `Either` now supports operations like `map`, `flatMap`, `contains`,
 `toOption`, and so forth, which operate on the right-hand side.
 
-(`.left` and `.right` will be deprecated in favor of `.swap` in a later release.)
+(`.left` and `.right` may be deprecated in favor of `.swap` in a later release.)
 
 The changes are source-compatible with old code (except in the
 presence of conflicting extension methods).
@@ -185,7 +169,7 @@ The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in m
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-According to `git shortlog -sn --no-merges v2.12.0-RC1..v2.12.0-RC2`, the following contributors helped to realize this milestone: Adriaan Moors, Jason Zaugg, Lukas Rytz, Seth Tisue, Stefan Zeiger, Antoine Gourlay, Raphael Jolly. Thank you!
+According to `git shortlog -sn --no-merges v2.12.0-RC1..v2.12.0-RC2`, the following contributors helped to realize this release candidate: Adriaan Moors, Jason Zaugg, Lukas Rytz, Seth Tisue, Stefan Zeiger, Antoine Gourlay, Raphael Jolly. Thank you!
 
 ## Release notes
 
