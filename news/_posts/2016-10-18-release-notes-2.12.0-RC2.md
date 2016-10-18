@@ -58,7 +58,7 @@ Except for the breaking changes listed below, code that compiles on 2.11.x witho
 
 With this release candidate, we consider 2.12.x to be feature complete.
 
-For 2.12.0, we will try to remain binary compatible with RC1,
+For 2.12.0, we will try to remain binary compatible with RC2,
 and we won't risk regressions except for the most critical bugs.
 
 #### Trait compiles to an interface
