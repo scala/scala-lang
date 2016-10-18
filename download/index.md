@@ -7,7 +7,7 @@ other_releases: [
   ["maintenance_version", "Last 2.9.x maintenance release", 2.9.3, "February 28, 2013"],
   ["maintenance_version", "Last 2.10.x maintenance release", 2.10.6, "September 18, 2015"],
   ["development_version", "Current 2.11.x release", 2.11.8, "March 8, 2016"],
-  ["milestone_version", "Current 2.12.x milestone", 2.12.0-RC1, September 6, 2016"]
+  ["milestone_version", "Current 2.12.x milestone", 2.12.0-RC2, October 18, 2016"]
 ]
 requirements: "The Scala software distribution can be installed on any platform with a <a href='http://www.java.com/'>Java runtime</a>, version 1.6 or later. Scala 2.12 requires Java 8."
 resources: [
