@@ -2,23 +2,38 @@
 layout: blog
 post-type: blog
 by: Julien Richard-Foy
-title: "scalajs-bundler has been released"
+title: "Use npm packages in Scala.js with scalajs-bundler"
 ---
 
-This week we have released a first version of [`scalajs-bundler`](https://scalacenter.github.io/scalajs-bundler), a tool aiming to provide an integrated developer experience for
-[Scala.js](https://www.scala-js.org/) projects that use [npm](https://www.npmjs.com/) packages.
+This week we release the first version of
+[*scalajs-bundler*](https://scalacenter.github.io/scalajs-bundler), a tool that makes it easier
+to use [npm](https://www.npmjs.com/) packages for [Scala.js](https://www.scala-js.org/)
+developers.
 
-## Motivation
+## Vision
+
+Our goal is to make npm dependencies management as easy as JVM dependencies management.
+
+Basically, if your application needs to use an npm package `foo`, all you have to do is to
+add to your build a line like the following:
+
+~~~ scala
+npmDependencies in Compile += "foo" -> "1.0"
+~~~
+
+And then the usual `run` and `test` sbt commands just work.
+
+## Challenge
 
 npm is the most popular JavaScript package registry. How can Scala.js applications benefit from
-the many libraries published on npm? First, this requires to resolve these libraries, as well as
-their transitive dependencies, from the npm registry and to download them. Then, the artifacts
-need to be somehow “linked” with the Scala.js code. This latter step is more subtle than it seems
-because the linking process might vary according to the target execution environment. For instance,
-Node.js expects artifacts to be conform to the CommonJS format, whereas this format is not compatible
-with the execution from a Web browser. Furthermore, in the case of Web development, when the
+the many libraries published on npm? First, this requires to resolve and download these libraries
+including their transitive dependencies. Then, the artifacts
+need to be *linked* with the Scala.js code. This last step is subtler than it seems
+because the linking process varies according to the target execution environment. For instance,
+Node.js expects artifacts to conform to the CommonJS format, whereas this format is not compatible
+with the execution from a web browser. Furthermore, in the case of web development, when the
 application is shipped to production it is better to pack all the code and its dependencies into a
-single bundle whose format is executable by Web browsers.
+single bundle whose format is executable by web browsers.
 
 ## Existing solutions
 
@@ -28,37 +43,27 @@ world and one for the npm world). Both of them require extra efforts from develo
 or have limitations (you can find more details about that in scalajs-bundler’s
 [documentation](https://scalacenter.github.io/scalajs-bundler/motivation.html)).
 
-## Vision, current state and future work
+## Current state
 
-The last release of Scala.js brought support for
-[CommonJS modules](https://www.scala-js.org/doc/project/module.html), thus opening new
-possibilities.
-
-scalajs-bundler aims to make npm dependencies management as easy as JVM dependencies
-management.
-
-Basically, the idea is that if an application needs to depend on an
-npm package `foo`, all we have to do is to add a line like the following:
-
-~~~ scala
-npmDependencies in Compile += "foo" -> "1.0"
-~~~
-
-And then the `run` and `test` sbt commands just work.
+*scalajs-bundler* leverages the
+[CommonJS modules support](https://www.scala-js.org/doc/project/module.html) brought by the latest
+Scala.js release.
 
 The 0.1 release contains an sbt plugin that:
 
-- lets developers define their npm dependencies (as in the above example),
+- lets developers define their npm dependencies (as in the introductory example),
 - keeps track of transitive npm dependencies between Scala.js artifacts,
 - fetches these dependencies from the npm registry,
-- provides tasks to bundle the application into a single artifact executable by Web browsers.
+- provides tasks to bundle the application into a single artifact executable by web browsers.
 
-The plugin uses [npm](https://www.npmjs.com/) itself and [webpack](https://webpack.github.io/)
+The plugin uses [npm](https://www.npmjs.com/) and [webpack](https://webpack.github.io/)
 under the hood.
 
-We also provide a second sbt plugin that sets up a seamless integration with
+We also provide a second sbt plugin that integrates with
 [sbt-web-scalajs](https://github.com/vmunier/sbt-web-scalajs): it basically turns bundles
 into sbt-web assets.
+
+## Future work
 
 There is still some work to do (in particular to shorten the duration of the bundling process
 in the context of live reloading workflows) and we expect to release a
