@@ -8,9 +8,8 @@ title: "Use npm packages in Scala.js with scalajs-bundler"
 This week we release the first version of
 [*scalajs-bundler*](https://scalacenter.github.io/scalajs-bundler), a tool that makes it easier
 to use [npm](https://www.npmjs.com/) packages for [Scala.js](https://www.scala-js.org/)
-developers. This effort follows a Scala Center Advisory Board
-[proposal](https://scala.epfl.ch/minutes/2016/06/06/may-9-2016.html#proposal-scp-005-ensurance-of-continuity-of-scalajs-project):
-“ensurance of continuity of the Scala.js project”.
+developers. This effort is part of the Scala Center's [initiative](https://scala.epfl.ch/minutes/2016/06/06/may-9-2016.html#proposal-scp-005-ensurance-of-continuity-of-scalajs-project) to ensure the
+continuity of the Scala.js project.
 
 ## Vision
 
