@@ -29,7 +29,7 @@ the functional elements within it, through regular hacking sessions, and with a
 number of workshops and unconferences colocated with larger Scala events.
 
 So we felt it was only appropriate — given Typelevel's influence, its track
-record, and the pholosophy of welcomeness it shares with the Scala Center —
+record, and the philosophy of welcomeness it shares with the Scala Center —
 that they should choose the second community representative to the Advisory
 Board.
 
