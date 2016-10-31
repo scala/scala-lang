@@ -3,6 +3,7 @@ layout: maindownloadpage
 title: Download
 release_version: 2.11.8
 release_date: "March 8, 2016"
+show_resources: "true"
 other_releases: [
   ["maintenance_version", "Last 2.9.x maintenance release", 2.9.3, "February 28, 2013"],
   ["maintenance_version", "Last 2.10.x maintenance release", 2.10.6, "September 18, 2015"],
