@@ -116,6 +116,6 @@ Staying current:
 
 ## Non-JVM platforms
 
-* [Scala.js](http://www.scala-js.org) compiles Scala code to JavaScript
+* [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
 * [Scala Native](http://www.scala-native.org) compiles Scala code to LLVM for native execution
 * [Scala on Android](http://scala-android.org) community site
