@@ -1943,14 +1943,14 @@ a.central-btn.api {
   width: 120px;
   text-align: center;
   font-family: "museo-slab", serif;
-  color: #174753;
+  color: white;
   text-transform: none;
   padding: 0 16px;
 }
 
 .scala-version:hover {
  background: transparent;
- color: #174753;
+ color: #eb2100;
  cursor: text;
 }
 
