@@ -194,7 +194,7 @@ The following optimizations are available:
 * Inlining final methods, including methods defined in objects and final methods defined in traits
 * If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
 * Dead code elimination and a small number of cleanup optimizations
-* Box/unbox elimination [#4858](https://github.com/scala/scala/pull/4858): primitive boxes and tuples that are created and used within some method without exscaping are eliminated.
+* Box/unbox elimination [#4858](https://github.com/scala/scala/pull/4858): primitive boxes and tuples that are created and used within some method without escaping are eliminated.
 
 For example, the following code
 
