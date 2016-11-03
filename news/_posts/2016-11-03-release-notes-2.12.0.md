@@ -15,6 +15,8 @@ This release ships with a powerful [new optimizer](#new-optimizer). Many more (e
 
 From now on, 2.12.x releases will be fully binary compatible. This release is identical to 2.12.0-RC2.
 
+The [list of open-source libraries](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md) released for Scala 2.12 is growing quickly!
+
 Our [roadmap](https://github.com/scala/scala/milestones) lists the following upcoming releases for 2016: 2.12.1 will be out shortly (by the end of November) to address some known (but rare) issues in 2.12.0, and 2.11.9 is the last planned 2.11.x release (due by mid December). In the next few weeks, we at Lightbend will share our plans for Scala 2.13.
 
 
