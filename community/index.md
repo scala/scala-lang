@@ -113,3 +113,9 @@ Staying current:
 
 * [implicit.ly](http://implicit.ly) announces new versions of Scala libraries as they become available
 * [Scala-Announce](http://groups.google.com/group/scala-announce) also has release announcements
+
+## Non-JVM platforms
+
+* [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
+* [Scala Native](http://www.scala-native.org) compiles Scala code to LLVM for native execution
+* [Scala on Android](http://scala-android.org) community site
