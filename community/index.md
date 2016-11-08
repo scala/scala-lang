@@ -119,3 +119,8 @@ Staying current:
 * [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
 * [Scala Native](http://www.scala-native.org) compiles Scala code to LLVM for native execution
 * [Scala on Android](http://scala-android.org) community site
+
+## Dotty
+
+* [Dotty](http://dotty.epfl.ch) is a next generation compiler for Scala, under development at EPFL
+    * [Dotty FAQ](http://dotty.epfl.ch/#why-dotty)
