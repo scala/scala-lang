@@ -1,17 +1,17 @@
 
-.prettyprint { background-color: #073642; }
-.prettyprint code { color: #839496;  overflow: auto; }
+.prettyprint { background-color: #073642; font-size: 1em; }
+.prettyprint code { color: #B0BABC;  overflow: auto; }
 .prettyprint .pln { color: inherit; }
-.prettyprint .str, .prettyprint .atv { color: #2aa198; }
-.prettyprint .lit { color: #D33682;}
-.prettyprint .kwd { color: #859900; }
+.prettyprint .str, .prettyprint .atv { color: #5BCCC4; }
+.prettyprint .lit { color: #DB5A98;}
+.prettyprint .kwd { color: #A4B536; }
 .prettyprint .com,
-.prettyprint .dec { color: #586e75; font-style: italic; }
-.prettyprint .typ { color: #268BD2; }
+.prettyprint .dec { color: #6B868E; font-style: italic; }
+.prettyprint .typ { color: #1C97EF; }
 .prettyprint .pun { color: inherit; }
 .prettyprint .opn { color: inherit; }
 .prettyprint .clo { color: inherit; }
-.prettyprint .tag { color: #268bd2; font-weight: bold; }
+.prettyprint .tag { color: #1C97EF; font-weight: bold; }
 .prettyprint .atn { color: inherit; }
 
 pre.prettyprint {
