@@ -57,7 +57,7 @@ We hope to address the following in a later 2.12.x release:
 
 ### Java 8 runtime
 
-Install a recent build of the Java 8 Platform, such as [OpenJDK](http://openjdk.java.net/install/) or [Oracle Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Any Java 8 compliant runtime will do.
+Install a recent build of the Java 8 Platform, such as [OpenJDK](http://openjdk.java.net/install/) or [Oracle Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Any Java 8 compliant runtime will do (but note that Oracle versions before 8u102 have a known issue that [affects Scala](https://issues.scala-lang.org/browse/SI-9828)).
 
 We are planning to add (some) support for Java 9 in the near future. Full Java 9 support will be part of the 2.13 roadmap discussions.
 
