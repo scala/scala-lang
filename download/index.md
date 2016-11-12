@@ -2,7 +2,7 @@
 layout: maindownloadpage
 title: Download
 release_version: 2.12.0
-release_date: "March 8, 2016"
+release_date: "November 3, 2016"
 show_resources: "true"
 other_releases: [
   ["development_version", "Current 2.12.x release", 2.12.0, "November 3, 2016"],
