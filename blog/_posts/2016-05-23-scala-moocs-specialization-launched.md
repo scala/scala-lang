@@ -34,6 +34,4 @@ you can visit each course's landing page:
 - **[Parallel Programming](https://www.coursera.org/learn/parprog1/)**
 
 More info about each course can be found on the [Scala Specialization page](https://www.coursera.org/specializations/scala), or on
-the [Scala Center's website](https://scala.epfl.ch/). Questions, or to join the discussion about the Scala Center, visit us in the [Scala Center gitter channel](gitter.im/scala/center)!
-
-
+the [Scala Center's website](https://scala.epfl.ch/). Questions, or to join the discussion about the Scala Center, visit us in the [Scala Center gitter channel](https://gitter.im/scala/center)!
