@@ -187,29 +187,10 @@ function styleCode() {
 
 $(document).ready(function() {
 
-  // get the most up-to-date version of activator
-  $.getJSON("https://activator-prod.herokuapp.com/latest?callback=?", function(data) {
-   // update the page with the latest values
-   if (data.version != undefined) {
-     var activatorLink = $("#download-button.activator")
-     activatorLink.prop("href", "http://downloads.lightbend.com/typesafe-activator/" + data.version + "/typesafe-activator-" + data.version + ".zip")
-   }
-  })
-
   var os = getOS();
   if (os == "Unknown OS") os = "UNIX";
 
   var osLabel = os.replace(/\s/g, '').toLowerCase();
-
-  // Removing the automatic download on the front page in favor of a
-  // link to the download page so people can see that activator is also
-  // a valid download choice.
-  // $("#main-download-button").each(function() {
-  //   var unixLink = "{{ site.scala_maindownload_unix }}",
-  //       windowsLink = "{{ site.scala_maindownload_windows }}",
-  //       link = (os == "Windows") ? windowsLink : unixLink;
-  //   $(this).attr("href", link).addClass(osLabel);
-  // });
 
   // Do not do any of the following if we're not on a download page
   // Otherwise a TypeError is raised and disables all other scripts on the page
