@@ -24,6 +24,5 @@ For quick access, add `scala` and `scalac` to your path. For example:
 ## Get Started with Scala
 
 Check out the 
-["first lines of code" section of our getting started guide](http://scala-lang.org/documentation/getting-started.html#your_first_lines_of_code) 
+["first lines of code" section of our getting started guide]({{ site.baseurl }}/documentation/getting-started.html#your-first-lines-of-code) 
 to take your first steps in Scala.
-
