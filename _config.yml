@@ -1,7 +1,6 @@
 title: The Scala Programming Language
 
 scalaversion: "2.12.0"
-devscalaversion: ""
 
 baseurl: ""
 markdown: kramdown
