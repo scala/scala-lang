@@ -18,8 +18,8 @@ This release includes the following improvements:
 
 You may install the Scala IDE 3.0-RC1 for Scala 2.9.3 through one of the following update-sites:
 
-  * [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala29/dev/site/)
-  * [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala29/dev/site/)
+  * for Eclipse 3.7 (Indigo)
+  * for Eclipse 3.8/4.2 (Juno)
 
 
 #### A big thank you to all the contributors!

@@ -15,7 +15,7 @@ We are working with the community to ensure availability of the core artifacts o
 This release is *not* binary compatible with the 2.10.x series, so that we can keep improving the Scala standard library.
 
 Scala 2.11.0-M8 is available for download from [scala-lang.org](http://scala-lang.org/download/2.11.0-M8.html)
-or from [Maven Central](http://search.maven.org/%23search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-M8%22).
+or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-M8%22).
 
 The Scala team and contributors [fixed 119 issues](https://issues.scala-lang.org/issues/?jql=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.11.0-M8%22+AND+status+%3D+CLOSED+ORDER+BY+priority+DESC) via [174 merged pull requests](https://github.com/scala/scala/issues?milestone=26&page=1&state=closed)!
 
@@ -27,7 +27,7 @@ Before reporting a bug, please have a look at these [known issues](https://issue
 ### Scala IDE for Eclipse
 The Scala IDE with this release built in will soon be available at the usual update-site:
 
-* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala211/dev/site/)
+* for Eclipse 4.2/4.3 (Juno/Kepler)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 

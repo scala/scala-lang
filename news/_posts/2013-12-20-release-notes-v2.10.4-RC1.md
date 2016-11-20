@@ -23,7 +23,7 @@ Before reporting a bug, please have a look at these [known issues](https://issue
 ### Scala IDE for Eclipse
 The Scala IDE with this release built right in is available through the following update-site:
 
-* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/helium/e38/scala210/dev/site)
+* for Eclipse 4.2/4.3 (Juno/Kepler)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
@@ -237,5 +237,3 @@ sha | Title
 [2ccbfa5778](https://github.com/scala/scala/commit/2ccbfa5778) | <notextile>SI-7783 Don't issue deprecation warnings for inferred TypeTrees</notextile>
 [ee9138e99e](https://github.com/scala/scala/commit/ee9138e99e) | <notextile>Bump version to 2.10.4 for nightlies</notextile>
 [733b3220c9](https://github.com/scala/scala/commit/733b3220c9) | <notextile>SI-7815 Dealias before deeming method type as dependent</notextile>
-
-
