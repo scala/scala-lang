@@ -282,7 +282,7 @@ The compiler now runs as optimised code. In addition, a number of improvements a
 
 #### Scaladoc 2
 
-A new look-and-feel, automatic comments expansion and wiki-like syntax, as well as compile-time error checking. Read more about changes on the [Scaladoc 2 mini-site](http://lampsvn.epfl.ch/trac/scala/wiki/Scaladoc/).
+A new look-and-feel, automatic comments expansion and wiki-like syntax, as well as compile-time error checking.
 
 #### Sbaz 2
 
