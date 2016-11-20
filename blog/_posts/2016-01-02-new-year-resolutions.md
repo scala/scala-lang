@@ -31,7 +31,7 @@ contributors get familiar with the code base.
 
 My second resolution is to take a larger effort to promote simplicity
 in Scala. I believe the recent [blog post by Jim
-Plush](http://jimplush.com/talk/2015/12/19/moving-a-team-from-scala-to-golang/) should be a wakeup call for our
+Plush](https://web.archive.org/web/20160612120018/http://jimplush.com/talk/2015/12/19/moving-a-team-from-scala-to-golang/) should be a wakeup call for our
 community. Scala is a very powerful and un-opinionated language.  This
 means we have a large spectrum of choice how to write a Scala
 application or library. It's very important for all of us to use this
@@ -59,7 +59,3 @@ simpler: The language, its foundations, its libraries. I hope you
 will join me in that venture.
 
 With that thought, I wish you a happy new year 2016.
-
-
-
-

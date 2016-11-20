@@ -6,7 +6,7 @@ title: "Awesome Error Messages for Dotty"
 ---
 
 One thing that really excites me about being part of the core group of
-developers working on [Dotty](http://lampepfl.github.io/dotty) is my chance to
+developers working on [Dotty](http://dotty.epfl.ch/) is my chance to
 impact usability. A lot of thought has gone into designing Dotty to be as fast
 and structurally sound as possible.  Now comes the next step - adding a new
 level of usability for the compiler and the surrounding tools.

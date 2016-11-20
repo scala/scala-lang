@@ -23,7 +23,7 @@ The rejected proposals were:
     beautiful, the Committee agreed that would give more problems
     than benefits. Seth Tisue, the appointed reviewer, fully explains
     the Committee's reaction [here](https://github.com/scala/scala.github.com/issues/555).
--   [SIP-16: Self-cleaning macros](http://docs.scala-lang.org/sips/pending/self-cleaning-macros.html).
+-   [SIP-16: Self-cleaning macros](http://docs.scala-lang.org/sips/rejected/self-cleaning-macros.html).
     Originally proposed in 2012. Macros add a whole new dimension to the
     Scala language. Their experimental implementation was adopted by a
     lot of Scala libraries and were immensely useful for the creation
@@ -40,7 +40,7 @@ The rejected proposals were:
 The two proposals that made it to the next iteration are
 [SIP-23: Literal-based singleton types](http://docs.scala-lang.org/sips/pending/42.type.html) (reviewer:
 Adriaan Moors) and [SIP-27: Trailing
-Commas](https://github.com/scala/scala.github.com/pull/533%23issuecomment-239422098) (reviewer:
+Commas](https://github.com/scala/scala.github.com/pull/533#issuecomment-239422098) (reviewer:
 Eugene Burmako). The reviewers and committee members provided more feedback to
 iterate on. Both proposals already have
 provisional implementations and will continue to be discussed for
