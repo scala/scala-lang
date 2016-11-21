@@ -132,7 +132,7 @@ $(document).ready(function(){
   // tweets
   $(function(){
     $("#tweets").tweetMachine('', {
-      backendScript: '/webscripts/ajax/getFromTwitter.php?callback=?',
+      backendScript: 'https://www.scala-lang.org/webscripts/ajax/getFromTwitter.php?callback=?',
       endpoint: 'statuses/user_timeline',
       user_name: 'scala_lang',
       include_retweets: true,
