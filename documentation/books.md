@@ -45,7 +45,7 @@ for Technical Books
 – **Available Now**
 by Cay S. Horstmann
 
-Published by [Addison-Wesley](http://www.pearsoned.co.uk/Imprints/Addison-Wesley/):
+Published by [Addison-Wesley](https://heuk.pearson.com/about-us.html/Addison-Wesley/):
 
 <div class="row">
   <div class="span2">
@@ -223,4 +223,3 @@ So there are few things more intriguing or important than code that we think we 
 Scala Puzzlers is a collection of such examples in Scala. It is not only an entertaining and instructive way of understanding this highly expressive language better. It will also help you recognize many counter-intuitive traps and pitfalls and prevent them from inflicting further production bug hunt stress on Scala developers."
   </div>
 </div>
-

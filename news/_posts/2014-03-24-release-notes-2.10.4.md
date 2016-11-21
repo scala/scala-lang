@@ -19,8 +19,8 @@ Before reporting a bug, please have a look at these [known issues](https://issue
 
 ### Scala IDE for Eclipse
 The Scala IDE with this release built right in is available through the following update-site for Eclipse 4.2/4.3 (Juno/Kepler):
-* [Development version](http://download.scala-ide.org/sdk/helium/e38/scala210/dev/site) (Scala IDE 3.0.3-rc3 on Scala 2.10.4)
-* [Stable version](http://download.scala-ide.org/sdk/helium/e38/scala210/stable/site) (will have 2.10.4 as soon as Scala IDE 3.0.3-vfinal is released)
+* Development version (Scala IDE 3.0.3-rc3 on Scala 2.10.4)
+* Stable version (will have 2.10.4 as soon as Scala IDE 3.0.3-vfinal is released)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 

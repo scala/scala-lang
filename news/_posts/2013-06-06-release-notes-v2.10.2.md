@@ -18,8 +18,8 @@ Before reporting a bug, please have a look at these [known issues](https://issue
 ### Scala IDE for Eclipse
 The Scala IDE with Scala 2.10.2 built right in is available through one of the following update-sites:
 
-* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
-* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) (Support for this version is experimental.)
+* for Eclipse 3.7 (Indigo)
+* for Eclipse 3.8/4.2 (Juno) (Support for this version is experimental.)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
@@ -316,7 +316,7 @@ sha | Title
 [7250312](https://github.com/scala/scala/commit/7250312) | <notextile>SI-6386 typed existential type tree's original now have tpe set</notextile>
 [6a61e17](https://github.com/scala/scala/commit/6a61e17) | <notextile>SI-7289 Less strict type application for TypeVar.</notextile>
 [34a6fa9](https://github.com/scala/scala/commit/34a6fa9) | <notextile>SI-6937 core type tags are no longer referentially unique</notextile>
-[dc3fa0a](https://github.com/scala/scala/commit/dc3fa0a) | <notextile>if starr.use.released fetch Scala ${starr.version} for STARR</notextile>
+dc3fa0a | <notextile>if starr.use.released fetch Scala ${starr.version} for STARR</notextile>
 [3fe2e86](https://github.com/scala/scala/commit/3fe2e86) | <notextile>assume build.release when maven.version.suffix is set</notextile>
 [7184bd3](https://github.com/scala/scala/commit/7184bd3) | <notextile>make quick.done depend on quick.bin again</notextile>
 [0affa94](https://github.com/scala/scala/commit/0affa94) | <notextile>SI-7321 Memory leak in specialize on multiple compiler runs.</notextile>
@@ -415,9 +415,9 @@ sha | Title
 [b2c2493](https://github.com/scala/scala/commit/b2c2493) | <notextile>reflection no longer uses atPhase and friends</notextile>
 [a9dca51](https://github.com/scala/scala/commit/a9dca51) | <notextile>synchronizes symbols</notextile>
 [0262941](https://github.com/scala/scala/commit/0262941) | <notextile>removes the crazy extraneous log</notextile>
-[21d5d38](https://github.com/scala/scala/commit/21d5d38) | <notextile>moves Symbol#SymbolKind to Symbols</notextile>
+21d5d38 | <notextile>moves Symbol#SymbolKind to Symbols</notextile>
 [3e7db2d](https://github.com/scala/scala/commit/3e7db2d) | <notextile>adds some comments to resetAttrs</notextile>
-[e2a17d9](https://github.com/scala/scala/commit/e2a17d9) | <notextile>resetAttrs now always erases This.tpe</notextile>
+e2a17d9 | <notextile>resetAttrs now always erases This.tpe</notextile>
 [4f1bfec](https://github.com/scala/scala/commit/4f1bfec) | <notextile>Fix SI-7107: scala now thinks every exception is polymorphic</notextile>
 [8187deb](https://github.com/scala/scala/commit/8187deb) | <notextile>SI-7074 Fix xml attribute sorting</notextile>
 [89be691](https://github.com/scala/scala/commit/89be691) | <notextile>fixes the test for SI-7112</notextile>

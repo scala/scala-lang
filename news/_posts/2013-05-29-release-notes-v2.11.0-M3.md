@@ -26,7 +26,7 @@ This will be fixed in the next milestone.
 ### Scala IDE for Eclipse
 The Scala IDE with Scala 2.11.0-M3 built right in is available through one of the following update-sites:
 
-* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/ecosystem/e37/scala211/dev/site/)
+* for Eclipse 3.7 (Indigo)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
@@ -258,7 +258,7 @@ Issue(s) | Commit | Message
 [SI-7319](https://issues.scala-lang.org/browse/SI-7319), [SI-7319](https://issues.scala-lang.org/browse/SI-7319) | [ef04619](https://github.com/scala/scala/commit/ef04619) | <notextile>SI-7319 Clear error buffer during Typer reset.</notextile>
 [SI-7329](https://issues.scala-lang.org/browse/SI-7329) | [aa6723c](https://github.com/scala/scala/commit/aa6723c) | <notextile>SI-7329 duplicate default getters for specialized parameters.</notextile>
 [SI-7314](https://issues.scala-lang.org/browse/SI-7314) | [01edd04](https://github.com/scala/scala/commit/01edd04) | <notextile>SI-7314 Partest locates tools.jar and javac</notextile>
-[SI-7312](https://issues.scala-lang.org/browse/SI-7312), [SI-7315](https://issues.scala-lang.org/browse/SI-7315) | [660c8fd](https://github.com/scala/scala/commit/660c8fd) | <notextile>SI-7315 Test @deprecatedInheritance / @specialized interplay</notextile>
+[SI-7312](https://issues.scala-lang.org/browse/SI-7312), [SI-7315](https://issues.scala-lang.org/browse/SI-7315) | 660c8fd | <notextile>SI-7315 Test @deprecatedInheritance / @specialized interplay</notextile>
 [SI-7312](https://issues.scala-lang.org/browse/SI-7312) | [54d11fe](https://github.com/scala/scala/commit/54d11fe) | <notextile>SI-7312 @deprecatedInheritance now ignores same-file subclasses</notextile>
 [SI-7335](https://issues.scala-lang.org/browse/SI-7335) | [6690455](https://github.com/scala/scala/commit/6690455) | <notextile>SI-7335 Remove special case for import of Predef._ in Predef.scala</notextile>
 [SI-7335](https://issues.scala-lang.org/browse/SI-7335) | [b0fceeb](https://github.com/scala/scala/commit/b0fceeb) | <notextile>SI-7335 Sharpen up comment about implicit prioritization.</notextile>
@@ -722,7 +722,7 @@ sha | Title
 [b47ca5b](https://github.com/scala/scala/commit/b47ca5b) | <notextile>Update ScalaCheck to 1.10.1.</notextile>
 [b4d54be](https://github.com/scala/scala/commit/b4d54be) | <notextile>Partest testnum field width is sensitive to total tests</notextile>
 [e4f62c0](https://github.com/scala/scala/commit/e4f62c0) | <notextile>SI-7358 Partest fails on scalacheck failure</notextile>
-[c905b95](https://github.com/scala/scala/commit/c905b95) | <notextile>no need to manually clear perRunCaches in GenASM</notextile>
+c905b95 | <notextile>no need to manually clear perRunCaches in GenASM</notextile>
 [176a1ba](https://github.com/scala/scala/commit/176a1ba) | <notextile>maps in GenASM guaranteed mem-leak-free by perRunCaches</notextile>
 [d516f38](https://github.com/scala/scala/commit/d516f38) | <notextile>SI-7422 GenASM populates and clears its maps within a Run</notextile>
 [7158142](https://github.com/scala/scala/commit/7158142) | <notextile>SI-7291: Remove error kinds.</notextile>
@@ -805,7 +805,7 @@ sha | Title
 [e1af973](https://github.com/scala/scala/commit/e1af973) | <notextile>Remove scaladoc deprecated option.</notextile>
 [01edd04](https://github.com/scala/scala/commit/01edd04) | <notextile>SI-7314 Partest locates tools.jar and javac</notextile>
 [4e2459e](https://github.com/scala/scala/commit/4e2459e) | <notextile>Reifier -&gt; AST Node test.</notextile>
-[660c8fd](https://github.com/scala/scala/commit/660c8fd) | <notextile>SI-7315 Test @deprecatedInheritance / @specialized interplay</notextile>
+660c8fd | <notextile>SI-7315 Test @deprecatedInheritance / @specialized interplay</notextile>
 [54d11fe](https://github.com/scala/scala/commit/54d11fe) | <notextile>SI-7312 @deprecatedInheritance now ignores same-file subclasses</notextile>
 [6690455](https://github.com/scala/scala/commit/6690455) | <notextile>SI-7335 Remove special case for import of Predef._ in Predef.scala</notextile>
 [b0fceeb](https://github.com/scala/scala/commit/b0fceeb) | <notextile>SI-7335 Sharpen up comment about implicit prioritization.</notextile>
@@ -822,7 +822,7 @@ sha | Title
 [246eceb](https://github.com/scala/scala/commit/246eceb) | <notextile>Optimization: avoid isDirectory call in DirectoryClassPath traversal</notextile>
 [0cb6324](https://github.com/scala/scala/commit/0cb6324) | <notextile>Add counters to File#{exists, isFile, isDirectory}.</notextile>
 [f986d6d](https://github.com/scala/scala/commit/f986d6d) | <notextile>Reduce visibility of implicit class tags.</notextile>
-[dc3fa0a](https://github.com/scala/scala/commit/dc3fa0a) | <notextile>if starr.use.released fetch Scala ${starr.version} for STARR</notextile>
+dc3fa0a | <notextile>if starr.use.released fetch Scala ${starr.version} for STARR</notextile>
 [3fe2e86](https://github.com/scala/scala/commit/3fe2e86) | <notextile>assume build.release when maven.version.suffix is set</notextile>
 [7184bd3](https://github.com/scala/scala/commit/7184bd3) | <notextile>make quick.done depend on quick.bin again</notextile>
 [0affa94](https://github.com/scala/scala/commit/0affa94) | <notextile>SI-7321 Memory leak in specialize on multiple compiler runs.</notextile>
@@ -948,7 +948,7 @@ sha | Title
 [69109c0](https://github.com/scala/scala/commit/69109c0) | <notextile>Analyze constants to remove unnecessary branches</notextile>
 [81a4f4d](https://github.com/scala/scala/commit/81a4f4d) | <notextile>Restore sketchy dependency to quick.bin.</notextile>
 [6ef63e4](https://github.com/scala/scala/commit/6ef63e4) | <notextile>Fix it-never-happened performance regression.</notextile>
-[9c5ea96](https://github.com/scala/scala/commit/9c5ea96) | <notextile>Moved some numeric subtyping logic closer to center.</notextile>
+9c5ea96 | <notextile>Moved some numeric subtyping logic closer to center.</notextile>
 [cb02c96](https://github.com/scala/scala/commit/cb02c96) | <notextile>Simplified the widening logic.</notextile>
 [2fa2db7](https://github.com/scala/scala/commit/2fa2db7) | <notextile>SI-7228, bug in weak subtyping.</notextile>
 [745c36a](https://github.com/scala/scala/commit/745c36a) | <notextile>SI-7328 Bail out of names/defaults if args are error typed</notextile>
@@ -1013,7 +1013,7 @@ sha | Title
 [b2c2493](https://github.com/scala/scala/commit/b2c2493) | <notextile>reflection no longer uses atPhase and friends</notextile>
 [a9dca51](https://github.com/scala/scala/commit/a9dca51) | <notextile>synchronizes symbols</notextile>
 [0262941](https://github.com/scala/scala/commit/0262941) | <notextile>removes the crazy extraneous log</notextile>
-[21d5d38](https://github.com/scala/scala/commit/21d5d38) | <notextile>moves Symbol#SymbolKind to Symbols</notextile>
+21d5d38 | <notextile>moves Symbol#SymbolKind to Symbols</notextile>
 [3f0224c](https://github.com/scala/scala/commit/3f0224c) | <notextile>Add option to disable optimization</notextile>
 [c8fbba0](https://github.com/scala/scala/commit/c8fbba0) | <notextile>Check named-args-for-clarity incur no extra bytecode</notextile>
 [9179c88](https://github.com/scala/scala/commit/9179c88) | <notextile>Name boolean arguments in src/library.</notextile>
@@ -1042,7 +1042,7 @@ sha | Title
 [bb067d3](https://github.com/scala/scala/commit/bb067d3) | <notextile>SI-7146 - Fixing checkinit bug in ExecutionContextImpl and adding test</notextile>
 [348ff4b](https://github.com/scala/scala/commit/348ff4b) | <notextile>SI-7128 Fix regression in copyToArray for empty arrays</notextile>
 [3e7db2d](https://github.com/scala/scala/commit/3e7db2d) | <notextile>adds some comments to resetAttrs</notextile>
-[e2a17d9](https://github.com/scala/scala/commit/e2a17d9) | <notextile>resetAttrs now always erases This.tpe</notextile>
+e2a17d9 | <notextile>resetAttrs now always erases This.tpe</notextile>
 [4f1bfec](https://github.com/scala/scala/commit/4f1bfec) | <notextile>Fix SI-7107: scala now thinks every exception is polymorphic</notextile>
 [8187deb](https://github.com/scala/scala/commit/8187deb) | <notextile>SI-7074 Fix xml attribute sorting</notextile>
 [89be691](https://github.com/scala/scala/commit/89be691) | <notextile>fixes the test for SI-7112</notextile>
@@ -1395,7 +1395,7 @@ sha | Title
 [78bc17b](https://github.com/scala/scala/commit/78bc17b) | <notextile>Remove EqualsPatternClass.</notextile>
 [143cd7a](https://github.com/scala/scala/commit/143cd7a) | <notextile>macroExpandAll is now triggered by typed</notextile>
 [fe60284](https://github.com/scala/scala/commit/fe60284) | <notextile>SI-5923 adapt macros when they are deferred</notextile>
-[30e2e3a](https://github.com/scala/scala/commit/30e2e3a) | <notextile>generalizes macroExpand</notextile>
+30e2e3a | <notextile>generalizes macroExpand</notextile>
 [94de3c8](https://github.com/scala/scala/commit/94de3c8) | <notextile>typedPrimaryConstrBody now returns supercall</notextile>
 [3d397aa](https://github.com/scala/scala/commit/3d397aa) | <notextile>more precise errors for macros</notextile>
 [055b07e](https://github.com/scala/scala/commit/055b07e) | <notextile>parentTypes =&gt; typedParentTypes</notextile>

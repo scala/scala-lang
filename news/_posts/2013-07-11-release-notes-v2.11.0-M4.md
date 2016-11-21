@@ -34,10 +34,10 @@ We'd [love to hear](https://issues.scala-lang.org/) about any regressions since 
 When reporting a bug, please set the 'Affects Version' field to 2.11.0-M4 and add the `regression` label where appropriate.
 
 ### Scala IDE Lithium (4.0) for Eclipse
-Please point your Eclipse 4.2/4.3 at http://download.scala-ide.org/sdk/e38/scala211/dev/site/ to update to the latest version that includes this milestone!
+Please point your Eclipse 4.2/4.3 at http://scala-ide.org/ to update to the latest version that includes this milestone!
 For more info, please see [the getting started guide](http://scala-ide.org/docs/user/gettingstarted.html).
 
 ### Binary compatibility
 Note that this release is not binary compatible with the 2.10.x series, so you will need to obtain a fresh build of your dependencies against this version. 
 
-[@cunei](https://github.com/cunei) is working on [a tool](http://typesafehub.github.io/distributed-build/0.6.0/index.html) to solve this problem. The current version already builds [akka, genjavadoc, sbinary, sbt, sbt-full-library, sbt-republish, scala, scala-arm, scala-stm, scalabuff, scalacheck, scalatest, scalaz, shapeless, specs2, sperformance, zeromq-scala-binding, zinc](https://jenkins-dbuild.typesafe.com:8499/job/Community8/1/consoleFull).
+[@cunei](https://github.com/cunei) is working on a tool to solve this problem. The current version already builds akka, genjavadoc, sbinary, sbt, sbt-full-library, sbt-republish, scala, scala-arm, scala-stm, scalabuff, scalacheck, scalatest, scalaz, shapeless, specs2, sperformance, zeromq-scala-binding, zinc.
