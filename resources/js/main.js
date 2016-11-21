@@ -129,40 +129,6 @@ $(document).ready(function(){
     $(".shadow").css('display','block');
   }
 
-  // tweets
-  $(function(){
-    $("#tweets").tweetMachine('', {
-      backendScript: 'https://www.scala-lang.org/webscripts/ajax/getFromTwitter.php?callback=?',
-      endpoint: 'statuses/user_timeline',
-      user_name: 'scala_lang',
-      include_retweets: true,
-      exclude_replies: false,
-      limit: 4,
-      autoRefresh: false,
-      tweetFormat: '\
-        <div class="tweet-container">\
-          <div class="tweet">\
-            <p class="text content"></p>\
-          </div>\
-          <div class="caret-container">\
-            <div class="caret-divider">\
-              <div class="caret-outer"></div>\
-              <div class="caret-inner"></div>\
-            </div>\
-          </div>\
-          <div class="raw bottom-anchored">\
-            <div class="avatar-wrapper">\
-              <img class="avatar" width="50" height="50" src="" />\
-            </div>\
-            <span class="tweet-username">\
-              <a href="" class="username" rel="external"></a>\
-            </span>\
-          </div>\
-        </div>\
-      '
-    });
-  });
-
 });
 
 <!-- prettyprint js to prepend generated pre/code tags -->
