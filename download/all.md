@@ -17,9 +17,9 @@ title: All Available Versions
     {% for page in site.categories.download %}
       {% assign releaseVersion = page.release_version | truncate:4, '' %}
       {% if releaseVersion == possibleVersion %}
-        <div>
-          <a href="{{ page.url }}">{{ page.title }}</a>
-        </div>
+<div>
+  <a href="{{ page.url }}">{{ page.title }}</a>
+</div>
       {% endif %}
     {% endfor %}
   {% endfor %}
