@@ -124,3 +124,8 @@ Staying current:
 
 * [Dotty](http://dotty.epfl.ch) is a next generation compiler for Scala, under development at EPFL
     * [Dotty FAQ](http://dotty.epfl.ch/#why-dotty)
+
+## The Scala Center
+
+* [The Scala Center](https://scala.epfl.ch/) is an open source foundation that brings together a coalition of individuals and organizations working together to contribute to Scala.
+    * [Scala Center FAQ](https://scala.epfl.ch/faqs.html)
