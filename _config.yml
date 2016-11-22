@@ -5,7 +5,7 @@ scalaversion: "2.12.0"
 baseurl: ""
 markdown: kramdown
 exclude:
-  - bundle-vendor
+  - bundle-vendor/
   - blog/README.md
   - training/README.md
   - README.md
