@@ -15,7 +15,7 @@ from Spark developers that depend on Java-based serialization libraries.
   
 # Spores
   
-[Spores](https://github.com/jvican/spores), a macro library started by Heather
+[Spores](https://github.com/scalacenter/spores), a macro library started by Heather
 Miller and Philipp Haller in 2013, set on solving this problem. Spores enable a
 safer use of closures in concurrent and distributed environments. It allows
 Scala developers to guarantee properties of functions based on types, having
@@ -75,7 +75,7 @@ addCompilerPlugin("ch.epfl.scala" %% "spores-serialization" % "0.4.1")
 ```
   
 For further information on how to use it and a specification of spores, check
-the [docs](http://jvican.github.io/spores/spores.html).
+the [docs](http://scalacenter.github.io/spores/spores.html).
   
 # Next steps
   
