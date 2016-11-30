@@ -16,12 +16,10 @@ from Spark developers that depend on Java-based serialization libraries.
 # Spores
   
 [Spores](https://github.com/jvican/spores), a macro library started by Heather
-Miller and Philipp Haller in
-[2013](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fheathermiller%2Fspores%2Fcommit%2F65a953bf80abd38e9ccdaad83b9aaa16201cb9e0&sa=D&sntz=1&usg=AFQjCNHuHl_286apdZ7XoJmL8Fm9fNbXAg),
-set on solving this problem. Spores enable a safer use of closures in concurrent
-and distributed environments. It allows Scala developers to guarantee properties
-of functions based on types, having more control over the function's
-environment.
+Miller and Philipp Haller in 2013, set on solving this problem. Spores enable a
+safer use of closures in concurrent and distributed environments. It allows
+Scala developers to guarantee properties of functions based on types, having
+more control over the function's environment.
   
 In a nutshell, a spore is a function with an explicitly-defined environment (set
 of non-local captured variables that are used throughout the logic of a
