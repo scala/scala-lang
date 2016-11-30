@@ -28,10 +28,12 @@ of non-local captured variables that are used throughout the logic of a
 function). You can write it as:
   
 ```scala
+import scala.spores._
 val greeting = “Hello”
 val exampleSpore = spore {
-val capturedGreeting = greeting
-(name: String) => println(s”$greeting, $name!”)
+  val capturedGreeting = greeting
+  (name: String) =>
+    println(s"$greeting, $name!")
 }
 ```
   
