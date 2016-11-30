@@ -26,7 +26,7 @@ Other, more specialized lists:
  * **[Scala-Language](http://groups.google.com/group/scala-language)**: discussions about the Scala language itself. Why Scala is the way it is, and how it could be different.
  * **[Scala-Debate](http://groups.google.com/group/scala-debate)**: the "any topic goes" list. While professional courtesy and respect must be maintained, discussion and speculation on controversial topics and “what-if” type questions can occur. Threads sometimes migrate here from other lists if they become too specialized, lengthy, or contentious.
  * **[Scala-Tools](http://groups.google.com/group/scala-tools)**: specifically for tooling around Scala, such as editors and build tools.
- * **[Scala-SIPs](http://groups.google.com/group/scala-sips)**: interest group devoted to Scala Improvement Process (SIP) and Scala Library Improvement Process (SLIP) proposals.  If you want to see what’s coming down the pipe and you’d like to be involved, this is the mailing list for you.
+ * **[Scala-SIPs](http://groups.google.com/group/scala-sips)**: interest group devoted to Scala Improvement Process (SIP).  If you want to see what’s coming down the pipe and you’d like to be involved, this is the mailing list for you.
 
 And most specialized of all:
 
@@ -48,14 +48,10 @@ The main [Gitter](https://gitter.im) room for Scala is:
 
 Other, more specialized rooms include:
 
+* **[scala/contributors](https://gitter.im/scala/contributors)**: like the scala-internals mailing list. For contributors to discuss work on changes to Scala.
 * **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
 
 There are many other rooms devoted to individual Scala libraries and technologies.
-
-Rooms about the future of Scala:
-
-* **[scala/contributors](https://gitter.im/scala/contributors)**: like the scala-internals mailing list. For Scala contributors to discuss language internals.
-* **[scala/slip](https://gitter.im/scala/slip)**: for discussion of SLIPs and SIPs (Scala Library and Scala Improvement Process) proposals
 
 IRC users can chat about Scala anytime on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
 
