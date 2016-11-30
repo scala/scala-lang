@@ -60,7 +60,7 @@ class NotSerializable(val o: Object) extends Serializable
 Capturing an instance of `NotSerializable` inside a spore that is going to be
 serialized crashes our program with a runtime exception. Although the class
 `NotSerializable` extends indeed `java.io.Serializable`, the member `o` of type
-Object does not and the JVM does not know how to serialize it.
+`Object` does not and the JVM does not know how to serialize it.
   
 The transitive checker makes sure that examples like the above are detected at
 compile-time rather than runtime.
@@ -80,5 +80,5 @@ the [docs](http://jvican.github.io/spores/spores.html).
 # Next steps
   
 This stable release is the first step towards the spores and Spark integration.
-In the upcoming days, we will work with IBM to improve the developer experience
+In the upcoming weeks, we will work with IBM to improve the developer experience
 of using spores in Spark and solve reported issues.
