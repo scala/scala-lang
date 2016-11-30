@@ -5,7 +5,7 @@ by: Jorge Vicente Cantero
 title: "Releasing spores 0.4.1"
 ---
 
-Today we’re announcing the release of spores and its serializable transitive
+Today we’re announcing the release of spores and its transitive serializable
 checker. In the last Advisory Board meeting, IBM proposed the Scala Center to
 work on [improving the status quo of serialization in
 Scala](https://github.com/scalacenter/advisoryboard/blob/master/proposals/006-compile-time-serializibility-check.md).
