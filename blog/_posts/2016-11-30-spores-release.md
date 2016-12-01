@@ -49,9 +49,9 @@ spores use type information to figure out whether or not something can be
 serialized at compile time, how can this work with Java Serialization?
 
 To achieve this, previously, spores required Scala Pickling to transitively
-check that certain were able to be serialized, statically, at compile-time.
-However, we now wish to perform this check instead for Java Serialization, as
-Java Serialization is most often used by developers.
+check the entire enviornment was able to be serialized, statically, at
+compile-time. However, we now wish to perform this check instead for Java
+Serialization, as Java Serialization is most often used by developers.
 
 ## The transitive checker
 
