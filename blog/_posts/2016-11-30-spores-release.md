@@ -56,8 +56,9 @@ Java Serialization is most often used by developers.
 
 In order to ensure that captured types only extend `Serializable`, and whose
 members are also `Serializable`, spores version 0.4.1 comes with a compiler
-plugin that complements the spores macro library. Its goal is to check the
-transitively check that every captured variable, and all of its members, are serializable.
+plugin that complements the spores macro library. Its goal is to transitively
+check that every captured variable, and all of its members, are extend
+`Serializable` and are thus serializable at compile time.
 
 Let's see it with an example:
 
