@@ -20,7 +20,7 @@ this problem.
 
 Spores provide a way to control what a closures captures, and thus
 hopes to make it easier to operate with them in concurrent and distributed
-enviornments. The key idea is to capture more type information tha a standard
+enviornments. The key idea is to capture more type information than a standard
 closure, and to use this type information to have more fine-grained control over
 the closures's environment.
 
