@@ -5,12 +5,13 @@ by: Jorge Vicente Cantero
 title: "Releasing spores 0.4.1"
 ---
 
-Today we’re happy to annouce a new release of spores, now designed to work with
-Java Serialization. In the August Advisory Board meeting, IBM proposed that the
-Scala Center work on [improving the status quo of serialization in
+Today we at the Scala Center are happy to annouce a new release of spores, now
+designed to work with Java Serialization. In the August Advisory Board meeting,
+IBM proposed that the Scala Center work on [improving the status quo of
+serialization in
 Scala](https://github.com/scalacenter/advisoryboard/blob/master/proposals/006-compile-time-serializibility-check.md).
-The basic idea of the proposal was to pick up work on spores to prevent
-users from dealing with serialization runtime errors.
+The basic idea of the proposal was to pick up work on spores to prevent users
+from dealing with serialization runtime errors.
 
 # Spores
 
