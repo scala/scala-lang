@@ -5,7 +5,7 @@ by: Jorge Vicente Cantero
 title: "Releasing spores 0.4.1"
 ---
 
-Today we at the Scala Center are happy to announce a new release of spores, now
+Today we at the Scala Center are happy to annouce a new release of spores, now
 designed to work with Java Serialization. In the August Advisory Board meeting,
 IBM proposed that the Scala Center work on [improving the status quo of
 serialization in
@@ -13,7 +13,7 @@ Scala](https://github.com/scalacenter/advisoryboard/blob/master/proposals/006-co
 The basic idea of the proposal was to pick up work on spores to prevent users
 from dealing with serialization runtime errors.
 
-# Spores
+## Spores
 
 [Spores](https://github.com/scalacenter/spores), a project started in 2014
 by Heather Miller and Philipp Haller, took a first step towards solving
@@ -53,7 +53,7 @@ check that certain were able to be serialized, statically, at compile-time.
 However, we now wish to perform this check instead for Java Serialization, as
 Java Serialization is most often used by developers.
 
-# The transitive checker
+## The transitive checker
 
 In order to ensure that captured types only extend `Serializable`, and whose
 members are also `Serializable`, spores version 0.4.1 comes with a compiler
@@ -75,7 +75,7 @@ serialized crashes our program with a runtime exception. Although the class
 The transitive checker makes sure that examples like the above are detected at
 compile-time rather than runtime.
 
-# Getting started
+## Getting started
 
 To add spores to your project, add the following keys to your SBT build file:
 
@@ -87,7 +87,7 @@ addCompilerPlugin("ch.epfl.scala" %% "spores-serialization" % "0.4.1")
 For further information on how to use it and a specification of spores, check
 the [docs](http://scalacenter.github.io/spores/spores.html).
 
-# Next steps
+## Next steps
 
 This stable release is the first step towards the spores and Spark integration.
 In the upcoming weeks, we will work with IBM to improve the developer experience
