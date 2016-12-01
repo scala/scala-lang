@@ -5,7 +5,7 @@ by: Jorge Vicente Cantero
 title: "Releasing spores 0.4.1"
 ---
 
-Today we at the Scala Center are happy to annouce a new release of spores, now
+Today we at the Scala Center are happy to announce a new release of spores, now
 designed to work with Java Serialization. In the August Advisory Board meeting,
 IBM proposed that the Scala Center work on [improving the status quo of
 serialization in
