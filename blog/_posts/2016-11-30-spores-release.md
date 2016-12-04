@@ -2,10 +2,10 @@
 layout: blog
 post-type: blog
 by: Jorge Vicente Cantero
-title: "Releasing spores 0.4.1"
+title: "Releasing spores 0.4.3"
 ---
 
-Today we at the Scala Center are happy to annouce a new release of spores, now
+Today we at the Scala Center are happy to announce a new release of spores, now
 designed to work with Java Serialization. In the August Advisory Board meeting,
 IBM proposed that the Scala Center work on [improving the status quo of
 serialization in
@@ -33,7 +33,7 @@ val greeting = “Hello”
 val exampleSpore = spore {
   val capturedGreeting = greeting
   (name: String) =>
-    println(s"$greeting, $name!")
+    println(s"$capturedGreeting, $name!")
 }
 ```
 
@@ -80,8 +80,8 @@ compile-time rather than runtime.
 To add spores to your project, add the following keys to your SBT build file:
 
 ```scala
-libraryDependencies += "ch.epfl.scala" %% "spores" % "0.4.1"
-addCompilerPlugin("ch.epfl.scala" %% "spores-serialization" % "0.4.1")
+libraryDependencies += "ch.epfl.scala" %% "spores" % "0.4.3"
+addCompilerPlugin("ch.epfl.scala" %% "spores-serialization" % "0.4.3")
 ```
 
 For further information on how to use it and a specification of spores, check
