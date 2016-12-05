@@ -43,7 +43,7 @@
     {% assign maxCount = 3 %}
     {% assign count = 0 %}
     {% for p in site.posts %}
-      {% if p.category != "event" and p.title != firstTitle and count < maxCount %}
+      {% if p.category != "event" and p.post-type and p.title != firstTitle and count < maxCount %}
         {% assign count = count | plus: 1 %}
         {% if forloop.first %}
           {% comment %} DO NOTHING {% endcomment %}
