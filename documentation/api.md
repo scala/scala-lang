@@ -4,14 +4,14 @@ title: Scala API Docs
 ---
 
 ## Latest releases
-* Scala 2.12.0
-  * [Library API](http://www.scala-lang.org/api/2.12.0/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.0/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.0/scala-reflect/#scala.reflect.package)
+* Scala 2.12.1
+  * [Library API](http://www.scala-lang.org/api/2.12.1/)
+  * [Compiler API](http://www.scala-lang.org/api/2.12.1/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.12.1/scala-reflect/#scala.reflect.package)
   * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.0/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.0/scala-swing/#scala.swing.package)
+    * [XML API](http://www.scala-lang.org/api/2.12.1/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.1/scala-parser-combinators/)
+    * [Swing API](http://www.scala-lang.org/api/2.12.1/scala-swing/#scala.swing.package)
 * Scala 2.11.8
   * [Library API](http://www.scala-lang.org/api/2.11.8/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.8/scala-compiler/)
@@ -34,46 +34,6 @@ title: Scala API Docs
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/scala-compiler/)
 
 ## Previous releases
-* Scala 2.12.0-RC2
-  * [Library API](http://www.scala-lang.org/api/2.12.0-RC2/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.0-RC2/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.0-RC2/scala-reflect/#scala.reflect.package)
-  * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.0-RC2/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0-RC2/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.0-RC2/scala-swing/#scala.swing.package)
-* Scala 2.12.0-RC1
-  * [Library API](http://www.scala-lang.org/api/2.12.0-RC1/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.0-RC1/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.0-RC1/scala-reflect/#scala.reflect.package)
-  * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.0-RC1/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0-RC1/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.0-RC1/scala-swing/#scala.swing.package)
-* Scala 2.12.0-M5
-  * [Library API](http://www.scala-lang.org/api/2.12.0-M5/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.0-M5/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.0-M5/scala-reflect/#scala.reflect.package)
-  * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.0-M5/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0-M5/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.0-M5/scala-swing/#scala.swing.package)
-* Scala 2.12.0-M4
-  * [Library API](http://www.scala-lang.org/api/2.12.0-M4/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.0-M4/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.0-M4/scala-reflect/#scala.reflect.package)
-  * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.0-M4/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0-M4/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.0-M4/scala-swing/#scala.swing.package)
-* Scala 2.12.0-M3
-  * [Library API](http://www.scala-lang.org/api/2.12.0-M3/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.0-M3/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.0-M3/scala-reflect/#scala.reflect.package)
-  * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.0-M3/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.0-M3/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.0-M3/scala-swing/#scala.swing.package)
 * Scala 2.11.7
   * [Library API](http://www.scala-lang.org/api/2.11.7/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.7/scala-compiler/)
