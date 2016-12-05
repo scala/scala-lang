@@ -28,8 +28,7 @@ As usual for minor releases, Scala 2.12.1 is binary compatible with the whole Sc
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in discussions around Scala, and submitting and reviewing pull requests! You are all magnificent.
 
-According to `git shortlog -sn --no-merges v2.12.0..v2.12.1`, 28 people contributed to this minor release: A. P. Marki
-Jason Zaugg, Lukas Rytz, Seth Tisue, Adriaan Moors, Stefan Zeiger, Dale Wijnand, Miles Sabin, Daniel Barclay, Pap Lőrinc, Iulian Dragos, Rex Kerr, Sakthipriyan Vairamani, Kenji Yoshida, Jakob Odersky, Mohit Agarwal, Paul Kernfeld, Pavel Petlinsky, Boris Korogvich, Sébastien Doeraene, Tim Spence, Viktor Klang, Vladimir Glushak, Chris Okasaki, Lifu Huang, Janek Bogucki, Martijn Hoekstra, Masaru Nomura.
+According to `git shortlog -sn --no-merges v2.12.0..v2.12.1`, 28 people contributed to this minor release: A. P. Marki, Jason Zaugg, Lukas Rytz, Seth Tisue, Adriaan Moors, Stefan Zeiger, Dale Wijnand, Miles Sabin, Daniel Barclay, Pap Lőrinc, Iulian Dragos, Rex Kerr, Sakthipriyan Vairamani, Kenji Yoshida, Jakob Odersky, Mohit Agarwal, Paul Kernfeld, Pavel Petlinsky, Boris Korogvich, Sébastien Doeraene, Tim Spence, Viktor Klang, Vladimir Glushak, Chris Okasaki, Lifu Huang, Janek Bogucki, Martijn Hoekstra, Masaru Nomura.
 
 ## Scala 2.12 Notes
 
