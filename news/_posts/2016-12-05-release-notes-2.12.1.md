@@ -8,7 +8,7 @@ We are pleased to announce the availability of Scala 2.12.1!
 
 ## Changes
 
-Significant changes since 2.12.0 include:
+Significant changes since 2.12.1 include:
 
 * [#5516](https://github.com/scala/scala/pull/5516) Improved runtime speed for Vector, restoring previous performance
 * [#5509](https://github.com/scala/scala/pull/5509) SI-10032 Fix code gen with returns in nested try-finally blocks
