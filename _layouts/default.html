@@ -1,1 +1,31 @@
-{{ content }}
+{% include headertop.html %}
+{% include headerbottom.html %}
+
+<div class="darkstrip"></div>
+
+<div class="darkbluetopbar">
+  <div class="container" style="height: 100%">
+    <div class="navbar-wrap">
+      <div class="container" style="position: relative; height: 100%;">
+        <div class="scala-logo">
+          <a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/resources/img/scala-logo-white-sm.png" alt="white Scala logo" /></a>
+        </div>
+        {% include navbar.html %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="midbluebar">
+  <div class="container">
+    <h1 id="page-title">{{ page.title }}</h1>
+  </div>
+</div>
+
+<div class="page-container">
+  <div class="container" style="min-height: 540px;">
+    {{ content }}
+  </div>
+</div>
+
+{% include footer.html %}

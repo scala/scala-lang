@@ -6,6 +6,9 @@ title: Changelog
 
 <!-- [ [2.10.0](#2.10.0) | [2.9.0](#2.9.0) | [2.8.0](#2.8.0) | [2.7.2](#2.7.2) | [2.7.1](#2.7.1) | [2.7.0](#2.7.0) | [2.6.1](#2.6.1) | [2.6.0](#2.6.0) | [2.5.0](#2.5.0) | [2.4.0](#2.4.0) | [2.3.2](#2.3.2) | [2.3.0](#2.3.0) | [2.1.8](#2.1.8) | [2.1.7](#2.1.7) | [2.1.5](#2.1.5) | [2.0](#2.0) ] -->
 
+## Changes in Version 2.12.0
+Please consult the [Scala 2.12.0 release notes](/news/2.12.0).
+
 ## Changes in Version 2.11
 Please consult the [Scala 2.11.1 release notes](/news/2.11.1).
 
@@ -279,7 +282,7 @@ The compiler now runs as optimised code. In addition, a number of improvements a
 
 #### Scaladoc 2
 
-A new look-and-feel, automatic comments expansion and wiki-like syntax, as well as compile-time error checking. Read more about changes on the [Scaladoc 2 mini-site](http://lampsvn.epfl.ch/trac/scala/wiki/Scaladoc/).
+A new look-and-feel, automatic comments expansion and wiki-like syntax, as well as compile-time error checking.
 
 #### Sbaz 2
 

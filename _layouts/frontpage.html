@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 {% include headertop.html %}
@@ -12,8 +11,6 @@ layout: default
       <div class="span12">
         <div class="scala-logo">
           <img src="{{ site.baseurl }}/resources/img/scala-logo-white.png" alt="Scala Logo" />
-          <!-- <div class="spiral-logo"><img src="{{ site.baseurl }}/resources/img/scala-spiral-white.png"/></div> -->
-          <!-- <div class="scala-text">Scala</div> -->
         </div>
         {% include navbar.html %}
       </div>
@@ -150,17 +147,6 @@ layout: default
 <div id="hidden-pattern-matching">{% include bullet-pattern-matching.html %}</div>
 <div id="hidden-higher-order-functions">{% include bullet-higher-order-functions.html %}</div>
 
-<!-- <div class="highlighted-events">
-  <div class="container">
-    <div id="scaladays">
-      <a id="scaladays-register-btn" href="http://scaladays.org/">More Info</a>
-    </div>
-    <div id="scalawksp">
-      <a id="scalawksp-register-btn" href="http://lampwww.epfl.ch/~hmiller/scala2014">More Info</a>
-    </div>
-  </div>
-</div> -->
-
 <div class="events">
   <div class="container">
     <div class="row">
@@ -169,10 +155,6 @@ layout: default
       </div>
 
       <div class="span12" id="eventspane">
-
-        <!-- <a id="event-btn" style="margin-top: 6px" href="{{ site.baseurl }}/events">More Events</a> -->
-        <!-- <div class="add-event">or <a href="https://github.com/scala/scala-lang/tree/master/events">add an event</a></div> -->
-
       </div>
     </div>
   </div>
@@ -188,10 +170,8 @@ layout: default
         <h2><span>Upcoming Training</span></h2>
       </div>
       <div class="span12" id="trainingspane">
-
-        <!-- <span class="center"><a id="training-btn" href="{{ site.baseurl }}/training">More Training</a></span> -->
-        <!-- <div class="add-training">or <a href="https://github.com/scala/scala-lang/tree/master/training">add a training</a></div> -->
-        <div class="add-training"><a href="{{ site.baseurl }}/training">See more trainings</a> or <a href="https://github.com/scala/scala-lang/tree/master/training">add one to our feed</a></div>
+        <div class="add-training"><a href="{{ site.baseurl }}/training">See more trainings</a> or <a href="https://github.com/scala/scala-lang/tree/master/training">add one to our feed</a>
+        </div>
 
       </div>
     </div>
@@ -219,7 +199,9 @@ layout: default
     </div>
     <div class="row">
       <div class="span12">
-        <div id="tweets" class="tweets"></div>
+        <div id="tweets" class="tweets">
+          <a class="twitter-timeline" data-tweet-limit="4" data-chrome="noheader nofooter noborders" data-width="520" href="https://twitter.com/scala_lang">Tweets by scala_lang</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
         <br/>&nbsp;
         <div class="see-more-tweets">See more tweets, or</div>
         <a id="twitter-btn" href="https://twitter.com/scala_lang">Follow Scala on Twitter</a>

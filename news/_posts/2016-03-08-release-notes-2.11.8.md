@@ -47,7 +47,6 @@ Scala releases are available through a variety of channels, including (but not l
 * Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.8.html)
 * Bump the `scalaVersion` setting in your SBT-based project
 * Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.8%22)
-* Try the [Hello Scala 2.11 template](https://www.lightbend.com/activator/template/hello-scala-2_11) in [Lightbend Activator](https://www.lightbend.com/activator/download)
 
 ### Scala 2.11 Notes
 

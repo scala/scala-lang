@@ -26,7 +26,7 @@ Other, more specialized lists:
  * **[Scala-Language](http://groups.google.com/group/scala-language)**: discussions about the Scala language itself. Why Scala is the way it is, and how it could be different.
  * **[Scala-Debate](http://groups.google.com/group/scala-debate)**: the "any topic goes" list. While professional courtesy and respect must be maintained, discussion and speculation on controversial topics and “what-if” type questions can occur. Threads sometimes migrate here from other lists if they become too specialized, lengthy, or contentious.
  * **[Scala-Tools](http://groups.google.com/group/scala-tools)**: specifically for tooling around Scala, such as editors and build tools.
- * **[Scala-SIPs](http://groups.google.com/group/scala-sips)**: interest group devoted to Scala Improvement Process (SIP) and Scala Library Improvement Process (SLIP) proposals.  If you want to see what’s coming down the pipe and you’d like to be involved, this is the mailing list for you.
+ * **[Scala-SIPs](http://groups.google.com/group/scala-sips)**: interest group devoted to Scala Improvement Process (SIP).  If you want to see what’s coming down the pipe and you’d like to be involved, this is the mailing list for you.
 
 And most specialized of all:
 
@@ -48,8 +48,10 @@ The main [Gitter](https://gitter.im) room for Scala is:
 
 Other, more specialized rooms include:
 
-* **[scala/contributors](https://gitter.im/scala/contributors)**: like the scala-internals mailing list. For Scala contributors to discuss language internals.
-* **[scala/slip](https://gitter.im/scala/slip)**: for discussion of SLIPs and SIPs (Scala Library and Scala Improvement Process) proposals
+* **[scala/contributors](https://gitter.im/scala/contributors)**: like the scala-internals mailing list. For contributors to discuss work on changes to Scala.
+* **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
+
+There are many other rooms devoted to individual Scala libraries and technologies.
 
 IRC users can chat about Scala anytime on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
 
@@ -107,3 +109,19 @@ Staying current:
 
 * [implicit.ly](http://implicit.ly) announces new versions of Scala libraries as they become available
 * [Scala-Announce](http://groups.google.com/group/scala-announce) also has release announcements
+
+## Non-JVM platforms
+
+* [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
+* [Scala Native](http://www.scala-native.org) compiles Scala code to LLVM for native execution
+* [Scala on Android](http://scala-android.org) community site
+
+## Dotty
+
+* [Dotty](http://dotty.epfl.ch) is a next generation compiler for Scala, under development at EPFL
+    * [Dotty FAQ](http://dotty.epfl.ch/#why-dotty)
+
+## The Scala Center
+
+* [The Scala Center](https://scala.epfl.ch/) is an open source foundation that brings together a coalition of individuals and organizations working together to contribute to Scala.
+    * [Scala Center FAQ](https://scala.epfl.ch/faqs.html)

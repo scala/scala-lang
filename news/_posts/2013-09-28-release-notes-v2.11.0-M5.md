@@ -29,7 +29,7 @@ We'd [love to hear](https://issues.scala-lang.org/) about any regressions since 
 When reporting a bug, please set the 'Affects Version' field to 2.11.0-M5 and add the `regression` label where appropriate.
 
 ## Scala IDE Lithium (4.0) for Eclipse
-Please point your Eclipse 4.2/4.3 at http://download.scala-ide.org/sdk/e38/scala211/dev/site/ to update to the latest version that includes this milestone!
+Please point your Eclipse 4.2/4.3 at http://scala-ide.org/ to update to the latest version that includes this milestone!
 For more info, please see [the getting started guide](http://scala-ide.org/docs/user/gettingstarted.html).
 
 ## Binary compatibility

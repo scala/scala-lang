@@ -129,40 +129,6 @@ $(document).ready(function(){
     $(".shadow").css('display','block');
   }
 
-  // tweets
-  $(function(){
-    $("#tweets").tweetMachine('', {
-      backendScript: 'http://www.scala-lang.org/webscripts/ajax/getFromTwitter.php?callback=?',
-      endpoint: 'statuses/user_timeline',
-      user_name: 'scala_lang',
-      include_retweets: true,
-      exclude_replies: false,
-      limit: 4,
-      autoRefresh: false,
-      tweetFormat: '\
-        <div class="tweet-container">\
-          <div class="tweet">\
-            <p class="text content"></p>\
-          </div>\
-          <div class="caret-container">\
-            <div class="caret-divider">\
-              <div class="caret-outer"></div>\
-              <div class="caret-inner"></div>\
-            </div>\
-          </div>\
-          <div class="raw bottom-anchored">\
-            <div class="avatar-wrapper">\
-              <img class="avatar" width="50" height="50" src="" />\
-            </div>\
-            <span class="tweet-username">\
-              <a href="" class="username" rel="external"></a>\
-            </span>\
-          </div>\
-        </div>\
-      '
-    });
-  });
-
 });
 
 <!-- prettyprint js to prepend generated pre/code tags -->
@@ -187,29 +153,10 @@ function styleCode() {
 
 $(document).ready(function() {
 
-  // get the most up-to-date version of activator
-  $.getJSON("https://activator-prod.herokuapp.com/latest?callback=?", function(data) {
-   // update the page with the latest values
-   if (data.version != undefined) {
-     var activatorLink = $("#download-button.activator")
-     activatorLink.prop("href", "http://downloads.lightbend.com/typesafe-activator/" + data.version + "/typesafe-activator-" + data.version + ".zip")
-   }
-  })
-
   var os = getOS();
   if (os == "Unknown OS") os = "UNIX";
 
   var osLabel = os.replace(/\s/g, '').toLowerCase();
-
-  // Removing the automatic download on the front page in favor of a
-  // link to the download page so people can see that activator is also
-  // a valid download choice.
-  // $("#main-download-button").each(function() {
-  //   var unixLink = "{{ site.scala_maindownload_unix }}",
-  //       windowsLink = "{{ site.scala_maindownload_windows }}",
-  //       link = (os == "Windows") ? windowsLink : unixLink;
-  //   $(this).attr("href", link).addClass(osLabel);
-  // });
 
   // Do not do any of the following if we're not on a download page
   // Otherwise a TypeError is raised and disables all other scripts on the page

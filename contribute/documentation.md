@@ -7,7 +7,6 @@ title: Documentation Contributions
 There are several ways you can help out with the improvement of Scala documentation. These include:
 
 * API Documentation in Scaladoc
-* Code examples and tutorials in activator templates.
 * Guides, Overviews, Tutorials, Cheat Sheets and more on the docs.scala-lang.org site
 * Updating scala-lang.org
 
@@ -21,19 +20,12 @@ Thanks
 
 The Scala API documentation lives with the scala project source code. There are many ways you can help with improving Scaladoc, including:
 
-* [Log issues for missing scaladoc documentation](./scala-standard-library-api-documentation.html#contribute_api_documentation_bug_reports) - 
+* [Log issues for missing scaladoc documentation](./scala-standard-library-api-documentation.html#contribute-api-documentation-bug-reports) - 
 Please *follow the issue submission process closely* to help prevent duplicate issues being created.
 * [Claim Scaladoc Issues and Provide Documentation](./scala-standard-library-api-documentation.html) - please claim issues prior to working on a specific scaladoc task to prevent duplication of effort. If you sit on an issue for too long without submitting a pull request, it will revert back to unassigned and you will need to re-claim it.
 * You can also just 
 [submit new Scaladoc](./scala-standard-library-api-documentation.html) 
 without creating an issue, but please look to see if there is an issue already submitted for your task and claim it if there is. If not, please post your intention to work on a specific scaladoc task on scala-internals so that people know what you are doing. 
-
-### Examples/Tutorials in Activator Templates
-
-[Lightbend Activator](https://www.lightbend.com/community/core-tools/activator-and-sbt) 
-is a tool based on SBT, with a UI mode that is ideal for code based tutorials, overviews and walk-throughs. To contribute an example in activator, you can fork an existing template, edit it, add a tutorial, upload it to github and then submit the github project into the template repository. It's the fastest way to produce a working code example with tutorial.
-
-Please see [Contributing an Activator Template](https://www.lightbend.com/activator/template/contribute) for more details.
 
 ### The Main Scala Documentation Site
 
@@ -61,4 +53,3 @@ to Scala and related projects) is provided on the main
 
 Please read both the
 [docs.scala-lang.org contribution](http://docs.scala-lang.org/contribute.html) document and the [scala-lang.org github README](https://github.com/scala/scala-lang#scala-langorg) before embarking on any changes to the Scala language site, as it uses the same Jekyll markdown tool and many of the same conventions as the Scala documentation site.
-

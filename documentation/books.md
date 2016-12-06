@@ -21,7 +21,7 @@ by Martin Odersky, Lex Spoon, and Bill Venners
   <div class="span2">
     <div align="center">
     <a href="http://booksites.artima.com/programming_in_scala_3ed">
-      <img src="/resources/img/books/ProgrammingInScala.gif" alt="">
+      <img src="/resources/img/books/ProgrammingInScala.gif" alt="Programming in Scala book cover">
     </a>
     </div>
   </div>
@@ -45,13 +45,13 @@ for Technical Books
 – **Available Now**
 by Cay S. Horstmann
 
-Published by [Addison-Wesley](http://www.pearsoned.co.uk/Imprints/Addison-Wesley/):
+Published by [Addison-Wesley](https://heuk.pearson.com/about-us.html/Addison-Wesley/):
 
 <div class="row">
   <div class="span2">
     <div align="center">
     <a href="http://www.horstmann.com/scala/index.html">
-      <img src="/resources/img/books/scala_for_the_impatient.png" alt="">
+      <img src="/resources/img/books/scala_for_the_impatient.png" alt="Scala for the Impatient book cover">
     </a>
     </div>
   </div>
@@ -88,7 +88,7 @@ Published by [Manning](http://www.manning.com):
   <div class="span2">
     <div align="center">
     <a href="http://www.manning.com/raychaudhuri">
-      <img src="/resources/img/books/icon_Scala_in_Action_93x116.png" alt="">
+      <img src="/resources/img/books/icon_Scala_in_Action_93x116.png" alt="Scala in Action book cover">
     </a>
     </div>
   </div>
@@ -121,7 +121,7 @@ Published by [O'Reilly](http://www.oreilly.com):
   <div class="span2">
     <div align="center">
     <a href="http://shop.oreilly.com/product/0636920033073.do">
-      <img src="/resources/img/books/ProgrammingScala-final-border.gif" alt="">
+      <img src="/resources/img/books/ProgrammingScala-final-border.gif" alt="Programming Scala book cover">
     </a>
     </div>
   </div>
@@ -156,7 +156,7 @@ Published by [Manning](http://www.manning.com):
   <div class="span2">
     <div align="center">
     <a href="https://www.manning.com/books/functional-programming-in-scala">
-      <img src="/resources/img/books/FPiS_93x116.png" alt="">
+      <img src="/resources/img/books/FPiS_93x116.png" alt="Functional Programming in Scala book cover">
     </a>
     </div>
   </div>
@@ -179,7 +179,7 @@ Published by [Manning](http://www.manning.com):
   <div class="span2">
     <div align="center">
     <a href="http://www.manning.com/suereth">
-      <img src="/resources/img/books/icon_Scala_in_Depth_93x116.png" alt="">
+      <img src="/resources/img/books/icon_Scala_in_Depth_93x116.png" alt="Scala in Depth book cover">
     </a>
     </div>
   </div>
@@ -211,7 +211,7 @@ Published by [Artima Press](http://www.artima.com/index.jsp):
   <div class="span2">
     <div align="center">
     <a href="http://www.artima.com/shop/scala_puzzlers">
-      <img src="/resources/img/books/puzzlersCover117x89.gif" alt="">
+      <img src="/resources/img/books/puzzlersCover117x89.gif" alt="Scala Puzzlers book cover">
     </a>
     </div>
   </div>
@@ -223,4 +223,3 @@ So there are few things more intriguing or important than code that we think we 
 Scala Puzzlers is a collection of such examples in Scala. It is not only an entertaining and instructive way of understanding this highly expressive language better. It will also help you recognize many counter-intuitive traps and pitfalls and prevent them from inflicting further production bug hunt stress on Scala developers."
   </div>
 </div>
-

@@ -24,7 +24,7 @@ half a million developers are using Scala.
 Scala is the technology of choice for a vibrant open-source ecosystem,
 including popular platforms and frameworks such as
 [Spark](http://spark.apache.org/), [Kafka](http://kafka.apache.org/),
-[Akka](akka.io), [Finagle](https://twitter.github.io/finagle),
+[Akka](http://akka.io), [Finagle](https://twitter.github.io/finagle),
 [Cats](http://typelevel.org/cats/), and
 [Play](https://www.playframework.com/), to name just a few.
 

@@ -8,9 +8,33 @@ disqus: true
 
 # Performance of using default methods to compile Scala trait methods
 
+## [Update] New insights
+
+Since the writing of this post, we have made a lot of progress in narrowing down the performance
+issue described. The most important new insights:
+
+- Jason has written a JMH-based test harness for measuring cold and hot perfromance of the Scala
+  compiler ([scala/compiler-benchmark](https://github.com/scala/compiler-benchmark)). He used this
+  to show that the performance difference discussed in this post only affects cold performance,
+  i.e., startup time.
+- Scala 2.12.0-RC2 (and the final Scala 2.12.0) emits all mixin forwarders by default to avoid
+  the startup performance slowdown.
+- The micro-benchmark analyzed in this blog post is not the root cause of the performance
+  regression observed when running the Scala compiler. It just shows one example where the use
+  of default methods can have unexpected consequences on performance.
+- A significant amount of the observed slowdown seems to be happening during class loading, when
+  the JVM performs lookup of default methods inherited by classes.
+
+The more recent benchmarks are logged in the discussion of PR
+[#5429](https://github.com/scala/scala/pull/5429).
+
+The rest of this post is left mostly unchanged.
+
+## Introduction
+
 Recently we observed that [33e7106](https://github.com/scala/scala/commit/33e7106) causes a 20%
-slowdown of the Scala compiler. This post logs what we learned in trying to understand the cause of
-this regression.
+slowdown in cold performance of the Scala compiler. Hot performance, for example when using sbt,
+is not affected. This post logs what we learned in trying to understand the cause of this regression.
 
 Thanks to [Dmitry Petrashko](https://twitter.com/darkdimius) and
 [Jason Zaugg](https://twitter.com/retronym) for reviews, inputs, ideas, hints, suggestions and
@@ -128,7 +152,7 @@ several heuristics (implemented in
 methods `should_inline`, `should_not_inline` and `try_to_inline`). A simplified summary:
 
 - Trivial methods (6 bytes by default, `MaxTrivialSize`) are always inlined.
-- Methods up to 35 bytes (`MaxInlineSize`) invoked between 1 and 250 (`MinInliningThreshold`) are
+- Methods up to 35 bytes (`MaxInlineSize`) invoked more than 250 (`MinInliningThreshold`) times are
   inlined.
 - Methods up to 325 bytes (`FreqInlineSize`) are inlined if the callsite is "hot" (or "frequent"),
   which means it is invoked more than 20 times (no command-line flag in release versions) per one

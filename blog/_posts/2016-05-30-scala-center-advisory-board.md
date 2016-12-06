@@ -91,7 +91,7 @@ I mentioned at the beginning that it's important for the Advisory Board to make
 good on its promise, but it's just as important that we are *seen* to be doing
 so. So the whole Advisory Board process is open, and we will publish the
 proposals and minutes from each meeting. You will be able to see these in the
-Advisory Board's [Github
+Advisory Board's [GitHub
 repository](https://github.com/scalacenter/advisoryboard/) in the next few
 days.
 

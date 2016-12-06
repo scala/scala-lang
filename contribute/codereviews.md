@@ -5,7 +5,7 @@ title: Code Review Contributions
 ## Code Review Contributions
 
 In addition to [bug fixing](./guide.html), you can help us review 
-[waiting pull requests](#pull_requests_awaiting_comment). 
+[waiting pull requests](#pull-requests-awaiting-comment). 
 This is also a good (and recommended) way to get to know the feel of
 the bug-fixing and submissions process before jumping in with your
 own pull requests.
@@ -43,7 +43,7 @@ own pull requests.
 <p>The Scala language web site.</p>
 </div>
 <div class="span4 doc-block">
-<h4><a href="https://github.com/scala">All Scala Github Projects</a></h4>
+<h4><a href="https://github.com/scala">All Scala GitHub Projects</a></h4>
 <p>For other PRs, follow the scala project from here.</p>
 </div>
 </div>

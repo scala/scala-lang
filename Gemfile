@@ -1,7 +1,2 @@
 source 'https://rubygems.org'
-gem 'jekyll', '1.5.1'
-gem 'json', '1.8.3'
-gem 'kramdown', '1.8.0'
-gem 'mercenary', '0.3.5'
-gem 'posix-spawn', '0.3.11'
-gem 'yajl-ruby', '1.2.1'
+gem 'github-pages', '>=104', group: :jekyll_plugins

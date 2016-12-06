@@ -254,8 +254,7 @@ a.brand {
   padding-left: 20px;
   margin-right: 0;
 }
-#download-button .icon,
-#download-button .activator .icon {
+#download-button .icon {
   width: 26px;
   height: 26px;
   margin: 7px;
@@ -271,13 +270,6 @@ a.brand {
       -ms-transform: translateX(0);
        -o-transform: translateX(0);
           transform: translateX(0);
-}
-#download-button:hover.activator span {
-  -webkit-transform: translateX(24px);
-     -moz-transform: translateX(24px);
-      -ms-transform: translateX(24px);
-       -o-transform: translateX(24px);
-          transform: translateX(24px);
 }
 
 /* Ideally, we would have only this:
@@ -310,9 +302,6 @@ a.brand {
 }
 #download-button.unix:hover .icon {
   background-position: -52px -26px;
-}
-#download-button.activator .icon {
-  background-position: 0 -26px;
 }
 
 #getting-started-popup {
@@ -1943,14 +1932,14 @@ a.central-btn.api {
   width: 120px;
   text-align: center;
   font-family: "museo-slab", serif;
-  color: #174753;
+  color: white;
   text-transform: none;
   padding: 0 16px;
 }
 
 .scala-version:hover {
  background: transparent;
- color: #174753;
+ color: #eb2100;
  cursor: text;
 }
 

@@ -4,7 +4,7 @@ post-type: announcement
 title: "Scala 2.11.0-RC4 is now available!"
 ---
 
-We are very pleased to announce Scala 2.11.0-RC4, the next release candidate of Scala 2.11.0! Download it now from [scala-lang.org](http://scala-lang.org/download/2.11.0-RC4.html) or via [Maven Central](http://search.maven.org/%23search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-RC4%22).
+We are very pleased to announce Scala 2.11.0-RC4, the next release candidate of Scala 2.11.0! Download it now from [scala-lang.org](http://scala-lang.org/download/2.11.0-RC4.html) or via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-RC4%22).
 
 Since RC3, we've fixed two blocker bugs, and admitted some final polish for macros and quasiquotes. Here's the [difference between RC4 and RC3](https://github.com/scala/scala/compare/v2.11.0-RC3...v2.11.0-RC4).
 
@@ -28,7 +28,7 @@ Concretely, according to `git log --no-merges --oneline master --not 2.10.x --fo
 
 Thank you all very much.
 
-If you find any errors or omissions in these relates notes, [please submit a PR](https://github.com/scala/make-release-notes/blob/master/hand-written.md)!
+If you find any errors or omissions in these relates notes, [please submit a PR](https://github.com/scala/make-release-notes/blob/2.11.x/hand-written.md)!
 
 ### Reporting Bugs / Known Issues
 Please [file any bugs you encounter](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311). If you're unsure whether something is a bug, please contact the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list.
@@ -36,10 +36,10 @@ Please [file any bugs you encounter](https://issues.scala-lang.org/secure/Create
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20fixVersion%20%21%3D%20%22Scala%202.11.0-RC3%22%20AND%20affectedVersion%20%3D%20%22Scala%202.11.0-RC4%22%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/dev/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is available from this update site for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 ### Available projects
-The following Scala projects have already been released against 2.11.0-RC4! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
+The following Scala projects have already been released against 2.11.0-RC4! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/2.11.x/hand-written.md).
 
     "org.scalacheck"         %% "scalacheck"         % "1.11.3"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
@@ -85,7 +85,7 @@ Here's how we recommend handling this in sbt 0.13. For the full build and Maven 
     }
 
 ### Important changes
-For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizeable number of open source projects](https://github.com/typesafehub/community-builds/blob/master/common-2.11.x.conf#L43). 
+For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by compiling a [sizeable number of open source projects](https://github.com/scala/community-builds/blob/2.11.x/common.conf). 
 
 Changes to the reflection API may cause breakages, but these breakages can be easily fixed in a manner that is source-compatible with Scala 2.10.x. Follow our reflection/macro changelog for [detailed instructions](http://docs.scala-lang.org/overviews/macros/changelog211.html#how_to_make_your_210x_macros_work_in_2110).
 
@@ -405,7 +405,7 @@ sha | Title
 [a16e003](https://github.com/scala/scala/commit/a16e003) | <notextile>Bump version to 2.10.5 for nightly builds.</notextile>
 [5f4011e](https://github.com/scala/scala/commit/5f4011e) | <notextile>[backport] SI-7902 Fix spurious kind error due to an unitialized symbol</notextile>
 [8ee165c](https://github.com/scala/scala/commit/8ee165c) | <notextile>SI-8205 [nomaster] backport test pos.lineContent</notextile>
-[d167f14](https://github.com/scala/scala/commit/d167f14) | <notextile>[nomaster] corrects an error in reify&rsquo;s documentation</notextile>
+d167f14 | <notextile>[nomaster] corrects an error in reify&rsquo;s documentation</notextile>
 [806b6e4](https://github.com/scala/scala/commit/806b6e4) | <notextile>Backports library changes related to SI-6566 from a419799</notextile>
 [ff13742](https://github.com/scala/scala/commit/ff13742) | <notextile>[nomaster] SI-8146 Fix non-deterministic &lt;:&lt; for deeply nested types</notextile>
 [cbb88ac](https://github.com/scala/scala/commit/cbb88ac) | <notextile>[nomaster] Update MiMa and use new wildcard filter</notextile>

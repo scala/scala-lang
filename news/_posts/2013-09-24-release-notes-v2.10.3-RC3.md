@@ -23,7 +23,7 @@ Before reporting a bug, please have a look at these [known issues](https://issue
 ### Scala IDE for Eclipse
 The Scala IDE with Scala 2.10.3-RC3 built right in is available through the following update-site:
 
-* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/)
+* for Eclipse 4.2/4.3 (Juno/Kepler)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
