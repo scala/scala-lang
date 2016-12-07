@@ -360,7 +360,7 @@ in which some piece of code is run. I believe they will deeply
 influence the way we write Scala in the future. They are very powerful
 abstractions, in the sense that just declaring a type of a function
 will inject certain implicit values into the scope of the function's
-implementation. A lot of use cases can profit from this power to
+implementation. Many use cases can profit from this power to
 eliminate boilerplate and make code clearer. Can this be abused,
 making code more obscure?  Absolutely, like every other powerful
 abstraction technique. To keep your code sane, please keep the
