@@ -149,7 +149,7 @@ implicit parameter:
 
     (implicit thisTransaction: Transaction)
 
-A three-times repetition might not look so bad here, but it certainly
+Having to repeat three-times might not look so bad here, but it certainly
 smells of boilerplate. In real-sized projects, this can get much worse.
 For instance, the _dotty_ compiler uses implicit abstraction
 over contexts for most of its parts. Consequently it ends up with currently
@@ -229,7 +229,7 @@ conversion establishes the necessary context to make type checking `t`
 succeed by defining the required implicit parameters.
 
 There is one final tweak to make this all work: When using implicit parameters
-for nested functions it was so far important to give all implicit parameters
+for nested functions it was so far necessary to give all implicit parameters
 of the same type the same name, or else one would get ambiguities. For instance, consider the
 following fragment:
 
@@ -354,7 +354,7 @@ this blog post is already too long.
 
 ## Conclusion
 
-Implicit function types are unique way to abstract over the context in
+Implicit function types are a unique way to abstract over the context in
 which some piece of code is run. I believe they will deeply influence
 the way we write Scala in the future. They are very powerful
 abstractions, in the sense that just declaring a type of a function
