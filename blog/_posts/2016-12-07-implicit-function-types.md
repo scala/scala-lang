@@ -2,7 +2,8 @@
 layout: blog
 post-type: blog
 title: Implicit Function Types
-by: Martin Odersky
+author: Martin Odersky
+authorImg: /images/martin.jpg
 ---
 
 I just made the [first pull request](https://github.com/lampepfl/dotty/pull/1775) to add _implicit function types_ to
@@ -46,18 +47,18 @@ element and the site where it is used. Consequently, it becomes
 tedious to define all those intermediate parameters and to pass them
 along to where they are eventually consumed.
 
-Implicit parameters solve one half of the problem. Implicit
-parameters do not have to be propagated using boilerplate code; the
-compiler takes care of that. This makes them practical in many
-scenarios where plain parameters would be too cumbersome. For
-instance, type classes would be a lot less popular if one would have
-to pass all dictionaries by hand. Implicit parameters are also very
-useful as a general context passing mechanism. For instance in the
-_dotty_ compiler, almost every function takes an implicit context
-parameter which defines all elements relating to the current state of
-the compilation. This is in my experience much better than the cake
-pattern because it is lightweight and can express context changes in a
-purely functional way.
+_Implicit parameters_ solve one half of the problem. They do not have to
+be propagated using boilerplate code; the compiler takes care of
+that. This makes them practical in many scenarios where plain
+parameters would be too cumbersome. For instance, type classes would
+be a lot less popular if one would have to pass all dictionaries by
+hand. Implicit parameters are also very useful as a general context
+passing mechanism. For instance in the _dotty_ compiler, almost every
+function takes an implicit context parameter which defines all
+elements relating to the current state of the compilation. This is in
+my experience much better than the cake pattern because it is
+lightweight and can express context changes in a purely functional
+way.
 
 The main downside of implicit parameters is the verbosity of their
 declaration syntax. It's hard to illustrate this with a smallish example,
@@ -354,11 +355,15 @@ this blog post is already too long.
 
 ## Conclusion
 
-Implicit function types are a unique way to abstract over the context in
-which some piece of code is run. I believe they will deeply influence
-the way we write Scala in the future. They are very powerful
+Implicit function types are a unique way to abstract over the context
+in which some piece of code is run. I believe they will deeply
+influence the way we write Scala in the future. They are very powerful
 abstractions, in the sense that just declaring a type of a function
 will inject certain implicit values into the scope of the function's
-implementation. Can this be abused, making code more obscure?
-Absolutely, like every other powerful abstraction technique. To keep
-your code sane, please keep the [Principle of Least Power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html) in mind.
+implementation. A lot of use cases can profit from this power to
+eliminate boilerplate and make code clearer. Can this be abused,
+making code more obscure?  Absolutely, like every other powerful
+abstraction technique. To keep your code sane, please keep the
+[Principle of Least
+Power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
+in mind.
