@@ -367,3 +367,11 @@ abstraction technique. To keep your code sane, please keep the
 [Principle of Least
 Power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
 in mind.
+
+## Comments?
+
+If you have comments or questions, I suggest you head over to the
+[Scala
+Contributors](https://contributors.scala-lang.org/t/implicit-function-types/219)
+discourse discussion thread. It would be great to go more into depth there.
+
