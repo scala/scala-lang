@@ -1,25 +1,25 @@
 ---
 layout: downloadpage
 title: Download
-release_version: 2.12.0
-release_date: "November 3, 2016"
+release_version: 2.12.1
+release_date: "December 5, 2016"
 show_resources: "true"
 other_releases: [
-  ["development_version", "Current 2.12.x release", 2.12.0, "November 3, 2016"],
+  ["development_version", "Current 2.12.x release", 2.12.1, "December 5, 2016"],
   ["maintenance_version", "Latest 2.11.x maintenance release", 2.11.8, "March 8, 2016"],
   ["maintenance_version", "Last 2.10.x maintenance release", 2.10.6, "September 18, 2015"],
   ["maintenance_version", "Last 2.9.x maintenance release", 2.9.3, "February 28, 2013"]
 ]
 requirements: "Scala 2.12 requires version 8 of the <a href='http://www.java.com/'>Java platform</a>. Older Scala versions are compatible with Java 6 and up. Java 9 is not yet supported."
 resources: [
-  ["-main-unixsys", "scala-2.12.0.tgz", "http://downloads.lightbend.com/scala/2.12.0/scala-2.12.0.tgz", "Mac OS X, Unix, Cygwin", "19.24M"],
-  ["-main-windows", "scala-2.12.0.msi", "http://downloads.lightbend.com/scala/2.12.0/scala-2.12.0.msi", "Windows (msi installer)", "117.78M"],
-  ["-non-main-sys", "scala-2.12.0.zip", "http://downloads.lightbend.com/scala/2.12.0/scala-2.12.0.zip", "Windows", "19.28M"],
-  ["-non-main-sys", "scala-2.12.0.deb", "http://downloads.lightbend.com/scala/2.12.0/scala-2.12.0.deb", "Debian", "137.14M"],
-  ["-non-main-sys", "scala-2.12.0.rpm", "http://downloads.lightbend.com/scala/2.12.0/scala-2.12.0.rpm", "RPM package", "117.39M"],
-  ["-non-main-sys", "scala-docs-2.12.0.txz", "http://downloads.lightbend.com/scala/2.12.0/scala-docs-2.12.0.txz", "API docs", "50.74M"],
-  ["-non-main-sys", "scala-docs-2.12.0.zip", "http://downloads.lightbend.com/scala/2.12.0/scala-docs-2.12.0.zip", "API docs", "100.40M"],
-  ["-non-main-sys", "scala-sources-2.12.0.tar.gz", "https://github.com/scala/scala/archive/v2.12.0.tar.gz", "Sources", ""]
+  ["-main-unixsys", "scala-2.12.1.tgz", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.tgz", "Mac OS X, Unix, Cygwin", "18.79M"],
+  ["-main-windows", "scala-2.12.1.msi", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.msi", "Windows (msi installer)", "125.84M"],
+  ["-non-main-sys", "scala-2.12.1.zip", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.zip", "Windows", "18.83M"],
+  ["-non-main-sys", "scala-2.12.1.deb", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.deb", "Debian", "144.65M"],
+  ["-non-main-sys", "scala-2.12.1.rpm", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.rpm", "RPM package", "125.29M"],
+  ["-non-main-sys", "scala-docs-2.12.1.txz", "http://downloads.lightbend.com/scala/2.12.1/scala-docs-2.12.1.txz", "API docs", "55.89M"],
+  ["-non-main-sys", "scala-docs-2.12.1.zip", "http://downloads.lightbend.com/scala/2.12.1/scala-docs-2.12.1.zip", "API docs", "109.10M"],
+  ["-non-main-sys", "scala-sources-2.12.1.tar.gz", "https://github.com/scala/scala/archive/v2.12.1.tar.gz", "Sources", "5.99M"]
 ]
 ---
 
