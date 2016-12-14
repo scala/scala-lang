@@ -28,8 +28,7 @@ The following proposals were voted on and adopted:
 * SCP-009: Improve user experience for builds that use only direct dependencies
 
 For more details, see the
-[archive of minutes](https://scala.epfl.ch/records.html) on the Scala
-Center website.
+[minutes](https://github.com/scalacenter/advisoryboard/blob/master/minutes/003-2016-q4.md).
 
 ## Scala Improvement Process (SIP) Committee
 
@@ -47,5 +46,4 @@ marked as dormant, since it has only been implemented in Dotty.
 A volunteer is needed to implement it in the main Scala compiler.
 
 For more details, see the
-[archive of minutes](http://docs.scala-lang.org/sips/minutes-list.html)
-on the SIP page.
+[minutes](http://docs.scala-lang.org/sips/minutes/sip-minutes.html).
