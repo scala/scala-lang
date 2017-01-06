@@ -14,6 +14,6 @@ private spreadsheet of announced and pre-announcement conferences to help
 organizers co-ordinate their plans, and avoid choosing conflicting dates for
 their events.
 
-To gain access to the spreadsheet, please contact [Jon
+To gain access to the spreadsheet, and share your plans, please contact [Jon
 Pretty](https://twitter.com/propensive/).
 
