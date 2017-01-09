@@ -199,9 +199,7 @@
     </div>
     <div class="row">
       <div class="span12">
-        <div id="tweets" class="tweets">
-          <a class="twitter-timeline" data-tweet-limit="4" data-chrome="noheader nofooter noborders" data-width="520" href="https://twitter.com/scala_lang">Tweets by scala_lang</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+        <div id="tweets" class="tweets"></div>
         <br/>&nbsp;
         <div class="see-more-tweets">See more tweets, or</div>
         <a id="twitter-btn" href="https://twitter.com/scala_lang">Follow Scala on Twitter</a>
@@ -217,3 +215,16 @@
 </div>
 
 {% include footer.html %}
+
+<script>
+$('#tweets').tweetMachine('', { 
+    backendScript: '/resources/php/getFromTwitter.php',
+    endpoint: 'statuses/user_timeline',
+    user_name: 'javitaiyou',
+    include_retweets: true,
+    exclude_replies: false,
+    limit: 5,
+    autoRefresh: false,
+    tweetFormat: "<li class='tweet'><img class='avatar' src=''/><div class='meta'><a href='' class='username'></a><a href='' class='time'></a></div><p class='content'></p></li>" 
+});
+</script>
