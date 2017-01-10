@@ -225,6 +225,29 @@ $('#tweets').tweetMachine('', {
     exclude_replies: false,
     limit: 5,
     autoRefresh: false,
-    tweetFormat: "<li class='tweet'><img class='avatar' src=''/><div class='meta'><a href='' class='username'></a><a href='' class='time'></a></div><p class='content'></p></li>" 
+    tweetFormat: `<div class="tweet-container">
+          <div class="tweet">
+            <p class="text content"></p>
+          </div>
+          <div class="caret-container">
+            <div class="caret-divider">
+              <div class="caret-outer"></div>
+              <div class="caret-inner"></div>
+            </div>
+          </div>
+          <div class="raw bootom-anchored">
+            <div class="span1">
+              <div class="thumbnail">
+                <img class="avatar" width="70" height="70" src="" />
+              </div>
+            </div>
+            <div class="span2 lh1em">
+              <span class="tweet-username">
+                <a href="" class="username" rel="external"></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      `
 });
 </script>
