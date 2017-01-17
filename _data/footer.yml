@@ -1,0 +1,44 @@
+- title: Documentation
+  links:
+    - title: Getting Started
+      url: /documentation/getting-started/
+    - title: API
+      url: "http://www.scala-lang.org/api/current/index.html?_ga=1.211088853.1310790544.1468501313#package"
+    - title: Overviews/Guides
+      url: "http://docs.scala-lang.org/overviews/?_ga=1.9844085.1310790544.1468501313"
+    - title: Tutorials
+      url: "http://docs.scala-lang.org/overviews/?_ga=1.211088853.1310790544.1468501313"
+    - title: Language Specification
+      url: "http://scala-lang.org/files/archive/spec/2.12/"
+- title: Download
+  links: 
+    - title: Current Version
+      url: "/download/"
+    - title: All versions
+      url: "/download/all/"
+- title: Community
+  links:
+    - title: Community
+      url: "/community/"
+    - title: Mailing Lists
+      url: "/community/index.html#mailing-lists"
+    - title: Chat Rooms & More
+      url: "/community/index.html#chat-rooms"
+    - title: Libraries and Tools
+      url: "/community/index.html#community-libraries-and-tools"
+    - title: "The Scala Center"
+      url: https://scala.epfl.ch/
+- title: Contribute
+  links: 
+    - title: How to help
+      url: "/contribute/"
+    - title: Report an Issue
+      url: "/contribute/bug-reporting-guide/"
+- title: Scala
+  links:
+    - title: Blog
+      url: "/blog/"
+    - title: Code of Conduct
+      url: "/conduct/"
+    - title: License
+      url: "/license/"

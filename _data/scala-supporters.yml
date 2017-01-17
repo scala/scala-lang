@@ -1,0 +1,24 @@
+supporters:
+  - logo: /epfl.png
+    url: https://www.epfl.ch
+  - logo: /ibm.png
+    url: http://www.ibm.com
+  - logo: /verizon.png
+    url: http://www.verizon.com
+  - logo: /goldman-sachs.png
+    url: http://www.goldmansachs.com
+  - logo: /nitro.png
+    url: https://www.gonitro.com
+  - logo: /47deg.png
+    url: http://www.47deg.com/
+  - logo: /sap.png
+    url: http://www.sap.com
+  - logo: /tapad.png
+    url: http://www.tapad.com
+  - logo: /your-company.png
+    url: https://scala.epfl.ch/individual-membership.html
+maintainers:
+  - logo: /scala-center.png
+    url: https://scala.epfl.ch/
+  - logo: /lightbend.png
+    url: http://www.lightbend.com/
