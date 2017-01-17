@@ -1,0 +1,21 @@
+// BUTTONS
+//------------------------------------------------
+//------------------------------------------------
+.button-normal {
+    padding: 8px 18px;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    color: #fff;
+    background: $brand-secondary;
+    border-radius: $border-radius-base;
+    display: inline-block;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      background: $brand-primary;
+    }
+
+}
