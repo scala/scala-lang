@@ -18,6 +18,7 @@ $headings-font-color: $gray-darker;
 $base-font-color: #4A5659;
 $base-font-color-light: #899295;
 //-------------------------------------------------
+$base-font-color-inverse: rgba(#fff, 0.60);
 
 // Typography
 //------------------------------------------------
@@ -51,8 +52,10 @@ $hover-link-color: $brand-primary;
 
 // Border
 //------------------------------------------------
-$base-border-color: $gray-light;
-$base-border: 1px solid $base-border-color;
+$base-border-color-gray: $gray-light;
+$base-border-color-white: rgba(#fff, 0.14);
+$base-border-gray: 1px solid $base-border-color-gray;
+$base-border-white: 1px solid $base-border-color-white;
 
 // Other Sizes
 //------------------------------------------------
