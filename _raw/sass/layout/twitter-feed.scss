@@ -48,11 +48,11 @@
                         margin-left: 64px;
 
                         .header-tweet {
+                          @include display(flex);
+                          @include flex-direction(row);
+                          @include align-items(top);
+                          @include justify-content(space-between);
                             ul {
-                                @include display(flex);
-                                @include align-items(center);
-                                flex-wrap: wrap;
-
                                 li {
                                     padding: 0;
                                     margin-right: 6px;
@@ -74,17 +74,17 @@
                                         }
                                     }
 
-                                    &.date,
                                     &.username {
-                                        font-size: $font-size-medium;
+                                        font-size: $font-size-small;
                                         color: $base-font-color-light;
                                         font-weight: $font-semibold;
                                     }
-
-                                    &.date {
-                                        font-weight: $font-regular;
-                                    }
                                 }
+                            }
+
+                            .date {
+                              font-size: $font-size-small;
+                              color: $base-font-color-light;
                             }
                         }
 

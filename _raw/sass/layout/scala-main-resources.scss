@@ -4,4 +4,33 @@
 .scala-main-resources {
   height: 177px;
   background: $gray-darker;
+  position: relative;
+  .resources {
+    @include clearfix;
+    margin-top: -30px;
+    position: relative;
+  .button {
+    font-size: $font-size-large;
+    display: block;
+    @include border-top-radius(200px);
+    @include border-right-radius(0);
+    @include border-bottom-radius(0);
+    @include border-left-radius(200px);
+    padding: $padding-small $padding-large;
+  }
+  .download {
+    @include span-columns(4);
+    @include shift(2);
+  }
+  .api-docs {
+    @include span-columns(4);
+    .button {
+      text-align: right;
+      @include border-top-radius(0);
+      @include border-right-radius(200px);
+      @include border-bottom-radius(200px);
+      @include border-left-radius(0);
+    }
+  }
+}
 }
