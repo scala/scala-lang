@@ -30,10 +30,10 @@
     // NOTE: These keys are provided so the sample.html file can run. Don't use
     // them in a production environment because the rate limit will be lumped
     // in with everyone else testing the plugin
-    $consumerKey        = 'Lcue9qrjJlLBzZXS0jYoQ';
-    $consumerSecret     = 'rkPTvgh8nwvCULeKeuB6wgET9isQrKeJdi2f0x3PnQU';
-    $accessToken        = '80357329-wUWqRGSgqGFxu6ozgFiGoE4Dz32tzqnMrENU3jcUf';
-    $accessTokenSecret  = '2EEPSyDHldG0fHRJbBeKVEmsLWAR3Y17YVTtHebozs';
+    $consumerKey        = 'D70VsCq4nFIniYLVqn6EYZaGw';
+    $consumerSecret     = 'CCToJ4yPrWF1XLcm0olMuD7vbctjrjow2Ua3rsSKDbbXLf6DXZ';
+    $accessToken        = '89575909-ZP6Xumslwfe8LcE2XaH3HhqKSmCCKZoYhTRRB9TJh';
+    $accessTokenSecret  = 'FZw7xQskRnVamNNyQuPec1Ul0rlWYKkE3BQaPvkuDGHjx';
 
     /* END SETUP ==========================================================*/
     
@@ -59,31 +59,24 @@
      */
     $tweets = $connection->get($endpoint, $queryParams);
 
-
     error_log(print_r($tweets, TRUE), 0);
 
     /*
      * If Twitter returned statuses, the request was successful
      */
      
-	// Method if you are using endpoint "search/tweets"
-	if ($endpoint === "search/tweets") {
-		if ( isset($tweets->statuses) ) {
-        	echo json_encode($tweets->statuses);
-		}
-		else { // There was a problem somewhere
-        	// Return the error Twitter sent so Javascript can parse it and display the error
-			echo json_encode($tweets->errors);
-		}
-	}
+    // Method if you are using endpoint "search/tweets"
+    if ($endpoint === "search/tweets") {
+        if ( isset($tweets->statuses) ) {
+            echo json_encode($tweets->statuses);
+        }
+        else { // There was a problem somewhere
+            // Return the error Twitter sent so Javascript can parse it and display the error
+            echo json_encode($tweets->errors);
+        }
+    }
 
-	// Method if you are using endpoint "statuses/user_timeline"
-	if ($endpoint === "statuses/user_timeline") {
-    	if ( isset($tweets[0]->user->id) ) {
-        	echo json_encode($tweets);
-		}
-		else { // There was a problem somewhere
-        	// Return the error Twitter sent so Javascript can parse it and display the error
-			echo json_encode($tweets->errors);
-		}
-	}
+    // Method if you are using endpoint "statuses/user_timeline"
+    if ($endpoint === "statuses/user_timeline") {
+        echo json_encode($tweets);
+    }

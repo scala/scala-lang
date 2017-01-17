@@ -157,22 +157,38 @@
 						tweetObj.find('.avatar')
                             .attr('src', actualTweet.user.profile_image_url.replace("normal", "reasonably_small"));
 
-                        // Set the username
-						tweetObj.find('.username')
-                            .attr('href', "http://twitter.com/" + actualTweet.user.screen_name)
-                            .attr('target', '_blank')
-                            .html("" + actualTweet.user.screen_name);
+                        // Set the user screen name
+						var usernameLink = "<a target=\"_blank\" href=\"" 
+                            + "http://twitter.com/" 
+                            + actualTweet.user.screen_name 
+                            + "\">" 
+                            + "@" 
+                            + actualTweet.user.screen_name 
+                            + "<a>";
+                        tweetObj.find('.username').html("" + usernameLink);                      
+
+                        // Set the username:
+                        var userLink = "<a target=\"_blank\" href=\""
+                            + "http://twitter.com/"
+                            + actualTweet.user.screen_name 
+                            + "\">" 
+                            + actualTweet.user.name 
+                            + "<a>";
+                        tweetObj.find('.user').html("" + userLink);
 
                         // Set the timestamp
-						tweetObj.find('.time')
-                            .attr('href', "http://twitter.com/" + actualTweet.user.screen_name + "/status/" + actualTweet.id_str)
-                            .attr('target', '_blank')
-                            .html(tweetMachine.relativeTime(actualTweet.created_at))
+                        var dateLink = "<a target=\"_blank\" href=\"" + "http://twitter.com/"
+                            + actualTweet.user.screen_name + "/status/"
+                            + actualTweet.id_str + "\">"
+                            + tweetMachine.relativeTime(actualTweet.created_at)
+                            + "<a>";
+                        tweetObj.find('.date')
+                            .html("" + dateLink)
                             // Save the created_at time as jQuery data so we can update it later
                             .data('timestamp', actualTweet.created_at);
 
                         // Set the text
-						tweetObj.find('.content')
+						tweetObj.find('.main-tweet')
                             .html(tweetMachine.parseText(actualTweet.text));
 
                         // If we are animating in the new tweets
@@ -226,7 +242,7 @@
 								queryParams: queryParams
 							}, function (tweets) {
 								var tweetsDisplayed;
-
+                                console.log("No tweets! :(");
                                 // If we got a response from Twitter
                                 if ( tweets[0] ) {
                                     // If there is an error message
@@ -243,6 +259,7 @@
                                     }
                                     // There are tweets
                                     else {
+                                        console.log("There are tweets!");
                                         // If there was an error before
                                         if ( $('.twitter-error').length ) {
                                             // Remove it
