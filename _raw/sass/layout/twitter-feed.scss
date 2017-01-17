@@ -26,6 +26,7 @@
                     padding: $padding-small;
                     background: #fff;
                     border-radius: $border-radius-base;
+                    transition: $base-transition;
                     @include span-columns(4);
                     @include bp(large) {
                          @include span-columns(12);
@@ -102,6 +103,10 @@
                                 }
                             }
                         }
+                    }
+
+                    &:hover {
+                        background: rgba(#fff, 0.88);
                     }
                 }
             }

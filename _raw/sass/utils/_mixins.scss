@@ -1,7 +1,9 @@
 // MIXINS
 //------------------------------------------------
 //------------------------------------------------
+
 // Breakpoints
+//------------------------------------------------
 @mixin bp($point) {
 	@if $point==xlarge {
 		@media (max-width: $bp-xlarge) {
@@ -23,4 +25,13 @@
 			@content;
 		}
 	}
+}
+
+// Images
+//------------------------------------------------
+@mixin image-size {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
