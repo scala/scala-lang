@@ -1,0 +1,30 @@
+// NAVIGATION
+//------------------------------------------------
+//------------------------------------------------
+.navigation {
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  .navigation-menu {
+    .navigation-menu-item {
+      display: inline-block;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        padding: 5px 15px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 300px;
+        &:active,
+        &:focus,
+        &:hover {
+          background: $brand-primary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

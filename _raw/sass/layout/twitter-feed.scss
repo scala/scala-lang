@@ -1,0 +1,99 @@
+// TWITTER FEED
+//------------------------------------------------
+//------------------------------------------------
+
+.twitter-feed {
+    min-height: 600px;
+    background: $brand-tertiary;
+
+    h2 {
+        color: #fff;
+    }
+
+    .slider-twitter {
+        ul {
+            @include clearfix;
+
+            li {
+                padding: 0 15px;
+
+                .item-tweet {
+                    padding: $padding-inner;
+                    background: #fff;
+                    border-radius: $border-radius-base;
+                    @include span-columns(4);
+                    @include bp(large) {
+                         @include span-columns(12);
+                    }
+
+                    img {
+                      border-radius: $border-radius-large;
+                        width: 44px;
+                        height: auto;
+                        float: left;
+                    }
+
+                    .tweet-text {
+                        margin-left: 64px;
+
+                        .header-tweet {
+                            ul {
+                                @include display(flex);
+                                @include align-items(center);
+                                flex-wrap: wrap;
+
+                                li {
+                                    padding: 0;
+                                    margin-right: 6px;
+
+                                    &.user {
+                                        font-size: $font-size-large;
+                                        font-weight: $font-bold;
+                                        color: $headings-font-color;
+
+                                        a {
+                                          color: $headings-font-color;
+                                          &:active,
+                                          &:focus,
+                                          &:hover {
+                                            color: $hover-link-color;
+                                            text-decoration: none;
+                                          }
+                                        }
+                                    }
+
+                                    &.date,
+                                    &.username {
+                                        font-size: $font-size-medium;
+                                        color: $base-font-color-light;
+                                        font-weight: $font-semibold;
+                                    }
+
+                                    &.date {
+                                        font-weight: $font-regular;
+                                    }
+                                }
+                            }
+                        }
+
+                        .main-tweet {
+                            P {
+                                font-size: $font-size-medium;
+
+                                .hastag {
+                                    color: rgba($base-font-color-light, 0.7);
+
+                                    &:active,
+                                    &:focus,
+                                    &:hover {
+                                        color: $base-font-color-light;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

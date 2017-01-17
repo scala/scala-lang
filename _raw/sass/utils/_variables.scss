@@ -1,0 +1,76 @@
+// VARIABLES
+//------------------------------------------------
+//------------------------------------------------
+
+// Color
+//------------------------------------------------
+$brand-primary: #DC322F;
+$brand-secondary: #859900;
+$brand-tertiary: #5CC6E4;
+//-------------------------------------------------
+$gray-darker: #002B36;
+$gray-dark: #073642;
+$gray: #15414C;
+$gray-light: #D0D9DA;
+$gray-lighter: rgba($gray-darker, 0.06);
+//-------------------------------------------------
+$headings-font-color: $gray-darker;
+$base-font-color: #4A5659;
+$base-font-color-light: #899295;
+//-------------------------------------------------
+
+// Typography
+//------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+//------------------------------------------------
+$base-font-family: 'Lato', sans-serif;
+$heading-font-family: 'Roboto Slab', serif;
+//------------------------------------------------
+$em-base: 16px !global;
+$base-font-size: $em-base;
+//------------------------------------------------
+$font-size-large: 1.063rem; // 17px
+$font-size-medium: 0.9375rem; // 17px
+$font-size-small: 0.875rem; // 14px
+$font-size-xsmall:  0.75rem; // 12px
+
+//------------------------------------------------
+$base-line-height: 1.6;
+$heading-line-height: 1.4;
+//------------------------------------------------
+$font-light: 300;
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+// Link Colors
+//------------------------------------------------
+$base-link-color: darken($brand-tertiary, 15%);
+$hover-link-color: $brand-primary;
+
+// Border
+//------------------------------------------------
+$base-border-color: $gray-light;
+$base-border: 1px solid $base-border-color;
+
+// Other Sizes
+//------------------------------------------------
+$padding-xlarge: 60px;
+$padding-large: 50px;
+$padding-inner: 20px;
+//------------------------------------------------
+$border-radius-base: 2px;
+$border-radius-large: 3px;
+
+// Breakpoints
+//------------------------------------------------
+$bp-small: 480px;
+$bp-medium: 768px;
+$bp-large: 992px;
+$bp-xlarge: 1130px;
+
+// Animations
+//------------------------------------------------
+$base-duration: 350ms;
+$base-timing: ease;
