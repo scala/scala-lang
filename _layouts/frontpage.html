@@ -209,7 +209,8 @@ $('#tweet-feed').tweetMachine('', {
     user_name: 'scala_lang',
     include_retweets: true,
     exclude_replies: false,
-    limit: 3,
+    limit: 6,
+    pageLimit: 3,
     autoRefresh: false,
     animateIn: false,
     tweetFormat: `
@@ -227,5 +228,10 @@ $('#tweet-feed').tweetMachine('', {
             </div>
           </div>
       `
-});
+}, function(tweets, tweetsDisplayed) {
+        console.log("Finishing loading tweets");
+        $('.slider-twitter').unslider({
+          });        
+    });
+
 </script>

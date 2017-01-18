@@ -42,6 +42,7 @@
 					autoRefresh:    true, // CURRENTLY REQUIRED. Auto-refresh the tweets
 					animateOut:     false, // NOT YET SUPPORTED. Animate out old tweets.
 					animateIn:      true, // Fade in new tweets.
+                    pageLimit:      0, // Number of tweets per page. If equals 0, tweets won't be paginated.
 					tweetFormat: "<li class='tweet'><img class='avatar' src=''/><div class='meta'><a href='' class='username'></a><a href='' class='time'></a></div><p class='content'></p></li>", // Format for each tweet
 					localization: { // Verbiage to use for timestamps
 						seconds:    'seconds ago',
@@ -164,7 +165,7 @@
                             + "\">" 
                             + "@" 
                             + actualTweet.user.screen_name 
-                            + "<a>";
+                            + "</a>";
                         tweetObj.find('.username').html("" + usernameLink);                      
 
                         // Set the username:
@@ -173,7 +174,7 @@
                             + actualTweet.user.screen_name 
                             + "\">" 
                             + actualTweet.user.name 
-                            + "<a>";
+                            + "</a>";
                         tweetObj.find('.user').html("" + userLink);
 
                         // Set the timestamp
@@ -181,7 +182,7 @@
                             + actualTweet.user.screen_name + "/status/"
                             + actualTweet.id_str + "\">"
                             + tweetMachine.relativeTime(actualTweet.created_at)
-                            + "<a>";
+                            + "</a>";
                         tweetObj.find('.date')
                             .html("" + dateLink)
                             // Save the created_at time as jQuery data so we can update it later
@@ -189,7 +190,7 @@
 
                         // Set the text
 						tweetObj.find('.main-tweet')
-                            .html(tweetMachine.parseText(actualTweet.text));
+                            .html("<p>" + tweetMachine.parseText(actualTweet.text) + "</p>");
 
                         // If we are animating in the new tweets
 						if (tweetMachine.settings.animateIn) {
@@ -242,7 +243,7 @@
 								queryParams: queryParams
 							}, function (tweets) {
 								var tweetsDisplayed;
-                                console.log("No tweets! :(");
+                                var pagesDisplayed;
                                 // If we got a response from Twitter
                                 if ( tweets[0] ) {
                                     // If there is an error message
@@ -259,7 +260,6 @@
                                     }
                                     // There are tweets
                                     else {
-                                        console.log("There are tweets!");
                                         // If there was an error before
                                         if ( $('.twitter-error').length ) {
                                             // Remove it
@@ -272,6 +272,9 @@
                                         // Count the number of tweets displayed
                                         tweetsDisplayed = 0;
 
+                                        // Count the pages:
+                                        pagesDisplayed = 0;
+
                                         // Loop through each tweet
                                         $.each(tweets, function () {
                                             var tweet, tweetObj;
@@ -282,36 +285,48 @@
                                                 // Build the tweet as a jQuery object
                                                 tweetObj = tweetMachine.buildTweet(tweet);
 
-                                                // If there are already tweets on the screen
-                                                if (!firstLoad) {
-
-                                                    // If we are animating out the old tweets
-                                                    if (tweetMachine.settings.animateOut) {
-                                                        /*
-                                                         * TODO Support this feature
-                                                         */
-                                                    } else { // We are not animating the old tweets
-                                                        // Remove them
-                                                        $(tweetMachine.container).children(':last-child').remove();
-                                                    }
+                                                if (tweetMachine.settings.pageLimit > 0) {
+                                                    tweetObj.addClass("page" + pagesDisplayed);
                                                 }
+
+                                                //// If there are already tweets on the screen
+                                                //if (!firstLoad) {
+                                                //    
+                                                //    // If we are animating out the old tweets
+                                                //    if (tweetMachine.settings.animateOut) {
+                                                //        /*
+                                                //         * TODO Support this feature
+                                                //         */
+                                                //    } else { // We are not animating the old tweets
+                                                //        // Remove them
+                                                //        $(tweetMachine.container).children(':last-child').remove();
+                                                //    }
+                                                //}
 
                                                 // Prepend the new tweet
                                                 $(tweetMachine.container).prepend(tweetObj);
+                                                console.log("prepend tweet");
 
                                                 // If we are animating in the new tweets
-                                                if (tweetMachine.settings.animateIn) {
-                                                    // Fade in the new tweet
-                                                    /*
-                                                     * TODO Figure out why .fadeIn() doesn't work
-                                                     */
-                                                    $(tweetMachine.container).children(':first-child').animate({
-                                                        opacity: 1
-                                                    });
-                                                }
+                                                //if (tweetMachine.settings.animateIn) {
+                                                //    // Fade in the new tweet
+                                                //    /*
+                                                //     * TODO Figure out why .fadeIn() doesn't work
+                                                //     */
+                                                //    $(tweetMachine.container).children(':first-child').animate({
+                                                //        opacity: 1
+                                                //    });
+                                                //}
 
                                                 // Increment the tweets diplayed
                                                 tweetsDisplayed++;
+
+                                                // Increase page number and wrap tweets if pagination is enabled and we're finishing a page:
+                                                if (tweetMachine.settings.pageLimit > 0 && tweetsDisplayed % tweetMachine.settings.pageLimit == 0) {
+                                                    console.log("wrapping paged tweets with page: " + pagesDisplayed);
+                                                    $(".page" + pagesDisplayed).wrapAll("<li></li>");
+                                                    pagesDisplayed++;
+                                                }
                                                 
                                                 // Save this tweet ID so we only get newer noes
                                                 tweetMachine.lastTweetID = tweet.id_str;
