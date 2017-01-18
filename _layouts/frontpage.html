@@ -4,6 +4,10 @@
 {% include headertop.html %}
 {% include headerbottom.html %}
 
+<main id="site-main">
+{% include twitter-feed.html %}
+</main>
+
 <div class="splash">
   <div class="darkblue-overlay">&nbsp;</div>
   <div class="container">
@@ -190,30 +194,44 @@
   </div>
 </div>
 
-<div class="twitter">
-  <div class="container">
-    <div class="row">
-      <div class="span12">
-        <h2 class="twitterhdr"><span>Scala on Twitter</span></h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span12">
-        <div id="tweets" class="tweets">
-          <a class="twitter-timeline" data-tweet-limit="4" data-chrome="noheader nofooter noborders" data-width="520" href="https://twitter.com/scala_lang">Tweets by scala_lang</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <br/>&nbsp;
-        <div class="see-more-tweets">See more tweets, or</div>
-        <a id="twitter-btn" href="https://twitter.com/scala_lang">Follow Scala on Twitter</a>
-        <br/><a style="border-bottom: 0px;" href="https://twitter.com/scala_lang"><img style="padding-top: 8px;" src="{{ site.baseurl }}/resources/img/twitter-logo-white-lg.png" alt="white Twitter logo"/></a>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="epfl-picture-box">
   <div class="container">
   </div>
 </div>
 
 {% include footer.html %}
+
+<script>
+console.log("tweets");
+$('#tweet-feed').tweetMachine('', { 
+    backendScript: '/resources/php/getFromTwitter.php',
+    endpoint: 'statuses/user_timeline',
+    user_name: 'scala_lang',
+    include_retweets: true,
+    exclude_replies: false,
+    limit: 6,
+    pageLimit: 3,
+    autoRefresh: false,
+    animateIn: false,
+    tweetFormat: `
+    <div class="item-tweet">
+            <img src="" class="avatar" alt="">
+            <div class="tweet-text">
+              <div class="header-tweet">
+                <ul>
+                  <li class="user"><a href="" class="userLink"></a></li>
+                  <li class="username"><a href="" class="usernameLink"></a></li>
+                </ul>
+                <span class="date"></span>
+              </div>
+              <div class="main-tweet"></div>
+            </div>
+          </div>
+      `
+}, function(tweets, tweetsDisplayed) {
+        console.log("Finishing loading tweets");
+        $('.slider-twitter').unslider({
+          });        
+    });
+
+</script>
