@@ -26,6 +26,7 @@
 @import 'layout/main';
 @import 'layout/navigation';
 @import 'layout/twitter-feed';
+@import 'layout/ides';
 
 // COMPONENTS
 //------------------------------------------------
@@ -33,7 +34,3 @@
 @import 'components/buttons';
 @import 'components/call-to-action';
 @import 'components/slider';
-
-// PAGES
-//------------------------------------------------
-@import 'pages/home';

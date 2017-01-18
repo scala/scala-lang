@@ -1,0 +1,58 @@
+// IDES
+//------------------------------------------------
+//------------------------------------------------
+
+.ides {
+    background: $gray-dark;
+
+    h2 {
+        span {
+            background: $gray-dark;
+        }
+
+        &:before {
+            background: $base-border-color-white;
+        }
+    }
+
+    ul {
+        @include display(flex);
+        @include align-items(top);
+        @include justify-content(space-around);
+
+        li {
+            text-align: center;
+
+            &:nth-child(2n) {
+                width: 1px;
+                height: 94px;
+                background: $base-border-color-white;
+            }
+
+            a {
+                color: rgba(#fff, 0.5);
+                font-family: $heading-font-family;
+
+                img {
+                    height: 56px;
+                    width: auto;
+                    margin-bottom: 8px;
+                    opacity: 0.4;
+                    transition: $base-transition;
+                }
+
+                span {
+                    display: block;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 1;
+                    }
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

@@ -110,16 +110,34 @@
                     height: auto;
                     margin-top: -28px;
                 }
+
+                .scala-version {
+                  span {
+                    display: block;
+                    color: #fff;
+                    font-family: $heading-font-family;
+                  }
+
+                  span:first-child {
+                    font-size:  1.375rem;
+                    margin-top: -6px;
+                  }
+
+                  span:last-child {
+                    font-size: 1.5rem;
+                    margin-top: -8px;
+                  }
+                }
             }
         }
     }
     @include bp(medium) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: $padding-xlarge;
 
         .resources {
             .download {
-                margin-top: 130px;
+                margin-top: 140px;
             }
 
             .api-docs {
@@ -131,7 +149,7 @@
                 @include span-columns(12);
 
                 .button {
-                    border-radius: $border-radius-base;
+                    border-radius: 100px;
                     padding: ($padding-small / 2) ($padding-large / 2);
                     font-size: $base-font-size;
                     text-align: center;
