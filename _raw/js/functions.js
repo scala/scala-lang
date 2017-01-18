@@ -5,3 +5,7 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 });
+
+$('.scala-item').click(function(){
+    $('.scala-item-expanded').slideToggle('slow');
+});

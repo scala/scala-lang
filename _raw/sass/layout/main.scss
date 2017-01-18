@@ -5,28 +5,5 @@
 #site-main {
     section {
         padding: $padding-xlarge 0;
-
-        h2 {
-            color: #fff;
-            position: relative;
-            margin-bottom: $padding-large;
-            font-size: 1.5rem;
-            text-align: center;
-
-            span {
-              padding: 0 30px;
-              position: relative;
-              z-index: 5;
-            }
-
-            &:before {
-                content: "";
-                display: block;
-                height: 1px;
-                position: absolute;
-                top: 50%;
-                width: 100%;
-            }
-        }
     }
 }

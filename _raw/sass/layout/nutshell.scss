@@ -1,0 +1,56 @@
+// NUTSHELL
+//------------------------------------------------
+//------------------------------------------------
+.nutshell {
+    background: $gray;
+
+    .heading-line {
+        h2 {
+            span {
+                background: $gray;
+            }
+
+            &:before {
+                background: $base-border-color-white;
+            }
+        }
+    }
+    .scala-items-list {
+      .scala-item {
+        @include span-columns(4);
+        @include omega(3n);
+        padding: $padding-small;
+        text-align: center;
+        transition: $base-transition;
+        h3 {
+          color: #fff;
+          font-size: $font-size-h3;
+          text-transform: uppercase;
+          font-family: $base-font-family;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: $base-font-color-inverse;
+          font-size: $font-size-large;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+          cursor: pointer;
+          background: $gray-dark;
+        }
+
+        &.active {
+          background: $gray-dark;
+        }
+      }
+    }
+
+    .scala-item-expanded {
+        display: none;
+        height: 400px;
+        background: $gray-dark;
+    }
+}

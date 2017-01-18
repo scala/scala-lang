@@ -5,16 +5,6 @@
 .ides {
     background: $gray-dark;
 
-    h2 {
-        span {
-            background: $gray-dark;
-        }
-
-        &:before {
-            background: $base-border-color-white;
-        }
-    }
-
     ul {
         @include display(flex);
         @include align-items(top);
@@ -36,13 +26,14 @@
                 img {
                     height: 56px;
                     width: auto;
-                    margin-bottom: 8px;
+                    margin-bottom: 6px;
                     opacity: 0.4;
                     transition: $base-transition;
                 }
 
                 span {
                     display: block;
+                    font-size: $font-size-small;
                 }
 
                 &:hover {

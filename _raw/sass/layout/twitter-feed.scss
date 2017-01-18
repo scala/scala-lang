@@ -5,14 +5,15 @@
 .twitter-feed {
     background: $brand-tertiary;
 
-    h2 {
+    .heading-line {
+        h2 {
+            span {
+                background: $brand-tertiary;
+            }
 
-        span {
-            background: $brand-tertiary;
-        }
-
-        &:before {
-            background: rgba(#fff, 0.5);
+            &:before {
+                background: rgba(#fff, 0.5);
+            }
         }
     }
 
@@ -47,10 +48,11 @@
                         margin-left: 64px;
 
                         .header-tweet {
-                          @include display(flex);
-                          @include flex-direction(row);
-                          @include align-items(top);
-                          @include justify-content(space-between);
+                            @include display(flex);
+                            @include flex-direction(row);
+                            @include align-items(top);
+                            @include justify-content(space-between);
+
                             ul {
                                 li {
                                     padding: 0;
@@ -82,8 +84,8 @@
                             }
 
                             .date {
-                              font-size: $font-size-small;
-                              color: $base-font-color-light;
+                                font-size: $font-size-small;
+                                color: $base-font-color-light;
                             }
                         }
 
