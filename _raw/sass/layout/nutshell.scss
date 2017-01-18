@@ -58,22 +58,5 @@
         display: none;
         height: 400px;
         background: $gray-dark;
-        width: 100%;
-        position: absolute;
-    }
-
-    .call-to-action {
-        p {
-            color: $base-font-color-inverse;
-
-            a {
-              color: $base-font-color-inverse;
-              &:active,
-              &:focus,
-              &:hover {
-                color: #fff;
-              }
-            }
-        }
     }
 }

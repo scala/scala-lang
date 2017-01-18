@@ -7,6 +7,7 @@ body {
     font-size: $base-font-size;
     font-weight: $font-regular;
     line-height: $base-line-height;
+    @include font-smoothing(on);
 }
 
 h1,
@@ -17,8 +18,12 @@ h5,
 h6 {
     font-family: $heading-font-family;
     line-height: $heading-line-height;
-    font-weight: $font-regular;
+    font-weight: $font-semibold;
     margin: 0;
+}
+
+h2 {
+  font-weight: $font-regular;
 }
 
 p {

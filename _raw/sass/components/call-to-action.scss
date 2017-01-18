@@ -16,6 +16,7 @@
 
     p {
         font-size: $font-size-small;
+        color: $base-font-color-inverse;
 
         &.align-top {
             margin-bottom: 12px;
@@ -27,6 +28,12 @@
 
         a {
           text-decoration: underline;
+          color: $base-font-color-inverse;
+          &:active,
+          &:focus,
+          &:hover {
+            color: #fff;
+          }
         }
     }
 }

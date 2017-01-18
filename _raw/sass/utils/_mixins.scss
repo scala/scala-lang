@@ -35,3 +35,16 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
+// Font
+//------------------------------------------------
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
