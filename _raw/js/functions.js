@@ -6,6 +6,7 @@ $(document).ready(function () {
 	});
 });
 
-$('.scala-item').click(function(){
+// Expanded
+$('.open-scala-expanded').click(function(){
     $('.scala-item-expanded').slideToggle('slow');
 });
