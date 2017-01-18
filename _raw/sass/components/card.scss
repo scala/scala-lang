@@ -35,12 +35,14 @@
                 color: $base-font-color-inverse;
                 display: inline-block;
 
-                &.online-courses-price {
+                &.online-courses-price,
+                &.event-location {
                     font-size: $font-size-xsmall;
                     text-transform: uppercase;
                 }
 
-                &.online-courses-date {
+                &.online-courses-date,
+                &.date-event {
                     font-size: $font-size-small;
                 }
 

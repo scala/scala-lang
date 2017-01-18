@@ -12,6 +12,7 @@
 
         li {
             text-align: center;
+            position: relative;
 
             &:nth-child(2n) {
                 width: 1px;
@@ -20,6 +21,7 @@
             }
 
             a {
+
                 color: rgba(#fff, 0.5);
                 font-family: $heading-font-family;
 
@@ -34,6 +36,17 @@
                 span {
                     display: block;
                     font-size: $font-size-small;
+                }
+
+                .bullet {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  background: #333;
+                  border-radius: 100%;
+                  width: 24px;
+                  height: 24px;
+                  z-index: 10;
                 }
 
                 &:hover {
