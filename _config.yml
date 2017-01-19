@@ -23,3 +23,5 @@ collections:
     output: false
   trainings:
     output: false
+  events:
+    output: false
