@@ -60,6 +60,17 @@ scalaIDEs:
 ecosystemTitle: "Scala ecosystem"
 ecosystemDescription: "The Scala Library Index (or Scaladex) is a representation of a map of all published Scala libraries. With Scaladex, a developer can now query more than 100,000 releases of Scala libraries. Scaladex is officially supported by Scala Center."
 
+# Discourse forums
+discourseForums:
+  - title: Scala Users Discourse
+    subtitle: for general Scala questions, discussion and library announcements
+    url: https://users.scala-lang.org/
+    cssClass: scala-user-discourse
+  - title: Scala Contributors Discourse
+    subtitle: for Scala contributions, language evolution dicussions, standard library, Scala platform evolution discussions and more
+    url: https://contributors.scala-lang.org/
+    cssClass: scala-contributors-discourse
+
 # Gitter channels
 gitterChannels:
   - name: scala

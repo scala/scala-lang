@@ -224,6 +224,78 @@
     <a href="/blog/" class="button">View our blog</a>
   </div>
 </section>
+<!-- Talk to us -->
+<section class="talk-to-us">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>Talk to us!</span></h2>
+    </div>
+    <div class="discourse">
+      <h3>Mailing lists / forums</h3>
+      {% for forum in page.discourseForums %}
+        <a href="{{forum.url}}" class="{{forum.cssClass}}">
+          <img src="/resources/img/frontpage/discourse-logo.png" alt="">
+          <h4>{{forum.title}}</h4>
+          <p>{{forum.subtitle}}</p>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="gitter">
+      <h3>Real-time (topic-specialized) chat</h3>
+      {% assign modLimit = page.gitterChannels.size | modulo: 2 %}
+      {% capture channelLimit %}
+        {% if modLimit != 0 %}
+          {{page.gitterChannels.size | minus: 1}}
+        {% else %}
+          {{page.gitterChannels.size}}
+        {% endif %}
+      {% endcapture %}
+      {% for channel in page.gitterChannels limit: channelLimit %}
+        {% if forloop.first %}
+          <ul class="first">
+        {% endif %}
+
+        <li>
+          <a href="{{channel.url}}">
+            <img src="/resources/img/frontpage/gitter-logo.png" alt="">
+            <span>{{channel.name}}</span>
+          </a>
+        </li>
+
+        {% assign halfLength = forloop.length | divided_by: 2 | floor %}
+        {% if forloop.index == halfLength %}
+          </ul>
+          <ul class="second">
+        {% endif %}
+
+        {% if forloop.last %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="communities">
+      <h3>Communities</h3>
+      <ul>
+        <li>
+          <a href="#"><img src="img/typelevel-logo.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/scalabridge-logo.png" alt=""></a>
+        </li>
+      </ul>
+    </div>
+    <div class="social">
+      <ul>
+        <li>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!-- Twitter feed -->
 {% include twitter-feed.html %}
