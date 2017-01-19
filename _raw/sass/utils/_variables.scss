@@ -13,7 +13,7 @@ $gray-dark: #073642;
 $gray: #15414C;
 $gray-li: #244E58;
 $gray-light: #D0D9DA;
-$gray-lighter: rgba($gray-darker, 0.06);
+$gray-lighter: #F0F3F3;
 //-------------------------------------------------
 $headings-font-color: $gray-darker;
 $base-font-color: #4A5659;
@@ -83,3 +83,5 @@ $bp-xlarge: 1130px;
 $base-duration: 350ms;
 $base-timing: ease;
 $base-transition: all $base-duration $base-timing;
+
+$box-shadow-item: rgba($gray-darker, 0.20) 0 1px 12px;

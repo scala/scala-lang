@@ -22,4 +22,10 @@
         @include span-columns(12);
       }
     }
+
+    .online-courses {
+      @include bp(large) {
+        margin-bottom: 40px;
+      }
+    }
 }
