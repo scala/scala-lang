@@ -1,0 +1,26 @@
+// TLAK TO US
+//------------------------------------------------
+//------------------------------------------------
+
+.talk-to-us {
+    .heading-line {
+        h2 {
+            color: $gray-dark;
+
+            span {
+                background: #fff;
+            }
+
+            &:before {
+                background: $base-border-color-gray;
+            }
+        }
+    }
+
+    h3 {
+      text-align: center;
+      color: $gray-dark;
+      font-size: $font-size-medium;
+    }
+
+}
