@@ -4,234 +4,278 @@
 {% include headertop.html %}
 {% include headerbottom.html %}
 
+<!-- Header -->
+  <header id="site-header" class="header-home">
+    <div class="header-background" style="background:url('/resources/img/frontpage/background-header-home.jpg')">
+      <div class="wrap">
+        <!-- Navigation -->
+        <nav class="navigation" role="menu">
+          <a href="#" class="navigation-bdand">
+            <img src="/resources/img/frontpage/scala-logo-white@2x.png" alt="">
+          </a>
+          <div class="navigation-panel-button">
+            <i class="fa fa-bars"></i>
+          </div>
+          <ul class="navigation-menu">
+            {% for navItem in site.data.nav-header %}
+            <li class="navigation-menu-item">
+              <a href="{{navItem.url}}">{{navItem.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <!-- Inner Text -->
+        <div class="inner-text">
+          <h1>{{page.headerTitle}}</h1>
+          <p>{{page.headerSubtitle}}</p>
+          <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle | upcase}}</a>
+        </div>
+      </div>
+    </div>
+    <!-- Scala Main Resources -->
+    <div class="scala-main-resources">
+      <div class="wrap">
+        <div class="resources">
+          <div class="download">
+            <a href="{{page.gettingStarted.mainUrl}}" class="button">{{page.gettingStarted.mainTitle | upcase}}</a>
+            <ul>
+              <li><a href="{{page.gettingStarted.subtitleLink}}">{{page.gettingStarted.subtitle}}</a></li>
+              {% for link in page.gettingStarted.links %}
+                <li><a href="{{link.url}}">{{link.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="api-docs">
+            <a href="{{page.apiDocs.mainUrl}}" class="button">{{page.apiDocs.mainTitle | upcase}}</a>
+            <ul>
+              <li><a href="{{page.apiDocs.subtitleLink}}">{{page.apiDocs.subtitle}}</a></li>
+              {% for link in page.apiDocs.links %}
+                <li><a href="{{link.url}}">{{link.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="scala-brand-circle">
+            <div class="circle-solid">
+              <img src="/resources/img/frontpage/scala-spiral.png" alt="">
+              <div class="scala-version">
+                <span>Scala</span>
+                <span>{{page.currentScalaVersion}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
 <main id="site-main">
+<!-- IDEs for Scala -->
+<section class="ides">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>IDEs for Scala</span></h2>
+    </div>
+    <ul>
+      {% for ide in page.scalaIDEs %}
+      <li>
+        <a class="masterTooltip" href="{{ide.url}}">
+          {% if ide.ensime == true %}
+            <span class="bullet">
+              <img src="/resources/img/frontpage/icon-ensime.png" alt="">
+            </span>
+          {% endif %}          
+          <img src="{{ide.icon}}" alt="{{ide.name}}">
+          <span>{{ide.name}}</span>
+        </a>
+      </li>
+      <li></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- Scala in a Nutshell -->
+<section class="nutshell">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>Scala in a Nutshell</span></h2>
+      <div class="sub-heading">
+        <p> click the boxes below to see Scala in action! </p>
+      </div>
+    </div>
+  </div>
+  <div class="scala-items-list">
+    <div class="wrap">
+      {% for scalaItem in site.scala_items %}
+        <div class="scala-item">
+          <h3>{{scalaItem.shortTitle}}</h3>
+          <p>{{scalaItem.shortDescription}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="call-to-action action-medium">
+    <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle}}</a>
+    <p class="align-bottom">or visit the <a href="/documentation/">Scala Documentation</a></p>
+  </div>
+</section>
+
+<!-- Courses -->
+<section class="courses">
+      <div class="wrap">
+        <!-- Online -->
+        <div class="online-courses">
+          <div class="heading-line">
+            <h2><span>Online Courses</span></h2>
+          </div>
+          <div class="course-items-list">
+            <a href="#" class="course-item card">
+              <img src="img/coursera-icon.png" alt="">
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="course-item card">
+              <img src="img/coursera-icon.png" alt="">
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="course-item card">
+              <img src="img/edx-icon.png" alt="">
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="course-item card">
+              <img src="img/coursera-icon.png" alt="">
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="course-item card">
+              <img src="img/coursera-icon.png" alt="">
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="call-to-action action-medium">
+            <p class="align-top">Visit all the <a href="#">Online Courses</a> courses</p>
+          </div>
+        </div>
+        <!-- Training -->
+        <div class="upcoming-training">
+          <div class="heading-line">
+            <h2><span>Upcoming Training</span></h2>
+          </div>
+          <div class="training-items-list">
+            <a href="#" class="training-item card">
+              <span class="calendar">
+                <span>JAN</span>
+                <span>9</span>
+              </span>
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="training-item card">
+              <span class="calendar">
+                <span>JAN</span>
+                <span>9</span>
+              </span>
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="training-item card">
+              <span class="calendar">
+                <span>JAN</span>
+                <span>9</span>
+              </span>
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="training-item card">
+              <span class="calendar">
+                <span>JAN</span>
+                <span>9</span>
+              </span>
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+            <a href="#" class="training-item card">
+              <span class="calendar">
+                <span>JAN</span>
+                <span>9</span>
+              </span>
+              <div class="card-text">
+                <h4>Functional Programming Principles in Scala</h4>
+                <ul>
+                  <li class="online-courses-price">Free (without certificate)</li>
+                  <li class="dot">•</li>
+                  <li class="online-courses-date">New sessions starting every 2 weeks!</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="call-to-action action-medium">
+            <p class="align-top">See <a href="#">ore training</a> or <a href="#">add one to our feed</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Twitter feed -->
 {% include twitter-feed.html %}
 </main>
 
-<div class="splash">
-  <div class="darkblue-overlay">&nbsp;</div>
-  <div class="container">
-    <div class="row">
-      <div class="span12">
-        <div class="scala-logo">
-          <img src="{{ site.baseurl }}/resources/img/scala-logo-white.png" alt="Scala Logo" />
-        </div>
-        {% include navbar.html %}
-      </div>
-    </div>
-    <div class="row">
-      <div class="span12">
-        <div class="splash-text ontop">
-          <h2 style="font-weight: 700;">Object-Oriented Meets Functional</h2>
-          <p class="splash-pitch">
-            Have the best of both worlds. Construct elegant class hierarchies
-            for maximum code reuse and extensibility, implement their behavior using
-            higher-order functions. Or anything in-between.
-          </p>
-          <a class="learn-more-btn" href="{{ site.baseurl }}/what-is-scala.html">Learn More</a>
-          <div class="marker">
-            <div class="dot"></div>
-            <div class="pulse"></div>
-          </div>
-          <p>&nbsp;</p>
-          <div class="tip">
-            Scala began life in 2003, created by Martin Odersky and his research group at EPFL, next to Lake Geneva and the Alps, in Lausanne, Switzerland. Scala has since grown into a mature open source programming language, used by hundreds of thousands of developers, and is developed and maintained by scores of people all over the world.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container central">
-  <div class="translucent-circle"></div>
-  <div class="opaque-circle"></div>
-  <a class="central-btn download" id="main-download-button" href="{{ site.baseurl }}/download/">Download</a>
-  <a class="central-btn api" href="http://www.scala-lang.org/api/">API Docs&nbsp;&nbsp;&nbsp;&nbsp;</a>
-  <div class="big-scala-spiral"><img src="{{ site.baseurl }}/resources/img/smooth-spiral.png" alt="Spiral" /></div>
-  <div class="central-btn scala-version"><span class="superbold">Scala</span><br/>{{ site.scalaversion }}</div>
-</div>
-
-<div class="darkbluebar">
-  <div class="container" style="position: relative;">
-    <div class="left-side">
-      <p class="getting-started"><a href="{{ site.baseurl }}/documentation/getting-started.html"><b>Getting Started</b></a></p>
-      <p class="dev-releases"><img src="{{ site.baseurl }}/resources/img/gears.png" alt="gears icon" /><a href="{{ site.baseurl }}/download/">&nbsp;Milestones, nightlies, etc.</a></p>
-      <p class="all-releases"><img src="{{ site.baseurl }}/resources/img/list.png" alt="list icon" /><a href="{{ site.baseurl }}/download/all.html">&nbsp;All Previous Releases</a></p>
-    </div>
-    <div class="right-side">
-      <p class="getting-started"><a href="http://www.scala-lang.org/api/current/"><b>Current API Docs</b></a></p>
-      <p class="dev-releases"><img src="{{ site.baseurl }}/resources/img/list.png" alt="list icon" /><a href="{{ site.baseurl }}/documentation/api.html">&nbsp;API Docs (other versions)</a></p>
-      <p class="dev-releases"><img src="{{ site.baseurl }}/resources/img/books.png" alt="books icon" /><a href="{{ site.baseurl }}/documentation/">&nbsp;Scala Documentation</a></p>
-      <p class="all-releases"><img src="{{ site.baseurl }}/resources/img/books.png" alt="books icon" /><a href="{{ site.baseurl }}/files/archive/spec/2.12/">&nbsp;Language Specification</a></p>
-    </div>
-  </div>
-</div>
-
- <div class="bullet-point-box">
-
-  <div class="bullet-row-1-wrap">
-    <div class="container">
-      <div class="row">
-        <div class="span12 bullet-point">
-          <h2><span>Scala in a Nutshell</span></h2>
-          <p class="click">&nbsp;click the boxes below to see Scala in action!&nbsp;</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span4 bullet-point" id="java-interop">
-          <h3>Seamless Java Interop</h3>
-          <p>Scala runs on the JVM, so Java and Scala stacks can be freely mixed for totally seamless integration.</p>
-        </div>
-        <div class="span4 bullet-point" id="type-inference">
-          <h3>Type Inference</h3>
-          <p>So the type system doesn’t feel so static. Don’t work for the type system. Let the type system work for you!</p>
-        </div>
-        <div class="span4 bullet-point" id="concurrency-distribution">
-          <h3>Concurrency<br>& Distribution</h3>
-          <p>Use data-parallel operations on collections, use actors for concurrency and distribution, or futures for asynchronous programming.</p>
-        </div>
-      </div>
-      <div class="code-snippet-arrow"></div>
-    </div>
-  </div>
-
-  <div id="code-snippet-row1">
-    <div class="container">
-      <div class="row">
-      </div>
-    </div>
-  </div>
-
-  <div class="bullet-row-2-wrap">
-    <div class="container">
-      <div class="row">
-        <div class="span4 bullet-point" id="traits">
-          <h3>Traits</h3>
-          <p>Combine the flexibility of Java-style interfaces with the power of classes. Think principled multiple-inheritance.</p>
-        </div>
-        <div class="span4 bullet-point" id="pattern-matching">
-          <h3>Pattern Matching</h3>
-          <p>Think “switch” on steroids. Match against class hierarchies, sequences, and more.</p>
-        </div>
-        <div class="span4 bullet-point" id="higher-order-functions">
-          <h3>Higher-Order Functions</h3>
-          <p>Functions are first-class objects. Compose them with guaranteed type safety. Use them anywhere, pass them to anything.</p>
-        </div>
-      </div>
-      <div class="code-snippet-arrow"></div>
-    </div>
-  </div>
-
-  <div id="code-snippet-row2">
-    <div class="container">
-      <div class="row">
-      </div>
-    </div>
-  </div>
-
-  <div class="where-to-learn-more">
-    <div class="container">
-      <div class="row">
-        <div class="span12">
-          <a class="learn-more-btn" href="{{ site.baseurl }}/what-is-scala.html">Learn More</a>
-          <p>or visit the <a class="italicize" href="{{ site.baseurl }}/documentation">Scala Documentation</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- hidden code-snippet content -->
-<div id="hidden-java-interop">{% include bullet-java-interop.html %}</div>
-<div id="hidden-type-inference">{% include bullet-type-inference.html %}</div>
-<div id="hidden-concurrency-distribution">{% include bullet-concurrency-distribution.html %}</div>
-<div id="hidden-traits">{% include bullet-traits.html %}</div>
-<div id="hidden-pattern-matching">{% include bullet-pattern-matching.html %}</div>
-<div id="hidden-higher-order-functions">{% include bullet-higher-order-functions.html %}</div>
-
-<div class="events">
-  <div class="container">
-    <div class="row">
-      <div class="span12 upcoming-events">
-        <h2><span>Upcoming Events</span></h2>
-      </div>
-
-      <div class="span12" id="eventspane">
-      </div>
-    </div>
-  </div>
-
-   <div class="add-event"><a href="{{ site.baseurl }}/events">See more events</a> or <a href="https://github.com/scala/scala-lang/tree/master/events">add one to our feed</a></div>
-
-</div>
-
-<div class="training">
-  <div class="container">
-    <div class="row">
-      <div class="span12 upcoming-training">
-        <h2><span>Upcoming Training</span></h2>
-      </div>
-      <div class="span12" id="trainingspane">
-        <div class="add-training"><a href="{{ site.baseurl }}/training">See more trainings</a> or <a href="https://github.com/scala/scala-lang/tree/master/training">add one to our feed</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="news">
-  <div class="container">
-    <div class="row">
-      <div class="span12">
-      </div>
-    </div>
-    <div class="row">
-      {% include news-feed.html %}
-    </div>
-  </div>
-</div>
-
-<div class="epfl-picture-box">
-  <div class="container">
-  </div>
-</div>
-
 {% include footer.html %}
-
-<script>
-console.log("tweets");
-$('#tweet-feed').tweetMachine('', { 
-    backendScript: '/resources/php/getFromTwitter.php',
-    endpoint: 'statuses/user_timeline',
-    user_name: 'scala_lang',
-    include_retweets: true,
-    exclude_replies: false,
-    limit: 6,
-    pageLimit: 3,
-    autoRefresh: false,
-    animateIn: false,
-    tweetFormat: `
-    <div class="item-tweet">
-            <img src="" class="avatar" alt="">
-            <div class="tweet-text">
-              <div class="header-tweet">
-                <ul>
-                  <li class="user"><a href="" class="userLink"></a></li>
-                  <li class="username"><a href="" class="usernameLink"></a></li>
-                </ul>
-                <span class="date"></span>
-              </div>
-              <div class="main-tweet"></div>
-            </div>
-          </div>
-      `
-}, function(tweets, tweetsDisplayed) {
-        console.log("Finishing loading tweets");
-        $('.slider-twitter').unslider({
-          });        
-    });
-
-</script>

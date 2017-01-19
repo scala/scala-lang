@@ -47,32 +47,21 @@
     </div> <!-- container -->
     </div> <!-- footer -->
 
-    <!-- prettify  js -->
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- tweet feed -->
+    <script src="{{ site.baseurl }}/resources/js/tweetMachine-update.js" type="text/javascript" ></script>
+    
+    <!-- prettify js -->
     <script src="{{ site.baseurl }}/resources/js/vendor/prettify/prettify.js" type="text/javascript" ></script>
     <script src="{{ site.baseurl }}/resources/js/vendor/prettify/lang-scala.js" type="text/javascript" ></script>
-
-    <!-- jquery js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" integrity="sha384-lifoBlbdwizTl3Yoe612uhI3AcOam/QtWkozF7SuiACaf5UJl5reOYu4MigVxrCH" crossorigin="anonymous"></script>
-    <script src="{{ site.baseurl }}/resources/js/vendor/jquery.stellar.min.js" type="text/javascript" ></script>
-    <script src="{{ site.baseurl }}/resources/js/tweetMachine-update.js" type="text/javascript" ></script>
-
-    <!-- modernizr js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" integrity="sha256-zyXsGPIj9MUc4RKKQuZEzcIkTYj4nRpRRA2dvlH07+g=" crossorigin="anonymous"></script>
-
-    <!-- retina js -->
-    <script src="{{ site.baseurl }}/resources/js/vendor/retina.js" type="text/javascript" ></script>
-
-    <!-- backstretch js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js" integrity="sha256-V52dl3OFjoY+fYAkifhLJ7f1V7mZAKPGCQoWzoQxrEU=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js" integrity="sha384-qJ8AGIuPqPo4I2zhyRYO6vQaJrGBbTpIiXGihDsGpfMCHJD0IKH0gkPQToGD5ek3" crossorigin="anonymous"></script>
 
     <!-- unslider js -->
     <script src="{{ site.baseurl }}/resources/js/vendor/unslider.js" type="text/javascript" ></script>
 
     {% unless page.layout == 'page-no-toc' %}
-    <!-- table of contents JS -->
+    <!-- table of contents JS
     <script src="{{ site.baseurl }}/resources/js/vendor/toc.js" type="text/javascript" ></script>
     <script type="text/javascript">
       $(document).ready(function(){
@@ -105,6 +94,6 @@
     {% endunless %}
 
     <!-- Custom javascript -->
-    <script src="{{ site.baseurl }}/resources/js/main.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/resources/js/functions.js" type="text/javascript"></script>
   </body>
 </html>
