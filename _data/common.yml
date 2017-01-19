@@ -2,8 +2,9 @@
 githubUrl: https://github.com/scala/scala
 twitterUrl: https://twitter.com/scala_lang
 
-
 texts:
   onlineCoursesFree: Free (without certificate)
   onlineCoursesPaid: Paid (with certificate)
   courseraLaunchPeriod: New sessions starting every 2 weeks!
+
+copyrightText: "Copyright © 2002-2016 École Polytechnique Fédérale <br>Lausanne (EPFL) Lausanne, Switzerland"

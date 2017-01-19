@@ -1,4 +1,5 @@
 - title: Documentation
+  class: documentation
   links:
     - title: Getting Started
       url: /documentation/getting-started/
@@ -11,12 +12,14 @@
     - title: Language Specification
       url: "http://scala-lang.org/files/archive/spec/2.12/"
 - title: Download
+  class: download
   links: 
     - title: Current Version
       url: "/download/"
     - title: All versions
       url: "/download/all/"
 - title: Community
+  class: community
   links:
     - title: Community
       url: "/community/"
@@ -29,12 +32,14 @@
     - title: "The Scala Center"
       url: https://scala.epfl.ch/
 - title: Contribute
+  class: contribute
   links: 
     - title: How to help
       url: "/contribute/"
     - title: Report an Issue
       url: "/contribute/bug-reporting-guide/"
 - title: Scala
+  class: scala
   links:
     - title: Blog
       url: "/blog/"
@@ -42,3 +47,10 @@
       url: "/conduct/"
     - title: License
       url: "/license/"
+- title: Social
+  class: social
+  links:
+    - title: GitHub
+      url: "https://github.com/scala/scala"
+    - title: Twitter
+      url: "https://twitter.com/scala_lang"

@@ -245,7 +245,7 @@
       {% assign modLimit = page.gitterChannels.size | modulo: 2 %}
       {% capture channelLimit %}
         {% if modLimit != 0 %}
-          {{page.gitterChannels.size | minus: 1}}
+          {{page.gitterChannels.size | minus: 1}}
         {% else %}
           {{page.gitterChannels.size}}
         {% endif %}
@@ -254,7 +254,6 @@
         {% if forloop.first %}
           <ul class="first">
         {% endif %}
-
         <li>
           <a href="{{channel.url}}">
             <img src="/resources/img/frontpage/gitter-logo.png" alt="">
@@ -276,21 +275,20 @@
     <div class="communities">
       <h3>Communities</h3>
       <ul>
-        <li>
-          <a href="#"><img src="img/typelevel-logo.png" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="img/scalabridge-logo.png" alt=""></a>
-        </li>
+        {% for community in page.communities %}
+          <li>
+            <a href="{{community.url}}"><img src="{{community.icon}}" alt="{{community.name}}"></a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
     <div class="social">
       <ul>
         <li>
-          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="{{site.data.common.twitterUrl}}"><i class="fa fa-twitter"></i></a>
         </li>
         <li>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="{{site.data.common.githubUrl}}"><i class="fa fa-github"></i></a>
         </li>
       </ul>
     </div>
@@ -299,6 +297,16 @@
 
 <!-- Twitter feed -->
 {% include twitter-feed.html %}
+<!-- Spire -->
+<section class="spire"></section>
+<!-- Supporters -->
+<section class="maintenance">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>Twitter Feed</span></h2>
+    </div>
+  </div>
+</section>
 </main>
 
 {% include footer.html %}

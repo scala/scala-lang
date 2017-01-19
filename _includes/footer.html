@@ -1,51 +1,21 @@
-
-  <div class="footer">
-  <div class="container">
-    <ul>
-      <li><h5>Documentation</h5></li>
-      <li><a href="{{ site.baseurl }}/documentation/getting-started.html">Getting Started</a></li>
-      <li><a href="http://www.scala-lang.org/api/current/index.html#package">API</a></li>
-      <li><a href="http://docs.scala-lang.org/overviews/">Overviews/Guides</a></li>
-      <li><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></li>
-      <li><a href="{{ site.baseurl }}/files/archive/spec/2.12/">Language Specification</a></li>
-    </ul>
-    <ul>
-      <li><h5>Download</h5></li>
-        <li><a href="/download/">Current Version</a></li>
-	<li><a href="/download/all.html">All Versions</a></li>
-    </ul>
-    <ul>
-      <li><h5>Community</h5></li>
-      <li><a href="{{ site.baseurl }}/community/">Community</a></li>
-      <li><a href="{{ site.baseurl }}/community/index.html#mailing-lists">Mailing Lists</a></li>
-      <li><a href="{{ site.baseurl }}/community/index.html#chat-rooms">Chat Rooms &amp; More</a></li>
-      <li><a href="{{ site.baseurl }}/community/index.html#community-libraries-and-tools">Libraries and Tools</a></li>
-      <li><a href="https://scala.epfl.ch/">The Scala Center</a></li>
-    </ul>
-    <ul>
-      <li><h5>Contribute</h5></li>
-      <li><a href="{{ site.baseurl }}/contribute">How to Help</a></li>
-      <li><a href="{{ site.baseurl }}/contribute/bug-reporting-guide.html">Report an Issue</a></li>
-    </ul>
-    <ul>
-      <li><h5>Scala</h5></li>
-      <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-      <li><a href="{{ site.baseurl }}/news">Archive</a></li>
-      <li><a href="{{ site.baseurl }}/conduct.html">Code of Conduct</a></li>
-      <li><a href="{{ site.baseurl }}/license.html">License</a></li>
-    </ul>
+<footer id="site-footer">
+    <div class="wrap">
+      <div class="site-footer-top">
+        {% for item in site.data.footer %}
+          <ul class="{{item.class}}">
+            <li><h3>{{item.title}}</h3></li>
+            {% for link in item.links %}
+              <li><a href="{{link.url}}">{{link.title}}</a></li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+      <div class="site-footer-bottom">
+        <p>{{site.data.common.copyrightText}}</p>
+        <img src="/resources/img/frontpage/scala-logo-white.png" alt="">
+      </div>
     </div>
-    <div class="container">
-      <div class="copyright">
-        <a style="float: left; margin-right: 8px;" href="http://www.epfl.ch"><img src="{{ site.baseurl }}/resources/img/epfl-logo.png" alt="EPFL logo" /></a>
-        <p style="float: left;"><br/>Copyright &copy; 2002-<span class="current-year"></span> École Polytechnique Fédérale de Lausanne
-        (EPFL)<br/> Lausanne, Switzerland</p>
-      </div>
-      <div class="scala-logo-footer">
-        <img src="{{ site.baseurl }}/resources/img/scala-logo-red-footer.png" alt="Scala footer logo" />
-      </div>
-    </div> <!-- container -->
-    </div> <!-- footer -->
+  </footer>
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

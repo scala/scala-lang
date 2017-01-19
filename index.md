@@ -94,9 +94,11 @@ gitterChannels:
 
 # Communities
 communities:
-  - icon: /resources/img/communities/typelevel.png
+  - name: Typelevel
+    icon: /resources/img/frontpage/typelevel-logo.png
     url: http://typelevel.org/
-  - icon: /resources/img/communities/scalabridge.png
+  - name: ScalaBridge
+    icon: /resources/img/frontpage/scalabridge-logo.png
     url: http://www.scalabridge.org/
 ---
 
