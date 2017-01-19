@@ -19,3 +19,7 @@ future: true
 collections:
   scala_items:
     output: false
+  online_courses:
+    output: false
+  trainings:
+    output: false
