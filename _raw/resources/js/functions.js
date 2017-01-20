@@ -35,6 +35,9 @@ $(document).ready(function() {
     });
 });
 
+// Highlight
+hljs.initHighlightingOnLoad();
+
 // Show Blog
 $(".hide").click(function() {
     $(".new-on-the-blog").hide();
