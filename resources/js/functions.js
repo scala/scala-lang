@@ -1,10 +1,15 @@
 // Sliding Panel
 $(document).ready(function () {
-	console.log("test custom after");
 	$('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function (e) {
 		$('.navigation-menu,.navigation-fade-screen').toggleClass('is-visible');
 		e.preventDefault();
 	});
+});
+
+
+
+$(".hide").click(function(){
+    $(".new-on-the-blog").hide();
 });
 
 // Expanded
@@ -13,7 +18,7 @@ $('.open-scala-expanded').click(function(){
 });
 
 // Tweet feed in frontpage
-$('#tweet-feed').tweetMachine('', { 
+$('#tweet-feed').tweetMachine('', {
     backendScript: '/resources/php/getFromTwitter.php',
     endpoint: 'statuses/user_timeline',
     user_name: 'scala_lang',
@@ -40,5 +45,5 @@ $('#tweet-feed').tweetMachine('', {
       `
 }, function(tweets, tweetsDisplayed) {
         $('.slider-twitter').unslider({
-          });        
+          });
     });

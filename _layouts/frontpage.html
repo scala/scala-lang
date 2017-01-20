@@ -7,6 +7,13 @@
 <!-- Header -->
   <header id="site-header" class="header-home">
     <div class="header-background" style="background:url('/resources/img/frontpage/background-header-home.jpg')">
+      <div class="new-on-the-blog">
+        <p>New on the blog:
+          {% assign newPost = site.posts.first %}
+          <a href="{{newPost.url}}">{{newPost.title}}</a>          
+        </p>
+        <span class="hide"><i class="fa fa-close"></i></span>
+      </div>
       <div class="wrap">
         <!-- Navigation -->
         <nav class="navigation" role="menu">
