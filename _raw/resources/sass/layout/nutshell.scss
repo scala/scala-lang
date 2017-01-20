@@ -25,6 +25,8 @@
                      @include span-columns(12);
                 }
 
+                min-height: 165px;
+
                 h3 {
                     color: #fff;
                     font-size: $font-size-h3;
