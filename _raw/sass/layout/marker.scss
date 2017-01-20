@@ -10,10 +10,13 @@
     right: -50px;
     top: 100px;
     border-radius: 100%;
+    cursor: pointer;
 
     &:hover {
-        .info-marker {
-            display: block;
+        .info-marker,
+        .arrow {
+            visibility: visible;
+            opacity: 1;
             transition: $base-transition;
         }
     }
@@ -33,23 +36,25 @@
     .info-marker {
         width: 472px;
         position: absolute;
-        left: -10px;
+        left: -13px;
         top: 30px;
         font-size: $font-size-small;
         color: #fff;
         font-family: $heading-font-family;
         background: rgba($gray-dark, 0.8);
-        padding: 14px;
-        display: none;
+        padding: 20px;
+        visibility: hidden;
+        opacity: 0;
 
-        &:before {
-            content: "";
+
+        .arrow {
             position: absolute;
-            background: url("../resources/img/frontpage/arrow.png") no-repeat left top;
+            background: url("../resources/img/frontpage/arrow.png") no-repeat;
             left: 0;
-            top: 0;
+            top: -16px;
             width: 23px;
             height: 13px;
             z-index: 1;
         }
     }
+}
