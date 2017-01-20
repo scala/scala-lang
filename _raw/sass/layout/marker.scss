@@ -1,0 +1,55 @@
+// MARKER
+//------------------------------------------------
+//------------------------------------------------
+
+.marker {
+    position: absolute;
+    width: 16px;
+    height: 8px;
+    background: #A4302E;
+    right: -50px;
+    top: 100px;
+    border-radius: 100%;
+
+    &:hover {
+        .info-marker {
+            display: block;
+            transition: $base-transition;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        background: rgba(#A4302E, 0.3);
+        left: -8px;
+        top: -4px;
+        width: 32px;
+        height: 16px;
+        border-radius: 100%;
+        z-index: 1;
+    }
+
+    .info-marker {
+        width: 472px;
+        position: absolute;
+        left: -10px;
+        top: 30px;
+        font-size: $font-size-small;
+        color: #fff;
+        font-family: $heading-font-family;
+        background: rgba($gray-dark, 0.8);
+        padding: 14px;
+        display: none;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("../resources/img/frontpage/arrow.png") no-repeat left top;
+            left: 0;
+            top: 0;
+            width: 23px;
+            height: 13px;
+            z-index: 1;
+        }
+    }
