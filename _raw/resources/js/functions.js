@@ -1,29 +1,46 @@
-// Sliding Panel
-$(document).ready(function () {
-	$('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function (e) {
-		$('.navigation-menu,.navigation-fade-screen').toggleClass('is-visible');
-		e.preventDefault();
-	});
+// Sliding Panel and scala in a nutshell
+$(document).ready(function() {
+    $('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function(e) {
+        $('.navigation-menu,.navigation-fade-screen').toggleClass('is-visible');
+        e.preventDefault();
+    });
+
+    var menus = $('.items-menu');
+    var allContents = $('.items-code');
+    var allButtons = $('.scala-item');
+
+    menus.each(function(index1, row) {
+        var row = $(row);
+        var items = row.find('.scala-item');
+        var content = row.children('.items-content');
+        var contents = content.children('.items-code');
+
+        items.each(function(index2, button) {
+            var jButton = $(button);
+            jButton.click(function(event) {
+                var activeCode = contents.eq(index2);
+                var others = allContents.not(activeCode);
+                allButtons.removeClass('active');
+                others.hide();
+
+                if (activeCode.is(":visible")) {
+                    activeCode.hide();
+                } else {
+                    jButton.addClass('active')
+                    activeCode.show();
+                }
+
+            });
+        });
+    });
 });
 
-
 // Show Blog
-$(".hide").click(function(){
+$(".hide").click(function() {
     $(".new-on-the-blog").hide();
 });
 
-$(".scala-item").click(function() {
-	//$(".scala-item").addClass("active");
-	$("ul li.contenido").hide();
-	$(this).parent().children("li.contenido").slideDown();
-});
-
-// Expanded
-$('.open-scala-expanded').click(function(){
-    $('.scala-item-expanded').slideToggle('slow');
-});
-
-// Tweet feed in frontpage
+//Tweet feed in frontpage
 $('#tweet-feed').tweetMachine('', {
     backendScript: '/resources/php/getFromTwitter.php',
     endpoint: 'statuses/user_timeline',
@@ -50,14 +67,11 @@ $('#tweet-feed').tweetMachine('', {
           </div>
       `
 }, function(tweets, tweetsDisplayed) {
-        $('.slider-twitter').unslider({
-          });
-    });
-
-		
+    $('.slider-twitter').unslider({});
+});
 
 
-		/*$('#scaladex-search').autocomplete({
+/*$('#scaladex-search').autocomplete({
     paramName: 'q',
     serviceUrl: 'https://scaladex.scala-lang.org/api/autocomplete',
     dataType: 'json',

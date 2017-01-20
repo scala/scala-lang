@@ -1,6 +1,7 @@
 // NUTSHELL
 //------------------------------------------------
 //------------------------------------------------
+
 .nutshell {
     background: $gray;
 
@@ -12,15 +13,13 @@
         }
     }
     .scala-items-list {
+      .items-menu {
       .scala-item {
         @include span-columns(4);
         @include omega(3n);
         padding: $padding-small;
         text-align: center;
         transition: $base-transition;
-
-
-
 
         @include bp(medium) {
           @include span-columns(12);
@@ -49,6 +48,13 @@
         &.active {
           background: $gray-dark;
         }
+      }
+      .items-content {
+        background: #345;
+        .items-code {
+          display: none;
+        }
+      }
       }
     }
 
