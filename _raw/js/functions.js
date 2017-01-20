@@ -6,6 +6,12 @@ $(document).ready(function () {
 	});
 });
 
+
+
+$(".hide").click(function(){
+    $(".new-on-the-blog").hide();
+});
+
 // Expanded
 $('.open-scala-expanded').click(function(){
     $('.scala-item-expanded').slideToggle('slow');

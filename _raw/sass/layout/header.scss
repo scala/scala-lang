@@ -5,6 +5,38 @@
 #site-header {
     background: $gray-darker;
 
+    .new-on-the-blog {
+      background: rgba($gray-darker, 0.8);
+      text-align: center;
+      padding: 8px 0;
+      color: #fff;
+      transition: $base-transition;
+      position: relative;
+      span {
+        position: absolute;
+        right: 20px;
+        top: 3px;
+        z-index: 1;
+        cursor: pointer;
+        font-size: 1.275rem;
+        opacity: 0.6;
+        transition: $base-transition;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+      a {
+        color: #fff;
+        text-decoration: underline;
+        &:active,
+        &:focus,
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
     &.header-home {
         background: none;
 
