@@ -48,7 +48,7 @@
             &:before {
                 content: "";
                 position: absolute;
-                background: url("../img/background-header-home.jpg") no-repeat center center;
+                background: url("../resources/img/frontpage/background-header-home.jpg") no-repeat center center;
                 @include image-size();
                 left: 0;
                 width: 100%;

@@ -107,10 +107,11 @@
                 a {
                     @include display(flex);
                     @include align-items(center);
-                    @include justify-content(center);
+                    @include justify-content(flex-start);
                     padding: 14px 0;
                     color: $base-font-color;
                     font-weight: $font-bold;
+                    padding-left: 30px;
 
                     &:active,
                     &:focus,

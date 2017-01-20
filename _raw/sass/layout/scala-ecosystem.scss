@@ -5,7 +5,7 @@
 #site-main {
     .scala-ecosystem {
         padding-bottom: 0;
-        background: url("../img/background-scala-ecosystem.png") no-repeat center bottom $gray-li;
+        background: url("../resources/img/frontpage/background-scala-ecosystem.png") no-repeat center bottom $gray-li;
         @include image-size();
 
         .heading-line {
