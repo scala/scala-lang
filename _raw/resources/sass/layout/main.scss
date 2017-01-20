@@ -15,7 +15,7 @@
       &:before {
           content: "";
           position: absolute;
-          background: url("../resources/img/frontpage/epfl-bc.jpg") no-repeat center center;
+          background: url("../img/frontpage/epfl-bc.jpg") no-repeat center center;
           @include image-size();
           left: 0;
           width: 100%;

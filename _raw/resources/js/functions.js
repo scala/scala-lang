@@ -47,3 +47,17 @@ $('#tweet-feed').tweetMachine('', {
         $('.slider-twitter').unslider({
           });
     });
+
+
+		/*$('#scaladex-search').autocomplete({
+    paramName: 'q',
+    serviceUrl: 'https://scaladex.scala-lang.org/api/autocomplete',
+    dataType: 'json',
+    transformResult: function(response) {
+        return {
+            suggestions: $.map(response, function(dataItem) {
+                return { value: dataItem.repository, data: 'https://scaladex.scala-lang.org/' + dataItem.organization + "/" + dataItem.repository };
+            })
+        };
+    }
+})*/
