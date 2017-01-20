@@ -36,7 +36,7 @@ currentScalaVersion: "2.12.1"
 # Scala IDEs
 scalaIDEs:
   - name: IntelliJ
-    icon: /resources/img/frontpage/intellij.png
+    icon: /resources/img/frontpage/intelliJ.png
     ensime: false
     url: "https://www.jetbrains.com/idea/"
   - name: Sublime Text
