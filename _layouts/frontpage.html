@@ -6,7 +6,7 @@
 
 <!-- Header -->
   <header id="site-header" class="header-home">
-    <div class="header-background" style="background:url('/resources/img/frontpage/background-header-home.jpg')">
+    <div class="header-background">
       <div class="new-on-the-blog">
         <p>New on the blog:
           {% assign newPost = site.posts.first %}
@@ -33,6 +33,14 @@
         </nav>
         <!-- Inner Text -->
         <div class="inner-text">
+          <div class="marker">
+            <div class="info-marker">
+              <span class="arrow">
+              <img src="/resources/img/frontpage/arrow.png" alt="pushpin">
+              </span>
+              {{site.data.common.texts.frontpageMarker}}
+            </div>
+          </div>
           <h1>{{page.headerTitle}}</h1>
           <p>{{page.headerSubtitle}}</p>
           <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle | upcase}}</a>
@@ -189,7 +197,7 @@
         <h2>The Scala Library Index</h2>
         <div class="input-control">
           <span><i class="fa fa-search"></i></span>
-          <input type="text" placeholder="Search">
+          <input type="text" placeholder="Search" id="scaladex-search">
         </div>
       </div>
     </div>
