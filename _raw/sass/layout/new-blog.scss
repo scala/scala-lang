@@ -38,12 +38,30 @@
             padding: 22px;
             display: block;
             border-radius: $border-radius-base;
+
         }
     }
 
     .new {
       @include bp(large) {
         margin-bottom: 40px;
+      }
+
+      .content-card {
+          height: 516px;
+          overflow: hidden;
+          position: relative;
+
+          &:before {
+              content: "";
+              position: absolute;
+              background: #fff;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 20px;;
+              z-index: 1;
+          }
       }
         .tag-new {
             text-transform: uppercase;

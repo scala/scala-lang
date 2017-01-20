@@ -54,7 +54,7 @@
                 background: rgba($gray, 0.5);
                 transition: $base-transition;
                 text-align: center;
-                padding: 70px 0 85px 0;
+                padding: 70px 0 80px 0;
 
                 h2 {
                     color: #fff;
@@ -102,6 +102,7 @@
         &:hover {
             .main-browser {
                 background: $gray;
+                padding-bottom: 140px;
             }
         }
     }
