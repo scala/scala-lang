@@ -20,6 +20,8 @@
         transition: $base-transition;
 
 
+
+
         @include bp(medium) {
           @include span-columns(12);
         }
@@ -39,7 +41,7 @@
 
         &:active,
         &:focus,
-        &:hover {
+        &:hover, {
           cursor: pointer;
           background: $gray-dark;
         }

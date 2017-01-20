@@ -7,9 +7,15 @@ $(document).ready(function () {
 });
 
 
-
+// Show Blog
 $(".hide").click(function(){
     $(".new-on-the-blog").hide();
+});
+
+$(".scala-item").click(function() {
+	//$(".scala-item").addClass("active");
+	$("ul li.contenido").hide();
+	$(this).parent().children("li.contenido").slideDown();
 });
 
 // Expanded
@@ -47,6 +53,8 @@ $('#tweet-feed').tweetMachine('', {
         $('.slider-twitter').unslider({
           });
     });
+
+		
 
 
 		/*$('#scaladex-search').autocomplete({
