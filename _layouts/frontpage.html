@@ -121,18 +121,33 @@
     </div>
   </div>
   <div class="scala-items-list">
-    <div class="wrap">
+    <div class="items-menu">
       {% for scalaItem in site.scala_items %}
+        {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
+        
+        {% if loopIndexMod == 0 %}
+          {% assign codeSnippets = '' | split: ',' %}
+          <div class="wrap">
+        {% endif %}
+        {% assign codeSnippets = codeSnippets | push: scalaItem.content %}
         <div class="scala-item">
           <h3>{{scalaItem.shortTitle}}</h3>
           <p>{{scalaItem.shortDescription}}</p>
         </div>
+        {% if loopIndexMod == 2 or forloop.last %}
+          </div>
+          <div class="items-content">
+            {% for snippet in codeSnippets %}
+              <div class="items-code">{{snippet}}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
-  </div>
-  <div class="call-to-action action-medium">
-    <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle}}</a>
-    <p class="align-bottom">or visit the <a href="/documentation/">Scala Documentation</a></p>
+    <div class="call-to-action action-medium">
+      <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle}}</a>
+      <p class="align-bottom">or visit the <a href="/documentation/">Scala Documentation</a></p>
+    </div>
   </div>
 </section>
 

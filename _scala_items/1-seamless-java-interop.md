@@ -3,11 +3,11 @@ shortTitle: "Seamless Java Interop"
 shortDescription: "Scala runs on the JVM, so Java and Scala stacks can be freely mixed for totally seamless integration."
 scastieUrl: 
 ---
-
-<div class="java-interop-wrapper" style="width: 500px">
-<figure class="code java-interop1" style="margin-top: 20px;">
-  <figcaption>Author.scala</figcaption>
-  <pre><code>class Author(val firstName: String,
+<div class="wrap">
+  <div class="scala-code">
+    <div class="code-element">
+      <div class="bar-code"><span>Author.scala</span></div>
+      <pre><code>class Author(val firstName: String,
     val lastName: String) extends Comparable[Author] {
 
   override def compareTo(that: Author) = {
@@ -20,10 +20,10 @@ scastieUrl:
 object Author {
   def loadAuthorsFromFile(file: java.io.File): List[Author] = ???
 }</code></pre>
-</figure>
-<figure class="code java-interop2" style="margin-top: 10px;">
-  <figcaption>App.java</figcaption>
-  <pre><code>import static scala.collection.JavaConversions.asJavaCollection;
+    </div>
+    <div class="code-element">
+      <div class="bar-code"><span>App.java</span></div>
+      <pre><code>import static scala.collection.JavaConversions.asJavaCollection;
 
 public class App {
     public List&lt;Author&gt; loadAuthorsFromFile(File file) {
@@ -44,14 +44,14 @@ public class App {
         }
     }
 }</code></pre>
-</figure>
-</div>
-
-<div class="snippet-explanation" style="width: 370px;">
-<h3>Combine Scala and Java seamlessly</h3>
-<p>Scala classes are ultimately JVM classes. You can create Java objects, call
+    </div>
+  </div>
+  <div class="scala-text">
+    <h3>Combine Scala and Java seamlessly</h3>
+    <p>Scala classes are ultimately JVM classes. You can create Java objects, call
 their methods and inherit from Java classes transparently from Scala.
 Similarly, Java code can reference Scala classes and objects.</p>
+<br/>
 <p>
 In this example, the Scala class <code>Author</code> implements the Java
 interface <code>Comparable&lt;T&gt;</code> and works with Java
@@ -59,4 +59,6 @@ interface <code>Comparable&lt;T&gt;</code> and works with Java
 <code>Author</code>, and accesses fields of the <code>Author</code> class.
 It also uses <code>JavaConversions</code> to convert between Scala collections
 and Java collections.
-</p></div>
+</p>
+  </div>
+</div>
