@@ -152,7 +152,8 @@
               <h4>{{event.title}}</h4>
               <ul>
                 <li class="event-location">{{event.location}}</li>
-                <li class="dot">•</li>
+              </ul>
+              <ul>
                 <li class="date-event">{{event.start | date_to_string}} {% if event.start != event.end %}- {{event.end | date_to_string}}{% endif %}</li>
               </ul>
             </div>
@@ -297,13 +298,26 @@
 
 <!-- Twitter feed -->
 {% include twitter-feed.html %}
+
 <!-- Spire -->
 <section class="spire"></section>
+
 <!-- Supporters -->
 <section class="maintenance">
   <div class="wrap">
     <div class="heading-line">
-      <h2><span>Twitter Feed</span></h2>
+      <h2><span>{{site.data.common.texts.scalaMaintainersTitle}}</span></h2>
+    </div>
+    <ul class="maintained">
+      {% for maintainer in site.data.scala-supporters.maintainers %}
+        <li><a href="{{maintainer.url}}"><img src="{{maintainer.logo}}" alt="{{maintainer.name}}"></a></li>
+      {% endfor %}
+    </ul>
+    <h3>{{site.data.common.texts.scalaSupportersTitle}}</h3>
+    <div class="supported">
+      {% for supporter in site.data.scala-supporters.supporters %}
+        <a href="{{supporter.url}}"><img src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
+      {% endfor %}
     </div>
   </div>
 </section>
