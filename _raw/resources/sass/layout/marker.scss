@@ -12,6 +12,10 @@
     border-radius: 100%;
     cursor: pointer;
 
+    @include bp(large) {
+      display: none;
+    }
+
     &:hover {
         .info-marker,
         .arrow {
