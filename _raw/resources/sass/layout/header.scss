@@ -13,6 +13,11 @@
       color: #fff;
       transition: $base-transition;
       position: relative;
+
+        @include bp(medium) {
+          padding: 10px 40px;
+        }
+
       span {
         position: absolute;
         right: 20px;
