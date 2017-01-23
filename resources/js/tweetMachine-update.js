@@ -305,7 +305,6 @@
 
                                                 // Prepend the new tweet
                                                 $(tweetMachine.container).prepend(tweetObj);
-                                                console.log("prepend tweet");
 
                                                 // If we are animating in the new tweets
                                                 //if (tweetMachine.settings.animateIn) {
@@ -323,7 +322,6 @@
 
                                                 // Increase page number and wrap tweets if pagination is enabled and we're finishing a page:
                                                 if (tweetMachine.settings.pageLimit > 0 && tweetsDisplayed % tweetMachine.settings.pageLimit == 0) {
-                                                    console.log("wrapping paged tweets with page: " + pagesDisplayed);
                                                     $(".page" + pagesDisplayed).wrapAll("<li></li>");
                                                     pagesDisplayed++;
                                                 }
