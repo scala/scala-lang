@@ -4,6 +4,7 @@
 {% include headertop.html %}
 {% include headerbottom.html %}
 
+<div class="navigation-fade-screen"></div>
 <!-- Header -->
   <header id="site-header" class="header-home">
     <div class="header-background">
@@ -104,7 +105,9 @@
           <span>{{ide.name}}</span>
         </a>
       </li>
-      <li></li>
+        {% unless forloop.last %}
+          <li></li>
+        {% endunless %}
       {% endfor %}
     </ul>
   </div>
