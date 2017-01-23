@@ -1,10 +1,13 @@
 // TYPOGRAPHY
 //------------------------------------------------
 //------------------------------------------------
+html {
+font-size: $base-font-size;
+}
+
 body {
     color: $base-font-color;
     font-family: $base-font-family;
-    font-size: $base-font-size;
     font-weight: $font-regular;
     line-height: $base-line-height;
     @include font-smoothing(on);
