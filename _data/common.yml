@@ -1,6 +1,7 @@
 # SNS URLs
 githubUrl: https://github.com/scala/scala
 twitterUrl: https://twitter.com/scala_lang
+scaladexUrl: https://scaladex.scala-lang.org
 
 texts:
   onlineCoursesFree: Free (without certificate)

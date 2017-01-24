@@ -208,14 +208,18 @@
     </div>
     <div class="browser">
       <div class="header-browser">
-        <img src="/resources/img/frontpage/scaladex-logo.png" alt="">
-        <img src="/resources/img/frontpage/button-github.png" alt="">
+        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/scaladex-logo.png" alt=""></a>
+        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/button-github.png" alt=""></a>
       </div>
       <div class="main-browser">
         <h2>The Scala Library Index</h2>
         <div class="input-control">
           <span><i class="fa fa-search"></i></span>
           <input type="text" placeholder="Search" id="scaladex-search">
+          <div class="autocomplete-suggestions">
+              <div class="autocomplete-suggestion autocomplete-selected"></div>
+              <div class="autocomplete-suggestion"></div>
+          </div>
         </div>
       </div>
     </div>

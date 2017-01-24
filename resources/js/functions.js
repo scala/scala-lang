@@ -73,16 +73,93 @@ $('#tweet-feed').tweetMachine('', {
     $('.slider-twitter').unslider({});
 });
 
+// Scaladex autocomplete search
+var prevResult = "";
+var lastElementClicked;
 
-/*$('#scaladex-search').autocomplete({
+$(document).mousedown(function(e) {
+    lastElementClicked = $(e.target);
+});
+
+$(document).mouseup(function(e) {
+    lastElementClicked = null;
+});
+
+function hideSuggestions() {
+    $('.autocomplete-suggestions').hide();
+    $('.autocomplete-suggestion').hide();
+}
+
+function showSuggestions() {
+    $('.autocomplete-suggestions').show();
+    $('.autocomplete-suggestion').show();
+}
+
+hideSuggestions();
+$('#scaladex-search').on('input', function(e) {
+    if ($("#scaladex-search").val() != "") hideSuggestions();
+});
+
+$('#scaladex-search').on('focus', function(e) {
+    if ($("#scaladex-search").val() != "") showSuggestions();
+});
+
+$('#scaladex-search').on('blur', function(e) {
+    if (!$(e.target).is('.autocomplete-suggestion')) {
+        if (lastElementClicked != null && !lastElementClicked.is('.autocomplete-suggestion')) {
+            hideSuggestions();
+        }       
+    } else {
+        hideSuggestions();
+    }
+});
+
+$(window).on("blur", function() {
+   $("#scaladex-search").blur();
+   $("#scaladex-search").autocomplete().clear();
+});
+
+/*$(".main-browser").on("click", function(e) {
+    console.log("click: " + e.target);
+    if(!$(e.target).is('#scaladex-search')){
+        hideSuggestions();
+    }    
+});*/
+
+$('#scaladex-search').autocomplete({
     paramName: 'q',
     serviceUrl: 'https://scaladex.scala-lang.org/api/autocomplete',
     dataType: 'json',
+    beforeRender: function() {
+        showSuggestions();
+    },
+    onSearchStart: function(query) {
+        if (query == "") {
+            hideSuggestions()
+        } else {
+            showSuggestions();
+        }
+    },
     transformResult: function(response) {
         return {
             suggestions: $.map(response, function(dataItem) {
                 return { value: dataItem.repository, data: 'https://scaladex.scala-lang.org/' + dataItem.organization + "/" + dataItem.repository };
             })
         };
+    },
+    onSearchComplete: function (query, suggestions) {
+        suggestions.length > 0 ? showSuggestions() : hideSuggestions();
+    },
+    onSelect: function (suggestion) {
+        console.log("onSelect");        
+
+        if (suggestion.data != prevResult) {
+            console.log("onSelect change: " + suggestion.data + "/" + prevResult);
+
+            prevResult = suggestion.data;
+            hideSuggestions();
+            $("#scaladex-search").blur();
+            window.open(suggestion.data, '_blank');
+        }        
     }
-})*/
+})
