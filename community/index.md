@@ -8,11 +8,11 @@ Popular ways to connect with the Scala community include forums, chat rooms, loc
 
 The community is also the source of many libraries, tools, and other resources around Scala.
 
-## Forums/Mailing List
+## Main Forums/Mailing Lists
 
-The Scala Discourse forums/mailing list are covered by the [Scala Code of Conduct](../conduct.html).
+The Scala Discourse forum/mailing list and Google Groups mailing lists are covered by the [Scala Code of Conduct](../conduct.html).
 
-In addition to Google Groups, we use Discourse, an open source forum and mailing list management platform. Discourse is set up to be used in mailing list mode. That is, you receive discussions to your inbox, and can reply to them via email. It's also a forum that gives all kinds of statistics, upvoting, and polls. You can do syntax highlighting etc, and posts can be written in Markdown.
+In addition to Google Groups, we use Discourse, an open source forum and mailing list management platform. Discourse is set up to be used in mailing list mode. That is, you receive discussions to your inbox, and can reply to them via email. It's also a web-based forum that gives all kinds of statistics, upvoting, and polls. You can do syntax highlighting etc, and posts can be written in Markdown.
 
 The most beginner-friendly mailing list (Google Groups):
 
