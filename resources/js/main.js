@@ -226,7 +226,9 @@ $(document).ready(function(){
   var additionalClass =
     isFrontPage ? 'event-item-front-page' : 'event-item-event-page';
 
-  var MAX_EVENTS = isFrontPage ? 5 : 15;
+  // Jon Pretty has informed us that 999 events is the most he could possibly
+  // consider attending
+  var MAX_EVENTS = isFrontPage ? 5 : 999;
 
   function compareEventsByDate(lhs, rhs) {
     return compareFormattedDates(lhs.start, rhs.start);
@@ -328,7 +330,7 @@ $(document).ready(function(){
   var additionalClass =
     isFrontPage ? 'training-item-front-page' : 'traning-item-training-page';
 
-  var MAX_TRAININGS = isFrontPage ? 5 : 15;
+  var MAX_TRAININGS = isFrontPage ? 5 : 999;
 
   function compareTrainingsByDate(lhs, rhs) {
     return compareFormattedDates(lhs.when, rhs.when);
