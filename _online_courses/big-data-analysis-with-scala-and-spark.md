@@ -6,7 +6,7 @@ end-date: 01-01-2017
 platform: coursera
 specialization: fpfun
 specialization-order: 4
-paid: true
+paid: false
 showDate: false
 ---
 
