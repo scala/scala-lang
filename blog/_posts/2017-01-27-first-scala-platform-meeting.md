@@ -51,8 +51,7 @@ collaborative effort get on track. In the upcoming days, we will work with
 library maintainers to improve the Scala Platform infrastructure, incubate the
 modules and ensure that the Community can contribute by opening pull requests,
 improving documentation and participating in discussions at the Issue Tracker.
-Our project for a batteries-included Scala is reaping the benefits.
-
+  
 Chime in and get involved!  We're waiting for you on [Scala
 Contributors](https://contributors.scala-lang.org).
 
