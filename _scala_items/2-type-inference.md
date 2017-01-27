@@ -3,9 +3,11 @@ shortTitle: "Type Inference"
 shortDescription: "So the type system doesn’t feel so static. Don’t work for the type system. Let the type system work for you!"
 scastieUrl: 
 ---
-<figure class="code type-inference" style="width: 450px; margin-top: 20px;">
-  <figcaption>Type inference</figcaption>
-  <pre><code>scala> class Person(val name: String, val age: Int) {
+<div class="wrap">
+                                <div class="scala-code">
+                                    <div class="code-element">
+                                        <div class="bar-code"><span>Type inference</span></div>
+                                        <pre><code>scala> class Person(val name: String, val age: Int) {
      |   override def toString = s"$name ($age)"
      | }
 defined class Person
@@ -31,14 +33,17 @@ people: List[Person] = List(Alice (16), Bob (16), Carol (19), Dave (18), Eve (26
 
 scala> underagePeopleNames(people)
 res1: List[String] = List(Alice, Bob, Frank)</code></pre>
-</figure>
-<div class="snippet-explanation">
-  <h3>Let the compiler figure out the types for you</h3>
-<p>The Scala compiler is smart about static types. Most of the time, you need
+                                    </div>
+                                </div>
+                                <div class="scala-text">
+                                    <h3>Let the compiler figure out the types for you</h3>
+                                    <p>The Scala compiler is smart about static types. Most of the time, you need
 not tell it the types of your variables. Instead, its powerful type inference
 will figure them out for you.</p>
 <p>
 In this interactive REPL session (Read-Eval-Print-Loop), we define a
 class and two functions. You can observe that the compiler infers the result
 types of the functions automatically, as well as all the intermediate values.
-</p></div>
+</p>
+                                </div>
+                            </div>

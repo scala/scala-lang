@@ -13,9 +13,18 @@ exclude:
   - events/README.md
   - Gemfile
   - Gemfile.lock
+  - vendor
+  - Procfile
+  - Rakefile
 future: true
 
 # Custom collections
 collections:
   scala_items:
+    output: false
+  online_courses:
+    output: false
+  trainings:
+    output: false
+  events:
     output: false
