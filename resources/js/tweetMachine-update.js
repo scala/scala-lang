@@ -133,11 +133,11 @@
 						});
                         // Usernames
 						text = text.replace(/@[A-Za-z0-9_]+/g, function (u) {
-							return '<a href="http://twitter.com/#!/' + u.replace(/^@/, '') + '" target="_blank">' + u + '</a>';
+							return '<a href="https://twitter.com/#!/' + u.replace(/^@/, '') + '" target="_blank">' + u + '</a>';
 						});
                         // Hashtags
 						text = text.replace(/#[A-Za-z0-9_\-]+/g, function (u) {
-							return '<a href="http://twitter.com/#!/search?q=' + u.replace(/^#/, '%23') + '" target="_blank">' + u + '</a>';
+							return '<a href="https://twitter.com/#!/search?q=' + u.replace(/^#/, '%23') + '" target="_blank">' + u + '</a>';
 						});
 						return text;
 					},
@@ -156,11 +156,11 @@
                         
                         // Set the avatar. NOTE: reasonably_small is Twitter's suffix for the largest square avatar that they store
 						tweetObj.find('.avatar')
-                            .attr('src', actualTweet.user.profile_image_url.replace("normal", "reasonably_small"));
+                            .attr('src', actualTweet.user.profile_image_url_https.replace("normal", "reasonably_small"));
 
                         // Set the user screen name
 						var usernameLink = "<a target=\"_blank\" href=\"" 
-                            + "http://twitter.com/" 
+                            + "https://twitter.com/" 
                             + actualTweet.user.screen_name 
                             + "\">" 
                             + "@" 
@@ -170,7 +170,7 @@
 
                         // Set the username:
                         var userLink = "<a target=\"_blank\" href=\""
-                            + "http://twitter.com/"
+                            + "https://twitter.com/"
                             + actualTweet.user.screen_name 
                             + "\">" 
                             + actualTweet.user.name 
@@ -178,7 +178,7 @@
                         tweetObj.find('.user').html("" + userLink);
 
                         // Set the timestamp
-                        var dateLink = "<a target=\"_blank\" href=\"" + "http://twitter.com/"
+                        var dateLink = "<a target=\"_blank\" href=\"" + "https://twitter.com/"
                             + actualTweet.user.screen_name + "/status/"
                             + actualTweet.id_str + "\">"
                             + tweetMachine.relativeTime(actualTweet.created_at)
