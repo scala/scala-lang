@@ -4,7 +4,7 @@ twitterUrl: https://twitter.com/scala_lang
 scaladexUrl: https://scaladex.scala-lang.org
 
 texts:
-  onlineCoursesFree: Free (without certificate)
+  onlineCoursesFree: Free course with optional paid certificate
   onlineCoursesPaid: Paid (with certificate)
   courseraLaunchPeriod: New sessions starting every 2 weeks!
   scalaMaintainersTitle: The Scala language is maintained by

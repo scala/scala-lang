@@ -91,14 +91,5 @@ gitterChannels:
     url: https://gitter.im/scala/scala-india
   - name: community-builds
     url: https://gitter.im/scala/community-builds
-
-# Communities
-communities:
-  - name: Typelevel
-    icon: /resources/img/frontpage/typelevel-logo.png
-    url: http://typelevel.org/
-  - name: ScalaBridge
-    icon: /resources/img/frontpage/scalabridge-logo.png
-    url: http://www.scalabridge.org/
 ---
 
