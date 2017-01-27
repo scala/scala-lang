@@ -10,6 +10,19 @@ meeting](https://contributors.scala-lang.org/t/first-scala-platform-meeting/368)
 With it, we kicked off the creation of the Scala Platform and begin the
 incubation period for two libraries in the Scala ecosystem!
   
+## Incubation period
+  
+The [incubation
+period](https://contributors.scala-lang.org/t/adding-better-files-to-the-scala-platform/340/23?u=jvica://contributors.scala-lang.org/t/adding-better-files-to-the-scala-platform/340/23?u=jvican)
+gives library maintainers time to create a Community around the project,
+integrate with the Scala Platform infrastructure, and take time to plan releases
+and clean up public APIs.
+It will end when library maintainers feel the library
+is ready for shipping with the Scala Platform, in which case the Scala Platform
+Committee will vote its final acceptance.
+  
+## Progress on the meeting
+  
 The meeting focused around two main topics:
   
 * Discussing high-level aspects of the [Scala Platform Process](http://scala-lang.org/blog/2016/11/28/spp.html); and
@@ -25,16 +38,13 @@ The meeting focused around two main topics:
 Out of those proposals, the Committee decided to incubate [Better
 files](https://github.com/pathikrit/better-files) and [Scala JSON
 AST](https://github.com/mdedetrich/scala-json-ast), while postponing the
-decision of adopting Enumeratum to our next meeting. The [incubation
-period](https://contributors.scala-lang.org/t/adding-better-files-to-the-scala-platform/340/23?u=jvica://contributors.scala-lang.org/t/adding-better-files-to-the-scala-platform/340/23?u=jvican)
-gives library maintainers time to create a Community around the project,
-integrate with the Scala Platform infrastructure, and take time to plan releases
-and clean up public APIs. It will end when library maintainers feel the library
-is ready for shipping with the Scala Platform, in which case the Scala Platform
-Committee will vote its final acceptance. For more information on the meeting
+decision of adopting Enumeratum to our next meeting.
+For more information on the meeting
 and the discussions, check the
 [minutes](https://contributors.scala-lang.org/t/first-scala-platform-meeting/368)
 and the [broadcast meeting video](https://www.youtube.com/watch?v=eqSSXg7Up2I).
+  
+## Get involved!
   
 At the [Scala Center](https://scala.epfl.ch), we are very happy to see this
 collaborative effort get on track. In the upcoming days, we will work with
