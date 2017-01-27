@@ -41,7 +41,7 @@ AST](https://github.com/mdedetrich/scala-json-ast), while postponing the
 decision of adopting Enumeratum to our next meeting.
 For more information on the meeting
 and the discussions, check the
-[minutes](https://contributors.scala-lang.org/t/first-scala-platform-meeting/368)
+[minutes](https://contributors.scala-lang.org/t/first-scala-platform-meeting/368/5?u=jvican)
 and the [broadcast meeting video](https://www.youtube.com/watch?v=eqSSXg7Up2I).
   
 ## Get involved!
