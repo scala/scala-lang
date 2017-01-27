@@ -119,13 +119,6 @@ $(window).on("blur", function() {
    $("#scaladex-search").autocomplete().clear();
 });
 
-/*$(".main-browser").on("click", function(e) {
-    console.log("click: " + e.target);
-    if(!$(e.target).is('#scaladex-search')){
-        hideSuggestions();
-    }    
-});*/
-
 $('#scaladex-search').autocomplete({
     paramName: 'q',
     serviceUrl: 'https://scaladex.scala-lang.org/api/autocomplete',
