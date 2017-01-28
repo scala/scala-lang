@@ -61,17 +61,18 @@
                         font-family: $heading-font-family;
                         padding-bottom: 4px;
                         margin-bottom: 2px;
+                        font-weight: $font-bold;
                     }
 
                     a {
-                        color: rgba(#fff, 0.70);
-                        font-size: $font-size-small;
+                        color: rgba(#fff, 0.90);
+                        font-size: $font-size-medium;
 
                         &:active,
                         &:focus,
                         &:hover {
                             text-decoration: none;
-                            color: #fff;
+                            color: rgba(#fff, 0.50);
                         }
                     }
                 }

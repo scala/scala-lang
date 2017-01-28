@@ -23,7 +23,7 @@ $base-font-color-inverse: rgba(#fff, 0.70);
 
 // Typography
 //------------------------------------------------
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 //------------------------------------------------
 $base-font-family: 'Lato', sans-serif;
@@ -48,6 +48,7 @@ $font-light: 300;
 $font-regular: 400;
 $font-semibold: 600;
 $font-bold: 700;
+$font-black: 900;
 
 // Link Colors
 //------------------------------------------------
