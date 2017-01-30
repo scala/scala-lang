@@ -96,7 +96,7 @@
     <ul>
       {% for ide in page.scalaIDEs %}
       <li>
-        <a {% if ide.ensime == true %}class="masterTooltip" title="{{site.data.common.texts.ensimeSupportedInIDE}}"{% endif %} href="{{ide.url}}">
+        <a {% if ide.ensime == true %}class="masterTooltip" title="{{site.data.common.texts.ensimeSupportedInIDE}}"{% endif %} href="{{ide.url}}" target="_blank">
           {% if ide.ensime == true %}
             <span class="bullet">
               <img src="/resources/img/frontpage/icon-ensime.png" alt="">
@@ -235,7 +235,7 @@
       </div>
       {% assign firstPost = site.posts | first %}
       <div class="content-card">
-        <p class="{{tag-new}}">{{firstPost.post-type|upcase}}</p>
+        <p class="tag-new">{{firstPost.post-type|upcase}}</p>
         <h3><a href="{{firstPost.url}}">{{firstPost.title}}</a></h3>
         <span class="date">{{firstPost.date | date: "%A, %B %-d, %Y"}}</span>
         <p>{{firstPost.content}}</p>
