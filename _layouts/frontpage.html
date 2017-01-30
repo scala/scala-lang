@@ -76,6 +76,7 @@
               <div class="scala-version">
                 <span>Scala</span>
                 <span>{{page.currentScalaVersion}}</span>
+                <p>{{site.data.common.texts.scalaCompilationEnvironments}}</p>
               </div>
             </div>
           </div>
@@ -95,7 +96,7 @@
     <ul>
       {% for ide in page.scalaIDEs %}
       <li>
-        <a class="masterTooltip" href="{{ide.url}}">
+        <a {% if ide.ensime == true %}class="masterTooltip" title="{{site.data.common.texts.ensimeSupportedInIDE}}"{% endif %} href="{{ide.url}}">
           {% if ide.ensime == true %}
             <span class="bullet">
               <img src="/resources/img/frontpage/icon-ensime.png" alt="">

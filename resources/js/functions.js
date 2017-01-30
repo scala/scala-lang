@@ -35,6 +35,29 @@ $(document).ready(function() {
     });
 });
 
+// Tooltip
+$(document).ready(function() {
+        // Tooltip only Text
+        $('.masterTooltip').hover(function(){
+                // Hover over code
+                var title = $(this).attr('title');
+                $(this).data('tipText', title).removeAttr('title');
+                $('<p class="tooltip"></p>')
+                .text(title)
+                .appendTo('body')
+                .fadeIn('slow');
+        }, function() {
+                // Hover out code
+                $(this).attr('title', $(this).data('tipText'));
+                $('.tooltip').remove();
+        }).mousemove(function(e) {
+                var mousex = e.pageX + 20; //Get X coordinates
+                var mousey = e.pageY + 10; //Get Y coordinates
+                $('.tooltip')
+                .css({ top: mousey, left: mousex })
+        });
+});
+
 // Highlight
 hljs.initHighlightingOnLoad();
 
@@ -108,7 +131,7 @@ $('#scaladex-search').on('blur', function(e) {
     if (!$(e.target).is('.autocomplete-suggestion')) {
         if (lastElementClicked != null && !lastElementClicked.is('.autocomplete-suggestion')) {
             hideSuggestions();
-        }       
+        }
     } else {
         hideSuggestions();
     }
@@ -144,7 +167,7 @@ $('#scaladex-search').autocomplete({
         suggestions.length > 0 ? showSuggestions() : hideSuggestions();
     },
     onSelect: function (suggestion) {
-        console.log("onSelect");        
+        console.log("onSelect");
 
         if (suggestion.data != prevResult) {
             console.log("onSelect change: " + suggestion.data + "/" + prevResult);
@@ -153,6 +176,6 @@ $('#scaladex-search').autocomplete({
             hideSuggestions();
             $("#scaladex-search").blur();
             window.open(suggestion.data, '_blank');
-        }        
+        }
     }
 })
