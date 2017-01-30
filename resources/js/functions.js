@@ -167,11 +167,7 @@ $('#scaladex-search').autocomplete({
         suggestions.length > 0 ? showSuggestions() : hideSuggestions();
     },
     onSelect: function (suggestion) {
-        console.log("onSelect");
-
         if (suggestion.data != prevResult) {
-            console.log("onSelect change: " + suggestion.data + "/" + prevResult);
-
             prevResult = suggestion.data;
             hideSuggestions();
             $("#scaladex-search").blur();
