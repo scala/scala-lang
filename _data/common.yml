@@ -4,6 +4,8 @@ twitterUrl: https://twitter.com/scala_lang
 scaladexUrl: https://scaladex.scala-lang.org
 
 texts:
+  ensimeSupportedInIDE: ensime plugin available
+  scalaCompilationEnvironments: Scala compiles to JVM and Javascript
   onlineCoursesFree: Free (optional paid certificate)
   onlineCoursesPaid: Paid (with certificate)
   courseraLaunchPeriod: New sessions starting every 2 weeks!
