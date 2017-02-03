@@ -76,7 +76,6 @@
               <div class="scala-version">
                 <span>Scala</span>
                 <span>{{page.currentScalaVersion}}</span>
-                <p>{{site.data.common.texts.scalaCompilationEnvironments}}</p>
               </div>
             </div>
           </div>
@@ -87,6 +86,24 @@
 
 
 <main id="site-main">
+<!-- Scala backends -->
+<section class="runs">
+  <div class="wrap">
+    <h2>{{site.data.common.texts.scalaBackendsTitle}}</h2>
+    <ul>
+      {% for backend in page.scalaBackends %}
+        <li class="masterTooltip" title="{{backend.description}}">
+        <span>
+        <img src="{{backend.icon}}" alt="{{backend.description}}">
+        </span>
+      </li>
+      {% unless forloop.last %}<li></li>{% endunless %}
+      {% endfor %}
+    </ul>
+    <p><span>- {{site.data.common.texts.scalaBackendsMore}} -</span></p>
+  </div>
+</section>
+
 <!-- IDEs for Scala -->
 <section class="ides">
   <div class="wrap">
