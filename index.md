@@ -55,7 +55,7 @@ scalaIDEs:
     icon: /resources/img/frontpage/ensime.png
     ensime: false
     url: "http://ensime.org/"
-
+    
 # Scala ecosystem
 ecosystemTitle: "Scala ecosystem"
 ecosystemDescription: "The Scala Library Index (or Scaladex) is a representation of a map of all published Scala libraries. With Scaladex, a developer can now query more than 100,000 releases of Scala libraries. Scaladex is officially supported by Scala Center."
