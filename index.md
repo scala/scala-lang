@@ -33,6 +33,13 @@ apiDocs:
 
 currentScalaVersion: "2.12.1"
 
+# Scala backends
+scalaBackends:
+  - icon: /resources/img/frontpage/java-logo.png
+    description: JVM
+  - icon: /resources/img/frontpage/js-logo.png
+    description: javascript on your browser
+
 # Scala IDEs
 scalaIDEs:
   - name: IntelliJ
