@@ -174,15 +174,7 @@ $('#scaladex-search').autocomplete({
             window.open(suggestion.data, '_blank');
         }
     }
-<<<<<<< HEAD
-})
 
-// TOC:
-
-$(document).ready(function(){
-  $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
-})
-=======
 });
 
 // Scala in the browser
@@ -211,4 +203,9 @@ $(document).ready(function() {
         }, 2000);
     })
 });
->>>>>>> master
+
+// TOC:
+
+$(document).ready(function(){
+  $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
+})
