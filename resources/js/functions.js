@@ -174,6 +174,7 @@ $('#scaladex-search').autocomplete({
             window.open(suggestion.data, '_blank');
         }
     }
+<<<<<<< HEAD
 })
 
 // TOC:
@@ -181,3 +182,33 @@ $('#scaladex-search').autocomplete({
 $(document).ready(function(){
   $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
 })
+=======
+});
+
+// Scala in the browser
+
+$(document).ready(function() {
+    var editor = CodeMirror.fromTextArea(document.getElementById("scastie-textarea"), {
+        lineNumbers: true,
+        matchBrackets: true,
+        theme: "monokai",
+        mode: "text/x-scala"
+      });
+    editor.setSize("100%", ($("#scastie-code-container").height()));
+
+    var codeSnippet = "List(\"Hello\", \"World\").mkString(\"\", \", \", \"!\")";
+    editor.getDoc().setValue(codeSnippet);
+
+    $('.btn-run').click(function() {
+        // TODO: Code to connect to the scastie server would be here, what follows is just a simulation for the UI elements:
+        $('.btn-run').addClass("inactive");
+        $('.btn-run i').removeClass("fa fa-play").addClass("fa fa-spinner fa-spin");
+        setTimeout(function() {
+          var currentCodeSnippet = editor.getDoc().getValue();
+          console.log("Current code snippet: " + currentCodeSnippet);
+          $('.btn-run').removeClass("inactive");
+          $('.btn-run i').removeClass("fa-spinner fa-spin").addClass("fa fa-play");
+        }, 2000);
+    })
+});
+>>>>>>> master
