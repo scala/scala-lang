@@ -175,3 +175,9 @@ $('#scaladex-search').autocomplete({
         }
     }
 })
+
+// TOC:
+
+$(document).ready(function(){
+  $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
+})
