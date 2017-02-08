@@ -1,6 +1,7 @@
 ---
 layout: inner-page-documentation
 title: Documentation
+permalink: /documentation/
 includeTOC: true
 
 # Content masthead links
