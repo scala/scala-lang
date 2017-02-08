@@ -59,7 +59,12 @@ $(document).ready(function() {
 });
 
 // Highlight
-hljs.initHighlightingOnLoad();
+$(document).ready(function() {
+    hljs.configure({
+      languages: ["scala", "bash"]
+    })
+    hljs.initHighlighting();
+});
 
 // Show Blog
 $(".hide").click(function() {
