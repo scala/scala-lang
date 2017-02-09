@@ -174,6 +174,7 @@ $('#scaladex-search').autocomplete({
             window.open(suggestion.data, '_blank');
         }
     }
+
 });
 
 // Scala in the browser
@@ -202,3 +203,9 @@ $(document).ready(function() {
         }, 2000);
     })
 });
+
+// TOC:
+
+$(document).ready(function(){
+  $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
+})

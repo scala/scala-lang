@@ -28,4 +28,8 @@
   </div>
 </div>
 
+{% if page.includeTOC == true %}
+  {% include sidebar-toc.html %}
+{% endif %}
+
 {% include footer.html %}
