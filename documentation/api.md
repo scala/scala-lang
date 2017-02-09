@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: inner-page-no-masthead
 title: Scala API Docs
+permalink: /documentation/api/
+includeTOC: true
 ---
 
 ## Latest releases
