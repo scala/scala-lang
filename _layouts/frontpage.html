@@ -291,9 +291,9 @@
     </div>
     <div class="discourse">
       <h3>Mailing lists / forums</h3>
-      {% for forum in page.discourseForums %}
+      {% for forum in site.data.chats-forums.discourseForums %}
         <a href="{{forum.url}}" class="{{forum.cssClass}}">
-          <img src="/resources/img/frontpage/discourse-logo.png" alt="">
+          <img src="/resources/img/frontpage/discourse-logo.png" alt="{{forum.title}}">
           <h4>{{forum.title}}</h4>
           <p>{{forum.subtitle}}</p>
         </a>
@@ -301,15 +301,15 @@
     </div>
     <div class="gitter">
       <h3>Real-time (topic-specialized) chat</h3>
-      {% assign modLimit = page.gitterChannels.size | modulo: 2 %}
+      {% assign modLimit = site.data.chats-forums.gitterChannels.size | modulo: 2 %}
       {% capture channelLimit %}
         {% if modLimit != 0 %}
-          {{page.gitterChannels.size | minus: 1}}
+          {{site.data.chats-forums.gitterChannels.size | minus: 1}}
         {% else %}
-          {{page.gitterChannels.size}}
+          {{site.data.chats-forums.gitterChannels.size}}
         {% endif %}
       {% endcapture %}
-      {% for channel in page.gitterChannels limit: channelLimit %}
+      {% for channel in site.data.chats-forums.gitterChannels limit: channelLimit %}
         {% if forloop.first %}
           <ul class="first">
         {% endif %}

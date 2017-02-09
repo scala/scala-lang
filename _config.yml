@@ -36,3 +36,5 @@ collections:
     output: false
   books:
     output: false
+  downloads:
+    output: true
