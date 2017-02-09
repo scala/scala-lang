@@ -59,7 +59,12 @@ $(document).ready(function() {
 });
 
 // Highlight
-hljs.initHighlightingOnLoad();
+$(document).ready(function() {
+    hljs.configure({
+      languages: ["scala", "bash"]
+    })
+    hljs.initHighlighting();
+});
 
 // Show Blog
 $(".hide").click(function() {
@@ -207,5 +212,5 @@ $(document).ready(function() {
 // TOC:
 
 $(document).ready(function(){
-  $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
+  $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '.inner-box', autoId: true, numerate: false});
 })

@@ -4,6 +4,8 @@ scalaversion: "2.12.1"
 
 baseurl: ""
 markdown: kramdown
+highlighter:
+
 exclude:
   - bundle-vendor/
   - blog/README.md
@@ -28,3 +30,11 @@ collections:
     output: false
   events:
     output: false
+  contribute_resources:
+    output: false
+  contribute_community_tickets:
+    output: false
+  books:
+    output: false
+  downloads:
+    output: true

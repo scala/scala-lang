@@ -1,26 +1,9 @@
 ---
-layout: page
 title: All Available Versions
+layout: inner-page-no-masthead
+permalink: /download/all/
 ---
 
-<p>This page contains a comprehensive archive of previous Scala releases.</p>
+This page contains a comprehensive archive of previous Scala releases.
 
-{% for top in (0..3) reversed %}
-  {% for major in (0..20) reversed %}
-    {% assign possibleVersionShort = top | append:'.' | append:major %}
-    {% assign sz = possibleVersionShort | size %}
-    {% if 3 == sz %}
-      {% assign possibleVersion = possibleVersionShort | append:'.' %}
-    {% else %}
-      {% assign possibleVersion = possibleVersionShort %}
-    {% endif %}
-    {% for page in site.categories.download %}
-      {% assign releaseVersion = page.release_version | truncate:4, '' %}
-      {% if releaseVersion == possibleVersion %}
-<div>
-  <a href="{{ page.url }}">{{ page.title }}</a>
-</div>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
+{% include downloads-list.html %}

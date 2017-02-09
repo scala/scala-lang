@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: inner-page-community
 title: Community
-
+permalink: /community/
+includeTOC: true
 ---
 
 Popular ways to connect with the Scala community include mailing lists, chat rooms, user groups, and conferences.
