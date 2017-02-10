@@ -1,12 +1,13 @@
 ---
 layout: blog-list
 title: Blog
-permalink: /blog/
-category: all
+permalink: /blog/announcements/
+category: announcements
 
 paginate:
   collection:   posts
   permalink:    /:num/
   title_suffix: " - :num"
+  category:     'announcement'
   reversed:     false
 ---

@@ -1,0 +1,9 @@
+---
+layout: inner-page-parent
+---
+
+{% if page.category %}
+	{% include blog-list.html category=page.category %}
+{% else %}
+	{% include blog-list.html %}
+{% endif %}

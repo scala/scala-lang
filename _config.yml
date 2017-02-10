@@ -38,6 +38,8 @@ collections:
     output: false
   downloads:
     output: true
+  posts:
+    output: true
 
 # Pagination
 pagination:
