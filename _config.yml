@@ -38,3 +38,10 @@ collections:
     output: false
   downloads:
     output: true
+
+# Pagination
+pagination:
+  limit: false
+  per_page: 5
+  title_suffix: " - :num"
+  permalink: /:num/ 
