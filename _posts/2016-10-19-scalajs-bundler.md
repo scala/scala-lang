@@ -1,6 +1,6 @@
 ---
 layout: blog
-post-type: blog
+category: blog
 by: Julien Richard-Foy
 title: "Use npm packages in Scala.js with scalajs-bundler"
 ---

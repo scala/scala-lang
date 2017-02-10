@@ -1,6 +1,6 @@
 ---
 layout: news
-post-type: announcement
+category: announcement
 title: "Scala: Next Steps"
 permalink: /news/roadmap-next.html
 ---

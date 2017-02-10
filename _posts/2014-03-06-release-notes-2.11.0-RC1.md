@@ -1,6 +1,6 @@
 ---
 layout: news
-post-type: announcement
+category: announcement
 title: "Scala 2.11.0-RC1 is now available!"
 ---
 

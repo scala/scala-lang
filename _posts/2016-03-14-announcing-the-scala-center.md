@@ -1,6 +1,6 @@
 ---
 layout: blog
-post-type: blog
+category: blog
 by: Martin Odersky and Heather Miller
 title: The Scala Center
 ---

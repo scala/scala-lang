@@ -1,6 +1,6 @@
 ---
 layout: news
-post-type: announcement
+category: announcement
 title: "Scala 2.10.2-RC1 is now available!"
 ---
 We are very happy to announce the RC1 release of Scala 2.10.2! If no serious blocking issues are found this will become the final 2.10.2 version.

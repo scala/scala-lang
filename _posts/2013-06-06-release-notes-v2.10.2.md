@@ -1,6 +1,6 @@
 ---
 layout: news
-post-type: announcement
+category: announcement
 title: "Scala 2.10.2 is now available!"
 ---
 

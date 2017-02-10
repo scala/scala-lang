@@ -1,6 +1,6 @@
 ---
 layout: news
-post-type: announcement
+category: announcement
 title: "Scala 2.11.0-M3 is now available!"
 ---
 We are pleased to announce the next milestone release of Scala 2.11.0!

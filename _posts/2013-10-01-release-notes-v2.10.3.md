@@ -1,6 +1,6 @@
 ---
 layout: news
-post-type: announcement
+category: announcement
 title: "Scala 2.10.3 is now available!"
 ---
 We are very happy to announce the final release of Scala 2.10.3!

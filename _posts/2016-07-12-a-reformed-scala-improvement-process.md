@@ -1,6 +1,6 @@
 ---
 layout: blog
-post-type: blog
+category: blog
 by: Heather Miller
 title: A Reformed Scala Improvement Process
 ---
