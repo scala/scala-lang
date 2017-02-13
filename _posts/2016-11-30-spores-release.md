@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Jorge Vicente Cantero
 title: "Releasing spores 0.4.3"
 ---

@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Jon Pretty
 title: The Scala Center Advisory Board
 ---

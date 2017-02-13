@@ -1,6 +1,6 @@
 ---
-layout: news
-post-type: announcement
+
+category: announcement
 title: "Scala 2.11.0-M5 is now available!"
 ---
 The [fifth development milestone](https://github.com/scala/scala/releases/v2.11.0-M5) of Scala 2.11 is now available for [download](/download/2.11.0-M5.html)!

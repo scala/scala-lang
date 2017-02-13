@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Lukas Rytz
 title: Performance of trait methods
 disqus: true

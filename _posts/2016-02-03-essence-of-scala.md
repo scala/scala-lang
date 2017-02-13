@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Martin Odersky
 title: The Essence of Scala
 disqus: true

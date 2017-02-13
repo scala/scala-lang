@@ -3,6 +3,7 @@ githubUrl: https://github.com/scala/scala
 twitterUrl: https://twitter.com/scala_lang
 scaladexUrl: https://scaladex.scala-lang.org
 scastieUrl: https://scastie.scala-lang.org
+courseraMoocsUrl: https://www.coursera.org/specializations/scala
 
 texts:
   scalaBackendsTitle: Scala runs on...

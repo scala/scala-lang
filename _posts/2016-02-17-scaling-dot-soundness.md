@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Martin Odersky
 title: Scaling DOT to Scala - Soundness
 disqus: true

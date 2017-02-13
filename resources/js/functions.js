@@ -143,8 +143,10 @@ $('#scaladex-search').on('blur', function(e) {
 });
 
 $(window).on("blur", function() {
-   $("#scaladex-search").blur();
-   $("#scaladex-search").autocomplete().clear();
+    if ($("#scastie-textarea").length) {
+        $("#scastie-textarea").blur();
+        $("#scastie-textarea").autocomplete().clear();
+    }  
 });
 
 $('#scaladex-search').autocomplete({
@@ -183,34 +185,57 @@ $('#scaladex-search').autocomplete({
 });
 
 // Scala in the browser
-
 $(document).ready(function() {
-    var editor = CodeMirror.fromTextArea(document.getElementById("scastie-textarea"), {
-        lineNumbers: true,
-        matchBrackets: true,
-        theme: "monokai",
-        mode: "text/x-scala"
-      });
-    editor.setSize("100%", ($("#scastie-code-container").height()));
+    if ($("#scastie-textarea").length) {
+        var editor = CodeMirror.fromTextArea(document.getElementById("scastie-textarea"), {
+            lineNumbers: true,
+            matchBrackets: true,
+            theme: "monokai",
+            mode: "text/x-scala"
+          });
+        editor.setSize("100%", ($("#scastie-code-container").height()));
 
-    var codeSnippet = "List(\"Hello\", \"World\").mkString(\"\", \", \", \"!\")";
-    editor.getDoc().setValue(codeSnippet);
+        var codeSnippet = "List(\"Hello\", \"World\").mkString(\"\", \", \", \"!\")";
+        editor.getDoc().setValue(codeSnippet);
 
-    $('.btn-run').click(function() {
-        // TODO: Code to connect to the scastie server would be here, what follows is just a simulation for the UI elements:
-        $('.btn-run').addClass("inactive");
-        $('.btn-run i').removeClass("fa fa-play").addClass("fa fa-spinner fa-spin");
-        setTimeout(function() {
-          var currentCodeSnippet = editor.getDoc().getValue();
-          console.log("Current code snippet: " + currentCodeSnippet);
-          $('.btn-run').removeClass("inactive");
-          $('.btn-run i').removeClass("fa-spinner fa-spin").addClass("fa fa-play");
-        }, 2000);
-    })
+        $('.btn-run').click(function() {
+            // TODO: Code to connect to the scastie server would be here, what follows is just a simulation for the UI elements:
+            $('.btn-run').addClass("inactive");
+            $('.btn-run i').removeClass("fa fa-play").addClass("fa fa-spinner fa-spin");
+            setTimeout(function() {
+              var currentCodeSnippet = editor.getDoc().getValue();
+              console.log("Current code snippet: " + currentCodeSnippet);
+              $('.btn-run').removeClass("inactive");
+              $('.btn-run i').removeClass("fa-spinner fa-spin").addClass("fa fa-play");
+            }, 2000);
+        })
+    }    
 });
 
 // TOC:
-
-$(document).ready(function(){
-  $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '.inner-box', autoId: true, numerate: false});
+$(document).ready(function() {
+    if ($("#sidebar-toc").length) {
+        $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '.inner-box', autoId: true, numerate: false});
+    }
 })
+
+// Blog search
+$(document).ready(function() {
+  if ($("#blog-search-bar").length) {
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('blog-search-bar'),
+      resultsContainer: document.getElementById('result-container'),
+      json: '/resources/json/search.json',
+      searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+      limit: 5,      
+    });
+
+    $("#blog-search-bar").on("change paste keyup", function () {
+      if ($(this).val()) {
+        $("#result-container").show();
+      } else {
+        $("#result-container").hide();
+      }
+    });
+  }
+});
