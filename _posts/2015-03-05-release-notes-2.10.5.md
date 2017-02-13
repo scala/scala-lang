@@ -1,6 +1,6 @@
 ---
-layout: news
-post-type: announcement
+
+category: announcement
 permalink: /news/2.10.5
 title: "Scala 2.10.5 is now available!"
 ---

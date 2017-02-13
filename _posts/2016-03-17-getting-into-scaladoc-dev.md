@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Felix Mulder
 title: Getting into Scaladoc Development
 disqus: true

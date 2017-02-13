@@ -1,8 +1,8 @@
 ---
-layout: blog
-post-type: blog
+category: blog
 title: "Scala Center Advisory Board and SIP Meeting Results"
 by: Seth Tisue
+tags: ["scala center", "meetings"]
 ---
 
 Brief summaries of both meetings follow, with links to

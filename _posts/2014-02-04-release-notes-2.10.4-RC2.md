@@ -1,6 +1,6 @@
 ---
-layout: news
-post-type: announcement
+
+category: announcement
 title: "Scala 2.10.4-RC2 is now available!"
 ---
 We are very happy to announce the second release candidate of Scala 2.10.4!

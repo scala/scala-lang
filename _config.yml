@@ -20,6 +20,15 @@ exclude:
   - Rakefile
 future: true
 
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blog-detail
+      includeTOC: true
+
 # Custom collections
 collections:
   scala_items:
@@ -37,6 +46,8 @@ collections:
   books:
     output: false
   downloads:
+    output: true
+  posts:
     output: true
 
 # Pagination

@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Jorge Vicente Cantero
 title: "August SIP Meeting Results: 2 SIPs Rejected and 2 SIPs Updated"
 ---

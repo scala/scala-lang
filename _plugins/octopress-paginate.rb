@@ -179,6 +179,8 @@ module Octopress
       if page.data['paginate']['discardPastItems']
         collection = collection.reject{|p| (p.date < (Date.today.next_day(1)).to_time)}
       end
+
+      collection
     end
 
     def page_payload(payload, page)

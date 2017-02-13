@@ -1,6 +1,6 @@
 ---
-layout: news
-post-type: announcement
+
+category: announcement
 title: "Scala 2.11.0-M8 is now available!"
 
 ---

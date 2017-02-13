@@ -1,6 +1,6 @@
 ---
-layout: blog
-post-type: blog
+
+category: blog
 by: Dick Wall
 title: Minutes from Aug SIP/SLIP Meeting
 ---

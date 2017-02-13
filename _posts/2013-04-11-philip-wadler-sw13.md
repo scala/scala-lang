@@ -1,6 +1,6 @@
 ---
-layout: news
-post-type: news
+
+category: news
 title: "Prof. Philip Wadler to Keynote at the Scala Workshop (Scala2013)!"
 ---
 

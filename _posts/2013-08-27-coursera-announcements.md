@@ -1,6 +1,6 @@
 ---
-layout: news
-post-type: news
+
+category: news
 by: "Martin Odersky"
 title: "New Online Courses"
 ---

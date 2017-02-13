@@ -1,6 +1,6 @@
 ---
-layout: news
-post-type: announcement
+
+category: announcement
 permalink: /news/2.12.0-M1
 title: "Scala 2.12.0-M1 is now available!"
 ---
