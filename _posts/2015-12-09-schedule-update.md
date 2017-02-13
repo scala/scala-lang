@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: announcement
 title: "2016 Scala Release Schedule update"
 permalink: /news/2016-schedule.html

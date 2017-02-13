@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: announcement
 title: "Scala 2.10.2-RC1 is now available!"
 ---

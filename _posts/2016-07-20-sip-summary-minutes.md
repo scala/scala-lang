@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Jorge Vicente Cantero
 title: "SIP Meeting Results: 2 SIPs Numbered and 3 SIPs Updated"

@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: announcement
 title: "Scala 2.9.3 is now available!"
 permalink: /news/2.9.3

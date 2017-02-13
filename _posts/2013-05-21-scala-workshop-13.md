@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: news
 author: "Heather Miller"
 title: "Scala Workshop (Scala2013) Program Announced!"

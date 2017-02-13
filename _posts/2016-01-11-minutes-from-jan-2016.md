@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Hamish Dickson
 title: Minutes from Jan 2016 SIP/SLIP Meeting

@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: news
 title: "Google Summer of Code 2014"
 by: "Tobias Schlatter"

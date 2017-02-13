@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Dick Wall
 title: SIP/SLIP Summary, July 27th 2015

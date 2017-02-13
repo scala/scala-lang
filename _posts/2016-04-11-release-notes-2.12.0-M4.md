@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: announcement
 permalink: /news/2.12.0-M4
 title: "Scala 2.12.0-M4 is now available!"

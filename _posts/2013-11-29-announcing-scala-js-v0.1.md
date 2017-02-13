@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: announcement
 title: "Announcing Scala.js v0.1"
 by: "Sébastien Doeraene"

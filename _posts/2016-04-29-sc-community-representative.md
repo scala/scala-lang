@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Jon Pretty
 title: Scala Center Appoints Bill Venners as Community Representative to the Advisory Board

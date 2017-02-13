@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Guillaume Massé
 title: "Scala Library Index Reaches Beta!"

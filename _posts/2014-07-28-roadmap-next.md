@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: announcement
 title: "Scala: Next Steps"
 permalink: /news/roadmap-next.html

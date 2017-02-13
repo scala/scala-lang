@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Jon Pretty
 title: Lars Hupel Joins the Scala Center Advisory Board

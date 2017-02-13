@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Heather Miller
 title: 47 Degrees Joins the Scala Center Advisory Board!

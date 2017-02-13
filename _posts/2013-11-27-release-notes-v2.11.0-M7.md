@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: announcement
 title: "Scala 2.11.0-M7 is now available!"
 ---

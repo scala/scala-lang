@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Martin Odersky
 title: Multiversal Equality for Scala

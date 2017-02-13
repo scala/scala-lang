@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Felix Mulder
 title: "Awesome Error Messages for Dotty"

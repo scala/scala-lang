@@ -1,5 +1,5 @@
 ---
-layout: news
+
 category: news
 title: "10 Years of Scala"
 by: "Martin Odersky"

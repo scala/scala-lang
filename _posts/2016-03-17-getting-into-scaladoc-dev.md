@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Felix Mulder
 title: Getting into Scaladoc Development

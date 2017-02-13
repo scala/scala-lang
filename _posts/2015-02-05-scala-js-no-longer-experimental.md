@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Sébastien Doeraene
 title: Scala.js no longer experimental

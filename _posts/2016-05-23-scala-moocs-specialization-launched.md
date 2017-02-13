@@ -1,5 +1,5 @@
 ---
-layout: blog
+
 category: blog
 by: Heather Miller
 title: Three Scala courses launched on Coursera!
