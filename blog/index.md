@@ -9,4 +9,5 @@ paginate:
   permalink:    /:num/
   title_suffix: " - :num"
   reversed:     false
+  per_page:     10
 ---

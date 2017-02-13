@@ -39,37 +39,37 @@
 			{% assign urlPath = urlPath | split: '/' | join: '/' | remove_first: '/' %}
 			{% include paginator.html urlPath=urlPath %}	
 		</div>
-		<div class="content-nav-blog">
-			<div class="inner-box">
-				<h5>Contents</h5>
-				<div class="inner-toc">
-					<ul>
-						<li><a href="#">Item first level</a></li>
-						<li><a href="#">Item first level</a>
-							<ul>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a></li>
-								<li><a href="#">Item second level</a>
-									<ul>
-										<li><a href="#">Item third level</a></li>
-										<li><a href="#">Item third level</a></li>
-										<li><a href="#">Item third level</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#">Item first level</a></li>
-					</ul>
-				</div>
-				<hr>
-				<div class="help-us"><a href="#">Problem with this page?<br> Please help us fix it!</a></div>
+		{% assign highlights = "" | split: "," %}
+		{% for post in site.posts %}
+			{% if post.isHighlight == true %}
+				{% assign highlights = highlights | push: post %}
+			{% endif %}
+		{% endfor %}
+
+		{% for post in highlights %}
+			{% if forloop.first %}
+				<div class="content-nav-blog">
+					<div class="inner-box">
+						<h5>Highlights</h5>
+						<div class="blog-list-nav">	
+			{% endif %}
+			<div class="blog-list-nav-item">
+				<h4><a href="{{post.url}}">{{post.title}}</a></h4>
+				{% if post.by %}<p>{{post.by}}</p>{% endif %}
+				{% if post.tags %}
+					{% for tag in post.tags %}
+						<ul class="tag-list">
+							<li class="tag-item">{{tag}}</li>
+						</ul>
+					{% endfor %}
+				{% endif %}
 			</div>
-		</div>
+			{% if forloop.last %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+		
 	</div>
 </section>

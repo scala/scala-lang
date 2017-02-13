@@ -10,4 +10,5 @@ paginate:
   title_suffix: " - :num"
   category:     'announcement'
   reversed:     false
+  per_page:     10
 ---
