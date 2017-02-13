@@ -1,0 +1,12 @@
+- title: Introduction
+  url: http://docs.scala-lang.org/tutorials/tour/tour-of-scala.html
+- title: Unified Types
+  url: http://docs.scala-lang.org/tutorials/tour/unified-types.html
+- title: Traits
+  url: http://docs.scala-lang.org/tutorials/tour/traits.html
+- title: Higher-order Functions
+  url: http://docs.scala-lang.org/tutorials/tour/anonymous-function-syntax.html
+- title: Case Classes
+  url: http://docs.scala-lang.org/tutorials/tour/case-classes.html
+- title: Pattern Matching
+  url: http://docs.scala-lang.org/tutorials/tour/pattern-matching.html
