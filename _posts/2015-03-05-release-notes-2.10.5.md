@@ -1,7 +1,7 @@
 ---
 
 category: announcement
-permalink: /news/2.10.5
+permalink: /news/2.10.5/
 title: "Scala 2.10.5 is now available!"
 ---
 With pride and a pang of nostalgia, we announce the availability of Scala 2.10.5 -- the last release in the 2.10.x series.

@@ -2,7 +2,7 @@
 
 category: announcement
 title: "Scala 2.11.2 is now available!"
-permalink: /news/2.11.2
+permalink: /news/2.11.2/
 ---
 We are very pleased to announce the release of Scala 2.11.2!
 

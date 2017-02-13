@@ -2,7 +2,7 @@
 
 category: announcement
 title: "Scala 2.11.0 is now available!"
-permalink: /news/2.11.0
+permalink: /news/2.11.0/
 ---
 
 

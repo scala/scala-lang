@@ -1,7 +1,7 @@
 ---
 
 category: announcement
-permalink: /news/2.12.0-M4
+permalink: /news/2.12.0-M4/
 title: "Scala 2.12.0-M4 is now available!"
 ---
 We are happy to announce the availability of Scala 2.12.0-M4, which marks feature completeness for 2.12!
