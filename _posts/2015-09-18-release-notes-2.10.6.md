@@ -1,7 +1,7 @@
 ---
 
 category: announcement
-permalink: /news/2.10.6
+permalink: /news/2.10.6/
 title: "Scala 2.10.6 is now available!"
 ---
 Scala 2.10.6 [resolves a license incompatibility in scala.util.Sorting](https://github.com/scala/scala/pull/4557), but is otherwise identical to Scala 2.10.5. A total of [three pending backports](https://github.com/scala/scala/pulls?q=milestone%3A2.10.6+is%3Aclosed) were merged.

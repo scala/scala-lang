@@ -1,7 +1,7 @@
 ---
 
 category: announcement
-permalink: /news/2.12.0-M5
+permalink: /news/2.12.0-M5/
 title: "Scala 2.12.0-M5 is now available!"
 ---
 We are happy to announce the availability of Scala 2.12.0-M5!
