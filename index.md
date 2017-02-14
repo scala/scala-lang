@@ -5,14 +5,14 @@ layout: frontpage
 headerTitle: "Object-Oriented Meets Functional"
 headerSubtitle: "Have the best of both worlds. Construct elegant class hierarchies for maximum code reuse and extensibility, implement their behavior using higher-order functions. Or anything in-between."
 headerButtonTitle: "Learn More"
-headerButtonUrl: "/what-is-scala.html"
+headerButtonUrl: "/what-is-scala/"
 
 # Links of the Download / API Docs sections
 gettingStarted:
   mainTitle: "Download"
   mainUrl: "/download"
   subtitle: "Getting Started"
-  subtitleLink: "/documentation/getting-started.html"
+  subtitleLink: "/documentation/getting-started/"
   links:
     - title: "Milestones, nightlies, etc."
       url: "/download/"

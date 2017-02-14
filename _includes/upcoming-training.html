@@ -13,7 +13,7 @@
       {% endif %}
     {% endfor %}
     {% for training in upcomingTrainings %}
-      <a href="{{training.link}}" class="training-item card">
+      <a href="{{training.link-out}}" class="training-item card">
         <span class="calendar">
           <span>
             {% capture date %}{{training.date | date: '%B' }}{% endcapture %}
