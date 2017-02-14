@@ -3,6 +3,7 @@
 category: blog
 title: Implicit Function Types
 by: Martin Odersky
+isHighlight: true
 ---
 
 I just made the [first pull request](https://github.com/lampepfl/dotty/pull/1775) to add _implicit function types_ to
