@@ -35,10 +35,6 @@ $(document).ready(function() {
     });
 });
 
-jQuery(document).ready(function($) {
-  $(".sidebar-toc-wrapper").sticky({topSpacing:0});
-});
-
 // Tooltip
 $(document).ready(function() {
         // Tooltip only Text
@@ -194,6 +190,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     if ($("#sidebar-toc").length) {
         $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '.inner-box', autoId: true, numerate: false});
+         $(".sidebar-toc-wrapper").sticky({topSpacing:0});
     }
 })
 
@@ -226,7 +223,8 @@ $(document).ready(function() {
             matchBrackets: true,
             theme: "monokai",
             mode: "text/x-scala",
-            autoRefresh: true
+            autoRefresh: true,
+            fixedGutter: false
           });
         editor.setSize("100%", ($("#scastie-code-container").height()));
 
