@@ -190,9 +190,24 @@ $(document).ready(function() {
 $(document).ready(function() {
     if ($("#sidebar-toc").length) {
         $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '.inner-box', autoId: true, numerate: false});
-         $(".sidebar-toc-wrapper").sticky({topSpacing:0});
+        toggleStickyToc();
     }
 })
+
+$(window).resize(function() {
+  toggleStickyToc();
+});
+
+var toggleStickyToc = function() {
+    if ($(window).width() <= 992) {
+        $(".sidebar-toc-wrapper").unstick();
+    } else {
+        $(".sidebar-toc-wrapper").sticky({
+           topSpacing: 0,
+           bottomSpacing: 500
+        });
+    }
+}
 
 // Blog search
 $(document).ready(function() {
