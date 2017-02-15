@@ -25,7 +25,7 @@ efforts is strongly encouraged.
 Scala was created by
 [Prof. Martin Odersky](http://lampwww.epfl.ch/~odersky/).  Martin and
 his research group at EPFL remain heavily involved with the language,
-including developing of [Dotty](http://dotty.epfl.ch), a
+including developing [Dotty](http://dotty.epfl.ch), a
 next-generation research compiler for Scala.
 
 ## Forums and Mailing Lists
