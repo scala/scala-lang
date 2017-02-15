@@ -22,6 +22,12 @@ compiler, and standard library.  The Scala Center focuses on education
 outreach, and tooling.  Community participation in all of these
 efforts is strongly encouraged.
 
+Scala was created by
+[Prof. Martin Odersky](http://lampwww.epfl.ch/~odersky/).  Martin and
+his research group at EPFL remain heavily involved with the language,
+including developing of [Dotty](http://dotty.epfl.ch), a
+next-generation research compiler for Scala.
+
 ## Forums and Mailing Lists
 
 For discussions around Scala, we are in the process of migrating from
