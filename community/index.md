@@ -8,9 +8,30 @@ Popular ways to connect with the Scala community include forums, chat rooms, loc
 
 The community is also the source of many libraries, tools, and other resources around Scala.
 
+## Who's behind Scala?
+
+The Scala language and associated websites are cooperative projects of
+the [Scala Center](https://scala.epfl.ch) at [EPFL](http://epfl.ch),
+[Lightbend](https://www.lightbend.com), and the Scala community
+more broadly, with participation from many companies, organizations,
+and individuals.
+
+The Scala team at Lightbend concentrates on advancing the language,
+compiler, and standard library.  The Scala Center focuses on education
+(especially online courses), documentation, open source community
+outreach, and tooling.  Community participation in all of these
+efforts is strongly encouraged.
+
+Scala was created by
+[Prof. Martin Odersky](http://lampwww.epfl.ch/~odersky/).  Martin and
+his research group at EPFL remain heavily involved with the language,
+including developing [Dotty](http://dotty.epfl.ch), a
+next-generation compiler for Scala.
+
 ## Forums and Mailing Lists
 
-We are in the process of migrating from Google Groups to Discourse.
+For discussions around Scala, we are in the process of migrating from
+Google Groups to Discourse.
 
 For now, these Google Groups remain active:
 
