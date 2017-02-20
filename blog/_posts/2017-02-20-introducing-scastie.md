@@ -1,4 +1,9 @@
-# Introducing Scastie - An interactive playground for Scala.
+---
+layout: blog
+post-type: blog
+by: Guillaume Massé
+title: Introducing Scastie - An interactive playground for Scala.
+---
 
 The Scala Center team is happy to announce the Beta of Scastie.
 
