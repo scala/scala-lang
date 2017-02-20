@@ -5,7 +5,7 @@ by: Guillaume Massé
 title: Introducing Scastie - An interactive playground for Scala.
 ---
 
-The Scala Center team is happy to announce the Beta of Scastie.
+The Scala Center team is happy to announce the Beta of [Scastie](https://scastie.scala-lang.org).
 
 Aleh Aleshka ([OlegYch](https://github.com/OlegYch/)) is the original author of this project. His goal was to create a collaborative debugging tool where you can share and reproduce bugs. The Scala Center has extended Scastie to become an interactive environment for the community.
 
@@ -15,7 +15,7 @@ Scastie can run any Scala program with any library in your browser. You don't ne
 
 [![scastie](/resources/img/blog/scastie/scastie.png)](/resources/img/blog/scastie/scastie.png)
 
-We run your code in an isolated Java Virtual Machine on our servers. We allow you to specify the scala version, add libraries and much more. By default, we instrument your code to provide a REPL like environment. You can also format your code with scala-fmt. We integrated a [scaladex](https://index.scala-lang.org/) interface to allow you to search the Scala ecosystem and include any published Scala library in your project. You don't need to remember the lastest version of a specific library anymore!
+We run your code in an isolated Java Virtual Machine on our servers. We allow you to specify the scala version, add libraries and much more. By default, we instrument your code to provide a REPL-like environment. You can also format your code with scala-fmt. We integrated a [scaladex](https://index.scala-lang.org/) interface to allow you to search the Scala ecosystem and include any published Scala library in your project. You don't need to remember the lastest version of a specific library anymore!
 
 Let's see it in action.
 
