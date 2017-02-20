@@ -34,8 +34,8 @@ We also enable a worksheet mode, which feels much like a worksheet in an IDE. Th
 # What's next? 
 
 * Improve the sharing model. For example, we could use a similar approach as gist or JS Fiddle where you can fork and edit code snippets. 
-* Support Scala.js and Scala-Native. Vote on which one you'd like to see first! (Vote for Scala.js or vote for Scala Native)
-* Make it possible embed Scastie in your project's documentation.
+* Support Scala.js and Scala-Native. Vote on which one you'd like to see first! ([Vote for Scala.js](https://github.com/scalacenter/scastie/issues/38) or [vote for Scala Native](https://github.com/scalacenter/scastie/issues/40))
+* Make it possible to embed Scastie in your project's documentation.
 
 # Want to try it?
 
@@ -47,4 +47,4 @@ And remember, please give us feedback! Let us know what is confusing, if somethi
 
 # Talk to us!
 
-Thougts or opinions about Scastie? Join us over on [Scala Contributors](https://contributors.scala-lang.org) to contribute to the discussion.
+Thoughts or opinions about Scastie? Join us over on [Scala Contributors](https://contributors.scala-lang.org) to contribute to the discussion.
