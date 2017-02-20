@@ -47,4 +47,5 @@ And remember, please give us feedback! Let us know what is confusing, if somethi
 
 # Talk to us!
 
-Thoughts or opinions about Scastie? Join us over on [Scala Contributors](https://contributors.scala-lang.org) to contribute to the discussion.
+Thoughts or opinions about Scastie? Join us over on [Scala Contributors](
+https://contributors.scala-lang.org/t/introducing-scastie-an-interactive-playground-for-scala/494) to contribute to the discussion.
