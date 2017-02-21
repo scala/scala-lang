@@ -3,6 +3,7 @@ category: blog
 title: "Scala Center Advisory Board and SIP Meeting Results"
 by: Seth Tisue
 tags: ["scala center", "meetings"]
+isHighlight: true
 ---
 
 Brief summaries of both meetings follow, with links to

@@ -61,6 +61,24 @@ layout: inner-page-parent
 						</div>
 					</div>
 					<p class="bottom-lead">Scala is unusual because it is usually installed for each of your Scala projects rather than being installed system-wide. Both of the above options manage a specific Scala version per Scala project you create.</p>
+
+					<h3>Release Notes</h3>
+					<p>For important changes, please consult the <a href="/blog/announcements/">release notes</a>.</p>
+
+					<h3>Software Requirements</h3>
+
+					{{ page.requirements }}
+
+					{{ content }}
+
+					{% if page.show_resources == "true" %}
+
+					{% include download-resource-list.html %}
+
+					{% endif %}					
+
+					<h3>License</h3>
+					<p>The Scala distribution is released under the <a href="{{ site.baseurl }}/license/">3-clause BSD license</a>.</p>
 				</div>
 
 			</div>
