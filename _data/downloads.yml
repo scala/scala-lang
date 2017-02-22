@@ -3,9 +3,9 @@ stepOne:
     text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
   - os: unix
     text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
-  - os: windows
-    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
   - os: osx
+    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
+  - os: windows
     text: "<p><ul><li>Launch the Windows Start menu</li><li>Click on <code>Programs</code></li><li>Find the <code>Java</code> program listing</li><li>Click <code>About Java</code> to see the Java version</li></ul></p>"
 
 intellijUrls:
