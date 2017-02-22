@@ -125,7 +125,7 @@ function showSuggestions() {
 
 hideSuggestions();
 $('#scaladex-search').on('input', function(e) {
-    if ($("#scaladex-search").val() != "") hideSuggestions();
+    if ($("#scaladex-search").val() == "") hideSuggestions();
 });
 
 $('#scaladex-search').on('focus', function(e) {
@@ -144,7 +144,7 @@ $('#scaladex-search').on('blur', function(e) {
 
 $('#scaladex-search').autocomplete({
     paramName: 'q',
-    serviceUrl: 'https://scaladex.scala-lang.org/api/autocomplete',
+    serviceUrl: 'https://index.scala-lang.org/api/autocomplete',
     dataType: 'json',
     beforeRender: function() {
         showSuggestions();
