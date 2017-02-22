@@ -262,3 +262,25 @@ $(document).ready(function() {
         })
     }    
 });
+
+// OS detection
+function getOS() {
+  var osname = "Unknown OS";
+  if (navigator.appVersion.indexOf("Win") != -1) osname = "windows";
+  if (navigator.appVersion.indexOf("Mac") != -1) osname = "osx";
+  if (navigator.appVersion.indexOf("Linux") != -1) osname = "linux";
+  if (navigator.appVersion.indexOf("X11") != -1) osname = "unix";
+  return osname;
+}
+
+$(document).ready(function() {
+    if ($(".main-download").length) {
+        var os = getOS();
+        var intelliJlink = $("#intellij-" + os).text();
+        var sbtLink = $("#sbt-" + os).text();
+        var stepOneContent = $("#stepOne-" + os).html()
+        $("#download-intellij-link").attr("href", intelliJlink);
+        $("#download-sbt-link").attr("href", sbtLink);
+        $("#download-step-one").html(stepOneContent);
+    }
+});
