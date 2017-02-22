@@ -199,14 +199,16 @@ $(window).resize(function() {
 });
 
 var toggleStickyToc = function() {
-    if ($(window).width() <= 992) {
-        $(".sidebar-toc-wrapper").unstick();
-    } else {
-        $(".sidebar-toc-wrapper").sticky({
-           topSpacing: 0,
-           bottomSpacing: 500
-        });
-    }
+    if ($("#sidebar-toc").length) {
+        if ($(window).width() <= 992) {
+            $(".sidebar-toc-wrapper").unstick();
+        } else {
+            $(".sidebar-toc-wrapper").sticky({
+               topSpacing: 0,
+               bottomSpacing: 500
+            });
+        }
+    }    
 }
 
 // Blog search
