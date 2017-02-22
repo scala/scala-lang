@@ -1,8 +1,8 @@
 ---
 title: Parallel Programming
 url: https://www.coursera.org/specializations/scala
-date: 16-01-2017
-end-date: 20-02-2017
+date: 27-02-2017
+end-date: 03-04-2017
 platform: coursera
 specialization: fpfun
 specialization-order: 3
