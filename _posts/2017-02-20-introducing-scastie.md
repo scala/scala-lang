@@ -1,6 +1,5 @@
 ---
-layout: blog
-post-type: blog
+category: blog
 by: Guillaume Massé
 title: Introducing Scastie - An interactive playground for Scala.
 ---

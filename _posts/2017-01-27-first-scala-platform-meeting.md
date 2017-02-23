@@ -1,6 +1,5 @@
 ---
-layout: blog
-post-type: blog
+category: blog
 by: Jorge Vicente Cantero
 title: First Scala Platform meeting
 ---
