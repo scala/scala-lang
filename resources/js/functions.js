@@ -73,7 +73,7 @@ $(".hide").click(function() {
 
 //Tweet feed in frontpage
 $('#tweet-feed').tweetMachine('', {
-    backendScript: '/resources/php/getFromTwitter.php',
+    backendScript: 'http://scala-lang.org/webscripts/ajax/getFromTwitter.php',
     endpoint: 'statuses/user_timeline',
     user_name: 'scala_lang',
     include_retweets: true,
