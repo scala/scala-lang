@@ -32,7 +32,7 @@
 				}
 			} else { // It's not initialized, so let's do that
 				settings = $.extend({
-					backendScript:  '/resources/php/getFromTwitter.php', // Path to your backend script that holds your Twitter credentials and calls the API
+					backendScript:  'http://scala-lang.org/webscripts/ajax/getFromTwitter.php', // Path to your backend script that holds your Twitter credentials and calls the API
 					endpoint:       'statuses/user_timeline', // Twitter API endpoint to call. Currently only search/tweets is supported
 					user_name:		'scala_lang', // Set your username
 					include_retweets: true, // Set to true or false if you want to include retweets
