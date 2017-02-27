@@ -14,13 +14,13 @@ Scastie can run any Scala program with any library in your browser. You don't ne
 
 [![scastie](/resources/img/blog/scastie/scastie.png)](/resources/img/blog/scastie/scastie.png)
 
-We run your code in an isolated Java Virtual Machine on our servers. We allow you to specify the Scala version, add libraries and much more. By default, we instrument your code to provide a REPL-like environment. You can also format your code with [scalafmt](https://olafurpg.github.io/scalafmt/). We integrated a [scaladex](https://index.scala-lang.org/) interface to allow you to search the Scala ecosystem and include any published Scala library in your project. You don't need to remember the latest version of a specific library anymore!
+We run your code in an isolated Java Virtual Machine on our servers. We allow you to specify the Scala version, add libraries and much more. By default, we instrument your code to provide a REPL-like environment. You can also format your code with [scalafmt](https://olafurpg.github.io/scalafmt/). We integrated a [scaladex](https://index.scala-lang.org/) interface to allow you to search the Scala ecosystem and include any published Scala library in your project. You don't need to remember what the latest version number of a specific library is anymore!
 
 Let's see it in action.
 
 <iframe width="610" height="315" src="https://www.youtube.com/embed/ugFgdncsxEQ" frameborder="0" allowfullscreen></iframe>
 
-In this exampe, we use scrimage, which is a simple image library. We download an image, apply a sepia filter and serve both images back to the browser.
+In this example, we use scrimage, which is a simple image library. We download an image, apply a sepia filter and serve both images back to the browser.
 
 ## How does Scastie work?
 
@@ -28,7 +28,7 @@ When a user evaluates their code, the browser sends all its input to our server.
 
 Using sbt behind the scenes makes it possible for us to support a large range of platforms (Scalac, Dotty, Scala.js, Scala Native, and Typelevel Scala). In our beta, we've included support for any version of Scalac as well as all published versions of Dotty. Support for other platforms, such as Scala.js or Scala Native is forthcoming. Basing Scastie on sbt allows us to support newer Scala versions and resolve library dependencies.
 
-We also enable a worksheet mode, which feels much like a worksheet in an IDE. This lets a user write code as top-level expressions, without having to put code inside of a class or object with a main method. Worksheet mode gives you two ways to interleave your results; on the one hand, when an expression is evaluated, you can see the value and type of the evaluated expression to the right of the code that you wrote. On the other hand, worksheet mode also makes it possible to do a kind of literate programming; that is, you may interleave code and HTML blocks much like in notebook environments like iPython notebooks.
+We also enable a worksheet mode, which feels much like a worksheet in an IDE. This lets a user write code as top-level expressions, without having to put code inside of a class or object with a main method. Worksheet mode gives you two ways to interleave your results; on the one hand, when an expression is evaluated, you can see the value and type of the evaluated expression to the right of the code that you wrote. On the other hand, worksheet mode also makes it possible to do a kind of literate programming; that is, you may interleave code and HTML blocks much like in notebook environments such as iPython notebooks.
 
 ## What's next?
 
