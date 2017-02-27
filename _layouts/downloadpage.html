@@ -21,7 +21,7 @@ layout: inner-page-parent
 					<div class="step">
 						<img src="/resources/img/download/arrow-asset.png" alt="">
 						<div class="number-step">1</div>
-						<div class="text-step">
+						<div class="text-step" id="download-step-one">
 							<h3>First, make sure you have the Java 8 JDK installed.</h3>
 							<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>
 						</div>
@@ -34,11 +34,12 @@ layout: inner-page-parent
 					</div>
 					<div class="download-options">
 						<div class="download-intellij">
+							<span class="or">or</span>
 							<div class="description">
 								<img src="/resources/img/download/arrow-left.png" alt="">
 								<p>Best if you prefer a full-featured IDE (recommended for beginners)</p>
 							</div>
-							<a href="{{site.data.downloads.intellijUrl}}" class="btn-download">
+							<a href="" class="btn-download" id="download-intellij-link">
 								<i class="fa fa-download"></i>
 								<span>Download intellij</span>
 							</a> 
@@ -51,7 +52,7 @@ layout: inner-page-parent
 								<img src="/resources/img/download/arrow-right.png" alt="">
 								<p>Best if you are familiar with the command line</p>
 							</div>
-							<a href="{{site.data.downloads.sbtUrl}}" class="btn-download">
+							<a href="" class="btn-download" id="download-sbt-link">
 								<i class="fa fa-download"></i>
 								<span>Download Sbt</span>
 							</a>
@@ -84,4 +85,16 @@ layout: inner-page-parent
 			</div>
 		</div>
 	</div>
+
+	{% for step in site.data.downloads.stepOne %}
+		<div style="display:none" id="stepOne-{{step.os}}">{{step.text}}</div>
+	{% endfor %}
+
+	{% for intellijUrl in site.data.downloads.intellijUrls %}
+		<div style="display:none" id="intellij-{{intellijUrl.os}}">{{intellijUrl.url}}</div>
+	{% endfor %}
+
+	{% for sbtUrl in site.data.downloads.sbtUrls %}
+		<div style="display:none" id="sbt-{{sbtUrl.os}}">{{sbtUrl.url}}</div>
+	{% endfor %}
 </section>

@@ -1,2 +1,29 @@
-intellijUrl: https://www.jetbrains.com/idea/
-sbtUrl: http://www.scala-sbt.org/download.html
+stepOne:
+  - os: linux
+    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
+  - os: unix
+    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
+  - os: osx
+    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
+  - os: windows
+    text: "<p><ul><li>Launch the Windows Start menu</li><li>Click on <code>Programs</code></li><li>Find the <code>Java</code> program listing</li><li>Click <code>About Java</code> to see the Java version</li></ul></p>"
+
+intellijUrls:
+  - os: linux
+    url: https://www.jetbrains.com/idea
+  - os: unix
+    url: https://www.jetbrains.com/idea
+  - os: osx
+    url: https://www.jetbrains.com/idea
+  - os: windows
+    url: https://www.jetbrains.com/idea
+
+sbtUrls: 
+  - os: linux
+    url: http://www.scala-sbt.org/download.html
+  - os: unix
+    url: http://www.scala-sbt.org/download.html
+  - os: osx
+    url: http://www.scala-sbt.org/download.html
+  - os: windows
+    url: http://www.scala-sbt.org/download.html

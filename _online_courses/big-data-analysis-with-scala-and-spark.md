@@ -1,8 +1,8 @@
 ---
 title: Big Data Analysis with Scala and Spark
 url: https://www.coursera.org/specializations/scala
-date: 01-02-2017
-end-date: 01-01-2017
+date: 27-02-2017
+end-date: 03-04-2017
 platform: coursera
 specialization: fpfun
 specialization-order: 4

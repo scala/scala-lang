@@ -125,7 +125,7 @@ function showSuggestions() {
 
 hideSuggestions();
 $('#scaladex-search').on('input', function(e) {
-    if ($("#scaladex-search").val() != "") hideSuggestions();
+    if ($("#scaladex-search").val() == "") hideSuggestions();
 });
 
 $('#scaladex-search').on('focus', function(e) {
@@ -144,7 +144,7 @@ $('#scaladex-search').on('blur', function(e) {
 
 $('#scaladex-search').autocomplete({
     paramName: 'q',
-    serviceUrl: 'https://scaladex.scala-lang.org/api/autocomplete',
+    serviceUrl: 'https://index.scala-lang.org/api/autocomplete',
     dataType: 'json',
     beforeRender: function() {
         showSuggestions();
@@ -199,14 +199,16 @@ $(window).resize(function() {
 });
 
 var toggleStickyToc = function() {
-    if ($(window).width() <= 992) {
-        $(".sidebar-toc-wrapper").unstick();
-    } else {
-        $(".sidebar-toc-wrapper").sticky({
-           topSpacing: 0,
-           bottomSpacing: 500
-        });
-    }
+    if ($("#sidebar-toc").length) {
+        if ($(window).width() <= 992) {
+            $(".sidebar-toc-wrapper").unstick();
+        } else {
+            $(".sidebar-toc-wrapper").sticky({
+               topSpacing: 0,
+               bottomSpacing: 500
+            });
+        }
+    }    
 }
 
 // Blog search
@@ -259,4 +261,26 @@ $(document).ready(function() {
             }, 2000);
         })
     }    
+});
+
+// OS detection
+function getOS() {
+  var osname = "linux";
+  if (navigator.appVersion.indexOf("Win") != -1) osname = "windows";
+  if (navigator.appVersion.indexOf("Mac") != -1) osname = "osx";
+  if (navigator.appVersion.indexOf("Linux") != -1) osname = "linux";
+  if (navigator.appVersion.indexOf("X11") != -1) osname = "unix";
+  return osname;
+}
+
+$(document).ready(function() {
+    if ($(".main-download").length) {
+        var os = getOS();
+        var intelliJlink = $("#intellij-" + os).text();
+        var sbtLink = $("#sbt-" + os).text();
+        var stepOneContent = $("#stepOne-" + os).html()
+        $("#download-intellij-link").attr("href", intelliJlink);
+        $("#download-sbt-link").attr("href", sbtLink);
+        $("#download-step-one").html(stepOneContent);
+    }
 });
