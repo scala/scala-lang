@@ -2,7 +2,7 @@
 category: event
 title: Scala Matsuri
 logo: /resources/img/scala-matsuri.png
-location: Tokyo
+location: Tokyo, Japan
 description: "The largest Scala conference in Japan."
 start: 25 February 2017
 end: 26 February 2017

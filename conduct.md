@@ -5,91 +5,81 @@ permalink: /conduct/
 includeTOC: true
 ---
 
-This Code of Conduct covers our behaviour as contributors/committers of
-the Scala team, as well as those participating in any Scala moderated
-forum, mailing list, wiki, web site, Gitter or IRC room, hackathon, public
-meeting or private correspondence.  (See our
-[list of community fora](community/).)
+## Scala Code of Conduct
 
-Scala moderators are appointed by EPFL and Lightbend to maintain the
-health of the community and will arbitrate in any dispute over the
-conduct of a member of the community.
+We are committed to providing a friendly, safe and welcoming environment for
+all, regardless of level of experience, gender, gender identity and expression,
+sexual orientation, disability, personal appearance, body size, race, ethnicity,
+age, religion, nationality, or other such characteristics.
 
-Note: This should not be interpreted like a legal document.  It's a statement
-of intent, and a guideline for collaboration.
+### Our Standards
 
-The code of conduct consists of some hard-and-fast rules and some guidelines:
+**Whether you’re a regular contributor or a newcomer, we care about making this community a welcoming and safe place for you and we’ve got your back.**
 
-## Rules
+As a member of the community, you agree to the following:
 
-### (1) Be Respectful
+**Encouraged:**
 
-The Scala community is made up of a diverse set of individuals and
-backgrounds. Everyone can make a contribution to Scala. Disagreement is no
-excuse for poor behavior. Also, many users coming to Scala might have
-different background than others. Not knowing a particular domain is not just
-cause for rude behavior. If someone is suggesting concepts
-that go beyond your basic understanding, patiently asking for more information
-is the right way to go. Treat each other with respect in all interactions.
+- Be kind and courteous.
+- Respect differences of opinion and remember that every design or implementation choice carries a trade-off and numerous costs. There is seldom a single right answer.
+- Remember that everyone was new to Scala at some point. We want to encourage newcomers to join our community and learn the Scala language and ecosystem. Assume competence.
+- Show empathy towards other community members.
 
-A few examples for clarification.
+**Discouraged:**
 
-Abusive language, such as:
+- Keep unstructured critique to a minimum. We encourage sharing ideas and perspectives, so please ensure that your feedback is constructive and relevant. If you have solid ideas you want to experiment with, make a fork and see how it works.
+- Avoid aggressive and micro-aggressive behavior, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
+- We will exclude you from interaction if you insult, demean or harass anyone. The term “Harassment” includes “Unacceptable Behavior” described in the [Citizen Code of Conduct](http://citizencodeofconduct.org/). **In particular, we don’t tolerate behavior that excludes people in socially marginalized groups.**
+- Private harassment is also unacceptable. No matter who you are, if you feel you have been or are being harassed or made uncomfortable by a community member's behavior, please contact one of the [moderators](https://contributors.scala-lang.org/about) or any member of the [Scala Center](http://scala.epfl.ch/) immediately.
+- Likewise any spamming, trolling, flaming, baiting or other attention-stealing behaviour is not welcome.
 
-> F*** you
+### Moderation
 
-is never welcome.  The same goes for personal attacks like the following:
+These are the policies for upholding our community’s standards of conduct. If
+you feel that a thread needs moderation, please contact anyone on the
+[moderation team](https://contributors.scala-lang.org/about), or any employee of
+the [Scala Center](https://scala.epfl.ch/).
 
-> It's obvious you're a troll.
+- Remarks that violate the above code of conduct, including hateful, hurtful, oppressive, or exclusionary remarks, are not allowed. (Cursing is allowed, but never targeting another user, and never in a hateful manner.)
+- Moderators will warn users who make remarks inconsistent with the above code of conduct.
+- If the warning is unheeded, the user will be “kicked,” i.e., kicked out of the communication channel to cool off.
+- If the user comes back and continues to make trouble, they will be banned, i.e., indefinitely excluded.
+- Moderators may choose at their discretion to un-ban the user if it was a first offense and they if they make suitable amends with the offended party.
+- If you think a ban is unjustified, please take it up with that moderator, or with a different moderator, in private. Complaints about bans in-channel are not allowed.
+- Moderators are held to a higher standard than other community members. If a moderator acts inappropriately, they should expect less leeway than others.
 
-Snide comments, like the following:
+In the Scala community we strive to go the extra step to look out for each
+other. Don’t just aim to be technically unimpeachable; try to be your best self.
+In particular, avoid exacerbating offensive or sensitive issues, particularly if
+they’re off-topic; this all too often leads to unnecessary fights, hurt
+feelings, and damaged trust; worse, it can drive people away from the community
+entirely.
 
-> You really haven't comprehended anything I'm saying.
+If someone takes issue with something you said or did, resist the urge to be
+defensive. Rather, stop the offending behavior, apologize, and be sensitive
+thereafter. Even if you feel you were misinterpreted or unfairly accused,
+chances are good there was something you could’ve communicated better — remember
+that it’s your responsibility to make your fellow Scala developers comfortable.
+We are all here first and foremost because we want to talk about cool
+technology, and everyone wants to get along in doing so. People are generally
+eager to assume good intent and forgive.
 
-are generally unhelpful.  What you could have said:
+### Domain
 
-> I think perhaps my point was unclear.  Let me expand:
+The enforcement policies listed above apply to all official Scala channels:
+mailing lists, GitHub repositories and Gitter channels under scala and
+scalacenter, Discourse, and Scala Center venues and hackathons. For other
+projects adopting the Scala Code of Conduct, please contact the maintainers of
+those projects for enforcement. If you wish to use this code of conduct for your
+own project, consider explicitly mentioning your moderation policy or making a
+copy with your own moderation policy so as to avoid confusion.
 
-### (2) Be Courteous
+### Credits
 
-Whether posting to a mailing list, or submitting a bug report we value your
-contribution to Scala. When working with another’s work, be courteous and
-professional. It’s not courteous to demand responses, insult pull requests
-or post condescending bug reports. In that same vein, avoid posting messages
-with little to no content on the mailing list. We have a lot of people in
-the community, let’s keep our signal-to-noise ratio high, and set emotions
-aside before coming to the table.
+Adapted from and/or inspired by multiple successful Codes of Conduct, including:
 
-## Guidelines
-
-We didn't want our code to consist only of things that aren't allowed.
-Here are some guidelines about how our community can be not just
-good, but great:
-
-### (3) Strive for Excellence
-
-Strive to improve in all things. Strive to better Scala, and improve
-understanding. Improve your own teaching styles. Change the way we think about
-code design. Scala is a gateway into a new world of software design, and we’re
-constantly learning new things and opening new avenues. Keep an open mind
-to try new things, and strive to improve what we already know.
-
-### (4) Be Thorough
-
-No matter what it is, responding to a question, fixing a bug, writing a
-proposal, make sure the contribution is thorough. Don’t leave things half
-written or half done. While the evolution of Scala is a continual process,
-incomplete work is often of negative benefit. At the same time, contributors
-will come and go, as with any open source community. If a contributor needs
-to drop something, take measures to ensure someone else is willing to pick
-it up, or notify the other maintainers.
-
-## Violating the Code
-
-If a community member refuses to abide by the Code of Conduct, via
-personal attacks, abusive language or snide comments, then the following
-actions will be taken:
-
-1. **Issued a warning** On the first offense, one of the Scala moderators will issue a warning about the unacceptable behavior.
-2. **Put under moderation** On the second offense, a user may be placed under moderation.  This will continue for a maximum of three months.  If behavior improves, a user can leave moderated status.   If behavior degrades, it can lead to #3.
-3. **Removal from community** If a user has already been placed under moderation and returned, or has not learned to be respectful and courteous to others, it will constitute a removal from the Scala community, including all forums the Scala moderators are responsible for.
+* [Rust Code of Conduct](https://www.rust-lang.org/en-US/conduct.html)
+* [The Node.js Policy on Trolling](http://blog.izs.me/post/30036893703/policy-on-trolling)
+* [The Contributor Covenant v1.4.0](http://contributor-covenant.org/version/1/4/)
+* [The Recurse Center's User Manual](https://www.recurse.com/manual#sec-environment)
+* [The 18F Code of Conduct](https://18f.gsa.gov/code-of-conduct/)
