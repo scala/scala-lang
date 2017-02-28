@@ -1,6 +1,5 @@
 ---
-layout: blog
-post-type: blog
+category: blog
 by: Stefan Zeiger
 title: Scala 2.13 Collections Rework
 ---
