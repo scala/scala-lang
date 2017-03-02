@@ -284,3 +284,23 @@ $(document).ready(function() {
         $("#download-step-one").html(stepOneContent);
     }
 });
+
+var image = { width: 1680, height: 1100 };
+var target = { x: 1028, y: 290 };
+
+var pointer = $('#position-marker');
+
+$(document).ready(updatePointer);
+$(window).resize(updatePointer);
+
+function updatePointer() {
+
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+
+    var xScale = windowWidth / image.width;
+    var yScale = windowHeight / image.height;
+
+    pointer.css('top', (target.y));
+    pointer.css('left', (target.x) * xScale);
+}
