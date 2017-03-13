@@ -46,7 +46,7 @@ _Note this is our first time running this course material as a MOOC, so your fee
 
 ## Scala Specialization Capstone
 
-Th [Scala Specialization
+The [Scala Specialization
 Capstone](https://www.coursera.org/learn/scala-capstone) is 6 weeks long. It's a
 project course; so rather than following lectures week-to-week, students are
 expected to exercise the concepts that they've learned through the Scala
