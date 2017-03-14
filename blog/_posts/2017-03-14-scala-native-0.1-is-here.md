@@ -19,7 +19,7 @@ command-line tools, resource-constrained hardware applications, video games etc.
 To achieve this goal we've developed a whole-program optimising compiler
 that generates [LLVM intermediate representation](
 http://llvm.org/docs/LangRef.html). This representation is then
-used to generate efficient platform-dependant machine code.
+used to generate efficient platform-dependent machine code.
 
 The project has reached a point of feature completeness in terms of the
 coverage of the Scala language. We support the whole language including
