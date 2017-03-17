@@ -60,6 +60,7 @@ Other, more specialized rooms include:
 
 * **[scala/center](scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and general updates about projects and things going on at the Scala Center.
 * **[scala/contributors](https://gitter.im/scala/contributors)**: for contributors to discuss work on changes to Scala.
+* **[scala/moocs](https://gitter.im/scala/moocs)**: for talking about the Scala Center's online courses
 * **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
 
 These rooms are covered by the [Scala Code of Conduct](../conduct.html).
