@@ -166,14 +166,19 @@ that forming compound words simply didn't work so well in English; but in
 German, writing `implementationsdefiniertüberschreibenfaulunveränderliche` is
 completely natural, so we intend to fully embrace it.
 
-## Get involved
+## Get involved!
 
-We have come a long way in getting Skala to this stage, and there continues to
-be much exciting work going into the language, so I hope you will join with us
-in embracing this bold step towards a better Zukunft.
+We have come a long way in getting [Skala](https://github.com/propensive/skala)
+to this stage, and there continues to be much exciting work going into the
+language. With the help of organizations like the
+[Skalazentrum](https://scala.epfl.ch/), [Typstufe](http://typelevel.org),
+events like [Skala World](https://scala.world/) and inclusive groups like
+[SkalaBridge](http://www.scalabridge.org/), we hope to grow the community
+around this ambitious new language. So I hope you will join with us in
+embracing this bold step towards a better zukunft.
 
 **Editor's note: this article is dedicated to all the non-native English
 speakers who use, persevere with and contribute to Scala in English. Thank you.
-We are grateful to Lars Hupel for his assistance with some of the
+We are also grateful to Lars Hupel for his assistance with some of the
 translations.**
 
