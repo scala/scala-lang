@@ -114,9 +114,10 @@ not there yet.
 
 You can also [try out Skala for yourself
 today](https://github.com/propensive/skala) with the fully-functional compiler
-and REPL. Instructions on running the compiler are in the README file.
+and REPL. Instructions on running the compiler are in the [README
+file](https://github.com/propensive/skala/blob/master/README.md).
 
-[![skala-repl](/resources/img/skala-repl.png)](/resources/img/blog/skala-repl.png)
+[![skala-repl](/resources/img/skala-repl.png)](/resources/img/skala-repl.png)
 
 ## Future Work
 
