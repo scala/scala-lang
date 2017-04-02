@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: inner-page-no-masthead
 title: Getting Started
+permalink: /documentation/getting-started/
+includeTOC: true
 ---
 
 The best way to learn Scala depends on what you know already and the way you prefer to learn things. There is a variety of resources available including [books]({{ site.baseurl }}/documentation/books.html), tutorials, training courses, presentations, and of course the Scala compiler for practice. Many people find a good combination is to have one of the Scala books at hand and to start right away trying the examples with the Scala compiler. On the other hand, you may want to get started with a Scala training course or using the material available online.

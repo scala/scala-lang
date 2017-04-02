@@ -1,55 +1,45 @@
 ---
-layout: page
+layout: inner-page-documentation
 title: Documentation
+permalink: /documentation/
+includeTOC: true
+
+# Content masthead links
+links:
+  - title: "Getting Started"
+    description: "Install Scala on your computer and start writing some Scala code!"
+    icon: "fa fa-rocket"
+    link: /documentation/getting-started/
+  - title: "Overviews/Guides"
+    description: "Access detailed documentation on important language features."
+    icon: "fa fa-file-text"
+    link: http://docs.scala-lang.org/overviews/
+  - title: "API"
+    description: "Dive straight into the API."
+    icon: "fa fa-database"
+    link: /documentation/api/
+  - title: "Specification"
+    description: "Get an in-depth overview of the language."
+    icon: "fa fa-flag"
+    link: http://scala-lang.org/files/archive/spec/2.12/
+  - title: "Cheatsheets"
+    description: "Access language constructs quickly."
+    icon: "fa fa-list-alt"
+    link: http://docs.scala-lang.org/cheatsheets/
+  - title: "Style Guide"
+    description: "Learn how to code elegantly."
+    icon: "fa fa-code"
+    link: http://docs.scala-lang.org/style/
+  - title: "Tutorials"
+    description: "Digest bite-size pieces of the essentials."
+    icon: "fa fa-book"
+    link: http://docs.scala-lang.org/tutorials/
+  - title: "Glossary"
+    description: "Understand Scala's vocabulary."
+    icon: "fa fa-search"
+    link: http://docs.scala-lang.org/glossary/
+
 ---
-
-<div class="container">
-  <div class="row">
-    <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/documentation/getting-started.html">Getting Started</a></h3>
-      <p>Install Scala on your computer and start writing some Scala code!</p>
-    </div>
-    <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/overviews/">Overviews/Guides</a></h3>
-      <p>Access detailed documentation on important language features.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/documentation/api.html">API</a></h3>
-      <p>Dive straight into the API.</p>
-    </div>
-    <div class="span4 doc-block">
-      <h3><a href="{{ site.baseurl }}/files/archive/spec/2.12/">Specification</a></h3>
-      <p>Get an in-depth overview of the language.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/cheatsheets/">Cheatsheets</a></h3>
-      <p>Access language constructs quickly.</p>
-    </div>
-    <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/style/">Style Guide</a></h3>
-      <p>Learn how to code elegantly.</p>
-    </div>
-
-  </div>
-  
-  <div class="row">
-    <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></h3>
-      <p>Digest bite-size pieces of the essentials.</p>
-    </div>
-    <div class="span4 doc-block">
-      <h3><a href="http://docs.scala-lang.org/glossary/">Glossary</a></h3>
-      <p>Understand Scala's vocabulary.</p>
-    </div>
-  </div>
-
-</div>
 
 ## Online Learning
 

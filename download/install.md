@@ -1,6 +1,8 @@
 ---
-layout: page
 title: Install
+layout: inner-page-no-masthead
+permalink: /download/install/
+includeTOC: true
 ---
 
 **To run Scala from the command-line, simply [download]({{ site.baseurl }}/download) 

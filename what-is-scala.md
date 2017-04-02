@@ -1,7 +1,9 @@
 ---
-layout: page
 title: What is Scala?
 by: Martin Odersky
+layout: inner-page-no-masthead
+permalink: /what-is-scala/
+includeTOC: true
 ---
 
 ## A Scalable language

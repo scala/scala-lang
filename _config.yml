@@ -4,6 +4,8 @@ scalaversion: "2.12.1"
 
 baseurl: ""
 markdown: kramdown
+highlighter:
+
 exclude:
   - bundle-vendor/
   - blog/README.md
@@ -13,4 +15,44 @@ exclude:
   - events/README.md
   - Gemfile
   - Gemfile.lock
+  - vendor
+  - Procfile
+  - Rakefile
 future: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blog-detail
+      includeTOC: true
+
+# Custom collections
+collections:
+  scala_items:
+    output: false
+  online_courses:
+    output: false
+  trainings:
+    output: false
+  events:
+    output: false
+  contribute_resources:
+    output: false
+  contribute_community_tickets:
+    output: false
+  books:
+    output: false
+  downloads:
+    output: true
+  posts:
+    output: true
+
+# Pagination
+pagination:
+  limit: false
+  per_page: 5
+  title_suffix: " - :num"
+  permalink: /:num/ 
