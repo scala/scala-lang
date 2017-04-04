@@ -12,13 +12,13 @@ other_releases: [
 ]
 requirements: "Scala 2.12 requires version 8 of the <a href='http://www.java.com/'>Java platform</a>. Older Scala versions are compatible with Java 6 and up. Java 9 is not yet supported."
 resources: [
-  ["-main-unixsys", "scala-2.12.1.tgz", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.tgz", "Mac OS X, Unix, Cygwin", "18.79M"],
-  ["-main-windows", "scala-2.12.1.msi", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.msi", "Windows (msi installer)", "125.84M"],
-  ["-non-main-sys", "scala-2.12.1.zip", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.zip", "Windows", "18.83M"],
-  ["-non-main-sys", "scala-2.12.1.deb", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.deb", "Debian", "144.65M"],
-  ["-non-main-sys", "scala-2.12.1.rpm", "http://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.rpm", "RPM package", "125.29M"],
-  ["-non-main-sys", "scala-docs-2.12.1.txz", "http://downloads.lightbend.com/scala/2.12.1/scala-docs-2.12.1.txz", "API docs", "55.89M"],
-  ["-non-main-sys", "scala-docs-2.12.1.zip", "http://downloads.lightbend.com/scala/2.12.1/scala-docs-2.12.1.zip", "API docs", "109.10M"],
+  ["-main-unixsys", "scala-2.12.1.tgz", "https://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.tgz", "Mac OS X, Unix, Cygwin", "18.79M"],
+  ["-main-windows", "scala-2.12.1.msi", "https://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.msi", "Windows (msi installer)", "125.84M"],
+  ["-non-main-sys", "scala-2.12.1.zip", "https://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.zip", "Windows", "18.83M"],
+  ["-non-main-sys", "scala-2.12.1.deb", "https://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.deb", "Debian", "144.65M"],
+  ["-non-main-sys", "scala-2.12.1.rpm", "https://downloads.lightbend.com/scala/2.12.1/scala-2.12.1.rpm", "RPM package", "125.29M"],
+  ["-non-main-sys", "scala-docs-2.12.1.txz", "https://downloads.lightbend.com/scala/2.12.1/scala-docs-2.12.1.txz", "API docs", "55.89M"],
+  ["-non-main-sys", "scala-docs-2.12.1.zip", "https://downloads.lightbend.com/scala/2.12.1/scala-docs-2.12.1.zip", "API docs", "109.10M"],
   ["-non-main-sys", "scala-sources-2.12.1.tar.gz", "https://github.com/scala/scala/archive/v2.12.1.tar.gz", "Sources", "5.99M"]
 ]
 ---
