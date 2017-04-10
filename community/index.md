@@ -46,9 +46,11 @@ Discourse is an open-source forum and mailing list platform. You can participate
 
 All of these forums and lists are covered by the [Scala Code of Conduct](../conduct.html).
 
-### No Job Postings
+### Scala Jobs
 
-Job listings are not allowed on the forums and other channels.  While we're all very glad to see more and more Scala jobs, please confine these listings to more appropriate venues.
+Employers and job seekers can find each other in the [scala/job-board Gitter room](https://gitter.im/scala/job-board).
+
+Job listings are not allowed in our other forums and chat rooms.
 
 ## Chat Rooms
 
@@ -62,6 +64,7 @@ Other, more specialized rooms include:
 * **[scala/contributors](https://gitter.im/scala/contributors)**: for contributors to discuss work on changes to Scala.
 * **[scala/moocs](https://gitter.im/scala/moocs)**: for talking about the Scala Center's online courses
 * **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
+* **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other
 
 These rooms are covered by the [Scala Code of Conduct](../conduct.html).
 
@@ -72,6 +75,8 @@ IRC users can chat about Scala anytime on the [Scala IRC channel](http://webchat
 ## User Groups
 
 Find your local Scala user group on [Scala Space](http://scala.space/) or on Meetup's [Scala meetup list](http://scala.meetup.com/).
+
+Group organizers can talk to each other on the [scala-user-groups mailing list](https://groups.google.com/forum/#!forum/scala-user-groups).
 
 ## Conferences
 
