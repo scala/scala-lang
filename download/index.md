@@ -5,10 +5,9 @@ release_version: 2.12.2
 release_date: "April 18, 2017"
 show_resources: "true"
 other_releases: [
-  ["development_version", "Current 2.12.x release", 2.12.2, "April 18, 2017"],
-  ["maintenance_version", "Latest 2.11.x maintenance release", 2.11.11, "April 18, 2017"],
-  ["maintenance_version", "Last 2.10.x maintenance release", 2.10.6, "September 18, 2015"],
-  ["maintenance_version", "Last 2.9.x maintenance release", 2.9.3, "February 28, 2013"]
+  ["development_version", "Current 2.13.x milestone", 2.13.0-M1, "April 18, 2017"],
+  ["maintenance_version", "Last 2.11.x maintenance release", 2.11.11, "April 18, 2017"],
+  ["maintenance_version", "Last 2.10.x maintenance release", 2.10.6, "September 18, 2015"]
 ]
 requirements: "Scala 2.12 requires version 8 of the <a href='http://www.java.com/'>Java platform</a>. Older Scala versions are compatible with Java 6 and up. Java 9 is not yet supported."
 resources: [
@@ -23,10 +22,11 @@ resources: [
 ]
 ---
 
-<h3>Additional information</h3>
+<h3>Other Releases</h3>
 
 You can find the links to prior versions or the latest development version below.
 To see a detailed list of changes for each version of Scala please refer to the <a href="{{ site.baseurl }}/download/changelog.html">changelog</a>.
+
 Note that different major releases of Scala (e.g. Scala 2.11.x and Scala 2.12.x) are not binary compatible with each other.
 
 <ul>
