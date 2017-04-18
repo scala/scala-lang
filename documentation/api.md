@@ -4,6 +4,39 @@ title: Scala API Docs
 ---
 
 ## Latest releases
+* Scala 2.12.2
+  * [Library API](http://www.scala-lang.org/api/2.12.2/)
+  * [Compiler API](http://www.scala-lang.org/api/2.12.2/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.12.2/scala-reflect/#scala.reflect.package)
+  * Scala Modules
+    * [XML API](http://www.scala-lang.org/api/2.12.2/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.2/scala-parser-combinators/)
+    * [Swing API](http://www.scala-lang.org/api/2.12.2/scala-swing/#scala.swing.package)
+* Scala 2.11.11
+  * [Library API](http://www.scala-lang.org/api/2.11.11/)
+  * [Compiler API](http://www.scala-lang.org/api/2.11.11/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.11.11/scala-reflect/#scala.reflect.package)
+  * Scala Modules
+    * [XML API](http://www.scala-lang.org/api/2.11.11/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.11.11/scala-parser-combinators/)
+    * [Actors API](http://www.scala-lang.org/api/2.11.11/scala-actors/#scala.actors.package) (deprecated)
+    * [Swing API](http://www.scala-lang.org/api/2.11.11/scala-swing/#scala.swing.package)
+    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.11/scala-continuations-library/#scala.util.continuations.package)
+* [Scala 2.10.6](http://www.scala-lang.org/api/2.10.6/)
+
+## Nightly builds
+
+* Scala 2.12.x
+  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/)
+  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/scala-compiler/)
+* Scala 2.11.x
+  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
+  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
+* Scala 2.13.x
+  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/)
+  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/scala-compiler/)
+
+## Previous releases
 * Scala 2.12.1
   * [Library API](http://www.scala-lang.org/api/2.12.1/)
   * [Compiler API](http://www.scala-lang.org/api/2.12.1/scala-compiler/)
@@ -22,18 +55,6 @@ title: Scala API Docs
     * [Actors API](http://www.scala-lang.org/api/2.11.8/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.8/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.8/scala-continuations-library/#scala.util.continuations.package)
-* [Scala 2.10.6](http://www.scala-lang.org/api/2.10.6/)
-
-## Nightly builds
-
-* Scala 2.11.x
-  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
-  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
-* Scala 2.12.x
-  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/)
-  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/scala-compiler/)
-
-## Previous releases
 * Scala 2.11.7
   * [Library API](http://www.scala-lang.org/api/2.11.7/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.7/scala-compiler/)
