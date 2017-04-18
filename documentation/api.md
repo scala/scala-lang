@@ -26,12 +26,15 @@ title: Scala API Docs
 
 ## Nightly builds
 
-* Scala 2.11.x
-  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
-  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
 * Scala 2.12.x
   * [Library API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/)
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/scala-compiler/)
+* Scala 2.11.x
+  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
+  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
+* Scala 2.13.x
+  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/)
+  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/scala-compiler/)
 
 ## Previous releases
 * Scala 2.12.1
