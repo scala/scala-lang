@@ -27,3 +27,19 @@ pre.prettyprint {
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums { margin: 0 0 0 40px; } /* IE indents via margin-left */
 ol.linenums > li { color: rgba(67, 94, 101, 0.6); line-height: 20px; width: 100%; s}
+
+/* Quick hack to make the code readable; the above settings use low contrast colors and an annoying horizontal scroll bar shows */
+.prettyprint code,
+.prettyprint .str,
+.prettyprint .atv,
+.prettyprint .lit,
+.prettyprint .kwd,
+.prettyprint .com,
+.prettyprint .dec,
+.prettyprint .typ,
+.prettyprint .tag {
+  color: white;
+  font-size: 10pt;
+}
+
+.main-page-column { width: initial; }
