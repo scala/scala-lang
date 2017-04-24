@@ -42,7 +42,7 @@ scalaBackends:
 
 # Scala IDEs
 scalaIDEs:
-  - name: IntelliJ
+  - name: IntelliJ (with plugin)
     icon: /resources/img/frontpage/intelliJ.png
     ensime: false
     url: "https://www.jetbrains.com/idea/"
@@ -54,17 +54,12 @@ scalaIDEs:
     icon: /resources/img/frontpage/atom.png
     ensime: true
     url: "https://atom.io/"
-  - name: Eclipse
+  - name: Scala IDE (Eclipse-based)
     icon: /resources/img/frontpage/eclipse.png
     ensime: false
-    url: "https://eclipse.org/downloads/"
-  - name: Ensime
-    icon: /resources/img/frontpage/ensime.png
-    ensime: false
-    url: "http://ensime.org/"
+    url: "http://scala-ide.org/"
 
 # Scala ecosystem
 ecosystemTitle: "Scala ecosystem"
 ecosystemDescription: "The Scala Library Index (or Scaladex) is a representation of a map of all published Scala libraries. With Scaladex, a developer can now query more than 100,000 releases of Scala libraries. Scaladex is officially supported by Scala Center."
 ---
-
