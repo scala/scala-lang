@@ -40,7 +40,7 @@ Discourse is an open-source forum and mailing list platform. You can participate
 
 These forums are covered by the [Scala Code of Conduct](../conduct.html).
 
-### Scala Jobs
+## Scala Jobs
 
 Employers and job seekers can find each other in the [scala/job-board Gitter room](https://gitter.im/scala/job-board).
 
