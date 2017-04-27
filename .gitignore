@@ -4,3 +4,4 @@ _site/
 /.jekyll-metadata
 .bundle
 /.idea
+.ruby-version
