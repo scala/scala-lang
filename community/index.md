@@ -28,23 +28,17 @@ his research group at EPFL remain heavily involved with the language,
 including developing [Dotty](http://dotty.epfl.ch), a
 next-generation compiler for Scala.
 
-## Forums and Mailing Lists
+## Forums / Mailing Lists
 
-For discussions around Scala, we are in the process of migrating from
-Google Groups to Discourse.
+The Scala Center operates two Discourse forums:
 
-For now, these Google Groups remain active:
-
- * **[scala-user](http://groups.google.com/group/scala-user)**: The main forum for questions and discussions, including beginner questions, about programming in Scala. Any question can and should receive a courteous and insightful answer.
- * **[scala-announce](http://groups.google.com/group/scala-announce)**: Announcements of new Scala releases, tools, libraries, and other resources.
-
-Other discussions are now on Discourse, here:
+ * **[users.scala-lang.org](https://users.scala-lang.org)**: The main forum for questions, discussions, and announcements about programming in Scala. Beginner questions are very welcome. Any question can and should receive a courteous and insightful answer.  (Replaces the old scala-user and scala-announce groups.)
 
  * **[contributors.scala-lang.org](https://contributors.scala-lang.org)**: For anything related to moving Scala forward; from Scala Platform library discussions, to Scala Improvement Process discussions, to development work on the Scala compiler, standard library, and modules. Core maintainers and open-source contributors are both welcome, as well as those who want to see what’s coming down the pipe and would like to be involved.  (Replaces the old scala-internals, scala-language, scala-debate, scala-sips, and scala-tools groups.)
 
 Discourse is an open-source forum and mailing list platform. You can participate via the web, or you can use "mailing list mode", where you receive posts in your inbox and can reply to them via email. The web interface provides statistics, upvoting, polls, and other features. Posts can be written in Markdown, including syntax highlighting.
 
-All of these forums and lists are covered by the [Scala Code of Conduct](../conduct.html).
+These forums are covered by the [Scala Code of Conduct](../conduct.html).
 
 ### Scala Jobs
 
@@ -147,8 +141,10 @@ Staying current:
 
 ## Mailing Lists (Retired)
 
-These lists are being retired; please use [contributors.scala-lang.org](https://contributors.scala-lang.org) instead.
+These lists are being retired; please use [users.scala-lang.org](https://users.scala-lang.org) and [contributors.scala-lang.org](https://contributors.scala-lang.org) instead.
 
+ * **[scala-user (retiring soon)](http://groups.google.com/group/scala-user)**: main forum for questions and discussions, including beginner questions, about programming in Scala
+ * **[scala-announce (retiring soon)](http://groups.google.com/group/scala-announce)**: announcements of new Scala releases, tools, libraries, and other resources
  * **[Scala-Language (retired)](http://groups.google.com/group/scala-language)**: discussions about the Scala language itself. Why Scala is the way it is, and how it could be different.
  * **[Scala-Debate (retired)](http://groups.google.com/group/scala-debate)**: the "any topic goes" list. While professional courtesy and respect must be maintained, discussion and speculation on controversial topics and “what-if” type questions can occur. Threads sometimes migrate here from other lists if they become too specialized, lengthy, or contentious.
  * **[Scala-Tools (retired)](http://groups.google.com/group/scala-tools)**: specifically for tooling around Scala, such as editors and build tools.
