@@ -10,34 +10,22 @@ links:
     description: "Install Scala on your computer and start writing some Scala code!"
     icon: "fa fa-rocket"
     link: /documentation/getting-started/
-  - title: "Overviews/Guides"
+  - title: "Tour of Scala"
+    description: "Get an introduction to some of the core language concepts."
+    icon: "fa fa-flag"
+    link: /tutorials/tour/tour-of-scala.html
+  - title: "Guides"
     description: "Access detailed documentation on important language features."
     icon: "fa fa-file-text"
     link: http://docs.scala-lang.org/overviews/
-  - title: "API"
-    description: "Dive straight into the API."
+  - title: "Reference"
+    description: "Search the API, read the language spec, and the glossary"
     icon: "fa fa-database"
     link: /documentation/api/
-  - title: "Specification"
-    description: "Get an in-depth overview of the language."
-    icon: "fa fa-flag"
-    link: http://scala-lang.org/files/archive/spec/2.12/
-  - title: "Cheatsheets"
-    description: "Access language constructs quickly."
-    icon: "fa fa-list-alt"
-    link: http://docs.scala-lang.org/cheatsheets/
-  - title: "Style Guide"
-    description: "Learn how to code elegantly."
-    icon: "fa fa-code"
-    link: http://docs.scala-lang.org/style/
-  - title: "Tutorials"
-    description: "Digest bite-size pieces of the essentials."
+  - title: "Learning Resources"
+    description: "Books and online exercises"
     icon: "fa fa-book"
     link: http://docs.scala-lang.org/tutorials/
-  - title: "Glossary"
-    description: "Understand Scala's vocabulary."
-    icon: "fa fa-search"
-    link: http://docs.scala-lang.org/glossary/
 
 ---
 
