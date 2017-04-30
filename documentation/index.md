@@ -2,7 +2,7 @@
 layout: inner-page-documentation
 title: Documentation
 permalink: /documentation/
-includeTOC: true
+includeTOC: false
 
 # Content masthead links
 links:
