@@ -3,13 +3,8 @@ layout: books
 title: Books
 ---
 
-The number of books published about Scala is now large,
-and still growing fast.
-
-What follows is only a small selection of recent titles in English that
-address the Scala language in general.  Many more books exist which
-address particular audiences, particular frameworks, etc.
-
+Below is a list of recommended books for learning the Scala language. Many more books exist which
+address particular audiences and particular frameworks. You will also find non-English books.
 
 [**Programming in
 Scala**, 3rd ed.](http://booksites.artima.com/programming_in_scala_3ed)
@@ -87,8 +82,8 @@ Published by [Manning](http://www.manning.com):
 <div class="row">
   <div class="span2">
     <div align="center">
-    <a href="http://www.manning.com/raychaudhuri">
-      <img src="/resources/img/books/icon_Scala_in_Action_93x116.png" alt="Scala in Action book cover">
+    <a href="https://www.manning.com/books/scala-in-action">
+      <img src="/resources/img/books/Scala_in_Action.jpg" alt="Scala in Action book cover">
     </a>
     </div>
   </div>
