@@ -6,6 +6,11 @@ redirect_from:
   - /documentation/books.html
 ---
 ## Online Learning
+
+### Quick Online Exercises
+[Scala Exercises](https://www.scala-exercises.org/) is a series of lessons and exercises created by 47 Degrees. It's a great way to get a brief introduction to Scala while testing your knowledge along the way.
+
+### Coursera courses from EPFL
 There are a few interactive resources for trying out Scala, to get a look and feel of the language:
 
  * [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun), free on Coursera. This is a course about functional programming given by Martin Odersky himself. You can access the course material and exercises by
@@ -16,7 +21,11 @@ There are a few interactive resources for trying out Scala, to get a look and fe
     * Parallel programming
     * Big Data Analysis with Scala and Spark
     * Functional Programming in Scala Capstone
- * **Try Scala In Your Browser!**: There are a handful of websites where you can interactively run Scala code in your browser! Have a look at [scala-js-fiddle](http://www.scala-js-fiddle.com/), [Scala Kata](http://www.scalakata.com/), and [Scastie](http://scastie.org/) for more.
- * [Independent Courseware](http://getscala.com), online self-study or instructor-led Scala and Play courses for a fee.
+
+### Try Scala In Your Browser!
+There are a handful of websites where you can interactively run Scala code in your browser! Have a look at [scala-js-fiddle](http://www.scala-js-fiddle.com/), [Scala Kata](http://www.scalakata.com/), and [Scastie](http://scastie.org/) for more.
+
+### ScalaCourses
+[Independent Courseware](http://getscala.com), online self-study or instructor-led Scala and Play courses for a fee.
 
 ## Books
