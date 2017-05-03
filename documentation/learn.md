@@ -2,6 +2,8 @@
 title: Learning Resources
 layout: learn
 includeTOC: true
+redirect_from:
+  - /documentation/books.html
 ---
 ## Online Learning
 There are a few interactive resources for trying out Scala, to get a look and feel of the language:
@@ -16,3 +18,5 @@ There are a few interactive resources for trying out Scala, to get a look and fe
     * Functional Programming in Scala Capstone
  * **Try Scala In Your Browser!**: There are a handful of websites where you can interactively run Scala code in your browser! Have a look at [scala-js-fiddle](http://www.scala-js-fiddle.com/), [Scala Kata](http://www.scalakata.com/), and [Scastie](http://scastie.org/) for more.
  * [Independent Courseware](http://getscala.com), online self-study or instructor-led Scala and Play courses for a fee.
+
+## Books
