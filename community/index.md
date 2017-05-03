@@ -50,7 +50,7 @@ Job listings are not allowed in our other forums and chat rooms.
 
 The main [Gitter](https://gitter.im) room for Scala is:
 
-* **[scala/scala](https://gitter.im/scala/scala)**: like the scala-user mailing list. Questions, general discussion, etc. Beginner-friendly!
+* **[scala/scala](https://gitter.im/scala/scala)**: Questions, general discussion, etc. Beginner-friendly.
 
 Other, more specialized rooms include:
 
