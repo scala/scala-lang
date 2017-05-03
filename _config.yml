@@ -56,3 +56,9 @@ pagination:
   per_page: 5
   title_suffix: " - :num"
   permalink: /:num/ 
+
+gems:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
