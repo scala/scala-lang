@@ -13,7 +13,7 @@ links:
   - title: "Tour of Scala"
     description: "Get an introduction to some of the core language concepts."
     icon: "fa fa-flag"
-    link: /tutorials/tour/tour-of-scala.html
+    link: http://docs.scala-lang.org/tutorials/tour/tour-of-scala.html
   - title: "Guides"
     description: "Access detailed documentation on important language features."
     icon: "fa fa-file-text"
