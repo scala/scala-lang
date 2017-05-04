@@ -1,21 +1,29 @@
 ---
+title: Reference
 layout: inner-page-no-masthead
-title: Scala API Docs
-permalink: /documentation/api/
+redirect_from:
+  - documentation/api
 includeTOC: true
 ---
 
-## Latest releases
-* Scala 2.12.1
-  * [Library API](http://www.scala-lang.org/api/2.12.1/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.1/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.1/scala-reflect/#scala.reflect.package)
+## Quick Reference
+* [Glossary](http://docs.scala-lang.org/glossary/) of Scala terms
+* [Cheatsheet](http://docs.scala-lang.org/cheatsheets/) for syntax. This can be useful for quickly picking up the syntax once you understand the basics of the language.
+
+## Search the API
+The searchable API docs below are an invaluable resource as you make use of the Scala libraries. For newcomers to Scala, start with the [Standard Library API for 2.12.2](http://www.scala-lang.org/api/2.12.2/).
+### Latest Stable versions
+
+* Scala 2.12.2
+  * [Standard Library API](http://www.scala-lang.org/api/2.12.2/)
+  * [Compiler API](http://www.scala-lang.org/api/2.12.2/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.12.2/scala-reflect/#scala.reflect.package)
   * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.1/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.1/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.1/scala-swing/#scala.swing.package)
+    * [XML API](http://www.scala-lang.org/api/2.12.2/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.2/scala-parser-combinators/)
+    * [Swing API](http://www.scala-lang.org/api/2.12.2/scala-swing/#scala.swing.package)
 * Scala 2.11.8
-  * [Library API](http://www.scala-lang.org/api/2.11.8/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.8/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.8/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.8/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -26,18 +34,18 @@ includeTOC: true
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.8/scala-continuations-library/#scala.util.continuations.package)
 * [Scala 2.10.6](http://www.scala-lang.org/api/2.10.6/)
 
-## Nightly builds
+### Nightly Builds API Search
 
 * Scala 2.11.x
-  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
+  * [Standard Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
 * Scala 2.12.x
-  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/)
+  * [Standard Library API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/)
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/scala-compiler/)
 
-## Previous releases
+### Previous releases
 * Scala 2.11.7
-  * [Library API](http://www.scala-lang.org/api/2.11.7/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.7/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.7/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.7/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -47,7 +55,7 @@ includeTOC: true
     * [Swing API](http://www.scala-lang.org/api/2.11.7/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.7/scala-continuations-library/#scala.util.continuations.package)
 * Scala 2.11.6
-  * [Library API](http://www.scala-lang.org/api/2.11.6/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.6/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.6/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.6/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -57,7 +65,7 @@ includeTOC: true
     * [Swing API](http://www.scala-lang.org/api/2.11.6/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.6/scala-continuations-library/#scala.util.continuations.package)
 * Scala 2.11.5
-  * [Library API](http://www.scala-lang.org/api/2.11.5/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.5/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.5/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.5/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -67,7 +75,7 @@ includeTOC: true
     * [Swing API](http://www.scala-lang.org/api/2.11.5/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.5/scala-continuations-library/#scala.util.continuations.package)
 * Scala 2.11.4
-  * [Library API](http://www.scala-lang.org/api/2.11.4/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.4/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.4/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.4/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -77,7 +85,7 @@ includeTOC: true
     * [Swing API](http://www.scala-lang.org/api/2.11.4/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.4/scala-continuations-library/#scala.util.continuations.package)
 * Scala 2.11.2
-  * [Library API](http://www.scala-lang.org/api/2.11.2/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.2/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.2/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.2/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -87,7 +95,7 @@ includeTOC: true
     * [Swing API](http://www.scala-lang.org/api/2.11.2/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.2/scala-continuations-library/#scala.util.continuations.package)
 * Scala 2.11.1
-  * [Library API](http://www.scala-lang.org/api/2.11.1/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.1/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.1/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.1/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -97,7 +105,7 @@ includeTOC: true
     * [Swing API](http://www.scala-lang.org/api/2.11.1/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.1/scala-continuations-library/#scala.util.continuations.package)
 * Scala 2.11.0
-  * [Library API](http://www.scala-lang.org/api/2.11.0/)
+  * [Standard Library API](http://www.scala-lang.org/api/2.11.0/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.0/scala-compiler/)
   * [Reflection API](http://www.scala-lang.org/api/2.11.0/scala-reflect/#scala.reflect.package)
   * Scala Modules
@@ -132,3 +140,8 @@ includeTOC: true
 * [Scala 2.6.0.final](http://www.scala-lang.org/api/2.6.0/)
 * [Scala 2.5.1.final](http://www.scala-lang.org/api/2.5.1/)
 * [Scala 2.5.0.final](http://www.scala-lang.org/api/2.5.0/)
+
+## Language Specification
+The language specification is a formal description of the syntax and semantics of the language.
+* [Scala 2.12 Language Specification](https://www.scala-lang.org/files/archive/spec/2.12/)
+* [Scala 2.11 Language Specification](https://www.scala-lang.org/files/archive/spec/2.11/)
