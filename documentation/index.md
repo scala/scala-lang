@@ -17,15 +17,15 @@ links:
   - title: "Guides"
     description: "Access detailed documentation on important language features."
     icon: "fa fa-file-text"
-    link: http://docs.scala-lang.org/guides.html
+    link: /documentation/guides.html
   - title: "Reference"
     description: "Search the API, read the language spec, and the glossary"
     icon: "fa fa-database"
-    link: /documentation/api/
+    link: /documentation/reference.html
   - title: "Learning Resources"
     description: "Books and online exercises"
     icon: "fa fa-book"
-    link: http://docs.scala-lang.org/tutorials/
+    link: /documentation/learn.html
 
 ---
 
