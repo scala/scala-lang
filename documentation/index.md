@@ -17,7 +17,7 @@ links:
   - title: "Guides"
     description: "Access detailed documentation on important language features."
     icon: "fa fa-file-text"
-    link: /documentation/guides.html
+    link: http://docs.scala-lang.org/guides.html
   - title: "Reference"
     description: "Search the API, read the language spec, and the glossary"
     icon: "fa fa-database"
