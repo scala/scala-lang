@@ -23,4 +23,4 @@ Once you've finished these tutorials, check out
 * [Learning Resources](documentation/learn) including books and online courses
 
 ## Getting Help
-Check out our [community](community/) page for more answers to your questions and to reach out for help.
+Visit out our [community](community/) page for more answers to your questions and to reach out for help.
