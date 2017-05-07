@@ -2,6 +2,8 @@
 layout: inner-page-documentation
 title: Documentation
 permalink: /documentation/
+redirect_from:
+  - /what-is-scala/
 includeTOC: true
 
 # Content masthead links
