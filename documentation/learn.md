@@ -25,6 +25,9 @@ There are a few interactive resources for trying out Scala, to get a look and fe
 ### Try Scala In Your Browser!
 There are a handful of websites where you can interactively run Scala code in your browser! Have a look at [scala-js-fiddle](http://www.scala-js-fiddle.com/), [Scala Kata](http://www.scalakata.com/), and [Scastie](http://scastie.org/) for more.
 
+### allaboutscala
+[allaboutscala](http://allaboutscala.com/) provides detailed tutorials for beginners.
+
 ### ScalaCourses
 [Independent Courseware](http://getscala.com), online self-study or instructor-led Scala and Play courses for a fee.
 
