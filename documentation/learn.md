@@ -8,7 +8,7 @@ redirect_from:
 ## Online Learning
 
 ### Quick Online Exercises
-[Scala Exercises](https://www.scala-exercises.org/) is a series of lessons and exercises created by 47 Degrees. It's a great way to get a brief introduction to Scala while testing your knowledge along the way.
+[Scala Exercises](https://www.scala-exercises.org/) is a series of lessons and exercises created by [47 Degrees](https://www.47deg.com/). It's a great way to get a brief introduction to Scala while testing your knowledge along the way.
 
 ### Coursera courses from EPFL
 There are a few interactive resources for trying out Scala, to get a look and feel of the language:
