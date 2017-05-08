@@ -1,12 +1,10 @@
-- title: Introduction
-  url: http://docs.scala-lang.org/tutorials/tour/tour-of-scala.html
-- title: Unified Types
-  url: http://docs.scala-lang.org/tutorials/tour/unified-types.html
-- title: Traits
-  url: http://docs.scala-lang.org/tutorials/tour/traits.html
-- title: Higher-order Functions
-  url: http://docs.scala-lang.org/tutorials/tour/anonymous-function-syntax.html
-- title: Case Classes
-  url: http://docs.scala-lang.org/tutorials/tour/case-classes.html
-- title: Pattern Matching
-  url: http://docs.scala-lang.org/tutorials/tour/pattern-matching.html
+- title: Getting Started with Scala in IntelliJ
+  url: documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html
+- title: Building a Scala Project with IntelliJ and sbt
+  url: documentation/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html
+- title: Testing Scala in IntelliJ with ScalaTest
+  url: documentation/getting-started-intellij-track/testing-scala-in-intellij-with-scalatest.html
+- title: Getting Started with Scala and sbt in the Command Line
+  url: documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html
+- title: Testing Scala with sbt and ScalaTest in the Command Line
+  url: documentation/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html

@@ -1,7 +1,7 @@
 ---
 layout: downloadpage
 title: Download
-release_version: 2.12.1
+release_version: 2.12.2
 release_date: "December 5, 2016"
 show_resources: "true"
 other_releases: [
