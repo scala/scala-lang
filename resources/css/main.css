@@ -1722,7 +1722,7 @@ a.btn.download:hover, a.btn.download:focus { background-color:#58ccd5; border-co
 .marker {
   position: absolute;
   top: 120px;
-  right: 280px;
+  right: 295px;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateX(60deg);
   -moz-transform-style: preserve-3d;
@@ -1987,7 +1987,7 @@ a.for-platform {
 
 .big-scala-spiral {
   position: absolute;
-  left: 378px;
+  left: 498px;
   top: 30px;
   z-index: 100;
 }
@@ -2032,7 +2032,7 @@ a.for-platform {
   z-index: 50;
   position: absolute;
   top: 42px;
-  left: 142px;
+  left: 262px;
   width: 170px;
   font-family: "museo-slab", serif;
   font-size: 12px;
@@ -2045,7 +2045,7 @@ a.for-platform {
   z-index: 50;
   position: absolute;
   top: 42px;
-  right: 142px;
+  right: 262px;
   width: 160px;
   font-family: "museo-slab", serif;
   font-size: 12px;
@@ -2140,7 +2140,7 @@ figcaption {
   height: 100%;
   float: left;
   display: block;
-  width: 610px;
+  width: 61.8%; /* 1.618033988749^-1 */
   background: white;
   padding-top: 24px;
   padding-left: 9999em;

@@ -45,7 +45,7 @@ $(document).ready(function(){
     }).get());
     boxes.height(maxHeight);
   }
-  var nutshell = $(".bullet-point").not(".span12");
+  var nutshell = $(".bullet-point").not(".span10");
   makeAllBoxesSameHeight(nutshell);
 
   // var newsBoxes = $(".newsbox");
