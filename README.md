@@ -22,11 +22,15 @@ want anything else installed system-wide.
 
 ### Option 1) Building with Bundler
 
-`cd` into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./bundle-vendor/bundle`.
-
-Start the server in the context of the bundle:
-
-    bundle exec jekyll serve
+Install ruby and rbenv. `cd` into the directory where you cloned this repository, then execute the following:
+```
+rbenv install 2.4.0
+rbenv local 2.4.0
+rbenv rehash
+gem install bundle
+bundle install  # This will automatically put the gems into `./bundle-vendor/bundle`
+bundle exec jekyll serve  # Start the server in the context of the bundle
+```
 
 From this point, everything else should be the same, regardless of which method
 you used to run Jekyll.
