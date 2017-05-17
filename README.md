@@ -33,8 +33,8 @@ Start the server in the context of the bundle:
 That's it.
 
 If that doesn't work, to guarantee that your version of Ruby, etc, completely
-matches the production environment, you can also use `rbenv`. Start by `cd` into
-the directory where you cloned this repository, then execute the following:
+matches the production environment, you can also use `rbenv`. Start by `cd`ing
+into the directory where you cloned this repository, then execute the following:
 
     rbenv install 2.3.1
     rbenv local 2.3.1
