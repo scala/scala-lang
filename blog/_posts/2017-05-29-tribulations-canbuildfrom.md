@@ -70,7 +70,7 @@ get a `Seq[B]`.
 Thus, we got rid of the cryptic method signatures while still supporting the feature
 of returning a different type of result according to the type of the transformation function.
 
-## Kind polymorphism
+## Collections’ type constructors with different arities
 
 The collections are hierarchically organized. Essentially, the most generic collection
 is `Iterable[A]`, and then we have three main kinds of collections: `Seq[A]`, `Set[A]`
