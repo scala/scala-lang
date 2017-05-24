@@ -109,8 +109,8 @@ effort.
 
 In this release, [@LukasKellenberger][@LukasKellenberger] introduced in
 [#539][#539] a new setting in the sbt plugin that lets users select what
-implementation of the garbage collector should be used. Currently, BoehGC
-and no GC are supported.
+implementation of the garbage collector should be used. Currently, it lets you
+select Boehm GC, or disable the garbage collector altogether.
 
 This work was done in preparation for [the improved GC that will be shipped
 with Scala Native 0.3][#726]!
@@ -147,7 +147,8 @@ a better integration with sbt and more addition to the standard library.
 
 The first releases of Scala Native use Boehm GC. A new and improved garbage
 collector has been under development by [@LukasKellenberger][@LukasKellenberger]
-and will be presented at Scala Days during Denys' talk. Stay tuned!
+and will be presented at Scala Days during Denys' talk. Stay tuned for more
+more details to come soon!
 
 The pull request introducing the new garbage collector can be found in
 [#726][#726].
@@ -171,7 +172,8 @@ In [#686][#686], [@densh][@densh] started work to reduce the size of the
 binaries compiled by Scala Native, using a technique called selector-based
 row displacement.
 
-These improvements make the dispatch table 10 times smaller.
+These improvements make the dispatch table up to 10 times smaller, on some
+codebases in the wild.
 
 ## 0.4 and beyond
 
