@@ -162,8 +162,8 @@ a better integration with sbt and more additions to the standard library.
 
 The first releases of Scala Native use Boehm GC. A new and improved garbage
 collector has been under development by [@LukasKellenberger][@LukasKellenberger]
-and will be presented at Scala Days during Denys' talk. Stay tuned for more
-more details to come soon!
+and will be presented at [Scala Days during Denys' talk][denys-talk]. Stay
+tuned for more more details to come soon!
 
 The pull request introducing the new garbage collector can be found in
 [#726][#726].
@@ -275,3 +275,4 @@ stdlib and external libraries.
 [#686]: https://github.com/scala-native/scala-native/pull/686
 [#691]: https://github.com/scala-native/scala-native/pull/691
 [#726]: https://github.com/scala-native/scal-anative/pull/726
+[denys-talk]: http://event.scaladays.org/scaladays-cph-2017#!#schedulePopupExtras-8135
