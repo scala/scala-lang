@@ -13,15 +13,17 @@ releases?
 
 In April, [Scala Native 0.2 was released][scala-native-0.2-release]. The main
 focus of this release was to increase the coverage of classes from
-the JDK, such that that more programs can be ported to Scala Native without any further
-effort.
+the JDK, such that more programs can be ported to Scala Native without any
+further effort. What parts of Java do we now support in Scala Native? Lots!
+We've added support for IO and regular expressions, among others:
 
 ### Improvements to the standard library
 
 * Support for file I/O APIs from `java.io` was added by [@Duhemm][@Duhemm]
   from the Scala Center with help from [@cedricviaccoz][@cedricviaccoz] and
   [@Korf74][@Korf74] in [#574][#574]. Scala Native now supports enough to read
-  and write files.
+  and write files. Doing I/O with Scala Native feels just the same as in normal
+  Scala or Java:
 
   ```scala
   import java.io.{DataInputStream, File, FileInputStream}
@@ -33,17 +35,22 @@ effort.
 * In [#588][#588], [@MasseGuillaume] from the Scala Center added support for
   regular expressions. This implementation relies on Google's RE2 engine and
   [uses a syntax slightly different from the JDK][scala-native-doc-regular-expressions].
+  Using regular expressions with Scala Native works similarly as it does on the
+  JVM:
 
   ```scala
-  import java.io.{DataInputStream, File, FileInputStream}
-  val fis = new FileInputStream(new File("hello.txt"))
-  val dis = new DataInputStream(fis)
-  println(dis.readLine())
+  import java.util.regex._
+  val m = Pattern.compile("a+(b+)(a+)").matcher("aaabbba")
+  assert(m.find())
+  println(m.group(1)) // prints "bbb"
+  println(m.group(2)) // prints "a"
   ```
 
-* [@densh][@densh] added initial support for Scala's Futures in [#618][#618],
-  using an implementation similar to that of Scala.js, where Futures will be
-  completed after the `main` method is executed.
+* [@densh][@densh] added initial support for Scala's `Future`s in [#618][#618],
+  using an implementation similar to that of Scala.js, where `Future`s will be
+  completed after the `main` method is executed. Here's an example using Scala's
+  `Future`s with Scala Native. Of course, the same code works as well on the
+  JVM:
 
   ```scala
   import java.util.concurrent.Future
@@ -61,7 +68,9 @@ effort.
   ```
 
 * Scala Native now supports pointer subtraction. This work has been
-  contributed by [@jonas][@jonas] in [#624][#624].
+  contributed by [@jonas][@jonas] in [#624][#624]. Pointer subtraction is
+  useful, for instance, to determine how many elements there are between two
+  elements of the same array:
 
   ```scala
   val carr: Ptr[CChar] = toCString("abcdefg")
@@ -101,9 +110,10 @@ effort.
 
 * [@MasseGuillaume][@MasseGuillaume] and [@densh][@densh]
   worked on refactoring Scala Native's sbt plugin to make it more idiomatic in
-  [#568][#568] and [#630][#630], which lead to fixing [#562][#562].
-* Follow up fixes were contributed by [@jonas][@jonas], and include [#639][#639]
-  and [#653][#653].
+  [#568][#568] and [#630][#630].
+* Follow up fixes were contributed by [@jonas][@jonas] in [#639][#639] and
+  [#653][#653]. They improve how sbt determines the target architecture to
+  compile to.
 
 ### Preparing for a better garbage collector
 
@@ -120,7 +130,12 @@ with Scala Native 0.3][#726]!
 
 As shown, many of the improvements that were brought by Scala Native 0.2 have
 been contributed by members of the vibrant community that is developing itself
-around Scala Native. Thank you!
+around Scala Native. In total, to get to Scala Native 0.2, there have been 61
+commits merged, 11,344 lines added and 1,954 lines deleted by 17 people:
+Denys Shabalin, Jonas Fonseca, Guillaume Massé, Martin Duhem,
+Lukas Kellenberger, Andrzej Sołtysik, Eric K Richardson, Remi Coudert,
+Florian Duraffour, Brad Rathke, Richard Whaling, Ruben Berenguel M,
+Sam Halliday, Shunsuke Otani, Cedric Viaccoz, Kenji Yoshida, Ignat Loskutov.
 
 The combination of these improvements was enough to get a prototype of
 `scalafmt` running on Scala Native by [@olafurpg][@olafurpg], showing a blazing
@@ -141,7 +156,7 @@ fast startup time!
 ## What to expect for Scala Native 0.3?
 
 The plans for the next release of Scala Native include a new garbage collector,
-a better integration with sbt and more addition to the standard library.
+a better integration with sbt and more additions to the standard library.
 
 ### Improved garbage collector
 
