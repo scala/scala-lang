@@ -1,0 +1,50 @@
+// MIXINS
+//------------------------------------------------
+//------------------------------------------------
+
+// Breakpoints
+//------------------------------------------------
+@mixin bp($point) {
+	@if $point==xlarge {
+		@media (max-width: $bp-xlarge) {
+			@content;
+		}
+	}
+	@if $point==large {
+		@media (max-width: $bp-large) {
+			@content;
+		}
+	}
+	@if $point==medium {
+		@media (max-width: $bp-medium) {
+			@content;
+		}
+	}
+	@if $point==small {
+		@media (max-width: $bp-small) {
+			@content;
+		}
+	}
+}
+
+// Images
+//------------------------------------------------
+@mixin image-size {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// Font
+//------------------------------------------------
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
