@@ -274,5 +274,5 @@ stdlib and external libraries.
 [#659]: https://github.com/scala-native/scala-native/pull/659
 [#686]: https://github.com/scala-native/scala-native/pull/686
 [#691]: https://github.com/scala-native/scala-native/pull/691
-[#726]: https://github.com/scala-native/scal-anative/pull/726
+[#726]: https://github.com/scala-native/scala-native/pull/726
 [denys-talk]: http://event.scaladays.org/scaladays-cph-2017#!#schedulePopupExtras-8135
