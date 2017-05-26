@@ -53,7 +53,7 @@ We've added support for IO and regular expressions, among others:
   JVM:
 
   ```scala
-  import java.util.concurrent.Future
+  import scala.concurrent.Future
   import scala.concurrent.ExecutionContext.Implicits.global
 
   object Test {
