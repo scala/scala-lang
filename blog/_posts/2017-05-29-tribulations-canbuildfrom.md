@@ -190,6 +190,54 @@ could be supported even without implicit builders: you could just use an existin
 instance and navigate through its companion object (providing the builder), or you could just
 use the companion object directly to get a builder.
 
+## `breakOut` escape hatch
+
+As we have previously seen, in the current collections when we want to transform some
+collection into a new collection, we rely on an available implicit `CanBuildFrom`
+instance to get a builder for the target collection. The implicit search is
+driven by the type of the initial collection and the type of elements of the target
+collection. The available implicit instances have been designed to make sense in the most
+common cases.
+
+However, sometimes this default behavior is not what you want. For instance, consider the
+following program:
+
+~~~ scala
+val xs: List[Int] = 1 :: 2 :: 3 :: Nil
+val xsWithSquares: Map[Int, Int] =
+  xs.map(x => (x, x * x))
+~~~
+
+If you try to compile it you will get a compile error because the implicitly
+resolved builder produces a `List[(Int, Int)]` instead of the desired `Map[Int, Int]`.
+We could convert this `List[(Int, Int)]` into a `Map[Int, Int]` but that
+would be inefficient for large collections.
+
+We can fix this issue by using the `breakOut` escape hatch:
+
+~~~ scala
+val xs: List[Int] = 1 :: 2 :: 3 :: Nil
+val xsWithSquares: Map[Int, Int] =
+  xs.map(x => (x, x * x))(collection.breakOut)
+~~~
+
+`breakOut` selects a `CanBuildFrom` instance irrespective of the initial collection type.
+In our case the `Map[Int, Int]` type annotation fixes the target type of the builder
+to implicitly look for.
+
+In the new design we have no direct equivalent of `breakOut`. The solution of the
+above example consists in using a `View` to avoid the construction of an
+intermediate collection:
+
+~~~ scala
+val xs: List[Int] = 1 :: 2 :: 3 :: Nil
+val xsWithSquares: Map[Int, Int] =
+  xs.view.map(x => (x, x * x)).to(Map)
+~~~
+
+In practice, we expect that most usages of `breakOut` could be adapted to the new design by using
+a `View` followed by an explicit `to` call. However, this is an area that remains to explore.
+
 ## Summary
 
 In this article we have reviewed the features built on top of `CanBuildFrom` and explained
