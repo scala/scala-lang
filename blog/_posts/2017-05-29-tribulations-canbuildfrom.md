@@ -65,7 +65,10 @@ def map[B](f: Char => B): Seq[B]
 
 Then, if you call `map` with a function that returns a `Char`, the first overload is
 selected and you get a `String`. Otherwise, the second overload is selected and you
-get a `Seq[B]`.
+get a `Seq[B]`. Before Scala 2.12 such a solution would not have worked well: users
+would have been required to explicitly write the type of the argument of the supplied
+`f` function. In Scala 2.12 type inference has been improved so that it is not
+anymore necessary.
 
 Thus, we got rid of the cryptic method signatures while still supporting the feature
 of returning a different type of result according to the type of the transformation function.
