@@ -222,8 +222,7 @@ val xsWithSquares: Map[Int, Int] =
 ~~~
 
 `breakOut` selects a `CanBuildFrom` instance irrespective of the initial collection type.
-In our case the `Map[Int, Int]` type annotation fixes the target type of the builder
-to implicitly look for.
+This requires the target type to be known, in this case via an explicit type ascription.
 
 In the new design we have no direct equivalent of `breakOut`. The solution of the
 above example consists in using a `View` to avoid the construction of an
@@ -241,4 +240,5 @@ a `View` followed by an explicit `to` call. However, this is an area that remain
 ## Summary
 
 In this article we have reviewed the features built on top of `CanBuildFrom` and explained
-the design decision we made for the new collections to support these features without `CanBuildFrom`.
+the design decision we made for the new collections to support most of these features
+without `CanBuildFrom`.
