@@ -1,7 +1,7 @@
 ---
 category: event
 title: Strange Loop
-logo: https://si0.twimg.com/profile_images/1883816998/slsquare.jpg
+logo: https://s3.amazonaws.com/strangeloop/uploadedimgs/prod/strange_loop_logo_final_color_no_year_square.jpg
 location: St Louis
 description: Hey, it's pretty good.
 start: 18 September 2013
