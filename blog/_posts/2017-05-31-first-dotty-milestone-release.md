@@ -6,7 +6,8 @@ author: Dmytro Petrashko
 by: Dmytro Petrashko
 authorImg: /images/petrashko.jpg
 ---
-Today, we excited to release Dotty version 0.1.2-RC1.  This release
+
+Today, we are excited to release Dotty version 0.1.2-RC1.  This release
 serves as a technology preview that demonstrates new language features
 and the compiler supporting them.
 
@@ -17,7 +18,7 @@ and the compiler supporting them.
 
 _Dotty_ is the project name for a language and compiler that
 is slated to become Scala 3.0. This is an ongoing development,
-developed transparently as open source software. The Dotty project
+transparently developed as open source software. The Dotty project
 started more than 4 years ago. It reached a major milestone in 2015 by
 achieving
 [bootstrap](http://dotty.epfl.ch/blog/2015/10/23/dotty-compiler-bootstraps.html),
@@ -29,7 +30,7 @@ all be part of regular time-based releases.
 ## How can you try it out?
 
 You have several alternatives: use the `sbt-dotty` plugin, get a standalone
-installation, or try it online on [Scastie](https://scastie.scala-lang.org/).
+installation, or try it online on [Scastie].
 
 ### sbt
 Using sbt 0.13.13 or newer, do:
@@ -45,7 +46,8 @@ using Dotty with sbt, see the
 ### Standalone installation
 
 Releases are available for download on the _Releases_
-section of the Dotty repository: https://github.com/lampepfl/dotty/releases.
+section of the Dotty repository: 
+https://github.com/lampepfl/dotty/releases
 
 We also provide a [homebrew](https://brew.sh/) package that can be installed by running
 
@@ -55,12 +57,9 @@ brew install lampepfl/brew/dotty
 
 ### Scastie
 
-[Scastie](https://scastie.scala-lang.org/), the online Scala playground,
-supports Dotty. To try it out:
-1. Click on `Build Settings` in the menu on the left
-2. Under `Target`, click on `Dotty`
-3. That's it!
-
+[Scastie], the online Scala playground,
+supports Dotty. 
+You can try it out there without installing anything.
 
 # What’s in the 0.1.2-RC1 technology preview?
 This technology preview demonstrates new language features planned for Scala 3:
@@ -81,14 +80,11 @@ See here for the full [release notes](http://dotty.epfl.ch/docs/release-notes/0.
 
 ## Release schedule
 
-We are adopting a time-based release schedule:
+Starting from this release, we are adopting a time-based release schedule:
 - Nightly builds will be published, for those wanting to be at the forefront of
   development.
-- Every 6 weeks, a release candidate will be cut based on the last nightly build,
-  the release candidates let library authors test their code in advance of each
-  release. Multiple release candidates may be released during each 6 weeks
-  period to fix regressions.
-- Every 6 weeks, the last release candidate becomes a release.
+- Every 6 weeks, a release candidate will be cut based on the latest nightly build.
+- Every 6 weeks, the latest release candidate becomes a release.
 
 At the end of 6 weeks, the milestone will be promoted to a stable release.
 See here for the full [version number explanation](http://dotty.epfl.ch/docs/usage/version-numbers.html).
@@ -121,3 +117,6 @@ Join our [community build](https://github.com/lampepfl/dotty-community-build)
 
 
 To get started, see <https://github.com/lampepfl/dotty>.
+
+
+[Scastie]: https://scastie.scala-lang.org/?target=dotty
