@@ -46,7 +46,7 @@ using Dotty with sbt, see the
 ### Standalone installation
 
 Releases are available for download on the _Releases_
-section of the Dotty repository: 
+section of the Dotty repository:
 https://github.com/lampepfl/dotty/releases
 
 We also provide a [homebrew](https://brew.sh/) package that can be installed by running
@@ -58,10 +58,10 @@ brew install lampepfl/brew/dotty
 ### Scastie
 
 [Scastie], the online Scala playground,
-supports Dotty. 
+supports Dotty.
 You can try it out there without installing anything.
 
-# What’s in the 0.1.2-RC1 technology preview?
+## What’s in the 0.1.2-RC1 technology preview?
 This technology preview demonstrates new language features planned for Scala 3:
 
   - [Intersection Types](http://dotty.epfl.ch/docs/reference/intersection-types.html)
