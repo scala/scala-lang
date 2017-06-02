@@ -121,7 +121,7 @@ Finding libraries:
 Staying current:
 
 * [implicit.ly](http://implicit.ly) announces new versions of Scala libraries as they become available
-* [Scala-Announce](http://groups.google.com/group/scala-announce) also has release announcements
+* [Scala Times](http://scalatimes.com) includes library releases
 
 ## Non-JVM platforms
 
@@ -139,14 +139,8 @@ Staying current:
 * [The Scala Center](https://scala.epfl.ch/) is an open source foundation that brings together a coalition of individuals and organizations working together to contribute to Scala.
     * [Scala Center FAQ](https://scala.epfl.ch/faqs.html)
 
-## Mailing Lists (Retired)
+## Archives
 
-These lists are being retired; please use [users.scala-lang.org](https://users.scala-lang.org) and [contributors.scala-lang.org](https://contributors.scala-lang.org) instead.
+Read-only archives of these retired groups remain available.
 
- * **[scala-user (retiring soon)](http://groups.google.com/group/scala-user)**: main forum for questions and discussions, including beginner questions, about programming in Scala
- * **[scala-announce (retiring soon)](http://groups.google.com/group/scala-announce)**: announcements of new Scala releases, tools, libraries, and other resources
- * **[Scala-Language (retired)](http://groups.google.com/group/scala-language)**: discussions about the Scala language itself. Why Scala is the way it is, and how it could be different.
- * **[Scala-Debate (retired)](http://groups.google.com/group/scala-debate)**: the "any topic goes" list. While professional courtesy and respect must be maintained, discussion and speculation on controversial topics and “what-if” type questions can occur. Threads sometimes migrate here from other lists if they become too specialized, lengthy, or contentious.
- * **[Scala-Tools (retired)](http://groups.google.com/group/scala-tools)**: specifically for tooling around Scala, such as editors and build tools.
- * **[Scala-SIPs (retired)](http://groups.google.com/group/scala-sips)**: interest group devoted to Scala Improvement Process (SIP) and Scala Library Improvement Process (SLIP) proposals.  If you want to see what’s coming down the pipe and you’d like to be involved, this is the mailing list for you.
- * **[Scala-Internals (retired)](http://groups.google.com/group/scala-internals)**: for discussing development work on the Scala compiler and standard library. Core maintainers and active open-source contributors are both welcome. (If you're not sure if your thread belongs here, ask a contributor, or try another list first.)
+ * [scala-user](http://groups.google.com/group/scala-user), [scala-announce](http://groups.google.com/group/scala-announce), [scala-language](http://groups.google.com/group/scala-language), [scala-debate](http://groups.google.com/group/scala-debate), [scala-internals](http://groups.google.com/group/scala-internals), [scala-tools](http://groups.google.com/group/scala-tools), [scala-sips](http://groups.google.com/group/scala-sips)
