@@ -22,11 +22,26 @@ want anything else installed system-wide.
 
 ### Option 1) Building with Bundler
 
-`cd` into the directory where you cloned this repository, then install the required gems with `bundle install`. This will automatically put the gems into `./bundle-vendor/bundle`.
+`cd` into the directory where you cloned this repository, then install the
+required gems with `bundle install`. This will automatically put the gems into
+`./bundle-vendor/bundle`.
 
 Start the server in the context of the bundle:
 
     bundle exec jekyll serve
+
+That's it.
+
+If that doesn't work, to guarantee that your version of Ruby, etc, completely
+matches the production environment, you can also use `rbenv`. Start by `cd`ing
+into the directory where you cloned this repository, then execute the following:
+
+    rbenv install 2.3.1
+    rbenv local 2.3.1
+    rbenv rehash
+    gem install bundle
+    bundle install  # This will automatically put the gems into `./bundle-vendor/bundle`
+    bundle exec jekyll serve  # Start the server in the context of the bundle
 
 From this point, everything else should be the same, regardless of which method
 you used to run Jekyll.
@@ -37,7 +52,8 @@ Install Jekyll 3.4.0 on your system using RubyGems:
 
     gem install jekyll -v 3.4.0
 
-After cloning, `cd` into the directory where you cloned this repository and run:
+After cloning, `cd`ing into the directory where you cloned this repository and
+run:
 
     jekyll serve
 
