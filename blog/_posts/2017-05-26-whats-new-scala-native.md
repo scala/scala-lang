@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 by: Martin Duhem, Guillaume Massé and Denys Shabalin
 title: "What's new with Scala Native?"
