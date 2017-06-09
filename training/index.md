@@ -1,6 +1,12 @@
 ---
-layout: page
+layout: training
 title: Training
----
+permalink: /training/
 
-<div id="trainingspane" class="trainings-page"> </div>
+# Pagination
+paginate:
+  collection: trainings
+  permalink: /:num/
+  discardPastItems: true
+  title_suffix: ""
+---

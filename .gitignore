@@ -2,3 +2,6 @@ _site/
 .DS_Store
 /bundle-vendor/bundle/
 /.jekyll-metadata
+.bundle
+/.idea
+.ruby-version

@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 by: Julien Richard-Foy
 title: Tribulations of CanBuildFrom

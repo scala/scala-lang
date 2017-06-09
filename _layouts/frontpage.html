@@ -4,216 +4,383 @@
 {% include headertop.html %}
 {% include headerbottom.html %}
 
-<div class="splash">
-  <div class="darkblue-overlay">&nbsp;</div>
-  <div class="container">
-    <div class="row">
-      <div class="span12">
-        <div class="scala-logo">
-          <img src="{{ site.baseurl }}/resources/img/scala-logo-white.png" alt="Scala Logo" />
-        </div>
-        {% include navbar.html %}
+<div class="navigation-fade-screen"></div>
+<!-- Header -->
+  <header id="site-header" class="header-home">
+    <div class="header-background">
+      <div class="new-on-the-blog">
+        <p>New on the blog:
+          {% assign newPost = site.posts.first %}
+          <a href="{{newPost.url}}">{{newPost.title}}</a>          
+        </p>
+        <span class="hide"><i class="fa fa-close"></i></span>
       </div>
-    </div>
-    <div class="row">
-      <div class="span12">
-        <div class="splash-text ontop">
-          <h2 style="font-weight: 700;">Object-Oriented Meets Functional</h2>
-          <p class="splash-pitch">
-            Have the best of both worlds. Construct elegant class hierarchies
-            for maximum code reuse and extensibility, implement their behavior using
-            higher-order functions. Or anything in-between.
-          </p>
-          <a class="learn-more-btn" href="{{ site.baseurl }}/what-is-scala.html">Learn More</a>
-          <div class="marker">
-            <div class="dot"></div>
-            <div class="pulse"></div>
+      <div class="wrap">
+        <!-- Navigation -->
+        <nav class="navigation" role="menu">
+          <a href="/" class="navigation-bdand">
+            <img src="/resources/img/frontpage/scala-logo-white@2x.png" alt="">
+          </a>
+          <div class="navigation-panel-button">
+            <i class="fa fa-bars"></i>
           </div>
-          <p>&nbsp;</p>
-          <div class="tip">
-            Scala began life in 2003, created by Martin Odersky and his research group at EPFL, next to Lake Geneva and the Alps, in Lausanne, Switzerland. Scala has since grown into a mature open source programming language, used by hundreds of thousands of developers, and is developed and maintained by scores of people all over the world.
+          <ul class="navigation-menu">
+            {% for navItem in site.data.nav-header %}
+            <li class="navigation-menu-item">
+              <a href="{{navItem.url}}">{{navItem.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <!-- Inner Text -->
+        <div class="inner-text">
+          <h1>{{page.headerTitle}}</h1>
+          <p>{{page.headerSubtitle}}</p>
+          <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle | upcase}}</a>
+        </div>
+        <div id="position-marker" class="marker">
+          <div class="info-marker">
+              <span class="arrow">
+              <img src="/resources/img/frontpage/arrow.png" alt="pushpin">
+              </span>
+            {{site.data.common.texts.frontpageMarker}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scala Main Resources -->
+    <div class="scala-main-resources">
+      <div class="wrap">
+        <div class="resources">
+          <div class="download">
+            <a href="{{page.gettingStarted.mainUrl}}" class="button">{{page.gettingStarted.mainTitle | upcase}}</a>
+            <ul>
+              <li><a href="{{page.gettingStarted.subtitleLink}}">{{page.gettingStarted.subtitle}}</a></li>
+              {% for link in page.gettingStarted.links %}
+                <li><a href="{{link.url}}">{{link.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="api-docs">
+            <a href="{{page.apiDocs.mainUrl}}" class="button">{{page.apiDocs.mainTitle | upcase}}</a>
+            <ul>
+              <li><a href="{{page.apiDocs.subtitleLink}}">{{page.apiDocs.subtitle}}</a></li>
+              {% for link in page.apiDocs.links %}
+                <li><a href="{{link.url}}">{{link.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="scala-brand-circle">
+            <div class="circle-solid">
+              <img src="/resources/img/frontpage/scala-spiral.png" alt="">
+              <div class="scala-version">
+                <span>Scala</span>
+                <span>{{page.currentScalaVersion}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<main id="site-main">
+<!-- Scala backends -->
+<section class="runs">
+  <div class="wrap">
+    <h2>{{site.data.common.texts.scalaBackendsTitle}}</h2>
+    <ul>
+      {% for backend in page.scalaBackends %}
+        <li class="masterTooltip" title="{{backend.description}}">
+        <span>
+        <img src="{{backend.icon}}" alt="{{backend.description}}">
+        </span>
+      </li>
+      {% unless forloop.last %}<li></li>{% endunless %}
+      {% endfor %}
+    </ul>
+    <p><span>- {{site.data.common.texts.scalaBackendsMore}} -</span></p>
+  </div>
+</section>
+
+<!-- IDEs for Scala -->
+<section class="ides">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>IDEs for Scala</span></h2>
+    </div>
+    <ul>
+      {% for ide in page.scalaIDEs %}
+      <li>
+        <a {% if ide.ensime == true %}class="masterTooltip" title="{{site.data.common.texts.ensimeSupportedInIDE}}"{% endif %} href="{{ide.url}}" target="_blank">
+          {% if ide.ensime == true %}
+            <span class="bullet">
+              <img src="/resources/img/frontpage/icon-ensime.png" alt="">
+            </span>
+          {% endif %}          
+          <img src="{{ide.icon}}" alt="{{ide.name}}">
+          <span>{{ide.name}}</span>
+        </a>
+      </li>
+        {% unless forloop.last %}
+          <li></li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- Scala in a Nutshell -->
+<section class="nutshell">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>Scala in a Nutshell</span></h2>
+      <div class="sub-heading">
+        <p> click the boxes below to see Scala in action! </p>
+      </div>
+    </div>
+  </div>
+  <div class="scala-items-list">
+    <div class="items-menu">
+      {% for scalaItem in site.scala_items %}
+        {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
+        
+        {% if loopIndexMod == 0 %}
+          {% assign codeSnippets = '' | split: ',' %}
+          <div class="wrap">
+        {% endif %}
+        {% assign codeSnippets = codeSnippets | push: scalaItem.content %}
+        <div class="scala-item">
+          <h3>{{scalaItem.shortTitle}}</h3>
+          <p>{{scalaItem.shortDescription}}</p>
+        </div>
+        {% if loopIndexMod == 2 or forloop.last %}
+          </div>
+          <div class="items-content">
+            {% for snippet in codeSnippets %}
+              <div class="items-code">{{snippet}}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="call-to-action action-medium">
+      <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle}}</a>
+      <p class="align-bottom">or visit the <a href="/documentation/">Scala Documentation</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Run Scala in your browser -->
+<!-- {% include scastie.html %} -->
+
+<!-- Courses -->
+<section class="courses">
+  <div class="wrap">
+    {% include online-courses.html %}
+    {% include upcoming-training.html %}    
+  </div>
+</section>
+
+<!-- Upcoming events -->
+<section class="upcoming-events">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>Upcoming Events</span></h2>
+    </div>
+    <div class="events-items-list">
+      {% assign upcomingEvents = '' | split: ',' %}
+      {% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
+      {% for event in site.events %}
+        {% capture date %}{{event.date|date: '%s'|plus: 86400}}{% endcapture %}
+        {% if now <= date %}
+          {% assign upcomingEvents = upcomingEvents | push: event %}
+        {% endif %}
+      {% endfor %}
+      {% for event in upcomingEvents limit: 6 %}
+        <div href="#" class="event-item">
+          <a href="{{event.link-out}}" class="card">
+            <img src="{{event.logo}}" alt="{{event.title}}">
+            <div class="card-text">
+              <h4>{{event.title}}</h4>
+              <ul>
+                <li class="event-location">{{event.location}}</li>
+              </ul>
+              <ul>
+                <li class="date-event">{{event.start | date_to_string}} {% if event.start != event.end %}- {{event.end | date_to_string}}{% endif %}</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>      
+    <div class="call-to-action action-medium">
+      <p class="align-top">See <a href="/events/">more events</a> or <a href="https://github.com/scala/scala-lang/tree/master/events">add one to our feed</a></p>
+    </div>
+  </div>
+</section>
+<!-- Scala Ecosystem -->
+<section class="scala-ecosystem">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>{{page.ecosystemTitle}}</span></h2>
+      <p class="lead">{{page.ecosystemDescription}}</p>
+    </div>
+    <div class="browser">
+      <div class="header-browser">
+        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/scaladex-logo.png" alt=""></a>
+        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/button-github.png" alt=""></a>
+      </div>
+      <div class="main-browser">
+        <h2>The Scala Library Index</h2>
+        <div class="input-control">
+          <span><i class="fa fa-search"></i></span>
+          <input type="text" placeholder="Search" id="scaladex-search">
+          <div class="autocomplete-suggestions">
+              <div class="autocomplete-suggestion autocomplete-selected"></div>
+              <div class="autocomplete-suggestion"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="container central">
-  <div class="translucent-circle"></div>
-  <div class="opaque-circle"></div>
-  <a class="central-btn download" id="main-download-button" href="{{ site.baseurl }}/download/">Download</a>
-  <a class="central-btn api" href="http://www.scala-lang.org/api/">API Docs&nbsp;&nbsp;&nbsp;&nbsp;</a>
-  <div class="big-scala-spiral"><img src="{{ site.baseurl }}/resources/img/smooth-spiral.png" alt="Spiral" /></div>
-  <div class="central-btn scala-version"><span class="superbold">Scala</span><br/>{{ site.scalaversion }}</div>
-</div>
-
-<div class="darkbluebar">
-  <div class="container" style="position: relative;">
-    <div class="left-side">
-      <p class="getting-started"><a href="{{ site.baseurl }}/documentation/getting-started.html"><b>Getting Started</b></a></p>
-      <p class="dev-releases"><img src="{{ site.baseurl }}/resources/img/gears.png" alt="gears icon" /><a href="{{ site.baseurl }}/download/">&nbsp;Milestones, nightlies, etc.</a></p>
-      <p class="all-releases"><img src="{{ site.baseurl }}/resources/img/list.png" alt="list icon" /><a href="{{ site.baseurl }}/download/all.html">&nbsp;All Previous Releases</a></p>
-    </div>
-    <div class="right-side">
-      <p class="getting-started"><a href="http://www.scala-lang.org/api/current/"><b>Current API Docs</b></a></p>
-      <p class="dev-releases"><img src="{{ site.baseurl }}/resources/img/list.png" alt="list icon" /><a href="{{ site.baseurl }}/documentation/api.html">&nbsp;API Docs (other versions)</a></p>
-      <p class="dev-releases"><img src="{{ site.baseurl }}/resources/img/books.png" alt="books icon" /><a href="{{ site.baseurl }}/documentation/">&nbsp;Scala Documentation</a></p>
-      <p class="all-releases"><img src="{{ site.baseurl }}/resources/img/books.png" alt="books icon" /><a href="{{ site.baseurl }}/files/archive/spec/2.12/">&nbsp;Language Specification</a></p>
-    </div>
-  </div>
-</div>
-
- <div class="bullet-point-box">
-
-  <div class="bullet-row-1-wrap">
-    <div class="container">
-      <div class="row">
-        <div class="span12 bullet-point">
-          <h2><span>Scala in a Nutshell</span></h2>
-          <p class="click">&nbsp;click the boxes below to see Scala in action!&nbsp;</p>
-        </div>
+</section>
+<!-- Blog -->
+<section class="new-blog">
+  <div class="wrap">
+    <div class="new">
+      <div class="heading-line">
+        <h2><span>What’s New</span></h2>
       </div>
-      <div class="row">
-        <div class="span4 bullet-point" id="java-interop">
-          <h3>Seamless Java Interop</h3>
-          <p>Scala runs on the JVM, so Java and Scala stacks can be freely mixed for totally seamless integration.</p>
-        </div>
-        <div class="span4 bullet-point" id="type-inference">
-          <h3>Type Inference</h3>
-          <p>So the type system doesn’t feel so static. Don’t work for the type system. Let the type system work for you!</p>
-        </div>
-        <div class="span4 bullet-point" id="concurrency-distribution">
-          <h3>Concurrency<br>& Distribution</h3>
-          <p>Use data-parallel operations on collections, use actors for concurrency and distribution, or futures for asynchronous programming.</p>
-        </div>
+      {% assign firstPost = site.posts | first %}
+      <div class="content-card">
+        <p class="tag-new">{{firstPost.post-type|upcase}}</p>
+        <h3><a href="{{firstPost.url}}">{{firstPost.title}}</a></h3>
+        <span class="date">{{firstPost.date | date: "%A, %B %-d, %Y"}}</span>
+        <p>{{firstPost.content}}</p>
       </div>
-      <div class="code-snippet-arrow"></div>
+    </div>
+    <div class="recently">
+      <div class="heading-line">
+        <h2><span>Recently</span></h2>
+      </div>
+      {% for post in site.posts limit:3 offset:1 %}
+        <a href="{{post.url}}" class="content-card">
+          <h3>{{post.title}}</h3>
+          <ul>
+            <li>{{post.date | date: "%A, %B %-d, %Y"}}</li>
+            <li class="dot">•</li>
+            <li>{{post.by}}</li>
+            <li class="tag">{{post.post-type|upcase}}</li>
+          </ul>
+          <p>{{post.content| strip_html | truncate:140}}</p>
+        </a>
+      {% endfor %}
     </div>
   </div>
+  <div class="call-to-action action-medium">
+    <a href="/blog/" class="button">View our blog</a>
+  </div>
+</section>
+<!-- Talk to us -->
+<section class="talk-to-us">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>Talk to us!</span></h2>
+    </div>
+    <div class="discourse">
+      <h3>Mailing lists / forums</h3>
+      {% for forum in site.data.chats-forums.discourseForums %}
+        <a href="{{forum.url}}" class="{{forum.cssClass}}">
+          <img src="/resources/img/frontpage/discourse-logo.png" alt="{{forum.title}}">
+          <h4>{{forum.title}}</h4>
+          <p>{{forum.subtitle}}</p>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="gitter">
+      <h3>Real-time (topic-specialized) chat</h3>
+      {% assign modLimit = site.data.chats-forums.gitterChannels.size | modulo: 2 %}
+      {% capture channelLimit %}
+        {% if modLimit != 0 %}
+          {{site.data.chats-forums.gitterChannels.size | minus: 1}}
+        {% else %}
+          {{site.data.chats-forums.gitterChannels.size}}
+        {% endif %}
+      {% endcapture %}
+      {% for channel in site.data.chats-forums.gitterChannels limit: channelLimit %}
+        {% if forloop.first %}
+          <ul class="first">
+        {% endif %}
+        <li>
+          <a href="{{channel.url}}">
+            <img src="/resources/img/frontpage/gitter-logo.png" alt="">
+            <span>{{channel.name}}</span>
+          </a>
+        </li>
 
-  <div id="code-snippet-row1">
-    <div class="container">
-      <div class="row">
-      </div>
+        {% assign halfLength = forloop.length | divided_by: 2 | floor %}
+        {% if forloop.index == halfLength %}
+          </ul>
+          <ul class="second">
+        {% endif %}
+
+        {% if forloop.last %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if page.communities %}
+    <div class="communities">
+      <h3>Communities</h3>
+      <ul>
+        {% for community in page.communities %}
+          <li>
+            <a href="{{community.url}}"><img src="{{community.icon}}" alt="{{community.name}}"></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    <div class="social">
+      <ul>
+        <li>
+          <a href="{{site.data.common.twitterUrl}}"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="{{site.data.common.githubUrl}}"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
     </div>
   </div>
+</section>
 
-  <div class="bullet-row-2-wrap">
-    <div class="container">
-      <div class="row">
-        <div class="span4 bullet-point" id="traits">
-          <h3>Traits</h3>
-          <p>Combine the flexibility of Java-style interfaces with the power of classes. Think principled multiple-inheritance.</p>
-        </div>
-        <div class="span4 bullet-point" id="pattern-matching">
-          <h3>Pattern Matching</h3>
-          <p>Think “switch” on steroids. Match against class hierarchies, sequences, and more.</p>
-        </div>
-        <div class="span4 bullet-point" id="higher-order-functions">
-          <h3>Higher-Order Functions</h3>
-          <p>Functions are first-class objects. Compose them with guaranteed type safety. Use them anywhere, pass them to anything.</p>
-        </div>
-      </div>
-      <div class="code-snippet-arrow"></div>
+<!-- Twitter feed -->
+{% include twitter-feed.html %}
+
+<!-- Spire -->
+<section class="spire"></section>
+
+<!-- Supporters -->
+<section class="maintenance">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>{{site.data.common.texts.scalaMaintainersTitle}}</span></h2>
+    </div>
+    <ul class="maintained">
+      {% for maintainer in site.data.scala-supporters.maintainers %}
+        <li><a href="{{maintainer.url}}"><img src="{{maintainer.logo}}" alt="{{maintainer.name}}"></a></li>
+      {% endfor %}
+    </ul>
+    <h3>{{site.data.common.texts.scalaSupportersTitle}}</h3>
+    <div class="supported">
+      {% for supporter in site.data.scala-supporters.supporters %}
+        <a href="{{supporter.url}}"><img src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
+      {% endfor %}
     </div>
   </div>
-
-  <div id="code-snippet-row2">
-    <div class="container">
-      <div class="row">
-      </div>
-    </div>
-  </div>
-
-  <div class="where-to-learn-more">
-    <div class="container">
-      <div class="row">
-        <div class="span12">
-          <a class="learn-more-btn" href="{{ site.baseurl }}/what-is-scala.html">Learn More</a>
-          <p>or visit the <a class="italicize" href="{{ site.baseurl }}/documentation">Scala Documentation</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- hidden code-snippet content -->
-<div id="hidden-java-interop">{% include bullet-java-interop.html %}</div>
-<div id="hidden-type-inference">{% include bullet-type-inference.html %}</div>
-<div id="hidden-concurrency-distribution">{% include bullet-concurrency-distribution.html %}</div>
-<div id="hidden-traits">{% include bullet-traits.html %}</div>
-<div id="hidden-pattern-matching">{% include bullet-pattern-matching.html %}</div>
-<div id="hidden-higher-order-functions">{% include bullet-higher-order-functions.html %}</div>
-
-<div class="events">
-  <div class="container">
-    <div class="row">
-      <div class="span12 upcoming-events">
-        <h2><span>Upcoming Events</span></h2>
-      </div>
-
-      <div class="span12" id="eventspane">
-      </div>
-    </div>
-  </div>
-
-   <div class="add-event"><a href="{{ site.baseurl }}/events">See more events</a> or <a href="https://github.com/scala/scala-lang/tree/master/events">add one to our feed</a></div>
-
-</div>
-
-<div class="training">
-  <div class="container">
-    <div class="row">
-      <div class="span12 upcoming-training">
-        <h2><span>Upcoming Training</span></h2>
-      </div>
-      <div class="span12" id="trainingspane">
-        <div class="add-training"><a href="{{ site.baseurl }}/training">See more trainings</a> or <a href="https://github.com/scala/scala-lang/tree/master/training">add one to our feed</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="news">
-  <div class="container">
-    <div class="row">
-      <div class="span12">
-      </div>
-    </div>
-    <div class="row">
-      {% include news-feed.html %}
-    </div>
-  </div>
-</div>
-
-<div class="twitter">
-  <div class="container">
-    <div class="row">
-      <div class="span12">
-        <h2 class="twitterhdr"><span>Scala on Twitter</span></h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span12">
-        <div id="tweets" class="tweets">
-          <a class="twitter-timeline" data-tweet-limit="4" data-chrome="noheader nofooter noborders" data-width="520" href="https://twitter.com/scala_lang">Tweets by scala_lang</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <br/>&nbsp;
-        <div class="see-more-tweets">See more tweets, or</div>
-        <a id="twitter-btn" href="https://twitter.com/scala_lang">Follow Scala on Twitter</a>
-        <br/><a style="border-bottom: 0px;" href="https://twitter.com/scala_lang"><img style="padding-top: 8px;" src="{{ site.baseurl }}/resources/img/twitter-logo-white-lg.png" alt="white Twitter logo"/></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="epfl-picture-box">
-  <div class="container">
-  </div>
-</div>
+</section>
+</main>
 
 {% include footer.html %}
