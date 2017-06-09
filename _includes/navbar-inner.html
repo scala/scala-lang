@@ -10,7 +10,7 @@
 			<ul class="navigation-menu">
 				{% for navItem in site.data.nav-header %}
 				    <li class="navigation-menu-item">
-				      <a href="{{ navItem.url }}" {% if page.url contains navItem.url %}class="active"{% endif %}>{{navItem.title}}</a>
+                    <a href="{{ site.baseurl }}{{ navItem.url }}" {% if page.url contains navItem.url %}class="active"{% endif %}>{{navItem.title}}</a>
 				    </li>
 				{% endfor %}
 			</ul>
