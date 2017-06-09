@@ -2,7 +2,7 @@ title: The Scala Programming Language
 
 scalaversion: "2.12.2"
 
-baseurl: /scala-lang
+baseurl: ""
 markdown: kramdown
 highlighter:
 
@@ -55,7 +55,7 @@ pagination:
   limit: false
   per_page: 5
   title_suffix: " - :num"
-  permalink: /:num/ 
+  permalink: /:num/
 
 gems:
   - jekyll-redirect-from
