@@ -3,11 +3,24 @@ layout: default
 ---
 
 <div class="main-page-column">
-  <div class="article-date">{{ page.date | date: "%B %-d, %Y" }}</div>
+  <span class="article-date">{{ page.date | date: "%B %-d, %Y" }}</span>
   {% if page.by %}
-    <div class="written">Written By: <span class="by">{{ page.by }}</span></div>
+  <span class="written">: <span class="by">{{ page.by }}</span></span>
   {% endif %}
+  <span style= "float:right;">
+    <a href="/blog">Blog</a>,
+    <a href="/news#news--blog">News &amp Blog</a>
+  </span>
+  
   {{ content }}
+
+  <hr>
+
+  <span style= "float:right;">
+    <a href="/blog">Blog</a>,
+    <a href="/news#news--blog">News &amp Blog</a>
+  </span>
+
   {% if page.disqus == true %}{% include disqus.txt %}{% endif %}
 </div>
 <div class="sidebar">
