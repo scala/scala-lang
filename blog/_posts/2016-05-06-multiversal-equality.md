@@ -3,7 +3,7 @@ layout: blog
 post-type: blog
 by: Martin Odersky
 title: Multiversal Equality for Scala
-discourse: true
+disqus: true
 ---
 
 I have been working recently on making equality tests using `==` and
