@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="main-page-column">
+  <div class="article-date">{{ page.date | date: "%B %-d, %Y" }}</div>
+  {% if page.by %}
+    <div class="written">Written By: <span class="by">{{ page.by }}</span></div>
+  {% endif %}
+  {{ content }}
+  {% if page.discourse == true %}{% include discourse.html %}{% endif %}
+</div>
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div id="toc"></div>
+  </div>
+</div>
+<div style="clear:both"></div>

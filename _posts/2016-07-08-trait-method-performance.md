@@ -3,7 +3,7 @@
 category: blog
 by: Lukas Rytz
 title: Performance of trait methods
-disqus: true
+discourse: true
 ---
 
 # Performance of using default methods to compile Scala trait methods

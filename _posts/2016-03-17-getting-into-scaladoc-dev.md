@@ -3,7 +3,7 @@
 category: blog
 by: Felix Mulder
 title: Getting into Scaladoc Development
-disqus: true
+discourse: true
 ---
 
 Over the past months I've been working on the new Scaladoc - and it's coming
