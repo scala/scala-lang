@@ -3,7 +3,7 @@
 category: blog
 by: Martin Odersky
 title: The Essence of Scala
-disqus: true
+discourse: true
 ---
 
 What do you get if you boil Scala on a slow flame and wait until all
