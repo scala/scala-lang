@@ -11,7 +11,7 @@
       <div class="new-on-the-blog">
         <p>New on the blog:
           {% assign newPost = site.posts.first %}
-          <a href="{{newPost.url}}">{{newPost.title}}</a>          
+          <a href="{{newPost.url}}">{{newPost.title}}</a>
         </p>
         <span class="hide"><i class="fa fa-close"></i></span>
       </div>
@@ -94,7 +94,7 @@
       {% for backend in page.scalaBackends %}
         <li class="masterTooltip" title="{{backend.description}}">
         <span>
-        <img src="{{backend.icon}}" alt="{{backend.description}}">
+        <a href="{{backend.link}}"><img src="{{backend.icon}}" alt="{{backend.description}}"></a>
         </span>
       </li>
       {% unless forloop.last %}<li></li>{% endunless %}
@@ -118,7 +118,7 @@
             <span class="bullet">
               <img src="/resources/img/frontpage/icon-ensime.png" alt="">
             </span>
-          {% endif %}          
+          {% endif %}
           <img src="{{ide.icon}}" alt="{{ide.name}}">
           <span>{{ide.name}}</span>
         </a>
@@ -145,7 +145,7 @@
     <div class="items-menu">
       {% for scalaItem in site.scala_items %}
         {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
-        
+
         {% if loopIndexMod == 0 %}
           {% assign codeSnippets = '' | split: ',' %}
           <div class="wrap">
@@ -179,7 +179,7 @@
 <section class="courses">
   <div class="wrap">
     {% include online-courses.html %}
-    {% include upcoming-training.html %}    
+    {% include upcoming-training.html %}
   </div>
 </section>
 
@@ -214,7 +214,7 @@
           </a>
         </div>
       {% endfor %}
-    </div>      
+    </div>
     <div class="call-to-action action-medium">
       <p class="align-top">See <a href="/events/">more events</a> or <a href="https://github.com/scala/scala-lang/tree/master/events">add one to our feed</a></p>
     </div>
