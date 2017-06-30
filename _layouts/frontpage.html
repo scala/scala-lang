@@ -193,12 +193,12 @@
       {% assign upcomingEvents = '' | split: ',' %}
       {% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
       {% for event in site.events %}
-        {% capture date %}{{event.date|date: '%s'|plus: 86400}}{% endcapture %}
+        {% capture date %}{{event.start|date: '%s'|plus: 86400}}{% endcapture %}
         {% if now <= date %}
           {% assign upcomingEvents = upcomingEvents | push: event %}
         {% endif %}
       {% endfor %}
-      {% for event in upcomingEvents limit: 6 %}
+      {% for event in upcomingEvents limit:6 %}
         <div href="#" class="event-item">
           <a href="{{event.link-out}}" class="card">
             <img src="{{event.logo}}" alt="{{event.title}}">
