@@ -74,7 +74,7 @@ on your code.
 Because the internal implementation is different from the existing collections, you
 might get some surprises in advanced use cases: for instance, now the `view` method
 returns a `View[A]` type ; there is no `CanBuildFrom`. We will explain these
-(yet undocumented) changes in future posts.
+undocumented (yet) changes in future posts.
 
 From now on, we will cut new releases every month. The goals of the
 [next release](https://github.com/scala/collection-strawman/milestone/2) are to
