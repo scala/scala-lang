@@ -1,6 +1,7 @@
 ---
+layout: inner-page-no-masthead
 title: Functional Programming in Scala Capstone
-url: https://www.coursera.org/specializations/scala
+course-page: https://www.coursera.org/specializations/scala
 date: 01-02-2017
 end-date: 01-04-2017
 platform: coursera

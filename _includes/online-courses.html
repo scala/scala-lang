@@ -21,10 +21,8 @@
       {% assign specializations = specializations | push: course.specialization %}
     {% endunless %}
 
-    {% capture endDate %}{{course.end-date | date: '%s' | plus: 86400}}{% endcapture %}
-    {% if now <= endDate %}
+
       {% assign upcomingCourses = upcomingCourses | push: course %}
-    {% endif %}
   {% endfor %}
 
   {% for specialization in specializations %}
@@ -33,7 +31,7 @@
     {% for course in upcomingCourses %}
       {% if course.specialization %}
         {% if course.specialization == specialization %}
-          {% assign specCourses = specCourses | push: course %}     
+          {% assign specCourses = specCourses | push: course %}
         {% endif %}
 
         {% assign sortedSpecCourses = specCourses | sort: 'specialization-order' %}
@@ -42,17 +40,20 @@
     {% for sortedCourse in sortedSpecCourses %}
       {% assign courses = courses | push: sortedCourse %}
     {% endfor %}
-  {% endfor %}  
-  
+  {% endfor %}
+
+
   {% for course in upcomingCourses %}
+
     {% unless course.specialization %}
       {% assign courses = courses | push: course %}
     {% endunless %}
   {% endfor %}
 
+
   <div class="course-items-list">
     {% for course in courses %}
-      <a href="{{course.url}}" class="course-item card">
+      <a href="{{course.course-page}}" class="course-item card">
         <img src=
           {% assign platform = course.platform | downcase %}
           {% case platform %}
@@ -78,7 +79,7 @@
                 {{course.date | date_to_string}}
               {% else %}
                 {{site.data.common.texts.courseraLaunchPeriod}}
-              {% endif %}              
+              {% endif %}
             </li>
           </ul>
         </div>

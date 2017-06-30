@@ -1,6 +1,7 @@
 ---
+layout: inner-page-no-masthead
 title: Functional Program Design in Scala
-url: https://www.coursera.org/specializations/scala
+course-page: https://www.coursera.org/specializations/scala
 date: 27-02-2017
 end-date: 03-04-2017
 platform: coursera
@@ -19,7 +20,7 @@ Learning Outcomes. By the end of this course you will be able to:
  - recognize and apply design principles of functional programs,
  - design functional libraries and their APIs,
  - competently combine functions and state in one program,
- - understand reasoning techniques for programs that combine 
+ - understand reasoning techniques for programs that combine
    functions and state,
  - write simple functional reactive applications.
 

@@ -1,8 +1,9 @@
 ---
+layout: inner-page-no-masthead
 title: Big Data Analysis with Scala and Spark
-url: https://www.coursera.org/specializations/scala
-date: 27-02-2017
-end-date: 03-04-2017
+course-page: https://www.coursera.org/specializations/scala
+date: 27-02-2018
+end-date: 03-04-2018
 platform: coursera
 specialization: fpfun
 specialization-order: 4
@@ -16,7 +17,7 @@ Learning Outcomes. By the end of this course you will be able to:
 
 - read data from persistent storage and load it into Apache Spark,
 - manipulate data with Spark and Scala,
-- express algorithms for data analysis in a functional style, 
+- express algorithms for data analysis in a functional style,
 - recognize how to avoid shuffles and recomputation in Spark,
 
 Recommended background: You should have at least one year programming experience. Proficiency with Java or C# is ideal, but experience with other languages such as C/C++, Python, Javascript or Ruby is also sufficient. You should have some familiarity using the command line. This course is intended to be taken after Parallel Programming: https://www.coursera.org/learn/parprog1.
