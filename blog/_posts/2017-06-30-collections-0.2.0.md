@@ -47,9 +47,9 @@ the `strawman` namespace. That should automate most of the adaptation work.
 
 ## Next steps
 
-From a user point of view, little should have changed, even though internally, lots
-have changed (we will write more about that in a future post)! Consequently,
-we encourage you to give a try to the new collections and to
+From a user point of view, little should have changed, even though internally, a lot
+has changed (we will write more about that in a future post)! We encourage you
+to give a try to the new collections and to
 [report](https://github.com/scala/collection-strawman/issues) any issue you encounter.
 
 From now on, we will cut new releases every month. The goals of the
