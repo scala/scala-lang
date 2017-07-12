@@ -36,7 +36,7 @@ The [previous technology preview](/blog/2017/05/31/first-dotty-milestone-release
 This technology preview is geared towards improving stability and reliability. It includes:
 
   - [Local optimizations upstreamed from the Dotty Linker](https://github.com/lampepfl/dotty/pull/2513), [2647](https://github.com/lampepfl/dotty/pull/2647) by ([@OlivierBlanvillain](https://github.com/OlivierBlanvillain)). See more details below.
-  - [Optimizing Pattern Matcher](https://github.com/lampepfl/dotty/pull/2829) by ([@odersky)](https://github.com/odersky))
+  - [Optimizing Pattern Matcher](https://github.com/lampepfl/dotty/pull/2829) by ([@odersky](https://github.com/odersky))
   - [Idempotency checks](https://github.com/lampepfl/dotty/pull/2756) are the first step to reproducible builds
   - [Faster Base class sets](https://github.com/lampepfl/dotty/pull/2676) by ([@odersky](https://github.com/odersky)) and ([@darkdimius](https://twitter.com/darkdimius)) 
   - Numerous fixes to IDE and Dotty Language Server covering:
