@@ -366,5 +366,5 @@ Join our [community build](https://github.com/lampepfl/dotty-community-build)
 To get started, see [https://github.com/lampepfl/dotty](https://github.com/lampepfl/dotty).
 
 
-[Scastie]: https://scastie.scala-lang.org/?target=dotty
+[Scastie]: https://scastie.scala-lang.org/R5kUfVbTRpmS4l4CrO1HlA
 
