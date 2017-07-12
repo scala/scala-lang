@@ -11,7 +11,7 @@ Today, we are excited to release Dotty version 0.2.0-RC1. This release
 serves as a technology preview that demonstrates new language features
 and the compiler supporting them.
 
-This release is based on [previous milestone](/blog/2017/05/31/first-dotty-milestone-release.html).
+This release is based on the [previous milestone](/blog/2017/05/31/first-dotty-milestone-release.html).
 The highlights of this release are:
  - substantial improvement of quality of generated code for pattern matching
  - improvements in VS Code IDE stability
@@ -24,8 +24,8 @@ The highlights of this release are:
 
 This is our second scheduled release according to our [6-week release schedule](http://dotty.epfl.ch/docs/usage/version-numbers.html).
 
-# What’s in the 0.2.0-RC1 technology preview?
-The [previous technology preview](/blog/2017/05/31/first-dotty-milestone-release.html) has shipped new language planned for Scala 3:  
+## What’s in the 0.2.0-RC1 technology preview?
+The [previous technology preview](/blog/2017/05/31/first-dotty-milestone-release.html) has shipped new language features planned for Scala 3:  
 [Intersection Types](http://dotty.epfl.ch/docs/reference/intersection-types.html),
 [Union Types](http://dotty.epfl.ch/docs/reference/union-types.html),
 [Trait Parameters](http://dotty.epfl.ch/docs/reference/trait-parameters.html),
@@ -35,11 +35,11 @@ The [previous technology preview](/blog/2017/05/31/first-dotty-milestone-release
 
 This technology preview is geared towards improving stability and reliability. It includes:
 
-  - [Local optimizations upstreamed from Dotty Linker](https://github.com/lampepfl/dotty/pull/2513), [2647](https://github.com/lampepfl/dotty/pull/2647) by ([@OlivierBlanvillain](https://github.com/OlivierBlanvillain). See more details below.
-  - [Optimizing Pattern Matcher](https://github.com/lampepfl/dotty/pull/2829) by ([@odersky](https://github.com/odersky)
+  - [Local optimizations upstreamed from the Dotty Linker](https://github.com/lampepfl/dotty/pull/2513), [2647](https://github.com/lampepfl/dotty/pull/2647) by ([@OlivierBlanvillain](https://github.com/OlivierBlanvillain)). See more details below.
+  - [Optimizing Pattern Matcher](https://github.com/lampepfl/dotty/pull/2829) by ([@odersky)](https://github.com/odersky))
   - [Idempotency checks](https://github.com/lampepfl/dotty/pull/2756) are the first step to reproducible builds
-  - [Faster Base class sets](https://github.com/lampepfl/dotty/pull/2676) by ([@odersky](https://github.com/odersky) and ([@darkdimius](https://twitter.com/darkdimius) 
-  - Huge number of fixes to IDE and Dotty Language Server covering:
+  - [Faster Base class sets](https://github.com/lampepfl/dotty/pull/2676) by ([@odersky](https://github.com/odersky)) and ([@darkdimius](https://twitter.com/darkdimius)) 
+  - Numerous fixes to IDE and Dotty Language Server covering:
    
      - [Windows support for VS Code plugin](https://github.com/lampepfl/dotty/pull/2776)
      - [Fix hover-on-type for implicitly converted expressions](https://github.com/lampepfl/dotty/pull/2836)
@@ -83,11 +83,11 @@ This technology preview is geared towards improving stability and reliability. I
      - [Fix shadowing of higher order implicits](https://github.com/lampepfl/dotty/pull/2739)
 
     
-## Better generated code:
+### Better generated code:
 
 As was [spotted](https://twitter.com/gkossakowski/status/870243464528744449) by [@gkossakowski](https://twitter.com/gkossakowski)
-In the previous release Dotty was on par with Scala 2.11 in speed. But why is that?
-The reason is that Dotty compiled by dotty had really horrible code generated or pattern matching. 
+in the previous release Dotty was on par with Scala 2.11 in speed. But why is that?
+The reason is that Dotty compiled by Dotty had really horrible code generated for pattern matching. 
 
 Let's illustrate on a simple example:
 
@@ -114,8 +114,8 @@ case class CC(a: Int, b: Object)
 ```
 
 
-Dotty that was released in the previous milestone didn't contain any optimizations and generated horrible code for it.
-The java-with-goto code below is equivalent to what dotty hs generated.
+The Dotty that was released in the previous milestone didn't contain any optimizations and generated inefficient code for it.
+The java-with-goto code below is equivalent to what Dotty generated.
 
 ```
 // output of dotc 0.1.2-RC1
@@ -176,7 +176,7 @@ The java-with-goto code below is equivalent to what dotty hs generated.
     }
 ```
 
-Due to new optimizing pattern matcher, dotty now is able to generate the code below without `-optimise`
+Due to the new optimizing pattern matcher, Dotty now is able to generate the code below without `-optimise`
 
 ```
 // output of 0.2.0-RC1 without -optimise
@@ -224,7 +224,7 @@ Due to new optimizing pattern matcher, dotty now is able to generate the code be
 ```
 
 You can clearly see that it's shorter ;-) and it actually does less work.
-If you additionally enable local optimizations, you get a pretty good code:
+If you additionally enable local optimizations, you get decent generated code:
 
 ```
 // output of 0.2.0-RC1 with -optimise
@@ -259,9 +259,9 @@ If you additionally enable local optimizations, you get a pretty good code:
     }
 ```
 
-This code still has a major inefficiency: it allocates tuples.
-We plan to continue migration of local optimizations from Dotty linker that should allow us to generate code that is as 
-good the one generated by Dotty linker with global analysis disabled:
+This code still has a major inefficiency; it allocates tuples.
+We plan to continue the migration of local optimizations from the Dotty Linker that should allow us to generate code that is as 
+good the code generated by the Dotty Linker with global analysis disabled:
  
  ```
   // output of Dotty linker https://github.com/dotty-linker/dotty/tree/opto
@@ -297,7 +297,7 @@ We ship with tools that help you try out the Dotty platform:
   - [sbt support, including retro-compatibility with Scala 2](https://github.com/lampepfl/dotty-example-project)
 
 
-You have several alternatives: use the `sbt-dotty` plugin, get a standalone
+You have several alternatives; use the `sbt-dotty` plugin, get a standalone
 installation, or try it online on [Scastie].
 
 ### sbt
@@ -315,9 +315,9 @@ using Dotty with sbt, see the
 
 Releases are available for download on the _Releases_
 section of the Dotty repository:
-https://github.com/lampepfl/dotty/releases
+[https://github.com/lampepfl/dotty/releases](https://github.com/lampepfl/dotty/releases)
 
-We also provide a [homebrew](https://brew.sh/) package that can be installed by running
+We also provide a [homebrew](https://brew.sh/) package that can be installed by running:
 
 ```
 brew install lampepfl/brew/dotty
@@ -364,7 +364,7 @@ Join our [community build](https://github.com/lampepfl/dotty-community-build)
  to make sure that our regression suite includes your library.
 
 
-To get started, see <https://github.com/lampepfl/dotty>.
+To get started, see [https://github.com/lampepfl/dotty](https://github.com/lampepfl/dotty).
 
 
 [Scastie]: https://scastie.scala-lang.org/?target=dotty
