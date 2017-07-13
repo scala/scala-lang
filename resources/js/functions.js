@@ -102,88 +102,52 @@ $('#tweet-feed').tweetMachine('', {
 });
 
 // Scaladex autocomplete search
-var prevResult = "";
-var lastElementClicked;
 
-$(document).mousedown(function(e) {
-    lastElementClicked = $(e.target);
-});
+var scaladexUrlBase = 'https://index.scala-lang.org';
 
-$(document).mouseup(function(e) {
-    lastElementClicked = null;
-});
-
-function hideSuggestions() {
-    $('.autocomplete-suggestions').hide();
-    $('.autocomplete-suggestion').hide();
+function scaladexUrl(item) {
+  return scaladexUrlBase + "/" + item.organization + "/" + item.repository;
 }
 
-function showSuggestions() {
-    $('.autocomplete-suggestions').show();
-    $('.autocomplete-suggestion').show();
-}
-
-hideSuggestions();
-$('#scaladex-search').on('input', function(e) {
-    if ($("#scaladex-search").val() == "") hideSuggestions();
-});
-
-$('#scaladex-search').on('focus', function(e) {
-    if ($("#scaladex-search").val() != "") showSuggestions();
-});
-
-$('#scaladex-search').on('blur', function(e) {
-    if (!$(e.target).is('.autocomplete-suggestion')) {
-        if (lastElementClicked != null && !lastElementClicked.is('.autocomplete-suggestion')) {
-            hideSuggestions();
-        }
-    } else {
-        hideSuggestions();
-    }
+$('#scaladex-search').keypress(function(e){
+  var RETURN = 13;
+  if (e.which == RETURN ) {
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    window.open(scaladexUrlBase + "/search?q=" + e.target.value);
+  }
 });
 
 $('#scaladex-search').autocomplete({
     paramName: 'q',
-    serviceUrl: 'https://index.scala-lang.org/api/autocomplete',
+    serviceUrl: scaladexUrlBase + '/api/autocomplete',
     dataType: 'json',
-    beforeRender: function() {
-        showSuggestions();
-    },
-    onSearchStart: function(query) {
-        if (query == "") {
-            hideSuggestions()
-        } else {
-            showSuggestions();
-        }
-    },
     transformResult: function(response) {
-        return {
-            suggestions: $.map(response, function(dataItem) {
-                return { value: dataItem.repository, data: 'https://scaladex.scala-lang.org/' + dataItem.organization + "/" + dataItem.repository };
-            })
-        };
+      return {
+        suggestions: $.map(response, function(dataItem) {
+          return { 
+            value: dataItem.organization + " / " + dataItem.repository,
+            data: dataItem
+          };
+        })
+      };
     },
-    onSearchComplete: function (query, suggestions) {
-        suggestions.length > 0 ? showSuggestions() : hideSuggestions();
-    },
+    noCache: true,
     onSelect: function (suggestion) {
-        if (suggestion.data != prevResult) {
-            prevResult = suggestion.data;
-            hideSuggestions();
-            $("#scaladex-search").blur();
-            window.open(suggestion.data, '_blank');
-        }
+      console.log(suggestion);
+      window.open(scaladexUrl(suggestion.data), '_blank');
+    },
+    formatResult: function(suggestion){
+      var item = suggestion.data;
+      var url = scaladexUrl(item);
+      var title = item.organization + " / " + item.repository;
+      return '<a href="' + url + '">' + '\n' +
+             '  <p>' + title + '</p>' + '\n' +
+             '  <span>'  + '\n' +
+             item.description
+             '  </span>'  + '\n' +
+             '</a>';
     }
-
-});
-
-$(document).ready(function() {
-    $(window).on("blur", function() {
-        if ($("#scaladex-search").length) {
-            $("#scaladex-search").blur();
-            $("#scaladex-search").autocomplete().clear();
-        }
-    });
 });
 
 // TOC:

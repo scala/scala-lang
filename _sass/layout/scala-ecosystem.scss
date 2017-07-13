@@ -93,33 +93,52 @@
         }
     }
 
-    .autocomplete-suggestions {
-        border: 1px solid $gray-light;
-        background: #FFF;
-        overflow: auto;
-    }
+}
 
-    .autocomplete-suggestion {
-        padding: 2px 5px;
-        white-space: nowrap;
-        overflow: hidden;
-    }
+.autocomplete-suggestions {
+    width: 100%;
+    background: #fff;
+    top: 42px;
+    left: 0;
+    position: absolute;
+    z-index: 9999;
+    -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
 
-    .autocomplete-selected {
-        background: $gray-lighter;
-    }
+.autocomplete-suggestions {
+    padding: 0;
+    margin: 0;
+}
 
-    .autocomplete-suggestions strong {
-        font-weight: normal;
-        color: $gray-dark;
-    }
+.autocomplete-suggestions .autocomplete-suggestion {
+    padding: 15px;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 43, 55, 0.1);
+}
 
-    .autocomplete-group {
-        padding: 2px 5px;
-    }
+.autocomplete-suggestions .autocomplete-suggestion:last-child {
+    border-bottom: none;
+}
 
-    .autocomplete-group strong {
-        display: block;
-        border-bottom: 1px solid $gray-light;
-    }
+.autocomplete-suggestions .autocomplete-suggestion a {
+    color: #586e75;
+}
+
+.autocomplete-suggestions .autocomplete-suggestion a:hover,
+.autocomplete-suggestions .autocomplete-suggestion a:active,
+.autocomplete-suggestions .autocomplete-suggestion a:focus {
+    text-decoration: none;
+}
+
+.autocomplete-suggestions .autocomplete-suggestion a p {
+    color: #224951;
+    margin: 0;
+    font-weight: 400;
+}
+
+.autocomplete-suggestions .autocomplete-suggestion:hover,
+.autocomplete-suggestions .autocomplete-suggestion.selected {
+    background: #edf1f1;
+    cursor: default;
 }
