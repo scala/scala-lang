@@ -18,6 +18,7 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
+  
 future: true
 
 # Defaults
@@ -62,3 +63,6 @@ gems:
 
 whitelist:
   - jekyll-redirect-from
+
+sass:
+  style: compressed

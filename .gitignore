@@ -5,3 +5,4 @@ _site/
 .bundle
 /.idea
 .ruby-version
+.sass-cache/
