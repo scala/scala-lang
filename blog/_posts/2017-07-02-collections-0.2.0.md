@@ -1,8 +1,9 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
-by: Julien Richard-Foy
 title: Redesigned collections v0.2.0
+author: Julien Richard-Foy
+by: Julien Richard-Foy
 ---
 
 We are happy to announce the

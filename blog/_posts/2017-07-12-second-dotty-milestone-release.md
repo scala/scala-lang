@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 title: Announcing Dotty 0.2.0-RC1, with new optimizations, improved stability and IDE support
 author: Dmitry Petrashko
