@@ -1,7 +1,7 @@
 ---
 title: Changelog
 layout: inner-page-no-masthead
-permalink: /download/changelog/
+# permalink: /download/changelog/
 includeTOC: true
 ---
 
