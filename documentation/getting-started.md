@@ -1,10 +1,10 @@
 ---
 layout: inner-page-no-masthead
 title: Getting Started
-permalink: /documentation/getting-started/
+# permalink: /documentation/getting-started/
 includeTOC: true
-redirect_to:
-  - http://docs.scala-lang.org/getting-started
+# redirect_to:
+#  - http://docs.scala-lang.org/getting-started
 ---
 
 These tutorials will get you writing Scala code as quickly as possible. Choose one set of tutorials depending on whether you prefer to work in the command line or in an IDE.
