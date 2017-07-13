@@ -44,8 +44,6 @@ but here's a glance at what everything is for:
     - test (unit tests)
 - target (generated files)
 - build.sbt (build definition file for sbt)
-
-
 ```
 
 
@@ -57,6 +55,7 @@ but here's a glance at what everything is for:
 * Right-click the package `example` and select **New** => **Scala class**.
 * Name the class `Main` and change the **Kind** to `object`.
 * Change the code in the class to the following:
+
 ```
 object Main extends App {
   val ages = Seq(42, 75, 29, 64)

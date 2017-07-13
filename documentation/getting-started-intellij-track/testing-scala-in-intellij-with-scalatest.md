@@ -14,6 +14,7 @@ We assume you know [how to build a project in IntelliJ]({{ site.baseurl }}docume
 ## Setup
 1. Create an sbt project in IntelliJ.
 * Add the ScalaTest dependency to your build.sbt file:
+
 ```
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 ```
@@ -23,7 +24,8 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 * Right-click on `scala` and select **New** => **Scala class**.
 * Call it `CubeCalculator`, change the **Kind** to `object`, and click **OK**.
 * Replace the code with the following:
-```tut
+
+```
 object CubeCalculator extends App {
   def cube(x: Int) = {
     x * x * x

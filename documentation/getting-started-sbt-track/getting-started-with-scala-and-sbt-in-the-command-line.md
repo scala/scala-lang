@@ -12,14 +12,16 @@ runs, and tests your projects among other related tasks.
 We assume you know how to use a terminal.
 
 ## Installation
+
 1. Make sure you have the Java 8 JDK (also known as 1.8)
     * Run `javac -version` in the command line and make sure you see
     `javac 1.8.___`
     * If you don't have version 1.8 or higher, [install the JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* Install sbt
- * [Mac](http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Mac.html)
- * [Windows](http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Windows.html)
- * [Linux](http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Linux.html)
+
+2. Install sbt
+    * [Mac](http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Mac.html)
+    * [Windows](http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Windows.html)
+    * [Linux](http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Linux.html)
 
 ## Create the project
 1. `cd` to an empty folder.
@@ -31,7 +33,6 @@ create a project called "hello-world".
 * Let's take a look at what just got generated
 
 ```
-
 - hello-world
     - project (sbt uses this to install manage plugins and dependencies)
         - build.properties
@@ -68,9 +69,9 @@ Changing gears a bit, let's look at how to use published libraries to add
 extra functionality to our apps.
 
 1. Open up `build.sbt` and add the following line:
+
 ```
 "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.5"
-
 ```
 
 Here, `libraryDependencies` is a set of dependencies, and by using `+=`,

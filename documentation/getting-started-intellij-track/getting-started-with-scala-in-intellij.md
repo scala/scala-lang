@@ -41,7 +41,8 @@ take a few minutes but subsequent projects can use the same SDK.
 
 * Name the class `Hello` and change the **Kind** to `object`.
 * Change the code in the class to the following:
-```tut
+
+```
 object Hello extends App {
   println("Hello, World!")
 }
@@ -57,7 +58,8 @@ A good way to try out code samples is with Scala Worksheets
 1. In the project pane on the left, right click
 `src` and select **New** => **Scala Worksheet**.
 * Enter the following code into the worksheet:
-```tut
+
+```
 def square(x: Int) = x * x
 
 square(2)
@@ -73,4 +75,4 @@ an important build tool called sbt which can be used for simple projects
 and production apps.
 
 
-Up next: [Building a Scala project with IntelliJ and sbt](building-a-scala-project-with-intellij-and-sbt.html)
+Up next: [Building a Scala project with IntelliJ and sbt]({{ site.baseurl }}/documentation/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html)
