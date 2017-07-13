@@ -8,7 +8,8 @@ previous-page: building-a-scala-project-with-intellij-and-sbt
 There are multiple libraries and testing methodologies for Scala,
 but in this tutorial, we'll demonstrate one popular option from the ScalaTest framework
 called [FunSuite](http://www.scalatest.org/getting_started_with_fun_suite).
-We assume you know [how to build a project in IntelliJ](building-a-scala-project-with-intellij-and-sbt.html).
+
+We assume you know [how to build a project in IntelliJ]({{ site.baseurl }}documentation/getting-started-sbt-track/building-a-scala-project-with-intellij-and-sbt.html).
 
 ## Setup
 1. Create an sbt project in IntelliJ.
@@ -17,13 +18,12 @@ We assume you know [how to build a project in IntelliJ](building-a-scala-project
 ```
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 ```
-
-1. this will cause sbt to pull down the ScalaTest library
-1. If you get a notification "build.sbt was changed", select **auto-import**.
-1. On the project pane on the left, expand `src` => `main`.
-1. Right-click on `scala` and select **New** => **Scala class**.
-1. Call it `CubeCalculator`, change the **Kind** to `object`, and click **OK**.
-1. Replace the code with the following:
+* this will cause sbt to pull down the ScalaTest library
+* If you get a notification "build.sbt was changed", select **auto-import**.
+* On the project pane on the left, expand `src` => `main`.
+* Right-click on `scala` and select **New** => **Scala class**.
+* Call it `CubeCalculator`, change the **Kind** to `object`, and click **OK**.
+* Replace the code with the following:
 
 ```
 object CubeCalculator extends App {
@@ -35,9 +35,10 @@ object CubeCalculator extends App {
 
 ## Creating a test
 1. On the project pane on the left, expand `src` => `test`.
-1. Right-click on `scala` and select **New** => **Scala class**.
-1. Name the class `CubeCalculatorTest` and click **OK**.
-1. Replace the code with the following:
+
+* Right-click on `scala` and select **New** => **Scala class**.
+* Name the class `CubeCalculatorTest` and click **OK**.
+* Replace the code with the following:
 
 ```
 import org.scalatest.FunSuite
@@ -49,8 +50,7 @@ class CubeCalculatorTest extends FunSuite {
 }
 ```
 
-1. In the source code, right-click `CubeCalculatorTest` and select **Run
-'CubeCalculatorTest'**.
+* In the source code, right-click `CubeCalculatorTest` and select **Run 'CubeCalculatorTest'**.
 
 ## Understanding the code
 Let's go over this line by line.
@@ -67,9 +67,10 @@ one convention is "ClassName.methodName".
 indeed 27. The `===` is part of ScalaTest and provides clean error messages.
 
 ## Adding another test case
-1. Add another `assert` statement after the first one that checks for the cube
+
+* Add another `assert` statement after the first one that checks for the cube
 of `0`.
-1. Re-run the test again by right-clicking `CubeCalculatorTest` and selecting
+* Re-run the test again by right-clicking `CubeCalculatorTest` and selecting
 'Run **CubeCalculatorTest**'.
 
 ## Conclusion

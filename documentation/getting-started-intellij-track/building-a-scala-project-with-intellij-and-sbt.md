@@ -10,22 +10,23 @@ In this tutorial, we'll see how to build a Scala project using [sbt](http://www.
 size. Using a build tool such as sbt (or Maven/Gradle) becomes essential once you create projects with dependencies
 or more than one code file.
  We assume you've completed the
-[first tutorial](getting-started-with-scala-in-intellij.html).
+[first tutorial]({{ site.baseurl }}/documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html).
 
 ## Creating the project
 In this section, we'll show you how to create the project in IntelliJ. However, if you're
 comfortable with the command line, we recommend you try [Getting
 Started with Scala and sbt in the Command Line]({{site.baseurl}}/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html) and then come back
+
  here to the section "Writing Scala code".
 
 1. If you didn't create the project from the command line, open up IntelliJ and select "Create New Project"
   * On the left panel, select Scala and on the right panel, select SBT
   * Click **Next**
   * Name the project "SBTExampleProject"
-1. If you already created the project in the command line, open up IntelliJ, select *Import Project* and open the `build.sbt` file for your project
-1. Make sure the **JDK Version** is 1.8 and the **SBT Version** is at least 0.13.13
-1. Select **Use auto-import** so dependencies are automatically downloaded when available
-1. Select **Finish**
+* If you already created the project in the command line, open up IntelliJ, select *Import Project* and open the `build.sbt` file for your project
+* Make sure the **JDK Version** is 1.8 and the **SBT Version** is at least 0.13.13
+* Select **Use auto-import** so dependencies are automatically downloaded when available
+* Select **Finish**
 
 ## Understanding the directory structure
 sbt creates many directories which can be useful once you start building
@@ -43,19 +44,18 @@ but here's a glance at what everything is for:
     - test (unit tests)
 - target (generated files)
 - build.sbt (build definition file for sbt)
-
-
 ```
 
 
 ## Writing Scala code
 1. On the **Project** panel on the left, expand `SBTExampleProject` => `src`
 => `main`
-1. Right-click `scala` and select **New** => **Package**
-1. Name the package `example` and click **OK**.
-1. Right-click the package `example` and select **New** => **Scala class**.
-1. Name the class `Main` and change the **Kind** to `object`.
-1. Change the code in the class to the following:
+* Right-click `scala` and select **New** => **Package**
+* Name the package `example` and click **OK**.
+* Right-click the package `example` and select **New** => **Scala class**.
+* Name the class `Main` and change the **Kind** to `object`.
+* Change the code in the class to the following:
+
 ```
 object Main extends App {
   val ages = Seq(42, 75, 29, 64)
@@ -69,13 +69,13 @@ to see if sbt can run your project in the command line.
 
 ## Running the project
 1. From the **Run** menu, select **Edit configurations**
-1. Click the **+** button and select **SBT Task**.
-1. Name it `Run the program`.
-1. In the **Tasks** field, type `~run`. The `~` causes SBT to rebuild and rerun the project
+* Click the **+** button and select **SBT Task**.
+* Name it `Run the program`.
+* In the **Tasks** field, type `~run`. The `~` causes SBT to rebuild and rerun the project
 when you save changes to a file in the project.
-1. Click **OK**.
-1. On the **Run** menu. Click **Run 'Run the program'**.
-1. In the code, change `currentYear - 1` to ` currentYear - 2`
+* Click **OK**.
+* On the **Run** menu. Click **Run 'Run the program'**.
+* In the code, change `currentYear - 1` to ` currentYear - 2`
 and look at the updated output in the console.
 
 ## Adding a dependency
@@ -88,7 +88,7 @@ extra functionality to our apps.
 
 ```
 Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
-we're adding the [scala-parser-combinators]({{site.baseurl}}/scala/scala-parser-combinators) dependency to the set of dependencies that sbt will go
+we're adding the [scala-parser-combinators](https://index.scala-lang.org/scala/scala-parser-combinators) dependency to the set of dependencies that sbt will go
 and fetch when it starts up. Now, in any Scala file, you can import classes,
 objects, etc, from scala-parser-combinators with a regular import.
 
@@ -99,4 +99,5 @@ Continue learning the language for free online with
  [Scala Exercises](http://www.scala-exercises.org).
 You can also check out our [list of learning resources](http://scala-lang.org/documentation/).
 
-[Up Next: Testing Scala in IntelliJ with scalatest](testing-scala-in-intellij-with-scalatest.html)
+[Up Next: Testing Scala in IntelliJ with scalatest]({{ site.baseurl }}/documentation/getting-started-intellij-track/testing-scala-in-intellij-with-scalatest.html)
+
