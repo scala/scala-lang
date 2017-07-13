@@ -1,5 +1,6 @@
 ---
-title: Getting started with Scala in IntelliJ
+title: Getting Started with Scala in IntelliJ
+layout: inner-page-no-masthead
 disqus: true
 next-page: building-a-scala-project-with-intellij-and-sbt
 ---
@@ -13,8 +14,9 @@ Scala for you.
     * Run `javac -version` in the command line and make sure you see
     `javac 1.8.___`
     * If you don't have version 1.8 or higher, [install the JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* Install [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
-* Install the Scala plugin by following the instructions on
+1. Install [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)
+1. Install the Scala plugin by following the instructions on
+
 [how to install IntelliJ plugins](https://www.jetbrains.com/help/idea/installing-updating-and-uninstalling-repository-plugins.html)
 
 When we create the project, we'll install the latest version of Scala.
@@ -32,11 +34,11 @@ click the **Create** button.
 take a few minutes but subsequent projects can use the same SDK.
 * Once the SDK is created and you're back to the "New Project" window click **Finish**.
 
-
 ## Writing code
 
 1. On the **Project** pane on the left, right-click `src` and select
 **New** => **Scala class**.
+
 * Name the class `Hello` and change the **Kind** to `object`.
 * Change the code in the class to the following:
 ```tut
@@ -56,7 +58,6 @@ A good way to try out code samples is with Scala Worksheets
 `src` and select **New** => **Scala Worksheet**.
 * Enter the following code into the worksheet:
 ```tut
-
 def square(x: Int) = x * x
 
 square(2)
@@ -70,5 +71,6 @@ Now you know how to create a simple Scala project which can be used
 for starting to learn the language. In the next tutorial, we'll introduce
 an important build tool called sbt which can be used for simple projects
 and production apps.
+
 
 Up next: [Building a Scala project with IntelliJ and sbt](building-a-scala-project-with-intellij-and-sbt.html)

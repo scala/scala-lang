@@ -1,5 +1,6 @@
 ---
-title: Getting started with Scala and sbt in the command line
+title: Getting Started with Scala and sbt in the Command Line
+layout: inner-page-no-masthead
 disqus: true
 next-page: testing-scala-with-sbt-in-the-command-line
 ---
@@ -28,6 +29,7 @@ It will also create a `target` folder, which you can ignore.
 * When prompted, name the application `hello-world`. This will
 create a project called "hello-world".
 * Let's take a look at what just got generated
+
 ```
 
 - hello-world
@@ -48,15 +50,18 @@ for generated files. You can ignore these.
 1. `cd` into `hello-world`.
 * Run `sbt`. This will open up the sbt console.
 * Type `~run`. The `~` is optional and causes sbt to re-run on every file save,
+
 allowing for a fast edit/run/debug cycle. sbt will also generate a `target` directory
 which you can ignore.
 
 ## Modifying the code
 1. Open the file `src/main/scala/Main.scala` in your favorite text editor.
+
 * Change "Hello, World!" to "Hello, New York!"
 * If you haven't stopped the sbt command, you should see "Hello, New York!"
 printed to the console.
 * You can continue to make changes and see the results.
+
 
 ## Adding a dependency
 Changing gears a bit, let's look at how to use published libraries to add
@@ -67,6 +72,7 @@ extra functionality to our apps.
 "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.5"
 
 ```
+
 Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 we're adding the [scala-parser-combinators](https://index.scala-lang.org/scala/scala-parser-combinators) dependency to the set of dependencies that sbt will go
 and fetch when it starts up. Now, in any Scala file, you can import classes,
@@ -79,4 +85,4 @@ Now that you know how to create a Scala project, you
 can continue learning online for free with [Scala Exercises](http://scala-exercises.org) or choose
 from our [list of educational resources](http://scala-lang.org/documentation/).
 
-[Up Next: Testing Scala with sbt in the command line](http://scala-lang.org/documentation/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html)
+[Up Next: Testing Scala with sbt in the command line]({{ site.baseurl }}/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html)

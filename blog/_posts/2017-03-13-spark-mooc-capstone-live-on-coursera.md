@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 by: Heather Miller
 title: "Spark/Scala MOOC + Capstone Project Now Live on Coursera!"

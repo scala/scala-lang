@@ -1,5 +1,6 @@
 ---
 title: Testing Scala in IntelliJ with ScalaTest
+layout: inner-page-no-masthead
 disqus: true
 previous-page: building-a-scala-project-with-intellij-and-sbt
 ---
@@ -7,7 +8,8 @@ previous-page: building-a-scala-project-with-intellij-and-sbt
 There are multiple libraries and testing methodologies for Scala,
 but in this tutorial, we'll demonstrate one popular option from the ScalaTest framework
 called [FunSuite](http://www.scalatest.org/getting_started_with_fun_suite).
-We assume you know [how to build a project in IntelliJ](http://scala-lang.org/documentation/getting-started-sbt-track/building-a-scala-project-with-intellij-and-sbt.html).
+
+We assume you know [how to build a project in IntelliJ]({{ site.baseurl }}documentation/getting-started-sbt-track/building-a-scala-project-with-intellij-and-sbt.html).
 
 ## Setup
 1. Create an sbt project in IntelliJ.
@@ -31,9 +33,11 @@ object CubeCalculator extends App {
 
 ## Creating a test
 1. On the project pane on the left, expand `src` => `test`.
+
 * Right-click on `scala` and select **New** => **Scala class**.
 * Name the class `CubeCalculatorTest` and click **OK**.
 * Replace the code with the following:
+
 ```
 import org.scalatest.FunSuite
 
@@ -43,8 +47,8 @@ class CubeCalculatorTest extends FunSuite {
   }
 }
 ```
-* In the source code, right-click `CubeCalculatorTest` and select **Run
-'CubeCalculatorTest'**.
+
+* In the source code, right-click `CubeCalculatorTest` and select **Run 'CubeCalculatorTest'**.
 
 ## Understanding the code
 Let's go over this line by line.
@@ -61,6 +65,7 @@ one convention is "ClassName.methodName".
 indeed 27. The `===` is part of ScalaTest and provides clean error messages.
 
 ## Adding another test case
+
 * Add another `assert` statement after the first one that checks for the cube
 of `0`.
 * Re-run the test again by right-clicking `CubeCalculatorTest` and selecting

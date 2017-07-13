@@ -1,5 +1,6 @@
 ---
-title: Testing Scala with sbt and ScalaTest in the command line
+title: Testing Scala with sbt and ScalaTest in the Command Line
+layout: inner-page-no-masthead
 disqus: true
 previous-page: getting-started-with-scala-and-sbt-in-the-command-line
 ---
@@ -7,7 +8,8 @@ previous-page: getting-started-with-scala-and-sbt-in-the-command-line
 There are multiple libraries and testing methodologies for Scala,
 but in this tutorial, we'll demonstrate one popular option from the ScalaTest framework
 called [FunSuite](http://www.scalatest.org/getting_started_with_fun_suite).
-We assume you know [how to create a Scala project with sbt](http://scala-lang.org/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html).
+
+We assume you know [how to create a Scala project with sbt]({{ site.baseurl }}/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html).
 
 ## Setup
 1. In the command line, create a new directory somewhere (e.g. `Documents`).
@@ -16,6 +18,7 @@ We assume you know [how to create a Scala project with sbt](http://scala-lang.or
 * The project comes with ScalaTest as a dependency in the `build.sbt` file.
 * `cd` into the directory and run `sbt test`. This will run the test suite
 `CubeCalculatorTest` with a single test called `CubeCalculatorTest.cube`.
+
 ```
 sbt test
 [info] Loading global plugins from /Users/travislee/.sbt/0.13/plugins
@@ -35,9 +38,11 @@ sbt test
 1.  Open up two files in a text editor:
     * `src/main/scala/CubeCalculator.scala`
     * `src/test/scala/CubeCalculatorTest.scala`
+
 * In the file `CubeCalculator.scala`, you'll see how we define the function `cube`.
 * In the file `CubeCalculatorTest.scala`, you'll see that we have a class
 named after the object we're testing.
+
 ```
     import org.scalatest.FunSuite
 
@@ -63,6 +68,7 @@ one convention is "ClassName.methodName".
 indeed 27. The `===` is part of ScalaTest and provides clean error messages.
 
 ## Adding another test case
+
 * Add another `assert` statement after the first one that checks for the cube
 of `0`.
 * Execute `sbt test` again to see the results.

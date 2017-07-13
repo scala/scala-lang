@@ -1,5 +1,6 @@
 ---
-title: Building a Scala project with IntelliJ and sbt
+title: Building a Scala Project with IntelliJ and sbt
+layout: inner-page-no-masthead
 disqus: true
 previous-page: getting-started-intellij-track/getting-started-with-scala-in-intellij
 next-page: testing-scala-in-intellij-with-scalatest
@@ -9,12 +10,13 @@ In this tutorial, we'll see how to build a Scala project using [sbt](http://www.
 size. Using a build tool such as sbt (or Maven/Gradle) becomes essential once you create projects with dependencies
 or more than one code file.
  We assume you've completed the
-[first tutorial](http://scala-lang.org/documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html).
+[first tutorial]({{ site.baseurl }}/documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html).
 
 ## Creating the project
 In this section, we'll show you how to create the project in IntelliJ. However, if you're
 comfortable with the command line, we recommend you try [Getting
-started with Scala with sbt in the command line](http://scala-lang.org/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html) and then come back
+Started with Scala and sbt in the Command Line]({{site.baseurl}}/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html) and then come back
+
  here to the section "Writing Scala code".
 
 1. If you didn't create the project from the command line, open up IntelliJ and select "Create New Project"
@@ -98,4 +100,5 @@ Continue learning the language for free online with
  [Scala Exercises](http://www.scala-exercises.org).
 You can also check out our [list of learning resources](http://scala-lang.org/documentation/).
 
-[Up Next: Testing Scala in IntelliJ with scalatest](http://scala-lang.org/documentation/getting-started-intellij-track/testing-scala-in-intellij-with-scalatest.html)
+[Up Next: Testing Scala in IntelliJ with scalatest]({{ site.baseurl }}/documentation/getting-started-intellij-track/testing-scala-in-intellij-with-scalatest.html)
+

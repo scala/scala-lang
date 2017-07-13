@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 by: Denys Shabalin
 title: "Scala Native v0.1 is here!"
