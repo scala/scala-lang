@@ -38,7 +38,7 @@ scalaBackends:
   - icon: /resources/img/frontpage/java-logo.png
     description: JVM
   - icon: /resources/img/frontpage/js-logo.png
-    description: javascript on your browser
+    description: JavaScript in your browser
     link: https://www.scala-js.org/
 
 # Scala IDEs
