@@ -22,18 +22,3 @@ resources: [
 ]
 ---
 
-<h3>Other Releases</h3>
-
-You can find the links to prior versions or the latest development version below.
-To see a detailed list of changes for each version of Scala please refer to the <a href="{{ site.baseurl }}/download/changelog.html">changelog</a>.
-
-Note that different major releases of Scala (e.g. Scala 2.11.x and Scala 2.12.x) are not binary compatible with each other.
-
-<ul>
-  {% for release in page.other_releases %}
-  <li><a href="/download/{{ release[2] }}.html">{{ release[1] }} - Scala {{ release[2] }}</a></li>
-  {% endfor %}
-  <li><a href="/files/archive/nightly/">Nightly builds</a></li>
-  <li><a href="/download/changelog/">Changelog</a></li>
-  <li><a href="/download/all/">All previous releases</a></li>
-</ul>
