@@ -1,105 +1,55 @@
-
-  <div class="footer">
-  <div class="container">
-    <ul>
-      <li><h5>Documentation</h5></li>
-      <li><a href="{{ site.baseurl }}/documentation/getting-started.html">Getting Started</a></li>
-      <li><a href="http://www.scala-lang.org/api/current/index.html#package">API</a></li>
-      <li><a href="http://docs.scala-lang.org/overviews/">Overviews/Guides</a></li>
-      <li><a href="http://docs.scala-lang.org/tutorials/">Tutorials</a></li>
-      <li><a href="{{ site.baseurl }}/files/archive/spec/2.12/">Language Specification</a></li>
-    </ul>
-    <ul>
-      <li><h5>Download</h5></li>
-        <li><a href="/download/">Current Version</a></li>
-	<li><a href="/download/all.html">All Versions</a></li>
-    </ul>
-    <ul>
-      <li><h5>Community</h5></li>
-      <li><a href="{{ site.baseurl }}/community/">Community</a></li>
-      <li><a href="{{ site.baseurl }}/community/index.html#mailing-lists">Mailing Lists</a></li>
-      <li><a href="{{ site.baseurl }}/community/index.html#chat-rooms">Chat Rooms &amp; More</a></li>
-      <li><a href="{{ site.baseurl }}/community/index.html#community-libraries-and-tools">Libraries and Tools</a></li>
-      <li><a href="https://scala.epfl.ch/">The Scala Center</a></li>
-    </ul>
-    <ul>
-      <li><h5>Contribute</h5></li>
-      <li><a href="{{ site.baseurl }}/contribute">How to Help</a></li>
-      <li><a href="{{ site.baseurl }}/contribute/bug-reporting-guide.html">Report an Issue</a></li>
-    </ul>
-    <ul>
-      <li><h5>Scala</h5></li>
-      <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-      <li><a href="{{ site.baseurl }}/news">Archive</a></li>
-      <li><a href="{{ site.baseurl }}/conduct.html">Code of Conduct</a></li>
-      <li><a href="{{ site.baseurl }}/license.html">License</a></li>
-    </ul>
+<footer id="site-footer">
+    <div class="wrap">
+      <div class="site-footer-top">
+        {% for item in site.data.footer %}
+          <ul class="{{item.class}}">
+            <li><h3>{{item.title}}</h3></li>
+            {% for link in item.links %}
+              <li><a href="{{link.url}}">{{link.title}}</a></li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+      <div class="site-footer-bottom">
+        <p>{{site.data.common.copyrightText}}</p>
+        <img src="/resources/img/frontpage/scala-logo-white.png" alt="">
+      </div>
     </div>
-    <div class="container">
-      <div class="copyright">
-        <a style="float: left; margin-right: 8px;" href="http://www.epfl.ch"><img src="{{ site.baseurl }}/resources/img/epfl-logo.png" alt="EPFL logo" /></a>
-        <p style="float: left;"><br/>Copyright &copy; 2002-<span class="current-year"></span> École Polytechnique Fédérale de Lausanne
-        (EPFL)<br/> Lausanne, Switzerland</p>
-      </div>
-      <div class="scala-logo-footer">
-        <img src="{{ site.baseurl }}/resources/img/scala-logo-red-footer.png" alt="Scala footer logo" />
-      </div>
-    </div> <!-- container -->
-    </div> <!-- footer -->
+  </footer>
 
-    <!-- prettify  js -->
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/resources/js/vendor/jquery.autocomplete.js" type="text/javascript" ></script>
+
+    <!-- tweet feed -->
+    <script src="{{ site.baseurl }}/resources/js/tweetMachine-update.js" type="text/javascript" ></script>
+    
+    <!-- prettify js -->
     <script src="{{ site.baseurl }}/resources/js/vendor/prettify/prettify.js" type="text/javascript" ></script>
     <script src="{{ site.baseurl }}/resources/js/vendor/prettify/lang-scala.js" type="text/javascript" ></script>
 
-    <!-- jquery js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" integrity="sha384-lifoBlbdwizTl3Yoe612uhI3AcOam/QtWkozF7SuiACaf5UJl5reOYu4MigVxrCH" crossorigin="anonymous"></script>
+    <!-- unslider js -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/unslider.js" type="text/javascript" ></script>
 
-    <!-- modernizr js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" integrity="sha256-zyXsGPIj9MUc4RKKQuZEzcIkTYj4nRpRRA2dvlH07+g=" crossorigin="anonymous"></script>
+    <!-- Highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scala.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/java.min.js" type="text/javascript"></script>
 
-    <!-- retina js -->
-    <script src="{{ site.baseurl }}/resources/js/vendor/retina.js" type="text/javascript" ></script>
+    <!-- CodeMirror -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/codemirror/codemirror.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/resources/js/vendor/codemirror/clike.js" type="text/javascript"></script>
 
-    <!-- backstretch js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js" integrity="sha256-V52dl3OFjoY+fYAkifhLJ7f1V7mZAKPGCQoWzoQxrEU=" crossorigin="anonymous"></script>
+    <!-- TOC -->
+    {% if page.includeTOC == true %}
+      <script src="/resources/js/vendor/jquery.sticky.js" type="text/javascript" ></script>
+      <script src="/resources/js/vendor/toc.js" type="text/javascript" ></script>
+    {% endif %}    
 
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js" integrity="sha384-qJ8AGIuPqPo4I2zhyRYO6vQaJrGBbTpIiXGihDsGpfMCHJD0IKH0gkPQToGD5ek3" crossorigin="anonymous"></script>
-
-    {% unless page.layout == 'page-no-toc' %}
-    <!-- table of contents JS -->
-    <script src="{{ site.baseurl }}/resources/js/vendor/toc.js" type="text/javascript" ></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('#toc').toc({exclude: 'h1, h5, h6', context: '', autoId: true, numerate: false});
-        function moveScroller() {
-          if ($(".sidebar").length == 0)
-            return;
-          var a = function() {
-            var topOfScroll = $(window).scrollTop();
-            var topOfSidebar = $(".sidebar").offset().top;
-            var sidebarInner = $(".sidebar-inner");
-            var bottomOfSidebarInner = $(".sidebar-inner").offset().top + $(".sidebar-inner").outerHeight();
-            var topOfFooter = $(".footer").offset().top - 10;
-            var footerHeight = $(".footer").outerHeight();
-            if (topOfScroll > topOfSidebar) {
-              if (bottomOfSidebarInner > topOfFooter) {
-                sidebarInner.css({position:"fixed",bottom:footerHeight,top:""});
-              } else {
-                sidebarInner.css({position:"fixed",top:"10px",bottom:""});
-              }
-            } else {
-              sidebarInner.css({position:"relative",top:""});
-            }
-          };
-          $(window).scroll(a);a()
-        }
-        moveScroller();
-      })
-    </script>
-    {% endunless %}
+    <!-- Blog search -->
+    <script src="{{ site.baseurl }}/resources/js/vendor/jekyll.search.min.js" type="text/javascript"></script>
 
     <!-- Custom javascript -->
-    <script src="{{ site.baseurl }}/resources/js/main.js" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/resources/js/functions.js" type="text/javascript"></script>
   </body>
 </html>

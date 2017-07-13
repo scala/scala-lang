@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 title: Announcing Dotty 0.1.2-RC1, a major step towards Scala 3
 author: Dmitry Petrashko

@@ -1,0 +1,21 @@
+{
+  "name": "scala-lang",
+  "description": "scala-lang.org revamped site",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/php"
+    }
+  ]
+}

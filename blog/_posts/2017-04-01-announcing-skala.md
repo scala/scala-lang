@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 by: Jon Pretty
 title: "Introducing Skala: A New Vision for Dotty"
