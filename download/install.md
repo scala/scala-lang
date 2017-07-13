@@ -1,11 +1,11 @@
 ---
-title: Install
+title: Running Scala Binaries
 layout: inner-page-no-masthead
-permalink: /download/install/
+# permalink: /download/install/
 includeTOC: true
 ---
 
-**To run Scala from the command-line, simply [download]({{ site.baseurl }}/download) 
+**To run Scala from the command-line, simply [download]({{ site.baseurl }}/download)
 the binaries and unpack the archive.**
 
 Start the Scala interpreter (aka the "REPL") by launching `scala` from where
@@ -25,6 +25,5 @@ For quick access, add `scala` and `scalac` to your path. For example:
 
 ## Get Started with Scala
 
-Check out the 
-["first lines of code" section of our getting started guide]({{ site.baseurl }}/documentation/getting-started.html#your-first-lines-of-code) 
-to take your first steps in Scala.
+Check out
+[our guide to taking your first steps in Scala]({{ site.baseurl }}/documentation/your-first-lines-of-scala.html).

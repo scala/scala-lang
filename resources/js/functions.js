@@ -208,7 +208,7 @@ var toggleStickyToc = function() {
                bottomSpacing: 500
             });
         }
-    }    
+    }
 }
 
 // Blog search
@@ -219,7 +219,7 @@ $(document).ready(function() {
       resultsContainer: document.getElementById('result-container'),
       json: '/resources/json/search.json',
       searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-      limit: 5,      
+      limit: 5,
     });
 
     $("#blog-search-bar").on("change paste keyup", function () {
@@ -260,7 +260,7 @@ $(document).ready(function() {
               $('.btn-run i').removeClass("fa-spinner fa-spin").addClass("fa fa-play");
             }, 2000);
         })
-    }    
+    }
 });
 
 // OS detection
@@ -284,6 +284,35 @@ $(document).ready(function() {
         $("#download-step-one").html(stepOneContent);
     }
 });
+
+
+$(document).ready(function() {
+
+  var os = getOS();
+  if (os == "Unknown OS") os = "UNIX";
+
+  var osLabel = os.replace(/\s/g, '').toLowerCase();
+
+  // Do not do any of the following if we're not on a download page
+  // Otherwise a TypeError is raised and disables all other scripts on the page
+  if ($("#download-binaries").length == 0)
+    return;
+
+  /*$("#download-button, #getting-started-popup").click(function() {
+    $("#getting-started-popup").toggleClass("open");
+  });*/
+
+  var anchor = document.getElementById("#link-main-unixsys");
+  if (os == "Windows") {
+    anchor = document.getElementById("#link-main-windows");
+  }
+  if (anchor == null) anchor = document.getElementById("#link-main-one4all");
+  var link = anchor.getAttribute("href");
+
+  $("#download-binaries").attr("href", link).addClass(osLabel);
+  $("#users-os").text(os);
+});
+
 
 var image = { width: 1680, height: 1100 };
 var target = { x: 1028, y: 290 };

@@ -226,10 +226,25 @@
     }
 
     .bottom-lead {
-        margin-top: 165px;
+        margin-top: 80px;
         @include bp(large) {
           margin-top: 20px;
         }
+    }
 
+    .other-ways-lead {
+        margin-top: 30px;
+        @include bp(large) {
+          margin-top: 20px;
+        }
+        margin-bottom: 50px;
+        @include bp(large) {
+          margin-bottom: 10px;
+      }
+    }
+
+    .install {
+      font-size: 11px;
+      font-style: italic;
     }
 }
