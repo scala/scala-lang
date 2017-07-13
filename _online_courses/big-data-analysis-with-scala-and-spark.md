@@ -1,7 +1,7 @@
 ---
 layout: inner-page-no-masthead
 title: Big Data Analysis with Scala and Spark
-course-page: https://www.coursera.org/specializations/scala
+course-page: https://www.coursera.org/learn/scala-spark-big-data
 date: 27-02-2018
 end-date: 03-04-2018
 platform: coursera

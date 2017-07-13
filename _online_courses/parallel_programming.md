@@ -1,7 +1,7 @@
 ---
 layout: inner-page-no-masthead
 title: Parallel Programming
-course-page: https://www.coursera.org/specializations/scala
+course-page: https://www.coursera.org/learn/parprog1
 date: 27-02-2017
 end-date: 03-04-2017
 platform: coursera

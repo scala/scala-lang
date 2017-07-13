@@ -1,7 +1,7 @@
 ---
 layout: inner-page-no-masthead
 title: Functional Programming Principles in Scala
-course-page: https://www.coursera.org/specializations/scala
+course-page: https://www.coursera.org/learn/progfun1
 date: 27-02-2017
 end-date: 17-04-2017
 platform: coursera
