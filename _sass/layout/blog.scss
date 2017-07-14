@@ -3,6 +3,9 @@
 //------------------------------------------------
 
 .title-page {
+    h1 {
+      line-height: 1.875rem;
+    }
     .content-title-blog {
         h1 {
             @include span-columns(9);
