@@ -17,9 +17,9 @@ supporters:
   - name: SAP
     logo: /resources/img/frontpage/sap-logo.png
     url: http://www.sap.com
-  - name: TAPAD
-    logo: /resources/img/frontpage/tapad-logo.png
-    url: http://www.tapad.com
+  - name: Twitter
+    logo: /resources/img/twitter-logo.png
+    url: http://www.twitter.com
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/individual-membership.html
