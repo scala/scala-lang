@@ -148,13 +148,15 @@
                     line-height: 1.1;
 
                     a {
+                        color: $gray-li;
+                        font-style: italic;
                         font-size: $font-size-xsmall;
-                        background: rgba($brand-tertiary, 0.15);
 
                         &:active,
                         &:focus,
                         &:hover {
                             text-decoration: none;
+                            background: rgba($brand-tertiary, 0.15);
                         }
 
                         br {
