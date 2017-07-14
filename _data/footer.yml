@@ -37,7 +37,7 @@
     - title: How to help
       url: "/contribute/"
     - title: Report an Issue
-      url: "/contribute/bug-reporting-guide/"
+      url: "/contribute/bug-reporting-guide.html"
 - title: Scala
   class: scala
   links:
