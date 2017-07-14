@@ -142,10 +142,12 @@
     li,
     p {
         code {
+            font-family: 'Consolas';
             @include border-radius($border-radius-small);
             font-size: $font-size-medium;
             background: $gray-lighter;
-            color: $base-font-color-light;
+            color: #667b83;
+            // border: 1px solid #ced7d7;
             padding: 0 6px;
             margin: 0 4px;
         }
@@ -203,6 +205,7 @@
 
     .filter-tag {
       margin-top: 30px;
+      margin-bottom: 24px;
       text-transform: uppercase;
       font-style: italic;
       color: $base-font-color-light;
