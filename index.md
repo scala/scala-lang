@@ -15,7 +15,7 @@ gettingStarted:
   subtitleLink: "/documentation/getting-started/"
   links:
     - title: "Milestones, nightlies, etc."
-      url: "/download/"
+      url: "/download/index.html#other-releases"
     - title: "All Previous Releases"
       url: "/download/all.html"
 apiDocs:
