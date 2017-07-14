@@ -290,7 +290,7 @@
       <h2><span>Talk to us!</span></h2>
     </div>
     <div class="discourse">
-      <h3>Mailing lists / forums</h3>
+      <h3>Mailing Lists/Forums</h3>
       {% for forum in site.data.chats-forums.discourseForums %}
         <a href="{{forum.url}}" class="{{forum.cssClass}}">
           <img src="/resources/img/frontpage/discourse-logo.png" alt="{{forum.title}}">
@@ -300,7 +300,7 @@
       {% endfor %}
     </div>
     <div class="gitter">
-      <h3>Real-time (topic-specialized) chat</h3>
+      <h3>Real-Time (Topic-Specialized) Chat</h3>
       {% assign modLimit = site.data.chats-forums.gitterChannels.size | modulo: 2 %}
       {% capture channelLimit %}
         {% if modLimit != 0 %}

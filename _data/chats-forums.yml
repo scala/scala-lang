@@ -1,11 +1,11 @@
 # Discourse forums
 discourseForums:
-  - title: Scala Users Discourse
-    subtitle: for general Scala questions, discussion and library announcements
+  - title: Scala Users
+    subtitle: "for general Scala questions, discussion and library announcements."
     url: https://users.scala-lang.org/
     cssClass: scala-user-discourse
-  - title: Scala Contributors Discourse
-    subtitle: for Scala contributions, language evolution dicussions, standard library, Scala platform evolution discussions and more
+  - title: Scala Contributors
+    subtitle: "for Scala contributions, language evolution dicussions, standard library, Scala platform evolution discussions and more."
     url: https://contributors.scala-lang.org/
     cssClass: scala-contributors-discourse
 
