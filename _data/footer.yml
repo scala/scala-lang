@@ -13,11 +13,11 @@
       url: "http://scala-lang.org/files/archive/spec/2.12/"
 - title: Download
   class: download
-  links: 
+  links:
     - title: Current Version
       url: "/download/"
     - title: All versions
-      url: "/download/all/"
+      url: "/download/all.html"
 - title: Community
   class: community
   links:
@@ -33,7 +33,7 @@
       url: https://scala.epfl.ch/
 - title: Contribute
   class: contribute
-  links: 
+  links:
     - title: How to help
       url: "/contribute/"
     - title: Report an Issue

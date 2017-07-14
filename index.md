@@ -17,7 +17,7 @@ gettingStarted:
     - title: "Milestones, nightlies, etc."
       url: "/download/"
     - title: "All Previous Releases"
-      url: "/download/all/"
+      url: "/download/all.html"
 apiDocs:
   mainTitle: "API Docs"
   mainUrl: "http://www.scala-lang.org/api/?_ga=1.178639076.1310790544.1468501313"
