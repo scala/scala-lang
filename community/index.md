@@ -90,7 +90,7 @@ There is a large and active Scala community on the [/r/Scala](http://reddit.com/
 
 Official:
 
-* [News page](http://www.scala-lang.org/news/) and [blog](http://www.scala-lang.org/blog/) on this site
+* [Blog/News Page](http://www.scala-lang.org/blog/) on this site
 * [@Scala_lang](https://twitter.com/scala_lang) on Twitter
 
 Community:
