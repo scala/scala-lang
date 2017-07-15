@@ -91,7 +91,7 @@ There is a large and active Scala community on the [/r/Scala](http://reddit.com/
 Official:
 
 * [Blog/News Page](http://www.scala-lang.org/blog/) on this site
-* [@Scala_lang](https://twitter.com/scala_lang) on Twitter
+* [@scala_lang](https://twitter.com/scala_lang) on Twitter
 
 Community:
 
@@ -100,7 +100,7 @@ Community:
 
 Many Scala users are active on Twitter for sharing Scala-related news
 items and opinions.  Ask your Scala friends who they follow on Twitter
-(besides @Scala_lang!).
+(besides [@scala_lang](https://twitter.com/scala_lang)!).
 
 ## Community-Powered Learning Resources
 
