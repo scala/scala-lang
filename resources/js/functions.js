@@ -234,33 +234,52 @@ $(document).ready(function() {
 
 // Scala in the browser
 $(document).ready(function() {
-    if ($("#scastie-textarea").length) {
-        var editor = CodeMirror.fromTextArea(document.getElementById("scastie-textarea"), {
-            lineNumbers: true,
-            matchBrackets: true,
-            theme: "monokai",
-            mode: "text/x-scala",
-            autoRefresh: true,
-            fixedGutter: false
-          });
-        editor.setSize("100%", ($("#scastie-code-container").height()));
+  if ($("#scastie-textarea").length) {
+    var editor = 
+      CodeMirror.fromTextArea(
+        document.getElementById("scastie-textarea"),
+        {
+          // lineNumbers: false,
+          matchBrackets: true,
+          theme: "monokai",
+          mode: "text/x-scala",
+          autoRefresh: true,
+          fixedGutter: false,
+          extraKeys: {
+            'Ctrl-Enter': 'run',
+            'Cmd-Enter': 'run'
+          }
+        }
+      );
 
-        var codeSnippet = "List(\"Hello\", \"World\").mkString(\"\", \", \", \"!\")";
-        editor.getDoc().setValue(codeSnippet);
-        editor.refresh();
+    editor.setSize("100%", ($("#scastie-code-container").height()));
 
-        $('.btn-run').click(function() {
-            // TODO: Code to connect to the scastie server would be here, what follows is just a simulation for the UI elements:
-            $('.btn-run').addClass("inactive");
-            $('.btn-run i').removeClass("fa fa-play").addClass("fa fa-spinner fa-spin");
-            setTimeout(function() {
-              var currentCodeSnippet = editor.getDoc().getValue();
-              console.log("Current code snippet: " + currentCodeSnippet);
-              $('.btn-run').removeClass("inactive");
-              $('.btn-run i').removeClass("fa-spinner fa-spin").addClass("fa fa-play");
-            }, 2000);
-        })
+    var codeSnippet = "List(\"Hello\", \"World\").mkString(\"\", \", \", \"!\")";
+    editor.getDoc().setValue(codeSnippet);
+    editor.refresh();
+
+    function run(){
+      console.log("run");
+      // var scastieBaseUrl = "https://scastie.scala-lang.org";
+      var scastieBaseUrl = "http://localhost:9000";
+
+      $.ajax(
+        {
+          type: "POST",
+          url: scastieBaseUrl + '/scala-lang',
+          data: editor.getDoc().getValue(),
+          success: function(url) {
+            window.open(scastieBaseUrl + "/" + url);
+          },
+          // otherwise it's considered a popup
+          async: false
+        }
+      )
     }
+
+    $('.btn-run').click(run);
+    CodeMirror.commands.run = run;
+  }
 });
 
 // OS detection
