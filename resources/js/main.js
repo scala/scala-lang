@@ -451,12 +451,7 @@ _gaq.push(['_trackPageview']);
 })();
 var f = function(event){
   var href = $(this).attr('href');
-  var target = $(this).attr('target');
   _gaq.push(['_trackEvent','Downloads','Download',href]);
-  if (target === undefined || target.toLowerCase() != '_blank') {
-    setTimeout(function() { location.href = href; }, 200);
-    return false;
-  }
 };
 function endsWith(str, suffix) {
     if (str && suffix)
