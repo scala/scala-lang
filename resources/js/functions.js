@@ -125,7 +125,7 @@ $('#scaladex-search').autocomplete({
     transformResult: function(response) {
       return {
         suggestions: $.map(response, function(dataItem) {
-          return { 
+          return {
             value: dataItem.organization + " / " + dataItem.repository,
             data: dataItem
           };
@@ -199,7 +199,7 @@ $(document).ready(function() {
 // Scala in the browser
 $(document).ready(function() {
   if ($("#scastie-textarea").length) {
-    var editor = 
+    var editor =
       CodeMirror.fromTextArea(
         document.getElementById("scastie-textarea"),
         {
@@ -224,8 +224,7 @@ $(document).ready(function() {
 
     function run(){
       console.log("run");
-      // var scastieBaseUrl = "https://scastie.scala-lang.org";
-      var scastieBaseUrl = "http://localhost:9000";
+      var scastieBaseUrl = "https://scastie.scala-lang.org";
 
       $.ajax(
         {
