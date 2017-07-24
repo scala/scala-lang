@@ -1,8 +1,8 @@
 ---
 layout: downloadpage
 title: Download
-release_version: 2.12.2
-release_date: "April 18, 2017"
+release_version: 2.12.3
+release_date: "July 26, 2017"
 show_resources: "true"
 other_releases: [
   ["development_version", "Current 2.13.x milestone", 2.13.0-M1, "April 18, 2017"],
