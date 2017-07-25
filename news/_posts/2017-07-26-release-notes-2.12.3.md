@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: inner-page-no-masthead
 post-type: announcement
 permalink: /news/2.12.3
 title: "Scala 2.12.3 is now available!"
