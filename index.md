@@ -25,11 +25,11 @@ apiDocs:
   subtitleLink: "http://www.scala-lang.org/api/current/?_ga=1.241039811.1310790544.1468501313"
   links:
     - title: "API Docs (other versions)"
-      url: "/documentation/api/"
+      url: "https://scala-lang.org/files/archive/api/"
     - title: "Scala Documentation"
       url: "/documentation/"
     - title: "Language Specification"
-      url: "http://scala-lang.org/files/archive/spec/2.12/"
+      url: "https://scala-lang.org/files/archive/spec/2.12/"
 
 currentScalaVersion: "2.12.3"
 
