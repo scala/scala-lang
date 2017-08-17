@@ -7,8 +7,6 @@
       url: "http://www.scala-lang.org/api/current/index.html"
     - title: Overviews/Guides
       url: "http://docs.scala-lang.org/overviews"
-    - title: Tutorials
-      url: "http://docs.scala-lang.org/tutorials/"
     - title: Language Specification
       url: "http://scala-lang.org/files/archive/spec/2.12/"
 - title: Download
@@ -44,7 +42,7 @@
     - title: Blog
       url: "/blog/"
     - title: Code of Conduct
-      url: "/conduct/"
+      url: "/conduct.html"
     - title: License
       url: "/license/"
 - title: Social
