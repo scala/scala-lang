@@ -3,7 +3,7 @@ title: Getting Started with Scala and sbt on the Command Line
 layout: inner-page-no-masthead
 disqus: true
 redirect_from:
-  - documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html
+  - documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-in-the-command-line.html
 next-page: testing-scala-with-sbt-on-the-command-line
 ---
 
