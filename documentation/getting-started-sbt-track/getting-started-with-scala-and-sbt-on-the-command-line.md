@@ -1,8 +1,10 @@
 ---
-title: Getting Started with Scala and sbt in the Command Line
+title: Getting Started with Scala and sbt on the Command Line
 layout: inner-page-no-masthead
 disqus: true
-next-page: testing-scala-with-sbt-in-the-command-line
+redirect_from:
+  - documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html
+next-page: testing-scala-with-sbt-on-the-command-line
 ---
 
 In this tutorial, you'll see how to create a Scala project from
@@ -86,4 +88,4 @@ Now that you know how to create a Scala project, you
 can continue learning online for free with [Scala Exercises](http://scala-exercises.org) or choose
 from our [list of educational resources](http://scala-lang.org/documentation/).
 
-[Up Next: Testing Scala with sbt in the command line]({{ site.baseurl }}/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html)
+[Up Next: Testing Scala with sbt in the command line]({{ site.baseurl }}/documentation/getting-started-sbt-track/testing-scala-with-sbt-on-the-command-line.html)
