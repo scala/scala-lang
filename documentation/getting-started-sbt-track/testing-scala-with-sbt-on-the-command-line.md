@@ -2,7 +2,7 @@
 title: Testing Scala with sbt and ScalaTest in the Command Line
 layout: inner-page-no-masthead
 disqus: true
-redirect_from: documentation/getting-started-sbt-track/testing-scala-with-sbt-on-the-command-line.html
+redirect_from: documentation/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html
 previous-page: getting-started-with-scala-and-sbt-on-the-command-line
 ---
 

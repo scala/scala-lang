@@ -88,4 +88,4 @@ Now that you know how to create a Scala project, you
 can continue learning online for free with [Scala Exercises](http://scala-exercises.org) or choose
 from our [list of educational resources](http://scala-lang.org/documentation/).
 
-[Up Next: Testing Scala with sbt in the command line]({{ site.baseurl }}/documentation/getting-started-sbt-track/testing-scala-with-sbt-on-the-command-line.html)
+[Up Next: Testing Scala with sbt in the command line]({{ site.baseurl }}/documentation/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html)
