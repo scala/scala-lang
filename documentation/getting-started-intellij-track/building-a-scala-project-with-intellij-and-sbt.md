@@ -15,7 +15,7 @@ or more than one code file.
 ## Creating the project
 In this section, we'll show you how to create the project in IntelliJ. However, if you're
 comfortable with the command line, we recommend you try [Getting
-Started with Scala and sbt in the Command Line]({{site.baseurl}}/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html) and then come back
+Started with Scala and sbt on the Command Line]({{site.baseurl}}/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html) and then come back
 
  here to the section "Writing Scala code".
 
@@ -23,7 +23,7 @@ Started with Scala and sbt in the Command Line]({{site.baseurl}}/documentation/g
   * On the left panel, select Scala and on the right panel, select SBT
   * Click **Next**
   * Name the project "SBTExampleProject"
-* If you already created the project in the command line, open up IntelliJ, select *Import Project* and open the `build.sbt` file for your project
+* If you already created the project on the command line, open up IntelliJ, select *Import Project* and open the `build.sbt` file for your project
 * Make sure the **JDK Version** is 1.8 and the **SBT Version** is at least 0.13.13
 * Select **Use auto-import** so dependencies are automatically downloaded when available
 * Select **Finish**
@@ -65,7 +65,7 @@ object Main extends App {
 
 Note: IntelliJ has its own syntax highlighter and sometimes your code is
 correct even though IntelliJ indicates otherwise. You can always check
-to see if sbt can run your project in the command line.
+to see if sbt can run your project on the command line.
 
 ## Running the project
 1. From the **Run** menu, select **Edit configurations**

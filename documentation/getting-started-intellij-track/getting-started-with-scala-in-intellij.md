@@ -11,7 +11,7 @@ Scala for you.
 
 ## Installation
 1. Make sure you have the Java 8 JDK (also known as 1.8)
-    * Run `javac -version` in the command line and make sure you see
+    * Run `javac -version` on the command line and make sure you see
     `javac 1.8.___`
     * If you don't have version 1.8 or higher, [install the JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 1. Install [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/)

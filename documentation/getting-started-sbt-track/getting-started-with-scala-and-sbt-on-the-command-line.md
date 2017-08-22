@@ -16,7 +16,7 @@ We assume you know how to use a terminal.
 ## Installation
 
 1. Make sure you have the Java 8 JDK (also known as 1.8)
-    * Run `javac -version` in the command line and make sure you see
+    * Run `javac -version` on the command line and make sure you see
     `javac 1.8.___`
     * If you don't have version 1.8 or higher, [install the JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
@@ -88,4 +88,4 @@ Now that you know how to create a Scala project, you
 can continue learning online for free with [Scala Exercises](http://scala-exercises.org) or choose
 from our [list of educational resources](http://scala-lang.org/documentation/).
 
-[Up Next: Testing Scala with sbt in the command line]({{ site.baseurl }}/documentation/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html)
+[Up Next: Testing Scala with sbt on the command line]({{ site.baseurl }}/documentation/getting-started-sbt-track/testing-scala-with-sbt-on-the-command-line.html)

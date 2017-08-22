@@ -1,8 +1,9 @@
 ---
-title: Testing Scala with sbt and ScalaTest in the Command Line
+title: Testing Scala with sbt and ScalaTest on the Command Line
 layout: inner-page-no-masthead
 disqus: true
-redirect_from: documentation/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html
+redirect_from:
+  - documentation/getting-started-sbt-track/testing-scala-with-sbt-in-the-command-line.html
 previous-page: getting-started-with-scala-and-sbt-on-the-command-line
 ---
 
@@ -13,7 +14,7 @@ called [FunSuite](http://www.scalatest.org/getting_started_with_fun_suite).
 We assume you know [how to create a Scala project with sbt]({{ site.baseurl }}/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html).
 
 ## Setup
-1. In the command line, create a new directory somewhere (e.g. `Documents`).
+1. On the command line, create a new directory somewhere (e.g. `Documents`).
 * `cd` into the directory and run `sbt new scala/scalatest-example.g8`
 * Name the project `ScalaTestTutorial`.
 * The project comes with ScalaTest as a dependency in the `build.sbt` file.

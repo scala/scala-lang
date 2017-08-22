@@ -7,11 +7,11 @@ includeTOC: true
 #  - http://docs.scala-lang.org/getting-started
 ---
 
-These tutorials will get you writing Scala code as quickly as possible. Choose one set of tutorials depending on whether you prefer to work in the command line or in an IDE.
+These tutorials will get you writing Scala code as quickly as possible. Choose one set of tutorials depending on whether you prefer to work on the command line or in an IDE.
 
-## You prefer working in the command line
-* [Getting Started with Scala and sbt in the Command Line](/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html)
-* [Testing Scala with sbt and ScalaTest in the Command Line](/documentation/getting-started-sbt-track/testing-scala-with-sbt-on-the-command-line.html)
+## You prefer working on the command line
+* [Getting Started with Scala and sbt on the Command Line](/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html)
+* [Testing Scala with sbt and ScalaTest on the Command Line](/documentation/getting-started-sbt-track/testing-scala-with-sbt-on-the-command-line.html)
 
 ## You prefer working in an IDE
 * [Getting Started with Scala in IntelliJ](/documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html)
