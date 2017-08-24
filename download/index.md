@@ -5,7 +5,7 @@ release_version: 2.12.3
 release_date: "July 26, 2017"
 show_resources: "true"
 other_releases: [
-  ["development_version", "Current 2.13.x milestone", 2.13.0-M1, "April 18, 2017"],
+  ["development_version", "Current 2.13.x milestone", 2.13.0-M2, "August 8, 2017"],
   ["maintenance_version", "Last 2.11.x maintenance release", 2.11.11, "April 18, 2017"],
   ["maintenance_version", "Last 2.10.x maintenance release", 2.10.6, "September 18, 2015"]
 ]
