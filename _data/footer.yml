@@ -4,11 +4,11 @@
     - title: Getting Started
       url: "/documentation/getting-started.html"
     - title: API
-      url: "http://www.scala-lang.org/api/current/index.html"
+      url: "https://www.scala-lang.org/api/current/index.html"
     - title: Overviews/Guides
-      url: "http://docs.scala-lang.org/overviews"
+      url: "https://docs.scala-lang.org/overviews"
     - title: Language Specification
-      url: "http://scala-lang.org/files/archive/spec/2.12/"
+      url: "https://scala-lang.org/files/archive/spec/2.12/"
 - title: Download
   class: download
   links:
