@@ -7,12 +7,12 @@ title: GSOC - Connecting Contributors with Projects
 
 ## Introduction
 
-One problem with open-source software is that it can be difficult to find a project to contribute to and actually get started contributing to it. Some open-source projects can seem very intimidating to newcomers since they have a very large code base and minimal documentation about how to get involved with the project. Other projects are are better and have:
-- **a contributing guide** with specific steps people can follow to get involved
+One problem with open-source software is that it can be difficult to find a project to contribute to and actually get started contributing to it. Some open-source projects can seem very intimidating to newcomers since they have a very large code base and minimal documentation about how to get involved with the project. Other projects make it easier for prospective contributors to localize and figure out how to participate in a project, having for example:
+- **a contributing guide** with specific steps that potential contributors can follow to get involved
 - some well-documented, easy to fix, **beginner-friendly issues** which are great places to learn about the project and get started contributing
-- **a chatroom** like gitter where anyone can come and easily ask questions
+- **a chatroom/forum** like gitter where anyone can come and easily ask questions
 
-For Google Summer Of Code 2017, my [project](https://summerofcode.withgoogle.com/projects/#5367340028919808) was to make it easier for potential contributors to both find projects to contribute to and to get started contributing to projects, all through [Scaladex](https://index.scala-lang.org/) (the Scala Library Index). I accomplished this by highlighting projects that have Contributing Info (contributing guide, beginner-friendly issues and chatroom) on the [front page](https://index.scala-lang.org/) of Scaladex so that potential contributors can easily view projects that they could contribute to and see all the information necessary for contributing in one place. I also added a [Contributing Search page](https://index.scala-lang.org/search?q=&contributingSearch=true) which can be used to query these projects.
+For Google Summer of Code 2017, my [project](https://summerofcode.withgoogle.com/projects/#5367340028919808) was to make it easier for potential contributors to both find projects to contribute to and to get started contributing to projects, all through [Scaladex](https://index.scala-lang.org/) (the Scala Library Index). I accomplished this by highlighting projects that have Contributing Info (contributing guide, beginner-friendly issues and chatroom) on the [front page](https://index.scala-lang.org/) of Scaladex so that potential contributors can easily view projects that they could contribute to and see all the information necessary for contributing in one place. I also added a [Contributing Search page](https://index.scala-lang.org/search?q=&contributingSearch=true) which can be used to query these projects.
 
 [![front-page-contributing](/resources/img/blog/scaladex/front-page-contributing.png)](/resources/img/blog/scaladex/front-page-contributing.png)
 *Highlighted projects with Contributing Info on the front page of Scaladex*
@@ -24,21 +24,23 @@ Furthermore, I improved the search feature of Scaladex by adding [Github Topics]
 
 ## Contributing Info
 ### How it Works
-As mentioned above, Contributing Info corresponds to 3 pieces of information, some of which are auto-populated when Scaladex is indexed, and all of which can be manually set by a project maintainer in their project's edit page in Scaladex:
+To Scaladex, Contributing Info consists of the three pieces of information mentioned above: a contributing guide, a collection of beginner-friendly issues, and a link to a chatroom/forum for the project where newcomers can come to easily ask questions. And perhaps most importantly; Scaladex can automatically obtain much of this info for your project! It's also possible for a project maintainer to manually set this information on their project's edit page in Scaladex.
+
+Here's some more info about how each piece of contributing info gets set:
 - beginner-friendly label/issues - first the label used to identify beginner-friendly issues has to be manually set in the edit page, then Scaladex will fetch the corresponding issues
 - chatroom - auto-populated to a project's gitter room if it has one
 - contributing guide - auto-populated to a project's CONTRIBUTING.md if it has one
 
-As an example, the [Scaladex project](https://github.com/scalacenter/scaladex) (for the code behind the website) uses the label "low-hanging fruit" to mark [beginner-friendly issues](https://github.com/scalacenter/scaladex/labels/low-hanging%20fruit). It also has a [gitter room](https://gitter.im/scalacenter/scaladex) for chatting and a [contributing guide](https://github.com/scalacenter/scaladex/blob/master/CONTRIBUTING.md).
+As an example, the [Scaladex project](https://github.com/scalacenter/scaladex) (for the code behind the website) uses the label "low-hanging fruit" to mark beginner-friendly issues in Github so this label can be set by the maintainer in the edit project page and all the [issues with this label](https://github.com/scalacenter/scaladex/labels/low-hanging%20fruit) will be stored for this project. It also has a [gitter room](https://gitter.im/scalacenter/scaladex) for chatting and a [contributing guide](https://github.com/scalacenter/scaladex/blob/master/CONTRIBUTING.md) which will be auto-populated for the project when all the projects are indexed.
 
-Scaladex uses Github's [GraphQL API](https://developer.github.com/v4/) to get a project's beginner-friendly issues, see the [Github Topics](#github-topics) section below for more info about Github's GraphQL API. To get a project's contributing guide, Scaladex uses Github's [REST API](https://developer.github.com/v3/) to send a GET request to the [Community Profile API](https://developer.github.com/v3/repos/community/) which will return links to a project's contributing guide, code of conduct and license. Lastly, to get a project's chatroom, Scaladex generates a URL for a project's gitter room like <https://gitter.im/scalacenter/scaladex> and checks if that URL exists.
+Scaladex uses Github's [GraphQL API](https://developer.github.com/v4/) to get a project's beginner-friendly issues, see the [Github Topics](#github-topics) section below for more info about Github's GraphQL API. To get a project's contributing guide, Scaladex uses Github's [REST API](https://developer.github.com/v3/) to send a GET request to the [Community Profile API](https://developer.github.com/v3/repos/community/) which will return links to a project's contributing guide, code of conduct and license. Lastly, to get a project's chatroom, Scaladex generates a URL for a project's gitter room based on the project's repository name and the organization it belongs to (Ex. <https://gitter.im/scalacenter/scaladex>) and checks if that URL exists.
 
-The front page of Scaladex has a section which highlights projects that have Contributing Info and it picks a random selection of projects each time the page is loaded to give the same amount of exposure to all projects with Contributing Info.
+You can also find Contributing Info on the front page of Scaladex. Now, Scaladex highlights a random subset of projects which have Contributing Info on the front page of Scaladex. It picks a random selection of projects each time the page is loaded to give the same amount of exposure to all projects with Contributing Info. We hope to highlight and better guide potential contributors to projects and issues that are of interest to them!
 
 The Contributing Search page is similar to the normal search page in Scaladex where you can search projects based on keywords but it only shows projects that have Contributing Info and instead of just showing a project's description in the search results, it shows Contributing Info for each result. Additionally, the Contributing Search page does filtering on a project's beginner-friendly issues. For example, if you enter a search term related to documentation like "docs", the [search results](https://index.scala-lang.org/search?q=docs&contributingSearch=true) will contain issues related to documentation for each project.
 
 [![contributing-search](/resources/img/blog/scaladex/contributing-search.png)](/resources/img/blog/scaladex/contributing-search.png)
-*The Contributing Search page in Scaladex which shows Contributing Info for each result*
+*The Contributing Search page in Scaladex which shows Contributing Info like beginner-friendly issues for each result*
 
 ### Code
 The code for Contributing Info was committed in 2 pull requests, 1 for the [back-end](https://github.com/scalacenter/scaladex/pull/448) and 1 for the [front-end](https://github.com/scalacenter/scaladex/pull/467).
@@ -76,7 +78,7 @@ nestedQuery("github.beginnerIssues",
 .inner(innerHits("issues").size(7))
 ```
 
-And the last thing I had to do was add the filtered beginner-friendly issues from inner hits to the project that gets created from the results of the elasticsearch query. I did this by updating the code in [package.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-0aa128fca8ddf4b576663970f7fc4940R39) that reads in each result of the elasticsearch query (`hit`) and converts it to a Scala `Project` object which is used by the server elsewhere.
+And then I added the filtered beginner-friendly issues from inner hits to the project that gets created from the results of the elasticsearch query. I did this by updating the code in [package.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-0aa128fca8ddf4b576663970f7fc4940R39) that reads in each result of the elasticsearch query (`hit`) and converts it to a Scala `Project` object which is used by the server elsewhere.
 ```
 implicit object ProjectAs extends HitReader[Project] {
   override def read(hit: Hit): Either[Throwable, Project] = {
@@ -115,7 +117,7 @@ Github recently added ["topics"](https://github.com/blog/2309-introducing-topics
 
 Topics are part of Github’s new [GraphQL API](https://developer.github.com/v4/) which is meant to eventually replace their old [REST API](https://developer.github.com/v3/). [GraphQL](http://graphql.org/) is a "A query language for your API". It is both a query language and a graph-structured schema which stores data with nodes as objects and edges as relationships between objects. It was developed by Facebook and is different from a traditional REST API by having all API requests go to one route and having a query defined in the request body to specify precisely what data you want.
 
-With Github's REST API, you have to make multiple requests to different routes to get project info about multiple projects. And when you make a request, all the data related to that request would be returned. For example, if you wanted to get the most recent 3 issues created for 5 projects, you would make 5 requests to 5 different routes for each project. Each request would return all the project’s issues. With the GraphQL API, all requests are made to the same route and in the body of the request you input a GraphQL query which specifies exactly what information you want and for which projects. So for the example above of getting the most recent 3 issues created for 5 projects, you would make 1 request to 1 route containing a query to get only the 3 most recent issues for the 5 projects and only those 3 issues for each of the projects would be returned. This results in less requests to Github’s API and less data returned in each response.
+With Github's REST API, you have to make multiple requests to different routes to get project info about multiple projects. And when you make a request, all the data related to that request would be returned. For example, if you wanted to get the most recent 3 issues created for 5 different projects, you would make 5 requests to 5 different routes for each project. Each request would return all the project’s issues. With the GraphQL API, all requests are made to the same route and in the body of the request you input a GraphQL query which specifies exactly what information you want and for which projects. So for the example above of getting the most recent 3 issues created for 5 projects, you would make 1 request to 1 route containing a query to get only the 3 most recent issues for the 5 projects and only those 3 issues for each of the projects would be returned. This results in less requests to Github’s API and less data returned in each response.
 
 So I replaced keywords with topics for projects in Scaladex and used Github’s new GraphQL API to fetch the topics. These topics are fetched for all projects when the server is indexed. A lot more projects have topics than keywords (which had to manually be set by maintainers in Scaladex), so this greatly improved the ability to search for projects based on categories in Scaladex since there are a lot more projects with categories.
 
@@ -143,7 +145,7 @@ private def topicQuery(repo: GithubRepo): JsObject = {
   )
 }
 ```
-If you run that query for the [akka](https://github.com/akka/akka) project, this is what gets returned:
+If you run that query for the [akka](https://github.com/akka/akka) project, this is what gets returned from the Github API:
 ```
 {
   "data": {
@@ -196,6 +198,6 @@ If you run that query for the [akka](https://github.com/akka/akka) project, this
 The code for Github Topics was committed in [one pull request](https://github.com/scalacenter/scaladex/pull/421).
 
 ## Closing Remarks
-Huge thanks to my mentor Heather Miller who was super approachable and took the time to explain/discuss the best way to implement this project.
+Huge thanks to my mentor Heather Miller who was very approachable and always took the time to discuss the best way to implement this project.
 
-Also thanks to Guillame Massé for being a super dev teammate and to Julien Richard-Foy for providing great feedback on mr PRs.
+Also thanks to Guillame Massé for being a super dev teammate and to Julien Richard-Foy for providing great feedback on my pull requests.
