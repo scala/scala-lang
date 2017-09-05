@@ -121,7 +121,6 @@ Finding libraries:
 
 Staying current:
 
-* [implicit.ly](http://implicit.ly) announces new versions of Scala libraries as they become available
 * [Scala Times](http://scalatimes.com) includes library releases
 
 ## Non-JVM platforms
