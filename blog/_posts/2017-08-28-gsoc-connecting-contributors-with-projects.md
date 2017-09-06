@@ -22,6 +22,14 @@ Furthermore, I improved the search feature of Scaladex by adding [Github Topics]
 [![front-page-topics](/resources/img/blog/scaladex/front-page-topics.png)](/resources/img/blog/scaladex/front-page-topics.png)
 *Topics for projects on the front page of Scaladex*
 
+## How to Add Your Project ##
+If you're a project maintainer and want to add Contributing Info to your project so that it can show up on the front page of Scaladex and in the Contributing Search page, do the following:
+1. Login to GitHub in Scaladex
+2. Go to your project's page in Scaladex and click Edit
+3. Set the Beginner Issues Label field
+4. Set the Chatroom field (if it hasn't been auto-populated)
+5. Set the Contributing Guide field (if it hasn't been auto-populated)
+
 ## Contributing Info
 ### How it Works
 To Scaladex, Contributing Info consists of the three pieces of information mentioned above: a contributing guide, a collection of beginner-friendly issues, and a link to a chatroom/forum for the project where newcomers can come to easily ask questions. And perhaps most importantly; Scaladex can automatically obtain much of this info for your project! It's also possible for a project maintainer to manually set this information on their project's edit page in Scaladex.
