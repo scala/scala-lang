@@ -27,7 +27,7 @@ in the same place on the front page of scala-lang.org)
 
 ```
     ---
-    layout: blog
+    layout: blog-detail
     post-type: blog
     by: Joe Schmoe
     title: My Uber Cool Scala Article
