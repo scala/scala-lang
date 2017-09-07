@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-detail
 post-type: blog
 title: Announcing Dotty 0.3.0-RC2, with improved stability and IDE support
 by: Allan Renucci
