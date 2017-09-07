@@ -144,7 +144,7 @@
   <div class="scala-items-list">
     <div class="items-menu">
       {% for scalaItem in site.scala_items %}
-        {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
+        {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
 
         {% if loopIndexMod == 0 %}
           {% assign codeSnippets = '' | split: ',' %}
@@ -297,7 +297,7 @@
     </div>
     <div class="gitter">
       <h3>Real-Time (Topic-Specialized) Chat</h3>
-      {% assign modLimit = site.data.chats-forums.gitterChannels.size | modulo: 2 %}
+      {% assign modLimit = site.data.chats-forums.gitterChannels.size | modulo: 2 %}
       {% capture channelLimit %}
         {% if modLimit != 0 %}
           {{site.data.chats-forums.gitterChannels.size | minus: 1}}
