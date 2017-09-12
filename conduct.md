@@ -2,9 +2,10 @@
 title: The Scala Code of Conduct
 layout: inner-page-no-masthead
 includeTOC: true
-
+permalink: /conduct/
 redirect_from:
   - /documentation/conduct/
+  - /conduct.html
 ---
 
 ## Scala Code of Conduct
