@@ -1,7 +1,7 @@
 ## Add an Event
 
 To add an event to the front page, fork this repository and create a file in
-the [_posts](_posts/) subdirectory.
+this directory (`_events`).
 
 The file must be named `yyyy-mm-dd-abc.md`, where `yyyy-mm-dd` is the starting
 date of the event, and `abc` is some slug for the name of the event.
@@ -10,23 +10,10 @@ For example, the Strange Loop 2013 event, starting on September 18, is stored
 in a file named `2013-09-18-strange-loop.md`.
 
 The content of the file describes data about the event, which will be used by
-a generator and a template engine to render the event in HTML. Here is an
-example that you can copy-and-paste.
+a generator and a template engine to render the event in HTML. Copy-and-paste
+from any recent event.
 
-```
----
-category: event
-title: Strange Loop
-logo: https://si0.twimg.com/profile_images/1883816998/slsquare.jpg
-location: St Louis
-description: Hey, it's pretty good.
-start: 18 September 2013
-end: 20 September 2013
-link-out: http://thestrangeloop.com/
----
-```
-
-And a small description of each field, in case it is not already obvious:
+A small description of each field, in case it is not already obvious:
 
 *   `category: event`, this is obligatory, don't leave it out!
 *   `title`: short title of the event
