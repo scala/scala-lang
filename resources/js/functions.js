@@ -285,7 +285,7 @@ $(document).ready(function() {
   });*/
 
   var anchor = document.getElementById("#link-main-unixsys");
-  if (os == "Windows") {
+  if (os == "windows") {
     anchor = document.getElementById("#link-main-windows");
   }
   if (anchor == null) anchor = document.getElementById("#link-main-one4all");
