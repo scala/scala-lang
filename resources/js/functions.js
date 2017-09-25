@@ -197,9 +197,34 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  var Scastie = com.olegych.scastie.client.ScastieMain;
-  Scastie.embedded("#scastie-embedded", {
-    "theme": "dark"
+
+  var snippets = [
+    "dX96ma1ZSmOnFcAgr2Mogw",
+    "WdXKPq6kTvqtQe4YIjDUYA",
+    "eUqfuX9wTdaZwetCbCa1aw",
+    "0vD0equiRVafkBIeSxJ3eQ",
+    "00ORgmZsRqaPLsllyhA8SQ",
+    "dOrqJ7o7Q06dm37Zmb7vKg",
+    "qpBNSiv2Rgi1rHxbkRhz0g",
+    "P3Qm9rH5TpSqxKHUrSmHdA",
+    "NlsWGM66QoO7Ga11uKp5pQ",
+    "oDL8ZqmnReyX15266JGmog",
+    "WILnmgGfQOyUeX7nURxgPQ",
+    "rWl872iZTSekBmx8vJHD1w",
+    "Blpswq70SuCA0UsHLWdHow",
+    "lNLxCZy3TuujhHZR5PknhA",
+    "ppato6k7RMC4KbYZtyiDIg",
+    "avth1cdCQI6mcgSUXj94kA",
+    "bWcglkdZSyyzuIv4oLDMig",
+    "s0oOxZbMSNqQTFkLknhLrQ",
+    "MsldP2eISWqZYJ0earpo5A"
+  ];
+
+  var selected = snippets[Math.floor(Math.random() * snippets.length)];
+
+  scastie.Embedded("#scastie-embedded", {
+    "theme": "dark",
+    base64UUID: selected
   });
 });
 
@@ -273,3 +298,4 @@ function updatePointer() {
     pointer.css('top', (target.y));
     pointer.css('left', (target.x) * xScale);
 }
+
