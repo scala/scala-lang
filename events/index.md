@@ -5,6 +5,7 @@ permalink: /events/
 
 # Pagination
 paginate:
+  per_page: 9999
   collection: events
   permalink: /:num/
   discardPastItems: true
