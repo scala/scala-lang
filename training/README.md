@@ -1,7 +1,7 @@
 ## Add a Training
 
 To add a training session to the front page, fork this repository and create a
-file in the [_posts](_posts/) subdirectory.
+file in the top-level `_trainings/` subdirectory.
 
 The file must be named `yyyy-mm-dd-abc.md`, where `yyyy-mm-dd` is the starting
 date of the training, and `abc` is some slug for the name of the training.
