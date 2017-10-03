@@ -150,44 +150,6 @@ Nevertheless, we believe that v3 represents a significant enough improvement to
 forgive this restriction, which is admittedly an inconvenience for macro authors
 but arguably not a blocker for adoption.
 
-To give you a taste of the tentative macros v3 API, let's implement a `fieldNames`
-macro to extract fields names of a case class
-
-```scala
-import scala.macros._
-object CaseClass {
-  def fieldNames[T]: List[String] = macro {
-    val names = T.vals
-      // fields of case classes have the "case" modifier
-      .filter(_.isCase)
-      // construct string literal tree node for each field
-      .map(field => Lit.String(field.name.value))
-    q"_root_.scala.List(..$names)"
-  }
-}
-```
-We can test our macro works as expected
-
-```scala
-case class User(name: String, age: Int)
-assert(List("name", "age") == CaseClass.fieldNames[User])
-```
-
-Observe that
-- a single `import scala.macros._` is enough to get started with macros v3
-- quasiquotes are supported
-- it is no longer necessary to pass around path dependent trees or contexts,
-  avoiding the need for macro bundles
-- the def macro definition and implementation are merged into a single
-  `def name = macro { ... }` statement, both simplifying the macro expansion
-  engine and enforcing stricter conventions on how macros are declared.
-
-These changes in the APIs are only tentative, and must pass thorough [SIP]
-review before being approved for inclusion as part of the Scala Language
-Specification.
-However, I hope this example is enough to get you excited about Scala Macros v3,
-and motivate you to become a contributor.
-
 ## Next steps
 
 As the history above shows, establishing a stable macro system for Scala is a
