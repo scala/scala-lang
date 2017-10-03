@@ -1,5 +1,5 @@
 <?php
 	header('Content-type: application/javascript');
-	$geturl = "http://typesafe.com/subscription/training.json";
+	$geturl = "https://www.lightbend.com/subscription/training.json";
         include "$geturl";
 ?>
