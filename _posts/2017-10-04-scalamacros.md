@@ -2,7 +2,6 @@
 category: blog
 by: Ólafur Páll Geirsson
 title: "Roadmap towards non-experimental macros"
-date: 27-9-2017
 ---
 
 This week, the Scala Center joins the multi-year efforts of Eugene Burmako and
