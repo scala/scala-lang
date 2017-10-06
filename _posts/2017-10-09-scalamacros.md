@@ -27,15 +27,17 @@ If you want the TL;DR, see [next steps](#next-steps).
 
 ### v1: scala.reflect
 
-Scala.reflect-based macros are an integral part of the Scala 2.x ecosystem.
+Scala.reflect-based macros shipped with Scala 2.10 and have since then become
+an integral part of the Scala 2.x ecosystem.
 Well-known libraries like ScalaTest, Sbt, Spark, Circe, Slick, Shapeless,
 Spire and others use scala.reflect macros to achieve previously unreachable
 standards of expressiveness, type safety and performance.
 
 Unfortunately, scala.reflect-based macros have also gained notoriety as an
 arcane and brittle technology.
-The most common criticisms of scala.reflect is its sub-par tooling support
-and non-portable metaprogramming API based on Scala 2.x compiler internals.
+The scala.reflect API is based on Scala 2.x compiler internals, meaning that
+scala.reflect in its current form cannot be supported on other compilers such
+as Dotty or the IntelliJ Scala Plugin.
 Even five years after their introduction, scala.reflect macros still can't
 expand in IntelliJ, leading to proliferation of spurious red squiggles -
 sometimes in pretty simple code.
@@ -51,8 +53,8 @@ self-cleaning macros
 > program representations may have worked well for compiler development, but
 > they turned out to be inadequate for a public API.
 
-As a result of these known limitations, the language committee has decided to
-retire the scala.reflect-based macro system.
+As a result of these known limitations, the [language committee has decided to
+retire the scala.reflect-based macro system][SIP-16].
 Another justification for retiring the scala.reflect-based macro system was
 that a new macro system based on Scalameta was "just around the corner".
 
@@ -62,44 +64,50 @@ The [Scalameta] project was founded to become a better macro system for Scala,
 with the vision to replace scala.reflect as the de-facto metaprogramming
 toolkit for Scala.
 
-With Scalameta, we managed to support macro annotations in
+With Scalameta, we managed to support a different flavor of macros: annotation macros.
+These macros are used to implement [public type providers], which makes it possible
+to generate publicly visible classes and methods.
+Note that annotation macros have never been officially supported in Scala 2.x,
+and have always required an external compiler plugin.
+
+Scalameta annotation macros are the first macros to be supported on multiple
+compilers:
 [Scala 2.x](http://scalameta.org/paradise/),
-[IntelliJ Scala plugin](https://blog.jetbrains.com/scala/2016/11/11/intellij-idea-2016-3-rc-scala-js-scala-meta-and-more/)
+[IntelliJ Scala Plugin](https://blog.jetbrains.com/scala/2016/11/11/intellij-idea-2016-3-rc-scala-js-scala-meta-and-more/)
 and
 [Dotty](https://github.com/liufengyun/eden).
-The novelty with Scalameta macros was that they converted compiler-specific
-ASTs into the [Scalameta AST], which is a large collection "dumb" data
-containers that leak no implementation details from the compiler.
+The novelty with Scalameta macros was that they used a "converter-based" approach.
+This approach involves converting compiler-specific ASTs into the [Scalameta
+AST], which is a large collection of "dumb" data containers that leak no
+implementation details from the compiler.
 The details of this approach are explained in more detail in [SIP-29], a
 proposal to use Scalameta as the foundation for building macros in Scala.
 
-In Scalafmt, I use Scalameta macro annotations to generate readers for
-over 
-[90 different configuration options](http://scalameta.org/scalafmt/#Configuration)
+For my personal project Scalafmt, I use Scalameta annotation macros to abstract
+over boilerplate to read
+[~90 different configuration options](http://scalameta.org/scalafmt/#Configuration)
 into a single case class
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New style &quot;inline/meta&quot; macro merged into scalafmt, Dotty-ready macros are happening and they are amazing! <a href="https://twitter.com/hashtag/scala?src=hash">#scala</a> <a href="https://github.com/scalameta/scalafmt/pull/459">scalameta/scalafmt#459</a> <a href="https://t.co/ZvjdWE0Gp3">pic.twitter.com/ZvjdWE0Gp3</a></p>&mdash; Ólafur Páll Geirsson (@olafurpg) <a href="https://twitter.com/olafurpg/status/779372897198637057">September 23, 2016</a></blockquote>
 
-Many other OSS Scala libraries also use Scalameta macro annotations to
+Many other OSS Scala libraries also use Scalameta annotation macros to
 to maximize type safety, expressiveness and performance:
-- [Freestyle](http://frees.io/):  cohesive & pragmatic framework of FP centric
-  Scala libraries
+- [Freestyle](http://frees.io/):  `@free`/`@module` annotation macros to
+  support a cohesive & pragmatic framework of FP centric Scala libraries
 - [Stalagmite](https://vovapolu.github.io/scala/stalagmite/perf/2017/09/02/stalagmite-performance.html):
-  effective and customizable replacement of conventional case classes with
-  convenient optimizations.
-- [Mainecoon](http://kailuowang.com/mainecoon/): A library for transforming and
-  composing tagless final algebras
+  `@data` annotation macros to generate effective and customizable replacement
+  of conventional case classes with convenient optimizations
 - [Dilate](https://github.com/vitorsvieira/dilate) /
-  [Newtypes](https://github.com/alexknvl/newtypes): better value
-  classes/newtypes for Scala.
+  [Newtypes](https://github.com/alexknvl/newtypes): `@valueclass`/`@newtype`
+  annotation macros to generate better value classes for Scala
 - [Example.scala](https://static.javadoc.io/com.thoughtworks.example/unidoc_2.12/2.0.0/com/thoughtworks/example.html):
-  Generate unit tests from Scaladoc strings
+  `@example` annotation macro to generate unit tests from Scaladoc code listings
 
 The Scala community is indeed creative and eager to explore new metaprogramming
 facilities.
 
-Scalameta macro annotations are far from perfect, they suffer from integration
-problems with Scaladoc, Scala IDE/presentation compiler, 
-Scala REPL and other compiler plugins such as Scoverage.
+Scalameta annotation macros are far from perfect, they suffer from integration
+problems with, e.g., Scaladoc, Scala IDE/presentation compiler, Scala REPL and
+Scoverage.
 Most importantly however, we discovered several drawbacks with the converter-based
 approach while adding support for def macros with access to the semantic API.
 The issues we encountered are documented in more detail in section 3 of the
@@ -123,8 +131,8 @@ such as Scalafmt, Scalafix and Metadoc.
 ### v3: scala.macros
 
 In winter and spring 2017, Eugene Burmako at Twitter and Liu Fengyun at EPFL
-worked on a new macro system to address the limitations of scala.reflect-based
-and scala.meta-based macros.
+worked on a new macro system to address the limitations of scala.reflect-based (v1)
+and scala.meta-based (v2) macros.
 This third iteration of Scala Macros builds on top of the strengths of the
 scala-reflect API with the following distinction, it's
 
@@ -161,9 +169,9 @@ and simplicity that we seek in a stable macro system.
 Here below is a rough estimated roadmap for macros v3
 
 - in Scala 2.12, we experiment with compiler plugins
-- in Dotty, Liu Fengyun at EPFL will work on integrations
+- in Dotty, Liu Fengyun at EPFL will work on adding support in the compiler
 - in IntelliJ, Mikhail Mutcianko from the Scala Plugin team at Jetbrains will
-  work on integrations
+  work on adding support to expand macros from the IntelliJ editor
 - in Scala 2.13, we continue to experiment via compiler plugins and compiler
   feature flags in later minor releases
 - in Scala 2.14 macros v3 become no longer “experimental” and scala.reflect is
@@ -177,7 +185,7 @@ macros v3 will be an iterative processes between
 -  gathering feedback from the community on what macro features merit inclusion
    in macros v3
 
-As for the first part, we immediately begin development to support a limited
+As for the first part, we have immediately begin development to support a limited
 subset of blackbox def macros.
 
 ### Blackbox def macros
@@ -208,8 +216,6 @@ We plan to address the valuable reviews made to [SIP-29] on inline/meta in a
 new proposal, so that SIP-29 can be rejected.
 In addition, we will document how we we aim to solve hygiene using an
 innovation discovered by the collaboration of Liu Fengyun and Eugene Burmako.
-Hygiene plagues most macro tutorials and was previously considered to be out of
-scope for SIP-29
 
 ### Documentation
 
@@ -235,8 +241,6 @@ The current set of approved features in macros v3 does not reach feature parity
 with the scala.reflect-based macro system.
 Some scala.reflect macros rely on advanced capabilities beyond what
 blackbox macros support.
-Most notably, these features include (but are not limited to) whitebox def
-macros and macro annotations.
 
 By not supporting these advanced features, we put ourselves a fragile situation
 where we risk forcing Scala users to remain on old versions of the compiler.
@@ -247,7 +251,7 @@ merit inclusion in the language specification or if they can be replaced
 with alternative metaprogramming techniques.
 
 To initiate this debate, I have started two [Scala Contributors] threads:
-one on whitebox def macros and another on macro annotations.
+one on whitebox def macros and another on annotation macros.
 In my posts, I try to reflect on the pros and cons of each feature in
 an unbiased manner.
 I look forwards to hearing your thoughts.
@@ -260,7 +264,7 @@ In particular, we should try to explore
   code generation scripts or compiler plugins to achieve the same
   functionality? How would that refactoring impact your macro?
 
-I plan to include the results of these discussions in the SIP proposal for
+We plan to include the results of these discussions in the SIP proposal for
 macros v3.
 The end result, I hope, will be a simpler Scala language with yet very capable
 metaprogramming facilities.
@@ -286,7 +290,7 @@ as a community, can stand up to the challenge to complete this project to end.
 [fundep materialization]: https://docs.scala-lang.org/overviews/macros/implicits.html#fundep-materialization
 [anonymous type providers]: http://docs.scala-lang.org/overviews/macros/typeproviders.html#anonymous-type-providers
 [extractor macros]: http://docs.scala-lang.org/overviews/macros/extractors.html
-[public type provider]: http://docs.scala-lang.org/overviews/macros/typeproviders.html#public-type-providers
+[public type providers]: http://docs.scala-lang.org/overviews/macros/typeproviders.html#public-type-providers
 [Scala Macros]: https://github.com/scalamacros/scalamacros
 [scalamacros/scalamacros]: https://github.com/scalamacros/scalamacros
 [scalacenter/macros]: https://github.com/scalamacros/scalamacros
