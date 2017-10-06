@@ -58,7 +58,7 @@ pagination:
   title_suffix: " - :num"
   permalink: /:num/
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:
