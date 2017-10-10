@@ -214,7 +214,7 @@ macros, we will immediately begin preparing a SIP proposal to include macros
 v3 into the Scala Language Specification.
 We plan to address the valuable reviews made to [SIP-29] on inline/meta in a
 new proposal, so that SIP-29 can be rejected.
-In addition, we will document how we we aim to solve hygiene using an
+In addition, we will document how we aim to solve hygiene using an
 innovation discovered by the collaboration of Liu Fengyun and Eugene Burmako.
 
 ### Documentation
