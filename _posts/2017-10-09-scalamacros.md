@@ -149,7 +149,7 @@ I want to thank Twitter for allowing Eugene Burmako to share this
 implementation, that he created during work-hours, under a BSD 3 license.
 This repository has a working prototype that we can base our future work on.
 
-One paint point in macros v1 that macros v3 does not address is the separate
+One pain point in macros v1 that macros v3 does not address is the separate
 compilation restriction.
 Macro definitions must still be compiled in a separate project from where they
 are used.
