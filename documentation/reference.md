@@ -7,14 +7,14 @@ includeTOC: true
 ---
 
 ## Latest releases
-* Scala 2.12.3
-  * [Library API](http://www.scala-lang.org/api/2.12.3/)
-  * [Compiler API](http://www.scala-lang.org/api/2.12.3/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.12.3/scala-reflect/#scala.reflect.package)
+* Scala 2.12.4
+  * [Library API](http://www.scala-lang.org/api/2.12.4/)
+  * [Compiler API](http://www.scala-lang.org/api/2.12.4/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.12.4/scala-reflect/#scala.reflect.package)
   * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.12.3/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.3/scala-parser-combinators/)
-    * [Swing API](http://www.scala-lang.org/api/2.12.3/scala-swing/#scala.swing.package)
+    * [XML API](http://www.scala-lang.org/api/2.12.4/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.4/scala-parser-combinators/)
+    * [Swing API](http://www.scala-lang.org/api/2.12.4/scala-swing/#scala.swing.package)
 * Scala 2.11.11
   * [Library API](http://www.scala-lang.org/api/2.11.11/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.11/scala-compiler/)
@@ -40,6 +40,14 @@ includeTOC: true
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/scala-compiler/)
 
 ## Previous releases
+* Scala 2.12.3
+  * [Library API](http://www.scala-lang.org/api/2.12.3/)
+  * [Compiler API](http://www.scala-lang.org/api/2.12.3/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.12.3/scala-reflect/#scala.reflect.package)
+  * Scala Modules
+    * [XML API](http://www.scala-lang.org/api/2.12.3/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.12.3/scala-parser-combinators/)
+    * [Swing API](http://www.scala-lang.org/api/2.12.3/scala-swing/#scala.swing.package)
 * Scala 2.12.2
   * [Library API](http://www.scala-lang.org/api/2.12.2/)
   * [Compiler API](http://www.scala-lang.org/api/2.12.2/scala-compiler/)
