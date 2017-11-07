@@ -61,6 +61,7 @@ Other, more specialized rooms include:
 * **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
 * **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other
 * **[typelevel/cats](https://gitter.im/typelevel/cats)**: for discussion about the Cats library of abstractions for functional programming and FP in general.
+* **[scala-js/scala-js](https://gitter.im/scala-js/scala-js)**: for discussion about the Scala to JavaScript compiler. 
 
 These rooms are covered by the [Scala Code of Conduct](../conduct.html).
 
