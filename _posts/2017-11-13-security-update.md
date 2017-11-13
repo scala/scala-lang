@@ -32,3 +32,6 @@ class files to any location on the filesystem that the user has access to.
   - Upgrade to Scala 2.10.7 2.11.12, 2.12.4 or higher which restricts the sensitive file to be
     readable only by the owner. These releases also change the location of the sensitive
     file: it is written in the directory `$HOME/.scalac`.
+    
+# Feedback
+Please post any comments on [discourse](https://users.scala-lang.org/t/security-update-2-12-4-2-11-12-2-10-7-cve-2017-15288/1922). For details on the fix, the relevant PRs are: [#6108 (2.11.12)](https://github.com/scala/scala/pull/6108), [#6120 (2.12.4)](https://github.com/scala/scala/pull/6120), [#6128 (2.10.7)](https://github.com/scala/scala/pull/6128).
