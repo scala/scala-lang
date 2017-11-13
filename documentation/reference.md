@@ -15,17 +15,17 @@ includeTOC: true
     * [XML API](http://www.scala-lang.org/api/2.12.4/scala-xml/#scala.xml.package)
     * [Parser Combinators API](http://www.scala-lang.org/api/2.12.4/scala-parser-combinators/)
     * [Swing API](http://www.scala-lang.org/api/2.12.4/scala-swing/#scala.swing.package)
-* Scala 2.11.11
-  * [Library API](http://www.scala-lang.org/api/2.11.11/)
-  * [Compiler API](http://www.scala-lang.org/api/2.11.11/scala-compiler/)
-  * [Reflection API](http://www.scala-lang.org/api/2.11.11/scala-reflect/#scala.reflect.package)
+* Scala 2.11.12
+  * [Library API](http://www.scala-lang.org/api/2.11.12/)
+  * [Compiler API](http://www.scala-lang.org/api/2.11.12/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.11.12/scala-reflect/#scala.reflect.package)
   * Scala Modules
-    * [XML API](http://www.scala-lang.org/api/2.11.11/scala-xml/#scala.xml.package)
-    * [Parser Combinators API](http://www.scala-lang.org/api/2.11.11/scala-parser-combinators/)
-    * [Actors API](http://www.scala-lang.org/api/2.11.11/scala-actors/#scala.actors.package) (deprecated)
-    * [Swing API](http://www.scala-lang.org/api/2.11.11/scala-swing/#scala.swing.package)
-    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.11/scala-continuations-library/#scala.util.continuations.package)
-* [Scala 2.10.6](http://www.scala-lang.org/api/2.10.6/)
+    * [XML API](http://www.scala-lang.org/api/2.11.12/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.11.12/scala-parser-combinators/)
+    * [Actors API](http://www.scala-lang.org/api/2.11.12/scala-actors/#scala.actors.package) (deprecated)
+    * [Swing API](http://www.scala-lang.org/api/2.11.12/scala-swing/#scala.swing.package)
+    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.12/scala-continuations-library/#scala.util.continuations.package)
+* [Scala 2.10.7](http://www.scala-lang.org/api/2.10.7/)
 
 ## Nightly builds
 
@@ -64,6 +64,16 @@ includeTOC: true
     * [XML API](http://www.scala-lang.org/api/2.12.2/scala-xml/#scala.xml.package)
     * [Parser Combinators API](http://www.scala-lang.org/api/2.12.2/scala-parser-combinators/)
     * [Swing API](http://www.scala-lang.org/api/2.12.2/scala-swing/#scala.swing.package)
+* Scala 2.11.11
+  * [Library API](http://www.scala-lang.org/api/2.11.11/)
+  * [Compiler API](http://www.scala-lang.org/api/2.11.11/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.11.11/scala-reflect/#scala.reflect.package)
+  * Scala Modules
+    * [XML API](http://www.scala-lang.org/api/2.11.11/scala-xml/#scala.xml.package)
+    * [Parser Combinators API](http://www.scala-lang.org/api/2.11.11/scala-parser-combinators/)
+    * [Actors API](http://www.scala-lang.org/api/2.11.11/scala-actors/#scala.actors.package) (deprecated)
+    * [Swing API](http://www.scala-lang.org/api/2.11.11/scala-swing/#scala.swing.package)
+    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.11/scala-continuations-library/#scala.util.continuations.package)    
 * Scala 2.11.8
   * [Standard Library API](http://www.scala-lang.org/api/2.11.8/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.8/scala-compiler/)
@@ -144,6 +154,7 @@ includeTOC: true
     * [Actors API](http://www.scala-lang.org/api/2.11.0/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.0/scala-swing/#scala.swing.package)
     * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.0/scala-continuations-library/#scala.util.continuations.package)
+* [Scala 2.10.6](http://www.scala-lang.org/api/2.10.6/)
 * [Scala 2.10.5](http://www.scala-lang.org/api/2.10.5/)
 * [Scala 2.10.4](http://www.scala-lang.org/api/2.10.4/)
 * [Scala 2.10.3](http://www.scala-lang.org/api/2.10.3/)
