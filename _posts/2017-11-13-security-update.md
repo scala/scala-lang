@@ -1,18 +1,18 @@
 ---
 category: announcement
-permalink: /news/security-update-nov17
+permalink: /news/security-update-nov17.html
 title: "Security update: 2.12.4, 2.11.12, 2.10.7 (CVE-2017-15288)"
 ---
 
 A privilege escalation vulnerability (CVE-2017-15288) has been identified in the Scala compilation daemon.
 
+We recommend upgrading to the latest versions of Scala ([Scala 2.12.4](https://github.com/scala/scala/releases/tag/v2.12.4), [Scala 2.11.12](https://github.com/scala/scala/releases/tag/v2.11.12) or [Scala 2.10.7](https://github.com/scala/scala/releases/tag/v2.10.7)).
+
+<!-- break -->
+
 The compile daemon is started explicitly by the `fsc` command, or implicitly by executing
 a Scala source file as a script (e.g `scala MyScript.scala`). The Scala REPL, started by `scala` is not affected as it does not use the compilation daemon, nor is running a pre-compiled class using the `scala` command.
 
-We recommend upgrading to the latest versions of Scala:
-  - [Scala 2.12.4](https://github.com/scala/scala/releases/tag/v2.12.4);
-  - [Scala 2.11.12](https://github.com/scala/scala/releases/tag/v2.11.12);
-  - [Scala 2.10.7](https://github.com/scala/scala/releases/tag/v2.10.7).
 
 # Impact
 
