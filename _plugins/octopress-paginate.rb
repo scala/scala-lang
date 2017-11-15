@@ -180,6 +180,11 @@ module Octopress
         collection = collection.reject{|p| (p.date < (Date.today.next_day(1)).to_time)}
       end
 
+      # Custom mod: retrieve only "past" (with date before our 'today') elements if "pastItems" is set to true:
+      if page.data['paginate']['pastItems']
+        collection = collection.select{|p| (p.date < Date.today.to_time)}
+      end
+      
       collection
     end
 

@@ -1,7 +1,7 @@
 ---
 category: event
 title: apply(Scala)
-logo: ""
+logo: /resources/img/placeholder.png
 location: Amsterdam
 description: "Scala experience from the trenches"
 start: 8 October 2015

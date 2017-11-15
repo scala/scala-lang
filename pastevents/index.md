@@ -1,14 +1,15 @@
 ---
-layout: events
-title: Upcoming events
-permalink: /events/
+layout: pastevents
+title: Past events
+permalink: /pastevents/
 
 # Pagination
 paginate:
-  per_page: 9999
   collection: events
+  per_page: 9999
   permalink: /:num/
-  discardPastItems: true
+  pastItems: true
+  reversed: true
   title_suffix: ""
 ---
 
@@ -20,4 +21,4 @@ To gain access to the spreadsheet, and share your plans, please contact <a href=
 
 <br>
 <hr>
-Past events can be found <a href="/pastevents/">here</a>
+Go back to the <a href="/events/">events</a> page.
