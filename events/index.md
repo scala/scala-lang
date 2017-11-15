@@ -18,5 +18,6 @@ If you are considering organizing a Scala-related conference, we maintain a priv
 
 To gain access to the spreadsheet, and share your plans, please contact <a href="https://twitter.com/propensive/">Jon Pretty</a>.
 
+<br>
 <hr>
 Past events can be found <a href="/pastevents/">here</a>

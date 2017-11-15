@@ -6,7 +6,7 @@ permalink: /pastevents/
 # Pagination
 paginate:
   collection: events
-  per_page: 8
+  per_page: 9999
   permalink: /:num/
   pastItems: true
   reversed: true
@@ -18,3 +18,7 @@ paginate:
 If you are considering organizing a Scala-related conference, we maintain a private spreadsheet of announced and pre-announcement conferences to help organizers co-ordinate their plans, and avoid choosing conflicting dates for their events.
 
 To gain access to the spreadsheet, and share your plans, please contact <a href="https://twitter.com/propensive/">Jon Pretty</a>.
+
+<br>
+<hr>
+Go back to the <a href="/events/">events</a> page.
