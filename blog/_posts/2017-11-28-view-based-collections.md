@@ -101,8 +101,8 @@ object View {
 }
 ~~~
 
-As you can see, unless we actually iterate on the view we don’t evaluate neither the elements
-of the `underlying` collection nor the mapped elements.
+As you can see, unless we actually iterate on the view we don’t evaluate the elements
+of the `underlying` collection or the mapped elements.
 
 Second, we build the resulting collection from the view by calling `fromIterable`. This operation
 is abstract in `IterableOps` and is implemented by leaf classes of the hierarchy (e.g.
