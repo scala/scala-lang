@@ -5,7 +5,7 @@ by: Jorge Vicente Cantero and Martin Duhem
 title: "Meet bloop, a fast tool to compile and test your project"
 ---
 
-Martin Duhem and I are happy to announce `bloop`, a tool that Scala developers
+Martin Duhem and I are happy to announce [Bloop](https://github.com/scalacenter/bloop), a tool that Scala developers
 can use to compile and test their projects faster without being tied to their
 stock build tool.
 
@@ -18,7 +18,7 @@ If the Scala Center had 1 engineer free for 1 month what is the most meaningful 
 
 ## What is bloop?
 
-Bloop is a command-line tool for fast edit/compile/test workflows. Its primary
+[Bloop](https://github.com/scalacenter/bloop) is a command-line tool for fast edit/compile/test workflows. Its primary
 goal is to give you the fastest possible experience specifically in the
 edit/compile/test loop. Bloop is not meant to replace your current build
 system. The name stands for "build loop".
