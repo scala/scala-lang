@@ -116,11 +116,9 @@ compiler every time users quit (`Ctrl-C`) and restart, but also when they do `re
 executions of `compile`. By this rule, the more users modify their sbt build or
 have bad habits, the less productive they are.
 
-Current sbt users can indeed avoid quitting and prefer suspending (`Ctrl-Z`),
-but they will always be punished for modifying their builds. In our experience,
-asking users to change their habits is hard, so we have preferred to add
-a built-in nailgun integration in `bloop` that addresses this problem at its
-root rather than changing people's habits, which is hard and time consuming.
+In an effort to address the problem at its root, we have preferred to add
+a built-in nailgun integration to bloop that always keeps hot compilers in the
+background.
 
 ### How does it work?
 
@@ -129,8 +127,12 @@ defaults to `.bloop-config`. This directory contains a configuration file per ev
 every configuration file contains basic information about the project: name, base directory,
 classpath, source directories, classes directory, Scala and Java options and a few more.
 
-`bloop` comes with an sbt plugin that allows you to generate these configuration files with the
-execution of a command. When the command is done, you can run your build with `bloop`.
+`bloop` comes with an sbt plugin that allows you to generate these
+configuration files with the execution of a command. When the command is done,
+you can run your build with `bloop` and close the sbt instance. You will only
+need to use sbt when you have changed the architecture of your build (to
+generate the configuration files again) or for tasks unrelated to compilation
+and test execution.
 
 This configuration file is a properties file that we plan on migrating from. In the next weeks, we'd
 like to come up with the design of a configuration file that we can reuse across different tools in
