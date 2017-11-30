@@ -88,7 +88,7 @@ with `sbt`. It supports all the test frameworks sbt supports (`JUnit`, `Scalates
 there's a lot of work left before we support all different platforms and needs.
 In our next release, we want to focus on:
 
-- Stabilize the internals of the project.
+- Stabilizing the internals of the project.
 - Supporting `console`, [a faster `testQuick`](https://github.com/scalacenter/bloop/issues/61), and
   [built-in file watching](https://github.com/scalacenter/bloop/issues/7).
 - Making more performance improvements to our integration, to be even faster.
