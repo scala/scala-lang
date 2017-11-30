@@ -9,10 +9,18 @@ Martin Duhem and I are happy to announce `bloop`, a tool that Scala developers
 can use to compile and test their projects faster without being tied to their
 stock build tool.
 
+We started this project after the feedback we got from this tweet, in which some of you encouraged
+us to work on compiler/build performance:
+
+<blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">
+If the Scala Center had 1 engineer free for 1 month what is the most meaningful thing we could do to help your day-to-day Scala development?
+</p>&mdash; Scala (@scala_lang) <a href="https://twitter.com/scala_lang/status/928242963091808256">8th November 2017</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## What is bloop?
 
-Bloop is a command-line tool for fast edit/compile/test workflows. Its primary goal is to compile
-and test your project as fast as possible, offering a snappy developer experience.
+Bloop is a command-line tool for fast edit/compile/test workflows. Its primary
+goal is to compile and test your project faster than your stock build tool,
+offering a snappy developer experience.
 
 ## Why `bloop`?
 
@@ -33,11 +41,16 @@ predecessor](https://www.scala-lang.org/blog/2017/11/03/zinc-blog-1.0.html). As
 a result, users of these tools are not benefiting from the latest state of the
 art.
 
-`bloop` aims to fix both problems. It only supports the most common build tasks
-(`compile`, `test` and `console`), and allows other build tools to integrate
-with it. You can think of `bloop` as a powered CLI for Zinc, rather than as
-a brand new build tool -- `bloop` does not aim to replace your stock build
-tool, rather complement it.
+`bloop` aims to fix both problems:
+
+1. It's specialized on only providing as fast as possible edit/compile/test
+   workflows, rather than covering all of the needs of general build tool like
+   sbt.
+2. It allows other build tools to integrate with it.
+
+You can think of `bloop` as a powered CLI for Zinc, rather than as a brand new
+build tool -- `bloop` does not aim to replace your stock build tool, rather
+complement it.
 
 In practice, this means that when users are only going to compile and test their project, they can
 use `bloop` instead of a full-blown resource-hungry build tool; and that generic build tools can
@@ -46,7 +59,7 @@ integrations, which are hard to maintain.
 
 ## Numbers on compilation performance
 
-We created bloop because we observed that Scala compile times slow down when
+We created `bloop` because we observed that Scala compile times slow down when
 within sbt when compared to isolated benchmarks. This observation was at the
 beginning just an intuition, but when we sat down to measure a prototype we did
 see a significant difference.
@@ -55,7 +68,9 @@ see a significant difference.
 a point where people say "compiler performance" and what they really mean is "sbt performance".
 </p>&mdash; Jorge (@jvican) <a href="https://twitter.com/jvican/status/928601470232129536">9th November 2017</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-We'd like to share some of our numbers with you.
+Next, we introduce you some numbers that compare compilation times between
+`sbt` and `bloop` in different medium-to-large open-source projects. In all of
+them, `bloop` is significantly faster than sbt.
 
 | Project name      | sbt (version) | bloop | speedup |
 | ----------------- | ------------- | ----- | ------- |
@@ -69,6 +84,12 @@ iteration (of all the projects and subprojects of the build without counting the
 gigabytes of heap for both sbt and bloop (the shell, not the nailgun
 integration). When benchmarking sbt, we have made sure that dependency
 resolution and formatting are not measured.
+
+To put those numbers into context, the speedup observed in `apache/spark` is
+equal to the compilation speedup that Jason Zaugg introduced in the 2.12.x
+series. That means that when Spark developers migrate to 2.12 and use `bloop`,
+they will experience a compilation speedup close to 80% (40% from upgrading to Scala 2.12.x, 40%
+from using `bloop`).
 
 There are two important observations to make from these numbers:
 
@@ -128,19 +149,27 @@ every configuration file contains basic information about the project: name, bas
 classpath, source directories, classes directory, Scala and Java options and a few more.
 
 `bloop` comes with an sbt plugin that allows you to generate these
-configuration files with the execution of a command. When the command is done,
-you can run your build with `bloop` and close the sbt instance. You will only
-need to use sbt when you have changed the architecture of your build (to
-generate the configuration files again) or for tasks unrelated to compilation
-and test execution.
+configuration files from your existing, functional sbt build. When the generation is done,
+you will have a `.bloop-config` in your base directory. With this configuration,
+you can close your sbt instance and run your build with `bloop`.
 
-This configuration file is a properties file that we plan on migrating from. In the next weeks, we'd
-like to come up with the design of a configuration file that we can reuse across different tools in
-the Scala ecosystem. Given how common this kind of information is required, we believe that settling
-on an agreed upon configuration format is the way to go.
+You will need to reach out to `sbt` again in the following scenarios:
+
+- You have changed your build (a library dependency, a project name, a scalac option). In which
+  case, you need to rerun the generation of configuration files.
+- You need to execute build tasks unrelated to compilation and test execution.
+
+This configuration file is currently a Java properties file. In the next weeks, we'd like to migrate
+from it to a more established configuration format. As this information is often required by other
+developer tools (for example, language servers, presentation compilers, linters), we would like our
+the authors of these tools to agree on a configuration file that all these can understand.
 
 In the future, we want to explore making `bloop` a server you can ask compilation and test-related
-information from different language servers, presentation compilers and linters.
+information from different language servers, presentation compilers and linters. We're also
+interested in rethinking our configuration files and agree with the tooling community on a
+configuration schema that all the tools in the ecosystem (language servers, build tools,
+presentation compilers and linters) can use. We believe these initiatives can make tooling much
+easier to install and upgrade in the future.
 
 ## Conclusion
 
