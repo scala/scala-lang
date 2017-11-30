@@ -149,9 +149,10 @@ every configuration file contains basic information about the project: name, bas
 classpath, source directories, classes directory, Scala and Java options and a few more.
 
 `bloop` comes with an sbt plugin that allows you to generate these
-configuration files from your existing, functional sbt build. When the generation is done,
-you will have a `.bloop-config` in your base directory. With this configuration,
-you can close your sbt instance and run your build with `bloop`.
+configuration files from your existing, functional sbt build. When the
+generation is done, you will have a `.bloop-config` in the base directory of
+your sbt project. With this configuration, you can close your sbt instance and
+run your build with `bloop`.
 
 You will need to reach out to `sbt` again in the following scenarios:
 
