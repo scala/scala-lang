@@ -90,7 +90,7 @@ resolution and formatting are not measured.
 To put those numbers into context, the speedup observed in `apache/spark` is
 equal to the compilation speedup that Jason Zaugg introduced in the 2.12.x
 series. That means that when Spark developers migrate to 2.12 and use `bloop`,
-they will experience a compilation speedup close to 80% (40% from upgrading to Scala 2.12.x, 40%
+they will experience a compilation speedup close to 60% (40% from upgrading to Scala 2.12.x, 40%
 from using `bloop`).
 
 There are two important observations to make from these numbers:
