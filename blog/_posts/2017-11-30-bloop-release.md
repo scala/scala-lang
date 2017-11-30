@@ -66,7 +66,8 @@ We'd like to share some of our numbers with you.
 
 These numbers have been obtained in an isolated machine, measuring at the fifth hot clean-compile
 iteration (of all the projects and subprojects of the build without counting the tests) and with 2
-gigabytes of heap for both sbt and bloop. When benchmarking sbt, we have made sure that dependency
+gigabytes of heap for both sbt and bloop (the shell, not the nailgun
+integration). When benchmarking sbt, we have made sure that dependency
 resolution and formatting are not measured.
 
 There are two important observations to make from these numbers:
