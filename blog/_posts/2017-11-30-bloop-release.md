@@ -61,7 +61,7 @@ integrations, which are hard to maintain.
 ## Numbers on compilation performance
 
 We created `bloop` because we observed that Scala compile times slow down when
-within sbt when compared to isolated benchmarks. This observation was at the
+within sbt compared to isolated benchmarks. This observation was at the
 beginning just an intuition, but when we sat down to measure a prototype we did
 see a significant difference.
 
@@ -130,7 +130,7 @@ An important feature of `bloop` is its [nailgun][] integration. Nailgun is a cli
 server for running Java programs from the command line without incurring the JVM startup overhead.
 With it, `bloop` ensures that you always have a hot compiler in the background to compile your
 project. This brings significant improvements indeed: [a hot compiler can compile up to 18 times
-faster than a hot
+faster than a cold
 compiler](https://scala-ci.typesafe.com/grafana/dashboard/db/scala-benchmark?var-branch=2.12.x&var-source=vector&var-bench=HotScalacBenchmark.compile&var-host=scalabench@scalabench@).
 
 Keeping a hot compiler in the background is crucial if one takes compilation speed and productivity
@@ -164,7 +164,7 @@ You will need to reach out to `sbt` again in the following scenarios:
 
 This configuration file is currently a Java properties file. In the next weeks, we'd like to migrate
 from it to a more established configuration format. As this information is often required by other
-developer tools (for example, language servers, presentation compilers, linters), we would like our
+developer tools (for example, language servers, presentation compilers, linters), we would like
 the authors of these tools to agree on a configuration file that all these can understand.
 
 In the future, we want to explore making `bloop` a server you can ask compilation and test-related
