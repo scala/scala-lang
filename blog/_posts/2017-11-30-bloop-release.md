@@ -113,8 +113,8 @@ compiler](https://scala-ci.typesafe.com/grafana/dashboard/db/scala-benchmark?var
 Keeping a hot compiler in the background is crucial if one takes compilation speed and productivity
 seriously. This is often difficult and takes space of mind. For example, `sbt` throws away a hot
 compiler every time users quit (`Ctrl-C`) and restart, but also when they do `reload` after several
-executions of `compile`. By this rule, the more users modify their sbt build, the less productive
-they are.
+executions of `compile`. By this rule, the more users modify their sbt build or
+have bad habits, the less productive they are.
 
 Current sbt users can indeed avoid quitting and prefer suspending (`Ctrl-Z`),
 but they will always be punished for modifying their builds. In our experience,
