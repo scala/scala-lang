@@ -27,11 +27,11 @@ customization, readability or maintenance.
 
 On the other hand, there is also the problem that build tools move slowly and
 have a hard time upgrading to new changes upstream (for example, in compiler
-APIs). For example, `Gradle`, `Maven`, `Leiningen`, and `CBT` have not yet been
+APIs). As a result, `Gradle`, `Maven`, `Leiningen`, and `CBT` have not yet been
 migrated to Zinc 1.0, [which offers faster incremental compilations than its
-predecessor](https://www.scala-lang.org/blog/2017/11/03/zinc-blog-1.0.html).
-As a result, users of these tools are not benefiting from the latest state of
-the art.
+predecessor](https://www.scala-lang.org/blog/2017/11/03/zinc-blog-1.0.html). As
+a result, users of these tools are not benefiting from the latest state of the
+art.
 
 `bloop` aims to fix both problems. It only supports the most common build tasks
 (`compile`, `test` and `console`), and allows other build tools to integrate
