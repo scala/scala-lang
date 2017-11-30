@@ -20,7 +20,7 @@ If the Scala Center had 1 engineer free for 1 month what is the most meaningful 
 
 Bloop is a command-line tool for fast edit/compile/test workflows. Its primary
 goal is to compile and test your project faster than your stock build tool,
-offering a snappy developer experience.
+offering a snappy developer experience. The name stands for "build loop".
 
 ## Why `bloop`?
 
