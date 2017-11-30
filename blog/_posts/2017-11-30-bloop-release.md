@@ -19,8 +19,9 @@ If the Scala Center had 1 engineer free for 1 month what is the most meaningful 
 ## What is bloop?
 
 Bloop is a command-line tool for fast edit/compile/test workflows. Its primary
-goal is to compile and test your project faster than your stock build tool,
-offering a snappy developer experience. The name stands for "build loop".
+goal is to give you the fastest possible experience specifically in the
+edit/compile/test loop. Bloop is not meant to replace your current build
+system. The name stands for "build loop".
 
 ## Why `bloop`?
 
@@ -70,7 +71,8 @@ a point where people say "compiler performance" and what they really mean is "sb
 
 Next, we introduce you some numbers that compare compilation times between
 `sbt` and `bloop` in different medium-to-large open-source projects. In all of
-them, `bloop` is significantly faster than sbt.
+them, `bloop` is significantly faster than sbt at compiling and testing your
+project.
 
 | Project name      | sbt (version) | bloop | speedup |
 | ----------------- | ------------- | ----- | ------- |
@@ -79,7 +81,7 @@ them, `bloop` is significantly faster than sbt.
 | apache/spark      | 159s (0.13.16)| 107s  | 1.4     |
 | scala/scala       | 65s (0.13.16) | 50s   | 1.14    |
 
-These numbers have been obtained in an isolated machine, measuring at the fifth hot clean-compile
+These numbers have been obtained on an isolated machine, measuring at the fifth hot clean-compile
 iteration (of all the projects and subprojects of the build without counting the tests) and with 2
 gigabytes of heap for both sbt and bloop (the shell, not the nailgun
 integration). When benchmarking sbt, we have made sure that dependency
