@@ -38,7 +38,11 @@ with me, [Jon Pretty](https://twitter.com/propensive/), if you would like to
 suggest a new channel.
 
 We do not anticipate English losing its primacy as the common language of the
-Scala community any time soon, but we see it as an important entry-point for
+Scala community any time soon, but we see this as an important entry-point for
 non-English speakers to start their journeys with Scala, without the
 distraction of having to learn a new natural language at the same time.
+Lowering the barriers to entry—whether they be linguistic, social or
+cultural—is important, and we want to do everything we can to make it easier
+for people to feel like they are "a part of the group", and encourage more
+participation!
 
