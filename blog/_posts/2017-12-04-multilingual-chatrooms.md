@@ -30,9 +30,10 @@ non-English languages:
 - [scala/pl](https://gitter.im/scala/pl) — Polski
 
 So far, only this handful of channels exists, and we encourage any speakers of
-these languages to join one of these groups. But should demand exist for other
-language groups with a significant number of speakers, we would be happy to
-facilitate these by creating new channels as necessary. Please get in touch
+these languages to join one of these groups, but after just a few hours online,
+some of these channels are attracting lots of activity. Should demand exist for
+other language groups with a significant number of speakers, we would be happy
+to facilitate these by creating new channels as necessary. Please get in touch
 with me, [Jon Pretty](https://twitter.com/propensive/), if you would like to
 suggest a new channel.
 
