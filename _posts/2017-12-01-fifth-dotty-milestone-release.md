@@ -104,7 +104,7 @@ are currently two backends using the TASTY frontend:
    dotc -from-tasty -classpath <classpath> <classname>
    ```
 
-   This is the first step toward linking and whole word optimisations, recompiling code to a
+   This is the first step toward linking and whole world optimisations, recompiling code to a
    different backends...
 
 ### Generic java signatures [#3234](https://github.com/lampepfl/dotty/pull/3234)
