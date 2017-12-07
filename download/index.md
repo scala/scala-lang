@@ -6,8 +6,8 @@ release_date: "October 17, 2017"
 show_resources: "true"
 other_releases: [
   ["development_version", "Current 2.13.x milestone", 2.13.0-M2, "August 8, 2017"],
-  ["maintenance_version", "Last 2.11.x maintenance release", 2.11.11, "April 18, 2017"],
-  ["maintenance_version", "Last 2.10.x maintenance release", 2.10.6, "September 18, 2015"]
+  ["maintenance_version", "Last 2.11.x maintenance release", 2.11.12, "November 9, 2017"],
+  ["maintenance_version", "Last 2.10.x maintenance release", 2.10.7, "November 9, 2017"]
 ]
 requirements: "Scala 2.12 requires version 8 of the <a href='http://www.java.com/'>Java platform</a>. Older Scala versions are compatible with Java 6 and up. Java 9 is not yet supported."
 resources: [
