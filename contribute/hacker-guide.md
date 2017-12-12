@@ -179,7 +179,7 @@ Listening for transport dt_socket at address: 8002
 // skip docs for local publishing
 publishArtifact in (Compile, packageDoc) in ThisBuild := false
 // set version based on current sha, so that you can easily consume this build from another sbt project
-baseVersionSuffix := s"local-${Process("tools/get-scala-commit-sha").lines.head.substring(0, 7)}"
+baseVersionSuffix := s"local-${VersionUtil.gitProperties.value.sha}"
 // show more logging during a partest run
 testOptions in IntegrationTest in LocalProject("test") ++= Seq(Tests.Argument("--show-log"), Tests.Argument("--show-diff"))
 // if incremental compilation is compiling too much (should be fine under sbt 0.13.13)
