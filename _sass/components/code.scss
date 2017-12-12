@@ -20,6 +20,9 @@
         font-weight: $font-bold;
         min-height: 26px;
         @include border-radius($border-radius-base $border-radius-base 0 0);
+    }
 
+    .scastie.embedded {
+      padding-top: 0;
     }
 }

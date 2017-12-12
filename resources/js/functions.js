@@ -153,7 +153,12 @@ $('#scaladex-search').autocomplete({
 // TOC:
 $(document).ready(function() {
     if ($("#sidebar-toc").length) {
-        $('#sidebar-toc').toc({exclude: 'h1, h5, h6', context: '.inner-box', autoId: true, numerate: false});
+        $('#sidebar-toc').toc({
+          exclude: 'h1, h5, h6, .scastie',
+          context: '.inner-box',
+          autoId: true,
+          numerate: false
+        });
         toggleStickyToc();
     }
 })
@@ -193,55 +198,6 @@ $(document).ready(function() {
         $("#result-container").hide();
       }
     });
-  }
-});
-
-// Scala in the browser
-$(document).ready(function() {
-  if ($("#scastie-textarea").length) {
-    var editor =
-      CodeMirror.fromTextArea(
-        document.getElementById("scastie-textarea"),
-        {
-          // lineNumbers: false,
-          matchBrackets: true,
-          theme: "monokai",
-          mode: "text/x-scala",
-          autoRefresh: true,
-          fixedGutter: false,
-          extraKeys: {
-            'Ctrl-Enter': 'run',
-            'Cmd-Enter': 'run'
-          }
-        }
-      );
-
-    editor.setSize("100%", ($("#scastie-code-container").height()));
-
-    var codeSnippet = "List(\"Hello\", \"World\").mkString(\"\", \", \", \"!\")";
-    editor.getDoc().setValue(codeSnippet);
-    editor.refresh();
-
-    function run(){
-      console.log("run");
-      var scastieBaseUrl = "https://scastie.scala-lang.org";
-
-      $.ajax(
-        {
-          type: "POST",
-          url: scastieBaseUrl + '/scala-lang',
-          data: editor.getDoc().getValue(),
-          success: function(url) {
-            window.open(scastieBaseUrl + "/" + url);
-          },
-          // otherwise it's considered a popup
-          async: false
-        }
-      )
-    }
-
-    $('.btn-run').click(run);
-    CodeMirror.commands.run = run;
   }
 });
 
@@ -315,3 +271,4 @@ function updatePointer() {
     pointer.css('top', (target.y));
     pointer.css('left', (target.x) * xScale);
 }
+
