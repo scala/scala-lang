@@ -14,16 +14,37 @@
 	<div class="call-to-action action-medium">
 		<a href="{{site.data.common.scastieUrl}}" class="button" target="_blank">Learn More</a>
 	</div>
+
 	<div class="wrap">
 		<div class="code-element">
 			<div class="bar-code"></div>
 			<div class="scastie-code-container">
-				<textarea id="scastie-textarea"></textarea>
+        <script src="https://scastie.scala-lang.org/VKLN1V2mTUWaQnJMHYsnMQ.js?theme=dark"></script>
 			</div>
-			<div class="btn-run">
-				<i class="fa fa-play"></i>
-				<span>Run Scala code interactively</span>
-			</div>
-		</div>
 	</div>
 </section>
+
+
+{% comment %}
+// NthPortal: https://contributors.scala-lang.org/t/contest-scala-lang-org-frontpage-code-snippet/1141/10
+
+case class Location(latitude: Double, longitude: Double)
+
+def hemisphere(location: Location): String = {
+  location match {
+    case Location(lat, _) if -0.1 < lat && lat < 0.1  => "You are at the equator!"
+    case Location(lat, _) if lat > 0 => "You are in the northern hemisphere"
+    case _ => "You are in the southern hemisphere"
+  }
+}
+
+def parseLocation(coordinates: String): Location = {
+  coordinates split ',' map { _.toDouble } match {
+    case Array(lat, long) => Location(latitude = lat, longitude = long)
+    case _ => throw new IllegalArgumentException(s"Invalid coordinates: $coordinates")
+  }
+}
+
+hemisphere(parseLocation("46.5190557,6.5667576"))
+
+{% endcomment %}
