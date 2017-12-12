@@ -9,7 +9,10 @@ To see a detailed list of changes for each version of Scala please refer to the 
 
 <ul>
   {% for release in page.other_releases %}
-  <li><a href="/download/{{ release[2] }}.html">{{ release[1] }} - Scala {{ release[2] }}</a></li>
+  <li>{{ release[1] }}:
+    <ul>
+      <li><a href="/download/{{ release[2] }}.html">Scala {{ release[2] }}</a> - Released on {{ release[3] }}</li>
+    </ul></li>
   {% endfor %}
   <li><a href="/files/archive/nightly/">Nightly builds</a></li>
   <li><a href="/download/changelog.html">Changelog</a></li>
