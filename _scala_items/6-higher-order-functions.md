@@ -1,37 +1,38 @@
 ---
 shortTitle: "Higher-order functions"
 shortDescription: "Functions are first-class objects. Compose them with guaranteed type safety. Use them anywhere, pass them to anything."
-scastieUrl: 
 ---
 <div class="wrap">
-              <div class="scala-text scala-text-large">
-                <h3>Go Functional with Higher-Order Functions</h3>
-                <p>In Scala, functions are values, and can be defined as anonymous functions
-  with a concise syntax.</p>
-              </div>
-              <div class="scala-code">
-                <div class="code-element">
-                  <div class="bar-code"><span>Scala</span></div>
-                  <pre><code>val people: Array[Person]
+  <div class="scala-code">
+    <div class="code-element">
+      <div class="bar-code"><span>Scala</span></div>
+      <script src="https://scastie.scala-lang.org/h9lbdn87Qc20m04uKlcAug.js?theme=dark"></script>
+    </div>
+  </div>
+  <div class="scala-text scala-text-large">
+    <h3>Go Functional with Higher-Order Functions</h3>
+    <p>In Scala, functions are values and can be defined as anonymous functions with a concise syntax.</p>
+  </div>
+</div>
 
-// Partition `people` into two arrays `minors` and `adults`.
-// Use the higher-order function `(_.age &lt; 18)` as a predicate for partitioning.
-val (minors, adults) = people partition (_.age &lt; 18)</code></pre>
-                </div>
-              </div>
-              <div class="scala-code">
-                <div class="code-element">
-                  <div class="bar-code"><span>Java</span></div>
-                  <pre><code>List&lt;Person&gt; people;
+{% comment %}
+case class Person(
+  name: String,
+  age: Int
+)
 
-List&lt;Person&gt; minors = new ArrayList&lt;Person&gt;(people.size());
-List&lt;Person&gt; adults = new ArrayList&lt;Person&gt;(people.size());
-for (Person person : people) {
-    if (person.getAge() &lt; 18)
-        minors.add(person);
-    else
-        adults.add(person);
-}</code></pre>
-                </div>
-              </div>
-              </div>
+val people = 
+  List(
+    Person("Alice Foo", 11),
+    Person("Bob Foo", 12),
+    Person("Ted Bar", 35),
+    Person("Eve Baz", 16),
+    Person("Olivia Qux", 86)
+  )
+
+val (minors, adults) = people.partition(_.age < 18)
+
+println(minors)
+
+println(adults)
+{% endcomment %}
