@@ -75,7 +75,7 @@ to see if sbt can run your project on the command line.
 when you save changes to a file in the project.
 * Click **OK**.
 * On the **Run** menu. Click **Run 'Run the program'**.
-* In the code, change `currentYear - 1` to `currentYear - 2`
+* In the code, change `64` to `99`
 and look at the updated output in the console.
 
 ## Adding a dependency
