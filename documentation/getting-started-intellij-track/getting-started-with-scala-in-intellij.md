@@ -36,7 +36,7 @@ take a few minutes but subsequent projects can use the same SDK.
 
 ## Writing code
 
-1. On the **Project** pane on the left, right-click `src` and select
+1. On the **Project** pane on the left, right-click `scala` folder under src/main and select
 **New** => **Scala class**.
 
 * Name the class `Hello` and change the **Kind** to `object`.
