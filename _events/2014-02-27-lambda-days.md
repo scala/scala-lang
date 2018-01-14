@@ -1,10 +1,10 @@
 ---
 category: event
-title: Lambda Days
+title: Lambda Days 2014
 logo: /resources/img/lambda-days.png
-location: Kraków
+location: Kraków, Poland
 description: "Functional programming is taking Kraków by storm."
 start: 27 February 2014
 end: 28 February 2014
-link-out: http://www.lambdadays.org/
+link-out: http://www.lambdadays.org/static/lambda2014.htm
 ---
