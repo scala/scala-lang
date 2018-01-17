@@ -109,7 +109,7 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 * [Effective Scala](http://twitter.github.com/effectivescala/)
 * [Scala Puzzlers](http://scalapuzzlers.com/)
 * [Interactive Tour](http://scalatutorials.com/tour)
-* [Functional programming course/excercises](https://github.com/dehun/learn-fp)
+* [Functional programming course/exercises](https://github.com/dehun/learn-fp)
 
 ## Community Libraries and Tools
 
