@@ -19,7 +19,7 @@ these codebases, run their test suites, and rewire their builds to
 depend on each other, so only freshly built code, built by freshly
 built Scala, is involved.
 
-## What's it for?
+## Why do we do this?
 
 Having the community build as a backstop and testbed means we can
 confidently assess the impact of proposed changes to the Scala
@@ -31,6 +31,24 @@ latest Scala nightly build.
 We often also run the community build against individual pull requests
 in the [scala/scala repo](https://github.com/scala/scala) to assess
 the impact of the PR and detect regressions before the PR is merged.
+
+## Has it helped?
+
+Definitely.  Over the past few years, the build has often caught
+regressions and unanticipated source-compatibility issues.
+
+During the Scala 2.12 cycle, feedback from the community build was key
+for guiding the work on SAMs and the new trait encoding.  And, seeing what
+went wrong in downstream projects as the 2.12 changes went in was a
+major source for developing the migration guidelines in the
+[2.12 release notes](https://github.com/scala/scala/releases/tag/v2.12.0).
+
+In the Scala 2.13 cycle, we expect the community build to play a
+similar role in transitioning first our own code, then the entire
+open-source ecosystem, to the
+[new collections library](http://www.scala-lang.org/blog/2017/02/28/collections-rework.html).
+We've also [begun using it](https://github.com/scala/community-builds/issues/609) to
+gauge our progress on Java 9 support.
 
 ## How big is it?
 
@@ -78,7 +96,7 @@ simulacrum, sjson-new, sksamuel-exts, slick, sourcecode, specs2,
 spire, spray-json, ssl-config, tut, twirl, twitter-util, twotails,
 unfiltered, upickle, utest, zinc.
 
-Interested in adding a library?  See our
+Want to add your project to the community build?  See our
 [eligibility guidelines](https://github.com/scala/community-builds/wiki/Eligibility).
 
 ## Learning more, getting involved
