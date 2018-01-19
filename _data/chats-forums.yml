@@ -29,3 +29,13 @@ gitterChannels:
     url: https://gitter.im/scala/scala-india
   - name: community-builds
     url: https://gitter.im/scala/community-builds
+  - name: scala/ar
+    url: https://gitter.im/scala/ar
+  - name: scala/fr
+    url: https://gitter.im/scala/fr
+  - name: scala/de
+    url: https://gitter.im/scala/de
+  - name: scala/pt
+    url: https://gitter.im/scala/pt
+  - name: scala/es
+    url: https://gitter.im/scala/es
