@@ -23,7 +23,7 @@ And so, it took very little effort to create several channels on
 [Gitter](https://gitter.im/) dedicated to talking about Scala in a variety of
 non-English languages:
 
-- [scala/de](https://gitter.im/scala/ar) — Arabic
+- [scala/ar](https://gitter.im/scala/ar) — Arabic
 - [scala/fr](https://gitter.im/scala/fr) — French
 - [scala/de](https://gitter.im/scala/de) — German
 - [scala/pt](https://gitter.im/scala/pt) — Portuguese
