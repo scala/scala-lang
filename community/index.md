@@ -55,19 +55,30 @@ The main [Gitter](https://gitter.im) room for Scala is:
 
 Other, more specialized rooms include:
 
-* **[scala/center](scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and general updates about projects and things going on at the Scala Center.
+* **[scala/center](scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and projects going on at the Scala Center.
 * **[scala/contributors](https://gitter.im/scala/contributors)**: for contributors to discuss work on changes to Scala.
 * **[scala/moocs](https://gitter.im/scala/moocs)**: for talking about the Scala Center's online courses
-* **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
 * **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other
-* **[typelevel/cats](https://gitter.im/typelevel/cats)**: for discussion about the Cats library of abstractions for functional programming and FP in general.
-* **[scala-js/scala-js](https://gitter.im/scala-js/scala-js)**: for discussion about the Scala to JavaScript compiler. 
+* **[scala-js/scala-js](https://gitter.im/scala-js/scala-js)**: for discussion about the Scala to JavaScript compiler.
 
-These rooms are covered by the [Scala Code of Conduct](../conduct.html).
+International rooms are available as well:
+
+* **[scala/scala-india](https://gitter.im/scala/scala-india)**
+* **[scala/ar](https://gitter.im/scala/ar)**
+* **[scala/de](https://gitter.im/scala/de)**
+* **[scala/es](https://gitter.im/scala/es)**
+* **[scala/fr](https://gitter.im/scala/fr)**
+* **[scala/pt](https://gitter.im/scala/pt)**
+
+All of the rooms above are covered by the [Scala Code of Conduct](../conduct.html).
 
 There are many other rooms devoted to individual Scala libraries and technologies.
+Examples include:
 
-IRC users can chat about Scala anytime on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
+* **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
+* **[typelevel/cats](https://gitter.im/typelevel/cats)**: for discussion about the Cats library of abstractions for functional programming and FP in general.
+
+IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
 
 ## User Groups
 

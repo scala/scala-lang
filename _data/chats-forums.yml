@@ -11,31 +11,16 @@ discourseForums:
 
 # Gitter channels
 gitterChannels:
-  - name: scala
+  - name: scala/scala
     url: https://gitter.im/scala/scala
-  - name: center
+  - name: scala/center
     url: https://gitter.im/scala/center
-  - name: contributors
+  - name: scala/contributors
     url: https://gitter.im/scala/contributors
-  - name: pickling
-    url: https://gitter.im/scala/pickling
-  - name: scala-parser-combinator
-    url: https://gitter.im/scala/scala-parser-combinator
-  - name: collection-strawman
-    url: https://gitter.im/scala/collection-strawman
-  - name: scala-xml
-    url: https://gitter.im/scala/scala-xml
-  - name: scala-india
-    url: https://gitter.im/scala/scala-india
-  - name: community-builds
-    url: https://gitter.im/scala/community-builds
-  - name: scala/ar
-    url: https://gitter.im/scala/ar
-  - name: scala/fr
-    url: https://gitter.im/scala/fr
-  - name: scala/de
-    url: https://gitter.im/scala/de
-  - name: scala/pt
-    url: https://gitter.im/scala/pt
-  - name: scala/es
-    url: https://gitter.im/scala/es
+  - name: scala/job-board
+    url: https://gitter.im/scala/job-board
+  - name: spark-scala/Lobby
+    url: https://gitter.im/spark-scala/Lobby
+  - name: scala-js/scala-js
+    url: https://gitter.im/scala-js/scala-js
+
