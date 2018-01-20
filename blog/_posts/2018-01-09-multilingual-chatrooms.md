@@ -29,7 +29,11 @@ non-English languages:
 - [scala/pt](https://gitter.im/scala/pt) — Portuguese
 - [scala/es](https://gitter.im/scala/es) — Spanish
 
-So far, only this handful of channels has been created, and we encourage any
+By the time you read this, the list may already have grown longer.
+See the [Community page](https://www.scala-lang.org/community/)
+for a current list.
+
+We encourage any
 speakers of these languages to join one of these groups, but after just a few
 days online, some of these channels are attracting a lot of activity. Should
 demand exist for other language groups with a significant number of speakers,
