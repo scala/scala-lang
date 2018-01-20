@@ -68,6 +68,8 @@ International rooms are available as well:
 * **[scala/de](https://gitter.im/scala/de)**
 * **[scala/es](https://gitter.im/scala/es)**
 * **[scala/fr](https://gitter.im/scala/fr)**
+* **[scala/it](https://gitter.im/scala/it)**
+* **[scala/pl](https://gitter.im/scala/pl)**
 * **[scala/pt](https://gitter.im/scala/pt)**
 
 All of the rooms above are covered by the [Scala Code of Conduct](../conduct.html).
