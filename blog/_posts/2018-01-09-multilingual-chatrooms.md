@@ -24,12 +24,17 @@ And so, it took very little effort to create several channels on
 non-English languages:
 
 - [scala/ar](https://gitter.im/scala/ar) — Arabic
+- [scala/cn](https://gitter.im/scala/cn) — Chinese
 - [scala/fr](https://gitter.im/scala/fr) — French
 - [scala/de](https://gitter.im/scala/de) — German
 - [scala/pt](https://gitter.im/scala/pt) — Portuguese
 - [scala/es](https://gitter.im/scala/es) — Spanish
 
-So far, only this handful of channels has been created, and we encourage any
+By the time you read this, the list may already have grown longer.
+See the [Community page](https://www.scala-lang.org/community/)
+for a current list.
+
+We encourage any
 speakers of these languages to join one of these groups, but after just a few
 days online, some of these channels are attracting a lot of activity. Should
 demand exist for other language groups with a significant number of speakers,
