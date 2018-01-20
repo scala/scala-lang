@@ -296,7 +296,7 @@
       {% endfor %}
     </div>
     <div class="gitter">
-      <h3>Real-Time (Topic-Specialized) Chat</h3>
+      <h3>Real-Time Chat</h3>
       {% assign modLimit = site.data.chats-forums.gitterChannels.size | modulo: 2 %}
       {% capture channelLimit %}
         {% if modLimit != 0 %}
@@ -327,6 +327,7 @@
         {% endif %}
       {% endfor %}
     </div>
+    <h3>More chat rooms are listed on the <a href="/community/">Community</a> page</h3>
     {% if page.communities %}
     <div class="communities">
       <h3>Communities</h3>
