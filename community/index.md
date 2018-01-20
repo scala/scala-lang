@@ -65,6 +65,7 @@ International rooms are available as well:
 
 * **[scala/scala-india](https://gitter.im/scala/scala-india)**
 * **[scala/ar](https://gitter.im/scala/ar)**
+* **[scala/cn](https://gitter.im/scala/cn)**
 * **[scala/de](https://gitter.im/scala/de)**
 * **[scala/es](https://gitter.im/scala/es)**
 * **[scala/fr](https://gitter.im/scala/fr)**
