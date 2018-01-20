@@ -24,6 +24,7 @@ And so, it took very little effort to create several channels on
 non-English languages:
 
 - [scala/ar](https://gitter.im/scala/ar) — Arabic
+- [scala/cn](https://gitter.im/scala/cn) — Chinese
 - [scala/fr](https://gitter.im/scala/fr) — French
 - [scala/de](https://gitter.im/scala/de) — German
 - [scala/pt](https://gitter.im/scala/pt) — Portuguese
