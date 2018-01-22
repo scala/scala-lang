@@ -21,6 +21,9 @@ built Scala, is involved.
 
 ## Why do we do this?
 
+The goal is to enable Scala the language and Scala the ecosystem
+of libraries to evolve in tandem with each other.
+
 Having the community build as a backstop and testbed means we can
 confidently assess the impact of proposed changes to the Scala
 language, compiler, and standard library.
