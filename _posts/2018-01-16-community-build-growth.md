@@ -35,7 +35,7 @@ the impact of the PR and detect regressions before the PR is merged.
 ## Has it helped?
 
 Definitely.  Over the past few years, the build has often caught
-regressions and unanticipated source-compatibility issues.
+regressions and brought unanticipated compatibility issues to light.
 
 During the Scala 2.12 cycle, feedback from the community build was key
 for guiding the work on SAMs and the new trait encoding.  And, seeing what
@@ -50,12 +50,11 @@ open-source ecosystem, to the
 We've also [begun using it](https://github.com/scala/community-builds/issues/609) to
 gauge our progress on Java 9 support.
 
-Library authors have also benefited.  The community build has
-often provided early warning of compatibility issues because
-of changes to Scala or changes to other libraries.  It has helped
-maintainers standardize their builds, keep their dependencies
-up-to-date, identify flaky tests, and shake out assorted other
-issues.
+Library authors have also benefited.  The community build has often
+provided early warning of the effects of changes to Scala or changes
+to other libraries.  It has helped maintainers standardize their
+builds, keep their dependencies up-to-date, identify flaky tests, and
+shake out assorted other issues.
 
 ## How big is it?
 
