@@ -50,6 +50,13 @@ open-source ecosystem, to the
 We've also [begun using it](https://github.com/scala/community-builds/issues/609) to
 gauge our progress on Java 9 support.
 
+Library authors have also benefited.  The community build has
+often provided early warning of compatibility issues because
+of changes to Scala or changes to other libraries.  It has helped
+maintainers standardize their builds, keep their dependencies
+up-to-date, identify flaky tests, and shake out assorted other
+issues.
+
 ## How big is it?
 
 The community build has been growing steadily since 2013.
