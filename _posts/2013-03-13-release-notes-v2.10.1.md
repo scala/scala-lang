@@ -673,7 +673,7 @@ sha | Title
 [79a43d7](https://github.com/scala/scala/commit/79a43d7) | <notextile>SI-6288 Position argument of unapply</notextile>
 [2621918](https://github.com/scala/scala/commit/2621918) | <notextile>s/SuperCallArgs/SuperArgs/</notextile>
 [dfa4e23](https://github.com/scala/scala/commit/dfa4e23) | <notextile>simplifies checkBounds</notextile>
-[a0cd0f8](https://github.com/scala/scala/commit/a0cd0f8) | <notextile>prevents spurious kind bound errors</notextile>
+[a0cd0f8](https://github.com/scala/scala/commit/a0cd0f81be) | <notextile>prevents spurious kind bound errors</notextile>
 [24455e2](https://github.com/scala/scala/commit/24455e2) | <notextile>Recurse into instantiations when stripping type vars.</notextile>
 [089173d](https://github.com/scala/scala/commit/089173d) | <notextile>Fixes SI-6758: force LazyAnnnotationInfo for DefDef and TypeDef</notextile>
 [e5e6d67](https://github.com/scala/scala/commit/e5e6d67) | <notextile>Extract base scaladoc functionality for the IDE.</notextile>
