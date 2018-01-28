@@ -68,7 +68,7 @@ This technology preview demonstrates new language features planned for Scala 3:
   - [Union Types](http://dotty.epfl.ch/docs/reference/union-types.html)
   - [Trait Parameters](http://dotty.epfl.ch/docs/reference/trait-parameters.html)
   - [Enumerations](http://dotty.epfl.ch/docs/reference/enums/enums.html)
-  - [Algebraic Data Types](http://dotty.epfl.ch/docs/reference/adts.html)
+  - [Algebraic Data Types](http://dotty.epfl.ch/docs/reference/enums/adts.html)
   - [By-Name Implicits](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html)
 
 We also ship with tools that help you try out the Dotty platform:

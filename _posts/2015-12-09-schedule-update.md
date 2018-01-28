@@ -30,7 +30,7 @@ Areas where participation is welcome include:
  - Library authors: if (the latest version of) your library isn't included in the 2.12 community build,
     we have [documented](https://github.com/scala/community-builds/wiki) how to add it. We’ll be happy to help,
     as the community build is helping us catch more regressions than ever. As always, we're counting on your help with testing
-    before we go into RC mode! (The [2.12 community build config](https://github.com/scala/community-builds/blob/2.12.x/project-refs.conf) 
+    before we go into RC mode! (The [2.12 community build config](https://github.com/scala/community-builds/blob/2.12.x/configs/project-refs.conf) 
     lists which version of each built project, and whether its test suite is being exercised.)
  - Reviewing [pull requests in the Scala repository](https://github.com/scala/scala/pulls), where 2.12.x is now the default branch.
     Strong motivation will be needed before we merge anything but important bug fixes to the 2.11.x branch.
