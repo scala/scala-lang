@@ -87,7 +87,7 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
     * scala.actors have been deprecated and the akka implementation is now included in the distribution.
 
-    * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
+    * See the [actors migration project](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) for more information.
 * Performance Improvements
 
     * Faster inliner
