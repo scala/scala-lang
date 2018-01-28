@@ -646,7 +646,7 @@ In the example, `Twice` is an extractor object with two methods:
 * The `unapply` method is used to decompose an even number; it is in a sense the reverse of `apply`. `unapply` methods return option types: `Some(...)` for a match that suceeds, `None` for a match that fails. Pattern variables are returned as the elements of `Some`. If there are several variables, they are grouped in a tuple.
 
 
-In the second-to-last line, `Twice`'s `apply` method   is used to construct a number `x`. In the last line, `x` is tested against the pattern `Twice(n)`. This pattern succeeds for even numbers and assigns to the variable `n` one half of the number that was tested. The pattern match makes use of the `unapply` method of object `Twice`. More details on extractors can be found in the paper [Matching Objects with Patterns](http://www.scala-lang.org/docu/files/MatchingObjectsWithPatterns-TR.pdf) by Emir, Odersky and Williams
+In the second-to-last line, `Twice`'s `apply` method   is used to construct a number `x`. In the last line, `x` is tested against the pattern `Twice(n)`. This pattern succeeds for even numbers and assigns to the variable `n` one half of the number that was tested. The pattern match makes use of the `unapply` method of object `Twice`. More details on extractors can be found in the paper [Matching Objects with Patterns](https://infoscience.epfl.ch/record/98468/files/MatchingObjectsWithPatterns-TR.pdf) by Emir, Odersky and Williams
 
 #### Tuples
 
