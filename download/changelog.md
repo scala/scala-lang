@@ -364,7 +364,7 @@ Scala now supports [Java generic types](http://en.wikipedia.org/wiki/Generics_in
 * A wildcard type such as `ArrayList<? extends Number>` is translated to `ArrayList[_ <: Number]`. This is itself a shorthand for the existential type `ArrayList[T] forSome { type T <: Number }`.
 * A raw type in Java such as `ArrayList` is translated to `ArrayList[_]`, which is a shorthand for `ArrayList[T] forSome { type T }`.
 
-This translation works if `-target:jvm-1.5` is specified, which is the new default. For any other target, Java generics are not         recognized. To ensure upgradability of Scala codebases, extraneous type parameters for Java classes under [scalac](http://www.scala-lang.org/docu/files/tools/scalac.html) `-target:jvm-1.4` are simply ignored. For instance, when compiling with `>-target:jvm-1.4`, a Scala type such as `ArrayList[String]` is simply treated as the unparameterized type `ArrayList`>.
+This translation works if `-target:jvm-1.5` is specified, which is the new default. For any other target, Java generics are not         recognized. To ensure upgradability of Scala codebases, extraneous type parameters for Java classes under scalac `-target:jvm-1.4` are simply ignored. For instance, when compiling with `>-target:jvm-1.4`, a Scala type such as `ArrayList[String]` is simply treated as the unparameterized type `ArrayList`>.
 
 #### Case Classes
 
