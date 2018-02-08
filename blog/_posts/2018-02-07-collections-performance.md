@@ -15,9 +15,15 @@ After we published that blog post, the community
 [raised concerns](https://www.reddit.com/r/scala/comments/7g52cy/let_them_be_lazy/dqgol36/)
 about possible performance implications of having more levels of abstraction than before.
 
-This blog article gives more information about the overhead of the
-collections’ view-based design and our solution to remove that
-overhead.
+This blog article:
+
+- gives more information about the overhead of the collections’
+  view-based design and our solution to remove that overhead,
+- argues that for correctness reasons it is still better to have
+  view-based default implementations,
+- shows that we should expect the new collections to be equally fast
+  or faster than the old collections, and reports an average speedup
+  of 35% in the case of `Vector`’s `filter`, `map` and `flatMap`.
 
 For reference, the source code of the new collections is available in
 [this GitHub repository](https://github.com/scala/collection-strawman).
@@ -57,7 +63,7 @@ trait StrictOptimizedIterableOps[+A, +CC[_], +C] extends IterableOps[A, CC, C] {
 }
 ~~~
 
-Then, to implement the `Vector` collection, we just mix the above trait:
+Then, to implement the `Vector` collection, we just mix such a “strict optimized” trait:
 
 ~~~ scala
 trait Vector[+A] extends IndexedSeq[A]
@@ -123,7 +129,7 @@ exactly the same as in the old collections.
 This article studied the performance of the new collections. I’ve reported that view
 based operation implementations are about 25% slower than builder based implementations,
 and I’ve explained how we restored builder based implementations on strict collections.
-Last but not least, I’ve shown that defaulting to the view based implementations does
+Last but not least, I’ve shown that defaulting to view based implementations does
 make sense for the sake of correctness.
 
 I expect the new collections to be equally fast or slightly faster than the previous collections.
