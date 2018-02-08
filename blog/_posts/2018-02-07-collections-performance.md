@@ -96,17 +96,17 @@ Talking about performance, how performant are the new collections compared to th
 Again, the answer depends on the type of collection, the operations and the number of elements.
 My `Vector` benchmarks show a 35% speedup on average:
 
-![](/resources/img/new-collections-performance-filter.png)
+![](/resources/img/blog/new-collections-performance-filter.png)
 
-![](/resources/img/new-collections-performance-map.png)
+![](/resources/img/blog/new-collections-performance-map.png)
 
-![](/resources/img/new-collections-performance-flatMap.png)
+![](/resources/img/blog/new-collections-performance-flatMap.png)
 
-These charts show the execution time (vertically) of the `filter`, `map` and `flatMap`
-operations, according to the number of elements (horizontally). Note that scales are
-logarithmic in both axes. The blue line shows the performance of the old `Vector`,
-the green line shows the performance of the new `Vector` if it used only view based
-implementations, and the red line shows the actual performance of the new `Vector`
+These charts show the speedup factor (vertically) of the `filter`, `map` and `flatMap`
+operations execution compared to the old `Vector`, for various number of elements (horizontally).
+The blue line shows the old `Vector`,
+the red line shows the new `Vector` if it used only view based
+implementations, and the yellow line shows the actual new `Vector`
 (with strict optimized implementations). Benchmark source code and numbers can be found
 [here](https://gist.github.com/julienrf/f1cb2b062cd9783a35e2f35778959c76).
 
