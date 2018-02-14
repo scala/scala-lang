@@ -53,7 +53,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * A new experimental way of compiling closures, implemented by [@JamesIry](https://github.com/JamesIry). With `-Ydelambdafy:method` anonymous functions are compiled faster, with a smaller bytecode footprint. This works by keeping the function body as a private (static, if no `this` reference is needed) method of the enclosing class, and at the last moment during compilation emitting a small anonymous class that `extends FunctionN` and delegates to it. This sets the scene for a smooth migration to Java 8-style lambdas (not yet implemented).
   * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
   * [Scala.js](http://www.scala-js.org/), a separate project, provides an experimental JavaScript back-end for Scala 2.11. Note that it is not part of the standard Scala distribution.
-  * Be more [Avian](http://oss.readytalk.com/avian/)- [friendly](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%22Scala%202.11.1%22%20and%20resolution%20%3D%20fixed%20and%20text%20~%20%22avian%22).
+  * Be more [Avian](https://readytalk.github.io/avian/)- [friendly](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%22Scala%202.11.1%22%20and%20resolution%20%3D%20fixed%20and%20text%20~%20%22avian%22).
 * Compiler Performance
   * Incremental compilation has been improved significantly. To try it out, upgrade to sbt 0.13.2 and add `incOptions := incOptions.value.withNameHashing(true)` to your build! Other build tools are also supported. More info at [this sbt issue](https://github.com/sbt/sbt/issues/1010) -- that's where most of the work happened. More features are planned, e.g. [class-based tracking](https://github.com/sbt/sbt/issues/1104).
   * We've been optimizing the batch compiler's performance as well, and will continue to work on this during the 2.11.x cycle.
@@ -79,7 +79,7 @@ Concretely, according to `git log --no-merges --oneline 2.11.x --not 2.10.x --fo
 
 Thank you all very much.
 
-If you find any errors or omissions in these relates notes, [please submit a PR](https://github.com/scala/make-release-notes/blob/master/hand-written.md)!
+If you find any errors or omissions in these relates notes, [please submit a PR](https://github.com/scala/make-release-notes/blob/2.11.x/hand-written.md)!
 
 ### Reporting Bugs / Known Issues
 Please [file any bugs you encounter](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311). If you're unsure whether something is a bug, please contact the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list.
@@ -87,13 +87,13 @@ Please [file any bugs you encounter](https://issues.scala-lang.org/secure/Create
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/browse/SI-6267?jql=project%20%3D%20SI%20AND%20%28fixVersion%20is%20empty%20or%20fixVersion%20%3E%20%22Scala%202.11.1%22%29%20AND%20affectedVersion%20in%20%28%22Scala%202.11.0%22%2C%20%22Scala%202.11.1%22%29%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/ecosystem/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 
 ### Available projects
 The following Scala projects have already been released against 2.11! See also [@jrudolph's analysis](https://gist.github.com/jrudolph/7a323f5e2820d8479b18) of the availability of 2.11 builds of popular libraries (as well as which ones are missing); updated regularly.
 
-We'd love to include your release in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
+We'd love to include your release in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/2.11.x/hand-written.md).
 
     "org.scalacheck"                   %% "scalacheck"                % "1.11.4"
     "org.scalatest"                    %% "scalatest"                 % "2.1.7"
