@@ -86,7 +86,7 @@ Since 2.10.4 is strictly a bug-fix release, here's an overview of the most promi
 
   * scala.actors have been deprecated and the akka implementation is now included in the distribution.
 
-  * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
+  * See the [actors migration project](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) for more information.
 * Performance Improvements
 
   * Faster inliner
@@ -151,7 +151,7 @@ Issue(s) | Commit | Message
 [SI-8126](https://issues.scala-lang.org/browse/SI-8126), [SI-6566](https://issues.scala-lang.org/browse/SI-6566) | [806b6e4](https://github.com/scala/scala/commit/806b6e4) | <notextile>Backports library changes related to SI-6566 from a419799</notextile>
 [SI-8146](https://issues.scala-lang.org/browse/SI-8146), [SI-8146](https://issues.scala-lang.org/browse/SI-8146), [SI-8146](https://issues.scala-lang.org/browse/SI-8146), [SI-8146](https://issues.scala-lang.org/browse/SI-8146) | [ff13742](https://github.com/scala/scala/commit/ff13742) | <notextile>[nomaster] SI-8146 Fix non-deterministic &lt;:&lt; for deeply nested types</notextile>
 [SI-6443](https://issues.scala-lang.org/browse/SI-6443), [SI-8143](https://issues.scala-lang.org/browse/SI-8143) | [1baf11a](https://github.com/scala/scala/commit/1baf11a) | <notextile>SI-8143 Fix bug with super-accessors / dependent types</notextile>
-[SI-8152](https://issues.scala-lang.org/browse/SI-8152) | [9df2dcc](https://github.com/scala/scala/commit/9df2dcc) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
+[SI-8152](https://issues.scala-lang.org/browse/SI-8152) | [9df2dcc](https://github.com/scala/scala/commit/9df2dcc584) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
 [SI-8111](https://issues.scala-lang.org/browse/SI-8111) | [c91d373](https://github.com/scala/scala/commit/c91d373) | <notextile>SI-8111 Expand the comment with a more detailed TODO</notextile>
 [SI-8111](https://issues.scala-lang.org/browse/SI-8111) | [2c770ae](https://github.com/scala/scala/commit/2c770ae) | <notextile>SI-8111 Repair symbol owners after abandoned named-/default-args</notextile>
 [SI-7120](https://issues.scala-lang.org/browse/SI-7120), [SI-8114](https://issues.scala-lang.org/browse/SI-8114), [SI-7120](https://issues.scala-lang.org/browse/SI-7120) | [5876e8c](https://github.com/scala/scala/commit/5876e8c) | <notextile>[nomaster] SI-8114 Binary compat. workaround for erasure bug SI-7120</notextile>
@@ -199,12 +199,12 @@ sha | Title
 ---: | ---
 [5f4011e](https://github.com/scala/scala/commit/5f4011e) | <notextile>[backport] SI-7902 Fix spurious kind error due to an unitialized symbol</notextile>
 [8ee165c](https://github.com/scala/scala/commit/8ee165c) | <notextile>SI-8205 [nomaster] backport test pos.lineContent</notextile>
-[d167f14](https://github.com/scala/scala/commit/d167f14) | <notextile>[nomaster] corrects an error in reify&rsquo;s documentation</notextile>
+[d167f14](https://github.com/scala/scala/commit/d167f142e8) | <notextile>[nomaster] corrects an error in reify&rsquo;s documentation</notextile>
 [806b6e4](https://github.com/scala/scala/commit/806b6e4) | <notextile>Backports library changes related to SI-6566 from a419799</notextile>
 [ff13742](https://github.com/scala/scala/commit/ff13742) | <notextile>[nomaster] SI-8146 Fix non-deterministic &lt;:&lt; for deeply nested types</notextile>
 [cbb88ac](https://github.com/scala/scala/commit/cbb88ac) | <notextile>[nomaster] Update MiMa and use new wildcard filter</notextile>
 [1baf11a](https://github.com/scala/scala/commit/1baf11a) | <notextile>SI-8143 Fix bug with super-accessors / dependent types</notextile>
-[9df2dcc](https://github.com/scala/scala/commit/9df2dcc) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
+[9df2dcc](https://github.com/scala/scala/commit/9df2dcc584) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
 [c91d373](https://github.com/scala/scala/commit/c91d373) | <notextile>SI-8111 Expand the comment with a more detailed TODO</notextile>
 [2c770ae](https://github.com/scala/scala/commit/2c770ae) | <notextile>SI-8111 Repair symbol owners after abandoned named-/default-args</notextile>
 [5876e8c](https://github.com/scala/scala/commit/5876e8c) | <notextile>[nomaster] SI-8114 Binary compat. workaround for erasure bug SI-7120</notextile>

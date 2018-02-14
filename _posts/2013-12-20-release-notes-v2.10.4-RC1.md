@@ -89,7 +89,7 @@ Since 2.10.4 is strictly a bug-fix release, here's an overview of the most promi
 
   * scala.actors have been deprecated and the akka implementation is now included in the distribution.
 
-  * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
+  * See the [actors migration project](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) for more information.
 * Performance Improvements
 
   * Faster inliner

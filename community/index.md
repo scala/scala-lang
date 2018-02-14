@@ -55,7 +55,7 @@ The main [Gitter](https://gitter.im) room for Scala is:
 
 Other, more specialized rooms include:
 
-* **[scala/center](scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and projects going on at the Scala Center.
+* **[scala/center](https://gitter.im/scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and projects going on at the Scala Center.
 * **[scala/contributors](https://gitter.im/scala/contributors)**: for contributors to discuss work on changes to Scala.
 * **[scala/moocs](https://gitter.im/scala/moocs)**: for talking about the Scala Center's online courses
 * **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other

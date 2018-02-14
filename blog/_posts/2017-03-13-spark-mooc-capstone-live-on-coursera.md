@@ -42,7 +42,7 @@ Topics that Big Data Analysis with Scala and Spark covers include:
 
 _Note this is our first time running this course material as a MOOC, so your feedback on how we can improve course is welcome! Also please be patient with us as we work out any hiccups with our new graders._
 
-[![spark-course](/resources/img/spark-course.png)](/resources/img/blog/spark-course.png)
+[![spark-course](/resources/img/spark-course.png)]
 
 ## Scala Specialization Capstone
 
@@ -64,5 +64,5 @@ visualize it in their browsers, and to react to user input, using Scala.js.
 _Note this is our first time running this course material as a MOOC, so your feedback on how we can improve course is welcome! Also please be patient with us as we work out any hiccups with our new graders._
 
 
-[![capstone](/resources/img/capstone.png)](/resources/img/blog/capstone.png)
+[![capstone](/resources/img/capstone.png)]
 

@@ -52,7 +52,7 @@ Issue(s) | Commit | Message
 [SI-6932](https://issues.scala-lang.org/browse/SI-6932) | [5713c1b](https://github.com/scala/scala/commit/5713c1b) | <notextile> Fix SI-6932 by enabling linearization of callback execution for the internal execution context of Future</notextile>
 [SI-6766](https://issues.scala-lang.org/browse/SI-6766) | [0bde246](https://github.com/scala/scala/commit/0bde246) | <notextile>SI-6766 Create a continuations project in eclipse</notextile>
 [SI-6766](https://issues.scala-lang.org/browse/SI-6766) | [a802ba9](https://github.com/scala/scala/commit/a802ba9) | <notextile>SI-6766 Makes the -Pcontinuations:enable flag a project specific preference</notextile>
-[SI-6536](https://issues.scala-lang.org/browse/SI-6536) | [af03afb](https://github.com/scala/scala/commit/af03afb) | <notextile>SI-6536 Cleanup code around determining accessor requirement</notextile>
+[SI-6536](https://issues.scala-lang.org/browse/SI-6536) | [af03afb](https://github.com/scala/scala/commit/af03afba25) | <notextile>SI-6536 Cleanup code around determining accessor requirement</notextile>
 [SI-6536](https://issues.scala-lang.org/browse/SI-6536) | [2124b9d](https://github.com/scala/scala/commit/2124b9d) | <notextile>SI-6536 Generates super accessors X.super[Y].blah when Y is a class</notextile>
 [SI-5958](https://issues.scala-lang.org/browse/SI-5958), [SI-5958](https://issues.scala-lang.org/browse/SI-5958) | [61862d2](https://github.com/scala/scala/commit/61862d2) | <notextile>SIP-14 backport to 2.9.x</notextile>
 [SI-6188](https://issues.scala-lang.org/browse/SI-6188), [SI-6188](https://issues.scala-lang.org/browse/SI-6188) | [32782cd](https://github.com/scala/scala/commit/32782cd) | <notextile>SI-6188 backport (ICodeReader wrongly ignored exception handlers)</notextile>
@@ -83,7 +83,7 @@ sha | Title
 [a802ba9](https://github.com/scala/scala/commit/a802ba9) | <notextile>SI-6766 Makes the -Pcontinuations:enable flag a project specific preference</notextile>
 [7cd9ce3](https://github.com/scala/scala/commit/7cd9ce3) | <notextile>update mailmap</notextile>
 [a224bb7](https://github.com/scala/scala/commit/a224bb7) | <notextile>binary compatibility compensation</notextile>
-[af03afb](https://github.com/scala/scala/commit/af03afb) | <notextile>SI-6536 Cleanup code around determining accessor requirement</notextile>
+[af03afb](https://github.com/scala/scala/commit/af03afba25) | <notextile>SI-6536 Cleanup code around determining accessor requirement</notextile>
 [2124b9d](https://github.com/scala/scala/commit/2124b9d) | <notextile>SI-6536 Generates super accessors X.super[Y].blah when Y is a class</notextile>
 [f0bc3f7](https://github.com/scala/scala/commit/f0bc3f7) | <notextile>use consistent scalac args in quick&amp;strap</notextile>
 [61862d2](https://github.com/scala/scala/commit/61862d2) | <notextile>SIP-14 backport to 2.9.x</notextile>
