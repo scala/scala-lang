@@ -83,6 +83,8 @@ Examples include:
 
 IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
 
+Telegram group for Russian-speaking users: [scala_ru](https://t.me/scala_ru)
+
 ## User Groups
 
 Find your local Scala user group on [Scala Space](http://scala.space/) or on Meetup's [Scala meetup list](http://scala.meetup.com/).
