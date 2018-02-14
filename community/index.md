@@ -72,6 +72,7 @@ International rooms are available as well:
 * **[scala/it](https://gitter.im/scala/it)**
 * **[scala/pl](https://gitter.im/scala/pl)**
 * **[scala/pt](https://gitter.im/scala/pt)**
+* **[scala_ru](https://t.me/scala_ru)** (Telegram)
 
 All of the rooms above are covered by the [Scala Code of Conduct](../conduct.html).
 
@@ -82,8 +83,6 @@ Examples include:
 * **[typelevel/cats](https://gitter.im/typelevel/cats)**: for discussion about the Cats library of abstractions for functional programming and FP in general.
 
 IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
-
-Telegram group for Russian-speaking users: [scala_ru](https://t.me/scala_ru)
 
 ## User Groups
 
