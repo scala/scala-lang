@@ -42,8 +42,6 @@ collections:
     output: false
   contribute_resources:
     output: false
-  contribute_community_tickets:
-    output: false
   books:
     output: false
   downloads:

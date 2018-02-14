@@ -43,7 +43,7 @@ The main Scala project consists of the standard Scala library, the Scala reflect
 the Scala compiler and the Scaladoc tool. This means there's plenty to choose from when deciding what to work on.
 Typically the scaladoc tool provides a low entry point for new committers, so it is a good first step into contributing.
 
-On the Scala bug tracker you will find many bugs that are [marked as good starting points to contributing ("community" bugs)](https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12111) or [that are not currently assigned](https://issues.scala-lang.org/secure/IssueNavigator.jspa?requestId=12112) and that you could pick up. Once you decided on a ticket to look at, see the next step on how to proceed further.
+On the [Scala bug tracker](https://github.com/scala/bug) you will find the bugs that you could pick up. Once you decided on a ticket to look at, see the next step on how to proceed further.
 
 If you are interested in contributing code, we ask you to sign the
 [Scala Contributor License Agreement](http://www.lightbend.com/contribute/cla/scala),
@@ -54,12 +54,12 @@ unencumbered by copyrights or patents.
 
 This is the impatient developer's checklist for the steps to submit a bug-fix pull request to the Scala project. For more information, description and justification for the steps, follow the links in that step. Further specific instructions for the release of Scala you are targeting can be found in the `CONTRIBUTING.md` file for that [github branch](https://github.com/scala/scala)
 
-1. [Select a bug to fix from JIRA](/contribute/#community-tickets), or if you found the bug yourself and want to fix it, [create a JIRA issue](/contribute/bug-reporting-guide.html) (but please
+1. [Select a bug to fix from GitHub](/contribute/#community-tickets), or if you found the bug yourself and want to fix it, [create a GitHub issue](/contribute/bug-reporting-guide.html) (but please
 [make sure it's not a duplicate](/contribute/bug-reporting-guide.html#reporting-confirmed-bugs-is-a-sin)).
 2. Optional ([but recommended](/contribute/scala-internals/#why-its-a-good-idea)), announce your intention to work on the bug on [Scala Contributors](https://contributors.scala-lang.org/). After all, don't you want to work on a team with
 [these friendly people](/contribute/hacker-guide.html#1-connect) - it's one of the perks of contributing.
 3. [Fork the Scala repository](/contribute/hacker-guide.html#fork) and clone your fork (if you haven't already).
-4. [Create a feature branch](/contribute/hacker-guide.html#branch) to work on: use the branch name `issue/NNNN` where NNNN is the JIRA issue number.
+4. [Create a feature branch](/contribute/hacker-guide.html#branch) to work on: use the branch name `issue/NNNN` where NNNN is the GitHub issue number.
 5. [Fix the bug, or implement the new small feature](/contribute/hacker-guide.html#implement), include new tests (yes, for bug fixes too).
 6. [Test, rinse](/contribute/hacker-guide.html#test) and [test some more](/contribute/partest-guide.html) until [all the tests pass](/contribute/hacker-guide.html#verify).
 7. [Commit your changes](/contribute/hacker-guide.html#commit) to your feature branch in your fork. Please choose your commit message based on the [Git Hygiene](https://github.com/scala/scala#user-content-git-hygiene) section of the Scala project README.

@@ -8,10 +8,10 @@ includeTOC: true
 
 There are several options for contributing to Scala's core libraries. You can:
 
-* Help with [Documentation](/contribute/scala-standard-library-api-documentation/).
+* Help with [Documentation](/contribute/documentation.html).
 * [Report Bugs or Issues](/contribute/bug-reporting-guide.html) against the core libraries.
-* [Fix Bugs or Issues](/contribute/guide/) against the
-  [reported library bugs/issues](https://issues.scala-lang.org/issues/?filter=13001).
+* [Fix Bugs or Issues](/contribute/guide.html) against the
+  [reported library bugs/issues](https://github.com/scala/bug).
 * Contribute significant new functionality or a new API by submitting
   a Scala Library Improvement Process (SLIP) Document.
 

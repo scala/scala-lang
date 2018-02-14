@@ -19,7 +19,7 @@ projects:
     icon: https://avatars1.githubusercontent.com/u/57059?v=3&s=200
     link: https://github.com/scala/scala
     homeLink: http://www.scala-lang.org/api
-    issuesLink: https://issues.scala-lang.org/issues/?jql=status%20%3D%20Open%20AND%20component%20%3D%20%22Scaladoc%20Tool%22
+    issuesLink: https://github.com/scala/bug/labels/scaladoc
     readmeLink: https://github.com/scala/scala#welcome
     contributingLink: http://scala-lang.org/contribute/guide.html
   - title: Scala IDE
@@ -72,16 +72,8 @@ projects:
     contributingLink: https://github.com/scala/scala-abide#extending-abide  
 
 projectsInNeed:
-  - title: Scalap
-    description: Scala Decoder (part of scala/scala)
-    icon: https://avatars1.githubusercontent.com/u/57059?v=3&s=200
-    link: https://github.com/scala/scala
-    homeLink:
-    issuesLink: https://issues.scala-lang.org/issues/?jql=status%20%3D%20Open%20AND%20text%20~%20%22scalap%22
-    readmeLink: https://github.com/scala/scala#welcome
-    contributingLink: https://github.com/sbt/sbt/blob/0.13/CONTRIBUTING.md
-  - title: Scaladoc Tool
-    description: (Contribute through scala/scala)
+  - title: Scalariform
+    description: Scala source code formatter
     icon: /resources/img/white-line.png
     link: https://github.com/mdr/scalariform
     homeLink: https://github.com/mdr/scalariform/wiki/Command-line-tool
@@ -94,7 +86,7 @@ The links below are to a number of Scala build and IDE related projects that are
 
 Since these tools are in separate projects, they may (and likely will) have their own rules and guidelines for contributing. The [Hacker Guide](/contribute/hacker-guide/) and [Bug-fixing](/contribute/guide/) pages will likely have much in the way of related information on how to contribute to these projects, and are recommended reading. You should also check the README.md and (if it's present) CONTRIBUTING.md files from the actual projects before contributing to them.
 
-Typically, issues for these projects will be reported and kept in the github project issue tracker for that project rather than in the Scala project JIRA.
+Typically, issues for these projects will be reported and kept in the GitHub project issue tracker for that project rather than in the Scala bug tracker.
 Many of these projects have a <a href="https://gitter.im">gitter</a> channel (usually listed in the README or CONTRIBUTING documents) which is a great place to discuss proposed work before commencing.
 
 There are some projects in this section that are in
@@ -103,7 +95,7 @@ if you would like to help revive them.
 
 ### Broken Links?
 
-Stuff changes. Found a broken link or something that needs updating on this page? Please, consider [submitting a documentation pull request](/contribute/documentation/#updating-scala-langorg) to fix it.
+Stuff changes. Found a broken link or something that needs updating on this page? Please, consider [submitting a documentation pull request](/contribute/documentation.html#updating-scala-langorg) to fix it.
 
 ### Projects
 
