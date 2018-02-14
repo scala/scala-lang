@@ -55,7 +55,7 @@ The main [Gitter](https://gitter.im) room for Scala is:
 
 Other, more specialized rooms include:
 
-* **[scala/center](scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and projects going on at the Scala Center.
+* **[scala/center](https://gitter.im/scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and projects going on at the Scala Center.
 * **[scala/contributors](https://gitter.im/scala/contributors)**: for contributors to discuss work on changes to Scala.
 * **[scala/moocs](https://gitter.im/scala/moocs)**: for talking about the Scala Center's online courses
 * **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other
@@ -82,6 +82,8 @@ Examples include:
 * **[typelevel/cats](https://gitter.im/typelevel/cats)**: for discussion about the Cats library of abstractions for functional programming and FP in general.
 
 IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
+
+Telegram group for Russian-speaking users: [scala_ru](https://t.me/scala_ru)
 
 ## User Groups
 
@@ -122,6 +124,7 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 * [Scala School](http://twitter.github.com/scala_school/)
 * [Effective Scala](http://twitter.github.com/effectivescala/)
 * [Scala Puzzlers](http://scalapuzzlers.com/)
+* [Scala Cookbook](http://www.scalacookbook.com/)
 * [Interactive Tour](http://scalatutorials.com/tour)
 * [Functional programming course/exercises](https://github.com/dehun/learn-fp)
 

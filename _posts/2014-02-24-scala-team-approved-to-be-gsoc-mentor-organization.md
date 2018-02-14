@@ -44,7 +44,7 @@ of kind of projects we undertook in previous years.
 
 Please join us!
 
-[gsoc2014]: http://www.scala-lang.org/gsoc/2014.html
+[gsoc2014]: http://www.scala-lang.org/gsoc/2014/
 [gsoc2013]: http://www.scala-lang.org/news/2013/03/20/gsoc13.html
 [gsoc2012]: http://www.scala-lang.org/old/gsoc2012
 [gsoc2011]: http://www.scala-lang.org/old/gsoc2011

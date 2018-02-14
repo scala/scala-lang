@@ -29,7 +29,7 @@ The following proposals were voted on and adopted:
 * [SCP-009](https://github.com/scalacenter/advisoryboard/blob/master/proposals/009-improve-direct-dependency-experience.md): Improve user experience for builds that use only direct dependencies
 
 For more details, see the
-[minutes](https://github.com/scalacenter/advisoryboard/blob/master/minutes/003-2016-q4.md).
+[minutes](https://scala.epfl.ch/minutes/2016/11/30/november-30-2016.html).
 
 ## Scala Improvement Process (SIP) Committee
 

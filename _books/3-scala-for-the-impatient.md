@@ -5,7 +5,7 @@ image: /resources/img/books/scala_for_the_impatient.png
 status: Available Now
 authors: ["Cay S. Horstmann"]
 publisher: Addison-Wesley
-publisherLink: https://heuk.pearson.com/about-us.html/Addison-Wesley/
+publisherLink: http://www.pearsoned.co.uk/bookshop/subject.asp?item=225
 ---
 
 What you get:

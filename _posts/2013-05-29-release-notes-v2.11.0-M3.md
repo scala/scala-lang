@@ -935,7 +935,7 @@ dc3fa0a | <notextile>if starr.use.released fetch Scala ${starr.version} for STAR
 [645634a](https://github.com/scala/scala/commit/645634a) | <notextile>Removed dead src directory.</notextile>
 [fc5e558](https://github.com/scala/scala/commit/fc5e558) | <notextile>Eliminate a bunch of -Xlint warnings.</notextile>
 [9fed30c](https://github.com/scala/scala/commit/9fed30c) | <notextile>Warn about forgotten string interpolators.</notextile>
-[437d619](https://github.com/scala/scala/commit/437d619) | <notextile>removed a redundant var in JavaWriter.flagsToStr</notextile>
+[437d619](https://github.com/scala/scala/commit/437d61994c) | <notextile>removed a redundant var in JavaWriter.flagsToStr</notextile>
 [67ed8c8](https://github.com/scala/scala/commit/67ed8c8) | <notextile>SI-7236 Deprecate ThreadPoolTaskSupport and friends</notextile>
 [38a1515](https://github.com/scala/scala/commit/38a1515) | <notextile>SI-5513: add inplace set-theoretic operations for mutable bitsets.</notextile>
 [57d728c](https://github.com/scala/scala/commit/57d728c) | <notextile>Optimize rebalance method by using null optimized list implementation.</notextile>

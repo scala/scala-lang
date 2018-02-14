@@ -93,7 +93,7 @@ Many other OSS Scala libraries also use Scalameta annotation macros to
 to maximize type safety, expressiveness and performance:
 - [Freestyle](http://frees.io/):  `@free`/`@module` annotation macros to
   support a cohesive & pragmatic framework of FP centric Scala libraries
-- [Stalagmite](https://vovapolu.github.io/scala/stalagmite/perf/2017/09/02/stalagmite-performance.html):
+- [Stalagmite](https://vovapolu.github.io/stalagmite/2017/09/02/stalagmite-performance.html):
   `@data` annotation macros to generate effective and customizable replacement
   of conventional case classes with convenient optimizations
 - [Dilate](https://github.com/vitorsvieira/dilate) /
