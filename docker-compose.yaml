@@ -1,0 +1,13 @@
+version: "2"
+services:
+  scala-lang:
+    command: jekyll serve --incremental
+    image: jekyll/jekyll:latest
+    volumes:
+      - $PWD:/srv/jekyll
+      - $PWD/vendor/bundle:/usr/local/bundle
+    ports:
+      - 4000:4000
+      - 35729:35729
+      - 3000:3000
+      -   80:4000
