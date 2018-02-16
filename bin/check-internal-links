@@ -1,0 +1,2 @@
+#!/bin/bash
+docker-compose run --service-ports scala-lang bundle exec htmlproofer ./_site/ --only-4xx --empty-alt-ignore --allow-hash-href --disable-external
