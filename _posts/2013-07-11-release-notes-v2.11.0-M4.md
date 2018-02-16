@@ -18,7 +18,7 @@ It brings the following [goodness](https://github.com/scala/scala/issues?directi
 - other [bug fixes](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+resolution+%3D+fixed+AND+fixVersion+%3D+%22Scala+2.11.0-M4%22+ORDER+BY+key+ASC%2C+priority+DESC)
 - a growing number of contributions -- thank you!
 
-We're working on an [overview of the Scala 2.11 release](http://docs.scala-lang.org/scala/2.11/) -- [PRs](https://github.com/scala/scala/blob/gh-pages/2.11/index.markdown) welcome!
+We're working on an [overview of the Scala 2.11 release](https://web.archive.org/web/20170623002210/http://docs.scala-lang.org/scala/2.11/) -- [PRs](https://github.com/scala/scala/blob/gh-pages/2.11/index.markdown) welcome!
 
 ### Coming up
 For the [next milestone](https://github.com/scala/scala/issues?milestone=20&state=open), slated for mid August, we're working on:
@@ -38,6 +38,6 @@ Please point your Eclipse 4.2/4.3 at http://scala-ide.org/ to update to the late
 For more info, please see [the getting started guide](http://scala-ide.org/docs/user/gettingstarted.html).
 
 ### Binary compatibility
-Note that this release is not binary compatible with the 2.10.x series, so you will need to obtain a fresh build of your dependencies against this version. 
+Note that this release is not binary compatible with the 2.10.x series, so you will need to obtain a fresh build of your dependencies against this version.
 
 [@cunei](https://github.com/cunei) is working on a tool to solve this problem. The current version already builds akka, genjavadoc, sbinary, sbt, sbt-full-library, sbt-republish, scala, scala-arm, scala-stm, scalabuff, scalacheck, scalatest, scalaz, shapeless, specs2, sperformance, zeromq-scala-binding, zinc.

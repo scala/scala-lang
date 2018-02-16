@@ -5,7 +5,7 @@ by: Julien Richard-Foy
 title: Tribulations of CanBuildFrom
 ---
 
-[`CanBuildFrom`](/api/2.12.2/scala/collection/generic/CanBuildFrom.html) is probably the most
+[`CanBuildFrom`](https://scala-lang.org/api/2.12.2/scala/collection/generic/CanBuildFrom.html) is probably the most
 infamous abstraction of the current collections. It is mainly criticised for making scary type
 signatures.
 
@@ -38,8 +38,8 @@ res2: String = FOO
 
 This feature is not limited to the `map` method: `flatMap`, `collect`, `concat` and a few
 others also work the same. Moreover, `String` is not the only
-collection type that needs this feature: [`BitSet`](/api/2.12.2/index.html?search=bitset)
-and [`Map`](/api/2.12.2/index.html?search=map) are other examples.
+collection type that needs this feature: [`BitSet`](https://scala-lang.org/api/2.12.2/index.html?search=bitset)
+and [`Map`](https://scala-lang.org/api/2.12.2/index.html?search=map) are other examples.
 
 The current collections rely on `CanBuildFrom` to implement this feature. The `map`
 method is defined as follows:
