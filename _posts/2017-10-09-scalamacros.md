@@ -282,7 +282,7 @@ I am honored to take the lead from your solid guidance.
 I look forward to continuing our fruitful collaboration and I hope we, together
 as a community, can stand up to the challenge to complete this project to end.
 
-[Scalameta AST]: https://github.com/scalamacros/scalamacros/blob/master/core/src/main/scala/scala/macros/trees/Trees.scala
+[Scalameta AST]: https://github.com/scalacenter/macros/blob/v0.0.1/core/src/main/scala/scala/macros/trees/Trees.scala
 [Scalameta]: https://infoscience.epfl.ch/search?ln=en&p=Burmako%2C+Eugene&jrec=1&f=author
 [papers]: https://infoscience.epfl.ch/search?ln=en&p=Burmako%2C+Eugene&jrec=1&f=author
 [thesis]: https://infoscience.epfl.ch/record/226166/files/EPFL_TH7159.pdf
