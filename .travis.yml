@@ -13,7 +13,7 @@ env: BUNDLE_PATH=bundle-vendor/bundle
 # will kick in and use `vendor`, ignoring our BUNDLE_PATH
 # declaration in `.bundle/config`
 install:
-- bundle update jekyll  
+- bundle update jekyll
 - bundle install
 
 script:
@@ -22,3 +22,4 @@ script:
 - ( ! grep -qie Error -e Warn error.log )
 - find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \)
 - find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \) | ( ! read )
+- bundle exec htmlproofer ./_site/ --only-4xx --empty-alt-ignore --allow-hash-href
