@@ -16,7 +16,7 @@ It brings the following [goodness](https://github.com/scala/scala/issues?milesto
 
 Full details can be found on [GitHub](https://github.com/scala/scala/releases/v2.11.0-M7).
 
-We're working on an [overview of the Scala 2.11 release](http://docs.scala-lang.org/scala/2.11/) -- [PRs](https://github.com/scala/scala/blob/gh-pages/2.11/index.markdown) welcome!
+We're working on an [overview of the Scala 2.11 release](https://web.archive.org/web/20170623002210/http://docs.scala-lang.org/scala/2.11/) -- [PRs](https://github.com/scala/scala/blob/gh-pages/2.11/index.markdown) welcome!
 
 ## Known issues
 Scala compiler artifact (due to scaladoc) depends on the previous version (2.11.0-M6) of `scala-xml` and `scala-parser-combinators` modules.

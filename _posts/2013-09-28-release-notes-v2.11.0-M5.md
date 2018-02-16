@@ -13,7 +13,7 @@ It brings the following [goodness](https://github.com/scala/scala/issues?directi
 - improvements to stacktrace printing in REPL by [@som-snytt](https://github.com/som-snytt) and [@qerub](https://github.com/qerub) ([#2877](https://github.com/scala/scala/pull/2877) and [#2824](https://github.com/scala/scala/pull/2824))
 - clarification of Scala license ([#2881](https://github.com/scala/scala/pull/2881))
 
-We're working on an [overview of the Scala 2.11 release](http://docs.scala-lang.org/scala/2.11/) -- [PRs](https://github.com/scala/scala/blob/gh-pages/2.11/index.markdown) welcome!
+We're working on an [overview of the Scala 2.11 release](https://web.archive.org/web/20170623002210/http://docs.scala-lang.org/scala/2.11/) -- [PRs](https://github.com/scala/scala/blob/gh-pages/2.11/index.markdown) welcome!
 
 ## License clarification
 Scala was released with slightly modified variant of 3-clause BSD license. The fact that this is not exactly 3-clause BSD license was causing problems for people adopting Scala because they would have to go through legal process that approves a new license in their organization.

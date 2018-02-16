@@ -5,6 +5,7 @@ gem 'kramdown'
 gem 'rack-jekyll'
 gem 'rake'
 gem 'jekyll-redirect-from'
+gem 'html-proofer'
 
 # group :jekyll_plugins do
 #   gem 'hawkins'

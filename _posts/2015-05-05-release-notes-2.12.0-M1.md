@@ -38,7 +38,7 @@ The following changes are planned for Scala 2.12:
 * New backend and optimizer.
   The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
   Scala 2.12 will also ship with a new inliner and bytecode optimizer.
-  We keep track of issues and work items for the new optimizer on the [scala-opt repository issue tracker](https://github.com/scala-opt/scala/issues).
+  We keep track of issues and work items for the new optimizer on the scala-opt repository issue tracker.
 
 The above list is incomplete and will be extended during the Scala 2.12 milestone cycle.
 
@@ -117,7 +117,7 @@ A release of the Scala IDE for Eclipse for Scala 2.12 will be available together
 Note that for the current milestone (2.12.0-M1), the Scala IDE is not yet available.
 
 <!-- Notes from 2.11.0
-The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is [available from this update site](https://web.archive.org/web/20151026064959/http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 -->
 
 

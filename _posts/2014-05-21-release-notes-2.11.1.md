@@ -87,7 +87,7 @@ Please [file any bugs you encounter](https://issues.scala-lang.org/secure/Create
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/browse/SI-6267?jql=project%20%3D%20SI%20AND%20%28fixVersion%20is%20empty%20or%20fixVersion%20%3E%20%22Scala%202.11.1%22%29%20AND%20affectedVersion%20in%20%28%22Scala%202.11.0%22%2C%20%22Scala%202.11.1%22%29%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is [available from this update site](https://web.archive.org/web/20151026064959/http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 
 ### Available projects
@@ -169,7 +169,7 @@ Here's how we recommend handling this in sbt 0.13. For the full build and Maven 
     }
 
 ### Important changes
-For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizeable number of open source projects](https://github.com/scala/community-builds/blob/2.11.x/common.conf#L20). 
+For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizeable number of open source projects](https://github.com/scala/community-builds/blob/2.11.x/common.conf#L20).
 
 Changes to the reflection API may cause breakages, but these breakages can be easily fixed in a manner that is source-compatible with Scala 2.10.x. Follow our reflection/macro changelog for [detailed instructions](http://docs.scala-lang.org/overviews/macros/changelog211.html#how_to_make_your_210x_macros_work_in_2110).
 
@@ -185,7 +185,7 @@ The following changes were made after a deprecation cycle (Thank you, [@soc](htt
 
 Finally, some notable improvements and bug fixes:
 
-* [SI-8549](https://issues.scala-lang.org/browse/SI-8549) Fix bad regression: no `serialVersionUID` field for classes annotated with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.1/index.html#scala.SerialVersionUID). The Scala standard library itself was a victim of this bug. As such, collections serialized in 2.11.0 will not be able to be deserialized in 2.11.1. This regression occurred in a failed [attempt](https://github.com/scala/scala/pull/1673) to fix a related bug in 2.10.x, [SI-6988](https://issues.scala-lang.org/browse/SI-6988), whereby classes annotated with non literal UIDS, e.g. `0L - 123L`, had no field generated. 
+* [SI-8549](https://issues.scala-lang.org/browse/SI-8549) Fix bad regression: no `serialVersionUID` field for classes annotated with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.1/index.html#scala.SerialVersionUID). The Scala standard library itself was a victim of this bug. As such, collections serialized in 2.11.0 will not be able to be deserialized in 2.11.1. This regression occurred in a failed [attempt](https://github.com/scala/scala/pull/1673) to fix a related bug in 2.10.x, [SI-6988](https://issues.scala-lang.org/browse/SI-6988), whereby classes annotated with non literal UIDS, e.g. `0L - 123L`, had no field generated.
 * [SI-7296](https://issues.scala-lang.org/browse/SI-7296) Case classes with > 22 parameters are now allowed.
 * [SI-3346](https://issues.scala-lang.org/browse/SI-3346) Implicit arguments of implicit conversions now guide type inference.
 * [SI-6240](https://issues.scala-lang.org/browse/SI-6240) Thread safety of reflection API.
@@ -222,7 +222,7 @@ We'd like to emphasize the following library deprecations:
 * [SI-3235](https://issues.scala-lang.org/browse/SI-3235) Deprecate `round` on `Int` and `Long` ([#3581](https://github.com/scala/scala/pull/3581)).
 * We are looking for maintainers to take over the following modules: [scala-swing](https://github.com/scala/scala-swing), [scala-continuations](https://github.com/scala/scala-continuations). 2.12 will not include them if no new maintainer is found.
   We will likely keep maintaining the other modules (scala-xml, scala-parser-combinators), but help is still greatly appreciated.
-  
+
 Deprecation is closely linked to source and binary compatibility. We say two versions are source compatible when they compile the same programs with the same results. Deprecation requires qualifying this statement: "assuming there are no deprecation warnings". This is what allows us to evolve the Scala platform and keep it healthy. We move slowly to guarantee smooth upgrades, but we want to keep improving as well!
 
 ### Binary Compatibility
@@ -253,4 +253,4 @@ Finally, Scala 2.11 introduces `scala-library-all` to aggregate the modules that
 
 ### License clarification
 Scala is now distributed under the standard 3-clause BSD license. Originally, the same 3-clause BSD license was adopted, but slightly reworded over the years, and the "Scala License" was born. We're now back to the standard formulation to avoid confusion.
-      
+
