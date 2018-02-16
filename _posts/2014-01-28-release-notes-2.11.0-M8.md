@@ -109,7 +109,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
 Issue(s) | Commit | Message
 --- | --- | ---
 [SI-6443](https://issues.scala-lang.org/browse/SI-6443), [SI-8143](https://issues.scala-lang.org/browse/SI-8143) | [1baf11a2bb](https://github.com/scala/scala/commit/1baf11a2bb) | <notextile>SI-8143 Fix bug with super-accessors / dependent types</notextile>
-[SI-8152](https://issues.scala-lang.org/browse/SI-8152) | [9df2dcc584](https://github.com/scala/scala/commit/9df2dcc584) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
+[SI-8152](https://issues.scala-lang.org/browse/SI-8152) | [9df2dcc584](https://github.com/scala/scala/commit/9df2dcc58439cf75420da68d4e6d9bb5504aabb4584) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
 [SI-8111](https://issues.scala-lang.org/browse/SI-8111) | [c91d373a78](https://github.com/scala/scala/commit/c91d373a78) | <notextile>SI-8111 Expand the comment with a more detailed TODO</notextile>
 [SI-8111](https://issues.scala-lang.org/browse/SI-8111) | [2c770ae31a](https://github.com/scala/scala/commit/2c770ae31a) | <notextile>SI-8111 Repair symbol owners after abandoned named-/default-args</notextile>
 [SI-7120](https://issues.scala-lang.org/browse/SI-7120), [SI-8114](https://issues.scala-lang.org/browse/SI-8114), [SI-7120](https://issues.scala-lang.org/browse/SI-7120) | [5876e8c621](https://github.com/scala/scala/commit/5876e8c621) | <notextile>[nomaster] SI-8114 Binary compat. workaround for erasure bug SI-7120</notextile>
@@ -265,7 +265,7 @@ Issue(s) | Commit | Message
 sha | Title
 ---: | ---
 [1baf11a2bb](https://github.com/scala/scala/commit/1baf11a2bb) | <notextile>SI-8143 Fix bug with super-accessors / dependent types</notextile>
-[9df2dcc584](https://github.com/scala/scala/commit/9df2dcc584) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
+[9df2dcc584](https://github.com/scala/scala/commit/9df2dcc58439cf75420da68d4e6d9bb5504aabb4584) | <notextile>[nomaster] SI-8152 Backport variance validator performance fix</notextile>
 [c91d373a78](https://github.com/scala/scala/commit/c91d373a78) | <notextile>SI-8111 Expand the comment with a more detailed TODO</notextile>
 [2c770ae31a](https://github.com/scala/scala/commit/2c770ae31a) | <notextile>SI-8111 Repair symbol owners after abandoned named-/default-args</notextile>
 [5876e8c621](https://github.com/scala/scala/commit/5876e8c621) | <notextile>[nomaster] SI-8114 Binary compat. workaround for erasure bug SI-7120</notextile>
@@ -556,4 +556,4 @@ sha | Title
 [0f9c1e7a9a](https://github.com/scala/scala/commit/0f9c1e7a9a) | <notextile>SI-7280 Remove unneccesary method</notextile>
 
 
-      
+
