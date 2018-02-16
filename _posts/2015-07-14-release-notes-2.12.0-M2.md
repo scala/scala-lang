@@ -74,7 +74,7 @@ As of M2, the following optimizations are available:
 * If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
 * Dead code elimination and a small number of cleanup optimizations
 
-The work on the new optimizer is still ongoing.  You can track it in the [scala-opt repository issue tracker](https://github.com/scala-opt/scala/issues).
+The work on the new optimizer is still ongoing.  You can track it in the scala-opt repository issue tracker.
 
 ### Unbundled features
 
