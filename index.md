@@ -12,7 +12,7 @@ gettingStarted:
   mainTitle: "Download"
   mainUrl: "/download"
   subtitle: "Getting Started"
-  subtitleLink: "/documentation/getting-started.html"
+  subtitleLink: "https://docs.scala-lang.org/getting-started.html"
   links:
     - title: "Milestones, nightlies, etc."
       url: "/download/index.html#other-releases"
