@@ -1,7 +1,6 @@
 version: "2"
 services:
   scala-lang:
-    command: jekyll serve --incremental
     image: jekyll/jekyll:latest
     volumes:
       - $PWD:/srv/jekyll
