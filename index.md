@@ -27,7 +27,7 @@ apiDocs:
     - title: "API Docs (other versions)"
       url: "https://scala-lang.org/files/archive/api/"
     - title: "Scala Documentation"
-      url: "/documentation/"
+      url: "https://docs.scala-lang.org/"
     - title: "Language Specification"
       url: "https://scala-lang.org/files/archive/spec/2.12/"
 
