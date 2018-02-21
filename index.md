@@ -12,7 +12,7 @@ gettingStarted:
   mainTitle: "Download"
   mainUrl: "/download"
   subtitle: "Getting Started"
-  subtitleLink: "/documentation/getting-started.html"
+  subtitleLink: "https://docs.scala-lang.org/getting-started.html"
   links:
     - title: "Milestones, nightlies, etc."
       url: "/download/index.html#other-releases"
@@ -27,7 +27,7 @@ apiDocs:
     - title: "API Docs (other versions)"
       url: "https://scala-lang.org/files/archive/api/"
     - title: "Scala Documentation"
-      url: "/documentation/"
+      url: "https://docs.scala-lang.org/"
     - title: "Language Specification"
       url: "https://scala-lang.org/files/archive/spec/2.12/"
 
