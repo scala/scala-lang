@@ -2,7 +2,7 @@
 
 This repository contains the source for [scala-lang.org](http://scala-lang.org).
 
-It does not contain the source for the [docs.scala-lang.org](http://docs.scala-lang.org) subdomain. You can visit the [docs.scala-lang repo](https://github.com/scala/docs.scala-lang) if you are interested in contributing to the Scala documentation site.
+It does not contain the source for the [docs.scala-lang.org](http://docs.scala-lang.org) subdomain. You can visit the [docs.scala-lang repository](https://github.com/scala/docs.scala-lang) if you are interested in contributing to the Scala documentation site.
 
 ## Dependencies
 
@@ -53,7 +53,7 @@ You can use these fields in the YAML front matter later in your document. For ex
 
 `# {{ page.title }}` would be rendered in HTML as, `<h1>My page title</h1>`.
 
-### Recomended Markdown Editor
+### Recommended Markdown Editor
 
 [Visual Studio Code](https://github.com/Microsoft/vscode) has great support for Scala, Git, and Markdown.
 
