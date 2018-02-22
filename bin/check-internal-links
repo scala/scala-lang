@@ -1,2 +1,3 @@
 #!/bin/bash
+command -v docker-compose >/dev/null 2>&1 || { echo >&2 "Please install Docker Compose: https://docs.docker.com/compose/install/"; exit 1; }
 docker-compose run --service-ports scala-lang bundle exec htmlproofer ./_site/ --only-4xx --empty-alt-ignore --allow-hash-href --disable-external
