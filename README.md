@@ -63,7 +63,7 @@ The least error-prone way to make links is to use this format: `[link text]({{ s
 
 `{{ site.baseurl }}` is a site-wide variable that represents the root directory of the static site. So, to display the Scala logo image you can simply write: `![Img alt text]({{ site.baseurl }}/resources/img/scala-logo.png)`
 
-### Permalinks
+### Permalinks
 
 We trie to follow a [pretty permalink](https://jekyllrb.com/docs/permalinks/) style, so that any generated page will have a link finishing in a slash character (`/`). This will tell Jekyll to build that particular page as an `index.html` inside a folder with a name as specified in the provided permalink. i.e.: if a page has a permalink as follows:
 
@@ -71,7 +71,7 @@ We trie to follow a [pretty permalink](https://jekyllrb.com/docs/permalinks/) st
 
 This will tell Jekyll to create a `what-is-scala` directory, with an `index.html` file inside. Links to this page will refer to the `{{site.baseurl}}/what-is-scala/`.
 
-### Custom collections and data
+### Custom collections and data
 
 Every [collection](https://jekyllrb.com/docs/collections/) is a directory starting with an underscore character (`_`), containing a Markdown file for each member of the collection. These Markdown files start with a YAML front matter containing the data for this item, and can optionally contain markdown text to be rendered as html.
 
