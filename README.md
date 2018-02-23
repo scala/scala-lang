@@ -65,7 +65,7 @@ The least error-prone way to make links is to use this format: `[link text]({{ s
 
 ### Permalinks
 
-We trie to follow a [pretty permalink](https://jekyllrb.com/docs/permalinks/) style, so that any generated page will have a link finishing in a slash character (`/`). This will tell Jekyll to build that particular page as an `index.html` inside a folder with a name as specified in the provided permalink. i.e.: if a page has a permalink as follows:
+We try to follow a [pretty permalink](https://jekyllrb.com/docs/permalinks/) style, so that any generated page will have a link finishing in a slash character (`/`). This will tell Jekyll to build that particular page as an `index.html` inside a folder with a name as specified in the provided permalink. i.e.: if a page has a permalink as follows:
 
 `permalink: /what-is-scala/`
 
