@@ -2,7 +2,7 @@
   class: documentation
   links:
     - title: Getting Started
-      url: "/documentation/getting-started.html"
+      url: "https://docs.scala-lang.org/getting-started.html"
     - title: API
       url: "https://www.scala-lang.org/api/current/index.html"
     - title: Overviews/Guides
