@@ -13,7 +13,8 @@ on an [Open edX instance managed at EPFL](https://courseware.epfl.ch).
 
 The content of the courses remains the same as the ones on
 [Coursera](https://www.coursera.org/specializations/scala). The differences
-are that our platform is free to use and doesn’t deliver certificates.
+are that our platform is free to use and doesn’t deliver certificates (official credentials
+that confirm that you successfully completed a course).
 
 As a reminder, the courses are the following:
 
