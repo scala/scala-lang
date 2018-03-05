@@ -2,8 +2,8 @@
 layout: frontpage
 
 # Header texts
-headerTitle: "Object-Oriented Meets Functional"
-headerSubtitle: "Have the best of both worlds. Construct elegant class hierarchies for maximum code reuse and extensibility, implement their behavior using higher-order functions. Or anything in-between."
+headerTitle: "The Scala Programming Language"
+headerSubtitle: "Scala is a typed high-level programming language. Scala's compiler helps you avoid bugs when writing complex applications, and it's runtime is suitable for building efficient, high-performance systems."
 headerButtonTitle: "Learn More"
 headerButtonUrl: "/what-is-scala/"
 
