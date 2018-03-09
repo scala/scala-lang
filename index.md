@@ -3,7 +3,7 @@ layout: frontpage
 
 # Header texts
 headerTitle: "The Scala Programming Language"
-headerSubtitle: "Scala is a concise high-level programming language. Scala's compiler helps you avoid bugs when writing complex applications, and its fast runtime lets you build building efficient, high-performance systems."
+headerSubtitle: "Scala is a concise high-level programming language. Scala's compiler helps you avoid bugs when writing complex applications, its fast runtime lets you build building efficient, high-performance systems, with easy access to a huge ecosystem of library"
 headerButtonTitle: "Learn More"
 headerButtonUrl: "/what-is-scala/"
 
