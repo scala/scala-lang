@@ -34,8 +34,8 @@ able to see through a small window into his great—and now sadly lost—intelle
 It is a reminder how easy it is for many of us take our experience of
 programming for granted: we can quickly glance over source code or compiler
 errors on our screens to spot bugs or understand functionality. For blind
-programmers, the screen is replaced by a text-to-speech system, which linearly
-renders source code and error messages as spoken text.
+programmers, the screen is usually replaced by a text-to-speech system, which
+linearly renders source code and error messages as spoken text.
 
 Unfortunately, for a language like Scala, that audible representation is
 presented very verbosely, and can be painful to use. An engine such as "espeak"
@@ -65,10 +65,13 @@ The Scala Center will work towards making Scala more accessible. This effort
 has already received some open-source contributions, and the Scala Center will
 work hard to ensure that these contributions are seen through to completion, as
 we experiment with effective ways to improve the output from the compiler
-through a screenreader. This also presents an interesting area of research for
-improving the ergonomics of programming in an advanced statically-typed
-language for blind and partially-sighted users, which is by no means a "solved
-problem", and offers much room for improvement.
+through a screenreader. This work will be not be tied to any particular
+choice of screenreader technology or editor.
+
+This also presents an interesting area of research for improving the ergonomics
+of programming in an advanced statically-typed language for blind and
+partially-sighted users, which is by no means a "solved problem", and offers
+much room for improvement.
 
 
 Most of the work the Scala Center does contributes small differences to the
