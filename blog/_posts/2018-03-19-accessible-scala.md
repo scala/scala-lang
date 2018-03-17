@@ -22,20 +22,20 @@ of his daily life.
 The other thing I observed was the ergonomics of Prof Hawking's computer, as I
 stood alongside him and watched him slowly compose sentences, before completing
 them, and having them spoken. Presented with a monochrome screen with
-alternating selections of words, he had no greater ability than to synchronize
-several clicks of the computer's one button to select one word at a time to
-append it to a sentence he gradually built up. It felt frustratingly slow for
-the rest of us, all too accustomed to the ease of speech, but for him it was an
-enabler through which he was able to make huge contributions to scientific
-research, and through which the rest of us were able to see through a small
-window into his great—and now sadly lost—intellect.
+alternating selections of words, he had no greater physical cability than to
+synchronize several clicks of the computer's single button to select one word
+at a time and append it to a sentence he gradually built up. It felt
+frustratingly slow for the rest of us, all too accustomed to the ease of
+speech, but for him it was an enabler through which he was able to make huge
+contributions to scientific research, and through which the rest of us were
+able to see through a small window into his great—and now sadly lost—intellect.
 
 
 It is a reminder how easy it is for many of us take our experience of
 programming for granted: we can quickly glance over source code or compiler
 errors on our screens to spot bugs or understand functionality. For blind
 programmers, the screen is replaced by a text-to-speech system, which linearly
-renders source code and error messages, as spoken text.
+renders source code and error messages as spoken text.
 
 Unfortunately, for a language like Scala, that audible representation is
 presented very verbosely, and can be painful to use. An engine such as "espeak"
@@ -81,9 +81,6 @@ to be seen as a language which rightly knows the importance of supporting *all*
 its users, regardless of physical disability; to make it easier, in particular,
 for blind and partially-sighted people to become Scala developers, working
 productively alongside sighted developers, and having the greatest opportunity
-possible to share their valuable contributions to the field of software
+possible to share their valuable contributions in the field of software
 development.
-
-
-
 
