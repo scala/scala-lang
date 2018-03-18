@@ -22,7 +22,7 @@ of his daily life.
 The other thing I observed was the ergonomics of Prof Hawking's computer, as I
 stood alongside him and watched him slowly compose sentences, before completing
 them, and having them spoken. Presented with a monochrome screen with
-alternating selections of words, he had no greater physical cability than to
+alternating selections of words, he had no greater physical capability than to
 synchronize several clicks of the computer's single button to select one word
 at a time and append it to a sentence he gradually built up. It felt
 frustratingly slow for the rest of us, all too accustomed to the ease of
@@ -31,7 +31,7 @@ contributions to scientific research, and through which the rest of us were
 able to see through a small window into his great—and now sadly lost—intellect.
 
 
-It is a reminder how easy it is for many of us take our experience of
+It is a reminder how easy it is for many of us to take our experience of
 programming for granted: we can quickly glance over source code or compiler
 errors on our screens to spot bugs or understand functionality. For blind
 programmers, the screen is usually replaced by a text-to-speech system, which
@@ -55,11 +55,16 @@ type a context bar
 from s string to int
 ```
 
-During the Scala Center Advisory Board last week, a proposal authored and
-strongly advocated by Sam Halliday, with help from Rui Batista, was accepted as
-a recommendation by the board, with a unanimously positive vote from all the
-members, including 47 Degrees, IBM, Goldman Sachs, Lightbend, Morgan Stanley,
-SAP, Twitter and Verizon.
+During the [Scala Center](https://scala.epfl.ch/) Advisory Board last week, a
+proposal authored and strongly advocated by [Sam
+Halliday](https://github.com/fommil), with help from [Rui
+Batista](https://github.com/ragb), was accepted as a recommendation by the
+board, with a unanimously positive vote from all the members, including [47
+Degrees](https://www.47deg.com/), [IBM](https://www.ibm.com/us-en/), [Goldman
+Sachs](http://www.goldmansachs.com/), [Lightbend](https://www.lightbend.com/),
+[Morgan Stanley](https://www.morganstanley.com/), [SAP](https://www.sap.com/),
+[Twitter](https://about.twitter.com/) and
+[Verizon](https://www.verizon.com/about/).
 
 The Scala Center will work towards making Scala more accessible. This effort
 has already received some open-source contributions, and the Scala Center will
@@ -79,11 +84,10 @@ lives of many developers in the Scala community. This proposal is different in
 that it provides a potentially enormous difference to the experience of
 programming in Scala to a small number of users.
 
-But more than that, it sends a signal of our intent for inclusivity; for Scala
-to be seen as a language which rightly knows the importance of supporting *all*
-its users, regardless of physical disability; to make it easier, in particular,
-for blind and partially-sighted people to become Scala developers, working
-productively alongside sighted developers, and having the greatest opportunity
-possible to share their valuable contributions in the field of software
-development.
+But more than that, it enforces our goal of inclusivity; that Scala is a
+language which rightly knows the importance of supporting *all* its users,
+regardless of physical disability; to make it easier, in particular, for blind
+and partially-sighted people to become Scala developers, working productively
+alongside sighted developers, and having the greatest opportunity possible to
+share their valuable contributions in the field of software development.
 
