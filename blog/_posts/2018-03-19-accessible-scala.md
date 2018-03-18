@@ -84,7 +84,7 @@ lives of many developers in the Scala community. This proposal is different in
 that it provides a potentially enormous difference to the experience of
 programming in Scala to a small number of users.
 
-But more than that, it enforces our goal of inclusivity; that Scala is a
+But more than that, it furthers our goal of inclusivity; that Scala is a
 language which rightly knows the importance of supporting *all* its users,
 regardless of physical disability; to make it easier, in particular, for blind
 and partially-sighted people to become Scala developers, working productively
