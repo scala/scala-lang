@@ -64,7 +64,7 @@ Degrees](https://www.47deg.com/), [IBM](https://www.ibm.com/us-en/), [Goldman
 Sachs](http://www.goldmansachs.com/), [Lightbend](https://www.lightbend.com/),
 [Morgan Stanley](https://www.morganstanley.com/), [SAP](https://www.sap.com/),
 [Twitter](https://about.twitter.com/) and
-[Verizon](https://www.verizon.com/about/). The proposal is named "[SCP-016: Accessible Scala](https://github.com/scalacenter/advisoryboard/blob/master/proposals/016-verbal-descriptions.md)".
+[Verizon](https://www.verizon.com/about/).
 
 The Scala Center will work towards making Scala more accessible. This effort
 has already received some open-source contributions, and the Scala Center will
@@ -91,3 +91,4 @@ and partially-sighted people to become Scala developers, working productively
 alongside sighted developers, and having the greatest opportunity possible to
 share their valuable contributions in the field of software development.
 
+Read more about this proposal here: **"[SCP-016: Accessible Scala](https://github.com/scalacenter/advisoryboard/blob/master/proposals/016-verbal-descriptions.md)"**.
