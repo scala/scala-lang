@@ -57,7 +57,7 @@ from s string to int
 
 During the [Scala Center](https://scala.epfl.ch/) Advisory Board last week, a
 proposal authored and strongly advocated by [Sam
-Halliday](https://github.com/fommil), with help from [Rui
+Halliday](https://gitlab.com/fommil), with help from [Rui
 Batista](https://github.com/ragb), was accepted as a recommendation by the
 board, with a unanimously positive vote from all the members, including [47
 Degrees](https://www.47deg.com/), [IBM](https://www.ibm.com/us-en/), [Goldman
