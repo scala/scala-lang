@@ -91,3 +91,4 @@ and partially-sighted people to become Scala developers, working productively
 alongside sighted developers, and having the greatest opportunity possible to
 share their valuable contributions in the field of software development.
 
+Read this proposal here: **"[SCP-016: Accessible Scala](https://github.com/scalacenter/advisoryboard/blob/master/proposals/016-verbal-descriptions.md)"**.
