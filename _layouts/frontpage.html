@@ -104,33 +104,6 @@
   </div>
 </section>
 
-<!-- IDEs for Scala -->
-<section class="ides">
-  <div class="wrap">
-    <div class="heading-line">
-      <h2><span>IDEs for Scala</span></h2>
-    </div>
-    <ul>
-      {% for ide in page.scalaIDEs %}
-      <li>
-        <a {% if ide.ensime == true %}class="masterTooltip" title="{{site.data.common.texts.ensimeSupportedInIDE}}"{% endif %} href="{{ide.url}}" target="_blank">
-          {% if ide.ensime == true %}
-            <span class="bullet">
-              <img src="/resources/img/frontpage/icon-ensime.png" alt="">
-            </span>
-          {% endif %}
-          <img src="{{ide.icon}}" alt="{{ide.name}}">
-          <span>{{ide.name}}</span>
-        </a>
-      </li>
-        {% unless forloop.last %}
-          <li></li>
-        {% endunless %}
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
 <!-- Scala in a Nutshell -->
 <section class="nutshell">
   <div class="wrap">
@@ -169,6 +142,33 @@
       <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle}}</a>
       <p class="align-bottom">or visit the <a href="/documentation/">Scala Documentation</a></p>
     </div>
+  </div>
+</section>
+
+<!-- IDEs for Scala -->
+<section class="ides">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>IDEs for Scala</span></h2>
+    </div>
+    <ul>
+      {% for ide in page.scalaIDEs %}
+      <li>
+        <a {% if ide.ensime == true %}class="masterTooltip" title="{{site.data.common.texts.ensimeSupportedInIDE}}"{% endif %} href="{{ide.url}}" target="_blank">
+          {% if ide.ensime == true %}
+            <span class="bullet">
+              <img src="/resources/img/frontpage/icon-ensime.png" alt="">
+            </span>
+          {% endif %}
+          <img src="{{ide.icon}}" alt="{{ide.name}}">
+          <span>{{ide.name}}</span>
+        </a>
+      </li>
+        {% unless forloop.last %}
+          <li></li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
