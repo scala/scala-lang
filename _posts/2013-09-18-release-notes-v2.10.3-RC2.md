@@ -267,7 +267,7 @@ sha | Title
 [0c752d7](https://github.com/scala/scala/commit/0c752d7) | <notextile>Less noise on a partest failure.</notextile>
 [2285493](https://github.com/scala/scala/commit/2285493) | <notextile>SI-7344 Specialize methods in private scopes</notextile>
 [e7ac254](https://github.com/scala/scala/commit/e7ac254) | <notextile>SI-7571 Allow nesting of anonymous classes in value classes</notextile>
-[d2c5324](https://github.com/scala/scala/commit/d2c5324) | <notextile>Refactoring to the scala-concurrent-tck.scala   - there were numerous logical is</notextile>
+[d2c5324](https://github.com/scala/scala/commit/d2c5324cfdc5a06a848d7001963a3f465e34beb8) | <notextile>Refactoring to the scala-concurrent-tck.scala   - there were numerous logical is</notextile>
 [da54f34](https://github.com/scala/scala/commit/da54f34) | <notextile>Cleaning up method implementations in Future     Optimizations:     1) Avoiding </notextile>
 [c43b504](https://github.com/scala/scala/commit/c43b504) | <notextile>SI-7343 Fixed phase ordering in specialization</notextile>
 [c0ba5eb](https://github.com/scala/scala/commit/c0ba5eb) | <notextile>Removed redundant `retypedMethod` in `Duplicators`</notextile>
