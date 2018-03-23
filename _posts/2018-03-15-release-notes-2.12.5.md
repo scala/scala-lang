@@ -16,6 +16,6 @@ The [full release notes](https://github.com/scala/scala/releases/tag/v2.12.5) ar
 
 ## Known issues
 
-There is a regression since 2.12.4 when compiling code on Java 9 that uses macros. Running on Java 9 isn’t affected, only compiling. Details: https://github.com/scala/scala-dev#480
+There is a regression since 2.12.4 when compiling code on Java 9 or 10 that uses macros. Running on Java 9 or 10 isn’t affected, only compiling. Details: https://github.com/scala/scala-dev#480
 
 There is no workaround. You must either compile on Java 8 or wait for 2.12.6.
