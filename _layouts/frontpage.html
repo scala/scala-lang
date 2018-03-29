@@ -96,11 +96,11 @@
         <span>
         <a href="{{backend.link}}"><img src="{{backend.icon}}" alt="{{backend.description}}"></a>
         </span>
+        {% if backend.beta == 1 %}<span class="beta">beta</span>{% endif %}
       </li>
       {% unless forloop.last %}<li></li>{% endunless %}
       {% endfor %}
     </ul>
-    <p><span>- {{site.data.common.texts.scalaBackendsMore}} -</span></p>
   </div>
 </section>
 

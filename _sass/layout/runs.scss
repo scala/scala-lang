@@ -18,7 +18,8 @@
             @include align-items(center);
             @include justify-content(center);
             margin-top: 30px;
-            li:nth-child(2) {
+            li:nth-child(2),
+            li:nth-child(4) {
               height: 100px;
               width: 1px;
              background: $base-border-color-white;
@@ -26,7 +27,8 @@
               margin-right: 36px;
             }
             li:nth-child(1),
-            li:nth-child(3) {
+            li:nth-child(3),
+            li:nth-child(5) {
 
                 @include border-radius(100%);
                 @include display(flex);
@@ -48,6 +50,19 @@
                         opacity: 0.3;
                         transition: $base-transition;
                     }
+                }
+                .beta {
+                  background-color: white;
+                  border-radius: 0 !important;
+                  padding: 0.1em 0.3em;
+                  font-style: italic;
+                  color: #15414C;
+                  font-size: 0.8em;
+                  line-height: 1em;
+                  position: absolute;
+                  margin-top: 56px;
+                  margin-left: 56px;
+                  opacity: 0.4;
                 }
 
                 &:hover {
