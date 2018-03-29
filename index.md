@@ -40,6 +40,10 @@ scalaBackends:
   - icon: /resources/img/frontpage/js-logo.png
     description: JavaScript in your browser
     link: https://www.scala-js.org/
+  - icon: /resources/img/frontpage/llvm-logo.png
+    description: Natively with LLVM
+    link: https://scala-native.readthedocs.io/
+    beta: 1
 
 # Scala IDEs
 scalaIDEs:
