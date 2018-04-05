@@ -340,7 +340,7 @@ dc3fa0a | <notextile>if starr.use.released fetch Scala ${starr.version} for STAR
 [ba21f36](https://github.com/scala/scala/commit/ba21f36) | <notextile>Use java-diff-utils for diffing in partest.</notextile>
 [3ec36bb](https://github.com/scala/scala/commit/3ec36bb) | <notextile>Clean up pack targets. Better dependency tracking.</notextile>
 [dc5326c](https://github.com/scala/scala/commit/dc5326c) | <notextile>ant clean only zaps the quick stage</notextile>
-[c2da1c5](https://github.com/scala/scala/commit/c2da1c5) | <notextile>Run test.scaladoc before test.suite. Fail fast.</notextile>
+[c2da1c505](https://github.com/scala/scala/commit/c2da1c505) | <notextile>Run test.scaladoc before test.suite. Fail fast.</notextile>
 [c5511de](https://github.com/scala/scala/commit/c5511de) | <notextile>Let continuations library sources determine docs.lib's actuality</notextile>
 [88b7a72](https://github.com/scala/scala/commit/88b7a72) | <notextile>Preparation for faster PR validation</notextile>
 [ac1a0f0](https://github.com/scala/scala/commit/ac1a0f0) | <notextile>Remove duplication in java builds of fjbg/asm/forkjoin</notextile>
