@@ -30,12 +30,12 @@ the SIP. The two SIPs which received numbers (first-round accepted) include:
 Two other passed their first iteration as proposed by [the new
 process](http://docs.scala-lang.org/sips/sip-submission.html):
 
-* **[SIP-25 Trait Parameters](http://docs.scala-lang.org/sips/pending/trait-parameters.html)**, Reviewer: Adriaan Moors ([review comments](https://github.com/scala/scala.github.com/pull/428#issuecomment-233401911))
-* **[SIP-20 Improved Lazy Val Initialization](http://docs.scala-lang.org/sips/pending/improved-lazy-val-initialization.html)**, Reviewer: Sébastien Doeraene ([review comments](https://github.com/scala/scala.github.com/pull/206#issuecomment-232939781))
+* **[SIP-25 Trait Parameters](https://docs.scala-lang.org/sips/trait-parameters.html)**, Reviewer: Adriaan Moors ([review comments](https://github.com/scala/scala.github.com/pull/428#issuecomment-233401911))
+* **[SIP-20 Improved Lazy Val Initialization](https://docs.scala-lang.org/sips/improved-lazy-val-initialization.html)**, Reviewer: Sébastien Doeraene ([review comments](https://github.com/scala/scala.github.com/pull/206#issuecomment-232939781))
 
 The final SIP discussed one was postponed at the request of the authors:
 
-* **[SIP-22 Async](http://docs.scala-lang.org/sips/pending/async.html)**, Reviewer: Eugene Burmako ([review comments](https://github.com/scala/scala.github.com/pull/213#issuecomment-232940053))
+* **[SIP-22 Async](https://docs.scala-lang.org/sips/async.html)**, Reviewer: Eugene Burmako ([review comments](https://github.com/scala/scala.github.com/pull/213#issuecomment-232940053))
 
 In the case of SIP-22, the authors will reopen it when they feel like taking up
 the proposal again, and addressing the issues they must look into next; in

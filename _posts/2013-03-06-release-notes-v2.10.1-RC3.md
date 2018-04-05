@@ -38,7 +38,7 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
     * The implicit modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
 
-    * [http://docs.scala-lang.org/sips/pending/implicit-classes.html](http://docs.scala-lang.org/sips/pending/implicit-classes.html)
+    * [https://docs.scala-lang.org/sips/implicit-classes.html](https://docs.scala-lang.org/sips/implicit-classes.html)
 * String Interpolation
 
     * `val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")`
@@ -53,7 +53,7 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
     * `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
 
-    * [http://docs.scala-lang.org/sips/pending/type-dynamic.html](http://docs.scala-lang.org/sips/pending/type-dynamic.html)
+    * [https://docs.scala-lang.org/sips/type-dynamic.html](https://docs.scala-lang.org/sips/type-dynamic.html)
 * Dependent method types:
 
     * `def identity(x: AnyRef): x.type = x` // the return type says we return exactly what we got
@@ -80,7 +80,7 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
     * Get on top of the advanced Scala features used in your codebase by explicitly importing them.
 
-    * [http://docs.scala-lang.org/sips/pending/modularizing-language-features.html](http://docs.scala-lang.org/sips/pending/modularizing-language-features.html)
+    * [https://docs.scala-lang.org/sips/modularizing-language-features.html](https://docs.scala-lang.org/sips/modularizing-language-features.html)
 * Parallel Collections are now configurable with custom thread pools
 
     * [http://docs.scala-lang.org/overviews/parallel-collections/overview.html](http://docs.scala-lang.org/overviews/parallel-collections/overview.html)

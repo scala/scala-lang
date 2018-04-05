@@ -35,13 +35,13 @@ For more details, see the
 
 On October 25, the SIP committee had its monthly meeting.
 
-There were procedural issues with the previous vote on [SIP-27](http://docs.scala-lang.org/sips/pending/trailing-commas.html)
+There were procedural issues with the previous vote on [SIP-27](https://docs.scala-lang.org/sips/trailing-commas.html)
 (Trailing commas), proposed by Dale Wijnand.  That vote was canceled
 and the committee agreed on clarified voting rules.  A new vote on
 SIP-27 was held under the new rules, and the proposal was accepted,
 pending a final round of changes by Dale.
 
-Also discussed was [SIP-20](http://docs.scala-lang.org/sips/pending/improved-lazy-val-initialization.html) (Improved lazy val initialization),
+Also discussed was [SIP-20](https://docs.scala-lang.org/sips/improved-lazy-val-initialization.html) (Improved lazy val initialization),
 proposed by Dmitry Petrashko and others.  The proposal was
 marked as dormant, since it has only been implemented in Dotty.
 A volunteer is needed to implement it in the main Scala compiler.
