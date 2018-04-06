@@ -31,7 +31,7 @@ Since 2.10.2 is strictly a bug-fix release, here's an overview of the most promi
     * [http://docs.scala-lang.org/overviews/core/value-classes.html](http://docs.scala-lang.org/overviews/core/value-classes.html)
 *   Implicit Classes
     * The implicit modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
-    * [http://docs.scala-lang.org/sips/pending/implicit-classes.html](http://docs.scala-lang.org/sips/pending/implicit-classes.html)
+    * [https://docs.scala-lang.org/sips/implicit-classes.html](https://docs.scala-lang.org/sips/implicit-classes.html)
 *   String Interpolation
     * `val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")`
     * [http://docs.scala-lang.org/overviews/core/string-interpolation.html](http://docs.scala-lang.org/overviews/core/string-interpolation.html)
@@ -40,7 +40,7 @@ Since 2.10.2 is strictly a bug-fix release, here's an overview of the most promi
     * [http://docs.scala-lang.org/overviews/core/futures.html](http://docs.scala-lang.org/overviews/core/futures.html)
 *   Dynamic and applyDynamic
     * `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
-    * [http://docs.scala-lang.org/sips/pending/type-dynamic.html](http://docs.scala-lang.org/sips/pending/type-dynamic.html)
+    * [https://docs.scala-lang.org/sips/type-dynamic.html](https://docs.scala-lang.org/sips/type-dynamic.html)
 *   Dependent method types:
     * `def identity(x: AnyRef): x.type = x` // the return type says we return exactly what we got
 *   New ByteCode emitter based on ASM
@@ -56,7 +56,7 @@ Since 2.10.2 is strictly a bug-fix release, here's an overview of the most promi
     * Groups (-groups)
 *   Modularized Language features
     * Get on top of the advanced Scala features used in your codebase by explicitly importing them.
-    * [http://docs.scala-lang.org/sips/pending/modularizing-language-features.html](http://docs.scala-lang.org/sips/pending/modularizing-language-features.html)
+    * [https://docs.scala-lang.org/sips/modularizing-language-features.html](https://docs.scala-lang.org/sips/modularizing-language-features.html)
 *   Parallel Collections are now configurable with custom thread pools
     * [http://docs.scala-lang.org/overviews/parallel-collections/overview.html](http://docs.scala-lang.org/overviews/parallel-collections/overview.html)
 *   Akka Actors now part of the distribution

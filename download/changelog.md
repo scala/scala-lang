@@ -25,7 +25,7 @@ See: http://docs.scala-lang.org/overviews/core/value-classes.html
 ### Implicit Classes
 
 The `implicit` modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
-See: http://docs.scala-lang.org/sips/pending/implicit-classes.html
+See: https://docs.scala-lang.org/sips/implicit-classes.html
 
 ### String Interpolation
 
@@ -46,7 +46,7 @@ See more: http://docs.scala-lang.org/overviews/core/futures.html
 ### Dynamic and applyDynamic
 
 `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
-See: http://docs.scala-lang.org/sips/pending/type-dynamic.html
+See: https://docs.scala-lang.org/sips/type-dynamic.html
 
 ### Dependent method types
 
@@ -72,7 +72,7 @@ See: http://docs.scala-lang.org/sips/pending/type-dynamic.html
 ### Modularized Language features
 
 Get on top of the advanced Scala features used in your codebase by explicitly importing them.
-See: http://docs.scala-lang.org/sips/pending/modularizing-language-features.html
+See: https://docs.scala-lang.org/sips/modularizing-language-features.html
 
 ### Parallel Collections are now configurable with custom thread pools
 

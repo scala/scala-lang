@@ -16,7 +16,7 @@ The other two progressed and will have a follow-up iteration.
 
 The rejected proposals were:
 
--   [SIP-12: Uncluttering Scala's syntax for control structures](http://docs.scala-lang.org/sips/pending/uncluttering-control.html).
+-   [SIP-12: Uncluttering Scala's syntax for control structures](https://docs.scala-lang.org/sips/uncluttering-control.html).
     Originally proposed in 2011. The proposal suggested syntax changes
     in if's, for and while loops, moving Scala's syntax away from Java
     and C-like languages. Whereas such changes may be arguably more
@@ -38,7 +38,7 @@ The rejected proposals were:
     you're interested in Eugene's explanation, follow [this](https://github.com/scala/scala.github.com/pull/57).
 
 The two proposals that made it to the next iteration are
-[SIP-23: Literal-based singleton types](http://docs.scala-lang.org/sips/pending/42.type.html) (reviewer:
+[SIP-23: Literal-based singleton types](https://docs.scala-lang.org/sips/42.type.html) (reviewer:
 Adriaan Moors) and [SIP-27: Trailing
 Commas](https://github.com/scala/scala.github.com/pull/533#issuecomment-239422098) (reviewer:
 Eugene Burmako). The reviewers and committee members provided more feedback to
@@ -52,9 +52,9 @@ speaking up and collaborating with the process—your vibrant
 responses will greatly enrich our future deliberations.
 
 Next month, we’ll discuss five more proposals, including
-[SIP-21: Spores](http://docs.scala-lang.org/sips/pending/spores.html) and
+[SIP-21: Spores](https://docs.scala-lang.org/sips/spores.html) and
 [SIP-24: Repeated by-name
-parameters](http://docs.scala-lang.org/sips/pending/repeated-byname.html).
+parameters](https://docs.scala-lang.org/sips/repeated-byname.html).
 We hope to finish off the list of old proposals in the queue and focus
 ourselves on the most recent proposals and the ones that are to
 come!
