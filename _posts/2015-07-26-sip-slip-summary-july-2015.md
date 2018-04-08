@@ -68,7 +68,7 @@ Please direct comments to [Pull Request #417](https://github.com/scala/scala.git
 
 | Title          | Author(s)          |
 |----------------|--------------------|
-| [Extensions of Futures and Promises](https://docs.google.com/document/d/1Vza2-B3FzgtleX8RNs6rqRbhOn9jotrUfFB77h0DIGU/edit?hl=en_US#heading=h.bu8cg3api4vx) | Anton Kolmakov, Eduard Maltsev |
+| Extensions of Futures and Promises (dead link) | Anton Kolmakov, Eduard Maltsev |
 
 ### Summary
 
