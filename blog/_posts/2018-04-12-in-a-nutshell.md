@@ -1,6 +1,6 @@
 ---
 layout: blog-page
-title: Scala in a (tasty) Nutshell
+title: Scala in a (Tasty) Nutshell
 author: Martin Odersky and Nicolas Stucki
 authorImg: /images/martin.jpg
 date: 2018-03-05
