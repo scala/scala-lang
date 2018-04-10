@@ -3,7 +3,7 @@ layout: blog-page
 title: Scala in a (Tasty) Nutshell
 author: Martin Odersky and Nicolas Stucki
 authorImg: /images/martin.jpg
-date: 2018-03-05
+date: 2018-04-12
 ---
 
 One of the biggest open questions for migrating to Scala 3 is what to do about macros. In this blog post we give our current thinking, which is to try to achieve full alignment between macros and Tasty.
