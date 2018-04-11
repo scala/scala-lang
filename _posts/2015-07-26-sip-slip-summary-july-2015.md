@@ -86,7 +86,9 @@ Seeking public comment prior to August 13th meeting.
 
 ### Invitation to comment
 
-You can comment on [the proposal document](https://docs.google.com/document/d/1Vza2-B3FzgtleX8RNs6rqRbhOn9jotrUfFB77h0DIGU/edit?hl=en_US#heading=h.bu8cg3api4vx) for notes on the text provided there, or on [pull request #295](https://github.com/scala/scala.github.com/pull/295) for more general comments or concerns.
+You can comment on [pull request #295](https://github.com/scala/scala.github.com/pull/295) for more general comments or concerns.
+
+<!-- the proposal document was deleted: https://docs.google.com/document/d/1Vza2-B3FzgtleX8RNs6rqRbhOn9jotrUfFB77h0DIGU/edit?hl=en_US#heading=h.bu8cg3api4vx -->
 
 ## Backticks in String Interpolation
 
