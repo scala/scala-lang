@@ -144,7 +144,7 @@ look like. First, they will run after the typechecking phase is
 finished because that is when Tasty trees are generated and
 consumed. This means macros will be blackbox - a macro expansion
 cannot influence the type of the expanded expression as seen from the
-typechecker. A long as that constraint is satisfied we should be able
+typechecker. As long as that constraint is satisfied we should be able
 to support both `def` macros and annotation macros.
 
 For instance one could define an annotation macro `@app` that adds a
