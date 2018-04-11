@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Martin Odersky and Nicolas Stucki
-title: Scala in a (Tasty) Nutshell
+title: "Scala in a (Tasty) Nutshell"
 ---
 
 One of the biggest open questions for migrating to Scala 3 is what to
@@ -147,12 +147,12 @@ cannot influence the type of the expanded expression as seen from the
 typechecker. As long as that constraint is satisfied we should be able
 to support both `def` macros and annotation macros.
 
-For instance one could define an annotation macro `@app` that adds a
-`main` method to an object. The difference to today's "macro paradise"
-annotation macros (which are not part of the official Scala
-distributon) is that in Scala 3 the generated definitions can be seen
-only at runtime or in downstream projects, because the expansion
-driven by the annotation happens after type checking.
+For instance, one could define an annotation macro `@json` that adds a
+JSON serializers to a type. The difference to
+today's "macro paradise" annotation macros (which are not part of the
+official Scala distributon) is that in Scala 3 the generated
+serializers can be seen only in downstream projects, because the
+expansion driven by the annotation happens after type checking.
 
 We might support some forms of whitebox macros by allowing macros in
 the types themselves. These macros would be highlevel only, and would
