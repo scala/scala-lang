@@ -10,13 +10,13 @@ One of the biggest open questions for migrating to Scala 3 is what to do about m
 
 ## What is TASTY?
 
-Tasty is the high-level interchange format for Scala 3. It is based on <u>t</u>yped <u>a</u>bstract <u>s</u>yntax <u>t</u>rees. These trees contain in a sense all the information present in a Scala program. They represent the syntactic structure of programs in every detail and also contain the complete information about types and positions. The Tasty "snapshot" of a code file is taken after type checking (so that all types are present and all implicits are elaborated) but before any transformations (so that no information is lost or changed). The file representation of these trees is heavily optimized for compactness, which means that we can generate full Tasty trees on every compiler run and rely on nothing else for supporting separate compilation.
+Tasty is the high-level interchange format for Scala 3. It is based on <i>t</u>yped <i>a</u>bstract <i>s</u>yntax <i>t</u>rees. These trees contain in a sense all the information present in a Scala program. They represent the syntactic structure of programs and also contain the complete information about types and positions. The Tasty "snapshot" of a code file is taken after type checking (so that all types are present and all implicits are elaborated) but before any transformations (so that no information is lost or changed). The file representation of these trees is heavily optimized for compactness, which means that we can generate full Tasty trees on every compiler run and rely on nothing else for supporting separate compilation.
 
 The information present in TASTY trees can be used for many purposes.
 
  - The compiler uses it to support separate compilation.
  - A language server for an IDE uses it to support hyperlinking, command completion, or documentation.
- - A build tool can use it to cross-build on different platforms and migrate code from one
+ - A build tool can use it to cross-build on different platforms and migrate code from one binary
    version to another.
  - Optimizers and analyzers can use it for deep code analysis and advanced code generation
 
@@ -26,11 +26,11 @@ OK, but what is Tasty _exactly_? An up-to-date version of the Tasty file format 
 [TastyFormat.scala](https://github.com/lampepfl/dotty/blob/master/compiler/src/dotty/tools/dotc/core/tasty/TastyFormat.scala)
 of the `dotc` compiler for Scala 3.
 
-## What Does it Have to Do with Macros?
+## What Does Tasty Have to Do with Macros?
 
 It turns out that Tasty also makes an excellent foundation for a new generation of reflection-based macros.
 
-The first problem with the current `scala.reflect` macros is that they that they are completely dependent on the current Scala compiler (internally named `nsc`). In fact, `scala.reflect` macros are nothing but a thin veneer on top of `nsc` internals. This makes them very powerful but also fragile and hard to use. Because of this, they have had "experimental" status for their whole lifetime. Since Scala 3 uses a different compiler (`dotc`), the old reflect-based macro system cannot be ported to it, so we need something different, and hopefully better.
+The first problem with the current `scala.reflect` macros is that they are completely dependent on the current Scala compiler (internally named `nsc`). In fact, `scala.reflect` macros are nothing but a thin veneer on top of `nsc` internals. This makes them very powerful but also fragile and hard to use. Because of this, they have had "experimental" status for their whole lifetime. Since Scala 3 uses a different compiler (`dotc`), the old reflect-based macro system cannot be ported to it, so we need something different, and hopefully better.
 
 Another way to look at `scala.reflect` macros was that they were lacking _foundations_. Scala 3 has already some kind of meta programming facility, with well explored foundations. [Principled Meta Programming](http://dotty.epfl.ch/docs/reference/principled-meta-programming.html) is a way to support staging by adding just two operators to the language: Quote (`'`) to represent code expressions, and splice (`~`) to insert one piece of code in another. The inspiration for our approach [comes from temporal logic](https://ieeexplore.ieee.org/abstract/document/561317/).  A somewhat similar system is used for staging in [MetaOCaml](http://okmij.org/ftp/ML/MetaOCaml.html).
 We obtain a very high level _macro system_ by combining the two temporal operators `'` and `~` with Scala 3's `inline` feature. In a nutshell:
@@ -39,7 +39,7 @@ We obtain a very high level _macro system_ by combining the two temporal operato
  - `(')` turns code into syntax trees
  - `(~)` embeds syntax trees in other code.
 
-This approach to macros is very elegant, and has surprising expressive power. But it might a little bit too principled. There are still many bread and butter tasks one cannot do with it. In particular:
+This approach to macros is very elegant, and has surprising expressive power. But it might be a little bit too principled. There are still many bread and butter tasks one cannot do with it. In particular:
 
  - Syntax trees are "black boxes", we are missing a way to decompose them and analyze their structure and contents.
  - We can only quote and splice expressions, but not other program structures such as definitions or parameters.
@@ -63,7 +63,7 @@ As a first step towards this goal, we are working on a representation of Tasty i
 
 ## Next Steps
 
-The next step, currently under way, is to connect these definitions to the Tasty file format. We plan to do this by rewriting them as [extractors](https://docs.scala-lang.org/tour/extractor-objects.html) that implement each data type in terms of the data structures used by the `dotc` compiler which are then pickled and unpickled in the Tasty file format. An interesting alternative would be to write Tasty picklers and unpicklers that work directly with reflect trees. The extractor-based approach was alredy pioneered in [ScalaMeta](http://scalameta.org) and [Gestalt](https://github.com/liufengyun/gestalt)
+The next step, currently under way, is to connect these definitions to the Tasty file format. We plan to do this by rewriting them as [extractors](https://docs.scala-lang.org/tour/extractor-objects.html) that implement each data type in terms of the data structures used by the `dotc` compiler which are then pickled and unpickled in the Tasty file format. An interesting alternative would be to write Tasty picklers and unpicklers that work directly with reflect trees. 
 
 Then, we need to define and implement semantic operations such as
 
@@ -77,7 +77,9 @@ Finally, we need to connect the new reflection layer to the existing high-level 
 
 Adopting this scheme gives already some idea what Scala 3 macros will look like. First, they will run after the typechecking phase is finished because that is when Tasty trees are generated and consumed. This means macros will be blackbox - a macro expansion cannot influence the type of the expanded expression as seen from the typechecker. A long as that constraint is satisfied we should be able to support both `def` macros and annotation macros.
 
-We might support some forms of whitebox macros by allowing macros in the types themselves. These macros would be highlevel only, and would integrate with implicit search. A sketch of such as system is outlined in [Dotty PR 3844](https://github.com/lampepfl/dotty/pull/3844]).
+For instance one could define an annotation macro `@app` that adds a `main` method to an object. The difference to today's "macro paradise" annotation macros (which are not part of the official Scala distributon) is that in Scala 3 the generated definitions can be seen only at runtime or in downstream projects, because the expansion driven by the annotation happens after type checking.
+
+We might support some forms of whitebox macros by allowing macros in the types themselves. These macros would be highlevel only, and would integrate with implicit search. A sketch of such as system is outlined in [Dotty PR 3844](https://github.com/lampepfl/dotty/pull/3844).
 
 The Scala 3 language should also directly incorporate some constructs that so far required
 advanced macro code to define. For instance:
