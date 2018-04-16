@@ -1,6 +1,6 @@
 ---
 category: event
-title: Scala Symposium 2017
+title: Scala Symposium
 logo: /resources/img/scala2017.png
 location: Vancouver, Canada
 description: "A scientific forum for researchers and practitioners focused on the Scala language."

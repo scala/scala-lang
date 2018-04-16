@@ -1,6 +1,6 @@
 ---
 category: event
-title: Scala Matsuri 2014
+title: Scala Matsuri
 logo: /resources/img/scala-matsuri.png
 location: Tokyo
 description: "The largest Scala conference in Japan. This year's theme is Enjoy.scala!"

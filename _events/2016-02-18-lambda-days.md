@@ -1,6 +1,6 @@
 ---
 category: event
-title: Lambda Days 2016
+title: Lambda Days
 logo: /resources/img/lambda-days2.png
 location: Kraków, Poland
 description: "Lambda Days is an event like no other gathering people passionate about functional programming."

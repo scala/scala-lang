@@ -1,6 +1,6 @@
 ---
 category: event
-title: LambdaConf 2016
+title: LambdaConf
 logo: /resources/img/lambdaconf.png
 location: Boulder, Colorado
 description: "(Truly) Advanced Scala & Other Functional Programming"

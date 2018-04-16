@@ -1,6 +1,6 @@
 ---
 category: event
-title: Scalapeño 2013
+title: Scalapeño
 logo: /resources/img/scalapeno2013-logo.png
 location: Tel Aviv, Israel
 description: Scalapeño is a full-day conference for software developers focused on the Scala programming language.

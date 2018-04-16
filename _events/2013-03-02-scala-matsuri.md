@@ -1,6 +1,6 @@
 ---
 category: event
-title: Scala Matsuri 2013
+title: Scala Matsuri
 logo: /resources/img/scala-matsuri.png
 location: Tokyo
 description:

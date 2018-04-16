@@ -1,6 +1,6 @@
 ---
 category: event
-title: Scalapeño 2014
+title: Scalapeño
 logo: /resources/img/scalapeno2014-logo.png
 location: Ramat Gan, Israel
 description: The second annual Israeli Scala conference
