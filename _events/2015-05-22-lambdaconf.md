@@ -1,6 +1,6 @@
 ---
 category: event
-title: LambdaConf 2015
+title: LambdaConf
 logo: /resources/img/lambdaconf.png
 location: Boulder, Colorado
 description: An annual conference on functional programming held in beautiful Boulder, Colorado.
