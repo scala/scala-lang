@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title> 
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}"/>
     {% endif %}
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}"/>
+    <meta property="og:description" content="{{ page.description }}"/>
+    {% endif %}
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@scala_lang"/>
+    <meta name="twitter:creator" content="@scala_lang"/>
+    {% if page.url %}
+    <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}"/>
+    {% endif %}    
+    <meta property="og:image" content="{{ site.baseurl }}/resources/img/scala-spiral-3d-2-toned-down.png"/>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
