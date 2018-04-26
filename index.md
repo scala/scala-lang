@@ -20,9 +20,9 @@ gettingStarted:
       url: "/download/all.html"
 apiDocs:
   mainTitle: "API Docs"
-  mainUrl: "http://www.scala-lang.org/api/?_ga=1.178639076.1310790544.1468501313"
+  mainUrl: "https://www.scala-lang.org/api/?_ga=1.178639076.1310790544.1468501313"
   subtitle: "Current API Docs"
-  subtitleLink: "http://www.scala-lang.org/api/current/?_ga=1.241039811.1310790544.1468501313"
+  subtitleLink: "https://www.scala-lang.org/api/current/?_ga=1.241039811.1310790544.1468501313"
   links:
     - title: "API Docs (other versions)"
       url: "https://scala-lang.org/files/archive/api/"
