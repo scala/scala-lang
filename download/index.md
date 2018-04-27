@@ -1,11 +1,14 @@
 ---
-title: Scala 2.12.6
-start: 27 April 2018
 layout: downloadpage
+title: Download
 release_version: 2.12.6
 release_date: "April 27, 2018"
 show_resources: "true"
-permalink: /download/2.12.6.html
+other_releases: [
+  ["development_version", "Current 2.13.x milestone", 2.13.0-M3, "January 31, 2018"],
+  ["maintenance_version", "Last 2.11.x maintenance release", 2.11.12, "November 9, 2017"],
+  ["maintenance_version", "Last 2.10.x maintenance release", 2.10.7, "November 9, 2017"]
+]
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires Java 8 or later, available <a href='http://www.java.com/'>here</a>."
 resources: [
   ["-main-unixsys", "scala-2.12.6.tgz", "https://downloads.lightbend.com/scala/2.12.6/scala-2.12.6.tgz", "Mac OS X, Unix, Cygwin", "19.39M"],
