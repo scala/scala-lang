@@ -148,22 +148,24 @@ look like. Most importantly, they will run after the typechecking phase is
 finished because that is when Tasty trees are generated and
 consumed. Running macro-expansion after typechecking has many advantages
 
- - it is safer and more robust, since the everything is fully typed.
- - it does not affect IDEs, which only run the compiler until typechecking is done.
+ - it is safer and more robust, since the everything is fully typed,
+ - it does not affect IDEs, which only run the compiler until typechecking is done,
  - it offers more potential for incremental compilation and parallelization.
 
 But the scheme also restricts the kind of macros that can be expressed:
-macros will be blackbox - a macro expansion
+macros will be [blackbox](https://docs.scala-lang.org/overviews/macros/blackbox-whitebox.html).
+This means that a macro expansion
 cannot influence the type of the expanded expression as seen from the
-typechecker. As long as that constraint is satisfied we should be able
-to support both `def` macros and annotation macros.
+typechecker. As long as that constraint is satisfied, we should be able
+to support both classical def macros and macro annotations.
 
-For instance, one could define an annotation macro `@json` that adds a
-JSON serializers to a type. The difference with respect to
-today's "macro paradise" annotation macros (which are currently not part of the
-official Scala distribution) is that in Scala 3 the generated
-serializers can be seen only in downstream projects, because the
-expansion driven by the annotation happens after type checking.
+For instance, one will be able to define a macro annotation `@json` that adds a
+JSON serializer to a type. The difference with respect to
+today's [macro paradise](https://docs.scala-lang.org/overviews/macros/paradise.html)
+[annotation macros](https://docs.scala-lang.org/overviews/macros/annotations.html)
+(which are currently not part of the official Scala distribution) is that in Scala 3
+the generated serializers can be seen only in downstream projects, because the expansion
+driven by the annotation happens after type checking.
 
 We believe the lack of whitebox macros can be alleviated to some degree by having
 more expressive forms of computed types. A sketch of such as system is outlined
@@ -176,3 +178,13 @@ that so far required advanced macro code to define. In particular:
 [by-name parameters](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html) instead of through macro.
 
  - Native [type lambdas](http://dotty.epfl.ch/docs/reference/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
+
+ - There will be a way to do typeclass derivation a la [Kittens](https://github.com/milessabin/kittens), [Magnolia](https://github.com/propensive/magnolia), or [scalaz-deriving](https://gitlab.com/fommil/scalaz-deriving) that does not need macros. We are currently evaluating the alternatives. The primary goal is to develop a scheme that is easy to use and performs well at both compile- and run-time. A secondary goal is generality, as log as it does not conlict with the primary goal.
+
+## Please Give Us Your Feedback!
+
+What do you think of the macro roadmap? To discuss, there's a thread on [Scala
+Contributors](https://contributors.scala-lang.org). Your feedback
+there will be very valuable. There is also lots of scope to shape the
+future by contributing to the development in the [Dotty repo](https://github.com/lampepfl/dotty).
+
