@@ -5,7 +5,7 @@ by: Martin Odersky and Nicolas Stucki
 title: "Scala in a (Tasty) Nutshell"
 ---
 
-One of the biggest open questions for migrating to Scala 3 is what to
+One of the biggest open questions for migrating to [Scala 3](https://www.scala-lang.org/blog/2018/04/19/scala-3.html) is what to
 do about macros. In this blog post we give our current thoughts. The
 gist is that we are trying to achieve full alignment between macros
 and Tasty.
@@ -148,7 +148,7 @@ look like. Most importantly, they will run after the typechecking phase is
 finished because that is when Tasty trees are generated and
 consumed. Running macro-expansion after typechecking has many advantages
 
- - it is safer and more robust, since the everything is fully typed,
+ - it is safer and more robust, since everything is fully typed,
  - it does not affect IDEs, which only run the compiler until typechecking is done,
  - it offers more potential for incremental compilation and parallelization.
 
@@ -175,16 +175,16 @@ The Scala 3 language will also directly incorporate some constructs
 that so far required advanced macro code to define. In particular:
 
 - We model lazy implicits directly using
-[by-name parameters](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html) instead of through macro.
+[by-name parameters](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html) instead of through a macro.
 
  - Native [type lambdas](http://dotty.epfl.ch/docs/reference/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
 
- - There will be a way to do typeclass derivation a la [Kittens](https://github.com/milessabin/kittens), [Magnolia](https://github.com/propensive/magnolia), or [scalaz-deriving](https://gitlab.com/fommil/scalaz-deriving) that does not need macros. We are currently evaluating the alternatives. The primary goal is to develop a scheme that is easy to use and performs well at both compile- and run-time. A secondary goal is generality, as log as it does not conlict with the primary goal.
+ - There will be a way to do typeclass derivation a la [Kittens](https://github.com/milessabin/kittens), [Magnolia](https://github.com/propensive/magnolia), or [scalaz-deriving](https://gitlab.com/fommil/scalaz-deriving) that does not need macros. We are currently evaluating the alternatives. The primary goal is to develop a scheme that is easy to use and that performs well at both compile- and run-time. A second goal is generality, as long as it does not conlict with the primary goal.
 
 ## Please Give Us Your Feedback!
 
-What do you think of the macro roadmap? To discuss, there's a thread on [Scala
-Contributors](https://contributors.scala-lang.org). Your feedback
+What do you think of the macro roadmap? To discuss, there's a thread on
+[Scala Contributors](https://contributors.scala-lang.org). Your feedback
 there will be very valuable. There is also lots of scope to shape the
-future by contributing to the development in the [Dotty repo](https://github.com/lampepfl/dotty).
+future by contributing to the development in the [Dotty](https://github.com/lampepfl/dotty) repo.
 
