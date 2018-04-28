@@ -44,19 +44,19 @@ of the `dotc` compiler for Scala 3.
 ## What Does Tasty Have to Do with Macros?
 
 It turns out that Tasty also makes an excellent foundation for a new
-generation of reflection-based macros, with the potential to solving
+generation of reflection-based macros, with the potential to solve
 many of the problems in the current version.
 
-The first problem with the current `scala.reflect` macros is that they
+The first problem with the current [Def Macros](https://docs.scala-lang.org/overviews/macros/overview.html) is that they
 are completely dependent on the current Scala compiler (internally
-named `nsc`). In fact, `scala.reflect` macros are nothing but a thin
+named `nsc`). In fact, def macros are nothing but a thin
 veneer on top of `nsc` internals. This makes them very powerful but
 also fragile and hard to use. Because of this, they have had
 "experimental" status for their whole lifetime. Since Scala 3 uses a
 different compiler (`dotc`), the old reflect-based macro system cannot
 be ported to it, so we need something different, and hopefully better.
 
-Another criticism of `scala.reflect` macros is that they
+Another criticism of the current macros is that they
 lack _foundations_. Scala 3 has already a meta
 programming facility, with particularly well explored foundations. [Principled Meta
 Programming](http://dotty.epfl.ch/docs/reference/principled-meta-programming.html)
@@ -92,7 +92,7 @@ auxiliary types and operations?
 If we make some choice here, how do we know that this will be the
 right choice for users today? How to guarantee stability of the APIs
 in the future? This embarrassment of riches was essentially what
-plagued `scala.reflect`. To solve this dilemma, we plan to go
+plagued def macros. To solve this dilemma, we plan to go
 "bottom-up" instead of "top-down". We establish the following
 principle:
 
@@ -176,4 +176,3 @@ that so far required advanced macro code to define. In particular:
 [by-name parameters](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html) instead of through macro.
 
  - Native [type lambdas](http://dotty.epfl.ch/docs/reference/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
-
