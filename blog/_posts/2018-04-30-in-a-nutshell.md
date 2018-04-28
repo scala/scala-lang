@@ -6,10 +6,11 @@ title: "Scala in a (Tasty) Nutshell"
 ---
 
 One of the biggest open questions for migrating to Scala 3 is what to
-do about macros. In this blog post we give our current thinking, which
-is to try to achieve full alignment between macros and Tasty.
+do about macros. In this blog post we give our current thoughts. The
+gist is that we are trying to achieve full alignment between macros
+and Tasty.
 
-## What is TASTY?
+## What is Tasty?
 
 Tasty is the high-level interchange format for Scala 3. It is based on
 <i>t</i>yped <i>a</i>bstract <i>s</i>yntax <i>t</i>rees. These trees
@@ -23,15 +24,17 @@ representation of these trees is heavily optimized for compactness,
 which means that we can generate full Tasty trees on every compiler
 run and rely on nothing else for supporting separate compilation.
 
-The information present in TASTY trees can be used for many purposes.
+The information present in Tasty trees can be used for many purposes.
 
  - The compiler uses it to support separate compilation.
- - A language server for an IDE uses it to support hyperlinking, command completion, or documentation.
+ - Our LSP-based language server uses it to support hyperlinking, command completion, documentation,
+   and also for global operations such as find-references and renaming.
  - A build tool can use it to cross-build on different platforms and migrate code from one binary
    version to another.
  - Optimizers and analyzers can use it for deep code analysis and advanced code generation
 
-Of these usages, the first two work today. The other two are worthwhile possibilities to pursue in the future.
+Among these use cases, the first two work today. The other two are
+very interesting possibilities to pursue in the future.
 
 OK, but what is Tasty _exactly_? An up-to-date version of the Tasty
 file format is described in file
@@ -40,7 +43,9 @@ of the `dotc` compiler for Scala 3.
 
 ## What Does Tasty Have to Do with Macros?
 
-It turns out that Tasty also makes an excellent foundation for a new generation of reflection-based macros.
+It turns out that Tasty also makes an excellent foundation for a new
+generation of reflection-based macros, with the potential to solving
+many of the problems in the current version.
 
 The first problem with the current `scala.reflect` macros is that they
 are completely dependent on the current Scala compiler (internally
@@ -51,16 +56,17 @@ also fragile and hard to use. Because of this, they have had
 different compiler (`dotc`), the old reflect-based macro system cannot
 be ported to it, so we need something different, and hopefully better.
 
-Another way to look at `scala.reflect` macros was that they were
-lacking _foundations_. Scala 3 has already some kind of meta
-programming facility, with well explored foundations. [Principled Meta
+Another criticism of `scala.reflect` macros is that they
+lack _foundations_. Scala 3 has already a meta
+programming facility, with particularly well explored foundations. [Principled Meta
 Programming](http://dotty.epfl.ch/docs/reference/principled-meta-programming.html)
-is a way to support staging by adding just two operators to the
+is a way to support _staging_ (in the sense of runtime code-generation)
+by adding just two operators to the
 language: Quote (`'`) to represent code expressions, and splice (`~`)
 to insert one piece of code in another. The inspiration for our
 approach [comes from temporal
 logic](https://ieeexplore.ieee.org/abstract/document/561317/).  A
-somewhat similar system is used for staging in
+somewhat related system is used for staging in
 [MetaOCaml](http://okmij.org/ftp/ML/MetaOCaml.html).  We obtain a very
 high level _macro system_ by combining the two temporal operators `'`
 and `~` with Scala 3's `inline` feature. In a nutshell:
@@ -96,8 +102,7 @@ This has several benefits:
 
  - **Completeness**. Tasty is Scala 3's interchange format, so basing the reflection API on it means no information is lost.
  - **Stability**. As an interchange format, Tasty will be kept stable. Its evolution will be carefully managed with a strict versioning system. So the reflection API can be evolved in a controlled way.
- - **Compiler Independence**. Tasty has been designed to be independent of the actual Scala compilers supporting it.
-So the reflection API can be easily ported to new compilers. If a compiler supports Tasty as the interchange format, it can be made to support the reflection API at the same time.
+ - **Compiler Independence**. Tasty is designed to be independent of the actual Scala compilers supporting it. Besides the Dotty implementation there is now also a proof-of-concept system that shows that `scalac` can generate Tasty trees, and it is even conceivable to generate them from Java. This means that the reflection API can be easily ported to new compilers. If a compiler supports Tasty as the interchange format, it can be made to support the reflection API at the same time.
 
 ## Scala in a Nutshell
 
@@ -106,30 +111,29 @@ of Tasty in terms of a suite of compiler-independent data
 structures. The [current
 status](https://github.com/lampepfl/dotty/blob/master/tests/pos/tasty/definitions.scala)
 gives high-level data structures for all aspects of a Tasty file. With
-currently 192 lines of data definitions it reflects every piece of
+currently about 200 lines of data definitions it reflects every piece of
 information that is contained in a Scala program after type
-checking. 192 lines is larger than a definition of mini-Lisp, but
+checking. 200 lines is larger than a definition of mini-Lisp, but
 much, much smaller than the 30'000 lines or so of a full-blown
 compiler frontend!
 
 ## Next Steps
 
-The next step, currently under way, is to connect these definitions to
-the Tasty file format. We plan to do this by rewriting them as
+The next step, [currently under way](https://github.com/lampepfl/dotty/pull/4279), is to connect these definitions to the Tasty file format. We do this by rewriting them as
 [extractors](https://docs.scala-lang.org/tour/extractor-objects.html)
 that implement each data type in terms of the data structures used by
 the `dotc` compiler which are then pickled and unpickled in the Tasty
 file format. An interesting alternative would be to write Tasty
 picklers and unpicklers that work directly with reflect trees.
 
-Then, we need to define and implement semantic operations such as
+Once this is done, we need to define and implement semantic operations such as
 
  - what are the members that can be selected on this expression?
  - which subclasses are defined for a sealed trait?
  - does this expression conform to some expected type?
 
-Finally, we need to connect the new reflection layer to the existing
-high-level macro system. This looks not very difficult. In essence, we
+Finally, we need to connect the new lower-level reflection layer to the existing
+principled macro system based on quotes and splices. This looks not very difficult. In essence, we
 need to define a pair of mappings between high level trees of type
 `scala.quoted.Expr[T]` and lower-level Tasty trees of type
 `tasty.Term`. Mapping a high-level tree to a low-level one simply
@@ -139,37 +143,37 @@ low-level tree has indeed the given type `T`. That should be all.
 
 ## Future Macros
 
-Adopting this scheme gives already some idea what Scala 3 macros will
-look like. First, they will run after the typechecking phase is
+If this scheme is adopted, it determines to a large degree what Scala 3 macros will
+look like. Most importantly, they will run after the typechecking phase is
 finished because that is when Tasty trees are generated and
-consumed. This means macros will be blackbox - a macro expansion
+consumed. Running macro-expansion after typechecking has many advantages
+
+ - it is safer and more robust, since the everything is fully typed.
+ - it does not affect IDEs, which only run the compiler until typechecking is done.
+ - it offers more potential for incremental compilation and parallelization.
+
+But the scheme also restricts the kind of macros that can be expressed:
+macros will be blackbox - a macro expansion
 cannot influence the type of the expanded expression as seen from the
 typechecker. As long as that constraint is satisfied we should be able
 to support both `def` macros and annotation macros.
 
 For instance, one could define an annotation macro `@json` that adds a
-JSON serializers to a type. The difference to
-today's "macro paradise" annotation macros (which are not part of the
-official Scala distributon) is that in Scala 3 the generated
+JSON serializers to a type. The difference with respect to
+today's "macro paradise" annotation macros (which are currently not part of the
+official Scala distribution) is that in Scala 3 the generated
 serializers can be seen only in downstream projects, because the
 expansion driven by the annotation happens after type checking.
 
-We might support some forms of whitebox macros by allowing macros in
-the types themselves. These macros would be highlevel only, and would
-integrate with implicit search. A sketch of such as system is outlined
+We believe the lack of whitebox macros can be alleviated to some degree by having
+more expressive forms of computed types. A sketch of such as system is outlined
 in [Dotty PR 3844](https://github.com/lampepfl/dotty/pull/3844).
 
-The Scala 3 language should also directly incorporate some constructs
-that so far required advanced macro code to define. For instance:
+The Scala 3 language will also directly incorporate some constructs
+that so far required advanced macro code to define. In particular:
 
- - We model lazy implicits directly using
-[by-name parameters](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html) instead of through a complicated macro.
- - Native [type lambdas](http://dotty.epfl.ch/docs/reference/type-lambdas.html) reduce the need for
-   [kind projector](https://github.com/non/kind-projector).
- - We also plan to offer the basic building blocks for [generic programming](https://github.com/milessabin/shapeless) and [typeclass derivation](https://github.com/propensive/magnolia).
+- We model lazy implicits directly using
+[by-name parameters](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html) instead of through macro.
 
-## Please Give Us Your Feedback!
+ - Native [type lambdas](http://dotty.epfl.ch/docs/reference/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
 
-What do you think of the macro roadmap? Your feedback would be much
-appreciated. There is also lots of scope to shape the future by
-contributing to the development.
