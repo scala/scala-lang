@@ -180,7 +180,7 @@ that so far required advanced macro code to define. In particular:
 
  - Native [type lambdas](http://dotty.epfl.ch/docs/reference/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
 
- - There will be a way to do typeclass derivation a la [Kittens](https://github.com/milessabin/kittens), [Magnolia](https://github.com/propensive/magnolia), or [scalaz-deriving](https://gitlab.com/fommil/scalaz-deriving) that does not need macros. We are currently evaluating the alternatives. The primary goal is to develop a scheme that is easy to use and that performs well at both compile- and run-time. A second goal is generality, as long as it does not conlict with the primary goal.
+ - There will be a way to do typeclass derivation a la [Kittens](https://github.com/milessabin/kittens), [Magnolia](https://github.com/propensive/magnolia), or [scalaz-deriving](https://gitlab.com/fommil/scalaz-deriving) that does not need macros. We are currently evaluating the alternatives. The primary goal is to develop a scheme that is easy to use and that performs well at both compile- and run-time. A second goal is generality, as long as it does not conflict with the primary goal.
 
 ## Please Give Us Your Feedback!
 
