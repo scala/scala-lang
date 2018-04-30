@@ -184,7 +184,7 @@ that so far required advanced macro code to define. In particular:
 
 ## Please Give Us Your Feedback!
 
-What do you think of the macro roadmap? To discuss, there's a thread on
+What do you think of the macro roadmap? To discuss, there's a [thread](https://contributors.scala-lang.org/t/what-kinds-of-macros-should-scala-3-support/1850) on
 [Scala Contributors](https://contributors.scala-lang.org). Your feedback
 there will be very valuable. There is also lots of scope to shape the
 future by contributing to the development in the [Dotty](https://github.com/lampepfl/dotty) repo.
