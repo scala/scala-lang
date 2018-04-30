@@ -2,8 +2,10 @@
 layout: blog-detail
 post-type: blog
 by: Martin Odersky and Nicolas Stucki
-title: "Scala in a (Tasty) Nutshell"
+title: "Macros: the Plan for Scala 3"
 ---
+
+## Or: Scala in a (Tasty) Nutshell
 
 One of the biggest open questions for migrating to [Scala 3](https://www.scala-lang.org/blog/2018/04/19/scala-3.html) is what to
 do about macros. In this blog post we give our current thoughts. The
@@ -64,8 +66,7 @@ is a way to support _staging_ (in the sense of runtime code-generation)
 by adding just two operators to the
 language: Quote (`'`) to represent code expressions, and splice (`~`)
 to insert one piece of code in another. The inspiration for our
-approach [comes from temporal
-logic](https://ieeexplore.ieee.org/abstract/document/561317/).  A
+approach [comes from temporal logic](https://dl.acm.org/citation.cfm?id=3011069).  A
 somewhat related system is used for staging in
 [MetaOCaml](http://okmij.org/ftp/ML/MetaOCaml.html).  We obtain a very
 high level _macro system_ by combining the two temporal operators `'`
