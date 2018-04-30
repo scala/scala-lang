@@ -29,7 +29,7 @@ run and rely on nothing else for supporting separate compilation.
 The information present in Tasty trees can be used for many purposes.
 
  - The compiler uses it to support separate compilation.
- - Our LSP-based language server uses it to support hyperlinking, command completion, documentation,
+ - Our [LSP-based language server](http://dotty.epfl.ch/docs/usage/ide-support.html) uses it to support hyperlinking, command completion, documentation,
    and also for global operations such as find-references and renaming.
  - A build tool can use it to cross-build on different platforms and migrate code from one binary
    version to another.
