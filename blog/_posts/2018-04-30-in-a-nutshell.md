@@ -80,7 +80,7 @@ This approach to macros is very elegant, and has surprising expressive
 power. But it might be a little bit too principled. There are still
 many bread and butter tasks one cannot do with it. In particular:
 
- - Syntax trees are "black boxes", we are missing a way to decompose them and analyze their structure and contents.
+ - Syntax trees are opaque, we are missing a way to decompose them and analyze their structure and contents.
  - We can only quote and splice expressions, but not other program structures such as definitions or parameters.
 
 We were looking for a long time for ways to augment principled meta
