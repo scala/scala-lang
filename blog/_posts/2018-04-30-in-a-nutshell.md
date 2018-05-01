@@ -182,6 +182,13 @@ that so far required advanced macro code to define. In particular:
 
  - There will be a way to do typeclass derivation a la [Kittens](https://github.com/milessabin/kittens), [Magnolia](https://github.com/propensive/magnolia), or [scalaz-deriving](https://gitlab.com/fommil/scalaz-deriving) that does not need macros. We are currently evaluating the alternatives. The primary goal is to develop a scheme that is easy to use and that performs well at both compile- and run-time. A second goal is generality, as long as it does not conflict with the primary goal.
 
+## Meta Programming in the Large
+
+The future Scala 3 macro design is intended to replace the existing def macros and the `scala.reflect` infrastructure. But there is another meta programming system that is quite complementary to it: [Scalameta](http://scalameta.org/) provides high-quality syntactic and semantic analysis and code generation tools which are separate from the Scala compiler. As the name implies, Scalameta is run at the meta level, that is, it takes programs as input and produces syntactic or semantic information or rewritten programs as output. A macro system, by contrast, is integrated in the language and expands programs as they are compiled. There are potential synergies between the two projects. To name but two possibilities:
+
+ - Scalameta or projects derived from it such as [SemanticDB](https://github.com/scalameta/scalameta/blob/master/semanticdb/semanticdb3/semanticdb3.md) could obtain type information directly from Tasty, which would make them independent from specific compilers.
+  - IDEs could use Tasty for single projects but refer to SemanticDB for more complicated multi-project and multi-language builds.
+
 ## Please Give Us Your Feedback!
 
 What do you think of the macro roadmap? To discuss, there's a [thread](https://contributors.scala-lang.org/t/what-kinds-of-macros-should-scala-3-support/1850) on
