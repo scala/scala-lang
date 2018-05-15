@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/license-change
+permalink: /news/license-change.html
 title: "Intent to adopt the Apache License 2.0 for Scala"
 by: Jorge Vicente Cantero and Adriaan Moors
 ---
@@ -42,7 +42,8 @@ In principle, [clause 5](https://www.apache.org/licenses/LICENSE-2.0.html#contri
 However, if any disputes were ever to arise around past contributions, it helps the project to have a record that each contributor
 explicitly intended to contribute and that they declared to have the right to do so.
 
-A few good reads on this topic: https://julien.ponge.org/blog/in-defense-of-contributor-license-agreements/, http://apetro.ghost.io/apache-contributors-no-cla/.
+A few good reads on this topic: [
+In Defense of Contributor License Agreements](https://julien.ponge.org/blog/in-defense-of-contributor-license-agreements/), [Apache contributors need not sign a CLA](http://apetro.ghost.io/apache-contributors-no-cla/).
 
 # Anything else?
 Please do read the [full license](https://www.apache.org/licenses/LICENSE-2.0.html). It may not sound like fun, but it will only take a few minutes.
@@ -52,4 +53,4 @@ Also, eat your veggies.
 Let us know by the deadline, either via email (adriaan@lightbend.com or jorge.vicentecantero@epfl.ch) or by posting on the dedicated thread
 on [our contributors forum](https://contributors.scala-lang.org/t/moving-to-the-apache-v2-0-license/1859).
 
-No other means of communication will be considered on this topic. Please also see: https://xkcd.com/14/.
+No other means of communication will be considered on this topic. Please also see: [xkcd #14](https://xkcd.com/14/).
