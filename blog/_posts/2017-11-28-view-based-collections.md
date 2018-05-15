@@ -96,7 +96,7 @@ Constructing such a view is a cheap operation, here is the implementation of
 ~~~ scala
 object View {
   case class Map[A, B](underlying: Iterable[A], f: A => B) extends View[B] {
-    def iterator() = underlying.iterator().map(f)
+    def iterator = underlying.iterator.map(f)
   }
 }
 ~~~
@@ -125,7 +125,7 @@ Now let’s have a look at the `fromIterable` implementation in `View`:
 trait View[A] extends IterableOps[A, View, View[A]] {
   def fromIterable[E](it: Iterable[E]): View[E] =
     new View[E] {
-      def iterator() = it.iterator()
+      def iterator = it.iterator
     }
 }
 ~~~
