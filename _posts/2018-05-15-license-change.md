@@ -9,9 +9,6 @@ Good news everyone! By popular demand, we intend to change the license that Scal
 from the [3-clause BSD License](https://github.com/scala/scala/blob/2.13.x/LICENSE) to the [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
 You have until 10 August 2018 to raise any objections (see below for contact info).
 
-# Is any of this legal advice?
-No.
-
 # Why the change?
 A number of contributors have expressed reservations about the asymmetry between our CLA (Apache v2) and our license (BSD-3).
 This change fixes this asymmetry.
@@ -54,3 +51,6 @@ Let us know by the deadline, either via email (adriaan@lightbend.com or jorge.vi
 on [our contributors forum](https://contributors.scala-lang.org/t/moving-to-the-apache-v2-0-license/1859).
 
 No other means of communication will be considered on this topic. Please also see: [xkcd #14](https://xkcd.com/14/).
+
+# Is any of this legal advice?
+No.
