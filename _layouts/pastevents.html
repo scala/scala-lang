@@ -2,7 +2,16 @@
 layout: inner-page-parent
 ---
 
-{% include events-training-list-top.html collection=paginator.events %}
+{% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
+{% assign pastEvents = '' | split: ',' %}
+{% for event in paginator.events %}
+	{% capture date %}{{event.end|date: '%s'|plus: 86400}}{% endcapture %}
+	{% if now > date %}
+		{% assign pastEvents = pastEvents | push: event %}
+	{% endif %}
+{% endfor %}
+
+{% include events-training-list-top.html collection=pastEvents %}
 
   	{{content}}
 	</div>

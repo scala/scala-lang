@@ -8,7 +8,6 @@ paginate:
   collection: events
   per_page: 9999
   permalink: /:num/
-  pastItems: true
   reversed: true
   title_suffix: ""
 ---
