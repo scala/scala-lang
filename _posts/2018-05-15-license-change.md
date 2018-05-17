@@ -5,27 +5,24 @@ title: "Intent to adopt the Apache License 2.0 for Scala"
 by: Jorge Vicente Cantero and Adriaan Moors
 ---
 
-Good news everyone! By popular demand, we intend to change the Scala license
+Good news everyone! By popular demand, we intend to change the license that Scala is distributed under
 from the [3-clause BSD License](https://github.com/scala/scala/blob/2.13.x/LICENSE) to the [Apache License v2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
 You have until 10 August 2018 to raise any objections (see below for contact info).
 
-# Is any of this legal advice?
-No.
-
-# Why change the license?
+# Why the change?
 A number of contributors have expressed reservations about the asymmetry between our CLA (Apache v2) and our license (BSD-3).
-This change aligns our license with our CLA.
+This change fixes this asymmetry.
 
-# How is the license different?
+# How are the licenses different?
 Backed by the Apache Software Foundation, the Apache license is essentially a more carefully worded version of the BSD license, with the addition of a patent grant.
 There are a few other smaller differences, discussed below.
 
-# When will the license change take effect?
+# When will the change take effect?
 Unless valid objections are raised by the deadline, we will immediately begin updating the licensing terms of all applicable files in the
 GitHub repositories of the Scala organization that are currently licensed under the 3-clause BSD License,
 so that subsequent releases will be governed by the Apache License v2.0.
 
-# How does the license change affect me, as a Scala user or contributor?
+# How does the change affect me, as a Scala user or contributor?
 Practically speaking, we are not aware of any way in which the change would affect you negatively.
 In fact, the patent grant clause should help alleviate any concerns you or your employer may have around patent litigation.
 
@@ -54,3 +51,6 @@ Let us know by the deadline, either via email (adriaan@lightbend.com or jorge.vi
 on [our contributors forum](https://contributors.scala-lang.org/t/moving-to-the-apache-v2-0-license/1859).
 
 No other means of communication will be considered on this topic. Please also see: [xkcd #14](https://xkcd.com/14/).
+
+# Is any of this legal advice?
+No.
