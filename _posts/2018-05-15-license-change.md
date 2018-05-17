@@ -14,9 +14,9 @@ No.
 
 # Why the change?
 A number of contributors have expressed reservations about the asymmetry between our CLA (Apache v2) and our license (BSD-3).
-This change fix this asymmetry.
+This change fixes this asymmetry.
 
-# How is are the licenses different?
+# How are the licenses different?
 Backed by the Apache Software Foundation, the Apache license is essentially a more carefully worded version of the BSD license, with the addition of a patent grant.
 There are a few other smaller differences, discussed below.
 
