@@ -5,8 +5,8 @@ permalink: /training/
 
 # Pagination
 paginate:
+  per_page: 9999
   collection: trainings
   permalink: /:num/
-  discardPastItems: true
   title_suffix: ""
 ---

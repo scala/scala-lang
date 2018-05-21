@@ -175,16 +175,6 @@ module Octopress
         collection = collection.reject{|p| (p.data['tags'] & tags).empty?}
       end
 
-      # Custom mod: reject all "past" (with date before our current 'tomorrow') elements if "discardPastItems" is set to true:
-      if page.data['paginate']['discardPastItems']
-        collection = collection.reject{|p| (p.date < (Date.today.next_day(1)).to_time)}
-      end
-
-      # Custom mod: retrieve only "past" (with date before our 'today') elements if "pastItems" is set to true:
-      if page.data['paginate']['pastItems']
-        collection = collection.select{|p| (p.date < Date.today.to_time)}
-      end
-      
       collection
     end
 
