@@ -193,7 +193,7 @@
       {% assign upcomingEvents = '' | split: ',' %}
       {% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
       {% for event in site.events %}
-        {% capture date %}{{event.start|date: '%s'|plus: 86400}}{% endcapture %}
+        {% capture date %}{{event.end|date: '%s'|plus: 86400}}{% endcapture %}
         {% if now <= date %}
           {% assign upcomingEvents = upcomingEvents | push: event %}
         {% endif %}
