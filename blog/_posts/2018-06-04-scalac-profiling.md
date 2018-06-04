@@ -16,9 +16,6 @@ or which rely on typeclass derivation, may be particularly prone to these
 slow-downs. (As of Scala 2.12, typeclass derivation is based on
 implicitly-triggered macro expansions.)
 
-Until now, Scala developers could not reduce this cost because tooling to
-profile compile times was lacking and knowledge of these issues limited.
-
 The goal of this blog post is to help you understand when these things are
 happening in your code, so you can reduce the parts of the code that triggers
 unnecessary implicit searches or macro expansions.
