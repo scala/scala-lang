@@ -28,7 +28,7 @@ complement my recent work on the compiler statistics infrastructure merged in
 working on, to achieve a **8x speedup in compile times**.
 
 The analysis and optimizations here presented can be migrated to any other
-Scala project that make heavy use of typeclass deriving code, implicits,
+Scala project that makes heavy use of typeclass deriving code, implicits,
 and/or macros.
 
 After reading the blog post, you should understand:
