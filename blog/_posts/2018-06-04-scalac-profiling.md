@@ -20,22 +20,24 @@ The goal of this blog post is to help you understand when these things are
 happening in your code, so you can reduce the parts of the code that triggers
 unnecessary implicit searches or macro expansions.
 
-The blog post focuses on typeclass derivation (which we explain later on),
-but the analysis and optimizations here presented can be migrated to any
-other codebase that makes a heavy use of macros or implicits.
-
-In this guide, we'll use `scalac-profiling` to speed up a module of
+In this blog post, I walk you through how to reduce these compile times with
+scalac-profiling. scalac-profiling is a new Scala Center compiler plugin to
+complement my recent work on the compiler statistics infrastructure merged in
+2.12.5. In this guide, I use the plugin to seed up a module of
 [Bloop](https://scalacenter.github.io/bloop/), a project I've been recently
 working on, to achieve a **8x speedup in compile times**.
 
+The analysis and optimizations here presented can be migrated to any other
+Scala project that make heavy use of typeclass deriving code, implicits,
+and/or macros.
+
 After reading the blog post, you should understand:
 
-* How to use `scalac-profiling` to replicate a similar analysis.
-* Why Shapeless-based code is prone to slow compilation times if not used with
-  care.
-* How you can replicate a similar analysis of compilation times on code that
-  abuses implicit searches and macros.
-* How implicit search and macros interact in unexpected ways that hurt
+* How to use `scalac-profiling` to analyze the impact of implicits and macros
+  on compile times.
+* Why typeclass deriving or Shapeless-based code is prone to slow compilation
+  times if not used with care.
+* How implicit search and macros interact in unexpected ways that can hurt and
   productivity and how you can optimize their interaction.
 
 The most important take-away from this guide is that *you should not take
@@ -87,10 +89,9 @@ dirty!
 
 [Bloop](https://github.com/scalacenter/bloop) is a *build-tool-agnostic*
 compilation server with a focus on developer productivity that I developed at
-the Scala Center together with [Martin Duhem](https://github.com/Duhemm). It
-gives you about ~20-25% faster compilation times than sbt, and we plan on
-further improving the performance of both batch and incremental compilation
-in the next month.
+the Scala Center together with [Martin Duhem](https://github.com/Duhemm).
+Bloop is a compilation server that integrates with sbt and gives you about
+~20-25% faster compilation times than sbt.
 
 Bloop is a small codebase with ~10000 lines of Scala code.
 
