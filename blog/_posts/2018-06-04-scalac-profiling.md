@@ -63,12 +63,10 @@ dirty!
 [Bloop](https://github.com/scalacenter/bloop) is a *build-tool-agnostic*
 compilation server with a focus on developer productivity that I developed at
 the Scala Center together with [Martin Duhem](https://github.com/Duhemm).
-Bloop is a compilation server that integrates with sbt and gives you about
+It is a compilation server that integrates with sbt and gives you about
 ~20-25% faster compilation times than sbt.
 
-Bloop is a small codebase with ~10000 lines of Scala code.
-
-It has three main submodules:
+At around ~10000 lines of Scala code, it has three main submodules:
 
 1. `jsonConfig`: the module that defines the JSON schema of the configuration files.
 1. `backend`: the module that defines the compiler-specific data structures and integrations.
