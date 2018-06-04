@@ -42,7 +42,7 @@ After reading the blog post, you should understand:
 
 The most important take-away from this guide is that *you should not take
 slow Scala compile times for granted*. It's worth investigating why slow
-compiles happens as we can often reduce them on our side!
+compiles happens as as it is often possible to fix our projects to compile faster!
 
 ### Pointers to read the article
 
