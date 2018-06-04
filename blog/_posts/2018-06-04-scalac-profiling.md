@@ -23,7 +23,7 @@ unnecessary implicit searches or macro expansions.
 In this blog post, I walk you through how to reduce these compile times with
 scalac-profiling. scalac-profiling is a new Scala Center compiler plugin to
 complement my recent work on the compiler statistics infrastructure merged in
-2.12.5. In this guide, I use the plugin to seed up a module of
+2.12.5. In this guide, I use the plugin to speed up a module of
 [Bloop](https://scalacenter.github.io/bloop/), a project I've been recently
 working on, to achieve a **8x speedup in compile times**.
 
