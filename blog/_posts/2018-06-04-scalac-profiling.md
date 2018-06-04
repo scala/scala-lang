@@ -23,9 +23,8 @@ implicit searches or macro expansions.
 In this blog post, I walk you through how to reduce these compile times with
 scalac-profiling. scalac-profiling is a new Scala Center compiler plugin to
 complement my recent work on the compiler statistics infrastructure merged in
-2.12.5. In this guide, I use the plugin to speed up a module of
-[Bloop](https://scalacenter.github.io/bloop/), a project I've been recently
-working on, to achieve a **8x speedup in compile times**.
+2.12.5. I use the plugin to speed up the compile times of a
+[Bloop](https://scalacenter.github.io/bloop/) module by **8x**.
 
 The analysis and optimizations here presented can be migrated to any other
 Scala project that makes heavy use of typeclass deriving code, implicits,
@@ -37,12 +36,13 @@ After reading the blog post, you should understand:
   on compile times.
 * Why typeclass deriving or Shapeless-based code is prone to slow compilation
   times if not used with care.
-* How implicit search and macros interact in unexpected ways that can hurt and
-  productivity and how you can optimize their interaction.
+* How implicit search and macros interact in unexpected ways that can hurt
+  developer productivity and how you can optimize their interaction.
 
-The most important take-away from this guide is that *you should not take
-slow Scala compile times for granted*. It's worth investigating why slow
-compiles happens as as it is often possible to fix our projects to compile faster!
+The most important take-away from this guide is that **you should not take
+slow Scala compile times for granted**. It's worth investigating why slow
+compiles happens as as it is often possible to fix our projects to compile
+faster!
 
 ### Pointers to read the article
 
