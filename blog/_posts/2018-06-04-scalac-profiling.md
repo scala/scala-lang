@@ -77,7 +77,7 @@ the profiling data.
 - [The quest for optimization](#the-quest-for-optimization)
     - [Reading the implicit search flamegraph](#reading-the-implicit-search-flamegraph)
     - [A tour through Shapeless's `Generic`](#a-tour-through-shapelesss-generic)
-    - [The Strict/Lazy macro doesn't like the aux pattern](#the-strict-lazy-macro-doesnt-like-the-aux-pattern)
+    - [The Strict-Lazy macro doesn't like the aux pattern](#the-strict-lazy-macro-doesnt-like-the-aux-pattern)
     - [Deduplicating more expansions](#deduplicating-more-expansions)
     - [Getting the final results](#getting-the-final-results)
 - [Conclusion](#conclusion)
@@ -906,7 +906,7 @@ searches from the flamegraph, but most of the other ones still persist.
 What is really going on? Our modification fixed the unnecessary expansion for
 `Generic`, but there seems to be a more fundamental issue at play.
 
-#### The Strict/Lazy macro doesn't like the aux pattern
+#### The Strict-Lazy macro doesn't like the aux pattern
 
 It took me a while to find out what was happening, though I couldn't come up
 with a fix in the compiler (where I think the real issue is -- though it's
