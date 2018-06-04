@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Jorge Vicente Cantero
-title: "Profiling and reducing compile times of typeclass derivation"
+title: "Speeding Up Compilation Time with `scalac-profiling`"
 ---
 
 Today I write about how I've reduced compilation times of a project that uses
