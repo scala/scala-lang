@@ -55,33 +55,6 @@ have much time, jump directly to the
 [detective work](#the-quest-for-optimization) that digs into
 the profiling data.
 
-## TOC
-
-- [TOC](#toc)
-- [The codebase](#the-codebase)
-- [The setup and workflow](#the-setup-and-workflow)
-  - [Compiling the codebase](#compiling-the-codebase)
-    - [Warm up the compiler](#warm-up-the-compiler)
-- [The profiling toolkit and theory](#the-profiling-toolkit-and-theory)
-  - [Compiler statistics](#compiler-statistics)
-    - [Setting statistics up](#setting-statistics-up)
-  - [Walking into the lion's den](#walking-into-the-lions-den)
-  - [The troublemaker](#the-troublemaker)
-  - [An initial exploration of the data](#an-initial-exploration-of-the-data)
-    - [A profiling plugin for `scalac`](#a-profiling-plugin-for-scalac)
-    - [The first visual](#the-first-visual)
-    - [Typeclass derivation for the win](#typeclass-derivation-for-the-win)
-    - [The cost of implicit macros](#the-cost-of-implicit-macros)
-    - [The world of shapeless](#the-world-of-shapeless)
-    - [Quick derivation example](#quick-derivation-example)
-- [The quest for optimization](#the-quest-for-optimization)
-    - [Reading the implicit search flamegraph](#reading-the-implicit-search-flamegraph)
-    - [A tour through Shapeless's `Generic`](#a-tour-through-shapelesss-generic)
-    - [The Strict-Lazy macro doesn't like the aux pattern](#the-strict-lazy-macro-doesnt-like-the-aux-pattern)
-    - [Deduplicating more expansions](#deduplicating-more-expansions)
-    - [Getting the final results](#getting-the-final-results)
-- [Conclusion](#conclusion)
-
 This is a long blog post. Put on your profiling hat and let's get our hands
 dirty!
 
