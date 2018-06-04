@@ -17,8 +17,8 @@ slow-downs. (As of Scala 2.12, typeclass derivation is based on
 implicitly-triggered macro expansions.)
 
 The goal of this blog post is to help you understand when these things are
-happening in your code, so you can reduce the parts of the code that triggers
-unnecessary implicit searches or macro expansions.
+happening in your code, so you can remove code that triggers unnecessary
+implicit searches or macro expansions.
 
 In this blog post, I walk you through how to reduce these compile times with
 scalac-profiling. scalac-profiling is a new Scala Center compiler plugin to
