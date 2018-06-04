@@ -451,7 +451,7 @@ You can then visualize it with `$BROWSER bloop-profile-initial.svg`.
 
 After we're all set up, we'll then get an `svg` file that looks like this:
 
-[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.png)](/resources/img/blog/bloop-profile-0.png)
+[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.svg)](/resources/img/blog/bloop-profile-0.svg)
 
 (The flamegraph is a png image. You can check the svg by opening the image in
 a new tab and replacing `png` by `svg` in the URL. The svg images allows you to
@@ -669,7 +669,7 @@ exploration.
 #### Reading the implicit search flamegraph
 
 
-[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.png)](/resources/img/blog/bloop-profile-0.png)
+[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.svg)](/resources/img/blog/bloop-profile-0.svg)
 
 The flamegraph has three colors. Every color has a meaning.
 
