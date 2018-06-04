@@ -451,11 +451,12 @@ You can then visualize it with `$BROWSER bloop-profile-initial.svg`.
 
 After we're all set up, we'll then get an `svg` file that looks like this:
 
-[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.svg)](/resources/img/blog/bloop-profile-0.svg)
+[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.png)](/resources/img/blog/bloop-profile-0.png)
 
-(The flamegraph is shown as an image but it's an svg. Open the image in a new
-tab to be able to hover on every stack, search through the stack entries and
-check the compilation times of every box.)
+(The flamegraph is a png image. You can check the svg by opening the image in
+a new tab and replacing `png` by `svg` in the URL. The svg images allows you to
+hover on every stack, search through the stack entries and check the
+compilation times of every box.)
 
 We finally have a visual of all the implicit searches our program is doing,
 and how their dependencies look like. But before we keep finding out what the
@@ -668,7 +669,7 @@ exploration.
 #### Reading the implicit search flamegraph
 
 
-[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.svg)](/resources/img/blog/bloop-profile-0.svg)
+[![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.png)](/resources/img/blog/bloop-profile-0.png)
 
 The flamegraph has three colors. Every color has a meaning.
 
@@ -748,7 +749,7 @@ Great! Well, let's check the compile time and flamegraphs now.
   typer              : 1 spans, ()13625.005ms (71.5%)
 ```
 
-[![Flamegraph after cached implicits](/resources/img/blog/bloop-profile-1.svg)](/resources/img/blog/bloop-profile-1.svg)
+[![Flamegraph after cached implicits](/resources/img/blog/bloop-profile-1.png)](/resources/img/blog/bloop-profile-1.png)
 
 The compile time is 2.5x faster. Not bad for a two line change. The duration
 of implicit search accounts for 13 seconds, roughly ~95% of typer.
@@ -868,7 +869,7 @@ time spent in implicits   : 13515 spans, ()12409.099ms (95.4%)
 time spent in macroExpand : 17175 spans, ()11974.695ms (92.0%)
 ```
 
-[![Implicit flamegraph after shapeless change](/resources/img/blog/bloop-profile-2.svg)](/resources/img/blog/bloop-profile-2.svg)
+[![Implicit flamegraph after shapeless change](/resources/img/blog/bloop-profile-2.png)](/resources/img/blog/bloop-profile-2.png)
 
 The change had a mild positive effect -- we gained two seconds. This change
 seems to have removed the log we saw before and some of the failed implicit
@@ -981,7 +982,7 @@ the changed version.
   typer              : 1 spans, ()11360.512ms (71.1%)
 ```
 
-[![New flamegraph baseline](/resources/img/blog/bloop-profile-3.svg)](/resources/img/blog/bloop-profile-3.svg)
+[![New flamegraph baseline](/resources/img/blog/bloop-profile-3.png)](/resources/img/blog/bloop-profile-3.png)
 
 The new caching only shaves around ~600ms of compile times. Let's check
 compiling with our new case-app now.
@@ -991,7 +992,7 @@ compiling with our new case-app now.
   typer              : 1 spans, ()5074.836ms (68.3%)
 ```
 
-[![Flamegraph after case-app change](/resources/img/blog/bloop-profile-4.svg)](/resources/img/blog/bloop-profile-4.svg)
+[![Flamegraph after case-app change](/resources/img/blog/bloop-profile-4.png)](/resources/img/blog/bloop-profile-4.png)
 
 Bingo! Most of the time-consuming failed implicit searches are gone and
 compilation time has halved. Our hypothesis is confirmed: the `Strict` macro
@@ -1035,7 +1036,7 @@ implicit val testParser: Parser[Commands.Test] = Parser.generic
   typer              : 1 spans, ()7925.156ms (78.0%)
 ```
 
-[![Flamegraph after more cached parsers](/resources/img/blog/bloop-profile-5.svg)](/resources/img/blog/bloop-profile-5.svg)
+[![Flamegraph after more cached parsers](/resources/img/blog/bloop-profile-5.png)](/resources/img/blog/bloop-profile-5.png)
 
 We're in the right direction, but there doesn't seem to be any
 straightforward way of decreasing that compilation time anymore.
@@ -1132,7 +1133,7 @@ And now let's check the compilation time.
   typer              : 1 spans, ()5435.895ms (74.6%)
 ```
 
-[![Flamegraph after all cached implicits](/resources/img/blog/bloop-profile-6.svg)](/resources/img/blog/bloop-profile-6.svg)
+[![Flamegraph after all cached implicits](/resources/img/blog/bloop-profile-6.png)](/resources/img/blog/bloop-profile-6.png)
 
 Great, that reduced compile times by 3 more seconds. You can continue the
 same strategy over and over. This is where we stop; we have already cached the
@@ -1187,7 +1188,7 @@ change often as it is the case. Let's try out the new change!
   typer              : 1 spans, ()2887.031ms (64.0%)
 ```
 
-[![Flamegraph after caching + case-app changes](/resources/img/blog/bloop-profile-7.svg)](/resources/img/blog/bloop-profile-7.svg)
+[![Flamegraph after caching + case-app changes](/resources/img/blog/bloop-profile-7.png)](/resources/img/blog/bloop-profile-7.png)
 
 Great! We now have a compile time under 5 seconds for an application that
 still uses a powerful derivation mechanism, it's easy to maintain and it's
