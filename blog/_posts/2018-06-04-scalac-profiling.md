@@ -1010,7 +1010,9 @@ upgrade.
 (After discussing this issue with [Miles](https://github.com/milessabin/) we
 both agree the strict/lazy macro is not handling refinement types correctly
 and that this performance penalty is a bug. This bug will most likely be fixed
-in a future version of Shapeless after 2.3.3 for all its users.)
+in a future version of Shapeless after 2.3.3 for all its users. Some of these
+performance implications will be gone with Scala 2.13, that adds by-name
+implicits to the compiler.)
 
 #### Deduplicating more expansions
 
