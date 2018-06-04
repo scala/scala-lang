@@ -52,7 +52,7 @@ reading the whole blog post is **highly recommended**.
 
 If you're already familiar with the source of inefficiencies or you don't
 have much time, jump directly to the
-[detective work][#the-quest-for-optimization] that digs into
+[detective work](#the-quest-for-optimization) that digs into
 the profiling data.
 
 ## TOC
