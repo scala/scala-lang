@@ -5,30 +5,31 @@ by: Jorge Vicente Cantero
 title: "Speeding Up Compilation Time with `scalac-profiling`"
 ---
 
+Today I teach you how to use `scalac-profiling` to debug potential slow-downs
+in compilation. In particular, slow-downs coming from implicit search and
+macro expansion.
+
+The goal is to help you understand when these things are happening in your
+code, so you can reduce the parts of the code that triggers unnecessary
+implicit searches or macro expansions.
+
+The blog post focuses on typeclass derivation (which we explain later on),
+but the analysis and optimizations here presented can be migrated to any
+other codebase that makes a heavy use of macros or implicits.
+
+In many cases, slow compilations in the Scala community originate from either
+an unintentional misuse of a macro-based library, or inefficient macro
+implementations. Until now, Scala developers could not reduce this cost
+because tooling to profile compile times was lacking and knowledge of these
+issues limited.
+
 Today I write about how I've reduced compilation times of a project that uses
 typeclass derivation to create parsers for CLIs (command-line interfaces)
 with Shapeless.
 
-Typeclass derivation makes a heavy use of macros and implicit search to reduce
-boilerplate and reduce code maintenance, but has a high cost on compile
-times. In most of the cases, slow compilations of this common use case in the
-Scala community originate from either an unintentional misuse of a
-macro-based library, or inefficient macro implementations.
-
-Until now, Scala developers could not reduce the cost of the slow compilation
-times because tooling to profile compile times was lacking and knowledge of these issues limited.
-
-My goal in this blog post is to give you a walkthrough on how to find and
-reduce these compile times with `scalac-profiling`. `scalac-profiling` is a
-new Scala Center compiler plugin to complement my recent work on the compiler
-statistics infrastructure merged in 2.12.5. In this guide, I use the plugin
-to speed up a module of [Bloop](https://scalacenter.github.io/bloop/), a
-project I've been recently working on, to achieve a **8x speedup in compile
-times**.
-
-The analysis and optimizations here presented can be migrated to any other
-Scala project that derives a lot of types at compile time or makes a heavy
-use of implicits and macros.
+In this blog post, I use `scalac-profiling` to speed up a module of
+[Bloop](https://scalacenter.github.io/bloop/), a project I've been recently
+working on, to achieve a **8x speedup in compile times**.
 
 After reading the blog post, you should understand:
 
