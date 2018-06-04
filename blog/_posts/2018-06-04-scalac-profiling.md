@@ -5,29 +5,29 @@ by: Jorge Vicente Cantero
 title: "Speeding Up Compilation Time with `scalac-profiling`"
 ---
 
-Today I teach you how to use `scalac-profiling` to debug potential slow-downs
-in compilation. In particular, slow-downs coming from implicit search and
-macro expansion.
+In this blog article, I’d like to introduce you to a new tool that we’ve
+developed at the Scala Center called scalac-profiling, which aims to help you
+better understand what is slowing down compilation in your project.
 
-The goal is to help you understand when these things are happening in your
-code, so you can reduce the parts of the code that triggers unnecessary
-implicit searches or macro expansions.
+It turns out that the use of Scala's implicits as well as macros can greatly
+increase compilation times, depending on how they are used and how your
+codebase is organized. Codebases that make use of libraries like Shapeless,
+or which rely on typeclass derivation, may be particularly prone to these
+slow-downs. (As of Scala 2.12, typeclass derivation is based on
+implicitly-triggered macro expansions.)
+
+Until now, Scala developers could not reduce this cost because tooling to
+profile compile times was lacking and knowledge of these issues limited.
+
+The goal of this blog post is to help you understand when these things are
+happening in your code, so you can reduce the parts of the code that triggers
+unnecessary implicit searches or macro expansions.
 
 The blog post focuses on typeclass derivation (which we explain later on),
 but the analysis and optimizations here presented can be migrated to any
 other codebase that makes a heavy use of macros or implicits.
 
-In many cases, slow compilations in the Scala community originate from either
-an unintentional misuse of a macro-based library, or inefficient macro
-implementations. Until now, Scala developers could not reduce this cost
-because tooling to profile compile times was lacking and knowledge of these
-issues limited.
-
-Today I write about how I've reduced compilation times of a project that uses
-typeclass derivation to create parsers for CLIs (command-line interfaces)
-with Shapeless.
-
-In this blog post, I use `scalac-profiling` to speed up a module of
+In this guide, we'll use `scalac-profiling` to speed up a module of
 [Bloop](https://scalacenter.github.io/bloop/), a project I've been recently
 working on, to achieve a **8x speedup in compile times**.
 
