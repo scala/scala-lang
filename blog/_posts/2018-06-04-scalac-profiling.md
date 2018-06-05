@@ -453,10 +453,9 @@ After we're all set up, we'll then get an `svg` file that looks like this:
 
 [![Initial flamegraph of implicit search in `frontend`](/resources/img/blog/bloop-profile-0.png)](/resources/img/blog/bloop-profile-0.svg)
 
-(The flamegraph is a png image. You can check the svg by opening the image in
-a new tab and replacing `png` by `svg` in the URL. The svg images allows you to
-hover on every stack, search through the stack entries and check the
-compilation times of every box.)
+(The flamegraph in the blog post is a png image. You can check the svg by
+opening the image in a new tab. Svg images allow you to hover on every stack,
+search through the stack entries and check the compilation times of every box.)
 
 We finally have a visual of all the implicit searches our program is doing,
 and how their dependencies look like. But before we keep finding out what the
