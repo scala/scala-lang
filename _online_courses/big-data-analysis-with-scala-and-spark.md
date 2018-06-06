@@ -1,10 +1,8 @@
 ---
 layout: inner-page-no-masthead
 title: Big Data Analysis with Scala and Spark
-course-page: https://www.coursera.org/learn/scala-spark-big-data
-date: 27-02-2018
-end-date: 03-04-2018
-platform: coursera
+coursera-page: https://www.coursera.org/learn/scala-spark-big-data
+openedx-page: https://courseware.epfl.ch/courses/course-v1:EPFL+scala-spark-big-data+2018-T1/about
 specialization: fpfun
 specialization-order: 4
 paid: false

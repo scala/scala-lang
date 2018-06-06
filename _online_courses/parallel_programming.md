@@ -1,10 +1,8 @@
 ---
 layout: inner-page-no-masthead
 title: Parallel Programming
-course-page: https://www.coursera.org/learn/parprog1
-date: 27-02-2017
-end-date: 03-04-2017
-platform: coursera
+coursera-page: https://www.coursera.org/learn/parprog1
+openedx-page: https://courseware.epfl.ch/courses/course-v1:EPFL+parprog1+2018_T1/about
 specialization: fpfun
 specialization-order: 3
 paid: false
