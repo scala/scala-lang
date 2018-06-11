@@ -127,7 +127,7 @@ complete.
 One of Scala's great innovations was support for using method names in infix
 position, and Odersky would like to take that one step further to make all
 method applications postfix by default. As Mark Twain observes in his [appraisal
-of German sentence structure](), "...the writer
+of German sentence structure](https://en.wikipedia.org/wiki/The_Awful_German_Language), "...the writer
 [appends] 'haben sind gewesen gehabt haben geworden sein,' or words to that
 effect, and the monument is finished." To Odersky, postfix verbs are like "the
 alpenglow of a sentence".
