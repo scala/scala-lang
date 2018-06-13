@@ -7,15 +7,16 @@ title: Scala 2.13’s Collections
 
 One more article about the standard collections, really? Indeed, during the last
 18 months a lot of work has been done on the collections side and we’ve published
-several blog articles and given several talks to the explain various changes or
+several blog articles and given several talks to explain the various changes or
 challenges we were facing. This article summarizes **what is going
 to change from an end-user perspective**.
 
-Even if you have thoroughly followed our previous blog posts and talks, this article
-gives you a good overview for summarizing the changes to your colleagues.
+In case you’ve thoroughly followed our previous blog posts and talks, you might
+not learn much from this article. Otherwise, this is the perfect opportunity
+to catch up on the topic in a few minutes!
 
-The next section presents the internal changes in the collections implementation
-that might have some visible impact on the surface. Then, I will show why I think
+The next section presents the changes that are internal to the collections implementation
+but that might have some visible impact on the surface. Then, I will show why I think
 that the removal of `CanBuildFrom` made the API more beginner friendly. Next, I
 will introduce some new operations available in the collections. Finally, I
 will mention the main deprecations, the motivations behind them, and their
@@ -49,9 +50,9 @@ deprecated in favor of `LazyList` (see the last section).
 
 I think the most visible change for end-users is that transformation operations
 don’t use `CanBuildFrom` anymore. I believe this will be quite visible despite our previous
-efforts to *hide* `CanBuildFrom` from the API documentation in the current collections.
+efforts to *hide* `CanBuildFrom` from the API documentation of the collections.
 Indeed, if you take a look at the
-[current `List` API](/api/2.12.6/scala/collection/immutable/List.html), the signature
+[old 2.12 `List` API](/api/2.12.6/scala/collection/immutable/List.html), the signature
 shown for the `map` operation does not mention `CanBuildFrom`:
 
 ![there is no CanBuildFrom](/resources/img/blog/scaladoc-list-map.png)
@@ -85,9 +86,9 @@ a single operation implementation, and `CanBuildFrom` was used to abstract over
 the various possible return types.
 
 In the new collections we wanted to have simpler type signatures so that we
-can shoulder their actual form in the API documentation and auto-completion
+can show their actual signature in the API documentation, and auto-completion
 provided by IDEs is not scary. We achieve that by using overloading, as
-explained in more details in
+explained in more detail in
 [this blog article](/blog/2017/05/30/tribulations-canbuildfrom.html).
 
 In practice, this means that the new `TreeMap` has three overloads of the
@@ -98,7 +99,7 @@ In practice, this means that the new `TreeMap` has three overloads of the
 These type signatures are the actual ones and they essentially translate
 “in types” what I’ve written above about the possible result types of `map`
 according to the type of elements returned by the transformation function `f`.
-I believe that the new API is simpler to understand.
+We believe that the new API is simpler to understand.
 
 ## New And Noteworthy
 
@@ -107,7 +108,7 @@ present some of them.
 
 ### `groupMap`
 
-A common pattern with the current collection is to use `groupBy`
+A common pattern with the old 2.12 collections is to use `groupBy`
 followed by `mapValues` to transform the groups. For instance,
 this is how we can index the names of a collection of users by
 their age:
@@ -161,14 +162,15 @@ users
 ## Deprecations For Less Confusion
 
 A consequence of cleaning and simplifying the collections framework
-is that several types or operations have been deprecated.
+is that several types or operations have been deprecated in Scala 2.13
+and will be removed in 2.14.
 
 ### `Iterable` Is The Top Collection Type
 
 We felt that having a distinction between `Traversable` and `Iterable` was not
 worth it, so we removed `Traversable` (it is now an alias to `Iterable[A]`).
 
-`IterableOnce[A]` is now the collection type at the top of the hierarchy.
+`Iterable[A]` is now the collection type at the top of the hierarchy.
 Its only abstract member is `def iterator: Iterator[A]`.
 
 ### `LazyList` Is Preferred Over `Stream`
@@ -180,7 +182,7 @@ the head and the tail are lazy, whereas in `Stream` only the tail is lazy.
 
 ### Insertion And Removal Operations Are Not Available On Generic Collections
 
-In the current framework, the `scala.collection.Map` type has a `+` and a `-` operations
+In the old 2.12 framework, the `scala.collection.Map` type has a `+` and a `-` operations
 to add and remove entries. The semantics of these operations is to return a new collection
 with the added or removed entries, without changing the source collection.
 
@@ -191,8 +193,8 @@ has `+` and `+=`, as well as `-` and `-=`.
 
 Having all these operations can be handy in some cases but can also introduce confusion. If you want
 to use `+` or `-`, then you probably wanted to use an immutable collection type in the first place…
-Another example is the `updated` operation, which is available on mutable `Map` but returns a new
-collection.
+Consequently, `+`, `-` and `updated` have been moved from `scala.collection.Map` to `scala.collection.immutable.Map`,
+and `+` and `-` have been moved from `scala.collection.Set` to `scala.collection.immutable.Set`
 
 We think that by deprecating these insertion and removal operations from generic collection
 types and by having distinct operations between the `mutable` and `immutable` branches we make
