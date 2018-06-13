@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Jorge Vicente Cantero
-title: "Speeding Up Compilation Time with `scalac-profiling`"
+title: "Speeding Up Compilation Time with scalac-profiling"
 ---
 
 In this blog article, I’d like to introduce you to a new tool that we’ve
