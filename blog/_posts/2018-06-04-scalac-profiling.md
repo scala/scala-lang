@@ -302,7 +302,7 @@ reasonable, which hints us that the inefficiency is elsewhere.
 
 For most of the cases, these timers are unlikely to be high when typechecking
 your program. If they are, try to figure out why and file a ticket in
-`scala/bug` so that either I or the Scala team can look into it.
+[Scala compiler's issue tracker](https://github.com/scala/bug/) so that either I or the Scala team can look into it.
 
 ### The troublemaker
 
@@ -818,7 +818,7 @@ and
 The problem of incorrect instantiated type arguments we saw before seems
 specific to the way the compiler carries out the implicit search. Fixing it
 requires most likely changes to the implicit search algorithm, as [a similar
-scala/bug did](https://github.com/scala/bug/issues/10528). I tried porting
+Scala compiler issue](https://github.com/scala/bug/issues/10528) did. I tried porting
 these changes to 2.12.x and use `-Xsource:2.13` but the failed macro
 expansions didn't go away.
 
