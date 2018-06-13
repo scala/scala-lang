@@ -13,8 +13,8 @@ It turns out that the use of Scala's implicits as well as macros can greatly
 increase compilation times, depending on how they are used and how your
 codebase is organized. Codebases that make use of libraries like [Shapeless],
 or which rely on typeclass derivation, may be particularly prone to these
-slow-downs. (As of Scala 2.12, typeclass derivation is based on
-implicitly-triggered macro expansions.)
+slow-downs. As of Scala 2.12, typeclass derivation is based on
+implicitly-triggered macro expansions.
 
 The goal of this blog post is to help you understand when these things are
 happening in your code, so you can remove code that triggers unnecessary
@@ -194,9 +194,9 @@ Add the compiler flag to the field `options` inside the
 automatically pick up your changes and add the compiler option without the
 need of a `reload`.
 
-(If you use sbt, add `scalacOptions in Compile += "-Ystatistics"` to your
+If you use sbt, add `scalacOptions in Compile += "-Ystatistics"` to your
 project settings. If you want to profile tests scope it to `Test` instead of
-`Compile`.)
+`Compile`.
 
 Run `bloop compile frontend -w --reporter scalac` (we use the default scalac
 reporter for clarity) and have a look at the data. The output of the
@@ -300,9 +300,9 @@ dependent types, type projections or abstract types in a more general way.
 In the case of `frontend`, the durations of all these operations are
 reasonable, which hints us that the inefficiency is elsewhere.
 
-(For most of the cases, these timers are unlikely to be high when typechecking
+For most of the cases, these timers are unlikely to be high when typechecking
 your program. If they are, try to figure out why and file a ticket in
-`scala/bug` so that either I or the Scala team can look into it.)
+`scala/bug` so that either I or the Scala team can look into it.
 
 ### The troublemaker
 
@@ -771,14 +771,14 @@ when finding an implicit for `HListParser` (which takes type parameters
 [inferred from its other functional
 dependencies](https://github.com/alexarchambault/case-app/blob/v1.2.0/core/shared/src/main/scala/caseapp/core/Parser.scala#L77-L84)).
 
-Let's further debug this with `-Xlog-implicits` (by adding it to the scalac
-options of the bloop configuration file).
+Let's further debug this by adding `-Xlog-implicits` to the scalac
+options of the bloop configuration file.
 
-(This is a good moment to try to minimize the problem. `-Xlog-implicits` will
+This is a good moment to try to minimize the problem. `-Xlog-implicits` will
 log a lot of failed searches and we want to be able to see through the noise.
 I did minimise the issue
 [here](https://github.com/scalacenter/scalac-profiling/pull/23/commits/dbcb8d480e9b402899d21620055bc555b2841382).
-Doing `implicitly[Parser[CliOptions]]` also reproduces it.)
+Doing `implicitly[Parser[CliOptions]]` also reproduces it.
 
 Among all the logs, this is the one that attracts my attention the most.
 
@@ -1006,12 +1006,12 @@ experienced with the codebase have a look at it. If we're lucky, someone will
 fix this issue upstream soon and we'll benefit from this speed up when we
 upgrade.
 
-(After discussing this issue with [Miles](https://github.com/milessabin/) we
+After discussing this issue with [Miles](https://github.com/milessabin/) we
 both agree the strict/lazy macro is not handling refinement types correctly
 and that this performance penalty is a bug. This bug will most likely be fixed
 in a future version of Shapeless after 2.3.3 for all its users. Some of these
 performance implications will be gone with Scala 2.13, that adds by-name
-implicits to the compiler.)
+implicits to the compiler.
 
 #### Deduplicating more expansions
 
