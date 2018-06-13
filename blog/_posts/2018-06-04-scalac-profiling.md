@@ -1006,7 +1006,7 @@ experienced with the codebase have a look at it. If we're lucky, someone will
 fix this issue upstream soon and we'll benefit from this speed up when we
 upgrade.
 
-After discussing this issue with [Miles](https://github.com/milessabin/) we
+After discussing this issue with the author of Shapeless, [Miles Sabin](https://github.com/milessabin/), we
 both agree the strict/lazy macro is not handling refinement types correctly
 and that this performance penalty is a bug. This bug will most likely be fixed
 in a future version of Shapeless after 2.3.3 for all its users. Some of these
