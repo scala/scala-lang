@@ -52,7 +52,7 @@ I think the most visible change for end-users is that transformation operations
 don’t use `CanBuildFrom` anymore. I believe this will be quite visible despite our previous
 efforts to *hide* `CanBuildFrom` from the API documentation of the collections.
 Indeed, if you take a look at the
-[old 2.12 `List` API](/api/2.12.6/scala/collection/immutable/List.html), the signature
+[old 2.12 `List` API](//www.scala-lang.org/api/2.12.6/scala/collection/immutable/List.html), the signature
 shown for the `map` operation does not mention `CanBuildFrom`:
 
 ![there is no CanBuildFrom](/resources/img/blog/scaladoc-list-map.png)
@@ -64,7 +64,7 @@ However, if you use this operation in your code, then your IDE reveals its actua
 As you can see, the type signature shown in the API documentation has been “simplified”
 to make it more approachable, but I believe that this is probably introducing more
 confusion to the users. Especially when you look at the
-[`TreeMap[A, B]` API](/api/2.12.6/scala/collection/immutable/TreeMap.html):
+[`TreeMap[A, B]` API](//www.scala-lang.org/api/2.12.6/scala/collection/immutable/TreeMap.html):
 
 ![wtf](/resources/img/blog/scaladoc-treemap-map.png)
 
