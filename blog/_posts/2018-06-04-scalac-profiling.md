@@ -11,7 +11,7 @@ better understand what is slowing down compilation in your project.
 
 It turns out that the use of Scala's implicits as well as macros can greatly
 increase compilation times, depending on how they are used and how your
-codebase is organized. Codebases that make use of libraries like Shapeless,
+codebase is organized. Codebases that make use of libraries like [Shapeless],
 or which rely on typeclass derivation, may be particularly prone to these
 slow-downs. (As of Scala 2.12, typeclass derivation is based on
 implicitly-triggered macro expansions.)
@@ -82,7 +82,7 @@ it should compile in ~4 seconds.
 `frontend` depends on
 [`case-app`](https://github.com/alexarchambault/case-app/), a command-line
 parsing library for Scala that uses
-[Shapeless](https://github.com/milessabin/shapeless). This library is
+[Shapeless]. This library is
 excellent, but slows our compilation down to 30 seconds.
 
 Waiting 30 seconds for a change to take effect (even under incremental
@@ -1297,3 +1297,5 @@ In the meanwhile, this blog post aims to provide all the possible data to
 alleviate the compile times of users that leverage automatic typeclass
 derivation. I hope this blog post helps make your team more productive with
 Scala.
+
+[Shapeless]: https://github.com/milessabin/shapeless
