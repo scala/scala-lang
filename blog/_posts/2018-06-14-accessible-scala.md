@@ -36,8 +36,8 @@ Since there is more than one way to pronounce Scala source code, we are open to 
 here: [DescribeTest.scala]. If you find that descriptions could be improved, send us a pull request with the 
 expected form.
 
-  Reading Scala out loud make some of its syntactic elements makes it less intimidating for beginners. There is no more 
-need to mentally associate the syntax `+T` with its concept `co-variant`. Notice in the example above, how the type parameter delimiters: `[` and `]` are absent from the verbal description. It can also help sighted developers to describe Scala orally, for example in the context of pair programming. However, when expressions get more complex, the audible form can become ambiguous or difficult to decipher. 
+  Reading Scala out loud makes some of its syntactic elements less intimidating for beginners. There is no more 
+need to mentally associate the syntax `+T` with its concept `co-variant`. It can also help sighted developers to describe Scala orally, for example in the context of pair programming. However, notice in the example above, how the type parameter delimiters: `[` and `]` are absent from the verbal description. When expressions get more complex, the audible form can become ambiguous or difficult to decipher. 
 
   To overcome the limitation of verbal description, we created a technique called the Cursor. The idea is simple:
 from your cursor location, you can navigate the abstract syntax tree of the source code. From a node, you can
@@ -72,7 +72,7 @@ technique and hear the descriptions.
 
 ## Want to try it?
 
-We created an [online demo]. You can try it now! (Tip: It works best on Google Chrome! )
+You can try it now on your web browser via your [online demo]! (Tip: It works best on Google Chrome! )
 
 We also created a [vscode extension], so you can try on your project. Search for `Accessible Scala` in the 
 extension manager
@@ -92,8 +92,7 @@ extension manager
 
 We hope you are excited as we are by the online demo. We would like to hear your feedback on the verbal 
 descriptions. We would like to invite the Scala community to improve the quality of the project and join the
-effort. Another area where we would need help
-is to create an integration with [Emacspeak]. It's an emacs plugin widely used by blind developers. If you
+effort by improving the descriptions. You can create a PR against [DescribeTest.scala]. Another area where we would need help is to create an integration with [Emacspeak]. It's an emacs plugin widely used by blind developers. If you
 know emacs lisp well and want to participate, please reach out to us!
 
 ## Talk to us!
@@ -107,4 +106,4 @@ We also have a [gitter] channel.
 [DescribeTest.scala]: https://github.com/scalacenter/accessible-scala/blob/master/tests/unit/src/test/scala/ch.epfl.scala.accessible/DescribeTest.scala
 [Emacspeak]: https://github.com/tvraman/emacspeak
 [gitter]: https://gitter.im/scalacenter/accessible-scala
-[Scala Contributors]: https://contributors.scala-lang.org/TBD
+[Scala Contributors]: https://contributors.scala-lang.org/t/introducing-accessible-scala/1987
