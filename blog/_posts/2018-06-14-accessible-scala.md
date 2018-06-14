@@ -70,7 +70,7 @@ private class A {
 We created an online demo (adjust your volume!) to let you try the cursor 
 technique and hear the descriptions.
 
-# Want to try it?
+## Want to try it?
 
 We created an [online demo]. You can try it now! (Tip: It works best on Google Chrome! )
 
@@ -88,7 +88,7 @@ extension manager
 </div>
 
 
-# What's next?
+## What's next?
 
 We hope you are excited as we are by the online demo. We would like to hear your feedback on the verbal 
 descriptions. We would like to invite the Scala community to improve the quality of the project and join the
@@ -96,7 +96,7 @@ effort. Another area where we would need help
 is to create an integration with [Emacspeak]. It's an emacs plugin widely used by blind developers. If you
 know emacs lisp well and want to participate, please reach out to us!
 
-# Talk to us!
+## Talk to us!
 
 Thoughts or opinions about Accessible Scala? Join us over on [Scala Contributors] to contribute to the discussion.
 We also have a [gitter] channel.
