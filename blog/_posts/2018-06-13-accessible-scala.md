@@ -32,7 +32,9 @@ We created an [online demo]. You can try it now! (Tip: It works best on google-c
 
 We also created a [vscode extension] so you can try on your project. Search for `Accessible Scala` in the 
 extension manager
-  
+
+<iframe style="margin: 20px auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/Up2ytnrsX6s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 # What's next?
 
 We hope you are excited as we are by the online demo. We would like to hear your feedback on the verbal 
