@@ -6,7 +6,7 @@ title: Introducing Accessible Scala
 ---
 
   Scala is proudly a welcoming environment for all. The Scala Center is demonstrating this by supporting 
-the development of Accessible Scala, a tool for blind and partially-sighted developers (see [SCP-016]).
+the development of Accessible Scala, a tool for blind and partially-sighted developers (see [SCP-016] by Sam Halliday).
 One of its goals is to remove the noise introduced by various delimiters. The current solution with
 text-to-speech engine, would read 
 
