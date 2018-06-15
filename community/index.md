@@ -77,6 +77,7 @@ International rooms are available as well:
 * **[scala/pl](https://gitter.im/scala/pl)**
 * **[scala/pt](https://gitter.im/scala/pt)**
 * **[scala_ru](https://t.me/scala_ru)** (Telegram)
+* **[scala_en](https://t.me/scala_en)** (Telegram)
 
 All of the rooms above are covered by the [Scala Code of Conduct](../conduct.html).
 
