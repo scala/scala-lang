@@ -17,8 +17,8 @@ def foo[A: Wibble](s: String, b: Wobble[A]): Int = ...
 as
 
 ```bash
-def space foo open square bracket capital s colon space
-wibble close square bracket open bracket a colon space
+def space foo open square bracket capital a colon space
+wibble close square bracket open bracket s colon space
 string comma space b colon space wobble open square bracket
 capital a close square bracket close bracket colon
 space Int space equals space ...
