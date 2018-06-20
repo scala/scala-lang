@@ -7,11 +7,21 @@ title: "Scala ❤️ Pride 2018"
 
 It's that time of year! Pride 2018. In honor of all of us Scalamaris that are advocates of or identify with the LGBT community–we have a little bit of Scala love for you. I've created special Pride Scala swirls for just about every pride flag I could think of. And perhaps the best part! They're all available as t-shirts, available on [Teespring](http://teespring.com). 100% of proceeds for t-shirt sales are donated to [the Trevor Project](https://www.thetrevorproject.org/). (Go check it out!)
 
-**But please move quick! The shirts are only available for around two weeks. So grab one or a few and help us raise funds for [the Trevor Project](https://www.thetrevorproject.org/)!** Shirts are available in many colors and styles, and come as t-shirts or tank tops.
-
-**If you are at Scala Days NYC on June 20-21st, and you would like one of the rainbow Scala swirl shirts right away, head over to [this page](http://scalacentershop.com/) to pay for a shirt, and I will hand-deliver it to you today or tomorrow (June 20th or 21st) in person at Scala Days.**
-
 And don't forget, we're here for you. We love you, and you're one of us.
+
+## There are two ways to get a shirt!
+
+### In person at Scala Days NYC (June 20-21st only)
+
+If you are at Scala Days NYC on June 20-21st, and you would like one of the rainbow Scala swirl shirts right away, head over to [this page](http://scalacentershop.com/) to pay for a shirt, and I will hand-deliver it to you today or tomorrow (June 20th or 21st) in person at Scala Days.
+
+### Order online, shipping worldwide! Available until July 6th
+
+**But please move quick! The shirts are only available for around two weeks, until July 6th, 2018.**
+
+We have 11 different Scala-ized pride flags available on t-shirts. Each design is available in many different colors and styles, and come as t-shirts or tank tops.
+
+**Click a shirt design below for ordering information!**
 
 <center>
 <a href="https://teespring.com/scala-pride-2018"><img style="max-height: 380px; max-width: 319px;" src="{{ site.baseurl }}/resources/img/01-pride.jpg" alt="Pride"></a>
