@@ -11,11 +11,11 @@ And don't forget, we're here for you. We love you, and you're one of us.
 
 ## There are two ways to get a shirt!
 
-### In person at Scala Days NYC (June 20-21st only)
+### #1: In person at Scala Days NYC (June 20-21st only)
 
 If you are at Scala Days NYC on June 20-21st, and you would like one of the rainbow Scala swirl shirts right away, head over to [this page](http://scalacentershop.com/) to pay for a shirt, and I will hand-deliver it to you today or tomorrow (June 20th or 21st) in person at Scala Days.
 
-### Order online, shipping worldwide! Available until July 6th
+### #2: Order online, shipping worldwide! Available until July 6th
 
 **But please move quick! The shirts are only available for around two weeks, until July 6th, 2018.**
 
