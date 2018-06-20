@@ -5,9 +5,15 @@ by: Heather Miller
 title: "Scala ❤️ Pride 2018"
 ---
 
+<<<<<<< HEAD
 It's that time of year! Pride 2018. In honor of all of us Scalamaris that are advocates of or identify with the LGBT community–we have a little bit of Scala love for you. I've created special Pride Scala swirls for just about every pride flag I could think of. And perhaps the best part! They're all available as t-shirts, available on [Teespring](http://teespring.com). 100% of proceeds for t-shirt sales are donated to [the Trevor Project](https://www.thetrevorproject.org/). (Go check it out!)
 
 **But please move quick! The shirts are only available for around two weeks. So grab one or a few and help us raise funds for [the Trevor Project](https://www.thetrevorproject.org/)!** Shirts are available in many colors and styles, and come as t-shirts or tank tops.
+=======
+It's that time of year! Pride 2018. In honor of all of us Scalamaris that are advocates of or identify with the LGTB community–we have a little bit of Scala love for you. I've created special Pride Scala swirls for just about every pride flag I could think of. And perhaps the best part! They're all available as t-shirts, available on [Teespring](http://teespring.com). 100% of proceeds for t-shirt sales are donated to [the Trevor Project](https://www.thetrevorproject.org/). (Go check it out!)
+
+**But please move quick! The shirts are only available for around two weeks. So grab one or a few and help us raise funds for the [the Trevor Project](https://www.thetrevorproject.org/)!** Shirts are available in many colors and styles, and come as t-shirts or tank tops.
+>>>>>>> a0f5fd5ac2066cc62893872dc186fff1052245fd
 
 **If you are at Scala Days NYC on June 20-21st, and you would like one of the rainbow Scala swirl shirts right away, head over to [this page](http://scalacentershop.com/) to pay for a shirt, and I will hand-deliver it to you today or tomorrow (June 20th or 21st) in person at Scala Days.**
 
