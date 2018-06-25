@@ -1,3 +1,6 @@
+---
+---
+
 // Sliding Panel and scala in a nutshell
 $(document).ready(function() {
     $('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function(e) {
@@ -315,3 +318,109 @@ function updatePointer() {
     pointer.css('top', (target.y));
     pointer.css('left', (target.x) * xScale);
 }
+
+// TRAININGS
+$(document).ready(function() {
+    // Stop early if the element does not exist, i.e.,
+    // we're not on the front page nor on the Trainings page
+    if ($('.training-items-list').length === 0) {
+        return;
+    }
+
+    var isFrontPage = $('.upcoming-training').length !== 0;
+    var MAX_TRAININGS = isFrontPage ? 5 : 999;
+
+    {% comment %} Grab all the upcoming training sessions defined in _trainings {% endcomment %}
+    var scalaLangTrainings = [
+    {% for training in site.trainings %}{% if training.date >= site.time %}
+        {
+            "title": "{{ training.title | escape }}",
+            "url": "{{ training.link-out | escape }}",
+            "location": "{{ training.location | upcase | escape }}",
+            "when": new Date("{{ training.when | escape }}"),
+            "organizer": "{{ training.organizer | escape }}"
+        },
+    {% endif %}{% endfor%}
+    ];
+
+    function doPopulateTrainingsPane(lightBendTrainings) {
+        var MONTH_NAMES = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+
+        // combine and sort our trainings by date
+        var allTrainings = scalaLangTrainings.concat(lightBendTrainings)
+            .sort(function (lhs, rhs) {
+                var lhsDate = lhs.when.valueOf();
+                var rhsDate = rhs.when.valueOf();
+
+                if (lhsDate === rhsDate) {
+                    return 0;
+                }
+
+                return (lhsDate > rhsDate) ? 1 : -1;
+            });
+
+        var listContainer = $('.training-items-list');
+        listContainer.empty();
+        for (var i = 0; i < Math.min(allTrainings.length, MAX_TRAININGS); i++) {
+            var training = allTrainings[i];
+            // add fallbacks if we can't parse our dates
+            var month = '?';
+            var day = '?';
+            if (!isNaN(training.when.valueOf())) {
+                month = MONTH_NAMES[training.when.getMonth()];
+                day = training.when.getDate();
+            }
+
+            // build up our training item
+            var content = '<a href=' + training.url + ' class="training-item card">' +
+                '<span class="calendar">' +
+                    '<span>' + month + '</span>' +
+                    '<span>' + day + '</span>' +
+                '</span>' +
+                '<div class="card-text">' +
+                    '<h4>' + training.title + '</h4>' +
+                    '<ul>' +
+                        '<li class="online-courses-price">' + training.location + '</li>' +
+                        '<li class="dot">•</li>' +
+                        '<li class="online-courses-date">' + training.organizer + '</li>' +
+                    '</ul>' +
+                '</div>';
+
+            // add it to our list
+            listContainer.append(content);
+        }
+    }
+
+    $.getJSON("/resources/php/typesafe-feed-trainings.php")
+        .done(function(data) {
+            // flatten and filter our sessions by date
+            var flattenedTrainings = [];
+            for (var i = 0; i < data[0].length; i++) {
+                var training = data[0][i];
+                for (var j = 0; j < training.sessions.length; j++) {
+                    var session = training.sessions[j];
+
+                    // make sure this session occurs in the future
+                    var when = new Date(session.when);
+                    if (when >= new Date()) {
+                        flattenedTrainings.push({
+                            title: training.title,
+                            url: session.url,
+                            location: session.where.toUpperCase(),
+                            when: when,
+                            organizer: session.organizer
+                        });
+                    }
+                }
+            }
+
+            doPopulateTrainingsPane(flattenedTrainings);
+        })
+        .fail(function(jqXHR, textStatus, errorThrown) {
+            // log the error to the console
+            console.error("Could not load Lightbend training feed: " + textStatus, errorThrown);
+
+            // but at least display trainings from scala-lang
+            doPopulateTrainingsPane([]);
+        });
+});
