@@ -53,37 +53,42 @@
 
   <div class="course-items-list">
     {% for course in courses %}
-      <a href="{{course.course-page}}" class="course-item card">
-        <img src=
-          {% assign platform = course.platform | downcase %}
-          {% case platform %}
-            {% when "coursera" %}
-              "/resources/img/frontpage/coursera-icon.png"
-            {% when "edx" %}
-              "/resources/img/frontpage/edx-icon.png"
-          {% endcase %}
-         alt="">
+      <div class="course-item card">
         <div class="card-text">
-          <h4>{{course.title}}</h4>
-          <ul>
-            <li class="online-courses-price">
-              {% if course.paid == true %}
-                {{site.data.common.texts.onlineCoursesPaid}}
-              {% else %}
-                {{site.data.common.texts.onlineCoursesFree}}
-              {% endif %}
-            </li>
-            <li class="dot">•</li>
-            <li class="online-courses-date">
-              {% if course.showDate == true %}
-                {{course.date | date_to_string}}
-              {% else %}
-                {{site.data.common.texts.courseraLaunchPeriod}}
-              {% endif %}
-            </li>
-          </ul>
+          <h4>
+            {% if course.coursera-page %}
+              <a href="{{course.coursera-page}}">
+                <img src="/resources/img/frontpage/coursera-icon.png" alt="">
+              </a>
+            {% endif %}
+            {% if course.openedx-page %}
+              <a href="{{course.openedx-page}}">
+                <img src="/resources/img/frontpage/edx-icon.png" alt="">
+              </a>
+            {% endif %}
+              {{course.title}}
+          </h4>
+          <div>
+            <ul>
+              <li class="online-courses-price">
+                {% if course.paid == true %}
+                  {{site.data.common.texts.onlineCoursesPaid}}
+                {% else %}
+                  {{site.data.common.texts.onlineCoursesFree}}
+                {% endif %}
+              </li>
+              <li class="dot">•</li>
+              <li class="online-courses-date">
+                {% if course.showDate == true %}
+                  {{course.date | date_to_string}}
+                {% else %}
+                  {{site.data.common.texts.courseraLaunchPeriod}}
+                {% endif %}
+              </li>
+            </ul>
+          </div>
         </div>
-      </a>
+      </div>
     {% endfor %}
   </div>
   <div class="call-to-action action-medium">

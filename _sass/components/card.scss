@@ -57,4 +57,32 @@
     &:hover {
       text-decoration: none;
     }
+
+    &.course-item {
+
+        line-height: normal;
+
+        .card-text {
+
+            margin-left: 0;
+
+            h4 {
+                margin-bottom: 5px;
+            }
+
+            a {
+              margin-right: 18px;
+              display: inline-block;
+              vertical-align: middle;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+
+            }
+
+        }
+
+    }
 }
