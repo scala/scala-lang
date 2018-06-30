@@ -321,106 +321,181 @@ function updatePointer() {
 
 // TRAININGS
 $(document).ready(function() {
-    // Stop early if the element does not exist, i.e.,
-    // we're not on the front page nor on the Trainings page
-    if ($('.training-items-list').length === 0) {
-        return;
-    }
+    var MONTH_NAMES = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+    var MONTH_NAMES_SHORT = MONTH_NAMES.map(function (month) {
+       return month.substr(0, 3);
+    });
 
-    var isFrontPage = $('.upcoming-training').length !== 0;
-    var MAX_TRAININGS = isFrontPage ? 5 : 999;
+    function getTrainings() {
+        function loadTrainings(url) {
+            return $.getJSON(url)
+                .then(function (data) {
+                    // filter out extra ajax info
+                    return data;
+                }, function (jqXHR, textStatus, errorThrown) {
+                    // log the error to the console
+                    console.error("Couldn't load training feed " + url + " : " + textStatus, errorThrown);
 
-    {% comment %} Grab all the upcoming training sessions defined in _trainings {% endcomment %}
-    var scalaLangTrainings = [
-    {% for training in site.trainings %}{% if training.date >= site.time %}
-        {
-            "title": "{{ training.title | escape }}",
-            "url": "{{ training.link-out | escape }}",
-            "location": "{{ training.location | upcase | escape }}",
-            "when": new Date("{{ training.when | escape }}"),
-            "organizer": "{{ training.organizer | escape }}"
-        },
-    {% endif %}{% endfor%}
-    ];
+                    // recover so we can keep processing
+                    return [];
+                });
+        }
 
-    function doPopulateTrainingsPane(lightBendTrainings) {
-        var MONTH_NAMES = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+        // load our trainings
+        var ourTrainingsPromise = loadTrainings("/resources/json/trainings.json")
+            .then(function (trainings) {
+                return trainings.map(function (training) {
+                    var parsedTraining = Object.assign({}, training);
 
-        // combine and sort our trainings by date
-        var allTrainings = scalaLangTrainings.concat(lightBendTrainings)
-            .sort(function (lhs, rhs) {
-                var lhsDate = lhs.when.valueOf();
-                var rhsDate = rhs.when.valueOf();
+                    // parse our date
+                    parsedTraining.when = new Date(training.when);
 
-                if (lhsDate === rhsDate) {
-                    return 0;
-                }
-
-                return (lhsDate > rhsDate) ? 1 : -1;
+                    return parsedTraining;
+                }).filter(function(training) {
+                    // make sure our date occurs in the future
+                    return training.when >= new Date();
+                })
+            }, function (error) {
+                console.error("Couldn't parse our training data", error);
+                // if our data is bad recover with an empty array
+                return [];
             });
 
-        var listContainer = $('.training-items-list');
-        listContainer.empty();
-        for (var i = 0; i < Math.min(allTrainings.length, MAX_TRAININGS); i++) {
-            var training = allTrainings[i];
-            // add fallbacks if we can't parse our dates
-            var month = '?';
-            var day = '?';
-            if (!isNaN(training.when.valueOf())) {
-                month = MONTH_NAMES[training.when.getMonth()];
-                day = training.when.getDate();
-            }
+        // load the trainings from lightbend
+        var lightbendTrainingsPromise = loadTrainings("/resources/php/typesafe-feed-trainings.php")
+            .then(function(data) {
+                var trainings = (data && data.length > 0) ? data[0] : [];
 
-            // build up our training item
-            var content = '<a href=' + training.url + ' class="training-item card">' +
-                '<span class="calendar">' +
-                    '<span>' + month + '</span>' +
-                    '<span>' + day + '</span>' +
-                '</span>' +
-                '<div class="card-text">' +
-                    '<h4>' + training.title + '</h4>' +
-                    '<ul>' +
-                        '<li class="online-courses-price">' + training.location + '</li>' +
-                        '<li class="dot">•</li>' +
-                        '<li class="online-courses-date">' + training.organizer + '</li>' +
-                    '</ul>' +
-                '</div>';
+                // flatten and filter our sessions by date
+                var flattenedTrainings = [];
+                for (var i = 0; i < trainings.length; i++) {
+                    var training = trainings[i];
+                    for (var j = 0; j < training.sessions.length; j++) {
+                        var session = training.sessions[j];
 
-            // add it to our list
-            listContainer.append(content);
-        }
-    }
-
-    $.getJSON("/resources/php/typesafe-feed-trainings.php")
-        .done(function(data) {
-            // flatten and filter our sessions by date
-            var flattenedTrainings = [];
-            for (var i = 0; i < data[0].length; i++) {
-                var training = data[0][i];
-                for (var j = 0; j < training.sessions.length; j++) {
-                    var session = training.sessions[j];
-
-                    // make sure this session occurs in the future
-                    var when = new Date(session.when);
-                    if (when >= new Date()) {
-                        flattenedTrainings.push({
-                            title: training.title,
-                            url: session.url,
-                            location: session.where.toUpperCase(),
-                            when: when,
-                            organizer: session.organizer
-                        });
+                        // make sure this session occurs in the future
+                        var when = new Date(session.when);
+                        if (when >= new Date()) {
+                            flattenedTrainings.push({
+                                title: training.title,
+                                url: session.url,
+                                location: session.where.toUpperCase(),
+                                when: when,
+                                organizer: session.organizer
+                            });
+                        }
                     }
                 }
-            }
 
-            doPopulateTrainingsPane(flattenedTrainings);
-        })
-        .fail(function(jqXHR, textStatus, errorThrown) {
-            // log the error to the console
-            console.error("Could not load Lightbend training feed: " + textStatus, errorThrown);
+                return flattenedTrainings;
+            }, function (error) {
+                console.error("Couldn't parse Lightbend training data", error);
+                // if our data is bad recover with an empty array
+                return [];
+            });
 
-            // but at least display trainings from scala-lang
-            doPopulateTrainingsPane([]);
-        });
+        // load and combine all our trainings
+        return $.when(ourTrainingsPromise, lightbendTrainingsPromise)
+            .then(function (ourTrainings, lightBendTrainings) {
+                return ourTrainings.concat(lightBendTrainings)
+                    .sort(function (lhs, rhs) {
+                        return lhs.when - rhs.when;
+                    });
+            });
+    }
+
+    // Render training data for our training page
+    var frontPageTrainingList = $('.training-items-list');
+    // Stop early if the front page element does not exist
+    if (frontPageTrainingList.length !== 0) {
+        getTrainings()
+            .then(function (trainings) {
+                var MAX_TRAININGS = 5;
+
+                // clear out any preloaded training info
+                frontPageTrainingList.empty();
+
+                for (var i = 0; i < Math.min(trainings.length, MAX_TRAININGS); i++) {
+                    var training = trainings[i];
+
+                    // we should have validated our dates by this point
+                    var month = MONTH_NAMES_SHORT[training.when.getMonth()];
+                    var day = training.when.getDate();
+
+                    // build up our training item
+                    var content = '<a href=' + training.url + ' class="training-item card">' +
+                        '<div class="calendar">' +
+                            '<span>' + month + '</span>' +
+                            '<span>' + day + '</span>' +
+                        '</div>' +
+                        '<div class="card-text">' +
+                            '<h4>' + training.title + '</h4>' +
+                            '<ul>' +
+                                '<li class="online-courses-price">' + training.location + '</li>' +
+                                '<li class="dot">•</li>' +
+                                '<li class="online-courses-date">' + training.organizer + '</li>' +
+                            '</ul>' +
+                        '</div>' +
+                    '</a>';
+
+                    // add it to our list
+                    frontPageTrainingList.append(content);
+                }
+            });
+    }
+
+    // Render training data for the front page
+    var trainingPageItemList = $('.training-events .wrap .inner-box');
+    // Stop early if the training page element does not exist
+    if (trainingPageItemList.length !== 0) {
+        getTrainings()
+            .then(function (trainings) {
+                var MAX_TRAININGS = 999;
+
+                // clear out any preloaded training info
+                trainingPageItemList.empty();
+
+                var content = "";
+
+                var i = 0;
+                var lastIndex = Math.min(trainings.length, MAX_TRAININGS);
+                while (i < lastIndex) {
+                    // we should have validated our dates by this point
+                    var year = trainings[i].when.getFullYear();
+                    var month = trainings[i].when.getMonth();
+
+                    // create our training list container
+                    content += '<h3>' + MONTH_NAMES[month] + ' ' + year + '</h3>';
+                    content += '<div class="training-list">';
+
+                    while (i < lastIndex) {
+                        var training = trainings[i];
+
+                        // check if we're still in the right month
+                        if (training.when.getMonth() !== month || training.when.getFullYear() !== year) {
+                            break;
+                        }
+
+                        // build up our training item
+                        content += '<a href="' + training.url + '" class="training-item">' +
+                            '<div class="calendar">' +
+                                '<span>' + MONTH_NAMES_SHORT[month] + '</span>' +
+                                '<span>' + training.when.getDate() + '</span>' +
+                            '</div>' +
+                            '<div class="training-text">' +
+                                '<h4>' + training.title + '</h4>' +
+                                '<p>' + training.location + '</p>' +
+                                '<p>' + training.organizer + '</p>' +
+                            '</div>' +
+                        '</a>';
+
+                        i++;
+                    }
+
+                    content += '</div>'
+                }
+
+                trainingPageItemList.append(content);
+            });
+    }
 });
