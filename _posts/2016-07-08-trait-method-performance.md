@@ -563,7 +563,7 @@ A
 on the hotspot-compiler-dev mailing list on why CHA is disabled for interfaces. Seems to discuss
 the situation before default methods were a common thing.
 
-A [gist](https://gist.github.com/rednaxelafx/1165804#file-notes-md) by Krystal Mok explaining many
+A [gist](https://gist.github.com/rednaxelafx/1165804#file-notes-md) by Kris Mok explaining many
 details of the `-XX:+PrintCompilation` output and other details of the JIT process.
 
 The [glossary](http://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html) on the HotSpot
