@@ -1,0 +1,14 @@
+---
+---
+[
+{% comment %} Grab all the upcoming training sessions defined in _trainings {% endcomment %}
+{% for training in site.trainings %}{% if training.date >= site.time %}
+  {
+  "title": "{{ training.title | escape }}",
+  "url": "{{ training.link-out | escape }}",
+  "location": "{{ training.location | upcase | escape }}",
+  "when": "{{ training.when | date: "%Y-%m-%d" }}",
+  "organizer": "{{ training.organizer | escape }}"
+  }{% unless forloop.last %},{% endunless %}
+{% endif %}{% endfor%}
+]
