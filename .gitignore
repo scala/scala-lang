@@ -7,3 +7,4 @@ vendor/
 /.idea
 .ruby-version
 .sass-cache/
+target

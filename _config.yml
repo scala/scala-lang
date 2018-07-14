@@ -9,6 +9,7 @@ highlighter:
 exclude:
   - bundle-vendor/
   - bin/
+  - js-src/
   - blog/README.md
   - training/README.md
   - README.md
