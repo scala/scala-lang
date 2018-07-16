@@ -6,10 +6,7 @@ import scala.reflect.ClassTag
 import scala.scalajs.js
 
 /**
-  * TODO add description
-  *
-  * @author dylan.owen
-  * @since Mar-2017
+  * A basic logger for the debugging console
   */
 object Logger {
 

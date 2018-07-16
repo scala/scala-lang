@@ -6,9 +6,6 @@ import org.scalalang.utils.JsUtils
 
 /**
   * This renders / updates the position marker on the front page
-  *
-  * @author dylan.owen
-  * @since Jul-2018
   */
 object PositionMarker {
 

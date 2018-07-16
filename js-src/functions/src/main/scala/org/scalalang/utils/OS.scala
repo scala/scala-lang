@@ -3,10 +3,7 @@ package org.scalalang.utils
 import org.scalajs.dom.window
 
 /**
-  * TODO add description
-  *
-  * @author dylan.owen
-  * @since Jul-2018
+  * Find which OS our client is running
   */
 sealed trait OS {
   val navigator: String
@@ -51,7 +48,7 @@ object OS {
         }
       })
 
-    logger.info("OS: " + os)
+    logger.trace("OS: " + os)
 
     os
   }

@@ -6,13 +6,8 @@ import org.scalalang.utils.{JsUtils, Logger, OS}
 
 /**
   * This updates our download links based on the OS of the client
-  *
-  * @author dylan.owen
-  * @since Jul-2018
   */
 object DownloadLinks {
-
-  private val logger: Logger = Logger[DownloadLinks.type]
 
   def apply(): Unit = {
     setupBinariesElement()

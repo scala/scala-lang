@@ -6,9 +6,6 @@ import org.scalalang.utils.{Logger, RootLogger}
 
 /**
   * This is the main entry point for our application
-  *
-  * @author dylan.owen
-  * @since Jul-2018
   */
 object FunctionsApp {
   RootLogger.setTrace()
@@ -19,6 +16,7 @@ object FunctionsApp {
     $(document).ready(() => {
       logger.trace("Dom Ready")
 
+      Tooltip()
       DownloadLinks()
       PositionMarker()
     })
