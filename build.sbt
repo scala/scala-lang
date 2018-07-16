@@ -1,6 +1,6 @@
 name := "scala-lang"
 
-organization in ThisBuild := "com.scala"
+organization in ThisBuild := "org.scalalang"
 version in ThisBuild := "0.1"
 scalaVersion in ThisBuild := "2.12.6"
 scalacOptions in ThisBuild ++= Seq(
