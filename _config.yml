@@ -21,6 +21,7 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
+  - docker-compose.yml
   
 future: true
 

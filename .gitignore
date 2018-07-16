@@ -7,4 +7,6 @@ vendor/
 /.idea
 .ruby-version
 .sass-cache/
+.ivy2/
+.sbt/
 target
