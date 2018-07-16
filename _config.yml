@@ -8,6 +8,7 @@ highlighter:
 
 exclude:
   - bundle-vendor/
+  - bin/
   - blog/README.md
   - training/README.md
   - README.md
