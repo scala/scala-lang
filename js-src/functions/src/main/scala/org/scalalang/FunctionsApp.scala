@@ -8,7 +8,7 @@ import org.scalalang.utils.{Logger, RootLogger}
   * This is the main entry point for our application
   */
 object FunctionsApp {
-  RootLogger.setTrace()
+  RootLogger.setInfo()
 
   private val logger: Logger = Logger[FunctionsApp.type]
 
