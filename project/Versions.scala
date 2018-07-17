@@ -1,10 +1,5 @@
-import sbt._
-
 /**
-  * TODO add description
-  *
-  * @author dylan.owen
-  * @since Jun-2018
+  * Shared Versions
   */
 object Versions {
   val Dom = "0.9.2"

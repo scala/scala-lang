@@ -29,7 +29,6 @@ bundle exec jekyll serve --incremental
 ```
 sbt ~fastOptJS
 ```
-Then follow `For Compose`
 
 ## Viewing the site
 
