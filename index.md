@@ -59,8 +59,8 @@ scalaIDEs:
     icon: /resources/img/frontpage/atom.png
     ensime: true
     url: "https://atom.io/"
-  - name: Scala IDE (Eclipse-based)
-    icon: /resources/img/frontpage/eclipse.png
+  - name: Scala IDE For Eclipse
+    icon: /resources/img/frontpage/scala_ide.png
     ensime: false
     url: "http://scala-ide.org/"
   - name: VS Code
