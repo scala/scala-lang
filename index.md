@@ -47,7 +47,7 @@ scalaBackends:
 
 # Scala IDEs
 scalaIDEs:
-  - name: IntelliJ (with plugin)
+  - name: IntelliJ IDEA
     icon: /resources/img/frontpage/intelliJ.png
     ensime: false
     url: "https://www.jetbrains.com/idea/"
