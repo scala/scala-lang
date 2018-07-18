@@ -63,6 +63,10 @@ scalaIDEs:
     icon: /resources/img/frontpage/eclipse.png
     ensime: false
     url: "http://scala-ide.org/"
+  - name: VS Code
+    icon: /resources/img/frontpage/vs_code.png
+    ensime: false
+    url: "https://code.visualstudio.com/"
 
 # Scala ecosystem
 ecosystemTitle: "Scala ecosystem"
