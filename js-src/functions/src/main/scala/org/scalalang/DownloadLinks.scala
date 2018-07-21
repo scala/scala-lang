@@ -2,7 +2,7 @@ package org.scalalang
 
 import org.querki.jquery._
 import org.scalajs.dom.{Element, document}
-import org.scalalang.utils.{JsUtils, Logger, OS}
+import org.scalalang.utils.{JsUtils, OS}
 
 /**
   * This updates our download links based on the OS of the client
