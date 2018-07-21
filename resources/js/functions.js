@@ -404,7 +404,7 @@ $(document).ready(function() {
             });
     }
 
-    // Render training data for our training page
+    // Render training data for our front page
     var frontPageTrainingList = $('.training-items-list');
     // Stop early if the front page element does not exist
     if (frontPageTrainingList.length !== 0) {
@@ -444,10 +444,11 @@ $(document).ready(function() {
             });
     }
 
-    // Render training data for the front page
+    // Render training data for the training page
+    var pathname = window.location.pathname;
     var trainingPageItemList = $('.training-events .wrap .inner-box');
-    // Stop early if the training page element does not exist
-    if (trainingPageItemList.length !== 0) {
+    // Check if we are on the training page and the training page element exists
+    if (pathname.startsWith("/training") && trainingPageItemList.length !== 0) {
         getTrainings()
             .then(function (trainings) {
                 var MAX_TRAININGS = 999;
