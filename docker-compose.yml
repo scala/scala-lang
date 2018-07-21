@@ -1,5 +1,10 @@
 version: "2"
 services:
+  js-build:
+    image: hseeberger/scala-sbt:latest
+    volumes:
+      - $PWD:/root
+    command: sbt ~fastOptJS
   scala-lang:
     image: jekyll/jekyll:latest
     volumes:
@@ -10,3 +15,4 @@ services:
       - 35729:35729
       - 3000:3000
       -   80:4000
+    command: jekyll serve --incremental

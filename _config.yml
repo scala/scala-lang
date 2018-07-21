@@ -9,6 +9,8 @@ highlighter:
 exclude:
   - bundle-vendor/
   - bin/
+  - js-src/
+  - project/
   - blog/README.md
   - training/README.md
   - README.md
@@ -19,6 +21,7 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
+  - docker-compose.yml
   
 future: true
 

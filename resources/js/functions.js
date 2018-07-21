@@ -1,6 +1,3 @@
----
----
-
 // Sliding Panel and scala in a nutshell
 $(document).ready(function() {
     $('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function(e) {
@@ -36,29 +33,6 @@ $(document).ready(function() {
             });
         });
     });
-});
-
-// Tooltip
-$(document).ready(function() {
-        // Tooltip only Text
-        $('.masterTooltip').hover(function(){
-                // Hover over code
-                var title = $(this).attr('title');
-                $(this).data('tipText', title).removeAttr('title');
-                $('<p class="tooltip"></p>')
-                .text(title)
-                .appendTo('body')
-                .fadeIn('slow');
-        }, function() {
-                // Hover out code
-                $(this).attr('title', $(this).data('tipText'));
-                $('.tooltip').remove();
-        }).mousemove(function(e) {
-                var mousex = e.pageX + 20; //Get X coordinates
-                var mousey = e.pageY + 10; //Get Y coordinates
-                $('.tooltip')
-                .css({ top: mousey, left: mousex })
-        });
 });
 
 // Highlight
@@ -247,77 +221,6 @@ $(document).ready(function() {
     CodeMirror.commands.run = run;
   }
 });
-
-// OS detection
-function getOS() {
-  var osname = "linux";
-  if (navigator.appVersion.indexOf("Win") != -1) osname = "windows";
-  if (navigator.appVersion.indexOf("Mac") != -1) osname = "osx";
-  if (navigator.appVersion.indexOf("Linux") != -1) osname = "linux";
-  if (navigator.appVersion.indexOf("X11") != -1) osname = "unix";
-  return osname;
-}
-
-$(document).ready(function() {
-    if ($(".main-download").length) {
-        var os = getOS();
-        var intelliJlink = $("#intellij-" + os).text();
-        var sbtLink = $("#sbt-" + os).text();
-        var stepOneContent = $("#stepOne-" + os).html()
-        $("#download-intellij-link").attr("href", intelliJlink);
-        $("#download-sbt-link").attr("href", sbtLink);
-        $("#download-step-one").html(stepOneContent);
-    }
-});
-
-
-$(document).ready(function() {
-
-  var os = getOS();
-  if (os == "Unknown OS") os = "UNIX";
-
-  var osLabel = os.replace(/\s/g, '').toLowerCase();
-
-  // Do not do any of the following if we're not on a download page
-  // Otherwise a TypeError is raised and disables all other scripts on the page
-  if ($("#download-binaries").length == 0)
-    return;
-
-  /*$("#download-button, #getting-started-popup").click(function() {
-    $("#getting-started-popup").toggleClass("open");
-  });*/
-
-  var anchor = document.getElementById("#link-main-unixsys");
-  if (os == "windows") {
-    anchor = document.getElementById("#link-main-windows");
-  }
-  if (anchor == null) anchor = document.getElementById("#link-main-one4all");
-  var link = anchor.getAttribute("href");
-
-  $("#download-binaries").attr("href", link).addClass(osLabel);
-  $("#users-os").text(os);
-});
-
-
-var image = { width: 1680, height: 1100 };
-var target = { x: 1028, y: 290 };
-
-var pointer = $('#position-marker');
-
-$(document).ready(updatePointer);
-$(window).resize(updatePointer);
-
-function updatePointer() {
-
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
-
-    var xScale = windowWidth / image.width;
-    var yScale = windowHeight / image.height;
-
-    pointer.css('top', (target.y));
-    pointer.css('left', (target.x) * xScale);
-}
 
 // TRAININGS
 $(document).ready(function() {

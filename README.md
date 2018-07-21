@@ -25,6 +25,11 @@ bin/serve
 bundle exec jekyll serve --incremental
 ```
 
+### For ScalaJs Development
+```
+sbt ~fastOptJS
+```
+
 ## Viewing the site
 
 Regardless of your method of running Jekyll, the generated site is available at `http://localhost:4000`.
