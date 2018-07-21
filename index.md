@@ -47,7 +47,7 @@ scalaBackends:
 
 # Scala IDEs
 scalaIDEs:
-  - name: IntelliJ (with plugin)
+  - name: IntelliJ IDEA
     icon: /resources/img/frontpage/intelliJ.png
     ensime: false
     url: "https://www.jetbrains.com/idea/"
@@ -59,10 +59,14 @@ scalaIDEs:
     icon: /resources/img/frontpage/atom.png
     ensime: true
     url: "https://atom.io/"
-  - name: Scala IDE (Eclipse-based)
-    icon: /resources/img/frontpage/eclipse.png
+  - name: Scala IDE For Eclipse
+    icon: /resources/img/frontpage/scala_ide.png
     ensime: false
     url: "http://scala-ide.org/"
+  - name: VS Code
+    icon: /resources/img/frontpage/vs_code.png
+    ensime: false
+    url: "https://code.visualstudio.com/"
 
 # Scala ecosystem
 ecosystemTitle: "Scala ecosystem"
