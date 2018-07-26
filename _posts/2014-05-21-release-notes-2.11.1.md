@@ -87,7 +87,7 @@ Please [file any bugs you encounter](https://issues.scala-lang.org/secure/Create
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/browse/SI-6267?jql=project%20%3D%20SI%20AND%20%28fixVersion%20is%20empty%20or%20fixVersion%20%3E%20%22Scala%202.11.1%22%29%20AND%20affectedVersion%20in%20%28%22Scala%202.11.0%22%2C%20%22Scala%202.11.1%22%29%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with this release built in is [available from this update site](https://web.archive.org/web/20151026064959/http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is [available from this update site](https://web.archive.org/web/20151026064959/http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/release/Kepler/SR2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 
 ### Available projects
