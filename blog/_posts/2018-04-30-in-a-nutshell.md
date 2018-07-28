@@ -109,8 +109,8 @@ This has several benefits:
 
 As a first step towards this goal, we are working on a representation
 of Tasty in terms of a suite of compiler-independent data
-structures. The [current
-status](https://github.com/lampepfl/dotty/blob/master/tests/pos/tasty/definitions.scala)
+structures. The current
+status
 gives high-level data structures for all aspects of a Tasty file. With
 currently about 200 lines of data definitions it reflects every piece of
 information that is contained in a Scala program after type
