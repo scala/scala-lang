@@ -13,4 +13,5 @@ script:
 - ( ! grep -qie Error -e Warn error.log )
 - find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \)
 - find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \) | ( ! read )
-- bundle exec htmlproofer ./_site/ --only-4xx --empty-alt-ignore --allow-hash-href --url-ignore "/trends.google.com/,/pgp.mit.edu/"
+- if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then bundle exec htmlproofer ./_site/ --disable-external --only-4xx --empty-alt-ignore --allow-hash-href ; fi
+- if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then bundle exec htmlproofer ./_site/ --external_only --only-4xx --empty-alt-ignore --allow-hash-href --url-ignore "/trends.google.com/,/pgp.mit.edu/" ; fi
