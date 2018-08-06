@@ -688,17 +688,17 @@ Depending on the color, we can find:
 Example:
 
 ```
-shapeless.Strict[caseapp.core.Parser[bloop.cli.Commands.Run]] (id 12121) (expanded macros 3) (tree from `shapeless.LazyMacrosRef.mkStrictImpl`)  (417,117 ns, 3.28%)
+shapeless.Strict[caseapp.core.Parser[bloop.cli.Commands.Run]] (id 12121) (expanded macros 3) (tree from `shapeless.LazyMacrosRef.mkStrictImpl`)  (417,117 μs, 3.28%)
 ```
 
 On every stack trace, you have also the information about the timing. The
-unit of time is nanoseconds. So one billion ns is one second. We use
-nanoseconds because flamegraphs cannot display decimal values and we don't
-want to lose time precision.
+unit of time is nanoseconds. So one million μs is one second. We use
+nanoseconds because flamegraphs cannot display decimal values and we want
+to lose as litle time precision as possible.
 
 Beware that an implicit search may not appear in the flamegraph even if it's
 performed by `scalac`. There could be implicit searches that are so fast to
-do that they take less than 0ns. Flamegraphs do not show entries whose value
+do that they take less than 0 μs. Flamegraphs do not show entries whose value
 is under 0.
 
 We're not going to use all of this information in the blog post, but it may
@@ -760,8 +760,8 @@ macro expansions that are afterwards discarded because their type doesn't
 match the predicate type of the implicit search.
 
 ```
-caseapp.core.Parser[bloop.cli.CliOptions]{type D = HD} (expanded macros 0)   (278,828 ns, 2.19%)
-caseapp.core.Parser[bloop.cli.CommonOptions]{type D = HD} (expanded macros 0)   (189,414 ns, 1.49%)
+caseapp.core.Parser[bloop.cli.CliOptions]{type D = HD} (expanded macros 0)   (278,828 μs, 2.19%)
+caseapp.core.Parser[bloop.cli.CommonOptions]{type D = HD} (expanded macros 0)   (189,414 μs, 1.49%)
 ```
 
 It looks like the implicit search doesn't immediately reuse our cached
