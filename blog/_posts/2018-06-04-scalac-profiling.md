@@ -440,7 +440,7 @@ script in the repository:
 
 ```bash
 ./flamegraph.pl \
-    --hash --countname="ns" \
+    --hash --countname="μs" \
     --color=scala-compilation \
     $PATH_TO_FLAMEGRAPH_DATA > bloop-profile-initial.svg
 ```
@@ -692,8 +692,8 @@ shapeless.Strict[caseapp.core.Parser[bloop.cli.Commands.Run]] (id 12121) (expand
 ```
 
 On every stack trace, you have also the information about the timing. The
-unit of time is nanoseconds. So one million μs is one second. We use
-nanoseconds because flamegraphs cannot display decimal values and we want
+unit of time is microseconds. So one million μs is one second. We use
+microseconds because flamegraphs cannot display decimal values and we want
 to lose as litle time precision as possible.
 
 Beware that an implicit search may not appear in the flamegraph even if it's
