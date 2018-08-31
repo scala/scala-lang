@@ -21,6 +21,8 @@ gitterChannels:
     url: https://gitter.im/scala/job-board
   - name: spark-scala/Lobby
     url: https://gitter.im/spark-scala/Lobby
+  - name: scala-native/scala-native
+    url: https://gitter.im/scala-native/scala-native
   - name: scala-js/scala-js
     url: https://gitter.im/scala-js/scala-js
 

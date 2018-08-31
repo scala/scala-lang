@@ -63,6 +63,7 @@ Other, more specialized rooms include:
 * **[scala/contributors](https://gitter.im/scala/contributors)**: for contributors to discuss work on changes to Scala.
 * **[scala/moocs](https://gitter.im/scala/moocs)**: for talking about the Scala Center's online courses
 * **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other
+* **[scala-native/scala-native](https://gitter.im/scala-native/scala-native)**: for discussion about the Scala to LLVM compiler.
 * **[scala-js/scala-js](https://gitter.im/scala-js/scala-js)**: for discussion about the Scala to JavaScript compiler.
 
 International rooms are available as well:
