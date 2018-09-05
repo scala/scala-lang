@@ -1013,12 +1013,12 @@ dc3fa0a | <notextile>if starr.use.released fetch Scala ${starr.version} for STAR
 [b2c2493](https://github.com/scala/scala/commit/b2c2493) | <notextile>reflection no longer uses atPhase and friends</notextile>
 [a9dca51](https://github.com/scala/scala/commit/a9dca51) | <notextile>synchronizes symbols</notextile>
 [0262941](https://github.com/scala/scala/commit/0262941) | <notextile>removes the crazy extraneous log</notextile>
-21d5d38 | <notextile>moves Symbol#SymbolKind to Symbols</notextile>
+[21d5d382](https://github.com/scala/scala/commit/21d5d382) | <notextile>moves Symbol#SymbolKind to Symbols</notextile>
 [3f0224c](https://github.com/scala/scala/commit/3f0224c) | <notextile>Add option to disable optimization</notextile>
 [c8fbba0](https://github.com/scala/scala/commit/c8fbba0) | <notextile>Check named-args-for-clarity incur no extra bytecode</notextile>
 [9179c88](https://github.com/scala/scala/commit/9179c88) | <notextile>Name boolean arguments in src/library.</notextile>
 [a8d60a6](https://github.com/scala/scala/commit/a8d60a6) | <notextile>Name boolean arguments in src/reflect.</notextile>
-[fff0f50](https://github.com/scala/scala/commit/fff0f50) | <notextile>Name boolean arguments in src/compiler.</notextile>
+[fff0f507](https://github.com/scala/scala/commit/fff0f507) | <notextile>Name boolean arguments in src/compiler.</notextile>
 [6898c9f](https://github.com/scala/scala/commit/6898c9f) | <notextile>Eliminated separate RangePositions trait.</notextile>
 [dc1cd96](https://github.com/scala/scala/commit/dc1cd96) | <notextile>Disentangled RangePositions from interactive.</notextile>
 [e3b7b5f](https://github.com/scala/scala/commit/e3b7b5f) | <notextile>Require firstKey and lastKey on IntMap to be tail recursive.</notextile>
