@@ -25,4 +25,5 @@ gitterChannels:
     url: https://gitter.im/scala-native/scala-native
   - name: scala-js/scala-js
     url: https://gitter.im/scala-js/scala-js
-
+  - name: lampepfl/dotty
+    url: https://gitter.im/lampepfl/dotty
