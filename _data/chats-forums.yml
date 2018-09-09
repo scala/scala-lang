@@ -5,7 +5,7 @@ discourseForums:
     url: https://users.scala-lang.org/
     cssClass: scala-user-discourse
   - title: Scala Contributors
-    subtitle: "for Scala contributions, language evolution dicussions, standard library, Scala platform evolution discussions and more."
+    subtitle: "for Scala contributions, language evolution discussions, standard library, Scala platform evolution discussions and more."
     url: https://contributors.scala-lang.org/
     cssClass: scala-contributors-discourse
 
