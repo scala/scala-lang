@@ -54,7 +54,7 @@ The shortcut `:q` stands for the internal shell command `:quit` used to exit the
 
 ### Compile it!
 
-The `scalac` command compiles one (or more) Scala source file(s) and generates Java bytecode which can be executed on any [standard JVM](http://java.sun.com/docs/books/jvms/). The Scala compiler works similarly to `javac`, the Java compiler of the [Java SDK](http://www.oracle.com/technetwork/java/index.html).
+The `scalac` command compiles one (or more) Scala source file(s) and generates Java bytecode which can be executed on any [standard JVM](http://java.sun.com/docs/books/jvms/). The Scala compiler works similarly to `javac`, the Java compiler of the [Java SDK](https://www.oracle.com/technetwork/java/index.html).
 
     > scalac HelloWorld.scala
 
