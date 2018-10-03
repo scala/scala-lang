@@ -18,3 +18,5 @@ limitations under the License.
 
 Scala includes software with other licenses. See the NOTICE file distributed 
 with this work for additional information regarding copyright ownership.
+
+NOTE: Versions of Scala distributed prior to October 2018 were licensed under the [BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause). The license change was [announced in May 2018](https://www.scala-lang.org/news/license-change.html).
