@@ -15,7 +15,7 @@ learn the language through massive open online courses, seminars and other activ
 ## Why a Center?
 
 Scala has seen a steady rise in adoption. This is reflected in the
-[number of open Scala jobs](http://www.indeed.com/jobtrends/scala.html) and in Google's
+number of open Scala jobs (dead link: www.indeed.com/jobtrends/scala.html) and in Google's
 [search trends](https://trends.google.com/trends/explore?date=all&q=scala%20tutorial).
 In the [Redmonk rankings](http://sogrady-media.redmonk.com/sogrady/files/2016/02/lang-rank-944px-wm-e1456601438269.png),
 the language currently ranks 14th. Overall, we estimate that more than
