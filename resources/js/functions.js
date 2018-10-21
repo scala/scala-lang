@@ -137,7 +137,6 @@ $('#scaladex-search').autocomplete({
     },
     noCache: true,
     onSelect: function (suggestion) {
-      console.log(suggestion);
       window.open(scaladexUrl(suggestion.data), '_blank');
     },
     formatResult: function(suggestion){
@@ -226,7 +225,6 @@ $(document).ready(function() {
     editor.refresh();
 
     function run(){
-      console.log("run");
       var scastieBaseUrl = "https://scastie.scala-lang.org";
 
       $.ajax(
@@ -333,9 +331,6 @@ $(document).ready(function() {
                     // filter out extra ajax info
                     return data;
                 }, function (jqXHR, textStatus, errorThrown) {
-                    // log the error to the console
-                    console.error("Couldn't load training feed " + url + " : " + textStatus, errorThrown);
-
                     // recover so we can keep processing
                     return [];
                 });
@@ -356,7 +351,6 @@ $(document).ready(function() {
                     return training.when >= new Date();
                 })
             }, function (error) {
-                console.error("Couldn't parse our training data", error);
                 // if our data is bad recover with an empty array
                 return [];
             });
@@ -389,7 +383,6 @@ $(document).ready(function() {
 
                 return flattenedTrainings;
             }, function (error) {
-                console.error("Couldn't parse Lightbend training data", error);
                 // if our data is bad recover with an empty array
                 return [];
             });
