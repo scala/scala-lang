@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title> 
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}"/>
+    {% else %}
+    <meta property="og:title" content="{{ site.title }}"/>
     {% endif %}
     {% if page.description %}
     <meta name="description" content="{{ page.description }}"/>
