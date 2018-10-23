@@ -2,6 +2,7 @@ title: The Scala Programming Language
 
 scalaversion: "2.12.7"
 
+url: https://www.scala-lang.org
 baseurl: ""
 markdown: kramdown
 highlighter:
