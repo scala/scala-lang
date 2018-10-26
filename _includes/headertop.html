@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title> 
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}"/>
+    {% else %}
+    <meta property="og:title" content="{{ site.title }}"/>
     {% endif %}
     {% if page.description %}
     <meta name="description" content="{{ page.description }}"/>
@@ -13,9 +15,9 @@
     <meta name="twitter:site" content="@scala_lang"/>
     <meta name="twitter:creator" content="@scala_lang"/>
     {% if page.url %}
-    <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     {% endif %}    
-    <meta property="og:image" content="{{ site.baseurl }}/resources/img/scala-spiral-3d-2-toned-down.png"/>
+    <meta property="og:image" content="{{ site.url }}/resources/img/scala-spiral-3d-2-toned-down.png"/>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
