@@ -1,6 +1,6 @@
 ---
 category: event
-title: Scala Days (Europe)
+title: Scala Days Europe
 logo: /resources/img/scaladays-15.png
 location: Berlin, Germany
 description: ""

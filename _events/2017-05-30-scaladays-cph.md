@@ -6,5 +6,5 @@ location: Copenhagen, Denmark
 description: ""
 start: 30 May 2017
 end: 2 June 2017
-link-out: http://scaladays.org/
+link-out: https://scaladays.org/archive/copenhagen2017.html
 ---

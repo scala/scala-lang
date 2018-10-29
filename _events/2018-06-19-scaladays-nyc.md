@@ -1,6 +1,6 @@
 ---
 category: event
-title: Scala Days (North America)
+title: Scala Days North America
 logo: /resources/img/scaladays-15.png
 location: New York, NY, USA
 description: ""
