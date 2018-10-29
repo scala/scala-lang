@@ -6,5 +6,5 @@ location: Chicago, IL, USA
 description: ""
 start: 18 April 2017
 end: 21 April 2017
-link-out: http://scaladays.org/
+link-out: https://scaladays.org/archive/chicago2017.html
 ---

@@ -1,10 +1,10 @@
 ---
 category: event
-title: ScalaDays AMS
+title: Scala Days Amsterdam
 logo: /resources/img/scaladays-15.png
-location: Amsterdam
+location: Amsterdam, The Netherlands
 description: ""
 start: 8 June 2015
 end: 10 June 2015
-link-out: http://scaladays.org/
+link-out: https://scaladays.org/archive/amsterdam2015.html
 ---
