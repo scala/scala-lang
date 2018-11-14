@@ -456,7 +456,7 @@ Issue(s) | Commit | Message
 [SI-6773](https://issues.scala-lang.org/browse/SI-6773) | [108a1f7](https://github.com/scala/scala/commit/108a1f7) | <notextile>SI-6773 Changes IndexSeqFactory to be &quot;since 2.11&quot;</notextile>
 [SI-5543](https://issues.scala-lang.org/browse/SI-5543), [SI-1803](https://issues.scala-lang.org/browse/SI-1803) | [b74c33e](https://github.com/scala/scala/commit/b74c33e) | <notextile>SI-1803, plus documentation and cleanups in Namers, mainly in typeSig</notextile>
 [SI-6812](https://issues.scala-lang.org/browse/SI-6812) | [941c569](https://github.com/scala/scala/commit/941c569) | <notextile>SI-6812 scaladoc can opt out of expanding macros</notextile>
-[SI-6206](https://issues.scala-lang.org/browse/SI-6206), [SI-6206](https://issues.scala-lang.org/browse/SI-6206) | [11ac963](https://github.com/scala/scala/commit/11ac963) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
+[SI-6206](https://issues.scala-lang.org/browse/SI-6206), [SI-6206](https://issues.scala-lang.org/browse/SI-6206) | [11ac963c](https://github.com/scala/scala/commit/11ac963c) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
 [SI-6601](https://issues.scala-lang.org/browse/SI-6601) | [5a2828c](https://github.com/scala/scala/commit/5a2828c) | <notextile>A test case to guide the eventual fix for SI-6601.</notextile>
 [SI-6601](https://issues.scala-lang.org/browse/SI-6601) | [172f3f6](https://github.com/scala/scala/commit/172f3f6) | <notextile>Revert &quot;SI-6601 Publicise derived value contstructor after pickler&quot;</notextile>
 [SI-2818](https://issues.scala-lang.org/browse/SI-2818) | [6db4db9](https://github.com/scala/scala/commit/6db4db9) | <notextile>SI-2818 Make List.foldRight always do a reverse/foldLeft flip</notextile>
@@ -1214,7 +1214,7 @@ e2a17d9 | <notextile>resetAttrs now always erases This.tpe</notextile>
 [71fb0b8](https://github.com/scala/scala/commit/71fb0b8) | <notextile>Removed -Ymacro-no-expand.</notextile>
 [e3d9a08](https://github.com/scala/scala/commit/e3d9a08) | <notextile>Cleaning up after brutal merge of 2.10.x into master.</notextile>
 [941c569](https://github.com/scala/scala/commit/941c569) | <notextile>SI-6812 scaladoc can opt out of expanding macros</notextile>
-[11ac963](https://github.com/scala/scala/commit/11ac963) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
+[11ac963c](https://github.com/scala/scala/commit/11ac963c) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
 [5a2828c](https://github.com/scala/scala/commit/5a2828c) | <notextile>A test case to guide the eventual fix for SI-6601.</notextile>
 [172f3f6](https://github.com/scala/scala/commit/172f3f6) | <notextile>Revert &quot;SI-6601 Publicise derived value contstructor after pickler&quot;</notextile>
 [6db4db9](https://github.com/scala/scala/commit/6db4db9) | <notextile>SI-2818 Make List.foldRight always do a reverse/foldLeft flip</notextile>

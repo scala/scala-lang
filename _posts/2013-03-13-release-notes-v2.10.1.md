@@ -229,7 +229,7 @@ Issue(s) | Commit | Message
 [SI-7029](https://issues.scala-lang.org/browse/SI-7029) | [3f78bee](https://github.com/scala/scala/commit/3f78bee) | <notextile>SI-7029 - Makes sure that uncaught exceptions are propagated to the UEH for the global ExecutionContext</notextile>
 [SI-6539](https://issues.scala-lang.org/browse/SI-6539) | [2989258](https://github.com/scala/scala/commit/2989258) | <notextile>SI-6539 moves @compileTimeOnly away from scala-reflect</notextile>
 [SI-6812](https://issues.scala-lang.org/browse/SI-6812) | [941c569](https://github.com/scala/scala/commit/941c569) | <notextile>SI-6812 scaladoc can opt out of expanding macros</notextile>
-[SI-6206](https://issues.scala-lang.org/browse/SI-6206), [SI-6206](https://issues.scala-lang.org/browse/SI-6206) | [11ac963](https://github.com/scala/scala/commit/11ac963) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
+[SI-6206](https://issues.scala-lang.org/browse/SI-6206), [SI-6206](https://issues.scala-lang.org/browse/SI-6206) | [11ac963c](https://github.com/scala/scala/commit/11ac963c) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
 [SI-6601](https://issues.scala-lang.org/browse/SI-6601) | [5a2828c](https://github.com/scala/scala/commit/5a2828c) | <notextile>A test case to guide the eventual fix for SI-6601.</notextile>
 [SI-6601](https://issues.scala-lang.org/browse/SI-6601) | [172f3f6](https://github.com/scala/scala/commit/172f3f6) | <notextile>Revert &quot;SI-6601 Publicise derived value contstructor after pickler&quot;</notextile>
 [SI-2818](https://issues.scala-lang.org/browse/SI-2818) | [6db4db9](https://github.com/scala/scala/commit/6db4db9) | <notextile>SI-2818 Make List.foldRight always do a reverse/foldLeft flip</notextile>
@@ -515,7 +515,7 @@ sha | Title
 [3f78bee](https://github.com/scala/scala/commit/3f78bee) | <notextile>SI-7029 - Makes sure that uncaught exceptions are propagated to the UEH for the global ExecutionContext</notextile>
 [2989258](https://github.com/scala/scala/commit/2989258) | <notextile>SI-6539 moves @compileTimeOnly away from scala-reflect</notextile>
 [941c569](https://github.com/scala/scala/commit/941c569) | <notextile>SI-6812 scaladoc can opt out of expanding macros</notextile>
-[11ac963](https://github.com/scala/scala/commit/11ac963) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
+[11ac963c](https://github.com/scala/scala/commit/11ac963c) | <notextile>[backport] Fix for SI-6206, inconsistency with apply.</notextile>
 [5a2828c](https://github.com/scala/scala/commit/5a2828c) | <notextile>A test case to guide the eventual fix for SI-6601.</notextile>
 [172f3f6](https://github.com/scala/scala/commit/172f3f6) | <notextile>Revert &quot;SI-6601 Publicise derived value contstructor after pickler&quot;</notextile>
 [6db4db9](https://github.com/scala/scala/commit/6db4db9) | <notextile>SI-2818 Make List.foldRight always do a reverse/foldLeft flip</notextile>
