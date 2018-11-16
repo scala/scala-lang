@@ -7,7 +7,7 @@ title: "Build code analyzers with Scalameta and Scalafix"
 We are excited to announce the release of
 [Scalameta v4.0.0](https://github.com/scalameta/scalameta/releases/tag/v4.0.0)
 and
-[Scalafix v0.9.0](https://github.com/scalacenter/scalafix/releases/tag/v0.8.0-RC1)
+[Scalafix v0.9.0](https://github.com/scalacenter/scalafix/releases/tag/v0.9.0)
 introducing new APIs enabling more advanced source code analysis. Scalameta is a
 library to read, analyze, transform and generate Scala programs. Scalafix is a
 refactoring and linting tool.
