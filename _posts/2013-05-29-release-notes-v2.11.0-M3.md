@@ -184,7 +184,7 @@ Issue(s) | Commit | Message
 [SI-6771](https://issues.scala-lang.org/browse/SI-6771) | [3009916](https://github.com/scala/scala/commit/3009916) | <notextile>SI-6771 Alias awareness for checkableType in match analysis.</notextile>
 [SI-7469](https://issues.scala-lang.org/browse/SI-7469) | [e36bb0b](https://github.com/scala/scala/commit/e36bb0b) | <notextile>Revert &quot;SI-7469 Remove @deprecated MurmurHash elements&quot;</notextile>
 [SI-7482](https://issues.scala-lang.org/browse/SI-7482) | [37884ec](https://github.com/scala/scala/commit/37884ec) | <notextile>SI-7482 Don't cook raw types after erasure.</notextile>
-[SI-6815](https://issues.scala-lang.org/browse/SI-6815), [SI-6815](https://issues.scala-lang.org/browse/SI-6815) | [fada1ef](https://github.com/scala/scala/commit/fada1ef) | <notextile>SI-6815 untangle isStable and hasVolatileType</notextile>
+[SI-6815](https://issues.scala-lang.org/browse/SI-6815), [SI-6815](https://issues.scala-lang.org/browse/SI-6815) | [fada1ef](https://github.com/scala/scala/commit/fada1ef6) | <notextile>SI-6815 untangle isStable and hasVolatileType</notextile>
 [SI-6406](https://issues.scala-lang.org/browse/SI-6406), [SI-6406](https://issues.scala-lang.org/browse/SI-6406) | [135cfa8](https://github.com/scala/scala/commit/135cfa8) | <notextile>SI-6406 Restore deprecated API</notextile>
 [SI-3943](https://issues.scala-lang.org/browse/SI-3943) | [0c7c521](https://github.com/scala/scala/commit/0c7c521) | <notextile>SI-3943 Test case for already-fixed Java interop bug</notextile>
 [SI-7469](https://issues.scala-lang.org/browse/SI-7469) | [ae43506](https://github.com/scala/scala/commit/ae43506) | <notextile>SI-7469 Remove @deprecated scala.util.logging</notextile>
@@ -669,7 +669,7 @@ sha | Title
 [005a08d](https://github.com/scala/scala/commit/005a08d) | <notextile>Remove self types check suppression usage from scaladoc.</notextile>
 [c88f733](https://github.com/scala/scala/commit/c88f733) | <notextile>Improve code style in the Scaladoc implementation.</notextile>
 [9a43611](https://github.com/scala/scala/commit/9a43611) | <notextile>remove unused methods: checkStable, isStableExceptVolatile</notextile>
-[fada1ef](https://github.com/scala/scala/commit/fada1ef) | <notextile>SI-6815 untangle isStable and hasVolatileType</notextile>
+[fada1ef](https://github.com/scala/scala/commit/fada1ef6) | <notextile>SI-6815 untangle isStable and hasVolatileType</notextile>
 [97d5179](https://github.com/scala/scala/commit/97d5179) | <notextile>make treeInfo more globally visible</notextile>
 [135cfa8](https://github.com/scala/scala/commit/135cfa8) | <notextile>SI-6406 Restore deprecated API</notextile>
 [0c7c521](https://github.com/scala/scala/commit/0c7c521) | <notextile>SI-3943 Test case for already-fixed Java interop bug</notextile>
