@@ -15,7 +15,7 @@ scastieUrl:
                   <pre><code>val people: Array[Person]
 
 // Partition `people` into two arrays `minors` and `adults`.
-// Use the higher-order function `(_.age &lt; 18)` as a predicate for partitioning.
+// Use the anonymous function `(_.age &lt; 18)` as a predicate for partitioning.
 val (minors, adults) = people partition (_.age &lt; 18)</code></pre>
                 </div>
               </div>
