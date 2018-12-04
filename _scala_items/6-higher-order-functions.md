@@ -14,9 +14,10 @@ scastieUrl:
                   <div class="bar-code"><span>Scala</span></div>
                   <pre><code>val people: Array[Person]
 
-// Partition `people` into two arrays `minors` and `adults`.
-// Use the anonymous function `(_.age &lt; 18)` as a predicate for partitioning.
-val (minors, adults) = people partition (_.age &lt; 18)</code></pre>
+// Partition `people` into two arrays `minors` and `adults`,
+// using the anonymous function `(_.age &lt; 18)` as
+// a predicate for partitioning.
+val (minors, adults) = people.partition(_.age &lt; 18)</code></pre>
                 </div>
               </div>
               <div class="scala-code">
@@ -24,14 +25,10 @@ val (minors, adults) = people partition (_.age &lt; 18)</code></pre>
                   <div class="bar-code"><span>Java</span></div>
                   <pre><code>List&lt;Person&gt; people;
 
-List&lt;Person&gt; minors = new ArrayList&lt;Person&gt;(people.size());
-List&lt;Person&gt; adults = new ArrayList&lt;Person&gt;(people.size());
-for (Person person : people) {
-    if (person.getAge() &lt; 18)
-        minors.add(person);
-    else
-        adults.add(person);
-}</code></pre>
+Map&lt;Boolean, List&lt;Person&gt;&gt; result =
+    people.stream().collect(Collectors.partitioningBy(p -&gt; p.age &lt; 18));
+List&lt;Person&gt; minors = result.get(Boolean.TRUE);
+List&lt;Person&gt; adults = result.get(Boolean.FALSE);</code></pre>
                 </div>
               </div>
-              </div>
+</div>
