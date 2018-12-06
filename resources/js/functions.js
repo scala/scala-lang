@@ -72,6 +72,7 @@ $(document).ready(function() {
 // Show Blog
 $(".hide").click(function() {
     $(".new-on-the-blog").hide();
+    updatePointer();
 });
 
 //Tweet feed in frontpage
@@ -313,7 +314,12 @@ function updatePointer() {
     var xScale = windowWidth / image.width;
     var yScale = windowHeight / image.height;
 
-    pointer.css('top', (target.y));
+    if ($(".new-on-the-blog").css('display') === 'none') {
+        pointer.css('top', (target.y));
+    } else {
+        pointer.css('top', (target.y + 25));
+    }
+
     pointer.css('left', (target.x) * xScale);
 }
 
