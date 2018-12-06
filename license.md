@@ -8,7 +8,7 @@ includeTOC: true
 Copyright (c) 2002-<span class="current-year">&nbsp;</span> [EPFL](https://lamp.epfl.ch/)<br>
 Copyright (c) 2011-<span class="current-year">&nbsp;</span> [Lightbend, Inc](https://www.lightbend.com/).
 
-Scala is licensed under the [Apache License, Version 2.0]](https://www.apache.org/licenses/LICENSE-2.0) (the "License").
+Scala is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) (the "License").
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
