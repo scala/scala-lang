@@ -81,7 +81,7 @@ copy with your own moderation policy so as to avoid confusion.
 
 Adapted from and/or inspired by multiple successful Codes of Conduct, including:
 
-* [Rust Code of Conduct](https://www.rust-lang.org/en-US/conduct.html)
+* [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct)
 * [The Node.js Policy on Trolling](http://blog.izs.me/post/30036893703/policy-on-trolling)
 * [The Contributor Covenant v1.4.0](http://contributor-covenant.org/version/1/4/)
 * [The Recurse Center's User Manual](https://www.recurse.com/manual#sec-environment)
