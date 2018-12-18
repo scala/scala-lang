@@ -38,7 +38,7 @@ Topics that Big Data Analysis with Scala and Spark covers include:
 - Joins, Grouping, and Reduction Operations
 - Shuffling, and how to avoid it!
 - Relational Queries and Automatic Optimization with Spark SQL's DataFrames
-- Unfiying Performance and APIs with Spark SQL's Datasets
+- Unifying Performance and APIs with Spark SQL's Datasets
 
 _Note this is our first time running this course material as a MOOC, so your feedback on how we can improve course is welcome! Also please be patient with us as we work out any hiccups with our new graders._
 
