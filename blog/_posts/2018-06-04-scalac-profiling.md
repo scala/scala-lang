@@ -112,8 +112,9 @@ the configuration files.
 
 ```bash
 git clone https://github.com/scalacenter/bloop
-git submodule update --init
+cd bloop
 git checkout v1.0.0-M10
+git submodule update --init
 sbt bloopInstall
 ```
 
