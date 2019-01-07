@@ -112,8 +112,9 @@ the configuration files.
 
 ```bash
 git clone https://github.com/scalacenter/bloop
-git submodule update --init
+cd bloop
 git checkout v1.0.0-M10
+git submodule update --init
 sbt bloopInstall
 ```
 
@@ -435,7 +436,7 @@ data.
 
 To generate a flamegraph, clone
 [scalacenter/scalac-profiling](https://github.com/scalacenter/scalac-profiling),
-`cd` into `FlameGraph`, `git submodule update --init` and run the following
+`cd` into `FlameGraph`, `git submodule update --init` (note that this command will require you to have [ssh authentication configured with your GitHub account](https://help.github.com/articles/connecting-to-github-with-ssh/)) and run the following
 script in the repository:
 
 ```bash
