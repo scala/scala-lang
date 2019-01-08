@@ -7,14 +7,14 @@ showDate: true
 date: 2019-02-18
 ---
 
-This seven weeks long course teaches you how to use “reactive programming” techniques
-for implementing scalable, resilient and responsive systems. Skills you will learn
-include how to:
+This seven-week course teaches “reactive programming” techniques
+for building scalable, resilient and responsive systems. You'll
+learn how to:
 
-- use, transform and sequence asynchronous computations using `Future` values,
-- write concurrent systems based on [Akka](https://akka.io) actors,
 - design systems resilient to failures,
 - implement systems that scale out according to varying workloads,
+- use, transform and sequence asynchronous computations using `Future` values,
+- write concurrent systems based on [Akka](https://akka.io) actors,
 - define well-typed communication protocols using **Akka Typed**,
 - process large streams of data with limited resources using **Akka Streams**,
 - understand how back-pressure controls flows of data.
