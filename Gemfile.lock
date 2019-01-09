@@ -99,6 +99,3 @@ DEPENDENCIES
   kramdown
   rack-jekyll
   rake
-
-BUNDLED WITH
-   2.0.1
