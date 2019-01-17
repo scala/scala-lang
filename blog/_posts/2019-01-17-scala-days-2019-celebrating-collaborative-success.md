@@ -53,7 +53,7 @@ Even if you are not attending the main event, the Scala Days conference, 11th-13
 
 We encourage you to [submit one or more proposals](https://cfp.scaladays.org/events/scaladays2019), even if you never gave a talk before. Here are some arguments:
 
-- We ask for about 600 words for an abstract for now, so your talk doesn’t need to be ready - just your idea! Share it with us. If your proposal gets accepted you will still have 4 months to develop a presentation, maybe even try it out in a local Meetup.
+- We ask for about 600 characters for an abstract for now, so your talk doesn’t need to be ready - just your idea! Share it with us. If your proposal gets accepted you will still have 4 months to develop a presentation, maybe even try it out in a local Meetup.
 - Yes, Scala Days is known to have “heavy weighters” speaking, but do not get intimidated. Zahari Dichev gave his first talk ever at the Scala Days 2018, and here is his advice:
 *“I looked at the talks and realized that the conference is very welcoming and being a scala guru who regularly hacks on the compiler was not a prerequisite for giving a talk”*
 - Speaker support is part of the overall budget. Please see below for details;
