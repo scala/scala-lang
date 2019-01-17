@@ -13,7 +13,7 @@ title: "Scala Days 2019 - Celebrating Collaborative Success"
 
 ## A note to the Scala Community
 
-Dear Scala User, Contributor, Library Author, Community Member, Former and Future Community Member, dear Tech Lead, Manager, Sponsor, Marketing Team, Recruiter, Start-up Founder, Event Manager, Admin Staff, Spouse, dear Professor, Student, Teaching Assistant, SUG Organiser, dear Prof. Odersky and EPFL team, dear Scala team at Lightbend, Scala Center Team,
+Dear Scala User, Contributor, Library Author, Community Member, Former and Future Community Member, dear Tech Lead, Manager, Sponsor, Marketing Team, Recruiter, Start-up Founder, Event Manager, Admin Staff, Spouse, dear Professor, Student, Teaching Assistant, SUG Organiser, dear EPFL LAMP team, dear Scala team at Lightbend, Scala Center Team,
 
 Dear Scala Enthusiasts all around the world,
 
@@ -90,4 +90,4 @@ If you don’t find yourself in any of the above, you can always hit that button
 
 [SwissTech Convention Center](https://www.stcc.ch/), [Lausanne Tourisme](https://www.lausanne-tourisme.ch/en/), [Typelevel](https://typelevel.org/), Scala User Group Organisers and official Sponsors.
 
-We are very much looking forward to hosting you and your closest. In the meantime, as Prof. Odersky would say, “Have Fun With Scala”!
+We are very much looking forward to hosting you and your closest. In the meantime, as Martin would say, “Have Fun With Scala”!
