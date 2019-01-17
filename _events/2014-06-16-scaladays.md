@@ -6,5 +6,5 @@ location: Berlin, Germany
 description: ""
 start: 16 June 2014
 end: 18 June 2014
-link-out: https://scaladays.org/archive/berlin2014/index.html
+link-out: https://scaladays.org/assets/archive/berlin2014/index.html
 ---
