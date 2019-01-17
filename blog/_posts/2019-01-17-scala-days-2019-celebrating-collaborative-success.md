@@ -80,10 +80,10 @@ We are looking for motivated, enthusiastic, Scala loving volunteers. And not onl
 To be eligible for speaker support, you first need to get your proposal accepted. If your company or university are not supporting you, please just reply to your “Accepted” email listing the reasons you would need a support and what kind. Our team will be communicating with you until all elements for the decision are in place and give you an answer in due time.
 
 ### Become a Sponsor
-Please send us a [direct email](mailto:info@scaladays.org) to initiate this conversation. This year we are also encouraging Scala Startups to come forward as we have reserved a hype space to showcase brave, young Scala companies.
+Please send us a [direct email](mailto:info@scaladays.org) to initiate this conversation. This year we are also encouraging Scala Startups to come forward as we have reserved a special space to showcase brave, young Scala companies.
 
 ### More
-We would like to showcase some of the history. Please share your “throwbacks” and tag us @ScalaDays, we would like to hear from you and include some of your stories and photos in overall promotion.
+We would like to showcase some of the history. Please share your “throwbacks” and tag us on Twitter [@ScalaDays](https://twitter.com/scaladays), we would like to hear from you and include some of your stories and photos in overall promotion.
 
 ### Even MORE
 If you don’t find yourself in any of the above, you can always hit that button: share, write - spread the word #happybirthdayscala. Follow us: [@scaladays](https://twitter.com/scaladays) [@darjutak](https://twitter.com/darjutak) [@scala_lang](https://twitter.com/scala_lang) [@EPFLevents](https://twitter.com/EPFLevents) for up-to-date information.
