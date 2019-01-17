@@ -6,5 +6,5 @@ location: New York, NY, USA
 description: ""
 start: 9 May 2016
 end: 11 May 2016
-link-out: https://scaladays.org/archive/ny2016.html
+link-out: https://scaladays.org/assets/archive/ny2016.html
 ---
