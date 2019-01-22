@@ -26,12 +26,12 @@ This is our second scheduled release according to our [6-week release schedule](
 
 ## What’s in the 0.2.0-RC1 technology preview?
 The [previous technology preview](/blog/2017/05/31/first-dotty-milestone-release.html) has shipped new language features planned for Scala 3:  
-[Intersection Types](http://dotty.epfl.ch/docs/reference/intersection-types.html),
-[Union Types](http://dotty.epfl.ch/docs/reference/union-types.html),
-[Trait Parameters](http://dotty.epfl.ch/docs/reference/trait-parameters.html),
+[Intersection Types](http://dotty.epfl.ch/docs/reference/new-types/intersection-types.html),
+[Union Types](http://dotty.epfl.ch/docs/reference/new-types/union-types.html),
+[Trait Parameters](http://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html),
 [Enumerations](http://dotty.epfl.ch/docs/reference/enums/enums.html),
 [Algebraic Data Types](http://dotty.epfl.ch/docs/reference/enums/adts.html),
-[By-Name Implicits](http://dotty.epfl.ch/docs/reference/implicit-by-name-parameters.html).
+[By-Name Implicits](http://dotty.epfl.ch/docs/reference/other-new-features/implicit-by-name-parameters.html).
 
 This technology preview is geared towards improving stability and reliability. It includes:
 
