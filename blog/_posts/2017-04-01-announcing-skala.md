@@ -106,9 +106,9 @@ One of the biggest ongoing efforts of the newly-renamed Skalazentrum is the
 development of the new collections library, which will form the basis for the
 data structures we use on a daily basis in Skala. We have already completed
 work on translating the current Strawman Collections to Skala, and to offer a
-first glimpse of the improved readability of Skala code, you can [browse some
+first glimpse of the improved readability of Skala code, you can browse some
 Skala source code
-here](https://github.com/propensive/collection-strawman/blob/master/src/main/scala/strawman/collection/View.scala).
+here (dead link: https://github.com/propensive/collection-strawman/blob/master/src/main/scala/strawman/collection/View.scala).
 We are working with GitHub to support syntax highlighting for Skala, but it's
 not there yet.
 
