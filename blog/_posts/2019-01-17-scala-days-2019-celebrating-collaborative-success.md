@@ -25,7 +25,7 @@ Scala Days was first organised in [2010 at EPFL](http://days2010.scala-lang.org/
 
 In the last 10 years Scala Days grew to become the leading Scala conference, gathering 1500 participants each year, 70+ talks and various workshops on 2 continents and supported on average by 20 sponsors.
 
-Since EPFL is the “home” of Scala and Scala Days, it was a natural choice for this special edition. Not to mention the magnificent setting, blend between high-tech and raw-nature that Lausanne offers. But there is an additional reason: EPFL is also celebrating a big anniversary in 2019 → 50 years since it became a Swiss federal school. 
+Since EPFL is the “home” of Scala and Scala Days, it was a natural choice for this special edition. Not to mention the magnificent setting, blend between high-tech and raw-nature that Lausanne offers. But there is an additional reason: EPFL is also celebrating a big anniversary in 2019 → 50 years since it became a Swiss federal school.
 
 We believe that 2019 is the perfect year for you to (re)visit The Olympic Capital and this wonderful university, be a part of a historical celebration and, of course, take a selfie in front of the Scala stairs (o:
 
@@ -36,7 +36,7 @@ How does this translate in reality?
 - Up to 30% lower ticket prices than usual, and student ticket prices - courtesy of EPFL subsidy;
 - Diversity scholarship and speaker support are part of the overall budget. By purchasing the ticket or sponsoring you are participating in this initiative;
 - Daycare during the conference and an accompanying option for your partners will be available;
-- Free community events, such as a Scala spree and ScalaBrige, will take place before and after the conference, bringing participants and local community members together to teach and learn for a day;
+- Free community events, such as a Scala spree and ScalaBridge, will take place before and after the conference, bringing participants and local community members together to teach and learn for a day;
 - 2018 and 2019 Phil Bagwell Community Awards will be given during the conference.
 
 Add to this list many social events we have in store and we can comfortably rename Scala Days to Scala Week 2019.
@@ -69,7 +69,7 @@ As mentioned, this year’s ticket prices are lower than usual. The reason being
 The registration opens beginning of February, stay tuned!
 
 ### Diversity & Inclusion
-We encourage people from under-represented groups in programming to attend Scala Days and the related events, specifically by providing student ticket prices and diversity scholarships. 
+We encourage people from under-represented groups in programming to attend Scala Days and the related events, specifically by providing student ticket prices and diversity scholarships.
 
 For ticket and travel support, we will add our event to DiversityTickets once the registration opens. The same form can also be used to apply for a ticket to the Typelevel Summit that happens the day after Scala Days. If you're unsure whether you'd be eligible, or if you have any other questions, please contact [events@typelevel.org](mailto:events@typelevel.org).
 
