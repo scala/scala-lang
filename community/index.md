@@ -163,6 +163,10 @@ Staying current:
 * [The Scala Center](https://scala.epfl.ch/) is an open source foundation that brings together a coalition of individuals and organizations working together to contribute to Scala.
     * [Scala Center FAQ](https://scala.epfl.ch/faqs.html)
 
+## Phil Bagwell Memorial Scala Community Award
+
+The [Phil Bagwell Memorial Scala Community Award](./phil-bagwell-award.html) is given to individuals who have made significant efforts to grow the Scala Community.
+
 ## Archives
 
 Read-only archives of these retired groups remain available.
