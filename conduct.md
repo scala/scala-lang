@@ -47,7 +47,7 @@ you feel that a thread needs moderation, please
 - If the warning is unheeded, the user will be “kicked,” i.e., kicked out of the communication channel to cool off.
 - If the user comes back and continues to make trouble, they will be banned, i.e., indefinitely excluded.
 - Moderators may choose at their discretion to un-ban the user if it was a first offense and they if they make suitable amends with the offended party.
-- If you think a ban is unjustified, please take it up with that moderator, or with a different moderator, in private. Complaints about bans in-channel are not allowed.
+- If you think a moderator action is unjustified, please take it up with that moderator, or with a different moderator, in private. Complaints about moderation in-channel are not allowed.
 - Moderators are held to a higher standard than other community members. If a moderator acts inappropriately, they should expect less leeway than others.
 
 In the Scala community we strive to go the extra step to look out for each
