@@ -33,15 +33,14 @@ As a member of the community, you agree to the following:
 - Keep unstructured critique to a minimum. We encourage sharing ideas and perspectives, so please ensure that your feedback is constructive and relevant. If you have solid ideas you want to experiment with, make a fork and see how it works.
 - Avoid aggressive and micro-aggressive behavior, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
 - We will exclude you from interaction if you insult, demean or harass anyone. The term “Harassment” includes “Unacceptable Behavior” described in the [Citizen Code of Conduct](http://citizencodeofconduct.org/). **In particular, we don’t tolerate behavior that excludes people in socially marginalized groups.**
-- Private harassment is also unacceptable. No matter who you are, if you feel you have been or are being harassed or made uncomfortable by a community member's behavior, please contact one of the [moderators](https://contributors.scala-lang.org/about) or any member of the [Scala Center](http://scala.epfl.ch/) immediately.
+- Private harassment is also unacceptable. No matter who you are, if you feel you have been or are being harassed or made uncomfortable by a community member's behavior, please [contact one of the moderators](#contact) immediately.
 - Likewise any spamming, trolling, flaming, baiting or other attention-stealing behaviour is not welcome.
 
 ### Moderation
 
 These are the policies for upholding our community’s standards of conduct. If
-you feel that a thread needs moderation, please contact anyone on the
-[moderation team](https://contributors.scala-lang.org/about), or any employee of
-the [Scala Center](https://scala.epfl.ch/).
+you feel that a thread needs moderation, please
+[contact the moderation team](#contact).
 
 - Remarks that violate the above code of conduct, including hateful, hurtful, oppressive, or exclusionary remarks, are not allowed. (Cursing is allowed, but never targeting another user, and never in a hateful manner.)
 - Moderators will warn users who make remarks inconsistent with the above code of conduct.
@@ -76,6 +75,22 @@ projects adopting the Scala Code of Conduct, please contact the maintainers of
 those projects for enforcement. If you wish to use this code of conduct for your
 own project, consider explicitly mentioning your moderation policy or making a
 copy with your own moderation policy so as to avoid confusion.
+
+### Contact
+
+For CoC-related questions or to report possible violations on the channels
+listed above,
+
+* contact one of the moderators active on that channel if you can identify
+  them, or
+* send an e-mail to [Scala-CoC@epfl.ch](mailto:Scala-CoC@epfl.ch), which
+  forwards to general moderators at the Scala Center, or
+* send an e-mail to one of the following general moderators if you want to
+  choose who you are talking to:
+  * Seth Tisue, Lightbend ([seth.tisue@lightbend.com](mailto:seth.tisue@lightbend.com))
+  * Adriaan Moors, Lightbend ([adriaan.moors@lightbend.com](mailto:adriaan.moors@lightbend.com))
+  * Darja Jovanovic, Scala Center ([darja.jovanovic@epfl.ch](mailto:darja.jovanovic@epfl.ch))
+  * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
 
 ### Credits
 
