@@ -101,7 +101,7 @@ layout: inner-page-parent
 
           {% include download-resource-list.html %}
           <h3>License</h3>
-          <p>The Scala distribution is released under the {{page.license}}.</p>
+          <p>The Scala distribution is released under the {{ page.license | replace: '!SITE_BASE_URL!', site.baseurl }}.</p>
         </div>
 
       </div>
