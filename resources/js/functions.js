@@ -251,7 +251,7 @@ $(document).ready(function() {
 function getOS() {
   var osname = "linux";
   if (navigator.appVersion.indexOf("Win") != -1) osname = "windows";
-  if (navigator.appVersion.indexOf("Mac") != -1) osname = "osx";
+  if (navigator.appVersion.indexOf("Mac") != -1) osname = "macos";
   if (navigator.appVersion.indexOf("Linux") != -1) osname = "linux";
   if (navigator.appVersion.indexOf("X11") != -1) osname = "unix";
   return osname;
