@@ -6,7 +6,7 @@ by: Darja Jovanovic
 
 On the 6th of March 2019 the Scala Center Advisory Board welcomed Rob Norris as a new member, succeeding Lars Hupel in the Community Representative role, alongside Bill Venners.
 
-The Scala Center Team would like to sincerely thank Lars for his great work since the beginning of the Center, 3 years ago, writing and presenting community proposals (see: [SCP-011](https://github.com/scalacenter/advisoryboard/blob/master/proposals/011-debugging-symbols.md); [SCP-013](https://github.com/scalacenter/advisoryboard/blob/master/proposals/013-sbt-migration.md)). 
+The Scala Center team sincerely thanks Lars for his great work since the beginning of the Center, 3 years ago, writing and presenting community proposals (see: [SCP-011](https://github.com/scalacenter/advisoryboard/blob/master/proposals/011-debugging-symbols.md); [SCP-013](https://github.com/scalacenter/advisoryboard/blob/master/proposals/013-sbt-migration.md)). 
 
 We are also grateful that Rob accepted our invitation and wish him a great mandate ahead. Keep reading to find out more about the Community Representative role, how to get in touch, share your opinion or submit a proposal.
 
