@@ -119,6 +119,7 @@ Official:
 Community:
 
 * [Scala Times](http://scalatimes.com) weekly Scala newspaper
+* [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) weekly Scala newspaper
 
 Many Scala users are active on Twitter for sharing Scala-related news
 items and opinions.  Ask your Scala friends who they follow on Twitter
@@ -146,6 +147,7 @@ Finding libraries:
 Staying current:
 
 * [Scala Times](http://scalatimes.com) includes library releases
+* [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) includes library releases
 
 ## Non-JVM platforms
 
