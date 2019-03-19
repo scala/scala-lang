@@ -24,7 +24,7 @@ We expect the initiatives to cover a variety of different activities in the Scal
 - Point of contact for community members/groups to review and help shaping community proposals
 - Presents and defends community proposals at AB meetings
 
-Feel free to contact our Representatives by filling in this [short form](https://docs.google.com/forms/d/e/1FAIpQLScvdmnFYJnHzT0n8WyDsN9TEfTIaA76ZdINDEjx0D3pR7OPBg/viewform?usp=sf_link)
+Feel free to contact our Representatives by filling in this [short form](https://docs.google.com/forms/d/e/1FAIpQLScvdmnFYJnHzT0n8WyDsN9TEfTIaA76ZdINDEjx0D3pR7OPBg/viewform?usp=sf_link).
 
 **Did you know?** Advisory Board members are eligible to send in a project proposal that they believe the Scala Center should work on. As part of the Board, the community is invited to submit proposals, through the Community Representatives. Check out the [proposal template](https://github.com/scalacenter/advisoryboard/blob/master/templates/proposal.md) or [previous proposals](https://github.com/scalacenter/advisoryboard/tree/master/proposals).
 
