@@ -4,11 +4,24 @@ title: "Rob Norris joins Scala Center’s Advisory Board as a new Community Repr
 by: Darja Jovanovic
 ---
 
-On the 6th of March 2019 the Scala Center Advisory Board welcomed Rob Norris as a new member, succeeding Lars Hupel in the Community Representative role, alongside Bill Venners.
+The Scala Center Advisory Board welcomes **Rob Norris** as a Community Representative.
 
-The Scala Center team sincerely thanks Lars for his great work since the beginning of the Center, 3 years ago, writing and presenting community proposals (see: [SCP-011](https://github.com/scalacenter/advisoryboard/blob/master/proposals/011-debugging-symbols.md); [SCP-013](https://github.com/scalacenter/advisoryboard/blob/master/proposals/013-sbt-migration.md)).
+Rob succeeds [Lars Hupel](https://lars.hupel.info) in the Community Representative role.  (Bill Venners continues as the other Community Representative.)
 
-We are also grateful that Rob accepted our invitation and looking forward to working together during his time on the board. Keep reading to find out more about the Community Representative role, how to get in touch, share your opinion or submit a proposal.
+The Scala Center team sincerely thanks Lars for his great work since the beginning of the Center three years ago.  He has written and presented community proposals (see: [SCP-011](https://github.com/scalacenter/advisoryboard/blob/master/proposals/011-debugging-symbols.md); [SCP-013](https://github.com/scalacenter/advisoryboard/blob/master/proposals/013-sbt-migration.md)) and relayed community feedback and sentiment to the board.
+
+We are grateful that Rob has accepted our invitation, and we look forward to working together during his time on the board.
+
+Rob, aka [tpolecat](http://tpolecat.github.io/about.html), is familiar in the Scala community for:
+
+* his leadership role in [Typelevel](https://typelevel.org/)
+* his popular open-source projects, including [Doobie](https://github.com/tpolecat/doobie) (a database library) and [Tut](https://github.com/tpolecat/tut) (a tool for machine-checked documentation)
+* his many conference talks on pure-functional programming
+* his tireless efforts on [Gitter](https://gitter.im/scala/scala) and IRC to help newcomers learn Scala and functional programming
+
+At his day job, he writes Scala code at the [Gemini Observatory](http://www.gemini.edu/), supporting astronomy research.
+
+Keep reading to find out more about the Community Representative role, how to get in touch, share your opinion or submit a proposal.
 
 
 **Did you know?** The Scala Center’s Advisory Board is a forum for proposing and discussing initiatives which benefit the Scala open-source ecosystem or the Scala educational landscape. Each board member, in consultation with the Scala Center, may propose initiatives for consideration.
