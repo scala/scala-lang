@@ -19,7 +19,7 @@ Rob, aka [tpolecat](http://tpolecat.github.io/about.html), is familiar in the Sc
 * his many conference talks on pure-functional programming
 * his tireless efforts on [Gitter](https://gitter.im/scala/scala) and IRC to help newcomers learn Scala and functional programming
 
-At his day job, he writes Scala code at the [Gemini Observatory](http://www.gemini.edu/), supporting astronomy research.
+At his day job, he writes Scala code at the [Gemini Observatory](http://www.gemini.edu/), supporting astronomy research. 🔭✨
 
 Keep reading to find out more about the Community Representative role, how to get in touch, share your opinion or submit a proposal.
 
