@@ -272,6 +272,12 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
+  // Get current year and put it in span, used on /license page
+  if ($(".current-year").length) {
+    var currYear = new Date().getFullYear();
+    $(".current-year").text(currYear);
+  }
+
   var os = getOS();
   if (os == "Unknown OS") os = "UNIX";
 
