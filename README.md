@@ -22,6 +22,7 @@ bin/serve
 
 ### For Bundler:
 ```
+bundle install
 bundle exec jekyll serve --incremental
 ```
 
