@@ -120,6 +120,7 @@ Community:
 
 * [Scala Times](http://scalatimes.com) weekly Scala newspaper
 * [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) weekly Scala newspaper
+* [Scala Love](https://scala.love/) Podcast about the Scala Programming Language and its community
 
 Many Scala users are active on Twitter for sharing Scala-related news
 items and opinions.  Ask your Scala friends who they follow on Twitter
