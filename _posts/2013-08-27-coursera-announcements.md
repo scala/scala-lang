@@ -38,8 +38,8 @@ the functional programming course.
 
 ## Personalized Tutorials
 
-In a second new development, Typesafe will offer [supervised tutorial
-classes](http://typesafe.com/blog) that follow both classes and run concurrently with them. One
+In a second new development, Typesafe will offer supervised tutorial
+classes that follow both classes and run concurrently with them. One
 of the challenges of massive online courses is that students get only
 automated feedback on their homework assignments. Using Typesafe's
 online tutorial platform, students can enroll in small groups with
