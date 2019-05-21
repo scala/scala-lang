@@ -5,7 +5,7 @@ release_version: 2.12.8
 release_date: "December 4, 2018"
 show_resources: "true"
 other_releases: [
-  ["development_version", "Current 2.13.x prerelease", 2.13.0-RC1, "April 8, 2019"],
+  ["development_version", "Current 2.13.x prerelease", 2.13.0-RC2, "May 17, 2019"],
   ["maintenance_version", "Last 2.11.x maintenance release", 2.11.12, "November 9, 2017"],
   ["maintenance_version", "Last 2.10.x maintenance release", 2.10.7, "November 9, 2017"]
 ]
