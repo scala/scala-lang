@@ -2,7 +2,7 @@
 category: event
 title: Typelevel Summit Europe
 logo: /resources/img/typelevel.png
-location: Oslo
+location: Oslo, Norway
 description: if you're interested in types and pure functional programming and want to make those ideas commonplace
 start: 4 May 2016
 end: 4 May 2016
