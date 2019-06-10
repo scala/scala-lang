@@ -1,6 +1,6 @@
 title: The Scala Programming Language
 
-scalaversion: "2.12.8"
+scalaversion: "2.13.0"
 
 url: https://www.scala-lang.org
 baseurl: ""
@@ -20,7 +20,7 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
-  
+
 future: true
 
 # Defaults
