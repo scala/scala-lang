@@ -60,8 +60,8 @@ be ported to it, so we need something different, and hopefully better.
 
 Another criticism of the current macros is that they
 lack _foundations_. Scala 3 has already a meta
-programming facility, with particularly well explored foundations. [Principled Meta
-Programming](http://dotty.epfl.ch/docs/reference/other-new-features/principled-meta-programming.html)
+programming facility, with particularly well explored foundations. [Quotes and
+Splices](http://dotty.epfl.ch/docs/reference/metaprogramming/macros.html)
 is a way to support _staging_ (in the sense of runtime code-generation)
 by adding just two operators to the
 language: Quote (`'`) to represent code expressions, and splice (`~`)
