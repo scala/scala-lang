@@ -7,6 +7,11 @@ includeTOC: true
 ---
 
 ## Latest releases
+
+* Scala 2.13.0
+  * [Library API](http://www.scala-lang.org/api/2.13.0/)
+  * [Compiler API](http://www.scala-lang.org/api/2.13.0/scala-compiler/)
+  * [Reflection API](http://www.scala-lang.org/api/2.13.0/scala-reflect/#scala.reflect.package)
 * Scala 2.12.8
   * [Library API](http://www.scala-lang.org/api/2.12.8/)
   * [Compiler API](http://www.scala-lang.org/api/2.12.8/scala-compiler/)
@@ -29,15 +34,15 @@ includeTOC: true
 
 ## Nightly builds
 
+* Scala 2.13.x
+  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/)
+  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/scala-compiler/)
 * Scala 2.12.x
   * [Library API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/)
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/scala-compiler/)
 * Scala 2.11.x
   * [Library API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/)
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
-* Scala 2.13.x
-  * [Library API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/)
-  * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.13.x/api/2.13.x/scala-compiler/)
 
 ## Previous releases
 * Scala 2.12.7

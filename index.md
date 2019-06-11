@@ -31,7 +31,7 @@ apiDocs:
     - title: "Language Specification"
       url: "https://scala-lang.org/files/archive/spec/2.12/"
 
-currentScalaVersion: "2.12.8"
+currentScalaVersion: "2.13.0"
 
 # Scala backends
 scalaBackends:
