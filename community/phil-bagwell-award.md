@@ -34,6 +34,8 @@ This award seeks to build that which he helped start.
 
 ## Past winners
 
+* 2019: [Kelley Robinson](https://www.scala-lang.org/news/2019/09/13/bagwell-award-2019.html)
+* 2018: [Kenji Yoshida](https://www.scala-lang.org/news/2019/09/13/bagwell-award-2018.html)
 * 2017: [Josh Suereth](https://www.scala-lang.org/news/2017/09/25/bagwell-award-2017.html)
 * 2016: [Erik Osheim](https://www.scala-lang.org/news/2016/10/26/bagwell-award-2016.html)
 * 2015: [Bill Venners](https://scala-lang.org/news/2015/06/25/bagwell-award-2015.html)
