@@ -4,7 +4,7 @@ title: Flatmap Oslo
 logo: /resources/img/flatmap-oslo.png
 location: Oslo, Norway
 description: ""
-start: 12 May 2014
-end: 13 May 2014
-link-out: https://2014.flatmap.no/
+start: 13 May 2013
+end: 14 May 2013
+link-out: https://2013.flatmap.no/
 ---

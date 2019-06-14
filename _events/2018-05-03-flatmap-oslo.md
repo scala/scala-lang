@@ -6,5 +6,5 @@ location: Oslo, Norway
 description: "flatMap(Oslo) is a functional programming conference with focus on Scala"
 start: 3 May 2018
 end: 4 May 2018
-link-out: http://2018.flatmap.no/
+link-out: https://2018.flatmap.no/
 ---
