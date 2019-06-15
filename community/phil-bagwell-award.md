@@ -33,7 +33,8 @@ In [a 2012 blog post](https://www.lightbend.com/blog/rip-phil-bagwell), Prof. Ma
 This award seeks to build that which he helped start.
 
 ## Past winners
-
+* 2019: Kelley Robinson
+* 2018: Kenji Yoshida
 * 2017: [Josh Suereth](https://www.scala-lang.org/news/2017/09/25/bagwell-award-2017.html)
 * 2016: [Erik Osheim](https://www.scala-lang.org/news/2016/10/26/bagwell-award-2016.html)
 * 2015: [Bill Venners](https://scala-lang.org/news/2015/06/25/bagwell-award-2015.html)
