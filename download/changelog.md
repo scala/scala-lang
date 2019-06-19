@@ -7,6 +7,9 @@ includeTOC: true
 
 <!-- [ [2.10.0](#2.10.0) | [2.9.0](#2.9.0) | [2.8.0](#2.8.0) | [2.7.2](#2.7.2) | [2.7.1](#2.7.1) | [2.7.0](#2.7.0) | [2.6.1](#2.6.1) | [2.6.0](#2.6.0) | [2.5.0](#2.5.0) | [2.4.0](#2.4.0) | [2.3.2](#2.3.2) | [2.3.0](#2.3.0) | [2.1.8](#2.1.8) | [2.1.7](#2.1.7) | [2.1.5](#2.1.5) | [2.0](#2.0) ] -->
 
+## Changes in Version 2.13.0
+Please consult the [Scala 2.13.0 release notes](https://github.com/scala/scala/releases/tag/v2.13.0).
+
 ## Changes in Version 2.12.0
 Please consult the [Scala 2.12.0 release notes](/news/2.12.0).
 

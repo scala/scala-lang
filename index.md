@@ -29,7 +29,7 @@ apiDocs:
     - title: "Scala Documentation"
       url: "https://docs.scala-lang.org/"
     - title: "Language Specification"
-      url: "https://scala-lang.org/files/archive/spec/2.12/"
+      url: "https://scala-lang.org/files/archive/spec/2.13/"
 
 currentScalaVersion: "2.13.0"
 
