@@ -221,5 +221,6 @@ includeTOC: true
 
 ## Language Specification
 The language specification is a formal description of the syntax and semantics of the language.
+* [Scala 2.13 Language Specification](https://www.scala-lang.org/files/archive/spec/2.13/)
 * [Scala 2.12 Language Specification](https://www.scala-lang.org/files/archive/spec/2.12/)
 * [Scala 2.11 Language Specification](https://www.scala-lang.org/files/archive/spec/2.11/)
