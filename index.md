@@ -49,25 +49,32 @@ scalaBackends:
 scalaIDEs:
   - name: IntelliJ IDEA
     icon: /resources/img/frontpage/intelliJ.png
-    ensime: false
+    metals: false
     url: "https://www.jetbrains.com/idea/"
-  - name: Sublime Text
-    icon: /resources/img/frontpage/sublime.png
-    ensime: true
-    url: "https://www.sublimetext.com/"
-  - name: Atom
-    icon: /resources/img/frontpage/atom.png
-    ensime: true
-    url: "https://atom.io/"
-  - name: Scala IDE For Eclipse
-    icon: /resources/img/frontpage/scala_ide.png
-    ensime: false
-    url: "http://scala-ide.org/"
   - name: VS Code
     icon: /resources/img/frontpage/vs_code.png
-    ensime: false
-    url: "https://code.visualstudio.com/"
-
+    metals: true
+    url: "https://scalameta.org/metals/docs/editors/vscode.html"
+  - name: GNU Emacs
+    icon: /resources/img/frontpage/emacs-logo.svg
+    metals: true
+    url: "https://scalameta.org/metals/docs/editors/emacs.html"
+  - name: Vim
+    icon: /resources/img/frontpage/vim-logo.svg
+    metals: true
+    url: "https://scalameta.org/metals/docs/editors/vim.html"
+  - name: Sublime Text
+    icon: /resources/img/frontpage/sublime.png
+    metals: true
+    url: "https://scalameta.org/metals/docs/editors/sublime.html"
+  - name: Atom
+    icon: /resources/img/frontpage/atom.png
+    metals: true
+    url: "https://scalameta.org/metals/docs/editors/atom.html"
+  - name: Scala IDE For Eclipse
+    icon: /resources/img/frontpage/scala_ide.png
+    metals: false
+    url: "http://scala-ide.org/"
 # Scala ecosystem
 ecosystemTitle: "Scala ecosystem"
 ecosystemDescription: "The Scala Library Index (or Scaladex) is a representation of a map of all published Scala libraries. With Scaladex, a developer can now query more than 175,000 releases of Scala libraries. Scaladex is officially supported by Scala Center."
