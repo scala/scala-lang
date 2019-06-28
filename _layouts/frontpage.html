@@ -154,10 +154,10 @@
     <ul>
       {% for ide in page.scalaIDEs %}
       <li>
-        <a {% if ide.ensime == true %}class="masterTooltip" title="{{site.data.common.texts.ensimeSupportedInIDE}}"{% endif %} href="{{ide.url}}" target="_blank">
-          {% if ide.ensime == true %}
+        <a {% if ide.metals == true %}class="masterTooltip" title="{{site.data.common.texts.metalsSupportedInIDE}}"{% endif %} href="{{ide.url}}" target="_blank">
+          {% if ide.metals == true %}
             <span class="bullet">
-              <img src="/resources/img/frontpage/icon-ensime.png" alt="">
+              <img src="/resources/img/frontpage/scalameta-logo.png" alt="">
             </span>
           {% endif %}
           <img src="{{ide.icon}}" alt="{{ide.name}}">

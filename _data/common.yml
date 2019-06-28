@@ -8,7 +8,7 @@ courseraMoocsUrl: https://www.coursera.org/specializations/scala
 texts:
   scalaBackendsTitle: Scala runs on...
   scalaBackendsMore: with more backends on the way.
-  ensimeSupportedInIDE: ensime plugin available
+  metalsSupportedInIDE: Language server support via Metals
   onlineCoursesFree: Free (optional paid certificate)
   onlineCoursesPaid: Paid (with certificate)
   courseraLaunchPeriod: New sessions starting every 2 weeks!
