@@ -12,9 +12,9 @@ other_releases: [
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires Java 8 or later, available <a href='http://www.java.com/'>here</a>."
 license: <a href="https://www.scala-lang.org/license/">Apache License, Version 2.0</a>
 resources: [
-  ["-main-unixsys", "scala-2.13.0.tgz", "https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.tgz", "Mac OS X, Unix, Cygwin", "18.51M"],
+  ["-main-unixsys", "scala-2.13.0.tgz", "https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.tgz", "macOS, Unix, Windows", "18.51M"],
   ["-main-windows", "scala-2.13.0.msi", "https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.msi", "Windows (msi installer)", "114.63M"],
-  ["-non-main-sys", "scala-2.13.0.zip", "https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.zip", "Windows", "18.55M"],
+  ["-non-main-sys", "scala-2.13.0.zip", "https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.zip", "macOS, Unix, Windows", "18.55M"],
   ["-non-main-sys", "scala-2.13.0.deb", "https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.deb", "Debian", "581.44M"],
   ["-non-main-sys", "scala-2.13.0.rpm", "https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.rpm", "RPM package", "115.04M"],
   ["-non-main-sys", "scala-docs-2.13.0.txz", "https://downloads.lightbend.com/scala/2.13.0/scala-docs-2.13.0.txz", "API docs", "48.47M"],
