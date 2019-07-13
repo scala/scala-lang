@@ -74,7 +74,7 @@ diff --git a/build.sbt b/build.sbt
 +  "org.typelevel" %% "cats-core" % "1.6.1"
  )
 
-diff --git a/src/main/scala/cats_1_0_0.scala b/src/main/scala/cats.scala
+diff --git a/src/main/scala/cats.scala b/src/main/scala/cats.scala
 --- a/src/main/scala/cats.scala
 +++ b/src/main/scala/cats.scala
  object cats {
@@ -139,6 +139,7 @@ which is an integral part of Scala Steward. A special shout-out also goes to
 
 And many thanks to the 20+ contributors who made Scala Steward to what it is today:
 Alex,
+Anil Kumar Myla,
 Arulselvan Madhavan,
 Bayram Kiran,
 Cédric Chantepie,
