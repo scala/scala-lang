@@ -207,7 +207,7 @@ If you'd like to get involved, now is the time to weigh in on the discussions th
 
 A few topics still need further exploration:
 
-- Currently there is no support for [specialization](http://www.scala-notes.org/2011/04/specializing-for-primitive-types/) of collections. It would be nice to allow this in the new design if we can do it without too much of an impact on the majority of non-specialized collections.
+- Currently there is no support for [specialization](https://web.archive.org/web/20180924231107/http://www.scala-notes.org/2011/04/specializing-for-primitive-types/) of collections. It would be nice to allow this in the new design if we can do it without too much of an impact on the majority of non-specialized collections.
 
 - We need a story for parallel collections. They will be [moved into a separate module](https://github.com/scala/scala/pull/5603/) in Scala 2.13 as part of the ongoing modularization of the standard library but it is not clear yet how closely they will be integrated into the new design.
 
