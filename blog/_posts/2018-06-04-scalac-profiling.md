@@ -827,7 +827,7 @@ So we need to find a way to fix this in userspace if we want to make the logs
 disappear. The root of the issue is that both `materializeProduct` and
 `materializeCoproduct` are candidates of the implicit search and both are
 tried. The compiler considers both eligible even though
-`materializeCoprodunt` should be discarded. As this isn't the case, the
+`materializeCoproduct` should be discarded. As this isn't the case, the
 compiler then forces the expansion of all candidates to check for ambiguous
 ambiguous implicits in the same scope).
 
