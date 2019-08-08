@@ -1,7 +1,7 @@
 ---
 category: event
 title: ScalaConf
-logo: /resources/img/scalaconf.png
+logo: /resources/img/scalaconf_2.png
 location: Moscow, Russia
 description: ""
 start: 26 November 2019
