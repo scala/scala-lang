@@ -91,6 +91,7 @@ listed above,
   * Adriaan Moors, Lightbend ([adriaan.moors@lightbend.com](mailto:adriaan.moors@lightbend.com))
   * Darja Jovanovic, Scala Center ([darja.jovanovic@epfl.ch](mailto:darja.jovanovic@epfl.ch))
   * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
+  * Kathleen Hayes, Lightbend ([kathleen.hayes@lightbend.com](mailto:kathleen.hayes@lightbend.com))
 
 ### Credits
 
