@@ -6,7 +6,7 @@ permalink: /news/2.11.4/
 ---
 We are very pleased to announce the release of Scala 2.11.4!
 
-* Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
+* Get started with the [Hello Scala 2.11 template](https://www.lightbend.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://www.lightbend.com/platform/getstarted)
 * Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.4.html)
 * Obtain it via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.4%22)
 
