@@ -106,7 +106,7 @@ You can propose edits to these release notes [on GitHub](https://github.com/scal
 Scala releases are available various ways, such as:
 
 <!-- re-add for 2.12.0 final?
-* Get started with the [Hello Scala 2.12 template](https://typesafe.com/activator/template/hello-scala-2_12) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
+* Get started with the [Hello Scala 2.12 template](https://www.lightbend.com/activator/template/hello-scala-2_12) in [Typesafe Activator](https://www.lightbend.com/platform/getstarted)
 -->
 * Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-M2.html)
 * Bump the `scalaVersion` setting in your SBT-based project
