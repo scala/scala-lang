@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Darja Jovanovic
-title: "Scala Conrtibutor Summit(s)"
+title: "Scala Contributors Summit(s)"
 ---
 
 
