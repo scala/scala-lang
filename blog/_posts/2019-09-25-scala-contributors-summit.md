@@ -54,7 +54,7 @@ This time, there were over 60 participants that were discussing, amongst other:
 
 
 | Topic        | Questions           | 
-| ------------- |:-------------:| 
+| ------------- | ------------- | 
 | Growing community      | What are the pain points for people learning Scala? | 
 | Data science      | How do we improve Scala for data scientists and data processing applications?      |
 | Scala 3 | What are the blockers to migrate to Scala 3?      |
