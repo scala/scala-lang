@@ -13,8 +13,8 @@ redirect_from:
 We are committed to providing a friendly, safe and welcoming environment for
 all, regardless of age, body size, disability, ethnicity, sex characteristics,
 gender identity and expression, level of experience, education, socio-economic
-status, nationality, personal appearance, race, religion, or sexual identity
-and orientation.
+status, nationality, personal appearance, race, religion, sexual identity
+and orientation, or other such characteristics.
 
 ### Our Standards
 
