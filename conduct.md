@@ -47,7 +47,7 @@ As a member of the community, you agree to the following:
   - Sustained disruption of community events, including talks and presentations.
   - In particular, we don’t tolerate behavior that excludes people in socially marginalized groups.
 - Private harassment is also unacceptable. No matter who you are, if you feel you have been or are being harassed or made uncomfortable by a community member's behavior, please [contact the moderation team](#contact) immediately.
-- Likewise any spamming, trolling, flaming, baiting or other attention-stealing behaviour is not welcome.
+- Likewise any spamming, trolling, flaming, baiting or other attention-stealing behavior is not welcome.
 
 ### Moderation
 
