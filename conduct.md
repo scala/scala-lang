@@ -33,7 +33,7 @@ As a member of the community, you agree to the following:
 
 - Keep unstructured critique to a minimum. We encourage sharing ideas and perspectives, so please ensure that your feedback is constructive and relevant. If you have solid ideas you want to experiment with, make a fork and see how it works.
 - Avoid aggressive and micro-aggressive behavior, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
-- We will exclude you from interaction if you insult, demean or harass anyone. The term “Harassment” includes “Unacceptable Behavior” described in the [Citizen Code of Conduct](http://citizencodeofconduct.org/):
+- We will exclude you from interaction if you insult, demean or harass anyone. Behavior that will lead to exclusion includes the following:
   - Violence, threats of violence or violent language directed against another person.
   - Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.
   - Posting or displaying sexually explicit or violent material.
