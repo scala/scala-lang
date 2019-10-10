@@ -40,7 +40,7 @@ scalaz8, scapegoat, scribe, scrooge-shapes, scrooge, silencer,
 singleton-ops, sttp, testz, wartremover.
 
 See also the [full
-list](https://github.com/scala/community-builds/blob/2.12.x/configs/project-refs.conf)
+list](https://github.com/scala/community-build/blob/2.12.x/configs/project-refs.conf)
 of all included projects.
 
 ## JDK 11 added
@@ -61,7 +61,7 @@ library to have any trouble _running_ on JDK 11, using published
 artifacts built on JDK 8.  In the community build context, most
 failures are minor _build_ problems, not actual runtime problems.)
 
-[This GitHub ticket](https://github.com/scala/community-builds/issues/796)
+[This GitHub ticket](https://github.com/scala/community-build/issues/796)
 tracks progress on getting the remaining libraries passing.
 
 Project maintainers can help by adding this to their `.travis.yml`
@@ -89,14 +89,14 @@ are fundamentally sound.  Most projects have needed only small changes
 around the edges to cross-compile against 2.11, 2.12, and 2.13.
 
 [This GitHub
-ticket](https://github.com/scala/community-builds/issues/710) tracks
+ticket](https://github.com/scala/community-build/issues/710) tracks
 progress on getting even more libraries passing in time for the 2.13.0
 release in early 2019.
 
 ## Learning more, getting involved
 
 See [last year's blog
-post](https://github.com/scala/community-builds/issues/796).  The
+post](https://github.com/scala/community-build/issues/796).  The
 links it contains are still valid.
 
 And what about about Scala 3?  As the Dotty team [tells us](http://dotty.epfl.ch/blog/2018/11/30/11th-dotty-milestone-release.html), "Dotty now has

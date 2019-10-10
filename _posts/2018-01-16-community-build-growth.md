@@ -50,7 +50,7 @@ In the Scala 2.13 cycle, we expect the community build to play a
 similar role in transitioning first our own code, then the entire
 open-source ecosystem, to the
 [new collections library](http://www.scala-lang.org/blog/2017/02/28/collections-rework.html).
-We've also [begun using it](https://github.com/scala/community-builds/issues/609) to
+We've also [begun using it](https://github.com/scala/community-build/issues/609) to
 gauge our progress on Java 9 support.
 
 Library authors have also benefited.  The community build has often
@@ -77,7 +77,7 @@ lines of code, takes care of filtering out blank lines and comments.
 ### 141 projects
 
 There are now 141 projects in the community build, as listed in the
-[config file](https://github.com/scala/community-builds/blob/2.12.x/configs/project-refs.conf).
+[config file](https://github.com/scala/community-build/blob/2.12.x/configs/project-refs.conf).
 They are: acyclic, akka, akka-contrib-extra, akka-http,
 akka-http-cors, akka-http-session, akka-persistence-cassandra,
 algebra, ammonite, argonaut, atto, autowire, base64, better-files,
@@ -106,12 +106,12 @@ spire, spray-json, ssl-config, tut, twirl, twitter-util, twotails,
 unfiltered, upickle, utest, zinc.
 
 Want to add your project to the community build?  See our
-[eligibility guidelines](https://github.com/scala/community-builds/wiki/Eligibility).
+[eligibility guidelines](https://github.com/scala/community-build/wiki/Eligibility).
 
 ## Learning more, getting involved
 
 The community build is documented in a
-[wiki](https://github.com/scala/community-builds/wiki).  Many of the
+[wiki](https://github.com/scala/community-build/wiki).  Many of the
 questions you might have are already answered there.
 
 If you have a question or want to get involved in the community
@@ -121,13 +121,13 @@ contributors [forum](https://contributors.scala-lang.org) or
 
 Especially involved or specialized discussions about the community
 build can move to the community build's own
-[Gitter room](https://gitter.im/scala/community-builds) and
-[GitHub issues](https://github.com/scala/community-builds/issues).
+[Gitter room](https://gitter.im/scala/community-build) and
+[GitHub issues](https://github.com/scala/community-build/issues).
 
 ## Credits
 
 The main
-[contributors](https://github.com/scala/community-builds/graphs/contributors)
+[contributors](https://github.com/scala/community-build/graphs/contributors)
 have been myself (Seth Tisue), Adriaan Moors, Grzegorz Kossakowski,
 Jason Zaugg, and Toni Cunei, all of whom are current or former
 employees of Lightbend.  Toni is also the primary author of
