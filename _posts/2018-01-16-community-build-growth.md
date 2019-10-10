@@ -76,8 +76,7 @@ lines of code, takes care of filtering out blank lines and comments.
 
 ### 141 projects
 
-There are now 141 projects in the community build, as listed in the
-[config file](https://github.com/scala/community-build/blob/2.12.x/configs/project-refs.conf).
+There are now 141 projects in the community build.
 They are: acyclic, akka, akka-contrib-extra, akka-http,
 akka-http-cors, akka-http-session, akka-persistence-cassandra,
 algebra, ammonite, argonaut, atto, autowire, base64, better-files,

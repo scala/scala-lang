@@ -39,9 +39,9 @@ scala-java-time, scala-newtype, scala-sculpt, scalajson, scalasti,
 scalaz8, scapegoat, scribe, scrooge-shapes, scrooge, silencer,
 singleton-ops, sttp, testz, wartremover.
 
-See also the [full
+<!--See also the [full
 list](https://github.com/scala/community-build/blob/2.12.x/configs/project-refs.conf)
-of all included projects.
+of all included projects.-->
 
 ## JDK 11 added
 
