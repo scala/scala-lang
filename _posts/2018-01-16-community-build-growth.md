@@ -120,7 +120,7 @@ contributors [forum](https://contributors.scala-lang.org) or
 
 Especially involved or specialized discussions about the community
 build can move to the community build's own
-[Gitter room](https://gitter.im/scala/community-build) and
+[Gitter room](https://gitter.im/scala/community-builds) and
 [GitHub issues](https://github.com/scala/community-build/issues).
 
 ## Credits
