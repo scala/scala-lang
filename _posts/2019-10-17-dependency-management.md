@@ -11,7 +11,7 @@ The work we've been doing may interest you if:
 
 * You've run into trouble with version conflicts between dependencies and didn't know what to do or where to look for advice.
 * You want more control on how version conflicts are resolved in your build.
-* You want automated asisstance with deciding whether a version upgrade might break something in your project.
+* You want automated assistance with deciding whether a version upgrade might break something in your project.
 
 At the time we started this project, Ivy was still used by default to resolve libraries in sbt, but efforts were in progress to use coursier instead, so we focused on the latter as a vehicle for improvements.
 Since then, coursier support in sbt [became official](https://github.com/sbt/sbt/pull/4614), and ships by default in sbt 1.3.0.
@@ -54,9 +54,9 @@ versionReconciliation += "*" % "*" % "strict"
 ```
 
 (Note that to use sbt-coursier from an sbt 1.3.x project, the [coursier-based sbt launcher](https://github.com/coursier/sbt-launcher) is required.
-Get it via its [custom sbt-extras launcher](https://github.com/coursier/sbt-extras/blob/master/sbt) or generate and run a launcher via coursier with `coursier bootstrap sbt-launcher && ./sbt`.)
+Get it via its [custom sbt-extras runner](https://github.com/coursier/sbt-extras/blob/master/sbt) or generate one with `coursier bootstrap sbt-launcher && ./sbt`.)
 
-`update` will then succeed only if the strict checks pass.
+The `update` task will then succeed only if the strict checks pass.
 If they don't, either force the versions of faulty dependencies with `dependencyOverrides`, like
 
 ```scala
@@ -75,7 +75,7 @@ versionReconciliation ++= Seq(
 A number of version reconciliation types are available:
 
 * `"strict"` requires all dependees to depend on the exact selected version (if they depend on an interval, the selected version only needs to be contained in it)
-* `"semver"` only requires all dependees to depend on the same major version as the selected version (if they depend on an interval, the selected version only needs to be contained in it too)
+* `"semver"` requires all dependees to depend on the same major version as the selected version (if they depend on an interval, the selected version only needs to be contained in it too)
 * `"default"` is the default version reconciliation in coursier, enabled in the coursier CLI or with the sbt-coursier plugin.
   It is described in more detail [in this page](https://get-coursier.io/docs/other-version-handling.html#reconciliation).
 * `"relaxed"` does not trigger any conflict.
