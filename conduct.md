@@ -11,9 +11,10 @@ redirect_from:
 ## Scala Code of Conduct
 
 We are committed to providing a friendly, safe and welcoming environment for
-all, regardless of level of experience, gender, gender identity and expression,
-sexual orientation, disability, personal appearance, body size, race, ethnicity,
-age, religion, nationality, or other such characteristics.
+all, regardless of age, body size, disability, ethnicity, sex characteristics,
+gender identity and expression, level of experience, education, socio-economic
+status, nationality, personal appearance, race, religion, sexual identity
+and orientation, or other such characteristics.
 
 ### Our Standards
 
@@ -32,9 +33,21 @@ As a member of the community, you agree to the following:
 
 - Keep unstructured critique to a minimum. We encourage sharing ideas and perspectives, so please ensure that your feedback is constructive and relevant. If you have solid ideas you want to experiment with, make a fork and see how it works.
 - Avoid aggressive and micro-aggressive behavior, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
-- We will exclude you from interaction if you insult, demean or harass anyone. The term “Harassment” includes “Unacceptable Behavior” described in the [Citizen Code of Conduct](http://citizencodeofconduct.org/). **In particular, we don’t tolerate behavior that excludes people in socially marginalized groups.**
-- Private harassment is also unacceptable. No matter who you are, if you feel you have been or are being harassed or made uncomfortable by a community member's behavior, please [contact one of the moderators](#contact) immediately.
-- Likewise any spamming, trolling, flaming, baiting or other attention-stealing behaviour is not welcome.
+- We will exclude you from interaction if you insult, demean or harass anyone. Behavior that will lead to exclusion includes the following:
+  - Violence, threats of violence or violent language directed against another person.
+  - Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.
+  - Posting or displaying sexually explicit or violent material.
+  - Posting or threatening to post other people’s personally identifying information ("doxing").
+  - Personal insults, particularly those related to gender, sexual orientation, race, religion, or disability.
+  - Inappropriate photography or recording.
+  - Inappropriate physical contact. You should have someone’s consent before touching them.
+  - Unwelcome sexual attention. This includes, sexualized comments or jokes; inappropriate touching, groping, and unwelcomed sexual advances.
+  - Deliberate intimidation, stalking or following (online or in person).
+  - Advocating for, or encouraging, any of the above behavior.
+  - Sustained disruption of community events, including talks and presentations.
+  - In particular, we don’t tolerate behavior that excludes people in socially marginalized groups.
+- Private harassment is also unacceptable. No matter who you are, if you feel you have been or are being harassed or made uncomfortable by a community member's behavior, please [contact the moderation team](#contact) immediately.
+- Likewise any spamming, trolling, flaming, baiting or other attention-stealing behavior is not welcome.
 
 ### Moderation
 
@@ -42,7 +55,7 @@ These are the policies for upholding our community’s standards of conduct. If
 you feel that a thread needs moderation, please
 [contact the moderation team](#contact).
 
-- Remarks that violate the above code of conduct, including hateful, hurtful, oppressive, or exclusionary remarks, are not allowed. (Cursing is allowed, but never targeting another user, and never in a hateful manner.)
+- Remarks that violate the above code of conduct, including hateful, hurtful, oppressive, or exclusionary remarks, are not allowed. (Cursing is allowed, but never targeting another user, and never in a hateful or aggressive manner.)
 - Moderators will warn users who make remarks inconsistent with the above code of conduct.
 - If the warning is unheeded, the user will be “kicked,” i.e., kicked out of the communication channel to cool off.
 - If the user comes back and continues to make trouble, they will be banned, i.e., indefinitely excluded.
@@ -102,6 +115,7 @@ Adapted from and/or inspired by multiple successful Codes of Conduct, including:
 * [The Contributor Covenant v1.4.0](http://contributor-covenant.org/version/1/4/)
 * [The Recurse Center's User Manual](https://www.recurse.com/manual#sec-environment)
 * [The 18F Code of Conduct](https://18f.gsa.gov/code-of-conduct/)
+* [Citizen Code of Conduct](http://citizencodeofconduct.org/)
 
 ### License
 
