@@ -6,5 +6,5 @@ location: Lausanne, Switzerland
 description: "Scala Days 10-Year Anniversary"
 start: 11 June 2019
 end: 13 June 2019
-link-out: https://scaladays.org/
+link-out: https://www.scaladays.org/2019/lausanne
 ---

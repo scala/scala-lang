@@ -6,5 +6,5 @@ location: Berlin, Germany
 description: ""
 start: 14 May 2018
 end: 17 May 2018
-link-out: https://eu.scaladays.org/
+link-out: https://www.scaladays.org/2018/berlin
 ---
