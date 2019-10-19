@@ -130,7 +130,6 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 
 * [Scala Exercises](http://scala-exercises.47deg.com/)
 * [Scala School](http://twitter.github.com/scala_school/)
-* [Effective Scala](http://twitter.github.com/effectivescala/)
 * [Scala Puzzlers](http://scalapuzzlers.com/)
 * [Scala Cookbook](http://www.scalacookbook.com/)
 * [Interactive Tour](http://scalatutorials.com/tour)

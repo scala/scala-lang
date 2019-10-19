@@ -116,3 +116,7 @@ Adapted from and/or inspired by multiple successful Codes of Conduct, including:
 * [The Recurse Center's User Manual](https://www.recurse.com/manual#sec-environment)
 * [The 18F Code of Conduct](https://18f.gsa.gov/code-of-conduct/)
 * [Citizen Code of Conduct](http://citizencodeofconduct.org/)
+
+### License
+
+This Code of Conduct is distributed under a [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/3.0/).
