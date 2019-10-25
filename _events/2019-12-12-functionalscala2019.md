@@ -1,7 +1,7 @@
 ---
 category: event
 title: Functional Scala
-logo: 
+logo: /resources/img/functional-scala.png
 location: London, UK
 description: ""
 start: 12 December 2019
