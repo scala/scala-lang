@@ -10,11 +10,8 @@ redirect_from:
 
 ## Scala Code of Conduct
 
-We are committed to providing a friendly, safe and welcoming environment for
-all, regardless of age, body size, disability, ethnicity, sex characteristics,
-gender identity and expression, level of experience, education, socio-economic
-status, nationality, personal appearance, race, religion, sexual identity
-and orientation, or other such characteristics.
+We are committed to providing a friendly, safe and welcoming environment.
+We expect the following standards to be observed and upheld by all participants in any community forum (Discuss, GitHub, gitter, etc.).
 
 ### Our Standards
 
@@ -24,10 +21,9 @@ As a member of the community, you agree to the following:
 
 **Encouraged:**
 
-- Be kind and courteous.
-- Respect differences of opinion and remember that every design or implementation choice carries a trade-off and numerous costs. There is seldom a single right answer.
-- Remember that everyone was new to Scala at some point. We want to encourage newcomers to join our community and learn the Scala language and ecosystem. Assume competence.
-- Show empathy towards other community members.
+- **Be kind and courteous.** Keep in mind that all public communication is received by many people you don’t know, so please ask yourself whether someone from a different context would misunderstand your message before sending it. Do not attack other persons, in particular consider that age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion have no bearing on the respect you owe another person.
+- **Respect differences of opinion** and remember that every design or implementation choice carries a trade-off and numerous costs. There is seldom a single right answer, we will find the best solutions by engaging in constructive discussion, with everybody bringing their unique viewpoint and experience to the table.
+- **Remember that everyone was new to Scala at some point.** We want to encourage newcomers to join our community and learn the Scala language and ecosystem. Always assume good intentions and a willingness to learn, just as you are willing to evolve your own opinion as you gain new insights.
 
 **Discouraged:**
 
