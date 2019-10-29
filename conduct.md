@@ -96,8 +96,8 @@ listed above,
 
 ### Examples of harassment
 
-The term “Harassment” includes “Unacceptable Behavior” described in the [Citizen Code of Conduct](http://citizencodeofconduct.org/).
-Examples from that resource, but not based on events in our community:
+Behavior that will lead to exclusion includes the following points, inspired by the definition of
+“Unacceptable Behavior” in the [Citizen Code of Conduct](http://citizencodeofconduct.org/):
 
 * Violence, threats of violence or violent language directed against another person.
 * Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.
