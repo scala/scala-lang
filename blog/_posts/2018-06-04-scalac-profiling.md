@@ -375,6 +375,7 @@ artifact from coursier. Replace `$BLOOP_CODEBASE_DIRECTORY` by the base
 directory of the cloned bloop repository.
 
 ```json
+  "-Ystatistics",
   "-Ycache-plugin-class-loader:last-modified",
   "-Xplugin:$PATH_TO_PLUGIN_JAR",
   "-P:scalac-profiling:no-profiledb",
