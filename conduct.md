@@ -33,8 +33,7 @@ As a member of the community, you agree to the following:
 
 - Keep unstructured critique to a minimum. We encourage sharing ideas and perspectives, so please ensure that your feedback is constructive and relevant. If you have solid ideas you want to experiment with, make a fork and see how it works.
 - Avoid aggressive and micro-aggressive behavior, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
-- We will exclude you from interaction if you insult, demean or harass anyone. See [examples of unacceptable behavior](#examples-of-unacceptable-behavior) below.
-- We don’t tolerate behavior that excludes people based on their association with social, ethnic, religious, political, or similar groups.
+- We will exclude you from interaction if you insult, demean or harass anyone. See [examples of unacceptable behavior](#examples-of-unacceptable-behavior) below. In particular, we don’t tolerate behavior that excludes people in socially marginalized groups.
 - Private harassment is also unacceptable. No matter who you are, if you feel you have been or are being harassed or made uncomfortable by a community member's behavior, please [contact the moderation team](#contact) immediately.
 - Likewise any spamming, trolling, flaming, baiting or other attention-stealing behavior is not welcome.
 
