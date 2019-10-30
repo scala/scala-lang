@@ -21,7 +21,7 @@ As a member of the community, you agree to the following:
 
 **Encouraged:**
 
-- **Be kind and courteous.** We treat our fellow community members with the respect and dignity all humans deserve. Keep in mind that public communication is received by many people you don’t know, so before sending a message please ask yourself whether someone from a different context would misunderstand it.
+- **Be kind and courteous.** We treat our fellow community members with the empathy, respect and dignity all humans deserve. Keep in mind that public communication is received by many people you don’t know, so before sending a message please ask yourself whether someone from a different context would misunderstand it.
 - **Respect differences of opinion** and remember that every design or implementation choice carries a trade-off and numerous costs. There is seldom a single right answer; we will find the best solutions by engaging in constructive discussion, with everybody bringing their unique viewpoint and experience to the table.
 - **Remember that everyone was new to Scala at some point.** We want to encourage newcomers to join our community and learn the Scala language and ecosystem. Always assume good intentions and a willingness to learn, just as you are willing to evolve your own opinion as you gain new insights.
 
