@@ -11,7 +11,7 @@ redirect_from:
 ## Scala Code of Conduct
 
 We are committed to providing a friendly, safe and welcoming environment.
-We expect the following standards to be observed and upheld by all participants in any community forum (Discuss, GitHub, gitter, etc.).
+We expect the following standards to be observed and upheld by all participants in any community forum, be that online or offline.
 
 ### Our Standards
 
@@ -21,12 +21,13 @@ As a member of the community, you agree to the following:
 
 **Encouraged:**
 
-- **Be kind and courteous.** Keep in mind that all public communication is received by many people you don’t know, so before sending a message please ask yourself whether someone from a different context would misunderstand it. Do not attack other persons, in particular consider that age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, or religion have no bearing on the respect you owe another person.
-- **Respect differences of opinion** and remember that every design or implementation choice carries a trade-off and numerous costs. There is seldom a single right answer, we will find the best solutions by engaging in constructive discussion, with everybody bringing their unique viewpoint and experience to the table.
+- **Be kind and courteous.** We treat our fellow community members with the respect and dignity all humans deserve. Keep in mind that public communication is received by many people you don’t know, so before sending a message please ask yourself whether someone from a different context would misunderstand it.
+- **Respect differences of opinion** and remember that every design or implementation choice carries a trade-off and numerous costs. There is seldom a single right answer; we will find the best solutions by engaging in constructive discussion, with everybody bringing their unique viewpoint and experience to the table.
 - **Remember that everyone was new to Scala at some point.** We want to encourage newcomers to join our community and learn the Scala language and ecosystem. Always assume good intentions and a willingness to learn, just as you are willing to evolve your own opinion as you gain new insights.
 
 **Discouraged:**
 
+- Do not exclude people or reject their contributions based on age, body size, disability, ethnicity, sex characteristics, sexuality, gender, level of experience, education, socio-economic status, nationality, personal appearance, race, or religion.
 - Keep unstructured critique to a minimum. We encourage sharing ideas and perspectives, so please ensure that your feedback is constructive and relevant. If you have solid ideas you want to experiment with, make a fork and see how it works.
 - Avoid aggressive behavior, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
 - We will exclude you from interaction if you insult, demean or harass anyone. Behavior that will lead to exclusion includes the following:
