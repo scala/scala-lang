@@ -10,8 +10,11 @@ redirect_from:
 
 ## Scala Code of Conduct
 
-We are committed to providing a friendly, safe and welcoming environment.
-We expect the following standards to be observed and upheld by all participants in any community forum, be that online or offline.
+We are committed to providing a friendly, safe and welcoming environment for
+all, regardless of age, body size, disability, ethnicity, sex characteristics,
+gender identity and expression, level of experience, education, socio-economic
+status, nationality, personal appearance, race, religion, sexual identity
+and orientation, or other such characteristics.
 
 ### Our Standards
 
@@ -27,9 +30,8 @@ As a member of the community, you agree to the following:
 
 **Discouraged:**
 
-- Do not exclude people or reject their contributions based on age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, sexual identity and orientation, or other such characteristics.
 - Keep unstructured critique to a minimum. We encourage sharing ideas and perspectives, so please ensure that your feedback is constructive and relevant. If you have solid ideas you want to experiment with, make a fork and see how it works.
-- Avoid behaviors that lead to strife and tension, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
+- Avoid aggressive and micro-aggressive behavior, such as unconstructive criticism, providing corrections that do not improve the conversation (sometimes referred to as "well actually"s), repeatedly interrupting or talking over someone else, feigning surprise at someone’s lack of knowledge or awareness about a topic, or subtle prejudice (for example, comments like “That’s so easy my grandmother could do it.”). For more examples of this kind of behavior, [see the Recurse Center's user manual](https://www.recurse.com/manual#sec-environment).
 - We will exclude you from interaction if you insult, demean or harass anyone. Behavior that will lead to exclusion includes the following:
   - Violence, threats of violence or violent language directed against another person.
   - Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.
