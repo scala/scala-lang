@@ -40,7 +40,7 @@ very interesting possibilities to pursue in the future.
 
 OK, but what is Tasty _exactly_? An up-to-date version of the Tasty
 file format is described in file
-[TastyFormat.scala](https://github.com/lampepfl/dotty/blob/master/compiler/src/dotty/tools/dotc/core/tasty/TastyFormat.scala)
+[TastyFormat.scala](https://github.com/lampepfl/dotty/blob/master/tasty/src/dotty/tools/tasty/TastyFormat.scala)
 of the `dotc` compiler for Scala 3.
 
 ## What Does Tasty Have to Do with Macros?
