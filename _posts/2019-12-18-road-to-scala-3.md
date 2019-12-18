@@ -27,7 +27,7 @@ We might eventually still opt to release a Scala 2.14, if during the Scala 2 to 
 
 **Shared ABI**
 
-By also sharing the "ABI" (the "application binary interface", that is, the way traits, lazy vals, etc are represented in bytecode), Scala 3.0 and 2.13 artifacts can co-exist on the classpath and interoperate seamlessly. This enables gradual migration and simplifies testing.
+By also sharing the "ABI" (the "application binary interface", that is, the way traits, lazy vals, etc. are represented in bytecode and the IR of Scala.js/Native), Scala 3.0 and 2.13 artifacts can co-exist on the classpath and interoperate seamlessly. This enables gradual migration and simplifies testing.
 
 Scala 3 is already backwards compatible today: it can consume libraries built with Scala 2.13 (except for libraries that define macros, see the Q&A on macros below). To achieve forwards compatibility, the Scala 3 compiler will provide a mechanism to ensure that the public interface is in the common language subset, so that it can be consumed from Scala 2.13. This means that, as a library author, you can adopt (some of) Scala 3 without requiring your users to upgrade from Scala 2.13.
 
@@ -54,7 +54,7 @@ We're working towards a first release candidate by the end of 2020. We'll have r
 
 ### How is the standard library going to evolve?
 
-Scala 3.0 will use the same standard library as Scala 2.13.x, the same binary jar. This simplifies the migration to Scala 3 by avoiding an entire area of potential difference, and it enables Scala 3.0 and 2.13 artifacts to co-exist on the classpath.
+Scala 3.0 will use the same standard library as Scala 2.13.x, the same binary jar. This simplifies the migration to Scala 3 by avoiding an entire area of potential differences, and it enables Scala 3.0 and 2.13 artifacts to co-exist on the classpath.
 
 Like any Scala 2 release, the Scala 2.13 standard library is, and will remain, backwards and forwards binary compatible. This restricts the changes that can be performed: no public classes or methods can be added or removed. (Backwards compat prevents removals; forward compat prevents additions.)
 
@@ -78,7 +78,7 @@ TASTy will also serve as a basis for new or updated tooling in the future (code 
 
 ### How is binary compatibility handled in Scala 3?
 
-Evolving Scala libraries in a binary compatible fashion is difficult because Scala features have to be encoded in JVM class files. In Java, there's a direct correspondence between source and binary compatibility. TASTy aims to bring the same to Scala, without developing a Scala specific VM, by determining compatibility at the level of (fully-typed) sources, rather than compiled binaries. Currently, the nature of the class file encoding means that backwards compatible changes at the source level, such as adding a field to a trait, actually break binary compatibility.
+Evolving Scala libraries in a binary compatible fashion is difficult because Scala features have to be encoded in JVM class files. In Java, there's a direct correspondence between source and binary compatibility. TASTy aims to bring the same to Scala, without developing a Scala specific VM, by determining compatibility at the level of (fully-typed and elaborated) sources, rather than compiled binaries. Currently, the nature of the class file encoding means that backwards compatible changes at the source level, such as adding a field to a trait, actually break binary compatibility.
 
 It's important to note that TASTy is not a silver bullet: it cannot fix breaking changes to APIs – those can only be resolved by (potentially automated) refactorings.
 
@@ -148,9 +148,9 @@ Details on both options follow.
 
 The biggest thing Scala 3 needs from the community is for everyone to begin porting their code. For established projects, the logical first step would be to start cross-building against the latest  Scala 3 milestone, when they become available (or use a Dotty milestone right now!). We expect this to be a common scenario during the transition period. Or, you can jump straight in and upgrade your code to Scala 3 and try out some of the new features!
 
-We're especially interested in knowing if something blocks you completely, but other other kinds of feedback are welcome as well.
+We're especially interested in knowing if something blocks you completely, but other kinds of feedback are welcome as well.
 
-Every Scala user can participate, but it's especially helpful for maintainers of open-source libraries and tooling to begin moving.  If you are a maintainer, then as an initial step, please consider adding Dotty to your project's cross-build
+Every Scala user can participate, but it's especially helpful for maintainers of open-source libraries and tooling to begin moving.  If you are a maintainer, then as an initial step, please consider adding Dotty to your project's cross-build.
 
 In the simplest cases, you just need to:
 
@@ -160,7 +160,7 @@ In the simplest cases, you just need to:
 
 * perhaps adjust your compiler flags, according to `isDotty.value`, e.g. to pass `-language:Scala2` to Dotty
 
-If you have upstream dependencies, there is an easy way to use the Scala 2.13 binaries. The [dotty-example-project explains how to do this.](https://github.com/lampepfl/dotty-example-project#getting-your-project-to-compile-with-dotty)
+If you have upstream dependencies, there is an easy way to use the Scala 2.13 binaries. The [dotty-example-project explains how to do this.](https://github.com/lampepfl/dotty-example-project#getting-your-project-to-compile-with-dotty).
 
 If you don't have time to do a cross-build yourself, consider asking your users and contributors to volunteer.
 
