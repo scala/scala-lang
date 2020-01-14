@@ -160,7 +160,7 @@ In the simplest cases, you just need to:
 
 * perhaps adjust your compiler flags, according to `isDotty.value`, e.g. to pass `-language:Scala2` to Dotty
 
-If you have upstream dependencies, there is an easy way to use the Scala 2.13 binaries. The [dotty-example-project explains how to do this.](https://github.com/lampepfl/dotty-example-project#getting-your-project-to-compile-with-dotty).
+If you have upstream dependencies, there is an easy way to use the Scala 2.13 binaries. The [dotty-example-project explains how to do this](https://github.com/lampepfl/dotty-example-project#getting-your-project-to-compile-with-dotty).
 
 If you don't have time to do a cross-build yourself, consider asking your users and contributors to volunteer.
 
