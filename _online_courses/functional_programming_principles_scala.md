@@ -2,7 +2,6 @@
 layout: inner-page-no-masthead
 title: Functional Programming Principles in Scala
 coursera-page: https://www.coursera.org/learn/progfun1
-openedx-page: https://courseware.epfl.ch/courses/course-v1:EPFL+progfun1+2018_T1/about
 specialization: fpfun
 specialization-order: 1
 paid: false

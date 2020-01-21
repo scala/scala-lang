@@ -2,7 +2,6 @@
 layout: inner-page-no-masthead
 title: Functional Program Design in Scala
 coursera-page: https://www.coursera.org/learn/progfun2
-openedx-page: https://courseware.epfl.ch/courses/course-v1:EPFL+progfun2+2018_T1/about
 specialization: fpfun
 specialization-order: 2
 paid: false
