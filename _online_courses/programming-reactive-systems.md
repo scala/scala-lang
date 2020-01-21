@@ -1,10 +1,9 @@
 ---
 layout: inner-page-no-masthead
 title: Programming Reactive Systems
-openedx-page: https://www.edx.org/course/programming-reactive-systems
+edx-page: https://www.edx.org/course/programming-reactive-systems
 paid: false
-showDate: true
-date: 2019-02-18
+showDate: false
 ---
 
 This seven-week course teaches “reactive programming” techniques
