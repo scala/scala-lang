@@ -9,11 +9,21 @@
         @include display(flex);
         @include align-items(top);
         @include justify-content(space-around);
-
+        flex-wrap: wrap;
         li {
             text-align: center;
             position: relative;
-
+            height: 94px;
+            &:nth-child(2n +1) {
+              margin: 10px;
+              &:not(:first-child) {
+                padding-left: 10px;
+              }
+              
+              &:not(:last-child) {
+                padding-right: 10px;
+              }
+            }
             &:nth-child(2n) {
                 width: 1px;
                 height: 94px;
