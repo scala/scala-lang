@@ -47,4 +47,4 @@ marked as dormant, since it has only been implemented in Dotty.
 A volunteer is needed to implement it in the main Scala compiler.
 
 For more details, see the
-[minutes](http://docs.scala-lang.org/sips/minutes/sip-minutes.html).
+[minutes](https://docs.scala-lang.org/sips/minutes-list.html).

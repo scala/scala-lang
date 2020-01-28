@@ -23,7 +23,7 @@ The rejected proposals were:
     beautiful, the Committee agreed that would give more problems
     than benefits. Seth Tisue, the appointed reviewer, fully explains
     the Committee's reaction [here](https://github.com/scala/scala.github.com/issues/555).
--   [SIP-16: Self-cleaning macros](http://docs.scala-lang.org/sips/rejected/self-cleaning-macros.html).
+-   [SIP-16: Self-cleaning macros](https://docs.scala-lang.org/sips/self-cleaning-macros.html).
     Originally proposed in 2012. Macros add a whole new dimension to the
     Scala language. Their experimental implementation was adopted by a
     lot of Scala libraries and were immensely useful for the creation
@@ -63,4 +63,4 @@ Did you know that each month, we conduct these SIP meetings
 on-air? You can tune in and ask questions to the SIP committee, and have
 them answered live. Videos of the meetings are then [archived on
 YouTube](https://plus.google.com/+ScalaProcess/posts). Check the minutes of this
-meeting [in the SIP website](http://docs.scala-lang.org/sips/minutes/sip-10th-august-minutes.html).
+meeting [in the SIP website](https://docs.scala-lang.org/sips/minutes/2016-08-16-sip-10th-august-minutes.html).
