@@ -58,6 +58,6 @@ even watch [past SIP meetings](https://plus.google.com/+ScalaProcess) at any
 time!
 
 Check out the full meeting minutes from the July 13 SIP meeting
-[here](http://docs.scala-lang.org/sips/minutes/sip-minutes.html), or watch the
+[here](https://docs.scala-lang.org/sips/minutes/2016-07-15-sip-minutes.html), or watch the
 video of the meeting
 [here](https://plus.google.com/events/c11vhomo86lkejevfkrm6uls900).
