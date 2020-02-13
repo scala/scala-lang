@@ -69,7 +69,7 @@ github: Object
 		title: Text
 ...
 ```
-Each project has a `github` field of type `Object` containing Github info like a project's readme and it's number of commits. The `github` field has a `beginnerIssues` field which is a list of a project's beginner-friendly issues. The `beginnerIssues` field is of type [Nested](https://www.elastic.co/guide/en/elasticsearch/reference/current/nested.html) which is a special version of the `Object` type used for lists of `Object`s. Each issue in `beginnerIssues` is of type `Object` and it has a `number` field and a `title` field.
+Each project has a `github` field of type `Object` containing Github info like a project's readme and it's number of commits. The `github` field has a `beginnerIssues` field which is a list of a project's beginner-friendly issues. The `beginnerIssues` field is of type Nested, which is a special version of the `Object` type used for lists of `Object`s. Each issue in `beginnerIssues` is of type `Object` and it has a `number` field and a `title` field.
 
 When Scaladex generates a search query to match the input search term ("docs" from the example above) to an elasticsearch query, all you have to do to match the search term against a project's beginner-friendly issues is add a [Nested Query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-nested-query.html) against the `github.beginnerIssues` field and specify you want to match the search term against the issue's `title` field. So this is the Nested Query I added to [DataRepository.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-c5de88d14364dfaadbdecdc462d6c7d1R254) which generates the elasticsearch query:
 ```
