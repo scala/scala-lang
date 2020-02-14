@@ -29,7 +29,8 @@ builds still exist, but they require only light maintenance.)
 
 The 2.13 build currently has **209 repos** and a total of **3.4 million
 lines** of code.  (A year ago, on 2.12, we had 185 repos and 3.2
-million lines.  On 2.13, we had only 79 repos.)
+million lines.  On 2.13, we had only 79 repos.)  It takes about
+nine hours to run.
 
 Repos added in the last year include: advxml, akka-http-webgoat,
 akka-management, akka-streams-tcp-chat, alpakka-kafka, avro4s,
@@ -64,9 +65,10 @@ cross-compile against 2.11, 2.12, and 2.13.  (Most maintainers have
 already dropped 2.10 from their cross-builds.  Some are dropping 2.11,
 now, too.)
 
-Not many new bugs were reported in 2.13, so without any urgent fixes
-to ship, we've been able to do followup releases on a fairly leisurely
-schedule: 2.13.1 after three months, and 2.13.2 ([coming
+Not many new bugs were reported in Scala 2.13 itself, so without
+urgent fixes to ship, we've been able to do followup releases on a
+fairly leisurely schedule: 2.13.1 after three months, and 2.13.2
+([coming
 soon](https://contributors.scala-lang.org/t/coming-soon-scala-2-12-11-scala-2-13-2/4003/4))
 after a further six months.
 
@@ -80,7 +82,7 @@ from ever being released.
 The 2.13 build is now 100% green on JDK 11.  That's because:
 
 * Support for JDK 11 in Scala and sbt has improved.
-* Across the Scala ecosystem, maintainers have increasingly
+* Across the Scala and Java ecosystems, maintainers have increasingly
   added JDK 11 to their own CI matrices.
 * We report JDK 11 related issues to upstream maintainers.
 
