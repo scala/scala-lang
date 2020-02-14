@@ -5,7 +5,7 @@ by: Seth Tisue
 title: "Scala 2 community build achieves completion"
 ---
 
-The Scala community build is a large collection of open-source Scala
+The Scala 2 community build is a large collection of open-source Scala
 code that we build and run every day in order to validate changes to
 the Scala compiler and standard library.
 
@@ -18,14 +18,24 @@ you](https://www.scala-lang.org/2019/01/18/community-build.html) on
 improvements made up through January 2019.  The post you are reading
 highlights the progress the community build has made since then.
 
-In short, we believe the Scala 2 community build is now essentially
-complete.  Still, we will continue to run and maintain it throughout
+In short, we believe **the Scala 2 community build is now essentially
+complete**. Still, we will continue to run and maintain it throughout
 Scala 2's lifetime.
+
+We describe the build as complete because:
+
+* It has successfully supported the release of Scala 2.13
+  and the migration of the ecosystem to 2.13.
+* It is large and diverse enough to support future 2.13.x releases.
+* It is now entirely green on JDK 8 and 11 and nearly green on JDK 14.
+
+Details below.
 
 ## Overall growth
 
 The 2.13 community build is now the main one.  (The 2.11 and 2.12
-builds still exist, but they require only light maintenance.)
+builds still exist, but they have required only light maintenance
+for some time now.)
 
 The 2.13 build currently has **209 repos** and a total of **3.4 million
 lines** of code.  (A year ago, on 2.12, we had 185 repos and 3.2
@@ -87,8 +97,8 @@ The 2.13 build is now 100% green on JDK 11.  That's because:
 * We report JDK 11 related issues to upstream maintainers.
 
 We also now run the build on an early-access build of JDK 14.  Only
-two repos currently fail, for minor reasons not having to do with
-regressions in Scala.
+two repos currently fail (for minor reasons not having to do with
+regressions in Scala).
 
 All variants of the community build now run on AdoptOpenJDK.
 This seems to be an increasingly standard choice, within Lightbend
