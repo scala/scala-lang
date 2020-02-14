@@ -69,7 +69,7 @@ Not many new bugs were reported in Scala 2.13 itself, so without
 urgent fixes to ship, we've been able to do followup releases on a
 fairly leisurely schedule: 2.13.1 after three months, and 2.13.2
 ([coming
-soon](https://contributors.scala-lang.org/t/coming-soon-scala-2-12-11-scala-2-13-2/4003/4))
+soon](https://contributors.scala-lang.org/t/coming-soon-scala-2-12-11-scala-2-13-2/4003))
 after a further six months.
 
 We take the relative scarcity of new defects as evidence that the
