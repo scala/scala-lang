@@ -37,10 +37,12 @@ The 2.13 community build is now the main one.  (The 2.11 and 2.12
 builds still exist, but they have required only light maintenance
 for some time now.)
 
-The 2.13 build currently has **209 repos** and a total of **3.4 million
-lines** of code.  (A year ago, on 2.12, we had 185 repos and 3.2
-million lines.  On 2.13, we had only 79 repos.)  It takes about
-nine hours to run.
+The 2.13 build currently has **209 repos** and a total of **3.4
+million lines** of code.  (A year ago the main build was the 2.12 one,
+with 185 repos and 3.2 million lines.  2.13 was still catching up, at
+only 79 repos.)
+
+It takes about nine hours to run.
 
 Repos added in the last year include: advxml, akka-http-webgoat,
 akka-management, akka-streams-tcp-chat, alpakka-kafka, avro4s,
