@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Seth Tisue
-title: "Scala 2 community build achieves completion"
+title: "Scala 2 community build reaches goals"
 ---
 
 The Scala 2 community build is a large collection of open-source Scala
