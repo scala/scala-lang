@@ -86,12 +86,12 @@ after a further six months.
 
 We take the relative scarcity of new defects as evidence that the
 community build is providing a high level of quality assurance.  The
-build doesn't catch everything, but it has prevented many regressions
+build can't catch everything, but it has prevented many regressions
 from ever being released.
 
 ## JDK 11 and 14
 
-The 2.13 build is now 100% green on JDK 11.  That's because:
+The 2.13 build is now **100% green on JDK 11**.  That's because:
 
 * Support for JDK 11 in Scala and sbt has improved.
 * Across the Scala and Java ecosystems, maintainers have increasingly
