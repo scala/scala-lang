@@ -71,10 +71,6 @@ scalaIDEs:
     icon: /resources/img/frontpage/atom.png
     metals: true
     url: "https://scalameta.org/metals/docs/editors/atom.html"
-  - name: Scala IDE For Eclipse
-    icon: /resources/img/frontpage/scala_ide.png
-    metals: false
-    url: "http://scala-ide.org/"
 # Scala ecosystem
 ecosystemTitle: "Scala ecosystem"
 ecosystemDescription: "The Scala Library Index (or Scaladex) is a representation of a map of all published Scala libraries. With Scaladex, a developer can now query more than 175,000 releases of Scala libraries. Scaladex is officially supported by Scala Center."
