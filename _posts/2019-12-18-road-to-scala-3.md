@@ -3,6 +3,7 @@ layout: blog-detail
 post-type: blog
 by: Lukas Rytz, Adriaan Moors, Martin Odersky
 title: "Scala 2 Roadmap Update: the Road to Scala 3"
+isHighlight: true
 ---
 
 Together with the Scala 3 team at EPFL (aka the Dotty team), led by Martin Odersky, we have decided that, rather than developing Scala 2.14, our efforts should go to Scala 3 instead.
