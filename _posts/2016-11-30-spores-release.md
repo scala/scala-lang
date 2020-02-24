@@ -3,7 +3,6 @@
 category: blog
 by: Jorge Vicente Cantero
 title: "Releasing spores 0.4.3"
-isHighlight: true
 ---
 
 Today we at the Scala Center are happy to announce a new release of spores, now
