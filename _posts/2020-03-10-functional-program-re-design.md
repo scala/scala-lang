@@ -8,6 +8,10 @@ title: "Functional Program (Re)Design"
 We are excited to announce the release of a new version of the online course
 [Functional Program Design].
 
+As a reminder, the Scala Center runs freely accessible [online courses] that have
+been completed by more than 5700 learners in 2019. Optionally, a paid version
+delivers a certificate of completion.
+
 ## Why a New Version?
 
 The previous version of the course was made of parts of older courses mashed
@@ -66,6 +70,7 @@ Our next goals are to update the courses to Scala 3 and to publish a new self-co
 course targeting beginners and aiming at delivering practical skills (how to model a
 business domain, how to process and validate data, how to use a build tool, etc.).
 
+[online courses]: https://docs.scala-lang.org/learn.html
 [Functional Programming Principles in Scala]: https://www.coursera.org/learn/progfun1
 [Functional Program Design]: https://www.coursera.org/learn/progfun2
 [Parallel Programming]: https://www.coursera.org/learn/parprog1
