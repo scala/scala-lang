@@ -1,8 +1,10 @@
 # scala-lang.org
 
-This repository contains the source for [scala-lang.org](http://scala-lang.org).
+This repository contains the source for the [scala-lang.org](https://scala-lang.org) web site.
 
-It does not contain the source for the [docs.scala-lang.org](http://docs.scala-lang.org) subdomain. You can visit the [docs.scala-lang repository](https://github.com/scala/docs.scala-lang) if you are interested in contributing to the Scala documentation site.
+It does not contain the source for the [docs.scala-lang.org](https://docs.scala-lang.org) subdomain. You can visit the [docs.scala-lang repository](https://github.com/scala/docs.scala-lang) if you are interested in contributing to the Scala documentation site.
+
+The source for the Scala compiler and standard library are at https://github.com/scala/scala. Bug reports are at https://github.com/scala/bug.
 
 ## Dependencies
 
