@@ -12,7 +12,7 @@ script:
 - find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \)
 - find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \) | ( ! read )
 - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then bundle exec htmlproofer ./_site/ --disable-external --only-4xx --empty-alt-ignore --allow-hash-href ; fi
-- if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then bundle exec htmlproofer ./_site/ --external_only --only-4xx --http-status-ignore 401,429 --empty-alt-ignore --allow-hash-href --url-ignore "/trends.google.com/,/pgp.mit.edu/,/www.oracle.com/" ; fi
+- if [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then bundle exec htmlproofer ./_site/ --external_only --only-4xx --http-status-ignore 429 --empty-alt-ignore --allow-hash-href --url-ignore "/trends.google.com/,/pgp.mit.edu/,/www.oracle.com/" ; fi
 
 notifications:
   email:
