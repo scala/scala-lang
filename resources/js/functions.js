@@ -260,11 +260,7 @@ function getOS() {
 $(document).ready(function() {
     if ($(".main-download").length) {
         var os = getOS();
-        var intelliJlink = $("#intellij-" + os).text();
-        var sbtLink = $("#sbt-" + os).text();
         var stepOneContent = $("#stepOne-" + os).html()
-        $("#download-intellij-link").attr("href", intelliJlink);
-        $("#download-sbt-link").attr("href", sbtLink);
         $("#download-step-one").html(stepOneContent);
     }
 });

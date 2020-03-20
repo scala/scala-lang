@@ -16,23 +16,24 @@ layout: inner-page-parent
         </ul>
       </div>
       <div class="main-download">
-        <h2>The most popular way to get Scala is either using Scala through sbt, the Scala build tool, or to use Scala through an IDE.</h2>
+        <h2>The easiest way to install Scala is through coursier.</h2>
         <div class="install-steps">
           <div class="step">
             <img src="/resources/img/download/arrow-asset.png" alt="">
             <div class="number-step">1</div>
             <div class="text-step">
-              <h3>First, make sure you have the Java 8 JDK (or Java 11 JDK) installed.</h3>
-              <p>To check, open the terminal and type:</p>
-              <p><code>java -version</code><span>(Make sure you have version 1.8 or 11.)</span></p>
-              <p><i>(If you don't have it installed, download Java from <a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html">Oracle Java 8</a>, <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Oracle Java 11</a>, or <a href="https://adoptopenjdk.net/">AdoptOpenJDK 8/11</a>. Refer <a href="https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html">JDK Compatibility</a> for Scala/Java compatiblity detail.</i></p>
+              <h3>First, install Java, Scala, and all related command-line tools.</h3>
+              <div id="download-step-one">
+              <p>Download <a href="https://get-coursier.io/docs/cli-overview.html#install-native-launcher">the native launcher of coursier</a> then install everything with:</p>
+              <p><code>$ ./cs setup</code><span> (Adapt to your operating system)</span></p>
+              </div>
+              <p>(See <a href="https://get-coursier.io/docs/cli-overview.html#install-native-launcher">the instructions for other operating systems</a>.)
             </div>
           </div>
           <div class="step">
             <div class="number-step">2</div>
             <div class="text-step">
-              <h3>Then, install Scala:</h3>
-              <p>...either by installing an IDE such as IntelliJ, or sbt, Scala's build tool.</p>
+              <h3>Then, install an IDE, or get started with sbt</h3>
             </div>
           </div>
           <div class="download-options">
@@ -42,12 +43,14 @@ layout: inner-page-parent
                 <img src="/resources/img/download/arrow-left.png" alt="">
                 <p>Best if you prefer a full-featured IDE (recommended for beginners)</p>
               </div>
-              <a href="" class="btn-download" id="download-intellij-link">
+              <a href="https://www.jetbrains.com/idea/download/" class="btn-download">
                 <i class="fa fa-download"></i>
-                <span>Download intellij</span>
+                <span>Download IntelliJ</span>
               </a>
               <ul>
-                {% include tutorial-list.html column=1 %}
+                <li><a href="/documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html"><i class="fa fa-file-text-o"></i>Getting Started with Scala in IntelliJ</a></li>
+                <li><a href="/documentation/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html"><i class="fa fa-file-text-o"></i>Building a Scala Project with IntelliJ and sbt</a></li>
+                <li><a href="/documentation/getting-started-intellij-track/testing-scala-in-intellij-with-scalatest.html"><i class="fa fa-file-text-o"></i>Testing Scala in IntelliJ with ScalaTest</a></li>
               </ul>
             </div>
             <div class="download-sbt">
@@ -55,21 +58,21 @@ layout: inner-page-parent
                 <img src="/resources/img/download/arrow-right.png" alt="">
                 <p>Best if you are familiar with the command line</p>
               </div>
-              <a href="" class="btn-download" id="download-sbt-link">
+              <a href="/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html" class="btn-download" id="download-sbt-link">
                 <i class="fa fa-download"></i>
-                <span>Download Sbt</span>
+                <span>Get started with sbt</span>
               </a>
               <ul>
-                {% include tutorial-list.html column=0 %}
+                <li><a href="/documentation/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html"><i class="fa fa-file-text-o"></i>Getting Started with Scala and sbt on the Command Line</a></li>
+                <li><a href="/documentation/getting-started-sbt-track/testing-scala-with-sbt-on-the-command-line.html"><i class="fa fa-file-text-o"></i>Testing Scala with sbt and ScalaTest on the Command Line</a></li>
               </ul>
             </div>
           </div>
 
           <p class="bottom-lead">
-            Compared to other programming languages, installing Scala is a bit unusual. Scala is unusual because it is usually installed for each of your Scala projects rather than being installed system-wide. Both of the above options manage (via sbt) a specific Scala version per Scala project you create.
-            <br><br>
-            But it's also possible to "install" Scala in numerous other ways; e.g., grab Scala binaries and use Scala from the command line or use Scala in your browser!
-            <br><br>
+            Compared to other programming languages, installing Scala is a bit unusual.
+            In addition to the system-wide installation mentioned above, build tools such as sbt will automatically manage a specific Scala version per Scala project you create.
+            This makes sure that there are no version conflicts between different Scala projects on your computer.
           </p>
 
           <!-- <p class="bottom-lead"><h2>Other</h2></p> -->
@@ -108,11 +111,22 @@ layout: inner-page-parent
     </div>
   </div>
 
-  {% for step in site.data.downloads.stepOne %}
-  <div style="display:none" id="stepOne-{{step.os}}">{{step.text}}</div>
-  {% endfor %} {% for intellijUrl in site.data.downloads.intellijUrls %}
-  <div style="display:none" id="intellij-{{intellijUrl.os}}">{{intellijUrl.url}}</div>
-  {% endfor %} {% for sbtUrl in site.data.downloads.sbtUrls %}
-  <div style="display:none" id="sbt-{{sbtUrl.os}}">{{sbtUrl.url}}</div>
-  {% endfor %}
+  <!-- Hidden elements whose content are used to provide OS-specific download instructions.
+    -- This is handled in `resources/js/functions.js`.
+    -->
+
+  <div style="display:none" id="stepOne-linux">
+    <p><code>$ curl -Lo cs https://git.io/coursier-cli-linux && chmod +x cs && ./cs setup</code></p>
+  </div>
+  <div style="display:none" id="stepOne-unix">
+    <p>Follow <a href="https://get-coursier.io/docs/cli-overview.html#install-native-launcher" target="_blank">the instructions to install the <code>cs</code> launcher</a> then run:</p>
+    <p><code>$ ./cs setup</code></p>
+  </div>
+  <div style="display:none" id="stepOne-macos">
+    <p><code>$ curl -Lo cs https://git.io/coursier-cli-macos && chmod +x cs && (xattr -d com.apple.quarantine cs || true) && ./cs setup</code></p>
+    <p><span>Alternatively you can use Homebrew: </span><code>$ brew install coursier/formulas/coursier && cs setup</code></p>
+  </div>
+  <div style="display:none" id="stepOne-windows">
+    <p>Download and execute <a href="https://git.io/coursier-cli-windows-exe">the Scala installer for Windows</a> based on coursier</p>
+  </div>
 </section>
