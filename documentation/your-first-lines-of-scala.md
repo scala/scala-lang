@@ -87,12 +87,13 @@ We may also run our example as a shell script or batch command (see the examples
 
 The [bash](http://www.gnu.org/software/bash/) shell script `script.sh` containing the following Scala code (and shell preamble):
 
-    #!/usr/bin/env scala
+    #!/bin/sh
+    exec scala "$0" "$@"
+    !#
 
     object HelloWorld extends App {
       println("Hello, world!")
     }
-    HelloWorld.main(args)
 
 can be run directly from the command shell:
 
