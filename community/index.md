@@ -102,6 +102,15 @@ Group organizers can talk to each other on [Scala User Group Organizers](https:/
 
 See our [events page](/events/).
 
+## ScalaBridge
+
+Volunteers organizing free introductory Scala programming workshops
+for underrepresented groups, to improve diversity in the Scala community.
+
+* [ScalaBridge site](https://scalabridge.org)
+* [How to organize](https://scalabridge.org/organizers): advice and help
+  on how to bring ScalaBridge to your city
+
 ## Stack Overflow
 
 Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/tagged/scala), a very popular programmer Q&A site.
