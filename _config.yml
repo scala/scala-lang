@@ -44,8 +44,6 @@ collections:
     output: false
   contribute_resources:
     output: false
-  books:
-    output: false
   downloads:
     output: true
   posts:
