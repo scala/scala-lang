@@ -145,6 +145,7 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 * [Scala Cookbook](http://www.scalacookbook.com/)
 * [Interactive Tour](http://scalatutorials.com/tour)
 * [Functional programming course/exercises](https://github.com/dehun/learn-fp)
+* [Scala Online Courses](https://classpert.com/scala-programming)
 
 ## Community Libraries and Tools
 
