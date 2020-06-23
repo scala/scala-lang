@@ -558,8 +558,7 @@ Some flags used in the examples of this post:
 [JITWatch](https://github.com/AdoptOpenJDK/jitwatch) is a GUI tool that helps understanding what the
 JIT is doing (I haven't tried it yet).
 
-A
-[thread](http://mail.openjdk.java.net/pipermail/hotspot-compiler-dev/2015-April/thread.html#17649)
+A thread (dead link: hxxp://mail.openjdk.java.net/pipermail/hotspot-compiler-dev/2015-April/thread.html#17649)
 on the hotspot-compiler-dev mailing list on why CHA is disabled for interfaces. Seems to discuss
 the situation before default methods were a common thing.
 
