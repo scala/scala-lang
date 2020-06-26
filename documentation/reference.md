@@ -11,7 +11,7 @@ includeTOC: true
 * Scala 2.13.3
   * [Library API](http://www.scala-lang.org/api/2.13.3/)
   * [Compiler API](http://www.scala-lang.org/api/2.13.3/scala-compiler/)
-  * [Reflection API](https://www.scala-lang.org/api/2.13.3/scala-reflect/scala/reflect/index.html)
+  * [Reflection API](https://www.scala-lang.org/api/2.13.3/scala-reflect/scala/reflect/api/)
 * Scala 2.12.11
   * [Library API](http://www.scala-lang.org/api/2.12.11/)
   * [Compiler API](http://www.scala-lang.org/api/2.12.11/scala-compiler/)
@@ -45,7 +45,6 @@ includeTOC: true
   * [Compiler API](http://www.scala-lang.org/files/archive/nightly/2.11.x/api/2.11.x/scala-compiler/)
 
 ## Previous releases
-
 * Scala 2.13.2
   * [Library API](http://www.scala-lang.org/api/2.13.2/)
   * [Compiler API](http://www.scala-lang.org/api/2.13.2/scala-compiler/)
@@ -143,7 +142,7 @@ includeTOC: true
     * [Parser Combinators API](http://www.scala-lang.org/api/2.11.11/scala-parser-combinators/)
     * [Actors API](http://www.scala-lang.org/api/2.11.11/scala-actors/#scala.actors.package) (deprecated)
     * [Swing API](http://www.scala-lang.org/api/2.11.11/scala-swing/#scala.swing.package)
-    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.11/scala-continuations-library/#scala.util.continuations.package)
+    * [Continuations API](http://www.scala-lang.org/files/archive/api/2.11.11/scala-continuations-library/#scala.util.continuations.package)    
 * Scala 2.11.8
   * [Standard Library API](http://www.scala-lang.org/api/2.11.8/)
   * [Compiler API](http://www.scala-lang.org/api/2.11.8/scala-compiler/)
@@ -253,7 +252,6 @@ includeTOC: true
 * [Scala 2.5.0.final](http://www.scala-lang.org/api/2.5.0/)
 
 ## Language Specification
-
 The language specification is a formal description of the syntax and semantics of the language.
 * [Scala 2.13 Language Specification](https://www.scala-lang.org/files/archive/spec/2.13/)
 * [Scala 2.12 Language Specification](https://www.scala-lang.org/files/archive/spec/2.12/)
