@@ -15,7 +15,9 @@ For example, on Linux, all we now need is:
 $ curl -Lo cs https://git.io/coursier-cli-linux && chmod +x cs && ./cs setup
 ```
 
-which will install all the following software, if not yet installed:
+You can find the instructions for Mac OS and Windows in the [Coursier documentation](https://get-coursier.io/docs/cli-installation).
+
+The command shown above will install all the following software, if not yet installed:
 
 * a JDK
 * the build tools [sbt](https://www.scala-sbt.org/) and [mill](https://www.lihaoyi.com/mill/)
