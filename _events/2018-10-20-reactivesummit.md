@@ -6,5 +6,5 @@ location: Montreal, QC, Canada
 description: Microservices. Fast Data Pipelines. Distributed Systems
 start: 20 October 2018
 end: 24 October 2018
-link-out: https://www.reactivesummit.org/
+link-out: https://www.reactivesummit.org/2018/schedule
 ---
