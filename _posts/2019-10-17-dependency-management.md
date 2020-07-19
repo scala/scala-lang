@@ -152,7 +152,7 @@ The readme explains how to use it, but the basics are simple.
 First, add the following line in `project/plugins.sbt`:
 
 ```scala
-addSbtPlugin("ch.epfl.scala" % "sbt-missinglink" % "0.1.0")
+addSbtPlugin("ch.epfl.scala" % "sbt-missinglink" % "0.3.1")
 ```
 
 then simply run the following task for the project you want to test:
