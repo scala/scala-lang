@@ -9,10 +9,10 @@ title: Minutes from Sept SIP/SLIP Meeting
 
 #### Next Committee Meeting:
 
-Monday Oct 12th, 4.30pm GMT. [Google Hangout Event](https://plus.google.com/u/5/events/ci1hc0tn9jf0v45a9qdd7a520j8)
+Monday Oct 12th, 4.30pm GMT. Google Hangout Event (dead link: httpx://plus.google.com/u/5/events/ci1hc0tn9jf0v45a9qdd7a520j8)
 
 #### Video of Sept Meeting
-[Video of last meeting](https://plus.google.com/u/5/events/cvv4in7eq5tf4rus2ve0jodvo5c)
+Video of last meeting (dead link: httpx://plus.google.com/u/5/events/cvv4in7eq5tf4rus2ve0jodvo5c)
 
 ## Opening Matters
 

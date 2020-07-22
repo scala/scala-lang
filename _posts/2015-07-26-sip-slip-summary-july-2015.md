@@ -9,7 +9,7 @@ title: SIP/SLIP Summary, July 27th 2015
 
 ### Next Committee Meeting:
 
-Thursday August 13th, 4.30pm GMT. [Google Hangout Event](https://plus.google.com/u/1/events/cfh933nkhhq0pe7h23c9v4csk6o)
+Thursday August 13th, 4.30pm GMT. Google Hangout Event (dead link: httpx://plus.google.com/u/1/events/cfh933nkhhq0pe7h23c9v4csk6o)
 
 [Video of last meeting](https://www.youtube.com/watch?v=ndkT5qHZHI0)
 

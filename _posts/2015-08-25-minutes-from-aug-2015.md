@@ -8,7 +8,7 @@ title: Minutes from Aug SIP/SLIP Meeting
 ## SIP/SLIP Meeting, Aug 20th 2015
 
 ### Video of Aug Meeting
-[Video of Aug meeting](https://plus.google.com/u/5/events/cfh933nkhhq0pe7h23c9v4csk6o)
+Video of Aug meeting (dead link: httpx://plus.google.com/u/5/events/cfh933nkhhq0pe7h23c9v4csk6o)
 
 ## Opening Matters
 This is a short post, it has been superseded by the September minutes but is included here for completeness. What follows is just a brief outline of what was covered, for the full record, please see the video above.
