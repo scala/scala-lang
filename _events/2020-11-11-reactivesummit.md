@@ -2,9 +2,9 @@
 category: event
 title: Reactive Summit
 logo: /resources/img/reactivesummit.png
-location: Montreal, QC, Canada
+location: Virtual
 description: Microservices. Fast Data Pipelines. Distributed Systems
-start: 20 October 2018
-end: 24 October 2018
-link-out: https://www.reactivesummit.org/2018/schedule
+start: 11 November 2020
+end: 11 November 2020
+link-out: https://www.reactivesummit.org/
 ---
