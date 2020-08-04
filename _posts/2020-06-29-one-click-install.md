@@ -15,7 +15,7 @@ For example, on Linux, all we now need is:
 $ curl -Lo cs https://git.io/coursier-cli-linux && chmod +x cs && ./cs setup
 ```
 
-You can find the instructions for Mac OS and Windows in the [Coursier documentation](https://get-coursier.io/docs/cli-installation).
+You can find the instructions for macOS and Windows in the [Coursier documentation](https://get-coursier.io/docs/cli-installation).
 
 The command shown above will install all the following software, if not yet installed:
 
