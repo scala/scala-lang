@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'kramdown'
-gem 'rack-jekyll'
 gem 'rake'
 gem 'jekyll-redirect-from'
 gem 'html-proofer'
