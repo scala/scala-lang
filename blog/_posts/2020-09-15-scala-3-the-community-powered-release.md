@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: The Scala Center team
-title: The Scala Center stands with Black Lives Matter
+title: Scala 3 - A community powered release
 ---
 ## Scala 3 - A community powered release
 
@@ -57,5 +57,4 @@ We are facing a global uncertainty in all areas of our life, so setting expectat
 
 
 You can already take a look at the [Migration Guide](https://scalacenter.github.io/scala-3-migration-guide/) and maybe try it out or add/share your experience. If you are interested in any of the projects that appear on the [Contributors forum](https://contributors.scala-lang.org/c/scala3-release/26), contact the project lead and ask him/her/them how best to use your time/expertise.
-
 
