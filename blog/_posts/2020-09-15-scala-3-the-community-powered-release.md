@@ -17,6 +17,7 @@ Rough categories within those 52 projects are:
 * Tools
 * Migration 
 * Performance
+* Documentation
 
 
 Project roadmaps and updates are published on [Contributors discourse under the “Scala 3 release projects”](https://contributors.scala-lang.org/c/scala3-release/26); more are being published every so often. Please join the forum to share your thoughts, ideas, and learn more about each project.
