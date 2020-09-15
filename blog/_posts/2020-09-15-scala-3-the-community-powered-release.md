@@ -52,7 +52,7 @@ Scala Center and LAMP team members <br>
 
 ### What to expect?
 
-We are facing a global uncertainty in all areas of our life, so setting expectations would not be resonable, to say the least. We are, however, determined to have a Scala 3 release candidate before 2020 ends. Each contribution, good word, cheer is welcome now more than ever - and we thank you in advance for bearing with us! 
+We are facing a global uncertainty in all areas of our life, so setting expectations would not be reasonable, to say the least. We are, however, determined to have a Scala 3 release candidate before 2020 ends. Each contribution, good word, cheer is welcome now more than ever - and we thank you in advance for bearing with us! 
 
 ### What can I do today?
 
