@@ -72,7 +72,7 @@ Here's how we recommend handling this in sbt 0.13. For the full build, see [[@gk
     }
 
 ### Important changes
-For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://scala-ci.typesafe.com/job/scala-2.11.x-integrate-community-build/) a sizeable number of open source projects in the Scala community build.
+For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://scala-ci.typesafe.com/job/scala-2.11.x-jdk8-integrate-community-build/) a sizeable number of open source projects in the Scala community build.
 
 Changes to the reflection API may cause breakages, but these breakages can be easily fixed in a manner that is source-compatible with Scala 2.10.x. Follow our reflection/macro changelog for [detailed instructions](http://docs.scala-lang.org/overviews/macros/changelog211.html#how_to_make_your_210x_macros_work_in_2110).
 

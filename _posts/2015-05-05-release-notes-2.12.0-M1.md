@@ -50,7 +50,7 @@ With the release of 2.12.0, backports to 2.11 will be dialed back.
 <!-- Notes from 2.11.0
 #### Important Changes
 
-For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://scala-ci.typesafe.com/job/scala-2.11.x-integrate-community-build/) a [sizeable number of open source projects](https://github.com/scala/community-build/blob/2.11.x/common.conf#L20).
+For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://scala-ci.typesafe.com/job/scala-2.11.x-jdk8-integrate-community-build/) a [sizeable number of open source projects](https://github.com/scala/community-build/blob/2.11.x/common.conf#L20).
 
 Changes to the reflection API may cause breakages...
 
