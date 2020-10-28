@@ -12,14 +12,14 @@ of new syntaxes to replace the implicit mechanism used in previous Scala version
 
 The motivation behind the new syntax is that the same `implicit` keyword was
 used for different purposes and patterns and thus it became a way to express *how* to implement
-patterns. This means that when encountering this dreaded incantation, users need to decipher what
+patterns. This means that when encountering this ambiguous incantation, users need to decipher what
 the intent of the developer was: is this a conversion ? Does this avoid parameter repetition ?
 Is this an extension of a type ? Is this a typeclass ? How do I import this ?
 
 Seeing how pervasive implicits became in libraries and projects, Scala 3 aims at reducing confusion and cognitive load by using new keywords that convey the intent of the developer.
 
-This post briefly introduces the new syntaxes available to Scala 3 programmers by analysing the
-most common use cases and patterns.
+This post briefly introduces the new syntaxes and semantics available to Scala 3 programmers by analysing the
+most common use cases and patterns: extension methods, implicit parameters, implicit conversions and typeclasses.
 
 ## Compatibility disclaimer
 
