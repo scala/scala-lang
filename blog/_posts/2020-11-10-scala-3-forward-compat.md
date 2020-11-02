@@ -9,11 +9,9 @@ Scala 3 is coming, with a release candidate slated for the end of 2020.
 With that knowledge comes the inevitable question:
 should I migrate, and what is the potential cost?
 
-With this blog we would like to outline some scenarios for maintainers of projects who
-want to move to Scala 3, and how these
-scenarios are made simpler by the ability to read Scala 3 compiled dependencies
-from Scala 2.13. There is also a [troubleshooting](#troubleshooting) section
-in case you encounter issues following the steps described in the scenarios.
+For maintainers of projects, the migration process may become easier
+with the release of Scala 2.13.4, which comes with a new feature:
+reading and compiling against Scala 3 dependencies.
 
 >As a quick aside, If you would like to know how it is possible to mix
 >dependencies between the two compilers, watch the talk
@@ -24,17 +22,42 @@ in case you encounter issues following the steps described in the scenarios.
 >which terms, types and implicits are defined in a given dependency,
 >and what code needs to be generated to use them correctly.
 
+## Overview
+
+With a guided tutorial, we will show you how to approach the following scenarios:
+  1. You have an application consisting of many subprojects that may depend on
+     each other, built with Scala 2.13, and would like to transition each one
+     independently to Scala 3.0
+  2. You have an application, built with Scala 2.13, and want to use some
+     new features of a library that has migrated to Scala 3.0
+
+We will show you by example how Scala 2.13.4 makes these scenarios more simple:
+We will take a small multi-module project of two sub-projects, a `shared` module,
+containing simple data structures, and an `app` module that depends on `shared`.
+We will in turn migrate each sub-project to Scala 3, and show that it does not
+matter in which order you migrate the projects, as `app` will continue
+to build and run.
+
+A reader applying the steps in the tutorial to their own project should note that not
+all features of Scala 3 are forward compatibile with Scala 2, such as `inline` methods.
+Consequently, we recommend that the user limits their usage of Scala 3 exclusive
+features when migrating incrementally. More information is provided in the
+[forward compatibility](#forward-compatibility) section.
+
+In addition, we provide a [troubleshooting](#troubleshooting) section for the reader,
+which aims to suggest steps to take when applying this guide to their own projects
+and a problem occurs.
+
 ## Scenarios
 
-1. You have an application consisting of many subprojects that may depend on
-each other, built with Scala 2.13, and would like to transition each one
-independently to Scala 3.0
-2. You have an application, built with Scala 2.13, and want to use some
-new features of a library that has migrated to Scala 3.0
+The [overview](#overview) section describes two scenarios that we will guide you through
+in this blog:
+  - Migrating multi-module projects incrementally from Scala 2 to Scala 3
+  - Taking advantage of new features in a library that is published for Scala 3.
 
-Let's take a look at each scenario in turn:
+Let's look at each scenario in turn:
 
-## Migrating a multi module project
+### 1. Migrate a Multi-Module Project in Any Order
 
 If you want to migrate a multi module project to Scala 3,
 it does not matter in which order you migrate the modules, they will be
@@ -47,19 +70,15 @@ which has some common domain model data structures, and `app`,
 which uses those data structures.
 
 For this project, we will pick
-[sbt 1.4.0](https://github.com/sbt/sbt/releases/tag/v1.4.0),
+[sbt 1.4.2](https://github.com/sbt/sbt/releases/tag/v1.4.2),
 this allows you to mix projects of different Scala versions with very
 little extra effort (thanks to Eugene Yokota).
-
-This tutorial also assumes the release of Scala `2.13.4`, but if you would
-like to follow along today, you can [modify the build file](#early-access)
-to use an early access snapshot release.
 
 To begin, our project looks like the following:
 
 ```scala
 // project/build.properties
-sbt.version=1.4.0
+sbt.version=1.4.2
 ```
 
 ```scala
@@ -106,8 +125,7 @@ Tiger
 ```
 
 At this point we can try something exciting, compile either subproject with
-Scala 3 and see if it works. At the time of writing, the Scala version
-`0.27.0-RC1` is the latest preview release of Scala 3.
+Scala 3 and see if it works.
 
 First, add the dotty plugin (this helps with managing and inspecting the
 `scalaVersion` setting with Scala 3)
@@ -115,7 +133,7 @@ First, add the dotty plugin (this helps with managing and inspecting the
 ```scala
 // project/plugins.sbt
 
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.4.2")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.4.5")
 ```
 
 Then we can change the `scalaVersion` of `app`:
@@ -129,7 +147,7 @@ Then we can change the `scalaVersion` of `app`:
 
  lazy val app = project
    .dependsOn(shared)
-+  .settings(scalaVersion := "0.27.0-RC1")
++  .settings(scalaVersion := "3.0.0-M1")
 {% endhighlight %}
 
 To recap, `app` is now compiled by Scala 3 and depends on `shared`,
@@ -138,7 +156,8 @@ which is compiled by Scala 2.13.
 If we do `sbt app/run` we should see the `app` project recompile
 and it will run as before.
 
-Now lets try the other way around:
+Now lets try the other way around, in this case we also have to enable
+reading Scala 3 dependencies in Scala 2 with the flag `-Ytasty-reader`:
 
 {% highlight diff %}
 // build.sbt
@@ -146,11 +165,12 @@ Now lets try the other way around:
  ThisBuild / scalaVersion := "2.13.4"
 
  lazy val shared = project
-+  .settings(scalaVersion := "0.27.0-RC1")
++  .settings(scalaVersion := "3.0.0-M1")
 
  lazy val app = project
    .dependsOn(shared)
--  .settings(scalaVersion := "0.27.0-RC1")
+-  .settings(scalaVersion := "3.0.0-M1")
++  .settings(scalacOptions += "-Ytasty-reader")
 {% endhighlight %}
 
 Here we have the opposite, `app` is compiled by Scala 2.13 and depends
@@ -159,8 +179,8 @@ the command `sbt 'show app/dependencyTree'`, which outputs the following:
 
 ```
 app:app_2.13:0.1.0-SNAPSHOT [S]
-  +-shared:shared_0.27:0.1.0-SNAPSHOT
-    +-ch.epfl.lamp:dotty-library_0.27:0.27.0-RC1 [S]
+  +-shared:shared_3.0.0-M1:0.1.0-SNAPSHOT
+    +-org.scala-lang:scala3-library_3.0.0-M1:3.0.0-M1 [S]
 ```
 
 If we then try `sbt app/run` both `shared` and `app` subprojects will recompile
@@ -172,7 +192,11 @@ To summarise this part, we have shown that it is possible to migrate subprojects
 to Scala 3 from Scala 2.13 in any order, gradually, and continue to build and
 run them if they mix versions.
 
-## Using a Scala 3 Library Dependency
+### 2. Using a Scala 3 Library Dependency
+
+> TODO:  there is currently no library published for Scala `3.0.0-M1`
+> we can either rewrite this section to just explain it in principle,
+> with a fake library or wait for some library to be available.
 
 In the section above, we have seen how it is possible for a subproject compiled
 with Scala 2.13 to depend on a subproject compiled with Scala 3. The same
@@ -187,12 +211,12 @@ on the fansi library to `app` and try to change our output to be colored blue:
  ThisBuild / scalaVersion := "2.13.4"
 
  lazy val shared = project
-   .settings(scalaVersion := "0.27.0-RC1")
+   .settings(scalaVersion := "3.0.0-M1")
 
  lazy val app = project
    .dependsOn(shared)
 +  .settings(
-+    libraryDependencies += "com.lihaoyi" % "fansi_0.27" % "0.2.9"
++    libraryDependencies += "com.lihaoyi" % "fansi_3.0.0-M1" % "0.2.9" // TODO fansi has not been published for `3.0.0-M1`
 +  )
 {% endhighlight %}
 
@@ -201,11 +225,11 @@ we take a standard module id and change it as so:
 
 {% highlight diff %}
 -"com.lihaoyi" %% "fansi" % "0.2.9"
-+"com.lihaoyi" % "fansi_0.27" % "0.2.9"
++"com.lihaoyi" % "fansi_3.0.0-M1" % "0.2.9"
 {% endhighlight %}
 
 By replacing `%%` with `%`, we can then manually specify the binary version,
-leading us to add `_0.27` to the name of the module.
+leading us to add `_3.0.0-M1` to the name of the module.
 
 We now update `Main.scala` to use the fansi library:
 
@@ -227,17 +251,71 @@ If we then run again `sbt 'show app/dependencyTree'` we see the following:
 
 ```
 app:app_2.13:0.1.0-SNAPSHOT [S]
-  +-com.lihaoyi:fansi_0.27:0.2.9
-  | +-com.lihaoyi:sourcecode_0.27:0.2.1
+  +-com.lihaoyi:fansi_3.0.0-M1:0.2.9
+  | +-com.lihaoyi:sourcecode_3.0.0-M1:0.2.1
   |
-  +-shared:shared_0.27:0.1.0-SNAPSHOT
-    +-ch.epfl.lamp:dotty-library_0.27:0.27.0-RC1 [S]
+  +-shared:shared_3.0.0-M1:0.1.0-SNAPSHOT
+    +-org.scala-lang:scala3-library_3.0.0-M1:3.0.0-M1 [S]
 ```
 
 To summarise, in this section we have shown how it is possible to use a
 third party library dependency, compiled with Scala 3, from Scala 2.13.
 If there are issues with changing the binary version of a particular
 dependency you have, check out the [troubleshooting](#troubleshooting) section.
+
+## Forward Compatibility
+When migrating a subproject to Scala 3, where downstream consuming subprojects are likely to be on Scala 2.13, we would recommend restricting the usage of new features in Scala 3. This will maximise compatibility as you migrate each subproject. However, it is possible to start using some features of Scala 3 without issue, this is due to a limited forward compatibility in Scala 2.13 with some new Scala 3 features.
+
+Forward compatibility means that many definitions created by using new Scala 3 features
+can be used from Scala 2.13, however they will be remapped to features
+that exist in Scala 2.13. For example,
+[extension methods](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
+can only be used as ordinary methods. So for cross-compatible code we recommend
+to continue using implicit classes to encode extension methods.
+
+On the other hand, some features of Scala 3 are not mappable to features in Scala 2.13,
+and will cause a compile-time error when using them. A longer list can be seen in the
+migration guide, describing [how Scala 2 reacts to different Scala 3 features](https://scalacenter.github.io/scala-3-migration-guide/docs/compatibility.html#the-scala-2-tasty-reader).
+
+For unsupported features, a best effort is made
+to report errors at the use-site that is problematic. For example,
+[match types](http://dotty.epfl.ch/docs/reference/new-types/match-types.html)
+are not supported. If we define in the `shared` project the type `Elem`:
+
+```scala
+// shared/src/main/scala/example/MatchTypes.scala
+package example
+
+object MatchTypes {
+  type Elem[X] = X match {
+    case List[t] => t
+    case Array[t] => t
+  }
+}
+```
+
+and then try to use it in the `app` project:
+
+```scala
+// app/src/main/scala/example/TestMatchTypes.scala
+package example
+
+object TestMatchTypes {
+  def test: MatchTypes.Elem[List[String]] = "hello"
+}
+```
+
+we get the following error when calling `sbt app/run`:
+
+```
+[error] TestMatchTypes.scala:5:25: Unsupported Scala 3 match type in bounds of type Elem; found in object example.MatchTypes.
+[error]   def test: MatchTypes.Elem[List[String]] = "hello"
+[error]                        ^
+[error] one error found
+```
+
+The error is standard for all unsupported Scala 3 features, naming the feature,
+the location of the definition and the location where it is used.
 
 ## Troubleshooting
 There are some situations where the steps described in the sections above do
@@ -295,59 +373,6 @@ compilation, or disrupts runtime behaviour, please consider the above
 troubleshooting topics, but instead assume that `A` is the third party
 library, and `B` is your Scala 2.13 project that depends on it.
 
-## Forward Compatibility
-When migrating a subproject to Scala 3, where downstream consuming subprojects are likely to be on Scala 2.13, we would recommend restricting the usage of new features in Scala 3. This will maximise compatibility as you migrate each subproject. However, it is possible to start using some features of Scala 3 without issue, this is due to a limited forward compatibility in Scala 2.13 with some new Scala 3 features.
-
-Forward compatibility means that many definitions created by using new Scala 3 features
-can be used from Scala 2.13, however they will be remapped to features
-that exist in Scala 2.13. For example,
-[extension methods](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
-can only be used as ordinary methods, using their expanded name.
-
-On the other hand, some features of Scala 3 are not mappable to features in Scala 2.13,
-and will cause a compile-time error when using them. A longer list can be seen in the
-migration guide, describing [how Scala 2 reacts to different Scala 3 features](https://scalacenter.github.io/scala-3-migration-guide/docs/compatibility.html#the-scala-2-tasty-reader).
-
-For unsupported features, a best effort is made
-to report errors at the use-site that is problematic. For example,
-[match types](http://dotty.epfl.ch/docs/reference/new-types/match-types.html)
-are not supported. If we define in the `shared` project the type `Elem`:
-
-```scala
-// shared/src/main/scala/example/MatchTypes.scala
-package example
-
-object MatchTypes {
-  type Elem[X] = X match {
-    case List[t] => t
-    case Array[t] => t
-  }
-}
-```
-
-and then try to use it in the `app` project:
-
-```scala
-// app/src/main/scala/example/TestMatchTypes.scala
-package example
-
-object TestMatchTypes {
-  def test: MatchTypes.Elem[List[String]] = "hello"
-}
-```
-
-we get the following error when calling `sbt app/run`:
-
-```
-[error] TestMatchTypes.scala:5:25: Unsupported Scala 3 match type in bounds of type Elem; found in object example.MatchTypes.
-[error]   def test: MatchTypes.Elem[List[String]] = "hello"
-[error]                        ^
-[error] one error found
-```
-
-The error is standard for all unsupported Scala 3 features, naming the feature,
-the location of the definition and the location where it is used.
-
 ## Contributing
 
 If you have found an issue with Scala 3 dependencies in Scala 2.13 and want to try
@@ -361,24 +386,6 @@ In this blog, we have outlined how it is possible to incrementally migrate a
 project to Scala 3 while continuing to use all the parts together during the
 transition. We encourage you to try out this process and let us know of any
 issues with using Scala 3 dependencies from Scala 2.13.
-
-## Early Access
-
-If you would like to try out Scala 3 dependencies early, you can use a
-snapshot version of Scala 2.13.4 by adding the Scala integration resolver
-to your build:
-
-{% highlight diff %}
-// build.sbt
-
--ThisBuild / scalaVersion := "2.13.4"
-+ThisBuild / scalaVersion := "2.13.4-bin-8891679"
-
-+Global / resolvers += "scala-integration".at(
-+  "https://scala-ci.typesafe.com/artifactory/scala-integration/")
-
- ...
-{% endhighlight %}
 
 ## Important Links
 
