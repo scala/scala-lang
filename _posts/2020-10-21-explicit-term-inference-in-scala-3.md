@@ -191,7 +191,7 @@ object Context:
 Then you can import it using a wildcard:
 
 ```scala
-import Context.{given _} // TODO next week it will become import Context.given
+import Context.given
 ```
 Or by making the type that you are bringing in scope explicit:
 ```
@@ -263,7 +263,7 @@ You can then use the syntax described above for the import:
 
 ```scala
 import java.util.Optional
-import OptionalConversion.{given _}// TODO next week it will become import Context.given
+import OptionalConversion.given
 
 @main def main =
   val opt: Option[Int] = Optional.empty[Int]()
@@ -341,7 +341,7 @@ object Show:
 To use it we need to import the interface and define an instance:
 ```scala
 // Main.scala
-import Show.{_, given _}// TODO next week it will become import Context.given
+import Show.{_, given}
 
 case class Mountain(name: String, height: Int)
 
