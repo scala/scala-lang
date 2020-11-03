@@ -42,7 +42,7 @@ Two settings, and suddenly `run` or `test` will compile the codebase to JavaScri
 There are many components that contribute to this behavior.
 Just looking at the compilation pipeline, there are already 4 components involved: the compiler plugin for scalac, the linker, and the artifacts for the Scala standard library and the JDK subset that is implemented.
 
-![Scala.js compilation pipeline](/resources/img/blog/scalajs-for-scala-3/compilation-pipeline.svg)
+![Scala.js compilation pipeline](/resources/img/blog/scalajs-for-scala-3/compilation-pipeline.png)
 
 ### A compiler plugin
 
