@@ -10,33 +10,27 @@ With that knowledge comes the inevitable question:
 should I migrate, and what is the potential cost?
 
 For maintainers of projects, the migration process may become easier
-with the release of Scala 2.13.4, which comes with a new feature:
+with the release of Scala 2.13.4, which comes with a new preview feature:
 reading and compiling against Scala 3 dependencies.
-
->As a quick aside, If you would like to know how it is possible to mix
->dependencies between the two compilers, watch the talk
->[Taste the difference with Scala 3](https://www.youtube.com/watch?v=YQmVrUdx8TU).
->
->To summarise: Scala 3 stores meta information about the code it compiles in
->TASTy files, and Scala 2.13 can read these files to learn, for example,
->which terms, types and implicits are defined in a given dependency,
->and what code needs to be generated to use them correctly.
 
 ## Overview
 
-With a guided tutorial, we will show you how to approach the following scenarios:
-  1. You have an application consisting of many subprojects that may depend on
-     each other, built with Scala 2.13, and would like to transition each one
-     independently to Scala 3.0
-  2. You have an application, built with Scala 2.13, and want to use some
-     new features of a library that has migrated to Scala 3.0
+With a guided tutorial, we will show you how Scala 2.13.4 makes the following
+scenarios easier:
+>  1. You have an application consisting of many subprojects that may depend on
+>     each other, built with Scala 2.13, and would like to transition each one
+>     independently to Scala 3.0
+>  2. You have an application, built with Scala 2.13, and want to use some
+>     new features of a library that has migrated to Scala 3.0
 
-We will show you by example how Scala 2.13.4 makes these scenarios more simple:
-We will take a small multi-module project of two sub-projects, a `shared` module,
+The tutorial will proceed as follows:
+- We will take a small multi-module project of two sub-projects, a `shared` module,
 containing simple data structures, and an `app` module that depends on `shared`.
-We will in turn migrate each sub-project to Scala 3, and show that it does not
+- We will in turn migrate each sub-project to Scala 3, and show that it does not
 matter in which order you migrate the projects, as `app` will continue
 to build and run.
+- To finish, we will add a library dependency on the Scala 3 version of ScalaCheck,
+and use it from Scala 2 to validate data structures in the `shared` module.
 
 A reader applying the steps in the tutorial to their own project should note that not
 all features of Scala 3 are forward compatibile with Scala 2, such as `inline` methods.
@@ -47,6 +41,25 @@ features when migrating incrementally. More information is provided in the
 In addition, we provide a [troubleshooting](#troubleshooting) section for the reader,
 which aims to suggest steps to take when applying this guide to their own projects
 and a problem occurs.
+
+### Status of the Tasty Reader
+
+>As a quick aside, If you would like to know how it is possible to mix
+>dependencies between the two compilers, watch the talk
+>[Taste the Difference with Scala 3](https://www.youtube.com/watch?v=YQmVrUdx8TU).
+>
+>To summarise: Scala 3 stores meta information about the code it compiles in
+>TASTy files, and Scala 2.13 can read these files to learn, for example,
+>which terms, types and implicits are defined in a given dependency,
+>and what code needs to be generated to use them correctly. The part of
+>the compiler that manages this is known as the Tasty Reader.
+
+Currently, reading Scala 3 dependencies from Scala 2 requires the compiler
+flag `-Ytasty-reader`. The Tasty Reader feature is currently released as a
+preview for users to evaluate and we invite them to
+[give feedback](https://contributors.scala-lang.org/t/roadmap-for-the-tasty-reader-for-scala-2/4231)
+and [report any bugs](https://github.com/scala/bug).
+As Scala 3 reaches release, we hope to enable the Tasty Reader by default.
 
 ## Scenarios
 
@@ -83,7 +96,6 @@ sbt.version=1.4.2
 
 ```scala
 // build.sbt
-
 ThisBuild / scalaVersion := "2.13.4"
 
 lazy val shared = project
@@ -94,10 +106,9 @@ lazy val app = project
 
 ```scala
 // shared/src/main/scala/example/Cat.scala
-
 package example
 
-sealed trait Cat
+sealed trait Cat extends Product with Serializable
 object Cat {
   case object Lion    extends Cat
   case object Tiger   extends Cat
@@ -107,7 +118,6 @@ object Cat {
 
 ```scala
 // app/src/main/scala/example/Main.scala
-
 package example
 
 object Main extends App {
@@ -132,15 +142,13 @@ First, add the dotty plugin (this helps with managing and inspecting the
 
 ```scala
 // project/plugins.sbt
-
 addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.4.5")
 ```
 
 Then we can change the `scalaVersion` of `app`:
 
 {% highlight diff %}
-// build.sbt
-
+ // build.sbt
  ThisBuild / scalaVersion := "2.13.4"
 
  lazy val shared = project
@@ -160,8 +168,7 @@ Now lets try the other way around, in this case we also have to enable
 reading Scala 3 dependencies in Scala 2 with the flag `-Ytasty-reader`:
 
 {% highlight diff %}
-// build.sbt
-
+ // build.sbt
  ThisBuild / scalaVersion := "2.13.4"
 
  lazy val shared = project
@@ -194,20 +201,15 @@ run them if they mix versions.
 
 ### 2. Using a Scala 3 Library Dependency
 
-> TODO:  there is currently no library published for Scala `3.0.0-M1`
-> we can either rewrite this section to just explain it in principle,
-> with a fake library or wait for some library to be available.
-
 In the section above, we have seen how it is possible for a subproject compiled
 with Scala 2.13 to depend on a subproject compiled with Scala 3. The same
 relationship extends to library dependencies.
 
-To demonstrate using a third party library dependency, we will add a dependency
-on the fansi library to `app` and try to change our output to be colored blue:
+To demonstrate using a third party library dependency, we will create a test suite for our
+`example.Cat` data structure, using ScalaCheck. Here we add it as a library dependency:
 
 {% highlight diff %}
-// build.sbt
-
+ // build.sbt
  ThisBuild / scalaVersion := "2.13.4"
 
  lazy val shared = project
@@ -215,44 +217,60 @@ on the fansi library to `app` and try to change our output to be colored blue:
 
  lazy val app = project
    .dependsOn(shared)
+   .settings(scalacOptions += "-Ytasty-reader")
 +  .settings(
-+    libraryDependencies += "com.lihaoyi" % "fansi_3.0.0-M1" % "0.2.9" // TODO fansi has not been published for `3.0.0-M1`
++    libraryDependencies += "org.scalacheck" % "scalacheck_3.0.0-M1" % "1.15.0"
 +  )
 {% endhighlight %}
 
-Notice that here, we are using the Scala 3 version of fansi, to force this,
-we take a standard module id and change it as so:
+Notice that in the above snippet, we are using the Scala 3 version of ScalaCheck.
+To force a specific Scala version, we take a standard module id and change it as so:
 
 {% highlight diff %}
--"com.lihaoyi" %% "fansi" % "0.2.9"
-+"com.lihaoyi" % "fansi_3.0.0-M1" % "0.2.9"
+-"org.scalacheck" %% "scalacheck" % "1.15.0"
++"org.scalacheck" % "scalacheck_3.0.0-M1" % "1.15.0"
 {% endhighlight %}
 
 By replacing `%%` with `%`, we can then manually specify the binary version,
 leading us to add `_3.0.0-M1` to the name of the module.
 
-We now update `Main.scala` to use the fansi library:
+Let's now make our test suite. As a demonstration we will check the property
+that given two `example.Cat` with the same `productPrefix`, they should refer
+to the same object. Here is the source code:
 
-{% highlight diff %}
-// app/src/main/scala/example/Main.scala
+```scala
+// app/src/test/scala/example/CatSpecification.scala
+package example
 
- package example
+import org.scalacheck.{Properties, Gen}
+import org.scalacheck.Prop.forAll
 
- object Main extends App {
--   println(Cat.Tiger)
-+   println(fansi.Color.Blue(Cat.Tiger.toString))
- }
-{% endhighlight %}
+object CatSpecification extends Properties("Cat") {
+  val genCat: Gen[Cat] =
+    for (x <- Gen.choose(0, 100)) yield x % 3 match {
+      case 0 => Cat.Lion
+      case 1 => Cat.Tiger
+      case 2 => Cat.Cheetah
+    }
 
-If we then use the command `sbt app/run` we should notice that "Tiger"
-is now blue when printed.
+  property("uniqueWithName") = forAll(genCat, genCat) { (a: Cat, b: Cat) =>
+    a.productPrefix != b.productPrefix || a.eq(b)
+  }
+}
+```
+
+If we then use the command `sbt app/test` we should see the following output:
+```
+[info] + Cat.uniqueWithName: OK, passed 100 tests.
+```
 
 If we then run again `sbt 'show app/dependencyTree'` we see the following:
 
 ```
 app:app_2.13:0.1.0-SNAPSHOT [S]
-  +-com.lihaoyi:fansi_3.0.0-M1:0.2.9
-  | +-com.lihaoyi:sourcecode_3.0.0-M1:0.2.1
+  +-org.scalacheck:scalacheck_3.0.0-M1:1.15.0
+  | +-org.scala-lang:scala3-library_3.0.0-M1:3.0.0-M1 [S]
+  | +-org.scala-sbt:test-interface:1.0
   |
   +-shared:shared_3.0.0-M1:0.1.0-SNAPSHOT
     +-org.scala-lang:scala3-library_3.0.0-M1:3.0.0-M1 [S]
@@ -391,5 +409,6 @@ issues with using Scala 3 dependencies from Scala 2.13.
 
 - [Scala 3 Migration Guide](https://scalacenter.github.io/scala-3-migration-guide/)
 - [Doc: Working with the Tasty Reader](https://github.com/scala/scala/blob/2.13.x/doc/internal/tastyreader.md#working-with-the-code)
-- [Talk: Taste the difference with Scala 3](https://www.youtube.com/watch?v=YQmVrUdx8TU)
+- [Talk: Taste the Difference with Scala 3](https://www.youtube.com/watch?v=YQmVrUdx8TU)
 - [Scala 2 issue tracker](https://github.com/scala/bug)
+- [Tasty Reader discussion thread](https://contributors.scala-lang.org/t/roadmap-for-the-tasty-reader-for-scala-2/4231)
