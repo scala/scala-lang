@@ -101,6 +101,7 @@ Some experience is required when reading this code to understand that its only g
 add a couple of methods to `List[Try[A]]`.
 
 ### Find out more
+
 You can find more information about extension methods on [the dedicated documentation page](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html).
 I also suggest that you read how they complement another new Scala 3 feature: [opaque types](https://dotty.epfl.ch/docs/reference/other-new-features/opaques.html).
 Later in this post we will see how they simplify a very common pattern: typeclasses.
@@ -281,9 +282,11 @@ The warning can be silenced by adding `import scala.language.implicitConversions
 the message suggests.
 
 ### Find out more
+
 You can learn more about this feature in the [documentation](https://dotty.epfl.ch/docs/reference/contextual/conversions.html).
 
 ### How was this done in Scala 2?
+
 Scala 2 relied on `implicit` defs and `implicit` function values to implement this pattern:
 
 ```scala
