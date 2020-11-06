@@ -30,7 +30,7 @@ You do not need to port your codebase right away, it can be an incremental and g
 ## Extension methods
 
 When you do not have control over a type but you need to extend its capabilities with a new method,
-Scala 3 allows you to define an *extension method*
+Scala 3 allows you to define an *extension method*.
 
 Assume that you are working with `List[Try[String]]` and that you often need to retrieve
 the elements for which the computation succeeded.
@@ -45,8 +45,8 @@ import scala.util.{Try, Success}
 extension (ls: List[Try[String]]) def collectSucceeded: List[String] =
   ls.collect { case Success(x) => x }
 ```
-To remember the syntax, remark how `collectSucceeded` follows the object on which it will be available: `ls.collectSucceeded`.
-Note that extension methods can have type parameters as well:
+To remember the syntax, notice how `collectSucceeded` follows the object on which it will be available: `ls.collectSucceeded`.
+Extension methods can have type parameters as well:
 
 ```scala
 extension[A] (ls: List[Try[A]]) def collectSucceeded: List[A] =
@@ -88,12 +88,11 @@ A typical approach would be the following:
 implicit class ListTryExtension[A](val in: List[Try[A]]) extends AnyVal {
   def collectSucceeded: List[A] = ls.collect { case Success(a) => a }
   def getIndexOfFirstFailure: Option[Int] =
-      in
-        .zipWithIndex.find { case (t, _) => t.isFailure }
-        .map { case (_, index) => index }
+    in.zipWithIndex.find { case (t, _) => t.isFailure }
+      .map { case (_, index) => index }
 }
 ```
-Remark that you need to define a name for the class, even if this is probably never going to be used besides the import statement.
+Note that you need to define a name for the class, even if this is probably never going to be used besides the import statement.
 You also need to understand what `AnyVal` is, why it is good practice to extend it and
 what its limitations are.
 
@@ -227,7 +226,7 @@ object Future {
 
 We note again that we had to provide a name which might not be used for the variable. The `implictly` function from Scala 2 is renamed to `summon` in Scala 3.
 
-Finally the special import syntax allows users to explicitly import `given` instances (either by wildcard or by type) and not to have undesired instances obtained by a vague `import Context._`
+Finally the special import syntax allows users to explicitly import `given` instances by type rather than by name. This makes more sense since we usually refer to them by type as well.
 
 The context bound syntax remains unchanged.
 
@@ -306,10 +305,10 @@ import OptionalConversion._
 
 Note that at a glance, it is not clear that the definition is intended as an automatic conversion to an expected type:
  - the name of the method can be a hint, but this is merely a convention that
- other developers might not share
+   other developers might not share
  - the implicit def may be intended give you extension methods on its parameter type, depending on its result
  - there is not straightforward way to verify that this function will not be used as implicit
- argument for a function with an implicit parameter list
+   argument for a function with an implicit parameter list
 
 The `Conversion` trait makes the definition explicit and more readable.
 
@@ -337,7 +336,7 @@ object Show:
   def from[A](f: A => String): Show[A] = new Show[A]:
     extension (a: A) def show: String = f(a)
 
-  given[A: Show] as Show[List[A]] = new Show[List[A]]:
+  given[A: Show] as Show[List[A]]:
     extension (ls: List[A]) def show: String = ls.map(_.show).mkString(",")
 ```
 
@@ -427,7 +426,7 @@ they would look like in Scala 3. While the final result is almost the same, code
 explicit and readable so that you can focus on solving your business problems rather than on
 syntax.
 
-This is part of larger set of usability and ergonomy improvements for Scala 3 that we believe
+This is part of a larger set of usability and ergonomy improvements for Scala 3 that we believe
 will make the language easier and more fun to use and we are very excited to see what the
 community will create with them.
 
