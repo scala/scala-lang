@@ -8,17 +8,17 @@ title: Explicit term inference with Scala 3
 # Explicit term inference with Scala 3
 
 One of the most striking changes for developers adopting Scala 3 is the introduction
-of new syntaxes to replace the implicit mechanism used in previous Scala versions.
+of a new syntax to replace the implicit mechanism used in previous Scala versions.
 
 The motivation behind the new syntax is that the same `implicit` keyword was
 used for different purposes and patterns and thus it became a way to express *how* to implement
 patterns. This means that when encountering this ambiguous incantation, users need to decipher what
-the intent of the developer was: is this a conversion ? Does this avoid parameter repetition ?
-Is this an extension of a type ? Is this a typeclass ? How do I import this ?
+the intent of the developer was: is this a conversion? Does this avoid parameter repetition?
+Is this an extension of a type? Is this a typeclass? How do I import this?
 
 Seeing how pervasive implicits became in libraries and projects, Scala 3 aims at reducing confusion and cognitive load by using new keywords that convey the intent of the developer.
 
-This post briefly introduces the new syntaxes and semantics available to Scala 3 programmers by analysing the
+This post briefly introduces the new syntax and semantics available to Scala 3 programmers by analysing the
 most common use cases and patterns: extension methods, implicit parameters, implicit conversions and typeclasses.
 
 ## Compatibility disclaimer
@@ -103,7 +103,7 @@ add a couple of methods to `List[Try[A]]`.
 ### Find out more
 
 You can find more information about extension methods on [the dedicated documentation page](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html).
-I also suggest that you read how they complement another new Scala 3 feature: [opaque types](https://dotty.epfl.ch/docs/reference/other-new-features/opaques.html).
+We also suggest that you read how they complement another new Scala 3 feature: [opaque types](https://dotty.epfl.ch/docs/reference/other-new-features/opaques.html).
 Later in this post we will see how they simplify a very common pattern: typeclasses.
 
 ## Avoiding repetition with contextual parameters
@@ -196,7 +196,7 @@ import Context.given
 ```
 Or by making the type that you are bringing in scope explicit:
 ```
-Import Context.{given ExecutionContext}
+import Context.{given ExecutionContext}
 ```
 This allows you to have more control over imports without relying on instance names.
 
@@ -349,7 +349,7 @@ import Show.{_, given}
 case class Mountain(name: String, height: Int)
 
 given Show[Mountain] =
-  Show.from((m: Mountain) => s"The ${m.name} is ${m.height} meters high")
+  Show.from((m: Mountain) => s"${m.name} is ${m.height} meters high")
 
 @main def main =
   val mountains = List(Mountain("Mont Blanc", 4808), Mountain("Matterhorn", 4478))
@@ -406,7 +406,7 @@ object Main extends App {
   println(mountains.show)
 }
 ```
-I believe that this example shows how `implicit` was used to achieve different goals
+We believe that this example shows how `implicit` was used to achieve different goals
 and, in doing so, used to be more confusing:
  - if you need to add methods, use `extension` rather than an implicit class
  - If you need an implicit parameters, use `using` to declare what you will need
