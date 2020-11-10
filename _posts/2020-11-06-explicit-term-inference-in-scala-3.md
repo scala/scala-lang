@@ -85,7 +85,7 @@ This pattern was particularly cumbersome to implement prior to Scala 3.
 A typical approach would be the following:
 
 ```scala
-implicit class ListTryExtension[A](val in: List[Try[A]]) extends AnyVal {
+implicit class ListTryExtension[A](private val in: List[Try[A]]) extends AnyVal {
   def collectSucceeded: List[A] = ls.collect { case Success(a) => a }
   def getIndexOfFirstFailure: Option[Int] =
     in.zipWithIndex.find { case (t, _) => t.isFailure }
@@ -224,7 +224,7 @@ object Future {
 }
 ```
 
-We note again that we had to provide a name which might not be used for the variable. The `implictly` function from Scala 2 is renamed to `summon` in Scala 3.
+We note again that we had to provide a name which might not be used for the variable. The `implicitly` function from Scala 2 is renamed to `summon` in Scala 3.
 
 Finally the special import syntax allows users to explicitly import `given` instances by type rather than by name. This makes more sense since we usually refer to them by type as well.
 
