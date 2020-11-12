@@ -6,5 +6,5 @@ location: Antwerp
 description: We code in peace
 start: 11 November 2013
 end: 15 November 2013
-link-out: http://www.devoxx.com/
+link-out: https://www.youtube.com/playlist?list=PLklQqdqnBkPjdiPGnXK-Yxc5WMLEyK1Ho
 ---
