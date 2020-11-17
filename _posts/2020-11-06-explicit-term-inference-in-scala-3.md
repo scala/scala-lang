@@ -370,7 +370,7 @@ The second step was to define the extension method which relies on two implicits
 ```scala
 // ShowOps.scala
 object ShowOps {
-  implicit class showOps[A](in: A) extends AnyVal {
+  implicit class showOps[A](private val in: A) extends AnyVal {
     def show(implicit instance: Show[A]): String =
       instance.show(in)
   }
@@ -386,7 +386,7 @@ object Show {
 
   // Either this or import ShowOps and use context bound
   implicit def showList[A](ls: List[A])(implicit instance: Show[A]) =
-    ls.map(instance.show).mkList(",")
+    ls.map(instance.show).mkString(",")
 }
 ```
 which brings us to the main definition:
@@ -399,7 +399,7 @@ case class Mountain(name: String, height: Int)
 
 object Main extends App {
   implicit val mountainShow: Show[Mountain] =
-    Show.fromFunction((m: Mountain) => s"The ${m.name} is ${m.height} meters high")
+    Show.from((m: Mountain) => s"The ${m.name} is ${m.height} meters high")
 
   val mountains = List(Mountain("Mont Blanc", 4808), Mountain("Matterhon", 4478))
   println(mountains.show)
