@@ -10,7 +10,7 @@ With that knowledge comes the inevitable question:
 should I migrate, and what is the potential cost?
 
 For maintainers of projects, the migration process may become easier
-with the release of Scala 2.13.4, which comes with a new preview feature:
+with the upcoming release of Scala 2.13.4, which comes with a new preview feature:
 reading and compiling against Scala 3 dependencies.
 
 ## Overview
@@ -83,7 +83,7 @@ which has some common domain model data structures, and `app`,
 which uses those data structures.
 
 For this project, we will pick
-[sbt 1.4.2](https://github.com/sbt/sbt/releases/tag/v1.4.2),
+[sbt 1.4.3](https://github.com/sbt/sbt/releases/tag/v1.4.3),
 this allows you to mix projects of different Scala versions with very
 little extra effort (thanks to Eugene Yokota).
 
@@ -91,7 +91,7 @@ To begin, our project looks like the following:
 
 ```scala
 // project/build.properties
-sbt.version=1.4.2
+sbt.version=1.4.3
 ```
 
 ```scala
@@ -234,9 +234,29 @@ To force a specific Scala version, we take a standard module id and change it as
 By replacing `%%` with `%`, we can then manually specify the binary version,
 leading us to add `_3.0.0-M1` to the name of the module.
 
-Let's now make our test suite. As a demonstration we will check the property
-that given two `example.Cat` with the same `productPrefix`, they should refer
-to the same object. Here is the source code:
+As a preliminary, now that `Cat` is compiled with Scala 3, we will change the
+definition of `Cat` to an enumeration, giving us convenient ways to reflect
+over its members:
+
+{% highlight diff %}
+ // shared/src/main/scala/example/Cat.scala
+ package example
+
+-sealed trait Cat extends Product with Serializable
+-object Cat {
++enum Cat {
+-  case object Lion    extends Cat
+-  case object Tiger   extends Cat
+-  case object Cheetah extends Cat
++  case Lion, Tiger, Cheetah
+ }
+{% endhighlight %}
+
+Let's now make our test suite. As a demonstration we will check two properties:
+- given two `example.Cat` with the same label, they should refer to the same object.
+- given two `example.Cat` that refer to the same object, they should have the same label.
+
+Here is the source code:
 
 ```scala
 // app/src/test/scala/example/CatSpecification.scala
@@ -246,22 +266,27 @@ import org.scalacheck.{Properties, Gen}
 import org.scalacheck.Prop.forAll
 
 object CatSpecification extends Properties("Cat") {
-  val genCat: Gen[Cat] =
-    for (x <- Gen.choose(0, 100)) yield x % 3 match {
-      case 0 => Cat.Lion
-      case 1 => Cat.Tiger
-      case 2 => Cat.Cheetah
-    }
 
-  property("uniqueWithName") = forAll(genCat, genCat) { (a: Cat, b: Cat) =>
+  val allCats = Cat.values
+
+  val genCat: Gen[Cat] =
+    for (x <- Gen.choose(0, 100)) yield allCats(x % allCats.length)
+
+  property("`sameName -> identical`") = forAll(genCat, genCat) { (a: Cat, b: Cat) =>
     a.productPrefix != b.productPrefix || a.eq(b)
   }
+
+  property("`identical -> sameName`") = forAll(genCat, genCat) { (a: Cat, b: Cat) =>
+    a.ne(b) || a.productPrefix == b.productPrefix
+  }
+
 }
 ```
 
 If we then use the command `sbt app/test` we should see the following output:
 ```
-[info] + Cat.uniqueWithName: OK, passed 100 tests.
+[info] + Cat.`identical -> sameName`: OK, passed 100 tests.
+[info] + Cat.`sameName -> identical`: OK, passed 100 tests.
 ```
 
 If we then run again `sbt 'show app/dependencyTree'` we see the following:
