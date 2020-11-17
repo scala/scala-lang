@@ -2,24 +2,24 @@ supporters:
   - name: EPFL
     logo: /resources/img/frontpage/epfl-logo.png
     url: https://www.epfl.ch
-  - name: IBM
-    logo: /resources/img/frontpage/ibm-logo.png
-    url: http://www.ibm.com
-  - name: Verizon
-    logo: /resources/img/frontpage/verizon-logo.png
-    url: http://www.verizon.com
   - name: Goldman Sachs
     logo: /resources/img/frontpage/goldman-logo.png
     url: http://www.goldmansachs.com
   - name: 47 Degrees
     logo: /resources/img/frontpage/47deg-logo.png
     url: http://www.47deg.com/
-  - name: SAP
-    logo: /resources/img/frontpage/sap-logo.png
-    url: http://www.sap.com
   - name: Twitter
     logo: /resources/img/frontpage/twitter-logo.png
     url: http://www.twitter.com
+  - name: Spotify
+    logo: /resources/img/frontpage/spotify-logo.png
+    url: https://www.spotify.com/
+  - name: Lunatech
+    logo: /resources/img/frontpage/lunatech-logo.png
+    url: https://lunatech.com/
+  - name: VirtusLab
+    logo: /resources/img/frontpage/virtuslab-logo.png
+    url: https://virtuslab.com/
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/corporate-membership.html
