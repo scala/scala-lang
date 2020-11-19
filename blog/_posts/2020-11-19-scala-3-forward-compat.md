@@ -10,7 +10,7 @@ With that knowledge comes the inevitable question:
 should I migrate, and what is the potential cost?
 
 For maintainers of projects, the migration process may become easier
-with the upcoming release of Scala 2.13.4, which comes with a new preview feature:
+with the recent release of Scala 2.13.4, which comes with a new preview feature:
 reading and compiling against Scala 3 dependencies.
 
 ## Overview
