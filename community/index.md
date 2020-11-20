@@ -123,7 +123,7 @@ There is a large and active Scala community on the [/r/Scala](http://reddit.com/
 
 Official:
 
-* [Blog/News Page](http://www.scala-lang.org/blog/) on this site
+* [Blog/News Page](https://www.scala-lang.org/blog/) on this site
 * [@scala_lang](https://twitter.com/scala_lang) on Twitter
 
 Community:

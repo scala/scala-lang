@@ -210,19 +210,19 @@ Scala 2.8.0 is a significantly innovative release, which contains a large amount
 
 #### Redesigned collection library
 
-The collection library has undergone a complete overhaul for Scala 2.8, offering a more coherent and efficient design, while maintaining virtually complete compatibility with existing sources. Detailed information [here](http://www.scala-lang.org/sid/3).
+The collection library has undergone a complete overhaul for Scala 2.8, offering a more coherent and efficient design, while maintaining virtually complete compatibility with existing sources. Detailed information [here](https://www.scala-lang.org/sid/3).
 
 #### New array implementation, manifests for polymorphic arrays
 
-Handling of arrays has been simplified and optimized in Scala 2.8. The previous compiler magic has been replaced by a more systematic and predictable implementation in terms of implicit conversions. Detailed information [here](http://www.scala-lang.org/sid/7).
+Handling of arrays has been simplified and optimized in Scala 2.8. The previous compiler magic has been replaced by a more systematic and predictable implementation in terms of implicit conversions. Detailed information [here](https://www.scala-lang.org/sid/7).
 
 #### Type specialization
 
-Scala 2.8 adds specialized type parameters, which enable the compiler to generate transparently multiple versions of a given definition, and to use the most specific version whenever the static type information at a call site allows it. Detailed information [here](http://www.scala-lang.org/sid/9).
+Scala 2.8 adds specialized type parameters, which enable the compiler to generate transparently multiple versions of a given definition, and to use the most specific version whenever the static type information at a call site allows it. Detailed information [here](https://www.scala-lang.org/sid/9).
 
 #### Named and default arguments
 
-Named arguments improve the readability of method calls with many arguments. Default arguments reduce code duplication, and enable "copy" methods for case classes, useful to generate quickly modified copies of case classes. Detailed information [here](http://www.scala-lang.org/sid/1).
+Named arguments improve the readability of method calls with many arguments. Default arguments reduce code duplication, and enable "copy" methods for case classes, useful to generate quickly modified copies of case classes. Detailed information [here](https://www.scala-lang.org/sid/1).
 
 #### Package objects
 
@@ -230,7 +230,7 @@ Packages can now contain besides classes and objects also methods, fields or typ
 
 #### Beefed up Scala Swing libraries, better documentation
 
-Components publish key events, input events can be consumed, refactored window subhierarchy, additional demos, Swing listeners are installed lazily, more complete component caching, minor refactorings, bugfixes, more Scaladocs. Detailed information [here](http://www.scala-lang.org/sid/8).
+Components publish key events, input events can be consumed, refactored window subhierarchy, additional demos, Swing listeners are installed lazily, more complete component caching, minor refactorings, bugfixes, more Scaladocs. Detailed information [here](https://www.scala-lang.org/sid/8).
 
 #### Revamped REPL
 
@@ -258,7 +258,7 @@ Type inference has been extended to deal with type constructors, so that, in cer
 
 #### Improved Annotations
 
-Scala 2.8 adds support for nested java annotations. For annotations on fields, it is now possible to specify which synthetic members (getter / setter) will have the annotation. Documentation about Scala annotations can be found [here](http://www.scala-lang.org/sid/5).
+Scala 2.8 adds support for nested java annotations. For annotations on fields, it is now possible to specify which synthetic members (getter / setter) will have the annotation. Documentation about Scala annotations can be found [here](https://www.scala-lang.org/sid/5).
 
 #### Enhanced actors
 
