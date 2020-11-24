@@ -85,10 +85,10 @@ This pattern was particularly cumbersome to implement prior to Scala 3.
 A typical approach would be the following:
 
 ```scala
-implicit class ListTryExtension[A](private val in: List[Try[A]]) extends AnyVal {
+implicit class ListTryExtension[A](private val ls: List[Try[A]]) extends AnyVal {
   def collectSucceeded: List[A] = ls.collect { case Success(a) => a }
   def getIndexOfFirstFailure: Option[Int] =
-    in.zipWithIndex.find { case (t, _) => t.isFailure }
+    ls.zipWithIndex.find { case (t, _) => t.isFailure }
       .map { case (_, index) => index }
 }
 ```
