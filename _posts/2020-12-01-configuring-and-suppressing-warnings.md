@@ -8,10 +8,10 @@ isHighlight: true
 
 Scala 2.13.2 and 2.12.13 introduced the `-Wconf` compiler flag to globally configure reporting of warnings, and the `@nowarn` annotation to locally suppress them. Having more control over compiler warnings makes them a lot more valuable:
 
-* In projects where the build log shows a lot of of warnings that are mostly ignored, new helpful warnings can easily go undetected. The new functionality can be used to clean up the build log with manageable efforts and potentially enable fatal warning (`-Werror` in 2.13, `-Xfatal-warnings` in 2.12). This has happened for example in Scala compiler and standard library projects in the past few months – thank you, [@NthPortal](https://github.com/NthPortal)!
+* In projects where the build log shows a lot of warnings that are mostly ignored, new helpful warnings can easily go undetected. The new functionality can be used to clean up the build log with manageable efforts and potentially enable fatal warnings (`-Werror` in 2.13, `-Xfatal-warnings` in 2.12). This has happened for example in Scala compiler and standard library projects in the past few months – thank you, [@NthPortal](https://github.com/NthPortal)!
 * Projects that already use fatal warnings get better utilities to work around corner cases where a warning cannot be avoided. This can allow further `-Xlint` checks to be enabled.
 
-In this post we go through the mechanics of configuring warnigns and also look at the new `@nowarn` annotation.
+In this post we go through the mechanics of configuring warnings and also look at the new `@nowarn` annotation.
 
 ## Warnings from the Scala compiler
 
@@ -46,7 +46,7 @@ scala> def f(l: List[Any]) = l match { case l: List[Int] => l.sum; case _ => l.l
        is unchecked since it is eliminated by erasure
 ```
 
-Annotating the scrutinee with `@unchecked` disables exhaustivity checking: `(o: @unchecked) match ...`. Similarly, unchecked warnings are not isseud for annotated type arguments: `case l: List[Int @unchecked] => ...`.
+Annotating the scrutinee with `@unchecked` disables exhaustivity checking: `(o: @unchecked) match ...`. Similarly, unchecked warnings are not issued for annotated type arguments: `case l: List[Int @unchecked] => ...`.
 
 Warnings about using deprecated features or APIs are not issued individually by default, but counted and summarized. The same applies to feature warnings, which warn about using advanced langauge features that are not generally encouraged.
 
@@ -97,7 +97,7 @@ Running `scalac -Wconf:help` explains how to specify a configuration, but we tak
 
 ### Actions
 
-The `<action>` defines how wranings matching a filter are handled:
+The `<action>` defines how warnings matching a filter are handled:
 
 * `error` / `e` reports them as errors.
 * `warning` / `w` reports them as warnings (this is the default).
