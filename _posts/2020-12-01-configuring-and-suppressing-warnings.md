@@ -8,7 +8,7 @@ isHighlight: true
 
 Scala 2.13.2 and 2.12.13 introduced the `-Wconf` compiler flag to globally configure reporting of warnings, and the `@nowarn` annotation to locally suppress them. Having more control over compiler warnings makes them a lot more valuable:
 
-* In projects where the build log shows a lot of warnings that are mostly ignored, new helpful warnings can easily go undetected. The new functionality can be used to clean up the build log with manageable efforts and potentially enable fatal warnings (`-Werror` in 2.13, `-Xfatal-warnings` in 2.12). This has happened for example in Scala compiler and standard library projects in the past few months – thank you, [@NthPortal](https://github.com/NthPortal)!
+* In projects where the build log shows a lot of warnings that are mostly ignored, new helpful warnings can easily go undetected. The new functionality can be used to clean up the build log with manageable efforts and potentially enable fatal warnings (`-Werror` in 2.13, `-Xfatal-warnings` in 2.12). This has happened for example in the Scala compiler and standard library projects in the past few months – thank you, [@NthPortal](https://github.com/NthPortal)!
 * Projects that already use fatal warnings get better utilities to work around corner cases where a warning cannot be avoided. This can allow further `-Xlint` checks to be enabled.
 
 In this post we go through the mechanics of configuring warnings and also look at the new `@nowarn` annotation.
@@ -48,7 +48,7 @@ scala> def f(l: List[Any]) = l match { case l: List[Int] => l.sum; case _ => l.l
 
 Annotating the scrutinee with `@unchecked` disables exhaustivity checking: `(o: @unchecked) match ...`. Similarly, unchecked warnings are not issued for annotated type arguments: `case l: List[Int @unchecked] => ...`.
 
-Warnings about using deprecated features or APIs are not issued individually by default, but counted and summarized. The same applies to feature warnings, which warn about using advanced langauge features that are not generally encouraged.
+Warnings about using deprecated features or APIs are not issued individually by default, but counted and summarized. The same applies to feature warnings, which warn about using advanced language features that are not generally encouraged.
 
 ```scala
 $> scalac Test.scala
@@ -151,11 +151,11 @@ For some of the filters the syntax is not trivial, so we look at them in more de
 
 * **Message category**: Every message has a category that is displayed in verbose mode (`-Wconf:any:wv`). The `-Wconf:help` option displays the full list of available categories. For example, every `-Xlint` warning has its own category (`lint-infer-any`), the super-category `lint` matches all lint warnings.
 * **Source file**: By default, the source file filter is a regex that must match the file path relative to any path segment. For example, `b/.*Test.scala` matches `/a/b/XTest.scala` but not `/ab/Test.scala`. If the `-rootdir` compiler option is specified, the regex must match the file path relative to that root directory.
-* **Since version for deprecations**: In a `since<1.24` filter expression, valid operators are `<` `=` and `>` and valid version numbers are `N`, `N.M` and `N.M.P`. Because the `since` anontation argument can contain arbitrary text, the first version number found in the text is used for the comparison, for example `1.2.3` in `@deprecated("", "some lib 1.2.3-foo")`.
+* **Since version for deprecations**: In a `since<1.24` filter expression, valid operators are `<`, `=` and `>` and valid version numbers are `N`, `N.M` and `N.M.P`. Because the `since` annotation argument can contain arbitrary text, the first version number found in the text is used for the comparison, for example `1.2.3` in `@deprecated("", "some lib 1.2.3-foo")`.
 
 ## Local warning suppression using `@nowarn`
 
-The [`@nowarn` annotation](https://www.scala-lang.org/api/current/scala/annotation/nowarn.html) allows suppressing warnings locally within a source file. It can be applied or to method or class definitions, or to individual expressions using the ascription syntax `expression: @nowarn`.
+The [`@nowarn` annotation](https://www.scala-lang.org/api/current/scala/annotation/nowarn.html) allows suppressing warnings locally within a source file. It can be applied to method or class definitions, or to individual expressions using the ascription syntax `expression: @nowarn`.
 
 ```scala
 scala> @deprecated def dpr = 0
