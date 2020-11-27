@@ -129,7 +129,7 @@ The actions explained above are always applied to a set of warnings selected by 
 * `any` matches every message.
 * `cat=deprecation` filters according to the message category, for example deprecations (details below). 
 * `msg=regex` applies if some part of the message matches the regex.
-* `site=my\.package\.*` filters on the site where the warning is triggered. The regex must match the entity's full name (`package.Class.method`).
+* `site=my\.package\..*` filters on the site where the warning is triggered. The regex must match the entity's full name (`package.Class.method`). Note that `.` in a regex matches any character while `\.` matches a single period.
 * `src=src_managed/.*` filters warnings issued in a source file (details below).
 * Deprecation warnings can be filtered on two additional criteria:
   * `origin=external\.package\..*` filters on full name of the deprecated entity.
