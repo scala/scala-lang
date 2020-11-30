@@ -15,9 +15,9 @@ In this post we will explore the new capabilities of tuples before
 looking under the hood to learn how the improvements in the Scala 3
 compiler enable to implement type safe operations on tuples.
 
-# The basics: what are tuples ?
+# The basics: what are tuples?
 
-In the Python programming language, tuples are a simple concept: 
+In the Python programming language, tuples are a simple concept:
 they are immutable collections of objects. As such, they are opposed
 to lists, which are mutable.
 
@@ -35,7 +35,7 @@ This is better explained with an example:
 scala> List(1, "2", 3.0, List(4))
 val res0: List[Any] = List(1, 2, 3.0, List(4))
 ```
-We that the compiler tries to infer a common supertype for the elements of the list,
+We see that the compiler tries to infer a common supertype for the elements of the list,
 in this case `Any`.
 
 If do the same with tuples, the elements maintain their individual and specific type:
@@ -48,11 +48,11 @@ we want a function to return two or more values or when we want
 to use types to decide which transformation to apply to each
 value.
 
-# How do tuples evolve in Scala 3 ?
+# How do tuples evolve in Scala 3?
 
 ## Size limit
 
-Probably the most well know limitation of tuples in Scala 2 was the
+Probably the most well known limitation of tuples in Scala 2 was the
 restriction to 22 for the number of elements.
 
 ```scala
@@ -86,6 +86,10 @@ val someStuff = (1, "2", 3.0, List(4))
 for (i <- 0 until someStuff.size)
   println(someStuff(i))
 ```
+
+The argument provided to `apply` is checked at compile time. This means that
+**`someStuff(-1)` or `someStuff(4)` will result in a compilation error**.
+
 This was possible in Scala 2 with the `productIterator` although this
 produced a value of type `Iterator[Any]` which means that we had to pattern
 match or eventually cast the type of the elements.
@@ -108,20 +112,18 @@ are safe and preserve the individual types of each element.
 The first one was already introduced: `.size` retrieves the number
 of elements in the tuple.
 
-Let's see:
-
 ### Tuples can grow
 
 We can add an element to a tuple using the `*:` operator,
-which is very similar to the `::` combinator available on `List`.
+which is very similar to the `::` operator available on `List`.
 
 ```scala
-val fourWeirdNumbers = (1, "2", 3.0, List(4))
+val fourElements = (1, "2", 3.0, List(4))
 val evenWeirder = 1 *: "2" *: 3.0 *: List(4) *: Tuple()
 
-val thisIsTrue = fourWeirdNumbers == evenWeirder // true
+val thisIsTrue = fourWeirdElements == evenWeirder // true
 
-val fiveWeirdNumbers = Set(0) *: evenWeirder // (Set(0),1,2,3.0,List(4))
+val fiveWeirdElements = Set(0) *: evenWeirder // (Set(0),1,2,3.0,List(4))
 ```
 
 When we use a tuple as argument of `*:`, it is prepended as a single element:
@@ -170,14 +172,14 @@ forgets the type of the elements.
 It is also possible to use `.toIArray` which has exactly the same behavior
 but produces an `IArray` where the `I` stands for immutable.
 ```scala
-scala> List(1, "2").toArray
+scala> (1, "2").toArray
 val res0: Array[Object] = Array(1, 2)
 ```
 
 I believe however that the most interesting conversion is `toList`
 which produces yes a list, but not a `List[Any]`.
 Instead it creates `List[U]` where `U` is the union type of the types
-of the elements of the tuple. 
+of the elements of the tuple.
 That is:
 
 ```scala
@@ -192,14 +194,14 @@ treat:
 ```scala
 // The compiler tells he cannot help with checking:
 // Non-exhaustive match
-twoWeirdNumbers.toArray.map {
+(1, "2").toArray.map {
   case i: Int => (i * 2).toString
   case j: String => j
 }
 
 // The code compiles without errors or warning
 // the compile verified that we handled all possible cases
-twoWeirdNumbers.toList.map {
+(1, "2").toList.map {
   case i: Int => (i + 2).toString
   case j: String => j
 }
@@ -217,7 +219,7 @@ not fixed ?
 We can use a **`PolyFunction`**. This is a more advanced syntax:
 
 ```scala
-twoWeirdStrings.map[[X] =>> String]([T] => (t: T) => t match {
+(1, 'a', "dog", 3.0).map[[X] =>> Option[String]]([T] => (t: T) => t match {
   case i: String => i.toUpperCase
   case j: Int => j.toString
 })
@@ -267,7 +269,7 @@ import Tup._
 
 val myTup = TCons(1, TCons(2,  EmpT))
 ```
-It is not very pretty, but it can be easily be adapted to provide
+It is not very pretty, but it can be easily adapted to provide
 the same ease of use as the previous examples.
 To do so we can use another exciting new Scala 3 feature: [extension methods](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
 
@@ -375,11 +377,11 @@ implemented.
 
 # Conclusion
 
-We had a look at the new operations that the are available on tuples in Scala 3 and at 
-how a more flexbile type system provides the the fundamental tools to implement safer
-and readable code.
+We had a look at the new operations that are available on tuples in Scala 3 and at
+how a more flexbile type system provides the fundamental tools to implement safer
+and more readable code.
 
-This shows how advanced type combinators in Scala 3 enable to create
+This shows how advanced type combinators in Scala 3 allow to create
 APIs that benefit developers no matter their level of proficiency in the language:
-an expert-oriented feature such as dependently match types enable to build a safe
+an expert-oriented feature such as dependently match types allow to build a safe
 and simple operation such as tuple concatenation.
