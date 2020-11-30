@@ -312,7 +312,7 @@ If we test the function, it seems to work:
 val left = 1 *: 2 *: EmpT
 val right = 3 *: 4 *: EmpT
 
-concat(left, right) // *:(1,*:(2,*:(3,*:(4,EmpT))))
+concat(left, right) // TCons(1,TCons(2,TCons(3, TCons(4,EmpT))))
 ```
 
 So everything seems good. However we can have more safety.
