@@ -7,13 +7,13 @@ title: Flexible and safe tuples in Scala 3
 
 # Flexible and safe tuples in Scala 3
 
-Tuples are completely revisited in Scala 3.
-They are more **flexible**, more dynamic and support a **new range of operations**.
-This is enabled by new and powerful features in the Scala 3 compiler.
+Tuples are revisited and completely rethought in Scala 3.
+They are more **flexible**, more dynamic and support a **wider range of operations**.
+This is enabled by new and powerful language features.
 
 In this post we will explore the new capabilities of tuples before
 looking under the hood to learn how the improvements in the Scala 3
-compiler enable to implement type safe operations on tuples.
+type system enable to implement type safe operations on tuples.
 
 # The basics: what are tuples?
 
@@ -38,17 +38,15 @@ val res0: List[Any] = List(1, 2, 3.0, List(4))
 We see that the compiler tries to infer a common supertype for the elements of the list,
 in this case `Any`.
 
-If do the same with tuples, the elements maintain their individual and specific type:
+If we do the same with tuples, the elements maintain their individual and specific type:
 ```scala
 scala> (1, "2", 3.0, List(4))
 val res0: (Int, String, Double, List[Int]) = (1, 2, 3.0, List(4))
 ```
 This behavior is desirable in many cases, for example when
-we want a function to return two or more values or when we want
-to use types to decide which transformation to apply to each
-value.
+we want a function to return two or more values having different types.
 
-# How do tuples evolve in Scala 3?
+# How are tuples better in Scala 3?
 
 ## Size limit
 
@@ -79,7 +77,7 @@ In Scala 3, we can use the `apply` method with a 0-based argument:
 
 As most of indexes are 0 based in Scala, this brings more consistency
 to codebases. It also provides more flexibility. We can, for example,
-*iterate* on any tuple to print each element on a line:
+*iterate* over any tuple to print each element on a line:
 
 ```scala
 val someStuff = (1, "2", 3.0, List(4))
@@ -112,7 +110,7 @@ are safe and preserve the individual types of each element.
 The first one was already introduced: `.size` retrieves the number
 of elements in the tuple.
 
-### Tuples can grow
+### Adding elements to a tuple
 
 We can add an element to a tuple using the `*:` operator,
 which is very similar to the `::` operator available on `List`.
@@ -130,13 +128,13 @@ When we use a tuple as argument of `*:`, it is prepended as a single element:
 ```scala
 val notGood: ((Int, Int), Int, Int) = (1, 2) *: (3,4) // ((1, 2), 3, 4)
 ```
-So how can we concatenate two tuples ?
+So how can we concatenate two tuples?
 The `++` is there exactly for this purpose:
 ```scala
 val better: (Int, Int, Int, Int) = (1, 2) ++ (3, 4) // (1, 2, 3, 4)
 ```
 
-### Tuples can shrink
+### Removing elements from a tuple
 
 Similarly to operators available on lists, we can retrieve a subset of
 a tuple. Here is a quick overview:
@@ -159,10 +157,10 @@ a tuple. Here is a quick overview:
 (Set(0), 1, "2", 3.0, List(4)).splitAt(3) // ((Set(0), 1, "2", 3.0), (3.0, List(4)))
 ```
 
-### Tuples can transform
+### Transforming tuples
 
 Again, similarly to conversion methods on collections, it is possible to
-transform a tuple into another collection.
+transform a tuple into a collection.
 
 We have to pay attention to the type of the resulting collection.
 Let's start with the simple case: as its name might hint,
@@ -177,14 +175,12 @@ val res0: Array[Object] = Array(1, 2)
 ```
 
 I believe however that the most interesting conversion is `toList`
-which produces yes a list, but not a `List[Any]`.
-Instead it creates `List[U]` where `U` is the union type of the types
-of the elements of the tuple.
+which produces a `List[U]` where `U` is the [union type](https://dotty.epfl.ch/docs/reference/new-types/union-types.html)
+of the types of the elements of the tuple.
 That is:
 
 ```scala
-(1, "2", 3.0)
-val res0: List[Int | String | Double] = (1, "2", 3.0).toList
+val ls: List[Int | String | Double] = (1, "2", 3.0).toList
 ```
 This is interesting because the type information is somehow maintained.
 We can iterate over `list` and use pattern matching to apply the
@@ -192,7 +188,7 @@ correct transformation, knowing exactly how many and what cases to
 treat:
 
 ```scala
-// The compiler tells he cannot help with checking:
+// The compiler tells it cannot help with checking:
 // Non-exhaustive match
 (1, "2").toArray.map {
   case i: Int => (i * 2).toString
@@ -206,9 +202,8 @@ treat:
   case j: String => j
 }
 ```
-Read more about [Union types here](https://dotty.epfl.ch/docs/reference/new-types/union-types.html).
 
-We can also transform a tuple by appling a function to each element.
+We can also transform a tuple by applying a function to each element.
 The method, similarly to what we are used to with collections, is called
 `map`. The difference from collections (or functors) is however
 that they expect a `f: A => B` where `A` is the type of the elements
@@ -219,15 +214,14 @@ not fixed ?
 We can use a **`PolyFunction`**. This is a more advanced syntax:
 
 ```scala
-(1, 'a', "dog", 3.0).map[[X] =>> Option[String]]([T] => (t: T) => t match {
-  case i: String => i.toUpperCase
-  case j: Int => j.toString
-})
+val options: (Option[Int], Option[Char], Option[String], Option[Double]) =
+  (1, 'a', "dog", 3.0).map[[X] =>> Option[X]]([T] => (t: T) => Some(t))
 ```
+You can read more about `PolyFunction`s [here]()
 
-## Tuples can compose
+## Zipping tuples
 
-The last operator allows to pair the elements of two tuples.
+The last operation allows to pair the elements of two tuples.
 You might have guessed, it is called `zip`. If the two tuples have
 different lengths, the extra elements of the longest will be
 ignored:
@@ -357,7 +351,7 @@ def concat[L <: Tup, R <: Tup](left: L, right: R): Concat[L, R] =
 ```
 
 We use here a combination of match types and a form of dependent types called
-*dependently match types*. There are some quirks to it as you might have noticed:
+*dependent match types*. There are some quirks to it as you might have noticed:
 using lower case types means using type variables and we cannot use pattern matching
 on the object. I think however that this implementation is extremely concise and readable.
 
@@ -378,10 +372,11 @@ implemented.
 # Conclusion
 
 We had a look at the new operations that are available on tuples in Scala 3 and at
-how a more flexbile type system provides the fundamental tools to implement safer
+how a more flexible type system provides the fundamental tools to implement safer
 and more readable code.
 
 This shows how advanced type combinators in Scala 3 allow to create
 APIs that benefit developers no matter their level of proficiency in the language:
-an expert-oriented feature such as dependently match types allow to build a safe
+an expert-oriented feature such as dependent match types allow to build a safe
 and simple operation such as tuple concatenation.
+
