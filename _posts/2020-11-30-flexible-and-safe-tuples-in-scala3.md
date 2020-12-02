@@ -12,8 +12,9 @@ They are more **flexible**, more dynamic and support a **wider range of operatio
 This is enabled by new and powerful language features.
 
 In this post we will explore the new capabilities of tuples before
-looking under the hood to learn how the improvements in the Scala 3
-type system enable to implement type safe operations on tuples.
+looking under the hood to learn how the improvements in the Scala 3 type system,
+in particular *dependent types* and *match types*, enable implementing type safe
+operations on tuples.
 
 # The basics: what are tuples?
 
@@ -165,13 +166,13 @@ transform a tuple into a collection.
 We have to pay attention to the type of the resulting collection.
 Let's start with the simple case: as its name might hint,
 `toArray` produces an array. The type of its elements will always be
-`Object`. This makes it easy to reason about this method although it
+`AnyRef`. This makes it easy to reason about this method although it
 forgets the type of the elements.
 It is also possible to use `.toIArray` which has exactly the same behavior
 but produces an `IArray` where the `I` stands for immutable.
 ```scala
 scala> (1, "2").toArray
-val res0: Array[Object] = Array(1, 2)
+val res0: Array[AnyRef] = Array(1, 2)
 ```
 
 I believe however that the most interesting conversion is `toList`
@@ -265,7 +266,7 @@ val myTup = TCons(1, TCons(2,  EmpT))
 ```
 It is not very pretty, but it can be easily adapted to provide
 the same ease of use as the previous examples.
-To do so we can use another exciting new Scala 3 feature: [extension methods](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
+To do so we can use another Scala 3 feature: [extension methods](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
 
 ```scala
 import Tup._
