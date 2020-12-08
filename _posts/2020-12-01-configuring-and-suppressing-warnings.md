@@ -6,9 +6,9 @@ title: "Configuring and suppressing warnings in Scala"
 isHighlight: true
 ---
 
-Scala 2.13.2 and 2.12.13 introduced the `-Wconf` compiler flag to globally configure reporting of warnings, and the `@nowarn` annotation to locally suppress them. Having more control over compiler warnings makes them a lot more valuable:
+Scala 2.13.2 introduced the `-Wconf` compiler flag to globally configure reporting of warnings, and the `@nowarn` annotation to locally suppress them. This addition to Scala 2.13 proved very popular, so it was backported to 2.12 and just released in 2.12.13. Having more control over compiler warnings makes them a lot more valuable:
 
-* In projects where the build log shows a lot of warnings that are mostly ignored, new helpful warnings can easily go undetected. The new functionality can be used to clean up the build log with manageable efforts and potentially enable fatal warnings (`-Werror` in 2.13, `-Xfatal-warnings` in 2.12). This has happened for example in the Scala compiler and standard library projects in the past few months – thank you, [@NthPortal](https://github.com/NthPortal)!
+* In projects where the build log shows a lot of warnings that are mostly ignored, new helpful warnings can easily go undetected. The new functionality can be used to clean up the build log with manageable efforts and potentially enable fatal warnings (`-Werror` in 2.13, `-Xfatal-warnings` in 2.12). This has happened for example in the Scala compiler and standard library projects in the past few months – thank you, [@NthPortal](https://github.com/NthPortal) and [@som-snytt](https://github.com/som-snytt)!
 * Projects that already use fatal warnings get better utilities to work around corner cases where a warning cannot be avoided. This can allow further `-Xlint` checks to be enabled.
 
 In this post we go through the mechanics of configuring warnings and also look at the new `@nowarn` annotation.
@@ -32,7 +32,7 @@ scala> def f(x: Int): Unit = return x + 1
        warning: enclosing method f has result type Unit: return value of type Int discarded
 ```
 
-Warnings about non-exhaustive pattern matches and uncheckable type arguments are also issued by default:
+Warnings about non-exhaustive pattern matches and uncheckable type arguments are also issued by default (note that exhaustivity warnings just received a big upgrade in [Scala 2.13.4](https://github.com/scala/scala/releases/tag/v2.13.4)):
 
 ```scala
 scala> def get[T](o: Option[T]): T = o match { case Some(t) => t }
@@ -185,7 +185,14 @@ scala> @annotation.nowarn("msg=pure expression does nothing") def f = { 1; dpr }
 def f: Int
 ```
 
-To ensure that `@nowarn` annotations actually suppress warnings, enable `-Xlint:unused` or `-Wunused:nowarn`.
+To ensure that `@nowarn` annotations actually suppress warnings, enable `-Xlint:unused` or `-Wunused:nowarn`. With this option, the compiler checks that every `@nowarn` annoation suppresses at least one warning and issues a warning otherwise:
+
+```
+scala> @annotation.nowarn def f = 1
+        ^
+       warning: @nowarn annotation does not suppress any warnings
+def f: Int
+```
 
 ## Credits
 
