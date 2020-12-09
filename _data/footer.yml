@@ -49,7 +49,7 @@
   class: social
   links:
     - title: GitHub
-      url: "https://github.com/scala/scala"
+      url: "https://github.com/scala"
     - title: Twitter
       url: "https://twitter.com/scala_lang"
     - title: Gitter
