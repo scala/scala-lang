@@ -185,7 +185,7 @@ scala> @annotation.nowarn("msg=pure expression does nothing") def f = { 1; dpr }
 def f: Int
 ```
 
-To ensure that `@nowarn` annotations actually suppress warnings, enable `-Xlint:unused` or `-Wunused:nowarn`. With this option, the compiler checks that every `@nowarn` annoation suppresses at least one warning and issues a warning otherwise:
+To ensure that `@nowarn` annotations actually suppress warnings, enable `-Xlint:unused` or `-Wunused:nowarn`. With this option, the compiler checks that every `@nowarn` annotation suppresses at least one warning and issues a warning otherwise:
 
 ```
 scala> @annotation.nowarn def f = 1
