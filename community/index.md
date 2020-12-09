@@ -53,7 +53,9 @@ Job listings are not allowed in our other forums and chat rooms.
 
 ## Chat Rooms
 
-The main [Gitter](https://gitter.im) room for Scala is:
+Our main chat platform is [Gitter](https://gitter.im).  See next section for other platforms.
+
+The main Gitter room for Scala is:
 
 * **[scala/scala](https://gitter.im/scala/scala)**: Questions, general discussion, etc. Beginner-friendly.
 
@@ -90,7 +92,13 @@ Examples include:
 * **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
 * **[typelevel/cats](https://gitter.im/typelevel/cats)**: for discussion about the Cats library of abstractions for functional programming and FP in general.
 
-IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1): `irc://irc.freenode.net/scala`
+## Chat Rooms (Discord, IRC)
+
+Discord users can chat about Scala [via this link](https://discord.gg/9Th65eK).
+
+IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1) on Freenode: `irc://irc.freenode.net/scala`
+
+As with Gitter, the Discord and IRC channels are covered by the [Scala Code of Conduct](../conduct.html). Moderation is handled by community volunteers and by representatives of the Scala Center.
 
 ## User Groups
 
