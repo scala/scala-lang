@@ -94,7 +94,7 @@ Examples include:
 
 ## Chat Rooms (Discord, IRC)
 
-Discord users can chat about Scala [via this link](https://discord.gg/9Th65eK).
+Discord users can chat about Scala [via this link](https://discord.gg/scala).
 
 IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1) on Freenode: `irc://irc.freenode.net/scala`
 
