@@ -99,7 +99,7 @@ See [last year's blog
 post](https://github.com/scala/community-build/issues/796).  The
 links it contains are still valid.
 
-And what about about Scala 3?  As the Dotty team [tells us](http://dotty.epfl.ch/blog/2018/11/30/11th-dotty-milestone-release.html), "Dotty now has
+And what about about Scala 3?  As the Dotty team [tells us](https://dotty.epfl.ch/blog/2018/11/30/11th-dotty-milestone-release.html), "Dotty now has
 a set of widely-used community libraries that are built against every
 nightly Dotty snapshot. Currently this includes ScalaPB, algebra,
 scalatest, scopt and squants. Join our community build to make sure

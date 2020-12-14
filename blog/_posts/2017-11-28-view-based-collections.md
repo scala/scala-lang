@@ -12,7 +12,7 @@ strict, how the view based design allows us to support both types of collections
 and finally why this is an improvement over the current design of the collections.
 
 More background information about the collections redesign can be found in
-[this blog post](http://www.scala-lang.org/blog/2017/02/28/collections-rework.html). The
+[this blog post](https://www.scala-lang.org/blog/2017/02/28/collections-rework.html). The
 source code is available in
 [this GitHub repository](https://github.com/scala/collection-strawman).
 

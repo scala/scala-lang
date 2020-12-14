@@ -172,9 +172,9 @@ completely natural, so we intend to fully embrace it.
 We have come a long way in getting [Skala](https://github.com/fmasion/skala)
 to this stage, and there continues to be much exciting work going into the
 language. With the help of organizations like the
-[Skalazentrum](https://scala.epfl.ch/), [Typstufe](http://typelevel.org),
+[Skalazentrum](https://scala.epfl.ch/), [Typstufe](https://typelevel.org),
 events like [Skala World](https://scala.world/) and inclusive groups like
-[SkalaBridge](http://www.scalabridge.org/), we hope to grow the community
+[SkalaBridge](https://www.scalabridge.org/), we hope to grow the community
 around this ambitious new language. So I hope you will join with us in
 embracing this bold step towards a better zukunft.
 

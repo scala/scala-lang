@@ -312,7 +312,7 @@ When migrating a subproject to Scala 3, where downstream consuming subprojects a
 Forward compatibility means that many definitions created by using new Scala 3 features
 can be used from Scala 2.13, however they will be remapped to features
 that exist in Scala 2.13. For example,
-[extension methods](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
+[extension methods](https://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
 can only be used as ordinary methods. So for cross-compatible code we recommend
 to continue using implicit classes to encode extension methods.
 
@@ -322,7 +322,7 @@ migration guide, describing [how Scala 2 reacts to different Scala 3 features](h
 
 For unsupported features, a best effort is made
 to report errors at the use-site that is problematic. For example,
-[match types](http://dotty.epfl.ch/docs/reference/new-types/match-types.html)
+[match types](https://dotty.epfl.ch/docs/reference/new-types/match-types.html)
 are not supported. If we define in the `shared` project the type `Elem`:
 
 ```scala

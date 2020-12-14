@@ -24,7 +24,7 @@ For additional features, read on.
 
 Although Scala 2.11 and 2.12 are mostly source compatible to facilitate cross-building, they are not *binary* compatible.  This allows us to keep improving the Scala compiler and standard library.
 
-All 2.12.x releases will be fully binary compatible with 2.12.0, in according with [the policy](http://docs.scala-lang.org/overviews/core/binary-compatibility-of-scala-releases.html) we have followed since 2.10.
+All 2.12.x releases will be fully binary compatible with 2.12.0, in according with [the policy](https://docs.scala-lang.org/overviews/core/binary-compatibility-of-scala-releases.html) we have followed since 2.10.
 
 The [list of open-source libraries](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md) released for Scala 2.12 is growing quickly!
 
@@ -57,19 +57,19 @@ We hope to address the following in a later 2.12.x release:
 
 ### Java 8 runtime
 
-Install a recent build of the Java 8 Platform, such as [OpenJDK](http://openjdk.java.net/install/) or [Oracle Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html). Any Java 8 compliant runtime will do (but note that Oracle versions before 8u102 have a known issue that [affects Scala](https://issues.scala-lang.org/browse/SI-9828)).
+Install a recent build of the Java 8 Platform, such as [OpenJDK](https://openjdk.java.net/install/) or [Oracle Java](https://www.oracle.com/technetwork/java/javase/downloads/index.html). Any Java 8 compliant runtime will do (but note that Oracle versions before 8u102 have a known issue that [affects Scala](https://issues.scala-lang.org/browse/SI-9828)).
 
 We are planning to add (some) support for Java 9 in the near future. Full Java 9 support will be part of the 2.13 roadmap discussions.
 
 ### Build tool
 
-We recommend using [sbt 0.13.13](http://www.scala-sbt.org/download.html). Simply bump the `scalaVersion` setting in your existing project, or start a new project using `sbt new scala/scala-seed.g8`. We strongly recommend upgrading to sbt 0.13.13 for [templating support using the new command](https://github.com/sbt/sbt/pull/2705), [faster compilation](https://github.com/sbt/sbt/pull/2754), and [much more](http://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#sbt+0.13.13).
+We recommend using [sbt 0.13.13](https://www.scala-sbt.org/download.html). Simply bump the `scalaVersion` setting in your existing project, or start a new project using `sbt new scala/scala-seed.g8`. We strongly recommend upgrading to sbt 0.13.13 for [templating support using the new command](https://github.com/sbt/sbt/pull/2705), [faster compilation](https://github.com/sbt/sbt/pull/2754), and [much more](https://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#sbt+0.13.13).
 
 Please head over to the [scala-seed repo](https://github.com/scala/scala-seed.g8) to extend this [giter8 template](https://github.com/foundweekends/giter8) with an example of your favorite 2.12 feature!
 
-Scala also works with [Maven](http://docs.scala-lang.org/tutorials/scala-with-maven.html), [Gradle](https://docs.gradle.org/current/userguide/scala_plugin.html), and Ant.
+Scala also works with [Maven](https://docs.scala-lang.org/tutorials/scala-with-maven.html), [Gradle](https://docs.gradle.org/current/userguide/scala_plugin.html), and Ant.
 
-You can also download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0.html), or obtain the JARs yourself from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0%22).
+You can also download a distribution from [scala-lang.org](https://scala-lang.org/download/2.12.0.html), or obtain the JARs yourself from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0%22).
 
 ## Contributors
 
@@ -95,7 +95,7 @@ The new encodings for traits and lambdas lead to significantly smaller JAR files
 
 Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x, unless you use experimental APIs such as reflection.  If you find incompatibilities that are not [listed below](#breaking-changes), please [file an issue](https://issues.scala-lang.org).
 
-Thanks to source compatibility, cross-building is a one-line change to most sbt builds. Where needed, sbt provides support for [version-specific source folders](http://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#Cross-version+support+for+Scala+sources) out of the box.
+Thanks to source compatibility, cross-building is a one-line change to most sbt builds. Where needed, sbt provides support for [version-specific source folders](https://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#Cross-version+support+for+Scala+sources) out of the box.
 
 ### New language features
 
@@ -132,7 +132,7 @@ Note that only lambda expressions are converted to SAM type instances, not arbit
      found   : () => Unit
      required: Runnable
 
-The language specification has the [full list of requirements for SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion).
+The language specification has the [full list of requirements for SAM conversion](https://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion).
 
 With the use of default methods, Scala's built-in `FunctionN` traits are compiled to SAM interfaces. This allows creating Scala functions from Java using Java's own lambda syntax:
 
@@ -234,14 +234,14 @@ For example, the following code
       case _ => a
     }
 
-produces, when compiled with `-opt:l:method`, the following bytecode (decompiled using [cfr](http://www.benf.org/other/cfr/)):
+produces, when compiled with `-opt:l:method`, the following bytecode (decompiled using [cfr](https://www.benf.org/other/cfr/)):
 
     public int f(int a, boolean b) {
       int n = 0 == a && true == b ? -1 : (a < 0 ? - a : a);
       return n;
     }
 
-The optimizer supports inlining (disabled by default). With `-opt:l:project` code from source files currently being compiled is inlined, while `-opt:l:classpath` enables inlining code from libraries on the compiler's classpath. Other than methods marked [`@inline`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/inline.html), higher-order methods are inlined if the function argument is a lambda, or a parameter of the caller.
+The optimizer supports inlining (disabled by default). With `-opt:l:project` code from source files currently being compiled is inlined, while `-opt:l:classpath` enables inlining code from libraries on the compiler's classpath. Other than methods marked [`@inline`](https://www.scala-lang.org/files/archive/api/2.12.0/scala/inline.html), higher-order methods are inlined if the function argument is a lambda, or a parameter of the caller.
 
 Note that:
 
@@ -253,7 +253,7 @@ The Scala distribution is built using `-opt:l:classpath`, which improves the per
 
 #### Scaladoc look-and-feel overhauled
 
-Scaladoc's output is now more attractive, more modern, and easier to use. Take a look at the [Scala Standard Library API](http://www.scala-lang.org/api/2.12.0).
+Scaladoc's output is now more attractive, more modern, and easier to use. Take a look at the [Scala Standard Library API](https://www.scala-lang.org/api/2.12.0).
 
 Thanks, [Felix Mulder](https://github.com/felixmulder), for leading this effort.
 
@@ -288,7 +288,7 @@ Due to Scala's bootstrapped nature, IntelliJ cannot yet import our sbt build dir
 `Either` now supports operations like `map`, `flatMap`, `contains`, `toOption`, and so forth, which operate on the right-hand side. The `.left` and `.right` methods may be deprecated in favor of `.swap` in a later release.
 The changes are source-compatible with existing code (except in the presence of conflicting extension methods).
 
-This change has allowed other libraries, such as [cats](http://typelevel.org/cats/) to standardize on `Either`.
+This change has allowed other libraries, such as [cats](https://typelevel.org/cats/) to standardize on `Either`.
 
 Thanks, [Simon Ochsenreither](https://github.com/soc), for this contribution.
 
@@ -303,16 +303,16 @@ The [Java 8 compatibility module for Scala](https://github.com/scala/scala-java8
 ### Other changes and deprecations
 
   - For comprehension desugaring requires `withFilter` now, never falls back to `filter` ([#5252](https://github.com/scala/scala/pull/5252))
-  - A [mutable TreeMap](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/mutable/TreeMap.html) implementation was added ([#4504](https://github.com/scala/scala/pull/4504)).
-  - [ListSet](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListSet.html) and [ListMap](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListMap.html) now ensure insertion-order traversal (in 2.11.x, traversal was in reverse order), and their performance has been improved ([#5103](https://github.com/scala/scala/pull/5103)).
-  - The [`@deprecatedInheritance`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedInheritance.html) and [`@deprecatedOverriding`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedOverriding.html) are now public and available to library authors.
+  - A [mutable TreeMap](https://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/mutable/TreeMap.html) implementation was added ([#4504](https://github.com/scala/scala/pull/4504)).
+  - [ListSet](https://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListSet.html) and [ListMap](https://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListMap.html) now ensure insertion-order traversal (in 2.11.x, traversal was in reverse order), and their performance has been improved ([#5103](https://github.com/scala/scala/pull/5103)).
+  - The [`@deprecatedInheritance`](https://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedInheritance.html) and [`@deprecatedOverriding`](https://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedOverriding.html) are now public and available to library authors.
   - The `@hideImplicitConversion` Scaladoc annotation allows customizing which implicit conversions are hidden ([#4952](https://github.com/scala/scala/pull/4952)).
   - The `@shortDescription` Scaladoc annotation customizes the method summary on entity pages ([#4991](https://github.com/scala/scala/pull/4991)).
-  - JavaConversions, providing implicit conversions between Scala and Java collection types, has been deprecated. We recommend using [JavaConverters](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/JavaConverters$.html) and explicit `.asJava` / `.asScala` conversions.
+  - JavaConversions, providing implicit conversions between Scala and Java collection types, has been deprecated. We recommend using [JavaConverters](https://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/JavaConverters$.html) and explicit `.asJava` / `.asScala` conversions.
   - Eta-expansion (conversion of a method to a function value) of zero-args methods has been deprecated, as this can lead to surprising behavior ([#5327](https://github.com/scala/scala/pull/5327)).
   - The Scala library is now [free](https://github.com/scala/scala/pull/4443) of [references](https://github.com/scala/scala/pull/4712) to `sun.misc.Unsafe`, and [no longer ships](https://github.com/scala/scala/pull/4629) with a fork of the forkjoin library.
   - Exhaustiveness analysis in the pattern matcher has been improved ([#4919](https://github.com/scala/scala/pull/4919)).
-  - We emit parameter names according to [JEP-118](http://openjdk.java.net/jeps/118), which makes them available to Java tools and exposes them through Java reflection.
+  - We emit parameter names according to [JEP-118](https://openjdk.java.net/jeps/118), which makes them available to Java tools and exposes them through Java reflection.
 
 ## Breaking changes
 
@@ -365,7 +365,7 @@ Serializing the `A` instance attempts to serialize the outer field, which causes
 
 ### SAM conversion precedes implicits
 
-The [SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion) built into the type system takes priority over implicit conversion of function types to SAM types. This can change the semantics of existing code relying on implicit conversion to SAM types:
+The [SAM conversion](https://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion) built into the type system takes priority over implicit conversion of function types to SAM types. This can change the semantics of existing code relying on implicit conversion to SAM types:
 
     trait MySam { def i(): Int }
     implicit def convert(fun: () => Int): MySam = new MySam { def i() = 1 }
@@ -398,7 +398,7 @@ In order to improve source compatibility, overloading resolution has been adapte
     scala> T.m(f)
     res0: Int = 0
 
-In Scala 2.11, the first alternative was chosen because it is the only applicable method. In Scala 2.12, both methods are applicable, therefore [overloading resolution](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#overloading-resolution) needs to pick the most specific alternative. The specification for [type compatibility](http://www.scala-lang.org/files/archive/spec/2.12/03-types.html#compatibility) has been updated to consider SAM conversion, so that the first alternative is more specific.
+In Scala 2.11, the first alternative was chosen because it is the only applicable method. In Scala 2.12, both methods are applicable, therefore [overloading resolution](https://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#overloading-resolution) needs to pick the most specific alternative. The specification for [type compatibility](https://www.scala-lang.org/files/archive/spec/2.12/03-types.html#compatibility) has been updated to consider SAM conversion, so that the first alternative is more specific.
 
 Note that SAM conversion in overloading resolution is always considered, also if the argument expression is not a function literal (like in the example). This is unlike SAM conversions of expressions themselves; see the previous section. See also the discussion in [scala-dev#158](https://github.com/scala/scala-dev/issues/158).
 

@@ -32,7 +32,7 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
     * A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
 
-    * [http://docs.scala-lang.org/overviews/core/value-classes.html](http://docs.scala-lang.org/overviews/core/value-classes.html)
+    * [https://docs.scala-lang.org/overviews/core/value-classes.html](https://docs.scala-lang.org/overviews/core/value-classes.html)
 * Implicit Classes
 
     * The implicit modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
@@ -42,12 +42,12 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
     * `val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")`
 
-    * [http://docs.scala-lang.org/overviews/core/string-interpolation.html](http://docs.scala-lang.org/overviews/core/string-interpolation.html)
+    * [https://docs.scala-lang.org/overviews/core/string-interpolation.html](https://docs.scala-lang.org/overviews/core/string-interpolation.html)
 * Futures and Promises
 
     * Asynchronously get some JSON: `for (req <- WS.url(restApiUrl).get()) yield (req.json \ "users").as[List[User]]` (uses play!)
 
-    * [http://docs.scala-lang.org/overviews/core/futures.html](http://docs.scala-lang.org/overviews/core/futures.html)
+    * [https://docs.scala-lang.org/overviews/core/futures.html](https://docs.scala-lang.org/overviews/core/futures.html)
 * Dynamic and applyDynamic
 
     * `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
@@ -82,7 +82,7 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
     * [https://docs.scala-lang.org/sips/modularizing-language-features.html](https://docs.scala-lang.org/sips/modularizing-language-features.html)
 * Parallel Collections are now configurable with custom thread pools
 
-    * [http://docs.scala-lang.org/overviews/parallel-collections/overview.html](http://docs.scala-lang.org/overviews/parallel-collections/overview.html)
+    * [https://docs.scala-lang.org/overviews/parallel-collections/overview.html](https://docs.scala-lang.org/overviews/parallel-collections/overview.html)
 * Akka Actors now part of the distribution
 
     * scala.actors have been deprecated and the akka implementation is now included in the distribution.
@@ -111,10 +111,10 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
 * Scala Reflection
 
-    * [http://docs.scala-lang.org/overviews/reflection/overview.html](http://docs.scala-lang.org/overviews/reflection/overview.html)
+    * [https://docs.scala-lang.org/overviews/reflection/overview.html](https://docs.scala-lang.org/overviews/reflection/overview.html)
 * Macros
 
-    * [http://docs.scala-lang.org/overviews/macros/overview.html](http://docs.scala-lang.org/overviews/macros/overview.html)
+    * [https://docs.scala-lang.org/overviews/macros/overview.html](https://docs.scala-lang.org/overviews/macros/overview.html)
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
 A lot of developers have already come up with very cool applications for them.

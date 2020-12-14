@@ -15,7 +15,7 @@ work on DOT, Scala's foundations, and _dotty_, the new Scala compiler
 platform we are working on. It's been a lot of work, but we are finally
 getting good results. DOT now has a mechanized proof of type soundness
 and the dotty compiler [can now compile
-itself](http://www.scala-lang.org/blog/2015/10/23/dotty-compiler-bootstraps.html)
+itself](https://www.scala-lang.org/blog/2015/10/23/dotty-compiler-bootstraps.html)
 as well as large parts of Scala's standard library.
 
 The dotty compiler has a completely new and quite unusual

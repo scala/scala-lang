@@ -5,7 +5,7 @@ scastieUrl:
 ---
 {% comment %}
 Borrowed from
-http://gleichmann.wordpress.com/2009/10/21/scala-in-practice-composing-traits-lego-style/
+https://gleichmann.wordpress.com/2009/10/21/scala-in-practice-composing-traits-lego-style/
 {% endcomment %}
 <div class="wrap">
                                 <div class="scala-code">

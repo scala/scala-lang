@@ -46,7 +46,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
     * In Scala 2.10.0, new implementations of the Pattern Matcher and the Bytecode Emitter
       were shipped. We have now removed the old implementations.
 
-    * scala-actors is now deprecated; we advise users to follow the steps in the [Actors Migration Guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors, which have been included in
+    * scala-actors is now deprecated; we advise users to follow the steps in the [Actors Migration Guide](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors, which have been included in
       the distribution since 2.10.0.
 
     * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)

@@ -54,7 +54,7 @@ The shortcut `:q` stands for the internal shell command `:quit` used to exit the
 
 ### Compile it!
 
-The `scalac` command compiles one (or more) Scala source file(s) and generates Java bytecode which can be executed on any [standard JVM](http://java.sun.com/docs/books/jvms/). The Scala compiler works similarly to `javac`, the Java compiler of the [Java SDK](https://www.oracle.com/technetwork/java/index.html).
+The `scalac` command compiles one (or more) Scala source file(s) and generates Java bytecode which can be executed on any [standard JVM](https://java.sun.com/docs/books/jvms/). The Scala compiler works similarly to `javac`, the Java compiler of the [Java SDK](https://www.oracle.com/technetwork/java/index.html).
 
     > scalac HelloWorld.scala
 
@@ -85,7 +85,7 @@ Here is how the "Hello, world!" example looks like using the `App` trait:
 
 We may also run our example as a shell script or batch command (see the examples in the man pages of the `scala` command).
 
-The [bash](http://www.gnu.org/software/bash/) shell script `script.sh` containing the following Scala code (and shell preamble):
+The [bash](https://www.gnu.org/software/bash/) shell script `script.sh` containing the following Scala code (and shell preamble):
 
     #!/bin/sh
     exec scala "$0" "$@"

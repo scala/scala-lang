@@ -10,7 +10,7 @@ In a nutshell, our main goals are to make the language and its libraries simpler
 
 ## Scala 2.12
 
-Scala 2.12’s main theme is Java 8 interoperability. It will support Java 8 lambdas and streams and will allow easy cross calls with these features in both directions. We recently published a [detailed feature list and roadmap](http://www.scala-lang.org/news/2.12-roadmap) for this release.
+Scala 2.12’s main theme is Java 8 interoperability. It will support Java 8 lambdas and streams and will allow easy cross calls with these features in both directions. We recently published a [detailed feature list and roadmap](https://www.scala-lang.org/news/2.12-roadmap) for this release.
 
 We have not yet decided on version numbers for the releases beyond 2.12, so for the time being we will use opera names as designators.
 

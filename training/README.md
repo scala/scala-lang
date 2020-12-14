@@ -18,7 +18,7 @@ example that you can copy-and-paste.
 category: event
 title: Fast Track to Scala
 description: Get up to speed in Scala in no time
-link-out: http://www.lightbend.com/how/training/fasttracktoscala
+link-out: https://www.lightbend.com/how/training/fasttracktoscala
 where: London
 when: 3 July 2013
 trainers: Trond Bjerkestrand

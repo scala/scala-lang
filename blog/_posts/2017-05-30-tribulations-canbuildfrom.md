@@ -9,7 +9,7 @@ title: Tribulations of CanBuildFrom
 infamous abstraction of the current collections. It is mainly criticised for making scary type
 signatures.
 
-Our ongoing collections redesign ([blog post](http://www.scala-lang.org/blog/2017/02/28/collections-rework.html), [GitHub repo](https://github.com/scala/collection-strawman)) is an opportunity
+Our ongoing collections redesign ([blog post](https://www.scala-lang.org/blog/2017/02/28/collections-rework.html), [GitHub repo](https://github.com/scala/collection-strawman)) is an opportunity
 to  try alternative designs. This post explains the (many!) problems solved by `CanBuildFrom`
 and the alternative solutions implemented in the new collections.
 

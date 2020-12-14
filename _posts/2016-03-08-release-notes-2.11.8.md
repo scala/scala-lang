@@ -44,13 +44,13 @@ According to `git shortlog -sn --no-merges v2.11.7..v2.11.8`, 44 people contribu
 
 Scala releases are available through a variety of channels, including (but not limited to):
 
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.8.html)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.11.8.html)
 * Bump the `scalaVersion` setting in your SBT-based project
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.8%22)
+* Obtain JARs via [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.8%22)
 
 ### Scala 2.11 Notes
 
-The [release notes for Scala 2.11.1](http://scala-lang.org/news/2.11.1) have important information applicable to the whole 2.11 series, such as:
+The [release notes for Scala 2.11.1](https://scala-lang.org/news/2.11.1) have important information applicable to the whole 2.11 series, such as:
 
 * Details on new features, important changes and deprecations since Scala 2.10.
 * The specification of binary compatibility between minor releases.

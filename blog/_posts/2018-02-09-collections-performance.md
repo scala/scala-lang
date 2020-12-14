@@ -6,7 +6,7 @@ title: On Performance of the New Collections
 ---
 
 In a [previous blog post](/blog/2017/11/28/view-based-collections.html), I explained
-how [Scala 2.13’s new collections](http://www.scala-lang.org/blog/2017/02/28/collections-rework.html)
+how [Scala 2.13’s new collections](https://www.scala-lang.org/blog/2017/02/28/collections-rework.html)
 have been designed so that the default implementations of transformation operations work
 with both strict and non-strict types of collections. In essence, we abstract over
 the evaluation mode (strict or non strict) of concrete collection types.

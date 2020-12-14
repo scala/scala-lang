@@ -5,7 +5,7 @@ title: "Scala 2.10.3-RC3 is now available!"
 ---
 We are very happy to announce the RC3 release of Scala 2.10.3! If no serious blocking issues are found this will become the final 2.10.3 version.
 
-The release is available for download from [scala-lang.org](/download/2.10.3-RC3.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.10.3-RC3%22).
+The release is available for download from [scala-lang.org](/download/2.10.3-RC3.html) or from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.10.3-RC3%22).
 
 The Scala team and contributors [fixed 50 issues since 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12215)!
 
@@ -34,7 +34,7 @@ Since 2.10.3 is strictly a bug-fix release, here's an overview of the most promi
 
   * A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
 
-  * [http://docs.scala-lang.org/overviews/core/value-classes.html](http://docs.scala-lang.org/overviews/core/value-classes.html)
+  * [https://docs.scala-lang.org/overviews/core/value-classes.html](https://docs.scala-lang.org/overviews/core/value-classes.html)
 * Implicit Classes
 
   * The implicit modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
@@ -44,12 +44,12 @@ Since 2.10.3 is strictly a bug-fix release, here's an overview of the most promi
 
   * `val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")`
 
-  * [http://docs.scala-lang.org/overviews/core/string-interpolation.html](http://docs.scala-lang.org/overviews/core/string-interpolation.html)
+  * [https://docs.scala-lang.org/overviews/core/string-interpolation.html](https://docs.scala-lang.org/overviews/core/string-interpolation.html)
 * Futures and Promises
 
   * Asynchronously get some JSON: `for (req <- WS.url(restApiUrl).get()) yield (req.json \ "users").as[List[User]]` (uses play!)
 
-  * [http://docs.scala-lang.org/overviews/core/futures.html](http://docs.scala-lang.org/overviews/core/futures.html)
+  * [https://docs.scala-lang.org/overviews/core/futures.html](https://docs.scala-lang.org/overviews/core/futures.html)
 * Dynamic and applyDynamic
 
   * `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
@@ -84,7 +84,7 @@ Since 2.10.3 is strictly a bug-fix release, here's an overview of the most promi
   * [https://docs.scala-lang.org/sips/modularizing-language-features.html](https://docs.scala-lang.org/sips/modularizing-language-features.html)
 * Parallel Collections are now configurable with custom thread pools
 
-  * [http://docs.scala-lang.org/overviews/parallel-collections/overview.html](http://docs.scala-lang.org/overviews/parallel-collections/overview.html)
+  * [https://docs.scala-lang.org/overviews/parallel-collections/overview.html](https://docs.scala-lang.org/overviews/parallel-collections/overview.html)
 * Akka Actors now part of the distribution
 
   * scala.actors have been deprecated and the akka implementation is now included in the distribution.
@@ -113,10 +113,10 @@ Since 2.10.3 is strictly a bug-fix release, here's an overview of the most promi
 
 * Scala Reflection
 
-  * [http://docs.scala-lang.org/overviews/reflection/overview.html](http://docs.scala-lang.org/overviews/reflection/overview.html)
+  * [https://docs.scala-lang.org/overviews/reflection/overview.html](https://docs.scala-lang.org/overviews/reflection/overview.html)
 * Macros
 
-  * [http://docs.scala-lang.org/overviews/macros/overview.html](http://docs.scala-lang.org/overviews/macros/overview.html)
+  * [https://docs.scala-lang.org/overviews/macros/overview.html](https://docs.scala-lang.org/overviews/macros/overview.html)
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
 A lot of developers have already come up with very cool applications for them.

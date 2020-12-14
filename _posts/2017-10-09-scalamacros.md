@@ -72,7 +72,7 @@ and have always required an external compiler plugin.
 
 Scalameta annotation macros are the first macros to be supported on multiple
 compilers:
-[Scala 2.x](http://scalameta.org/paradise/),
+[Scala 2.x](https://scalameta.org/paradise/),
 [IntelliJ Scala Plugin](https://blog.jetbrains.com/scala/2016/11/11/intellij-idea-2016-3-rc-scala-js-scala-meta-and-more/)
 and
 [Dotty](https://github.com/liufengyun/eden).
@@ -85,7 +85,7 @@ proposal to use Scalameta as the foundation for building macros in Scala.
 
 For my personal project Scalafmt, I use Scalameta annotation macros to abstract
 over boilerplate to read
-[~90 different configuration options](http://scalameta.org/scalafmt/#Configuration)
+[~90 different configuration options](https://scalameta.org/scalafmt/#Configuration)
 into a single case class
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New style &quot;inline/meta&quot; macro merged into scalafmt, Dotty-ready macros are happening and they are amazing! <a href="https://twitter.com/hashtag/scala?src=hash">#scala</a> <a href="https://github.com/scalameta/scalafmt/pull/459">scalameta/scalafmt#459</a> <a href="https://t.co/ZvjdWE0Gp3">pic.twitter.com/ZvjdWE0Gp3</a></p>&mdash; Ólafur Páll Geirsson (@olafurpg) <a href="https://twitter.com/olafurpg/status/779372897198637057">September 23, 2016</a></blockquote>
 
@@ -288,9 +288,9 @@ as a community, can stand up to the challenge to complete this project to end.
 [thesis]: https://infoscience.epfl.ch/record/226166/files/EPFL_TH7159.pdf
 [Scala Contributors]: https://contributors.scala-lang.org/
 [fundep materialization]: https://docs.scala-lang.org/overviews/macros/implicits.html#fundep-materialization
-[anonymous type providers]: http://docs.scala-lang.org/overviews/macros/typeproviders.html#anonymous-type-providers
-[extractor macros]: http://docs.scala-lang.org/overviews/macros/extractors.html
-[public type providers]: http://docs.scala-lang.org/overviews/macros/typeproviders.html#public-type-providers
+[anonymous type providers]: https://docs.scala-lang.org/overviews/macros/typeproviders.html#anonymous-type-providers
+[extractor macros]: https://docs.scala-lang.org/overviews/macros/extractors.html
+[public type providers]: https://docs.scala-lang.org/overviews/macros/typeproviders.html#public-type-providers
 [Scala Macros]: https://github.com/scalamacros/scalamacros
 [scalamacros/scalamacros]: https://github.com/scalamacros/scalamacros
 [scalacenter/macros]: https://github.com/scalamacros/scalamacros

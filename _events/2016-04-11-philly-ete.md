@@ -6,5 +6,5 @@ location: Philadelphia
 description: ""
 start: 11 April 2016
 end: 12 April 2016
-link-out: http://2016.phillyemergingtech.com/
+link-out: https://2016.phillyemergingtech.com/
 ---

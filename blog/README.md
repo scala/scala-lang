@@ -9,7 +9,7 @@ have Jekyll installed.)
 A blog article is a larger instructional/opinion/informational original piece.
 An example is the blog article that we published about running our first
 Coursera course in December 2012,
-_[Functional Programming Principles in Scala: Impressions and Statistics](http://docs.scala-lang.org/news/functional-programming-principles-in-scala-impressions-and-statistics.html)_.
+_[Functional Programming Principles in Scala: Impressions and Statistics](https://docs.scala-lang.org/news/functional-programming-principles-in-scala-impressions-and-statistics.html)_.
 News items
 or announcements on the other hand are just that – short news flashes
 announcing something, whether it be a new release, a new project, a new

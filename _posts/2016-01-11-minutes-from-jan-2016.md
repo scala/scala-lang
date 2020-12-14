@@ -11,7 +11,7 @@ title: Minutes from Jan 2016 SIP/SLIP Meeting
 
 ## Welcomes and apologies
 
-Today we have [@SethTisue](http://github.com/SethTisue), [@sjrd](http://github.com/sjrd), [@heathermiller](http://github.com/heathermiller), [@non](http://github.com/non) and [@odersky](http://github.com/odersky)
+Today we have [@SethTisue](https://github.com/SethTisue), [@sjrd](https://github.com/sjrd), [@heathermiller](https://github.com/heathermiller), [@non](https://github.com/non) and [@odersky](https://github.com/odersky)
 
 ## January milestone issues
 
@@ -28,12 +28,12 @@ Notes:
 
 This proposal and [dotty](https://github.com/lampepfl/dotty):
 
-[@odersky](http://github.com/odersky):
+[@odersky](https://github.com/odersky):
 
 - have considering something like this in [dotty](https://github.com/lampepfl/dotty). Doing this involves considering quite a few rules (and their corner cases), which this SIP doesn't cover.
 - generally sympathetic, but not sure this has the format for a SIP.
 
-[@odersky](http://github.com/odersky) thinks there should be a wider discussion about this, involving:
+[@odersky](https://github.com/odersky) thinks there should be a wider discussion about this, involving:
 
 - for partial type application how do we want to support this?
 - named parameters one way to do this, but there are possibly other ways and we want to use the same approach.
@@ -41,14 +41,14 @@ This proposal and [dotty](https://github.com/lampepfl/dotty):
 
 Conclusion:
 
-[@odersky](http://github.com/odersky) thinks this is promising, but needs to be fleshed out for a SIP. He also notes that [dotty](https://github.com/lampepfl/dotty) wants to do this, so we might want to wait and synchronize rather than have [@ahmadsalim](https://github.com/ahmadsalim) spend a lot of time working on this, only to find a different approach has been made in dotty.
+[@odersky](https://github.com/odersky) thinks this is promising, but needs to be fleshed out for a SIP. He also notes that [dotty](https://github.com/lampepfl/dotty) wants to do this, so we might want to wait and synchronize rather than have [@ahmadsalim](https://github.com/ahmadsalim) spend a lot of time working on this, only to find a different approach has been made in dotty.
 
-[@non](http://github.com/non), it's good to be clear that there are two things people want here:
+[@non](https://github.com/non), it's good to be clear that there are two things people want here:
 
 - partial application
 - partial specification, where want to apply all the types but only want to specify some of them and infer the rest
 
-[@SethTisue](http://github.com/SethTisue) sums up:
+[@SethTisue](https://github.com/SethTisue) sums up:
 
 - partial application part could go in Scala before dotty
 - the named type parameter feature would need to be tried in dotty first (it's much more experimental) before any back port.

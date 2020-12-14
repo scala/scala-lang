@@ -14,11 +14,11 @@ technologies for Scala. The focus is mainly on simplification. We remove extrane
 (e.g. no XML literals), and try to boil down Scala’s types into a smaller set of more fundamental
 constructors. The theory behind these constructors is researched in
 [DOT](https://infoscience.epfl.ch/record/215280), a calculus for dependent object types.
-You can learn more about Dotty on our [website](http://dotty.epfl.ch).
+You can learn more about Dotty on our [website](https://dotty.epfl.ch).
 
 <!--more-->
 
-This is our fourth scheduled release according to our [6-week release schedule](http://dotty.epfl.ch/docs/usage/version-numbers.html).
+This is our fourth scheduled release according to our [6-week release schedule](https://dotty.epfl.ch/docs/usage/version-numbers.html).
 The [previous technology preview](/blog/2017/09/07/third-dotty-milestone-release.html) improved
 stability and reliability.
 
@@ -35,11 +35,11 @@ The [new REPL](https://github.com/lampepfl/dotty/pull/2991) instead works by
 manipulating ASTs (Abstract Syntax Trees), this is more robust and will make it
 easier to develop new features: we have already implemented auto-completion
 support (by reusing the APIs we had created for
-the [Dotty IDE](http://dotty.epfl.ch/docs/usage/ide-support.html)) and we have
+the [Dotty IDE](https://dotty.epfl.ch/docs/usage/ide-support.html)) and we have
 plans for displaying API documentation in the REPL.
 
 Note that the user interface of the REPL has not changed: like in the old REPL
-we use code adapted from the [Ammonite REPL](http://ammonite.io/#Ammonite-REPL)
+we use code adapted from the [Ammonite REPL](https://ammonite.io/#Ammonite-REPL)
 to provide syntax highlighting, multi-line editing, history, etc.
 
 ### Scala 2.12 support [#2827](https://github.com/lampepfl/dotty/pull/2827)
@@ -55,7 +55,7 @@ dependencies have been published for 2.12.
 Over the last few weeks, we started working on compilation speed with some good results:
 compiling [ScalaPB](https://github.com/dotty-staging/scalapb) is now 20% faster
 than with Dotty 0.3.0-RC2. You can follow along our progress on
-http://dotty-bench.epfl.ch/.
+https://dotty-bench.epfl.ch/.
 
 
 ## Trying out Dotty
@@ -76,7 +76,7 @@ using Dotty with sbt, see the
 
 ### IDE support
 It is very easy to start using the Dotty IDE in any Dotty project by following
-the [IDE guide](http://dotty.epfl.ch/docs/usage/ide-support.html).
+the [IDE guide](https://dotty.epfl.ch/docs/usage/ide-support.html).
 
 
 ### Standalone installation
@@ -129,8 +129,8 @@ According to `git shortlog -sn --no-merges 0.3.0-RC2..0.4.0-RC1` these are:
 ```
 
 If you want to get your hands dirty and contribute to Dotty, now is a good time to get involved!
-You can have a look at our [Getting Started page for new contributors](http://dotty.epfl.ch/docs/contributing/getting-started.html),
-the [Awesome Error Messages](http://scala-lang.org/blog/2016/10/14/dotty-errors.html) project or some of
+You can have a look at our [Getting Started page for new contributors](https://dotty.epfl.ch/docs/contributing/getting-started.html),
+the [Awesome Error Messages](https://scala-lang.org/blog/2016/10/14/dotty-errors.html) project or some of
 the simple [Dotty issues](https://github.com/lampepfl/dotty/issues?q=is%3Aissue+is%3Aopen+label%3Aexp%3Anovice).
 They make perfect entry-points into hacking on the compiler.
 

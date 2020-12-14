@@ -6,5 +6,5 @@ location: Gdańsk, Poland
 description: "Scala conf with the spirit of the sea"
 start: 7 July 2017
 end: 8 July 2017
-link-out: http://scalawave.io/
+link-out: https://scalawave.io/
 ---

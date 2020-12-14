@@ -35,7 +35,7 @@ Milestone releases and release candidates, however, are **not** binary compatibl
 
 Scala 2.12 is not and will not be binary compatible with the 2.11.x series.  This allows us to keep improving the Scala compiler and standard library.  We are working with the community to ensure that core projects in the Scala eco-system become available for 2.12.  Please refer to this growing [list of libraries and frameworks](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
 
-The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies apply to 2.12 as well.
+The [Scala 2.11.1 release notes](https://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies apply to 2.12 as well.
 
 ### New features
 
@@ -96,7 +96,7 @@ The work on the new optimizer is still ongoing.  You can track it in the [scala-
 
 #### The `@implicitAmbiguous` annotation
 
-The `@implicitAmbiguous` annotation allows customizing the error message when an implicit search finds multiple ambiguous values. Refer to the [Scaladoc of the annotation class](http://www.scala-lang.org/api/2.12.x/#scala.annotation.implicitAmbiguous) for an example.
+The `@implicitAmbiguous` annotation allows customizing the error message when an implicit search finds multiple ambiguous values. Refer to the [Scaladoc of the annotation class](https://www.scala-lang.org/api/2.12.x/#scala.annotation.implicitAmbiguous) for an example.
 
 Thanks to @puffnfresh for this contribution!
 
@@ -105,11 +105,11 @@ Thanks to @puffnfresh for this contribution!
 The following modules have been removed from the Scala 2.12 distribution:
 
 * Scala standard library actors.
-  We recommend [Akka actors](http://akka.io/) instead.
-  See the [Scala actors migration guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html).
+  We recommend [Akka actors](https://akka.io/) instead.
+  See the [Scala actors migration guide](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html).
 * Akka actors.
   The Scala distribution and the `scala-library-all` dependency no longer include Akka actors.
-  To use Akka, [add it as a dependency](http://doc.akka.io/docs/akka/2.4.0/intro/getting-started.html).
+  To use Akka, [add it as a dependency](https://doc.akka.io/docs/akka/2.4.0/intro/getting-started.html).
 * Continuations plugin.
   ([Community maintainers sought](https://github.com/scala/scala-continuations).)
 
@@ -138,6 +138,6 @@ Scala releases are available various ways, such as:
 <!-- re-add for 2.12.0 final?
 * Get started with the [Hello Scala 2.12 template](https://www.lightbend.com/activator/template/hello-scala-2_12) in [Typesafe Activator](https://www.lightbend.com/platform/getstarted)
 -->
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-M3.html)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.12.0-M3.html)
 * Bump the `scalaVersion` setting in your SBT-based project
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M3%22)
+* Obtain JARs via [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M3%22)

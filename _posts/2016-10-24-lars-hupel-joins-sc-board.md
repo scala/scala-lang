@@ -17,7 +17,7 @@ the sponsors' unanimous agreement — to invite a second community representativ
 to attend and vote in meetings.
 
 We decided to offer the choice of candidate to
-[Typelevel](http://typelevel.org/). This was a reflection of the incredible
+[Typelevel](https://typelevel.org/). This was a reflection of the incredible
 work Typelevel have done to nurture a friendly and open community of
 functionally-minded Scala users around a number of open-source projects. Their
 work is focussed around the Cats, Shapeless and Spire libraries, but has grown
@@ -43,7 +43,7 @@ Lars has made a number of significant contributions to the Scala community in
 the last few years. His open-source contributions started with work as a
 maintainer of [Scalaz](https://github.com/scalaz/scalaz), but he has since
 worked on the code verification tool, [Leon](http://leon.epfl.ch/), and
-[libisabelle](http://lars.hupel.info/libisabelle/), which facilitates
+[libisabelle](https://lars.hupel.info/libisabelle/), which facilitates
 interacting with the proof assistant, Isabelle, from Scala. All this experience
 gives Lars a deep understanding of Scala, both as a language and through some
 of its the most advanced applications.

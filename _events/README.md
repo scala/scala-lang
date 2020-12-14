@@ -46,5 +46,5 @@ Including a relative path to a logo looks like this:
     description: International Conference on Functional Programming
     start: 25 September 2013
     end: 27 October 2013
-    link-out: http://icfpconference.org/icfp2013/
+    link-out: https://icfpconference.org/icfp2013/
     ---

@@ -5,7 +5,7 @@ by: Sébastien Doeraene
 title: Scala.js no longer experimental
 ---
 
-Today, we [announced the release of Scala.js v0.6.0](http://www.scala-js.org/news/2015/02/05/announcing-scalajs-0.6.0/), the Scala to JavaScript compiler, and dropped the experimental flag associated to it.
+Today, we [announced the release of Scala.js v0.6.0](https://www.scala-js.org/news/2015/02/05/announcing-scalajs-0.6.0/), the Scala to JavaScript compiler, and dropped the experimental flag associated to it.
 Yes, you read it right: Scala.js is no longer experimental!
 After exactly 2 years of development, we finally feel comfortable calling it production-ready.
 
@@ -25,7 +25,7 @@ While that all sounds great, a compiler would be nothing without an ecosystem of
 You can use your favorite IDE to develop in Scala.js, and from experience, we can report that IntelliJ IDEA and Eclipse both provide a flawless development experience. Other editors should also work well.
 With Scala.js tooling, you get syntax highlighting, code completion (even for JavaScript libraries and the DOM!), jump-to-definition, and most other features you come to expect in a Scala tooling environment.
 After all, *Scala.js is just Scala*.
-Though, your IDE won't be able to run or debug Scala.js code. For that, you can use a browser, and you can even step through your Scala code because Scala.js emits [source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/).
+Though, your IDE won't be able to run or debug Scala.js code. For that, you can use a browser, and you can even step through your Scala code because Scala.js emits [source maps](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/).
 
 Building Scala.js libraries and applications is easy –  there is an sbt plugin, which gives you the same comfort and development speed as with Scala on the JVM.
 It can even run unit tests automatically with either Rhino, Node.js or PhantomJS, according to your needs.
@@ -35,7 +35,7 @@ They cover UI frameworks, statically-typed client-server communication, reactive
 Several popular Scala community libraries such as Shapeless and Scalaz cross-compile with Scala.js.
 
 Finally, we're proud that Scala.js has a thriving community of nice and helpful people.
-Ask questions [on StackOverflow](http://stackoverflow.com/questions/tagged/scala.js), discuss [on the mailing list](https://groups.google.com/forum/#!forum/scala-js), and discuss with us [in the Gitter chat room](https://gitter.im/scala-js/scala-js).
+Ask questions [on StackOverflow](https://stackoverflow.com/questions/tagged/scala.js), discuss [on the mailing list](https://groups.google.com/forum/#!forum/scala-js), and discuss with us [in the Gitter chat room](https://gitter.im/scala-js/scala-js).
 
 ## Why Scala.js is awesome
 
@@ -151,8 +151,8 @@ Though, rest assured! We're confident that Scala.js is otherwise stable and read
 
 There are three main ways to get started with Scala.js:
 
-* [The tutorial](http://www.scala-js.org/doc/tutorial.html)
-* The free e-book [Hands-on Scala.js](http://lihaoyi.github.io/hands-on-scala-js/)
+* [The tutorial](https://www.scala-js.org/doc/tutorial.html)
+* The free e-book [Hands-on Scala.js](https://lihaoyi.github.io/hands-on-scala-js/)
 * The online sandbox [Scala.jsFiddle](http://www.scala-js-fiddle.com/)
 
 So go ahead!

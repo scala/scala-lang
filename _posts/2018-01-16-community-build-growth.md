@@ -49,7 +49,7 @@ major source for developing the migration guidelines in the
 In the Scala 2.13 cycle, we expect the community build to play a
 similar role in transitioning first our own code, then the entire
 open-source ecosystem, to the
-[new collections library](http://www.scala-lang.org/blog/2017/02/28/collections-rework.html).
+[new collections library](https://www.scala-lang.org/blog/2017/02/28/collections-rework.html).
 We've also [begun using it](https://github.com/scala/community-build/issues/609) to
 gauge our progress on Java 9 support.
 

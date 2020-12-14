@@ -6,7 +6,7 @@ title: 47 Degrees Joins the Scala Center Advisory Board!
 ---
 
 Today, the Scala Center is very proud to welcome [47
-Degrees](http://www.47deg.com/), an independent functional programming
+Degrees](https://www.47deg.com/), an independent functional programming
 consultancy and certified Lightbend Partner, as an advisory board member. You
 might know 47 Degrees as the folks behind the popular [Scala
 Exercises](http://scala-exercises.47deg.com/), an interactive, web-based

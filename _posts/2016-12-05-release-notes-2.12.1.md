@@ -32,12 +32,12 @@ According to `git shortlog -sn --no-merges v2.12.0..v2.12.1`, 28 people contribu
 
 ## Scala 2.12 Notes
 
-The [release notes for Scala 2.12.0](http://scala-lang.org/news/2.12.0) have important information applicable to the whole 2.12 series.
+The [release notes for Scala 2.12.0](https://scala-lang.org/news/2.12.0) have important information applicable to the whole 2.12 series.
 
 ## Obtaining Scala
 
 Scala releases are available through a variety of channels, including (but not limited to):
 
 * Bump the `scalaVersion` setting in your sbt-based project
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.1.html)
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.1%22)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.12.1.html)
+* Obtain JARs via [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.1%22)
