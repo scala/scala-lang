@@ -80,13 +80,13 @@ We aim for following timeline:
 Starting from Scala 3.0.0, our version numbers will reflect the compatibility promises in terms of source, binary (.class files) and TASTy (.tasty files)
 
 As you may know, perhaps from [our previous blog post](https://www.scala-lang.org/blog/2020/11/19/scala-3-forward-compat.html), Scala 3 is backward binary compatible with Scala 2.13, as well as forward compatible under the `-Ytasty-reader` flag of Scala 2.13. We will keep this bidirectional compatibility until an unknown major or minor version of Scala 3 (excluded). We tentatively call that version Scala 3.T, although we would like to call it Scala 4, assuming that, by then, the Scala ecosystem refers to Scala 3 as just "Scala". Up until then, we will make the following compatibility guarantees:
-Patch versions are entirely forward and backward compatible, for source, binaries and TASty.
-Minor versions are backward binary and TASTy compatible. They may break sources in minor ways, in more or less obscure cases (this is similar to how any minor version of a library can potentially break source compatibility by adding a public method, or deprecating a method).
+* Patch versions are entirely forward and backward compatible, for source, binaries and TASty.
+* Minor versions are backward binary and TASTy compatible. They may break sources in minor ways, in more or less obscure cases (this is similar to how any minor version of a library can potentially break source compatibility by adding a public method, or deprecating a method).
 In the early life of Scala 3, we expect to publish minor versions at a fairly quick pace (one every 2-3 months), as we gather more experience with the features introduced in Scala 3. As time passes, minor releases will become scarcer, while we keep publishing patch releases.
 
 At some point, we will have strong confidence that the implementation has stabilized. We blindly estimate that this will take about 2 years. We will then release the version 3.T. This version will break backward binary and TASTy compatibility with earlier versions, including Scala 2.13. The purpose of this breakage will be twofold:
-Stabilize TASTy as a long-term compatibility format, based on the experience gathered until then.
-Redesign parts of the Scala standard library to be a better fit for a Scala 3-only ecosystem, taking advantage of Scala 3 features.
+* Stabilize TASTy as a long-term compatibility format, based on the experience gathered until then.
+* Redesign parts of the Scala standard library to be a better fit for a Scala 3-only ecosystem, taking advantage of Scala 3 features.
 From a user-visible language point of view, 3.T should be unremarkable. It would be similar to how Scala 2.13 was compared to Scala 2.12: an opportunity to review the standard library and internal implementation details, without changing the language itself in any significant way.
 
 Starting from 3.T, versions will evolve in a similar way as before, with frequent compatibility-preserving patch releases, and occasional minor releases. The difference is that we will rely on TASTy as our main medium to provide compatibility; therefore, minor releases will be allowed to break binary compatibility when necessary, although they will always preserve TASTy compatibility.
