@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: The Scala organisation
-title: Scala 3: Crossing the finish line
+title: Scala 3 - Crossing the finish line
 ---
 ## Scala 3: Crossing the finish line
 
