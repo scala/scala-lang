@@ -6,6 +6,6 @@ location: Boulder, CO, USA
 description: "(Truly) Advanced Scala & Other Functional Programming"
 start: 3 June 2018
 end: 5 June 2018
-link-out: http://lambdaconf.us
+link-out: https://lambdaconf.us
 ---
 

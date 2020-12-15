@@ -195,7 +195,7 @@ Milestones and release candidates, however, are **not** binary compatible with a
 
 Scala 2.12 is not and will not be binary compatible with the 2.11.x series.  This allows us to keep improving the Scala compiler and standard library.  We are working with the community to ensure that core projects in the Scala eco-system become available for 2.12.  Please refer to this growing [list of libraries and frameworks](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
 
-The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies apply to 2.12 as well.
+The [Scala 2.11.1 release notes](https://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies apply to 2.12 as well.
 
 
 ## Contributors
@@ -210,6 +210,6 @@ Improvements to these release notes [are welcome!](https://github.com/scala/make
 
 ## Obtaining Scala
 
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-RC1.html)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.12.0-RC1.html)
 * Bump the `scalaVersion` setting in your sbt-based project
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M5%22)
+* Obtain JARs via [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M5%22)

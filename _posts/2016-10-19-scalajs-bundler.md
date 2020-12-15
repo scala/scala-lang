@@ -39,7 +39,7 @@ single bundle whose format is executable by web browsers.
 ## Existing solutions
 
 There are mainly two existing approaches to tackle these challenges: using
-[WebJars](http://www.webjars.org/) or combining two build systems (one for the Scala
+[WebJars](https://www.webjars.org/) or combining two build systems (one for the Scala
 world and one for the npm world). Both of them require extra efforts from developers
 or have limitations (you can find more details about that in scalajs-bundler’s
 [documentation](https://scalacenter.github.io/scalajs-bundler/motivation.html)).

@@ -1,11 +1,11 @@
 ---
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://www.scala-lang.org/</id>
+<feed xmlns="https://www.w3.org/2005/Atom">
+  <id>https://www.scala-lang.org/</id>
   <title type="text" xml:lang="en">{{ site.title }} :: News</title>
-  <link type="application/atom+xml" href="http://www.scala-lang.org/feed/index.xml" rel="self"/>
-  <link type="text/html" href="http://www.scala-lang.org/news/" rel="alternate"/>
+  <link type="application/atom+xml" href="https://www.scala-lang.org/feed/index.xml" rel="self"/>
+  <link type="text/html" href="https://www.scala-lang.org/news/" rel="alternate"/>
 
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <author>
@@ -16,9 +16,9 @@
   {% for post in site.categories.news limit:20 %}
   <entry>
     <title>{{ post.title }}</title>
-    <link href="http://www.scala-lang.org{{ post.url }}"/>
+    <link href="https://www.scala-lang.org{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>http://www.scala-lang.org{{ post.id }}</id>
+    <id>https://www.scala-lang.org{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
   {% endfor %}

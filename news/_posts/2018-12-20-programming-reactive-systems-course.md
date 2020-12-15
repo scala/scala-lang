@@ -26,7 +26,7 @@ The course is taught by two experts of the field:
 - **Roland Kuhn**, former Akka team lead and co-author of the
   [Reactive Manifesto](https://www.reactivemanifesto.org/),
 - **Konrad Malawski**, long-time Akka team and
-  [Reactive Streams](http://www.reactive-streams.org/) expert group member.
+  [Reactive Streams](https://www.reactive-streams.org/) expert group member.
 
 In case you have followed the former “Principles of Functional Reactive
 Programming in Scala” course a couple of years ago, this course contains updated

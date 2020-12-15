@@ -20,10 +20,10 @@ intellijUrls:
 
 sbtUrls: 
   - os: linux
-    url: http://www.scala-sbt.org/download.html
+    url: https://www.scala-sbt.org/download.html
   - os: unix
-    url: http://www.scala-sbt.org/download.html
+    url: https://www.scala-sbt.org/download.html
   - os: macos
-    url: http://www.scala-sbt.org/download.html
+    url: https://www.scala-sbt.org/download.html
   - os: windows
-    url: http://www.scala-sbt.org/download.html
+    url: https://www.scala-sbt.org/download.html

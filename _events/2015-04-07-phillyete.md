@@ -6,5 +6,5 @@ location: Philadelphia
 description: ""
 start: 07 April 2014
 end: 08 April 2014
-link-out: http://phillyemergingtech.com
+link-out: https://phillyemergingtech.com
 ---

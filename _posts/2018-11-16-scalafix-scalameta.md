@@ -109,7 +109,7 @@ symbol `scala/Option.apply().`. Consult the new
 [`SemanticTree` docs](https://scalacenter.github.io/scalafix/docs/developers/semantic-tree.html#look-up-inferred-type-parameter)
 to learn more about using synthetics in the Scalafix API.
 
-Synthetics were contributed by [Max Ovsiankin](http://github.com/maxov) during
+Synthetics were contributed by [Max Ovsiankin](https://github.com/maxov) during
 his internship at Twitter this summer. Max did a great job and synthetics
 represent only a fraction of his contributions this summer.
 
@@ -134,7 +134,7 @@ Within a day after the Scalafix release,
 [Eugene Yokota](https://github.com/eed3si9n/) had already published a Scalafix
 rule `NoInfer`.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">wrote &#39;stricter Scala with -Xlint, -Xfatal-warnings, and Scalafix&#39;.<br><br>I am so excited about the Scalafix 0.8.0-RC1 that came out today that I wrote a custom Scalafix rule scalafix-noinfer. <a href="https://twitter.com/hashtag/scala?src=hash&amp;ref_src=twsrc%5Etfw">#scala</a> <a href="http://eed3si9n.com/stricter-scala-with-xlint-xfatal-warnings-and-scalafix">http://eed3si9n.com/stricter-scala-with-xlint-xfatal-warnings-and-scalafix</a> <a href="https://t.co/RNLfUBTOo4">pic.twitter.com/RNLfUBTOo4</a></p>&mdash; eugene yokota (@eed3si9n) <a href="https://twitter.com/eed3si9n/status/1042976853315780608?ref_src=twsrc%5Etfw">September 21, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">wrote &#39;stricter Scala with -Xlint, -Xfatal-warnings, and Scalafix&#39;.<br><br>I am so excited about the Scalafix 0.8.0-RC1 that came out today that I wrote a custom Scalafix rule scalafix-noinfer. <a href="https://twitter.com/hashtag/scala?src=hash&amp;ref_src=twsrc%5Etfw">#scala</a> <a href="https://eed3si9n.com/stricter-scala-with-xlint-xfatal-warnings-and-scalafix">https://eed3si9n.com/stricter-scala-with-xlint-xfatal-warnings-and-scalafix</a> <a href="https://t.co/RNLfUBTOo4">pic.twitter.com/RNLfUBTOo4</a></p>&mdash; eugene yokota (@eed3si9n) <a href="https://twitter.com/eed3si9n/status/1042976853315780608?ref_src=twsrc%5Etfw">September 21, 2018</a></blockquote>
 
 [Julien Tournay](https://github.com/jto) has also shared Scalafix migration
 rewrites for Scio v0.7, a Scala library from Spotify for Apache Beam and Google

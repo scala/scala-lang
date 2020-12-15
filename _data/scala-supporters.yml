@@ -4,13 +4,13 @@ supporters:
     url: https://www.epfl.ch
   - name: Goldman Sachs
     logo: /resources/img/frontpage/goldman-logo.png
-    url: http://www.goldmansachs.com
+    url: https://www.goldmansachs.com
   - name: 47 Degrees
     logo: /resources/img/frontpage/47deg-logo.png
-    url: http://www.47deg.com/
+    url: https://www.47deg.com/
   - name: Twitter
     logo: /resources/img/frontpage/twitter-logo.png
-    url: http://www.twitter.com
+    url: https://www.twitter.com
   - name: Spotify
     logo: /resources/img/frontpage/spotify-logo.png
     url: https://www.spotify.com/
@@ -29,4 +29,4 @@ maintainers:
     url: https://scala.epfl.ch/
   - name: Lightbend
     logo: /resources/img/frontpage/lightbend-logo.png
-    url: http://www.lightbend.com/
+    url: https://www.lightbend.com/

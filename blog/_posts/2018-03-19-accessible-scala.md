@@ -61,7 +61,7 @@ Halliday](https://gitlab.com/fommil), with help from [Rui
 Batista](https://github.com/ragb), was accepted as a recommendation by the
 board, with a unanimously positive vote from all the members, including [47
 Degrees](https://www.47deg.com/), [IBM](https://www.ibm.com/us-en/), [Goldman
-Sachs](http://www.goldmansachs.com/), [Lightbend](https://www.lightbend.com/),
+Sachs](https://www.goldmansachs.com/), [Lightbend](https://www.lightbend.com/),
 [Morgan Stanley](https://www.morganstanley.com/), [SAP](https://www.sap.com/),
 [Twitter](https://about.twitter.com/) and
 [Verizon](https://www.verizon.com/about/).

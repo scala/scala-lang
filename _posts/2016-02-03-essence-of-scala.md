@@ -11,10 +11,10 @@ incidental features evaporate and only the most concentrated essence
 remains? After doing this for 8 years we believe we have the answer:
 it's DOT, the calculus of dependent object types, that underlies Scala.
 
-A [paper on DOT](http://infoscience.epfl.ch/record/215280) will be
-presented in April at [Wadlerfest](http://events.inf.ed.ac.uk/wf2016),
+A [paper on DOT](https://infoscience.epfl.ch/record/215280) will be
+presented in April at [Wadlerfest](https://events.inf.ed.ac.uk/wf2016),
 an event celebrating Phil Wadler's 60th birthday. There's also a prior
-technical report ([From F to DOT](http://arxiv.org/abs/1510.05216))
+technical report ([From F to DOT](https://arxiv.org/abs/1510.05216))
 by Tiark Rompf and Nada Amin describing a slightly different version
 of the calculus. Each paper describes a proof of type soundness that
 has been machine-checked for correctness.

@@ -14,7 +14,7 @@ The collection strawman aims to be a replacement of the existing collections for
 Scala 2.13 standard library. Essentially, the goal is to make the API simpler, the
 implementation more maintainable and to have better lazy collections. You can read more
 about this effort in
-[this blog post](http://www.scala-lang.org/blog/2017/02/28/collections-rework.html).
+[this blog post](https://www.scala-lang.org/blog/2017/02/28/collections-rework.html).
 
 ## Current status
 

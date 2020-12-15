@@ -29,7 +29,7 @@ run and rely on nothing else for supporting separate compilation.
 The information present in Tasty trees can be used for many purposes.
 
  - The compiler uses it to support separate compilation.
- - Our [LSP-based language server](http://dotty.epfl.ch/docs/usage/ide-support.html) uses it to support hyperlinking, command completion, documentation,
+ - Our [LSP-based language server](https://dotty.epfl.ch/docs/usage/ide-support.html) uses it to support hyperlinking, command completion, documentation,
    and also for global operations such as find-references and renaming.
  - A build tool can use it to cross-build on different platforms and migrate code from one binary
    version to another.
@@ -61,7 +61,7 @@ be ported to it, so we need something different, and hopefully better.
 Another criticism of the current macros is that they
 lack _foundations_. Scala 3 has already a meta
 programming facility, with particularly well explored foundations. [Quotes and
-Splices](http://dotty.epfl.ch/docs/reference/metaprogramming/macros.html)
+Splices](https://dotty.epfl.ch/docs/reference/metaprogramming/macros.html)
 is a way to support _staging_ (in the sense of runtime code-generation)
 by adding just two operators to the
 language: Quote (`'`) to represent code expressions, and splice (`~`)
@@ -176,15 +176,15 @@ The Scala 3 language will also directly incorporate some constructs
 that so far required advanced macro code to define. In particular:
 
 - We model lazy implicits directly using
-[by-name parameters](http://dotty.epfl.ch/docs/reference/other-new-features/implicit-by-name-parameters.html) instead of through a macro.
+[by-name parameters](https://dotty.epfl.ch/docs/reference/other-new-features/implicit-by-name-parameters.html) instead of through a macro.
 
- - Native [type lambdas](http://dotty.epfl.ch/docs/reference/new-types/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
+ - Native [type lambdas](https://dotty.epfl.ch/docs/reference/new-types/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
 
  - There will be a way to do typeclass derivation a la [Kittens](https://github.com/milessabin/kittens), [Magnolia](https://github.com/propensive/magnolia), or [scalaz-deriving](https://gitlab.com/fommil/scalaz-deriving) that does not need macros. We are currently evaluating the alternatives. The primary goal is to develop a scheme that is easy to use and that performs well at both compile- and run-time. A second goal is generality, as long as it does not conflict with the primary goal.
 
 ## Meta Programming in the Large
 
-The future Scala 3 macro design is intended to replace the existing def macros and the `scala.reflect` infrastructure. But there is another meta programming system that is quite complementary to it: [Scalameta](http://scalameta.org/) provides high-quality syntactic and semantic analysis and code generation tools which are separate from the Scala compiler. As the name implies, Scalameta is run at the meta level, that is, it takes programs as input and produces syntactic or semantic information or rewritten programs as output. A macro system, by contrast, is integrated in the language and expands programs as they are compiled. There are potential synergies between the two projects. To name but two possibilities:
+The future Scala 3 macro design is intended to replace the existing def macros and the `scala.reflect` infrastructure. But there is another meta programming system that is quite complementary to it: [Scalameta](https://scalameta.org/) provides high-quality syntactic and semantic analysis and code generation tools which are separate from the Scala compiler. As the name implies, Scalameta is run at the meta level, that is, it takes programs as input and produces syntactic or semantic information or rewritten programs as output. A macro system, by contrast, is integrated in the language and expands programs as they are compiled. There are potential synergies between the two projects. To name but two possibilities:
 
  - Scalameta or projects derived from it such as [SemanticDB](https://github.com/scalameta/scalameta/blob/master/semanticdb/semanticdb3/semanticdb3.md) could obtain type information directly from Tasty, which would make them independent from specific compilers.
   - IDEs could use Tasty for single projects but refer to SemanticDB for more complicated multi-project and multi-language builds.

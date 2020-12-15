@@ -24,11 +24,11 @@ the top of everyone's shortlist was one person: Bill Venners. And we're
 delighted to announce today that Bill has accepted our invitation, and will be
 the community representative on the Advisory Board.
 
-Bill is best known as the author of the [ScalaTest](http://www.scalatest.org/)
+Bill is best known as the author of the [ScalaTest](https://www.scalatest.org/)
 testing framework and co-author of the Programming in Scala book, soon to have
 its third edition published. But he also develops the Scalactic library, is a
 frequent speaker at Scala conferences, and offers training in Scala through
-[Artima](http://www.artima.com/) and [Escalate
+[Artima](https://www.artima.com/) and [Escalate
 Software](http://www.escalatesoft.com/).
 
 Bill has a long history of involvement in Scala, and I remember back to the

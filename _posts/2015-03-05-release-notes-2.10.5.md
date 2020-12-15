@@ -50,7 +50,7 @@ The current release of Scala IDE supports any 2.10.x release, and is available o
 
 ### Release Notes for the Scala 2.10 Series
 
-The release notes for the Scala 2.10 series, which also apply to the current minor release, are available in the [release notes for Scala 2.10.4](http://scala-lang.org/news/2.10.4). They contain important information such as:
+The release notes for the Scala 2.10 series, which also apply to the current minor release, are available in the [release notes for Scala 2.10.4](https://scala-lang.org/news/2.10.4). They contain important information such as:
 
 * The specification of binary compatibility between minor releases.
 * Details on new features, important changes and deprecations in Scala 2.10.

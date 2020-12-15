@@ -364,7 +364,7 @@ eliminate boilerplate and make code clearer. Can this be abused,
 making code more obscure?  Absolutely, like every other powerful
 abstraction technique. To keep your code sane, please keep the
 [Principle of Least
-Power](http://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
+Power](https://www.lihaoyi.com/post/StrategicScalaStylePrincipleofLeastPower.html)
 in mind.
 
 ## Comments?

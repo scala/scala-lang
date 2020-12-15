@@ -115,8 +115,8 @@ Behavior that will lead to exclusion includes the following points, inspired by 
 Adapted from and/or inspired by multiple successful Codes of Conduct, including:
 
 * [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct)
-* [The Node.js Policy on Trolling](http://blog.izs.me/post/30036893703/policy-on-trolling)
-* [The Contributor Covenant v1.4.0](http://contributor-covenant.org/version/1/4/)
+* [The Node.js Policy on Trolling](https://blog.izs.me/post/30036893703/policy-on-trolling)
+* [The Contributor Covenant v1.4.0](https://contributor-covenant.org/version/1/4/)
 * [The Recurse Center's User Manual](https://www.recurse.com/manual#sec-environment)
 * [The 18F Code of Conduct](https://18f.gsa.gov/code-of-conduct/)
 * [Citizen Code of Conduct](http://citizencodeofconduct.org/)

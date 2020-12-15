@@ -249,7 +249,7 @@ stdlib and external libraries.
 [@olafurpg]: https://github.com/olafurpg
 [@xuwei-k]: https://github.com/xuwei-k
 
-[scala-native-doc-regular-expressions]: http://scala-native.readthedocs.io/en/latest/lib/javalib.html?highlight=regex#regular-expressions-java-util-regex
+[scala-native-doc-regular-expressions]: https://scala-native.readthedocs.io/en/latest/lib/javalib.html?highlight=regex#regular-expressions-java-util-regex
 
 [#539]: https://github.com/scala-native/scala-native/pull/539
 [#549]: https://github.com/scala-native/scala-native/pull/549

@@ -21,7 +21,7 @@ Thank you for being a part of the Scala tech evolution for the past 15 years, fo
 
 ## A little bit of history (or: Why only a Lausanne edition in 2019)
 
-Scala Days was first organised in [2010 at EPFL](http://days2010.scala-lang.org/node/136/) by the, at-the-time team, Prof. Odersky’s lab in Lausanne, Switzerland, with 155 participants and 33 talks over 2 days.
+Scala Days was first organised in [2010 at EPFL](https://days2010.scala-lang.org/node/136/) by the, at-the-time team, Prof. Odersky’s lab in Lausanne, Switzerland, with 155 participants and 33 talks over 2 days.
 
 In the last 10 years Scala Days grew to become the leading Scala conference, gathering 1500 participants each year, 70+ talks and various workshops on 2 continents and supported on average by 20 sponsors.
 

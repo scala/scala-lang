@@ -6,13 +6,13 @@ title: "Awesome Error Messages for Dotty"
 ---
 
 One thing that really excites me about being part of the core group of
-developers working on [Dotty](http://dotty.epfl.ch/) is my chance to
+developers working on [Dotty](https://dotty.epfl.ch/) is my chance to
 impact usability. A lot of thought has gone into designing Dotty to be as fast
 and structurally sound as possible.  Now comes the next step - adding a new
 level of usability for the compiler and the surrounding tools.
 
 We've looked at how other modern languages like
-[Elm](http://elm-lang.org/blog/compiler-errors-for-humans) and
+[Elm](https://elm-lang.org/blog/compiler-errors-for-humans) and
 [Rust](https://blog.rust-lang.org/2016/08/10/Shape-of-errors-to-come.html)
 handle compiler warnings and error messages, and come to realize that Dotty is
 actually in great shape to provide comprehensive and easy to understand error
@@ -48,7 +48,7 @@ This is helpful, but it has a couple of drawbacks:
 
 So what do you get with Dotty? This:
 
-![try-error](http://i.imgur.com/vNE706E.png)
+![try-error](https://i.imgur.com/vNE706E.png)
 
 All errors are now visually separated, and the output is colorized so that you
 can find your mistakes quickly.
@@ -57,7 +57,7 @@ Another one of our goals is to be able to properly explain things when asked.
 As such, if you pass the flag `-explain` when compiling the example above,
 you'll get a more verbose explanation:
 
-![try-error2](http://i.imgur.com/pNhgsdf.png)
+![try-error2](https://i.imgur.com/pNhgsdf.png)
 
 Mistyping members
 -----------------
@@ -73,7 +73,7 @@ Currently we offer you the following support when selecting on a type:
 
 Will yield:
 
-![mistype](http://i.imgur.com/iDnpB9O.png)
+![mistype](https://i.imgur.com/iDnpB9O.png)
 
 In the future we want to be able to offer you these types of suggestions on
 other things like missing imports.
@@ -83,7 +83,7 @@ Type diffs
 Sometimes when working with complex types - it's hard to see exactly where the
 error occurs. The Dotty compiler will in these cases give you a colored diff:
 
-![mismatch](http://i.imgur.com/vlmwrmD.png)
+![mismatch](https://i.imgur.com/vlmwrmD.png)
 
 It will not do this however if the differences are huge - but it will syntax
 highlight the found and expected type anyway.

@@ -5,7 +5,7 @@ by: Martin Odersky and Heather Miller
 title: The Scala Center
 ---
 
-Today we have launched a new initiative: [The Scala Center](http://scala.epfl.ch) will
+Today we have launched a new initiative: [The Scala Center](https://scala.epfl.ch) will
 act as an open source foundation for Scala.
 It will engage with developers in the open-source community in the effort to
 improve the language, its tools and its documentation. It will also help developers
@@ -23,9 +23,9 @@ half a million developers are using Scala.
 
 Scala is the technology of choice for a vibrant open-source ecosystem,
 including popular platforms and frameworks such as
-[Spark](http://spark.apache.org/), [Kafka](http://kafka.apache.org/),
-[Akka](http://akka.io), [Finagle](https://twitter.github.io/finagle),
-[Cats](http://typelevel.org/cats/), and
+[Spark](https://spark.apache.org/), [Kafka](https://kafka.apache.org/),
+[Akka](https://akka.io), [Finagle](https://twitter.github.io/finagle),
+[Cats](https://typelevel.org/cats/), and
 [Play](https://www.playframework.com/), to name just a few.
 
 The large user base and the diversity of projects built on Scala mean
@@ -69,7 +69,7 @@ using a package index. It will also step up to take over the evolution
 of projects of common interest, subject to its available resources.
 
 One specific project where it looks like we have enough interest and
-pledges of funding is [Scala.js](http://www.scala-js.org/).  Scala.js
+pledges of funding is [Scala.js](https://www.scala-js.org/).  Scala.js
 is developed so far by the lab at EPFL (specifically Sébastien Doeraene
 and Nicolas Stucki) with the help of outside contributors, including Lightbend.
 The Scala Center should be a

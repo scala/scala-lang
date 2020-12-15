@@ -7,8 +7,8 @@ permalink: /news/2.11.2/
 We are very pleased to announce the release of Scala 2.11.2!
 
 * Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.2.html)
-* Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.2%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.2%22)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.11.2.html)
+* Obtain it via [Maven Central](https://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.2%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.2%22)
 
 Scala 2.11.2 is a bugfix release that is binary compatible with previous releases in the Scala 2.11 series.
 The changes include:
@@ -30,7 +30,7 @@ A release of the Scala IDE that includes Scala 2.11.2 will be available shortly 
 
 ### Release Notes for the Scala 2.11 Series
 
-The release notes for the Scala 2.11 series, which also apply to the current minor release, are available in the [release notes for Scala 2.11.1](http://scala-lang.org/news/2.11.1). They contain important information such as:
+The release notes for the Scala 2.11 series, which also apply to the current minor release, are available in the [release notes for Scala 2.11.1](https://scala-lang.org/news/2.11.1). They contain important information such as:
 
 * The specification of binary compatibility between minor releases.
 * Details on new features, important changes and deprecations in Scala 2.11.

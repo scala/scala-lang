@@ -101,7 +101,7 @@ The Scala 3 compiler supports almost all of the Scala 2 language. For a detailed
 
 There are multiple aspects of performance:
 
-* **Compiler performance**. The performance of the Scala 3 compiler is being monitored continuously to prevent regressions (http://dotty-bench.epfl.ch). We will work on enabling benchmarks that compare the compiler performance between Scala 2.13 and Scala 3.
+* **Compiler performance**. The performance of the Scala 3 compiler is being monitored continuously to prevent regressions (https://dotty-bench.epfl.ch). We will work on enabling benchmarks that compare the compiler performance between Scala 2.13 and Scala 3.
 
 * **Runtime performance of generated code**. The code generation phase of the Scala 3 compiler is the same as in Scala 2.13, and also the ABI (the way Scala features are encoded in class files) in Scala 3.0 will be the same. We expect that code compiled with Scala 3 will perform the same, and we will work with the community to verify that this is the case. The Scala 2 optimizer will also be available in Scala 3.
 

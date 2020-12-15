@@ -6,5 +6,5 @@ location: Tokyo, Japan
 description: "The largest Scala conference in Japan."
 start: 25 February 2017
 end: 26 February 2017
-link-out: http://2017.scalamatsuri.org/
+link-out: https://2017.scalamatsuri.org/
 ---

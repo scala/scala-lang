@@ -29,7 +29,7 @@ We contributed [a dedicated documentation page](https://get-coursier.io/docs/oth
 In order to improve the experience of upgrading from sbt 1.2.x and Ivy-based resolution, we [tweaked resolution in coursier 2.0.0-RC3-4](https://github.com/coursier/coursier/pull/1348) with the help of Eugene Yokota to be more in line with Ivy, the former sbt behavior, and the [semantic versioning specification](https://semver.org).
 The documentation page should be updated accordingly soon.
 
-On top of that, Eugene Yokota recently wrote [a blog post](http://eed3si9n.com/dependency-resolver-semantics) comparing how versions are compared and reconciled in both Ivy and coursier.
+On top of that, Eugene Yokota recently wrote [a blog post](https://eed3si9n.com/dependency-resolver-semantics) comparing how versions are compared and reconciled in both Ivy and coursier.
 
 ## Strict conflict manager
 

@@ -11,7 +11,7 @@ We would like to highlight the following changes:
 * Exhaustivity checking for pattern matching is now much snappier &mdash; thank you @gbasler! ([SI-9181](https://issues.scala-lang.org/browse/SI-9181))
 * A 300x more embeddable Scala REPL, brought to you by a team effort with Apache Spark. Thank you @ScrapCodes, @retronym &amp; co! ([#4548](https://github.com/scala/scala/pull/4548), [#4563](https://github.com/scala/scala/pull/4563))
 * Scala also &lt;3 INDYs -- experiment with all our favorite new Java 8 features [as follows](https://github.com/scala/make-release-notes/blob/2.11.x/experimental-backend.md) and get an exclusive sneak preview of 2.12.0-M2!
-* Oh, and [the spec](http://www.scala-lang.org/files/archive/spec/2.11/) is now much spiffier! Thanks, @soc!
+* Oh, and [the spec](https://www.scala-lang.org/files/archive/spec/2.11/) is now much spiffier! Thanks, @soc!
 
 <!--break-->
 
@@ -32,13 +32,13 @@ According to `git shortlog -sn --no-merges v2.11.6..v2.11.7`, 36 people contribu
 Scala releases are available through a variety of channels, including (but not limited to):
 
 * Get started with the [Hello Scala 2.11 template](https://www.lightbend.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://www.lightbend.com/platform/getstarted)
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.7.html)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.11.7.html)
 * Bump the `scalaVersion` setting in your SBT-based project
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.7%22)
+* Obtain JARs via [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.7%22)
 
 ### Scala 2.11 Notes
 
-The [release notes for Scala 2.11.1](http://scala-lang.org/news/2.11.1) have important information applicable to the whole 2.11 series, such as:
+The [release notes for Scala 2.11.1](https://scala-lang.org/news/2.11.1) have important information applicable to the whole 2.11 series, such as:
 
 * Details on new features, important changes and deprecations since Scala 2.10.
 * The specification of binary compatibility between minor releases.

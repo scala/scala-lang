@@ -8,8 +8,8 @@ discourse: true
 
 Over the past months I've been working on the new Scaladoc - and it's coming
 along nicely. Together with
-[@heathercmiller](http://twitter.com/heathercmiller) and
-[@vladureche](http://twitter.com/vladureche) we've overhauled the overall look
+[@heathercmiller](https://twitter.com/heathercmiller) and
+[@vladureche](https://twitter.com/vladureche) we've overhauled the overall look
 of Scaladoc as well as having added a bunch of useful features - like complete
 member search!
 
@@ -22,7 +22,7 @@ to do with the docs - and we'd love help! If that piques your interest - read on
 The new major version of Scala is scheduled for later this year, and currently
 its doc tool generates sites like this one:
 
-![Scala Collections](http://i.imgur.com/TOkD4JF.png)
+![Scala Collections](https://i.imgur.com/TOkD4JF.png)
 
 The new search functionality allows you to not only look for so called
 "top-level entities" (`class`, `trait`, `object` and `package`) but members like
@@ -31,7 +31,7 @@ big library like the collections - the results are shown almost
 instantaneously. Nevertheless, we've got a progress bar showing you something's
 actually happening:
 
-![Scala Collections](http://imgur.com/jLxcRpx.png)
+![Scala Collections](https://imgur.com/jLxcRpx.png)
 
 ## How does Scaladoc work? ##
 The Scaladoc tool is quite easy to understand - there are basically three things

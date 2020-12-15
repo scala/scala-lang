@@ -6,5 +6,5 @@ location: Lausanne, Switzerland
 description: ""
 start: 15 April 2010
 end: 16 April 2010
-link-out: http://days2010.scala-lang.org/node/136/
+link-out: https://days2010.scala-lang.org/node/136/
 ---

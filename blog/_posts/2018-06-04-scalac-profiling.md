@@ -289,7 +289,7 @@ time spent in asSeenFrom   : 2541823 spans, ()1299.199ms (4.7%) aggregate, 1238.
 or if expressions, and the compiler needs to lub (find the common type of a
 sequence of types -- also called finding "least upper bound" among some
 types). Eugene Yokota explains it well [in this well-aged blog
-post](http://eed3si9n.com/stricter-scala-with-ynolub).
+post](https://eed3si9n.com/stricter-scala-with-ynolub).
 
 `time spent in findmember` and its sister `time spent in findmembers` should
 be up in the profiles whenever you have deep class hierarchies and lots of

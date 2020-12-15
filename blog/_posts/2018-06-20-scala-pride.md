@@ -5,7 +5,7 @@ by: Heather Miller
 title: "Scala ❤️ Pride 2018"
 ---
 
-It's that time of year! Pride 2018. In honor of all of us Scalamaris that are advocates of or identify with the LGBT community–we have a little bit of Scala love for you. I've created special Pride Scala swirls for just about every pride flag I could think of. And perhaps the best part! They're all available as t-shirts, available on [Teespring](http://teespring.com). 100% of proceeds for t-shirt sales are donated to [the Trevor Project](https://www.thetrevorproject.org/). (Go check it out!)
+It's that time of year! Pride 2018. In honor of all of us Scalamaris that are advocates of or identify with the LGBT community–we have a little bit of Scala love for you. I've created special Pride Scala swirls for just about every pride flag I could think of. And perhaps the best part! They're all available as t-shirts, available on [Teespring](https://teespring.com). 100% of proceeds for t-shirt sales are donated to [the Trevor Project](https://www.thetrevorproject.org/). (Go check it out!)
 
 And don't forget, we're here for you. We love you, and you're one of us.
 

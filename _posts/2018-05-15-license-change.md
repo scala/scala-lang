@@ -40,7 +40,7 @@ However, if any disputes were ever to arise around past contributions, it helps 
 explicitly intended to contribute and that they declared to have the right to do so.
 
 A few good reads on this topic: [
-In Defense of Contributor License Agreements](https://julien.ponge.org/blog/in-defense-of-contributor-license-agreements/), [Apache contributors need not sign a CLA](http://apetro.ghost.io/apache-contributors-no-cla/).
+In Defense of Contributor License Agreements](https://julien.ponge.org/blog/in-defense-of-contributor-license-agreements/), [Apache contributors need not sign a CLA](https://apetro.ghost.io/apache-contributors-no-cla/).
 
 # Anything else?
 Please do read the [full license](https://www.apache.org/licenses/LICENSE-2.0.html). It may not sound like fun, but it will only take a few minutes.

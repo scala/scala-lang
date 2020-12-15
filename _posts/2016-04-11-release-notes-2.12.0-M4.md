@@ -12,7 +12,7 @@ For more details about what's new in this milestone, including some breaking cha
 
 In total, we merged [135 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M4), of which [16 are by new contributors](https://github.com/scala/scala/pulls?q=is%3Apr+milestone%3A2.12.0-M4+label%3Awelcome) -- welcome! This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M4%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
 
-We'd especially like to thank Felix Mulder for his [excellent work on the new Scaladoc interface](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4)! [Check it out!](http://www.scala-lang.org/files/archive/api/2.12.0-M4/)
+We'd especially like to thank Felix Mulder for his [excellent work on the new Scaladoc interface](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4)! [Check it out!](https://www.scala-lang.org/files/archive/api/2.12.0-M4/)
 
 
 Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org).
@@ -100,7 +100,7 @@ Milestone releases and release candidates, however, are **not** binary compatibl
 
 Scala 2.12 is not and will not be binary compatible with the 2.11.x series.  This allows us to keep improving the Scala compiler and standard library.  We are working with the community to ensure that core projects in the Scala eco-system become available for 2.12.  Please refer to this growing [list of libraries and frameworks](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
 
-The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies apply to 2.12 as well.
+The [Scala 2.11.1 release notes](https://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies apply to 2.12 as well.
 
 
 ## Contributors
@@ -115,6 +115,6 @@ Improvements to these release notes [are welcome!](https://github.com/scala/make
 
 ## Obtaining Scala
 
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-M4.html)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.12.0-M4.html)
 * Bump the `scalaVersion` setting in your SBT-based project
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M4%22)
+* Obtain JARs via [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M4%22)

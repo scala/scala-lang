@@ -9,7 +9,7 @@ other_releases: [
   ["maintenance_version", "Last 2.11.x maintenance release", 2.11.12, "November 9, 2017"],
   ["maintenance_version", "Last 2.10.x maintenance release", 2.10.7, "November 9, 2017"]
 ]
-requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires Java 8 or later, available <a href='http://www.java.com/'>here</a>."
+requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires Java 8 or later, available <a href='https://www.java.com/'>here</a>."
 license: <a href="https://www.scala-lang.org/license/">Apache License, Version 2.0</a>
 resources: [
   ["-main-unixsys", "scala-2.13.4.tgz", "https://downloads.lightbend.com/scala/2.13.4/scala-2.13.4.tgz", "Mac OS X, Unix, Cygwin", "21.91M"],

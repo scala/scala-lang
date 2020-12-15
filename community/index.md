@@ -12,7 +12,7 @@ The community is also the source of many libraries, tools, and other resources a
 ## Who's behind Scala?
 
 The Scala language and associated websites are cooperative projects of
-the [Scala Center](https://scala.epfl.ch) at [EPFL](http://epfl.ch),
+the [Scala Center](https://scala.epfl.ch) at [EPFL](https://epfl.ch),
 [Lightbend](https://www.lightbend.com), and the Scala community
 more broadly, with participation from many companies, organizations,
 and individuals.
@@ -24,9 +24,9 @@ outreach, and tooling.  Community participation in all of these
 efforts is strongly encouraged.
 
 Scala was created by
-[Prof. Martin Odersky](http://lampwww.epfl.ch/~odersky/).  Martin and
+[Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/).  Martin and
 his research group at EPFL remain heavily involved with the language,
-including developing [Dotty](http://dotty.epfl.ch), a
+including developing [Dotty](https://dotty.epfl.ch), a
 next-generation compiler for Scala.
 
 ## Forums / Mailing Lists
@@ -96,13 +96,13 @@ Examples include:
 
 Discord users can chat about Scala [via this link](https://discord.gg/scala).
 
-IRC users can chat about Scala on the [Scala IRC channel](http://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1) on Freenode: `irc://irc.freenode.net/scala`
+IRC users can chat about Scala on the [Scala IRC channel](https://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1) on Freenode: `irc://irc.freenode.net/scala`
 
 As with Gitter, the Discord and IRC channels are covered by the [Scala Code of Conduct](../conduct.html). Moderation is handled by community volunteers and by representatives of the Scala Center.
 
 ## User Groups
 
-Find your local Scala user group on [Scala Space](http://scala.space/) or on Meetup's [Scala meetup list](http://scala.meetup.com/).
+Find your local Scala user group on [Scala Space](http://scala.space/) or on Meetup's [Scala meetup list](https://scala.meetup.com/).
 
 Group organizers can talk to each other on [Scala User Group Organizers](https://www.meetup.com/Scala-User-Groups/).
 
@@ -121,11 +121,11 @@ for underrepresented groups, to improve diversity in the Scala community.
 
 ## Stack Overflow
 
-Scala is an active [topic on Stack Overflow](http://stackoverflow.com/questions/tagged/scala), a very popular programmer Q&A site.
+Scala is an active [topic on Stack Overflow](https://stackoverflow.com/questions/tagged/scala), a very popular programmer Q&A site.
 
 ## Reddit
 
-There is a large and active Scala community on the [/r/Scala](http://reddit.com/r/scala) subreddit.
+There is a large and active Scala community on the [/r/Scala](https://reddit.com/r/scala) subreddit.
 
 ## Sources of Scala News
 
@@ -136,7 +136,7 @@ Official:
 
 Community:
 
-* [Scala Times](http://scalatimes.com) weekly Scala newspaper
+* [Scala Times](https://scalatimes.com) weekly Scala newspaper
 * [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) weekly Scala newspaper
 * [Scala Love](https://scala.love/) Podcast about the Scala programming language and its community
 * [The Scala Logs](https://twitter.com/thescalalogs) Podcast with interviews with developers, open source contributors, subject matter experts, and the like
@@ -148,10 +148,10 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 ## Community-Powered Learning Resources
 
 * [Scala Exercises](http://scala-exercises.47deg.com/)
-* [Scala School](http://twitter.github.com/scala_school/)
-* [Scala Puzzlers](http://scalapuzzlers.com/)
+* [Scala School](https://twitter.github.com/scala_school/)
+* [Scala Puzzlers](https://scalapuzzlers.com/)
 * [Scala Cookbook](http://www.scalacookbook.com/)
-* [Interactive Tour](http://scalatutorials.com/tour)
+* [Interactive Tour](https://scalatutorials.com/tour)
 * [Functional programming course/exercises](https://github.com/dehun/learn-fp)
 * [Scala Online Courses](https://classpert.com/scala-programming)
 
@@ -161,24 +161,24 @@ Finding libraries:
 
 * [Scaladex](https://index.scala-lang.org), maintained by the Scala Center, is "an index of the known Scala ecosystem"
 * [Awesome Scala](https://github.com/lauris/awesome-scala) is "a community driven list of useful Scala libraries, frameworks and software"
-* [Typelevel.org](http://typelevel.org) provides an assortment of popular libraries and extensions to Scala.
+* [Typelevel.org](https://typelevel.org) provides an assortment of popular libraries and extensions to Scala.
 * [Trending Scala repositories](https://github.com/trending?l=scala&since=monthly) on GitHub
 
 Staying current:
 
-* [Scala Times](http://scalatimes.com) includes library releases
+* [Scala Times](https://scalatimes.com) includes library releases
 * [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) includes library releases
 
 ## Non-JVM platforms
 
 * [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
-* [Scala Native](http://www.scala-native.org) compiles Scala code to LLVM for native execution
-* [Scala on Android](http://scala-android.org) community site
+* [Scala Native](https://www.scala-native.org) compiles Scala code to LLVM for native execution
+* [Scala on Android](https://scala-android.org) community site
 
 ## Dotty
 
-* [Dotty](http://dotty.epfl.ch) is a next generation compiler for Scala, under development at EPFL
-    * [Dotty FAQ](http://dotty.epfl.ch/#why-dotty)
+* [Dotty](https://dotty.epfl.ch) is a next generation compiler for Scala, under development at EPFL
+    * [Dotty FAQ](https://dotty.epfl.ch/#why-dotty)
 
 ## The Scala Center
 
@@ -193,4 +193,4 @@ The [Phil Bagwell Memorial Scala Community Award](./phil-bagwell-award.html) is 
 
 Read-only archives of these retired groups remain available.
 
- * [scala-user](http://groups.google.com/group/scala-user), [scala-announce](http://groups.google.com/group/scala-announce), [scala-language](http://groups.google.com/group/scala-language), [scala-debate](http://groups.google.com/group/scala-debate), [scala-internals](http://groups.google.com/group/scala-internals), [scala-tools](http://groups.google.com/group/scala-tools), [scala-sips](http://groups.google.com/group/scala-sips)
+ * [scala-user](https://groups.google.com/group/scala-user), [scala-announce](https://groups.google.com/group/scala-announce), [scala-language](https://groups.google.com/group/scala-language), [scala-debate](https://groups.google.com/group/scala-debate), [scala-internals](https://groups.google.com/group/scala-internals), [scala-tools](https://groups.google.com/group/scala-tools), [scala-sips](https://groups.google.com/group/scala-sips)

@@ -85,7 +85,7 @@ addCompilerPlugin("ch.epfl.scala" %% "spores-serialization" % "0.4.3")
 ```
 
 For further information on how to use it and a specification of spores, check
-the [docs](http://scalacenter.github.io/spores/spores.html).
+the [docs](https://scalacenter.github.io/spores/spores.html).
 
 ## Next steps
 

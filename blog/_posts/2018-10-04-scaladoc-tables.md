@@ -93,7 +93,7 @@ Scala 2.12.8 will support the [escaping of the cell delimiter in cell content](h
 
 ### More Examples
 
-For a smorgasbord of examples take a look at [examples](http://janekdb.github.io/scala/PR-7247/scala/test/scaladoc/tables/code/index.html).
+For a smorgasbord of examples take a look at [examples](https://janekdb.github.io/scala/PR-7247/scala/test/scaladoc/tables/code/index.html).
 
 ### Dotty and Scala 3
 

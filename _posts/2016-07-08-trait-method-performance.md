@@ -103,7 +103,7 @@ simplified and incomplete. More details are available in the linked resources.
 
 My recommended reference for this first section is the talk "JVM Mechanics" by Doug Hawkins
 ([video](https://www.youtube.com/watch?v=E9i9NJeXGmM),
-[slides](http://www.slideshare.net/dougqh/jvm-mechanics-when-does-the)).
+[slides](https://www.slideshare.net/dougqh/jvm-mechanics-when-does-the)).
 
 First of all, JVM 8 uses two JIT compilers: C1 and C2. C1 is fast but performs only basic
 optimizations, in particular it does not perform speculative optimizations based on profiling
@@ -118,7 +118,7 @@ enough or that have long enough loops. There are two counters for each method:
 
 The decision to compile a method is based on these counters. A simplified (ignoring backwards
 branches), typical scenario: after 2000 invocations a method gets compiled by C1, after 15000 it
-gets re-compiled by C2 (see [this answer on SO](http://stackoverflow.com/a/35614237/248998) for more
+gets re-compiled by C2 (see [this answer on SO](https://stackoverflow.com/a/35614237/248998) for more
 details). Note that the C1-generated assembly is instrumented to update the two counters (and also
 to collect other profiling data that will be used by the C2 optimizer). After compiling a method,
 new invocations of the method will use the newly generated assembly.
@@ -139,7 +139,7 @@ many details of the `-XX:+PrintCompilation` output.
 ### Inlining
 
 For this section my reference s Aleksey Shipilёv's extensive post
-[The Black Magic of (Java) Method Dispatch](http://shipilev.net/blog/2015/black-magic-method-dispatch/).
+[The Black Magic of (Java) Method Dispatch](https://shipilev.net/blog/2015/black-magic-method-dispatch/).
 
 Inlining is fundamental because it acts as an enabler for most other optimizations. The reason is
 that inlining duplicates the code of a method into a specific environment, which allows the
@@ -148,7 +148,7 @@ scope of other optimizations, and that alone is, in many cases, enough reason to
 
 Both C1 and C2 perform inlining. The policy whether to inline a method is non-trivial and uses
 several heuristics (implemented in
-[bytecodeInfo.cpp](http://hg.openjdk.java.net/jdk8u/jdk8u/hotspot/file/f22b5be95347/src/share/vm/opto/bytecodeInfo.cpp),
+[bytecodeInfo.cpp](https://hg.openjdk.java.net/jdk8u/jdk8u/hotspot/file/f22b5be95347/src/share/vm/opto/bytecodeInfo.cpp),
 methods `should_inline`, `should_not_inline` and `try_to_inline`). A simplified summary:
 
 - Trivial methods (6 bytes by default, `MaxTrivialSize`) are always inlined.
@@ -310,7 +310,7 @@ could in principle find out that there is a single implementation of `addInherit
 
 We are still searching for an answer why 33e7106 caused a performance regression. Martin Thompson
 notes in a
-[blog post](http://mechanical-sympathy.blogspot.ch/2012/04/invoke-interface-optimisations.html)
+[blog post](https://mechanical-sympathy.blogspot.ch/2012/04/invoke-interface-optimisations.html)
 (dated 2012):
 
   > I have observed that when a class implements multiple interfaces, with multiple methods,
@@ -347,7 +347,7 @@ per additional interface remains. So this seems not to be the reason for the per
 ### Back to default methods
 
 Googling a little bit more about the performance of default methods, I found a relevant
-[post on SO](http://stackoverflow.com/questions/30312096/java-default-methods-is-slower-than-the-same-code-but-in-an-abstract-class)
+[post on SO](https://stackoverflow.com/questions/30312096/java-default-methods-is-slower-than-the-same-code-but-in-an-abstract-class)
 containing a nice benchmark.
 
 I simplified the example into the
@@ -531,15 +531,15 @@ observations.
 
 ## References
 
-Besides the [post](http://shipilev.net/blog/2015/black-magic-method-dispatch/) already mentioned,
-Aleksey Shipilёv's [blog](http://shipilev.net/) is an excellent resource for Java and JVM
+Besides the [post](https://shipilev.net/blog/2015/black-magic-method-dispatch/) already mentioned,
+Aleksey Shipilёv's [blog](https://shipilev.net/) is an excellent resource for Java and JVM
 intrinsics.
 
 The talk "JVM Mechanics" by Doug Hawkins was also mentioned above
 ([video](https://www.youtube.com/watch?v=E9i9NJeXGmM),
-[slides](http://www.slideshare.net/dougqh/jvm-mechanics-when-does-the)),
+[slides](https://www.slideshare.net/dougqh/jvm-mechanics-when-does-the)),
 it is a great overview on the JIT, inliner and optimizer. For an overview I can also recommend a
-[longer blog post](http://middlewaresnippets.blogspot.ch/2014/11/java-virtual-machine-code-generation.html)
+[longer blog post](https://middlewaresnippets.blogspot.ch/2014/11/java-virtual-machine-code-generation.html)
 by René van Wijk and a
 [shorter one](https://www.lmax.com/blog/staff-blogs/2016/03/05/observing-jvm-warm-effects/)
 by Mark Price focussing on the JIT compilers.
@@ -565,7 +565,7 @@ the situation before default methods were a common thing.
 A [gist](https://gist.github.com/rednaxelafx/1165804#file-notes-md) by Kris Mok explaining many
 details of the `-XX:+PrintCompilation` output and other details of the JIT process.
 
-The [glossary](http://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html) on the HotSpot
+The [glossary](https://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html) on the HotSpot
 wiki contains some useful nomenclature.
 
 Finally, a [slide deck](https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf) by Paul

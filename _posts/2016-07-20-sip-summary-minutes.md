@@ -6,7 +6,7 @@ title: "SIP Meeting Results: 2 SIPs Numbered and 3 SIPs Updated"
 ---
 
 Last week, the Scala Center ran its first SIP meeting under the [newly reformed SIP
-process](http://docs.scala-lang.org/sips/sip-submission.html), and we're happy
+process](https://docs.scala-lang.org/sips/sip-submission.html), and we're happy
 to report that several SIPs saw long-awaited decisions made, or received
 detailed feedback from the SIP committee!
 
@@ -28,7 +28,7 @@ the SIP. The two SIPs which received numbers (first-round accepted) include:
 * **[SIP-27 Trailing Commas](https://github.com/scala/scala.github.com/pull/533)**, Reviewer: Eugene Burmako ([review comments](https://github.com/scala/scala.github.com/pull/533#issuecomment-232959066))
 
 Two other passed their first iteration as proposed by [the new
-process](http://docs.scala-lang.org/sips/sip-submission.html):
+process](https://docs.scala-lang.org/sips/sip-submission.html):
 
 * **[SIP-25 Trait Parameters](https://docs.scala-lang.org/sips/trait-parameters.html)**, Reviewer: Adriaan Moors ([review comments](https://github.com/scala/scala.github.com/pull/428#issuecomment-233401911))
 * **[SIP-20 Improved Lazy Val Initialization](https://docs.scala-lang.org/sips/improved-lazy-val-initialization.html)**, Reviewer: Sébastien Doeraene ([review comments](https://github.com/scala/scala.github.com/pull/206#issuecomment-232939781))

@@ -6,8 +6,8 @@ title: "Scala 2.12.0-M1 is now available!"
 ---
 We are very pleased to announce the release of Scala 2.12.0-M1!
 
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-M1.html)
-* Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20AND%20v%3A2.12.0-M1)
+* Download a distribution from [scala-lang.org](https://scala-lang.org/download/2.12.0-M1.html)
+* Obtain it via [Maven Central](https://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20AND%20v%3A2.12.0-M1)
 
 Code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x (we do not guarantee this for experimental APIs, such as reflection).
 If not, [please file an issue](https://issues.scala-lang.org).
@@ -83,10 +83,10 @@ Deprecation is closely linked to source and binary compatibility. We say two ver
 The following modules have been removed from the Scala 2.12 distribution:
 
 * The Scala actors library is no longer released with Scala 2.12.
-  We recommend that you use the [Akka actors library](http://akka.io/) instead.
-  To migrate your code, follow the [Scala actors migration guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) before upgrading your project to Scala 2.12.
+  We recommend that you use the [Akka actors library](https://akka.io/) instead.
+  To migrate your code, follow the [Scala actors migration guide](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) before upgrading your project to Scala 2.12.
 * The Scala distribution archives and the `scala-library-all` maven dependency no longer inlcude Akka actors.
-  To use the Akka actors library, add it to your project [as a dependency](http://doc.akka.io/docs/akka/2.3.10/intro/getting-started.html).
+  To use the Akka actors library, add it to your project [as a dependency](https://doc.akka.io/docs/akka/2.3.10/intro/getting-started.html).
 * The continuations plugin is no longer shipped with the Scala 2.12 distribution.
 
 
@@ -117,7 +117,7 @@ A release of the Scala IDE for Eclipse for Scala 2.12 will be available together
 Note that for the current milestone (2.12.0-M1), the Scala IDE is not yet available.
 
 <!-- Notes from 2.11.0
-The Scala IDE with this release built in is [available from this update site](https://web.archive.org/web/20151026064959/http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/release/Kepler/SR2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is [available from this update site](https://web.archive.org/web/20151026064959/http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](https://www.eclipse.org/downloads/packages/release/Kepler/SR2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 -->
 
 
@@ -135,7 +135,7 @@ Note that milestone releases and release candidates are **not** binary compatibl
 #### Definition
 
 When two versions of Scala are binary compatible, it is safe to compile your project on one Scala version and link against another Scala version at run time.
-Safe run-time linkage (only!) means that the JVM does not throw a (subclass of) [`LinkageError`](http://docs.oracle.com/javase/7/docs/api/java/lang/LinkageError.html) when executing your program in the mixed scenario, assuming that none arise when compiling and running on the same version of Scala.
+Safe run-time linkage (only!) means that the JVM does not throw a (subclass of) [`LinkageError`](https://docs.oracle.com/javase/7/docs/api/java/lang/LinkageError.html) when executing your program in the mixed scenario, assuming that none arise when compiling and running on the same version of Scala.
 Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatibile.
 In other words, separate compilation on different binary compatible versions does not introduce problems compared to compiling and running everything on the same version of Scala.
 

@@ -101,7 +101,7 @@ add a couple of methods to `List[Try[A]]`.
 
 ### Find out more
 
-You can find more information about extension methods on [the dedicated documentation page](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html).
+You can find more information about extension methods on [the dedicated documentation page](https://dotty.epfl.ch/docs/reference/contextual/extension-methods.html).
 We also suggest that you read how they complement another new Scala 3 feature: [opaque types](https://dotty.epfl.ch/docs/reference/other-new-features/opaques.html).
 Later in this post we will see how they simplify a very common pattern: typeclasses.
 

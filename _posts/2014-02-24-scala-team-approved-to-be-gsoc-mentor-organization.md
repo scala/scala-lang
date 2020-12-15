@@ -7,7 +7,7 @@ author: "Tobias Schlatter"
 ---
 
 **This year the Scala team applied again for
-[Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2014),
+[Google Summer of Code](https://www.google-melange.com/gsoc/homepage/google/gsoc2014),
 and we're happy to announce that we have been approved to be mentoring organization!**
 
 ### What is Google Summer of Code
@@ -30,7 +30,7 @@ the provided list! We welcome any challenging project idea pertaining to
 Scala!
 
 The best place to propose and discuss your proposals is our
-["scala-language"](http://groups.google.com/group/scala-language) mailing list. This
+["scala-language"](https://groups.google.com/group/scala-language) mailing list. This
 way you will get quickly responses from the whole Scala community. If you know
 of a potential mentor, it also might be a good idea to also include them in
 your discussion on the scala-language mailing list. If not, don't be afraid to
@@ -44,8 +44,8 @@ of kind of projects we undertook in previous years.
 
 Please join us!
 
-[gsoc2014]: http://www.scala-lang.org/gsoc/2014/
-[gsoc2013]: http://www.scala-lang.org/news/2013/03/20/gsoc13.html
-[gsoc2012]: http://www.scala-lang.org/old/gsoc2012
-[gsoc2011]: http://www.scala-lang.org/old/gsoc2011
-[gsoc2010]: http://www.scala-lang.org/old/gsoc2010
+[gsoc2014]: https://www.scala-lang.org/gsoc/2014/
+[gsoc2013]: https://www.scala-lang.org/news/2013/03/20/gsoc13.html
+[gsoc2012]: https://www.scala-lang.org/old/gsoc2012
+[gsoc2011]: https://www.scala-lang.org/old/gsoc2011
+[gsoc2010]: https://www.scala-lang.org/old/gsoc2010

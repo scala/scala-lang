@@ -23,7 +23,7 @@ The Scala 2.10.0 codebase includes the following new features and changes:
 ### Value Classes
 
 A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
-See: http://docs.scala-lang.org/overviews/core/value-classes.html
+See: https://docs.scala-lang.org/overviews/core/value-classes.html
 
 ### Implicit Classes
 
@@ -36,7 +36,7 @@ Example:
 
     val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")
 
-See more: http://docs.scala-lang.org/overviews/core/string-interpolation.html
+See more: https://docs.scala-lang.org/overviews/core/string-interpolation.html
 
 ### Futures and Promises
 
@@ -44,7 +44,7 @@ Asynchronously get some JSON:
 
     for (req <- WS.url(restApiUrl).get()) yield (req.json \ "users").as[List[User]] (uses play!)
 
-See more: http://docs.scala-lang.org/overviews/core/futures.html
+See more: https://docs.scala-lang.org/overviews/core/futures.html
 
 ### Dynamic and applyDynamic
 
@@ -79,7 +79,7 @@ See: https://docs.scala-lang.org/sips/modularizing-language-features.html
 
 ### Parallel Collections are now configurable with custom thread pools
 
-See: http://docs.scala-lang.org/overviews/parallel-collections/overview.html
+See: https://docs.scala-lang.org/overviews/parallel-collections/overview.html
 
 ### Akka Actors now part of the distribution
 
@@ -109,7 +109,7 @@ See: https://docs.google.com/document/d/1Z1VhhNPplbUpaZPIYdc0_EUv5RiGQ2X4oqp0i-v
 
 #### Macros
 
-See: http://docs.scala-lang.org/overviews/macros/overview.html
+See: https://docs.scala-lang.org/overviews/macros/overview.html
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them! A lot of developers have already come up with very cool applications for them.
 
@@ -361,7 +361,7 @@ The contractiveness requirement for implicit method definitions has been dropped
 
 #### Java Generics
 
-Scala now supports [Java generic types](http://en.wikipedia.org/wiki/Generics_in_Java) by default:
+Scala now supports [Java generic types](https://en.wikipedia.org/wiki/Generics_in_Java) by default:
 
 * A generic type in Java such as `ArrayList<String>` is translated to a generic type in Scala: `ArrayList[String]`.
 * A wildcard type such as `ArrayList<? extends Number>` is translated to `ArrayList[_ <: Number]`. This is itself a shorthand for the existential type `ArrayList[T] forSome { type T <: Number }`.

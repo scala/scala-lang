@@ -10,7 +10,7 @@ Hash: SHA256
 
 From today, 2018-02-13, we will sign Scala release artifacts with a [new 4096-bit key](http://pgp.mit.edu/pks/lookup?op=vindex&search=0xA9052B1B6D92E560) with fingerprint `3D3A 4396 458F D629 DEAE 0F88 E9DF 618B B41F 2BCE`.
 
-Our old 2048-bit key [B41F2BCE](http://pgp.mit.edu/pks/lookup?op=vindex&search=0xE9DF618BB41F2BCE), originally created on 2013-04-30, will no longer be used.
+Our old 2048-bit key [B41F2BCE](https://pgp.mit.edu/pks/lookup?op=vindex&search=0xE9DF618BB41F2BCE), originally created on 2013-04-30, will no longer be used.
 
 The team member responsible for a new Scala release will continue to use their personal key to sign the git tag from which the release is built.
 

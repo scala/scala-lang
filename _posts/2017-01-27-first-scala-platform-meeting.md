@@ -24,7 +24,7 @@ Committee will vote its final acceptance.
   
 The meeting focused around two main topics:
   
-* Discussing high-level aspects of the [Scala Platform Process](http://scala-lang.org/blog/2016/11/28/spp.html); and
+* Discussing high-level aspects of the [Scala Platform Process](https://scala-lang.org/blog/2016/11/28/spp.html); and
 * Reviewing three Community proposals to add projects to the Scala Platform.  These are:
     * [Better-files](https://contributors.scala-lang.org/t/adding-better-files-to-the-scala-platform/340/15):
       A new IO module to replace the one in the standard library.

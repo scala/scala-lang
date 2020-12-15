@@ -15,7 +15,7 @@ We believe that standing in solidarity with this movement requires us to do the 
 
 We encourage each of our Scala colleagues to do more than just declare that they are not racist. If anything, this moment demonstrates that we have been complacent for too long and it is time to be actively anti-racist. Anti-racism isn’t a soundbite or a hashtag-- it requires work: both internally with deep self-reflection on our own biases; and externally with people we know and love, which might be uncomfortable.
 
-We stand before you committed to manifesting the transformative change we hope to see in the Scala community as a whole. To quote [Code2040.org](http://www.code2040.org/pillars-on-race) “this is not a sprint, it is not a marathon, it is a relay race”, and we believe it is our turn to take the baton. 
+We stand before you committed to manifesting the transformative change we hope to see in the Scala community as a whole. To quote [Code2040.org](https://www.code2040.org/pillars-on-race) “this is not a sprint, it is not a marathon, it is a relay race”, and we believe it is our turn to take the baton. 
 
 More concretely, to honor our commitment, within the next 6 months, our team will take these actions:
 

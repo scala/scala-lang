@@ -12,14 +12,14 @@ The Scala Center team sincerely thanks Lars for his great work since the beginni
 
 We are grateful that Rob has accepted our invitation, and we look forward to working together during his time on the board.
 
-Rob, aka [tpolecat](http://tpolecat.github.io/about.html), is familiar in the Scala community for:
+Rob, aka [tpolecat](https://tpolecat.github.io/about.html), is familiar in the Scala community for:
 
 * his leadership role in [Typelevel](https://typelevel.org/)
 * his popular open-source projects, including [Doobie](https://github.com/tpolecat/doobie) (a database library) and [Tut](https://github.com/tpolecat/tut) (a tool for machine-checked documentation)
 * his many conference talks on pure-functional programming
 * his tireless efforts on [Gitter](https://gitter.im/scala/scala) and IRC to help newcomers learn Scala and functional programming
 
-At his day job, he writes Scala code at the [Gemini Observatory](http://www.gemini.edu/), supporting astronomy research. 🔭✨
+At his day job, he writes Scala code at the [Gemini Observatory](https://www.gemini.edu/), supporting astronomy research. 🔭✨
 
 Keep reading to find out more about the Community Representative role, how to get in touch, share your opinion or submit a proposal.
 
