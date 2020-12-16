@@ -1,14 +1,14 @@
 ---
 layout: blog-detail
 post-type: blog
-by: The Scala organisation
+by: The Scala Center team, and community contributors
 title: Scala 3 - Crossing the finish line
 ---
 ## Scala 3: Crossing the finish line
 
 #### Buckle up, we are a couple of days away from the Scala 3 Developer’s Preview!
 
-As of 18th December we invite the community (users, contributors, maintainers, library authors, users, companies) to give one last big push of feedback to help the Scala org. cross the finish line. 
+As of 18th December we invite the community (users, contributors, maintainers, library authors, users, companies) to give one last big push of feedback to help the teams working on the Scala 3 release cross the finish line. 
 
 After 8 years of developing Dotty, numerous feedback loops, and improvements, we are entering a “photo finish” phase, transforming Dotty to Scala 3.
 
@@ -49,14 +49,13 @@ The following sections will follow the previous update on Scala 3 release effort
 * acknowledge the questions that were raised, 
 * describe the process we see ahead of us, 
 * share decisions that we worked on, 
-* help us at the Scala organisation easier followup with our communication on different channels,
+* help us followup easier with our communication on different channels,
 
 but not necessarily give all the answers, mostly because we can’t predict with certainty how things will play out. This is why we need you to continue this exciting journey with us to discover and create the new chapter, and we promise we would be as attentive and responsive as possible.
 
 #### What is “Developer’s Preview”? 
 
-The Scala organisation, in consultation with community partners and contributors, decided to allow some more time for adjustments before cutting the final Scala 3-RC1, originally scheduled for end of this year.
-
+In consultation with community partners and contributors, decided to allow some more time for adjustments before cutting the final Scala 3-RC1, originally scheduled for end of this year.
 
 We will release Scala 3-M3 as a “Developer’s Preview”. Over the coming month, we will invite feedback from developers while striving to keep the API unchanged. If no major problem is raised between 18th Dec 2020 and mid Jan 2021 we will proceed to release RC1, aiming the end of January 2021, with the same API.
 
@@ -94,4 +93,4 @@ Starting from 3.T, versions will evolve in a similar way as before, with frequen
 Eventually, a new era will come, and we will have to break TASTy compatibility to move forward. That is when Scala 4 would come. Our goal is for that to happen at least 10 years from now.
 
 #### Where to next?
-For the Scala organisation our priority in the next month is to collect, analyze, and respond to the feedback we get from you through the [Scala 3 Developer’s Preview satisfaction survey](https://docs.google.com/forms/d/e/1FAIpQLSflVmTu9lhrtnSTh2tKAjUGrt3WvEgwlDqZg66O3EVSXd1aJg/viewform?usp=sf_link) as well as from different other platforms you may choose to share your input. We thank you again for taking your time and helping Scala advance.
+Our priority in the next month is to collect, analyze, and respond to the feedback we get from you through the [Scala 3 Developer’s Preview satisfaction survey](https://docs.google.com/forms/d/e/1FAIpQLSflVmTu9lhrtnSTh2tKAjUGrt3WvEgwlDqZg66O3EVSXd1aJg/viewform?usp=sf_link) as well as from different other platforms you may choose to share your input. We thank you again for taking your time and helping Scala advance.
