@@ -73,7 +73,7 @@ The Scala community, in particular library authors, are used to following new Sc
 The road ahead is clear, and the more feedback we get in the next round the faster we can move forward. Here’s what we would be able to achieve, if no major issues arise:
 ![Scala 3 timeline](/resources/img/blog/scala-3-timeline.png)
 We aim for following timeline:
-- Scala 3-RC1 to be released by mid January;
+- Scala 3-RC1 to be released by mid January
 - Scala 3.0 to be released by early-mid 2021
 #### What do the versions mean? What happens in the 3.x era?
 Starting from Scala 3.0.0, our version numbers will reflect the compatibility promises in terms of source, binary (.class files) and TASTy (.tasty files)
