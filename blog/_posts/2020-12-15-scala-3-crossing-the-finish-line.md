@@ -68,7 +68,7 @@ Normally, this step will not affect your day-to-day work much, except if you ded
 
 The Scala community, in particular library authors, are used to following new Scala releases closely. For example, maintainers started cross-building their code against Scala 2.12 and 2.13 (some even to 2.11), when the first release candidate of Scala 2.13 came out. Some even jumped on the release train much earlier. Scala 3 will be no different: the general mechanics of cross-building are unchanged. Luckily, for most libraries, adding Scala 3 support to your build will be smooth sailing. Despite some syntactic changes, the Dotty compiler has Scala 2 compatibility mode that allows it to process most of the Scala 2 code that is out in the wild. It also offers a `-rewrite` flag that changes syntax in a backward-compatible fashion. The main challenge is macros; those differ significantly between Scala 2 and 3. However, if you don't have hand-rolled macros in your code but use those defined in a library, chances are that the library is already published for Scala 3, so things will just work.
 
-#### When do we expect 3.0? Is there a timeline we can count on? <br>Or: what happens after 18th Dec, and what is the next important date?</br>
+#### When do we expect 3.0? Is there a timeline we can count on? <br>Or: what happens after 18th Dec, and what is the next important date?
 
 The road ahead is clear, and the more feedback we get in the next round the faster we can move forward. Here’s what we would be able to achieve, if no major issues arise:
 ![Scala 3 timeline](/resources/img/blog/scala-3-timeline.png)
