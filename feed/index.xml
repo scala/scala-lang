@@ -1,7 +1,7 @@
 ---
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="https://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://www.scala-lang.org/</id>
   <title type="text" xml:lang="en">{{ site.title }} :: News</title>
   <link type="application/atom+xml" href="https://www.scala-lang.org/feed/index.xml" rel="self"/>
