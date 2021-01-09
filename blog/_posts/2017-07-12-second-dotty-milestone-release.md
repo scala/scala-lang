@@ -31,7 +31,7 @@ The [previous technology preview](/blog/2017/05/31/first-dotty-milestone-release
 [Trait Parameters](https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html),
 [Enumerations](https://dotty.epfl.ch/docs/reference/enums/enums.html),
 [Algebraic Data Types](https://dotty.epfl.ch/docs/reference/enums/adts.html),
-[By-Name Implicits](https://dotty.epfl.ch/docs/reference/other-new-features/implicit-by-name-parameters.html).
+[By-Name Implicits](https://dotty.epfl.ch/docs/reference/contextual/by-name-context-parameters.html).
 
 This technology preview is geared towards improving stability and reliability. It includes:
 

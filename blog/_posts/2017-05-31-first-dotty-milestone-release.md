@@ -69,7 +69,7 @@ This technology preview demonstrates new language features planned for Scala 3:
   - [Trait Parameters](https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html)
   - [Enumerations](https://dotty.epfl.ch/docs/reference/enums/enums.html)
   - [Algebraic Data Types](https://dotty.epfl.ch/docs/reference/enums/adts.html)
-  - [By-Name Implicits](https://dotty.epfl.ch/docs/reference/other-new-features/implicit-by-name-parameters.html)
+  - [By-Name Implicits](https://dotty.epfl.ch/docs/reference/contextual/by-name-context-parameters.html)
 
 We also ship with tools that help you try out the Dotty platform:
 

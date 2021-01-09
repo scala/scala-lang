@@ -176,7 +176,7 @@ The Scala 3 language will also directly incorporate some constructs
 that so far required advanced macro code to define. In particular:
 
 - We model lazy implicits directly using
-[by-name parameters](https://dotty.epfl.ch/docs/reference/other-new-features/implicit-by-name-parameters.html) instead of through a macro.
+[by-name parameters](https://dotty.epfl.ch/docs/reference/contextual/by-name-context-parameters.html) instead of through a macro.
 
  - Native [type lambdas](https://dotty.epfl.ch/docs/reference/new-types/type-lambdas.html) reduce the need for [kind projector](https://github.com/non/kind-projector).
 
