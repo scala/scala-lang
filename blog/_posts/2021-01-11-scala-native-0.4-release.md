@@ -33,7 +33,7 @@ enablePlugins(ScalaNativePlugin)
 
 The above settings, when running `sbt test`, would result in the tests being compiled using the SN plugin and executed 
 with a native implementation of the JUnit framework. What is more you can easily run your tests both on JVM and Native 
-with a simple adjustment to your build, you can find guide how to do this in [Scala Native reference]("https://scala-native.readthedocs.io/en/latest/")
+with a simple adjustment to your build, you can find guide how to do this in [Scala Native reference](https://scala-native.readthedocs.io/en/latest/)
 
 Unfortunately, SN is still single-threaded, so if your tests are using concurrency you will need to add the `junit-async`
 runtime to your build. It would use the default `ExecutionContext` on the JVM and it would mock concurrent execution in an
