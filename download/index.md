@@ -5,7 +5,7 @@ release_version: 2.13.4
 release_date: "November 19, 2020"
 show_resources: "true"
 other_releases: [
-  ["maintenance_version", "Latest 2.12.x maintenance release", 2.12.12, "July 13, 2020"],
+  ["maintenance_version", "Latest 2.12.x maintenance release", 2.12.13, "January 12, 2021"],
   ["maintenance_version", "Last 2.11.x maintenance release", 2.11.12, "November 9, 2017"],
   ["maintenance_version", "Last 2.10.x maintenance release", 2.10.7, "November 9, 2017"]
 ]
