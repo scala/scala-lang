@@ -22,10 +22,28 @@ which is now perceived by most of the developers as deprecated. We can proudly a
 compatible with Scala versions up to 2.12 and 2.13.
 We also continue to support Scala 2.11 for which we have added new features and fixed known bugs.
 
-## Cross-platform testing using JUnit
-Scala Native now comes with JUnit support out of the box, this means that you can write tests in the same way you would do for a Java project.
-To enable JUnit tests, all you need to do is to add the two following lines to your `build.sbt`.
+## Reflective instantiation
+The SN plugin removes unused definitions of classes, methods, and variables during the linking stage to reduce the size of the output binary.
+This used to make using reflective calls very difficult. Fortunately, this is a thing of the past---with release 0.4.0 we
+introduced a subset of reflective operations allowed to be used.
 
+It would not be wise to enable reflective calls to all definitions as we would need to load many more objects and increase the size of the binary.
+That’s why you need to signal to the compiler which classes can use this mechanism - it can be done by marking your `trait`, `class`, or `object`
+with the `@EnableReflectiveInstantation` annotation.
+It will also make all of its descendants able to be reflectively instantiated.
+
+For definitions marked with this annotation Scala Native plugin would generate definitions of static class initializers
+and invoke them just before the `main` method in your final program.
+This step would register `LoadableModuleClass` and `InstantiableClass` instances for objects and classes
+accordingly - they could be accessed later via the provided `scalanative.reflect.Reflect` object methods in your code.
+
+## Cross-platform testing using JUnit
+Until recently, all our internal tests were executed using our own native testing framework, mainly due to lack of proper
+reflection support in Scala Native. After getting rid of this blocker, we have decided to use JUnit instead and in 
+result implemented the native plugin for this framework. Thanks to this change you are also able to also use it in your own projects.  
+Naturally you are still able to use any other testing framework, as long as it supports Scala Native.
+
+To enable Native JUnit plugin tests, all you need to do is to add the two following lines to your `build.sbt`.
 ```scala
 addCompilerPlugin("org.scala-native" % "junit-plugin" % SNVersion cross CrossVersion.full)
 enablePlugins(ScalaNativePlugin)
@@ -50,21 +68,6 @@ libraryDependencies += "org.scala-native" %%% "junit-async-native" % SNVersion
 > Scala Native assumes single-threaded execution by default and does not provide multi-threaded programming, 
 > however it’s possible to use C libraries to get access to multi-threading and synchronization primitives. 
 > You need to remember it is not officially supported at the moment.
-
-## Reflective instantiation
-The SN plugin removes unused definitions of classes, methods, and variables during the linking stage to reduce the size of the output binary.
-This used to make using reflective calls very difficult. Fortunately, this is a thing of the past---with release 0.4.0 we
-introduced a subset of reflective operations allowed to be used.
-
-It would not be wise to enable reflective calls to all definitions as we would need to load many more objects and increase the size of the binary.
-That’s why you need to signal to the compiler which classes can use this mechanism - it can be done by marking your `trait`, `class`, or `object`
-with the `@EnableReflectiveInstantation` annotation.
-It will also make all of its descendants able to be reflectively instantiated.
-
-For definitions marked with this annotation Scala Native plugin would generate definitions of static class initializers
-and invoke them just before the `main` method in your final program.
-This step would register `LoadableModuleClass` and `InstantiableClass` instances for objects and classes
-accordingly - they could be accessed later via the provided `scalanative.reflect.Reflect` object methods in your code.
 
 
 ## Interop changes
@@ -133,12 +136,12 @@ val fnFromPtr:       = CFuncPtr.fromPtr[CFuncPtr0[CInt]](fnPtr)
 ```
 
 ## New Garbage Collector
-This release also adds a new Garbage Collector - Commix, a parallel mark, and concurrent sweep GC, based on the well known Immix GC.
+This release also adds a new Garbage Collector - Commix, a parallel mark and concurrent sweep GC, based on the well known Immix GC.
 It reduces GC pause times by utilizing additional processor cores during mark and sweep phases. It was added soon after 
 the 0.4.0-M2 release, but was only available via an unofficial snapshot.
 
 Remember, it **does not** mean Scala Native is starting to officially support multi-threading! 
-Commix GC was written in C and uses `pthread` to work. In case if your application needs concurrency support you may try experimental library [scala-native-loop](https://github.com/scala-native/scala-native-loop)
+Commix GC was written in C and uses `pthread` to work. In case if your application needs concurrency support you may try the experimental library [scala-native-loop](https://github.com/scala-native/scala-native-loop)
 
 ## Sbt plugin changes
 ### The introduction of the NativeConfig
@@ -165,7 +168,7 @@ nativeLTO := "none"
 ```
 
 ### Cross compiling
-By default Scala Native has always compiled and optimized the resulting assembly based on host architecture and its operating system.
+By default, Scala Native has always compiled and optimized the resulting assembly based on host architecture and its operating system.
 Although it worked well when you were running a program on the same machine, it caused many problems when trying to run it anywhere else.
 With the latest release you're able to define a custom target for compiler by providing [LLVM style TargetTriple](https://clang.llvm.org/docs/CrossCompilation.html) in your config.
 
@@ -181,6 +184,11 @@ However, the number of supported architectures and operating systems would defin
 > Upcoming release will no longer support SBT 0.13.x
 
 ## Changes to intermediate representation
+
+> NIR (Native Intermediate Representation) is a format used to represent a subset of LLVM instructions, types and values,
+> augmented with a number of high-level primitives that are necessary to efficiently compile Scala,
+> you can read more about in Scala Native [documentation](https://scala-native.readthedocs.io/en/latest/contrib/nir.html).
+
 The new release includes many necessary changes to NIR, starting with the way Strings are stored, 
 through adding new literals like `Val.ClassOf` and last, but not least support for default methods. 
 The last one was introduced to support Scala 2.12 behavior which compiles trait methods as default methods in Java interfaces.
@@ -188,11 +196,7 @@ The last one was introduced to support Scala 2.12 behavior which compiles trait 
 Although we always try to keep our NIR changes to absolute minimum, the number of removed or no longer used primitives used 
 in the previous version forced us to break backward binary compatibility. This decision allows us to remove number of known bugs
 and easier maintenance in the future. NIR format might still change in following minor releases of Scala Native, but they
-would be fully backward-compatible since now on.
-
-> NIR (Native Intermediate Representation) is a format used to represent a subset of LLVM instructions, types and values, 
-> augmented with a number of high-level primitives that are necessary to efficiently compile Scala,
-> you can read more about in Scala Native [documentation](https://scala-native.readthedocs.io/en/latest/contrib/nir.html).
+would be fully backward-compatible from now on.
 
 ## How about existing libraries?
 Scala Native had many [libraries](https://index.scala-lang.org/search?targetTypes=native&scalaNativeVersions=0.4.0-M2) compatible with SN `0.4.0-M2`.
@@ -209,7 +213,7 @@ may improve its overall quality.
 Even though resources allocated into this project were quite limited, we have managed to fulfill all our goals announced 
 last year in [Scala Native Next Steps](https://contributors.scala-lang.org/t/scala-native-next-steps/4216). Currently, this
 project is developed by a single engineer working full-time, thanks to our cooperation with VirtusLab. 
-We also appreciate and would like to thank our community contributorsfor the huge amounts of work they have done for this project.
+We also appreciate and would like to thank our community contributors for the huge amounts of work they have done for this project.
 
 There are many plans for the future of Scala Native, few things you can expect is for sure integration with the Scala 3 
 and better support for different architectures, like ARM. Stay tuned for next updates...
