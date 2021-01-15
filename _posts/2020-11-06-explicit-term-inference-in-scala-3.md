@@ -49,14 +49,14 @@ To remember the syntax, notice how `collectSucceeded` follows the object on whic
 Extension methods can have type parameters as well:
 
 ```scala
-extension[A] (ls: List[Try[A]]) def collectSucceeded: List[A] =
+extension [A] (ls: List[Try[A]]) def collectSucceeded: List[A] =
   ls.collect { case Success(x) => x }
 ```
 
 Finally, you can add several methods without repeating the `extension` declaration:
 
 ```scala
-extension[A] (ls: List[Try[A]]):
+extension [A] (ls: List[Try[A]])
   def collectSucceeded: List[A] =
     ls.collect { case Success(x) => x }
   def getIndexOfFirstFailure: Option[Int] =
@@ -194,7 +194,7 @@ Then you can import it using a wildcard:
 import Context.given
 ```
 Or by making the type that you are bringing in scope explicit:
-```
+```scala
 import Context.{given ExecutionContext}
 ```
 This allows you to have more control over imports without relying on instance names.
@@ -253,7 +253,7 @@ import java.util.Optional
 
 object OptionalConversion:
 
-  given [A] as Conversion[Optional[A], Option[A]]:
+  given [A]: Conversion[Optional[A], Option[A]] with
     def apply(in: Optional[A]): Option[A] =
       if in.isPresent then Some(in.get())
       else None
@@ -336,8 +336,8 @@ object Show:
   def from[A](f: A => String): Show[A] = new Show[A]:
     extension (a: A) def show: String = f(a)
 
-  given[A: Show] as Show[List[A]]:
-    extension (ls: List[A]) def show: String = ls.map(_.show).mkString(",")
+  given[A: Show]: Show[List[A]] with
+    extension (ls: List[A]) def show: String = ls.map(_.show).mkString(", ")
 ```
 
 To use it we need to import the interface and define an instance:
