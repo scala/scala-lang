@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Wojciech Mazur, Scala Center
-title: A sneak peek into upcoming Scala Native 0.4 release
+title: A sneak peek into the Scala Native 0.4 release
 ---
 
 If you ever thought about running your perfect Scala code in an environment other than JVM, you've probably already met
@@ -10,17 +10,15 @@ Scala Native---a project with a promise of instant startup, low memory usage, in
 thanks to [Interflow optimizer](https://scala-native.readthedocs.io/en/latest/blog/interflow.html).
 
 However, since there have been no release in over a year, you may ask yourself---is this project even alive?<br>
-With the long-awaited release it proves it is! Today we are going to discuss the most impacting new features and changes 
-coming in this new major release. We will start with changes according to Scala Native compiler plugin, especially supported Scala versions and cross-platform testing.
+With the long-awaited release 0.4.0 it proves it is! 
+Today we are going to discuss the most impacting new features and changes coming in this new major release.
+We will start with changes according to Scala Native compiler plugin, especially supported Scala versions and cross-platform testing.
 Next we will talk about changes to C interoperability and SBT build that need to be taken into account since when working this release.
 Last, but not least we will discuss why we needed to break binary compatibility with previous versions.
 
-
 ## Support for latest Scala 2 versions
-Scala Native finally starts catching up with the rest of the Scala ecosystem, because until now there was only support for Scala 2.11,
-which is now perceived by most of the developers as deprecated. We can proudly announce that Scala Native is now 
-compatible with Scala versions up to 2.12 and 2.13.
-We also continue to support Scala 2.11 for which we have added new features and fixed known bugs.
+Until now Scala Native supported only Scala 2.11, which is now perceived by most of the developers as deprecated.
+We can proudly announce that Scala Native is now compatible with Scala versions 2.12.13 and 2.13.4, in addition to the 2.11.12 with known bugs fixed.
 
 ## Reflective instantiation
 The SN plugin removes unused definitions of classes, methods, and variables during the linking stage to reduce the size of the output binary.
@@ -29,13 +27,10 @@ introduced a subset of reflective operations allowed to be used.
 
 It would not be wise to enable reflective calls to all definitions as we would need to load many more objects and increase the size of the binary.
 That’s why you need to signal to the compiler which classes can use this mechanism - it can be done by marking your `trait`, `class`, or `object`
-with the `@EnableReflectiveInstantation` annotation.
-It will also make all of its descendants able to be reflectively instantiated.
+with the `@EnableReflectiveInstantation` annotation. It will also make all of its descendants able to be reflectively instantiated.
 
-For definitions marked with this annotation Scala Native plugin would generate definitions of static class initializers
-and invoke them just before the `main` method in your final program.
-This step would register `LoadableModuleClass` and `InstantiableClass` instances for objects and classes
-accordingly - they could be accessed later via the provided `scalanative.reflect.Reflect` object methods in your code.
+Annotated classes and modules, having a concrete implementation, can be accessed via the provided `scalanative.reflect.Reflect` API.
+If you have used Scala.js before, it may seem similar to you, as the new implementation uses exactly the same API.
 
 ## Cross-platform testing using JUnit
 Until recently, all our internal tests were executed using our own native testing framework, mainly due to lack of proper
@@ -45,8 +40,8 @@ Naturally you are still able to use any other testing framework, as long as it s
 
 To enable Native JUnit plugin tests, all you need to do is to add the two following lines to your `build.sbt`.
 ```scala
-addCompilerPlugin("org.scala-native" % "junit-plugin" % SNVersion cross CrossVersion.full)
-enablePlugins(ScalaNativePlugin)
+addCompilerPlugin("org.scala-native" % "junit-plugin" % nativeVersion cross CrossVersion.full)
+libraryDependencies += "org.scala-native" %%% "junit-runtime" % nativeVersion % "test"
 ```
 
 The above settings, when running `sbt test`, would result in the tests being compiled using the SN plugin and executed 
@@ -68,7 +63,6 @@ libraryDependencies += "org.scala-native" %%% "junit-async-native" % SNVersion
 > Scala Native assumes single-threaded execution by default and does not provide multi-threaded programming, 
 > however it’s possible to use C libraries to get access to multi-threading and synchronization primitives. 
 > You need to remember it is not officially supported at the moment.
-
 
 ## Interop changes
 ### Including Native Code in your Application or Library
@@ -116,13 +110,13 @@ Instead, you can use an implicit conversion method taking arbitrary `scala.Funct
 
 ```scala
 type Callback = CFuncPtr1[CInt,Unit]
-def registerCallback(cFn: Callback) = extern
+def registerCallback(cFn: Callback): Unit = extern
 def fn(n: CInt): Unit = ???
 
 registerCallback(CFuncPtr1.fromScalaFunction(fn))
 registerCallback(fn)
 
-registerCallback{n: CInt => println("hello native")}
+registerCallback { (n: CInt) => println("hello native") }
 ```
 
 It is now also possible to work with an arbitrary pointer and convert it to `CFuncPtrN` that can be called in your Scala code, 
@@ -130,18 +124,18 @@ or to convert your function to any pointer if your native library needs this.
 
 ```scala
 import scala.scalanative.unsafe.Ptr
-val cFnPtr: CFuncPtr0[CInt] = ???
-val fnPtr: Ptr[Byte]    = CFuncPtr.toPtr(cFnPtr)
-val fnFromPtr:       = CFuncPtr.fromPtr[CFuncPtr0[CInt]](fnPtr)
+val cFnPtr: CFuncPtr0[CInt]    = ???
+val fnPtr: Ptr[Byte]           = CFuncPtr.toPtr(cFnPtr)
+val fnFromPtr: CFuncPtr0[CInt] = CFuncPtr.fromPtr[CFuncPtr0[CInt]](fnPtr)
 ```
 
 ## New Garbage Collector
 This release also adds a new Garbage Collector - Commix, a parallel mark and concurrent sweep GC, based on the well known Immix GC.
-It reduces GC pause times by utilizing additional processor cores during mark and sweep phases. It was added soon after 
+It reduces GC pause times by utilizing additional processor cores during mark and sweep phases. It was added soon after
 the 0.4.0-M2 release, but was only available via an unofficial snapshot.
 
-Remember, it **does not** mean Scala Native is starting to officially support multi-threading! 
-Commix GC was written in C and uses `pthread` to work. In case if your application needs concurrency support you may try the experimental library [scala-native-loop](https://github.com/scala-native/scala-native-loop)
+While the GC itself will use multiple threads, Scala Native still does not support multi-threading in the application code.
+Commix GC was written in C and uses `pthread` to work. In case your application needs concurrency support, you may try the experimental library [scala-native-loop](https://github.com/scala-native/scala-native-loop)
 
 ## Sbt plugin changes
 ### The introduction of the NativeConfig
@@ -172,8 +166,8 @@ By default, Scala Native has always compiled and optimized the resulting assembl
 Although it worked well when you were running a program on the same machine, it caused many problems when trying to run it anywhere else.
 With the latest release you're able to define a custom target for compiler by providing [LLVM style TargetTriple](https://clang.llvm.org/docs/CrossCompilation.html) in your config.
 
-For example, if you're working on Linux and would like to create perfectly suited assembly for some specific version of MacOS without changing your whole build,
-you can use ad-hoc sbt setting:
+For example, if you're working on Linux and would like to create an executable suitable for MacOS without changing your whole build,
+you can use the following sbt setting:
 ```bash
 sbt 'set nativeConfig ~= {_.withTargetTriple("x86_64-apple-darwin<version>")}' myApp/nativeLink
 ```
@@ -200,9 +194,19 @@ would be fully backward-compatible from now on.
 
 ## How about existing libraries?
 Scala Native had many [libraries](https://index.scala-lang.org/search?targetTypes=native&scalaNativeVersions=0.4.0-M2) compatible with SN `0.4.0-M2`.
-Unfortunately, the new release is not binary compatible with them, and you'll need to wait until authors will republish them with the new SN version.
+Unfortunately, the new release is not binary compatible with them, and you'll need to wait until authors will republish them using Scala Native 0.4.0.
 
 However, with increasing interest in running the Scala code natively, it should happen quickly after the release.
+
+## Contributing
+Contributors are always welcome, you can support the Scala Native project in multiple ways.
+The most straightforward way of doing so is by working on the plugin itself, take a look at our [contributors’ guide](https://scala-native.readthedocs.io/en/latest/contrib/index.html).
+
+More importantly however, it is to make our ecosystem more native-compatible, this means developing tools and libraries that are not dependent from Java internals.
+For example, you can take a look at [sconfig](https://github.com/ekrich/sconfig) - a Scala port of the widely used Lightbend Config
+
+> Only Scala source files can be used by the Scala Native plugin.
+> Distributed libraries contain `.nir` files in their JARs which are crucial in making the SN plugin able to link them correctly.
 
 ## Summary
 I think you can agree with me now, that Scala Native is starting to keep up with the rest of the Scala ecosystem.
@@ -218,20 +222,4 @@ We also appreciate and would like to thank our community contributors for the hu
 There are many plans for the future of Scala Native, few things you can expect is for sure integration with the Scala 3 
 and better support for different architectures, like ARM. Stay tuned for next updates...
 
-## Contributing
-Contributors are always welcome, you can support the Scala Native project in multiple ways. 
-The most straightforward way of doing so is by working on the plugin itself, take a look at our [contributors’ guide](https://scala-native.readthedocs.io/en/latest/contrib/index.html). 
-
-More importantly however, it is to make our ecosystem more native-compatible, this means developing tools and libraries that are not dependent from Java internals.
-For example, you can take a look at [sconfig](https://github.com/ekrich/sconfig) - a Scala port of the widely used Lightbend Config
-
-> Only Scala source files can be used by the Scala Native plugin.
-> Distributed libraries contain `.nir` files in their JARs which are crucial in making the SN plugin able to link them correctly.
-
-## Early Access
-If you’d like to try the upcoming release of Scala Native by yourself, unfortunately, snapshots of SN are not published yet, but you can build them locally. You're only 3 steps away:
-1. Download latest build form [Scala Native Repo](https://github.com/scala-native/scala-native)
-2. Run `sbt +publishLocal`
-3. Add SN plugin as described in the [docs](https://scala-native.readthedocs.io/en/latest/) with `0.4.0-SNAPSHOT` version or the one you've optionally set within `build.sbt`
-
-...and you are ready to start hacking :) 
+> For more changes coming in Scala Native 0.4.0 check out [changelog website](https://scala-native.readthedocs.io/en/latest/changelog.html)
