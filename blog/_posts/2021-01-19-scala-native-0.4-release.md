@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Wojciech Mazur, Scala Center
-title: A sneak peek into the Scala Native 0.4 release
+title: Scala Native 0.4.0 is here!
 ---
 
 If you ever thought about running your Scala code in an environment other than JVM, you've probably already met
@@ -10,7 +10,8 @@ Scala Native---a project with a promise of instant startup, low memory usage, in
 thanks to [Interflow optimizer](https://scala-native.readthedocs.io/en/latest/blog/interflow.html).
 
 However, since there have been no release in over a year, you may ask yourself---is this project even alive?
-The long-awaited release 0.4.0 proves it is! 
+The long-awaited release 0.4.0, brining support for Scala 2.12 and 2.13, proves it is!
+
 Today we are going to discuss the most exciting new features and major changes coming in this release.
 We will start with changes made to Scala Native compiler plugin, especially supported Scala versions and cross-platform testing.
 Next we will talk about changes to C interoperability and SBT build that need to be taken into account since when working this release.
@@ -36,7 +37,8 @@ If you have used Scala.js before, it may seem similar to you, as the new impleme
 Until recently, all our internal tests were executed using our own native testing framework, mainly due to lack of proper
 reflection support in Scala Native. After getting rid of this blocker, we have decided to use JUnit instead and as a result
 implemented the native plugin for this framework. Thanks to this change you are also able to also use it in your own projects.  
-Naturally you are still able to use any other testing framework, as long as it supports Scala Native.
+Naturally you are still able to use any other testing framework supporting Scala Native. 
+As an example Scala Native soon would be supported in [uTest](https://github.com/lihaoyi/utest) and [scalatest](https://github.com/scalatest/scalatest).
 
 To enable Native JUnit plugin tests add the two following lines to your `build.sbt`.
 ```scala
@@ -59,10 +61,6 @@ libraryDependencies += "org.scala-native" %% "junit-async" % SNVersion
 // for Native submodule
 libraryDependencies += "org.scala-native" %%% "junit-async-native" % SNVersion
 ```
-
-> Scala Native assumes single-threaded execution by default and does not provide multi-threaded programming, 
-> however it’s possible to use C libraries to get access to multi-threading and synchronization primitives. 
-> You need to remember it is not officially supported at the moment.
 
 ## Interop changes
 ### Including Native Code in your Application or Library
@@ -203,11 +201,11 @@ Contributors are always welcome. Tou can support the Scala Native project in mul
 The most straightforward way of doing so is by working on the plugin itself. 
 Take a look at our [contributors’ guide](https://scala-native.readthedocs.io/en/latest/contrib/index.html).
 
-More importantly however, it is to make our ecosystem more native-compatible. This means developing tools and libraries that are not dependent from Java internals.
-For example, you can take a look at [sconfig](https://github.com/ekrich/sconfig) - a Scala port of the widely used Lightbend Config library.
-
-> Only Scala source files can be used by the Scala Native plugin.
-> Distributed libraries contain `.nir` files in their JARs which are crucial in making the SN plugin able to link them correctly.
+More importantly however, it is to make our ecosystem more native-compatible. 
+Scala Native compiler does not operate on JVM bytecode, but on its own intermediate representation distributed in `*.nir` files in resulting JAR.
+Library dependencies not compiled with Scala Native would fail when linking. You can help by developing tools
+and libraries not using Java standard library. For example, you can take a look at [sconfig](https://github.com/ekrich/sconfig) - 
+a Scala port of the widely used Lightbend Config library.
 
 ## Summary
 Scala Native is starting to keep up with the rest of the Scala ecosystem.
@@ -217,8 +215,9 @@ may improve its overall quality.
 
 Even though resources allocated into this project were quite limited, we have managed to fulfill all our goals announced 
 last year in [Scala Native Next Steps](https://contributors.scala-lang.org/t/scala-native-next-steps/4216). Currently, this
-project is developed by a single engineer working full-time, thanks to our cooperation with VirtusLab. 
-We also appreciate and would like to thank our community contributors for the huge amounts of work they have done for this project.
+project is developed by a single engineer working full-time, thanks to our cooperation with VirtusLab, and with guidance of Sébastien Doeraene, 
+author of Scala.js. We also appreciate and would like to thank our community contributors for the huge amounts of work 
+they have done for this project.
 
 We have many plans for the future of Scala Native. Our top priorities include Scala 3 support and support for more architectures such as ARM
 Stay tuned for the next updates...
