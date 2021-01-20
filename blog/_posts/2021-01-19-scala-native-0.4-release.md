@@ -201,7 +201,7 @@ Even though resources allocated into this project were quite limited, we have ma
 last year in [Scala Native Next Steps](https://contributors.scala-lang.org/t/scala-native-next-steps/4216). Currently, this
 project is developed by a single engineer working full-time, thanks to our cooperation with VirtusLab, and with guidance of Sébastien Doeraene, 
 author of Scala.js. We also appreciate and would like to thank our community contributors for the huge amounts of work 
-they have done for this project.
+they have done for this project, and a special thanks to a contributor who also donated significant personal funds and propelled our efforts in 2020.
 
 We have many plans for the future of Scala Native. Our top priorities include Scala 3 support and support for more architectures such as ARM
 Stay tuned for the next updates...
