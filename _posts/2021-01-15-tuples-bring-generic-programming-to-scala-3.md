@@ -37,27 +37,27 @@ Shapeless](https://underscore.io/books/shapeless-guide/) proposes the following
 simple example:
 
 ```scala
-case class Employee(name: String, number: Int, manager: Boolean) case
-class IceCream(name: String, numCherries: Int, inCone: Boolean)
+case class Employee(name: String, number: Int, manager: Boolean)
+case class IceCream(name: String, numCherries: Int, inCone: Boolean)
 ```
 
 If you are implementing an operation such as serializing instances of these
 types to CSV or JSON, you will realize that the logic is exactly the same and
 you will want to implement it only once. This is equivalent on defining the
 serialization algorithm for the `(String, Int, Boolean)` HList, assuming that
-you can reduce both case classes to it.
+you can map both case classes to it.
 
 # A simple CSV encoder
 
-Let's consider a simple CSV encoder for our Employee and IceCream case classes.
+Let's consider a simple CSV encoder for our `Employee` and `IceCream` case classes.
 Each record, or line, of a CSV file is a sequence of values separated by a
 delimiter, usually a comma or a semicolon. In Scala we can represent each value
 as text, using the `String` type, and thus each record can be a list of values,
 with type `List[String]`. Therefore, in order to encode case classes to CSV, we
 need to extract each field of the case class and to turn it into a `String`,
-before collecting all the fields in a list.  In this setting, `Employee` and
+and then collect all the fields in a list.  In this setting, `Employee` and
 `IceCream` could be treated in the same way, because they can be simply be seen
-as a `(String, Int, Boolean)` which need to be transformed into a
+as a `(String, Int, Boolean)` which needs to be transformed into a
 `List[String]`.  We will first see how to handle this simple scenario before
 briefly looking at how to obtain a tuple from a case class.
 
@@ -95,9 +95,10 @@ object BaseEnc:
 ## Recursion!
 
 Now that all these tools are in place, let's focus on the hard part:
-implementing the actual transformation. Similarly to how you may be used to
-recurse on lists, on tuples we need to manage two scenarios: the base case
-(`EmptyTuple`) and the inductive case (`NonEmptyTuple`).
+implementing the transformation of a tuple with an arbitrary number of elements
+into a `List[String]`. Similarly to how you may be used to recurse on lists, on
+tuples we need to manage two scenarios: the base case (`EmptyTuple`) and the
+inductive case (`NonEmptyTuple`).
 
 In the following snippet, I prefer to use the [context bound
 syntax](https://dotty.epfl.ch/docs/reference/contextual/context-bounds.html)
@@ -119,7 +120,7 @@ object TupleEnc:
 ```
 When recursion hits the last element of the tuple, we use its encoder,
 otherwise we invoke the encoder for the first element and for the tail of the
-tuple and combine the the two lists using the concatenation operator.
+tuple and combine the two lists using the concatenation operator.
 
 We can create an entrypoint function and test this implementation:
 ```scala
