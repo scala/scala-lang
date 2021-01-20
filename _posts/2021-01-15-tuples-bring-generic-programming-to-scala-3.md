@@ -70,33 +70,41 @@ us to define recursive operations on tuples.
 
 ## Set up
 
-Let's define the `Enc[A]` type-class, which describes the capability of values
-of type `A` to be converted into `List[String]`:
+Let's define the `RowEncoder[A]` type-class, which describes the capability of
+values of type `A` to be converted into `Row`. To encode a type to `Row`, we
+first need to convert each field of the type into a `String`: this capability
+is defined by the `FieldEncoder` type-class.
 
 ```scala
-trait Enc[A]:
-  def toCsv(a: A): List[String]
+trait FieldEncoder[A]:
+  def encodeField(a: A): String
+
+type Row = List[String]
+
+trait RowEncoder[A]:
+  def encodeRow(a: A): Row
 ```
 
 We can then add some instances for our base types:
 
 ```scala
-object BaseEnc:
-  given Enc[Int] with
-    def toCsv(x: Int) = List(x.toString)
+object BaseEncoders:
+  given FieldEncoder[Int] with
+    def encodeField(x: Int) = x.toString
 
-  given Enc[Boolean] with
-    def toCsv(x: Boolean) = List(if x then "true" else "false")
+  given FieldEncoder[Boolean] with
+    def encodeField(x: Boolean) = if x then "true" else "false"
 
-  given Enc[String] with
-    def toCsv(x: String) = List(x)
+  given FieldEncoder[String] with
+    def encodeField(x: String) = x
+end BaseEncoders
 ```
 
 ## Recursion!
 
 Now that all these tools are in place, let's focus on the hard part:
 implementing the transformation of a tuple with an arbitrary number of elements
-into a `List[String]`. Similarly to how you may be used to recurse on lists, on
+into a `Row`. Similarly to how you may be used to recurse on lists, on
 tuples we need to manage two scenarios: the base case (`EmptyTuple`) and the
 inductive case (`NonEmptyTuple`).
 
@@ -104,28 +112,30 @@ In the following snippet, I prefer to use the [context bound
 syntax](https://dotty.epfl.ch/docs/reference/contextual/context-bounds.html)
 even if I need a handle for the instances because it concentrates all the
 constraints in the type parameter list (and I do not need to come up with any
-name).  After this personal preference disclaimer, let's see the two cases:
+name). After this personal preference disclaimer, let's see the two cases:
 
 ```scala
-object TupleEnc:
+object TupleEncoders:
   // Base case
-  given [T: Enc]: Enc[T *: EmptyTuple] with
-    def toCsv(oneElement: T *: EmptyTuple) =
-      summon[Enc[T]].toCsv(oneElement.head)
+  given RowEncoder[EmptyTuple] with
+    def encodeRow(empty: EmptyTuple) =
+      List.empty
 
   // Inductive case
-  given [H: Enc, T <: NonEmptyTuple: Enc]: Enc[H *: T] with
-    def toCsv(tuple: H *: T) =
-      summon[Enc[H]].toCsv(tuple.head) ++ summon[Enc[T]].toCsv(tuple.tail)
+  given [H: FieldEncoder, T <: Tuple: RowEncoder]: RowEncoder[H *: T] with
+    def encodeRow(tuple: H *: T) =
+      summon[FieldEncoder[H]].encodeField(tuple.head) :: summon[RowEncoder[T]].encodeRow(tuple.tail)
+end TupleEncoders
 ```
-When recursion hits the last element of the tuple, we use its encoder,
-otherwise we invoke the encoder for the first element and for the tail of the
-tuple and combine the two lists using the concatenation operator.
+
+If the tuple is empty, we produce an empty list. To encode a non-empty tuple we
+invoke the encoder for the first element and we prepend the result to the `Row`
+created by the encoder of the tail of the tuple.
 
 We can create an entrypoint function and test this implementation:
 ```scala
-def tupleToCsv[X <: Tuple: Enc](tuple: X): List[String] =
-  summon[Enc[X]].toCsv(tuple)
+def tupleToCsv[X <: Tuple : RowEncoder](tuple: X): List[String] =
+  summon[RowEncoder[X]].encodeRow(tuple)
 
 tupleToCsv(("Bob", 42, false)) // List("Bob", 42, false)
 ```
