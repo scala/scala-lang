@@ -43,7 +43,7 @@ case class IceCream(name: String, numCherries: Int, inCone: Boolean)
 
 If you are implementing an operation such as serializing instances of these
 types to CSV or JSON, you will realize that the logic is exactly the same and
-you will want to implement it only once. This is equivalent on defining the
+you will want to implement it only once. This is equivalent to defining the
 serialization algorithm for the `(String, Int, Boolean)` HList, assuming that
 you can map both case classes to it.
 
@@ -96,7 +96,7 @@ object BaseEncoders:
     def encodeField(x: Boolean) = if x then "true" else "false"
 
   given FieldEncoder[String] with
-    def encodeField(x: String) = x
+    def encodeField(x: String) = x // Ideally, we should also escape commas and double quotes
 end BaseEncoders
 ```
 
