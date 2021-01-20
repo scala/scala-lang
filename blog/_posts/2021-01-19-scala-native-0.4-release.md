@@ -10,7 +10,7 @@ Scala Native---a project with a promise of instant startup, low memory usage, in
 thanks to [Interflow optimizer](https://scala-native.readthedocs.io/en/latest/blog/interflow.html).
 
 However, since there have been no release in over a year, you may ask yourself---is this project even alive?
-The long-awaited release 0.4.0, brining support for Scala 2.12 and 2.13, proves it is!
+The long-awaited release 0.4.0, bringing support for Scala 2.12 and 2.13, proves it is!
 
 Today we are going to discuss the most exciting new features and major changes coming in this release.
 We will start with changes made to Scala Native compiler plugin, especially supported Scala versions and cross-platform testing.
