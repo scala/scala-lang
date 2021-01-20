@@ -149,7 +149,7 @@ nativeLTO := "none"
 ### Cross compiling
 By default, Scala Native has always compiled and optimized the resulting assembly based on host architecture and its operating system.
 Although it worked well when you were running a program on the same machine, it caused many problems when trying to run it anywhere else.
-With the latest release you're able to define a custom target for the compiler by providing an [LLVM-style TargetTriple](https://clang.llvm.org/docs/CrossCompilation.html) in your config.
+With the latest release you're able to define a custom build target for the compiler by providing an [LLVM-style TargetTriple](https://clang.llvm.org/docs/CrossCompilation.html) in your config.
 
 For example, if you're working on Linux and would like to create an executable suitable for MacOS without changing your whole build,
 you can use the following sbt setting:
