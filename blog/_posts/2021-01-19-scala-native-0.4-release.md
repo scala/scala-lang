@@ -27,7 +27,7 @@ introduce a subset of reflective operations allowed to be used.
 
 It would not be wise to enable reflective calls to all definitions as we would need to load many more objects and increase the size of the binary.
 That’s why you need to signal to the compiler which classes can use this mechanism - it can be done by marking your `trait`, `class`, or `object`
-with the `@EnableReflectiveInstantation` annotation. It will also make all of its descendants able to be reflectively instantiated.
+with the `@EnableReflectiveInstantiation` annotation. It will also make all of its descendants able to be reflectively instantiated.
 
 Annotated classes and modules, having a concrete implementation, can be accessed via the provided `scalanative.reflect.Reflect` API.
 If you have used Scala.js before, it may seem similar to you, as the new implementation uses exactly the same API.
