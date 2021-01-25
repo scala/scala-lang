@@ -8,7 +8,11 @@ title: Tuples bring generic programming to Scala 3
 Tuples allow developers to create new types by associating existing types. In
 doing so, they are very similar to case classes but unlike them they retain
 only the structure of the types (e.g., which type is in which order) rather
-than giving each element a  name.
+than giving each element a name.  A tuple can also be seen as a *sequence* and
+therefore a collection of objects, however, whereas *homogeneous* collections
+such as `List[A]` or `Set[A]` accumulate elements retaining only one type
+(`A`), tuples are capable of storing data of different types while preserving
+the type of each entry.
 
 In Scala 3, tuples gain power thanks to new operations, additional type safety
 and fewer restrictions, pointing in the direction of a construct called
@@ -22,12 +26,13 @@ feature, dependent match types, allows the implementation of these operations.
 
 # Why generic programming ?
 
-When considering type-safety, HList offer the same guarantees as case classes,
-without having to declare class or field names.  This makes them more
-convenient in some scenarios, for example in return types.  If we consider
-`List`, you can see that `def splitAt(n: Int)` produces a `(List[A], List[A])`
-and not a `case class SplitResult(left: List[A], right: List[A])` because of
-the cognitive cost of introducing a new name `SplitResult`.
+HLists and case classes can both be used to define products of types. However
+HLists do not require the developer to declare class or field names.  This
+makes them more convenient in some scenarios, for example in return types.  If
+we consider `List`, you can see that `def splitAt(n: Int)` produces a
+`(List[A], List[A])` and not a `case class SplitResult(left: List[A], right:
+List[A])` because of the cognitive cost of introducing new names
+(`SplitResult`, `left` and `right`).
 
 Moreover, there are infinitely many case classes which share a common
 structure, which means that they have the same number and type of fields. We
