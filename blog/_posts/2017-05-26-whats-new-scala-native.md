@@ -102,7 +102,7 @@ We've added support for IO and regular expressions, among others:
 * A bugfix has been contributed by [@jonas][@jonas] to `String.replace`,
   fixing one broken benchmark at the same time. His work can be found in
   [#616][#616].
-* `System.nanoTime` was fixed by [@brad-rathke][@brad-rathke] in [#549][#549].
+* `System.nanoTime` was fixed by Brad Rathke in [#549][#549].
 * [@xuwei-k][@xuwei-k] fixed `nativeAvailableDependencies` which didn't work
    in the `test` configuration in [#565][#565].
 
@@ -235,7 +235,6 @@ stdlib and external libraries.
 
 [scala-native-0.2-release]: https://github.com/scala-native/scala-native/releases/tag/v0.2.0
 [@asoltysik]: https://github.com/asoltysik
-[@brad-rathke]: https://github.com/brad-rathke
 [@cedricviaccoz]: https://github.com/cedricviaccoz
 [@densh]: https://github.com/densh
 [@Duhemm]: https://github.com/Duhemm
