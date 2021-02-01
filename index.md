@@ -9,10 +9,10 @@ headerButtonUrl: "/what-is-scala/"
 
 # Links of the Download / API Docs sections
 gettingStarted:
-  mainTitle: "Download"
-  mainUrl: "/download"
-  subtitle: "Getting Started"
-  subtitleLink: "https://docs.scala-lang.org/getting-started.html"
+  mainTitle: "Getting Started"
+  mainUrl: "https://docs.scala-lang.org/getting-started.html"
+  subtitle: "Download"
+  subtitleLink: "/download"
   links:
     - title: "Milestones, nightlies, etc."
       url: "/download/index.html#other-releases"

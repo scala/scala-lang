@@ -1,29 +1,24 @@
 stepOne:
   - os: linux
-    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
+    text: >-
+      <div class="highlight">
+        <code class="hljs">$ curl -Lo cs https://git.io/coursier-cli-linux && chmod +x cs && ./cs setup </code> <br>
+      </div>
   - os: unix
-    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
+    text: >-
+      <p>Follow <a href="https://get-coursier.io/docs/cli-overview.html#install-native-launcher" target="_blank">the instructions to install the <code>cs</code> launcher</a> then run:</p>
+      <div class="highlight">
+        <p><code class="hljs">$ ./cs setup</code></p>
+      </div>
   - os: macos
-    text: "<p><code>java -version</code><span>(Make sure you have version 1.8.)</span></p>"
+    text: >-
+      <div class="highlight">
+        <code class="hljs">$ brew install coursier/formulas/coursier && cs setup </code> <br>
+      </div>
+      <p>Alternatively, if you don't use Homebrew</p>
+      <div class="highlight">
+        <code class="hljs">$ curl -Lo cs https://git.io/coursier-cli-macos && chmod +x cs &&  (xattr -d com.apple.quarantine cs || true) && ./cs  setup </code> <br>
+      </div>
   - os: windows
-    text: "<p><ul><li>Launch the Windows Start menu</li><li>Click on <code>Programs</code></li><li>Find the <code>Java</code> program listing</li><li>Click <code>About Java</code> to see the Java version</li></ul></p>"
-
-intellijUrls:
-  - os: linux
-    url: https://www.jetbrains.com/idea
-  - os: unix
-    url: https://www.jetbrains.com/idea
-  - os: macos
-    url: https://www.jetbrains.com/idea
-  - os: windows
-    url: https://www.jetbrains.com/idea
-
-sbtUrls: 
-  - os: linux
-    url: https://www.scala-sbt.org/download.html
-  - os: unix
-    url: https://www.scala-sbt.org/download.html
-  - os: macos
-    url: https://www.scala-sbt.org/download.html
-  - os: windows
-    url: https://www.scala-sbt.org/download.html
+    text: >-
+      <p>Download and execute <a href="https://git.io/coursier-cli-windows-exe">the Scala installer for Windows</a> based on coursier</p>

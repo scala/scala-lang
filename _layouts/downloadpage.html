@@ -16,23 +16,26 @@ layout: inner-page-parent
         </ul>
       </div>
       <div class="main-download">
-        <h2>The most popular way to get Scala is either using Scala through sbt, the Scala build tool, or to use Scala through an IDE.</h2>
+        <h2>The easiest way to install Scala is through coursier.</h2>
         <div class="install-steps">
           <div class="step">
             <img src="/resources/img/download/arrow-asset.png" alt="">
             <div class="number-step">1</div>
             <div class="text-step">
-              <h3>First, make sure you have the Java 8 JDK (or Java 11 JDK) installed.</h3>
-              <p>To check, open the terminal and type:</p>
-              <p><code>java -version</code><span>(Make sure you have version 1.8 or 11.)</span></p>
-              <p><i>(If you don't have it installed, download Java from <a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html">Oracle Java 8</a>, <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Oracle Java 11</a>, or <a href="https://adoptopenjdk.net/">AdoptOpenJDK 8/11</a>. Refer <a href="https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html">JDK Compatibility</a> for Scala/Java compatiblity detail.</i></p>
+              <h3>First, install Java, Scala, and all related command-line tools.</h3>
+              <p>Download the <code>cs</code> tool and execute the <code>setup</code> command</p>
+              <div id="download-step-one">
+                <p>Follow  <a href="https://get-coursier.io/docs/cli-overview.html#install-native-launcher" target="_blank">the instructions to install the <code>cs</code> launcher</a>, then run:</p>
+                <p><code>$ ./cs setup</code></p>
+              </div>
+              <p>(See <a href="https://get-coursier.io/docs/cli-installation">the instructions for other operating systems.</a>)</p>
             </div>
           </div>
           <div class="step">
             <div class="number-step">2</div>
             <div class="text-step">
-              <h3>Then, install Scala:</h3>
-              <p>...either by installing an IDE such as IntelliJ, or sbt, Scala's build tool.</p>
+              <h3>Then, install an IDE for Scala</h3>
+              <p>The two most popular IDEs for Scala are IntelliJ and the VS Code editor paired with the Metals extension</p>
             </div>
           </div>
           <div class="download-options">
@@ -40,9 +43,9 @@ layout: inner-page-parent
               <span class="or">or</span>
               <div class="description">
                 <img src="/resources/img/download/arrow-left.png" alt="">
-                <p>Best if you prefer a full-featured IDE (recommended for beginners)</p>
+                <p>Best if you are familiar with IntelliJ</p>
               </div>
-              <a href="" class="btn-download" id="download-intellij-link">
+              <a href="https://www.jetbrains.com/idea" class="btn-download" target="_blank">
                 <i class="fa fa-download"></i>
                 <span>Download intellij</span>
               </a>
@@ -50,14 +53,14 @@ layout: inner-page-parent
                 {% include tutorial-list.html column=1 %}
               </ul>
             </div>
-            <div class="download-sbt">
+            <div class="download-vscode">
               <div class="description">
                 <img src="/resources/img/download/arrow-right.png" alt="">
-                <p>Best if you are familiar with the command line</p>
+                <p>Best if you are familiar with VS Code</p>
               </div>
-              <a href="" class="btn-download" id="download-sbt-link">
+              <a href="https://code.visualstudio.com/download" class="btn-download" target="_blank">
                 <i class="fa fa-download"></i>
-                <span>Download Sbt</span>
+                <span>Download VS Code</span>
               </a>
               <ul>
                 {% include tutorial-list.html column=0 %}
@@ -110,9 +113,4 @@ layout: inner-page-parent
 
   {% for step in site.data.downloads.stepOne %}
   <div style="display:none" id="stepOne-{{step.os}}">{{step.text}}</div>
-  {% endfor %} {% for intellijUrl in site.data.downloads.intellijUrls %}
-  <div style="display:none" id="intellij-{{intellijUrl.os}}">{{intellijUrl.url}}</div>
-  {% endfor %} {% for sbtUrl in site.data.downloads.sbtUrls %}
-  <div style="display:none" id="sbt-{{sbtUrl.os}}">{{sbtUrl.url}}</div>
   {% endfor %}
-</section>

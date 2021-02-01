@@ -62,15 +62,14 @@
 
             .step {
                 &:first-child {
-                    margin-bottom: 100px;
                     @include bp(small) {
                         margin-bottom: 50px;
                     }
                     position: relative;
 
                     img {
-                        width: 12px;
-                        height: 100px;
+                        width: 24px;
+                        height: 200px;
                         position: absolute;
                         left: 25px;
                         top: 50px;
@@ -113,7 +112,7 @@
                 margin-top: 38px;
 
                 .download-intellij,
-                .download-sbt {
+                .download-vscode {
                     position: relative;
                     @include span-columns(4 of 8);
                     @include bp(large) {
@@ -188,7 +187,7 @@
 
         img {
             width: 92px;
-            height: 165px;
+            height: 145px;
             margin-bottom: 24px;
         }
         @include bp(xlarge) {
@@ -212,11 +211,11 @@
       }
     }
 
-    .download-sbt {
+    .download-vscode {
       padding-left: 10px;
     }
 
-    .download-sbt {
+    .download-vscode {
         .description {
             top: 60px;
             left: auto;
