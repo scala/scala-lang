@@ -3,7 +3,7 @@
 category: announcement
 title: "Scala 2.11.0-M4 is now available!"
 ---
-The [fourth development milestone](https://github.com/scala/scala/releases/v2.11.0-M4) of Scala 2.11 is now available for [download](/download/2.11.0-M4.html)!
+The [fourth development milestone](https://github.com/scala/scala/releases/v2.11.0-M4) of Scala 2.11 is now available for download!
 
 It brings the following [goodness](https://github.com/scala/scala/issues?direction=desc&labels=reviewed&milestone=18&page=1&sort=comments&state=closed):
 

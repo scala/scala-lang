@@ -3,7 +3,7 @@
 category: announcement
 title: "Scala 2.11.0-M7 is now available!"
 ---
-The [seventh development milestone](https://github.com/scala/scala/releases/v2.11.0-M7) of Scala 2.11 is now available for [download](/download/2.11.0-M7.html)!
+The [seventh development milestone](https://github.com/scala/scala/releases/v2.11.0-M7) of Scala 2.11 is now available for download!
 
 It brings the following [goodness](https://github.com/scala/scala/issues?milestone=25&page=1&state=closed):
 
