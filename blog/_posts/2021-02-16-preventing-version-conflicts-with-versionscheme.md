@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Eugene Yokota, Julien Richard-Foy
-title: Improving the Scala Library Ecosystem
+title: Preventing Version Conflicts with versionScheme
 ---
 
 One of the things that makes Scala powerful and fun to use is its library ecosystem — spanning across the Maven ecosystem for JVM, and npm for Scala.js. We can use libraries to do operations like download files from the web, or we can use it to adopt different programming paradigms. The library ecosystem allows us to write more useful programs with less effort.
@@ -34,11 +34,11 @@ Unfortunately, these two versions of Circe are not binary compatible. Such versi
 
 The Scala Center, Alexandre Archambault (author of Coursier), and Eugene Yokota have been working on a solution to improve this situation so that we can be confident about creating libraries, and using them.
 
-In the next section, we will explain the mechanism that was in place so far in sbt to address this issue, and we will discuss its limits. Then, we will introduce a new solution, which concerns both library authors, and library users.
+In the next section, we will explain the mechanism that was in place so far in sbt to address this issue, and we will discuss its limits. Then, we will introduce a new solution, which requires library authors to declare the versioning scheme of their libraries with a new sbt key, `versionScheme`.
 
 ## Eviction warnings
 
-Actually this is not the first time We have thought of this issue. In 2014, we added [eviction warning][1] feature to sbt 0.13.6. When you have two candidate versions 0.11.1 and 0.13.0, and when it picks 0.13.0, 0.11.1 is said to be "evicted".
+Actually this is not the first time we have thought of this issue. In 2014, we added [eviction warning][1] feature to sbt 0.13.6. When you have two candidate versions 0.11.1 and 0.13.0, and when it picks 0.13.0, 0.11.1 is said to be "evicted".
 
 ~~~ text
 sbt:killer-app> evicted
@@ -57,7 +57,7 @@ Unfortunately, the reality was different and while some Scala libraries use PVP 
 
 ## Early SemVer and sbt-version-policy
 
-If you're maintaining a library, the first thing you could do to help is picking a version scheme. Our recommendation for libraries going forward is adopting **Early Semver** as described in the documentation page [Binary Compatibility for Library Authors][4]. Please read the linked post by Jacob Wang for more details on binary compatibility and source compatibility.
+If you are maintaining a library, the first thing you could do to help is picking a version scheme. Our recommendation for libraries going forward is adopting **Early Semver** as described in the documentation page [Binary Compatibility for Library Authors][4]. Please read the linked post by Jacob Wang for more details on binary compatibility and source compatibility.
 
 Given a version number `major.minor.patch`, you MUST increment the:
 
@@ -96,7 +96,8 @@ During the minor upgrade (feature release), we aggressively add new features, wh
 
 As mentioned earlier, sbt contains a built-in eviction warning feature, but there are too many false positives right now because it needs to guess.
 
-Since sbt 1.4.0, there is a new setting `versionScheme`, which can be used by library authors as follows in `build.sbt`:
+Since sbt 1.4.0, there is a new setting `versionScheme`, which can be used by library authors
+to declare the versioning scheme they use:
 
 ~~~ scala
 ThisBuild / versionScheme := Some("early-semver")
@@ -104,17 +105,43 @@ ThisBuild / versionScheme := Some("early-semver")
 
 sbt 1.4.0 includes this information into `pom.xml` and `ivy.xml` as a property. In addition, sbt uses the information to take the guessing out of eviction warning when this information is available.
 
-In sbt 1.5.0, eviction warnings will be replaced with [eviction errors][8]. Since we can now reliably detect whether two dependencies with different versions are compatible, or if they conflict, the build will fail if an incompatibility is detected in your dependencies.
+In sbt 1.5.0, eviction warnings will be replaced with [eviction errors][8]. Since it can now reliably detect whether two dependencies with different versions are compatible, or if they conflict, the build will fail if an incompatibility is detected in your dependencies.
 
-It might take a few years for the `versionScheme` information to become prevalent in the ecosystem, but once it happens the eviction warning could become more accurate. In the meantime, as a user of libraries you can manually configure the versioning scheme used by your libraries by using a new setting, `libraryDependencySchemes`. For instance, here is how we can tell sbt that Circe’s artifacts follow the Early SemVer scheme:
+It might take a few years for the `versionScheme` information to become prevalent in the ecosystem. In the meantime, as a user of libraries you can manually configure the versioning scheme used by your libraries by using a new setting, `libraryDependencySchemes`. For instance, here is how you can tell sbt that the `circe-core` artifact follows the Early SemVer scheme:
 
 ~~~ scala
-ThisBuild / libraryDependencySchemes += "io.circe" %% "circe-*" % "early-semver"
+ThisBuild / libraryDependencySchemes += "io.circe" %% "circe-core" % "early-semver"
+~~~
+
+With this setting, the warning caused by the conflicting versions of circe-core
+becomes an error because the version number 0.13.0 is not binary compatible
+with the version number 0.11.1 according to the Early SemVer scheme:
+
+~~~ text
+sbt:killer-app> update
+[error] stack trace is suppressed; run last update for the full output
+[error] (update) found version conflict(s) in library dependencies; some are suspected to be binary incompatible:
+[error] 
+[error]         * io.circe:circe-core_2.12:0.13.0 (early-semver) is selected over 0.11.1
+[error]             +- org.tpolecat:doobie-postgres-circe_2.12:0.10.0     (depends on 0.13.0)
+[error]             +- de.heikoseeberger:akka-http-circe_2.12:1.26.0      (depends on 0.11.1)
+[error] 
+[error] 
+[error] this can be overridden using libraryDependencySchemes or evictionErrorLevel
 ~~~
 
 ## Summary
 
-If you are a library author, check out [sbt-version-policy][5] to enforce the recommended versioning scheme. Or, at least declare the versioning scheme you use with the `versionScheme` key. If you are a library user, keep in mind that starting from sbt 1.5.0 you should configure your `libraryDependencySchemes` to get accurate eviction errors.
+If you are a library author, set `ThisBuild / versionScheme` to declare the versioning scheme
+used by your library, so that build tools can reliably detect conflicting versions pulled by
+transitive dependencies.
+
+You might also want to have a look at the plugin [sbt-version-policy][5], which helps you
+to implement the versioning scheme that you declare in your build, by detecting the binary
+and source incompatibilities introduced between releases.
+
+As a library user, starting from sbt 1.5.0 you should configure your
+`libraryDependencySchemes` to get accurate eviction errors.
 
 [1]: https://github.com/sbt/sbt/pull/147
 [2]: https://semver.org/
