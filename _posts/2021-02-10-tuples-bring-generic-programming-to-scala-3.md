@@ -19,10 +19,10 @@ and fewer restrictions, pointing in the direction of a construct called
 **Heterogeneous Lists** (HLists), one of the core data structures in generic
 programming.
 
-This post focuses on how tuples in Scala 3 allow to address generic programming
-challenges, without external libraries or macros. It will also provide a short
-cheat sheet for new tuple operations as well as showing how a new language
-feature, dependent match types, allows the implementation of these operations.
+In this post I will take you on a tour of the new Tuple API before looking at
+how a new language feature, dependent match types, allows to implement such
+API.  I hope that through the two proposed examples, you will develop an
+intuition about the usage and power of a few new exciting features of Scala 3.
 
 # Why generic programming ?
 
