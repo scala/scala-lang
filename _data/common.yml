@@ -6,7 +6,7 @@ scastieUrl: https://scastie.scala-lang.org
 courseraMoocsUrl: https://www.coursera.org/specializations/scala
 
 texts:
-  scalaBackendsTitle: Scala runs on...
+  scalaBackendsTitle: Scala runs...
   scalaBackendsMore: with more backends on the way.
   metalsSupportedInIDE: Language server support via Metals
   onlineCoursesFree: Free (optional paid certificate)
