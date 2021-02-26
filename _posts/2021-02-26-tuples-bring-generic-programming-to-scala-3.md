@@ -24,7 +24,7 @@ how a new language feature, dependent match types, allows to implement such
 API.  I hope that through the two proposed examples, you will develop an
 intuition about the usage and power of a few new exciting features of Scala 3.
 
-# Why generic programming ?
+# Why generic programming?
 
 HLists and case classes can both be used to define products of types. However
 HLists do not require the developer to declare class or field names.  This
@@ -67,7 +67,7 @@ as a `(String, Int, Boolean)` which needs to be transformed into a
 briefly looking at how to obtain a tuple from a case class.
 
 Assuming that we know how to transform each element of a tuple into a
-`List[String]`, can we transform any tuple into a `List[String]` ?
+`List[String]`, can we transform any tuple into a `List[String]`?
 
 The answer is yes, and this is possible because Scala 3 introduces types `*:`,
 `EmptyTuple` and `NonEmptyTuple` but also methods `head` and `tail` which allow
@@ -145,7 +145,7 @@ def tupleToCsv[X <: Tuple : RowEncoder](tuple: X): List[String] =
 tupleToCsv(("Bob", 42, false)) // List("Bob", 42, false)
 ```
 
-## How to obtain a tuple from a case class ?
+## How to obtain a tuple from a case class?
 
 Scala 3 introduces the
 [`Mirror`](https://dotty.epfl.ch/docs/reference/contextual/derivation.html)
@@ -220,7 +220,7 @@ tuple. Using this recursive definition we can create a tuple in the following
 way:
 
 ```scala
-import Tup._
+import Tup.*
 
 val myTup = TCons(1, TCons(2,  EmpT))
 ```
@@ -230,7 +230,7 @@ use as the previous examples.  To do so we can use another Scala 3 feature:
 methods](http://dotty.epfl.ch/docs/reference/contextual/extension-methods.html)
 
 ```scala
-import Tup._
+import Tup.*
 
 extension [A, T <: Tup] (a: A) def *: (t: T): TCons[A, T] =
   TCons(a, t)
@@ -245,7 +245,7 @@ So that we can write:
 
 Now let's focus on `concat`, which could look like this:
 ```scala
-import Tup._
+import Tup.*
 
 def concat[L <: Tup, R <: Tup](left: L, right: R): Tup =
   left match
@@ -289,7 +289,7 @@ other words, we need a type to indicate that the return of this function is all
 the types of `left` followed by all the types of the elements of `right`.
 
 Can we make it so that the compiler verifies that we are indeed returning a
-tuple consisting of the correct elements ?
+tuple consisting of the correct elements?
 
 In Scala 3 it is now possible, without requiring external libraries!
 
