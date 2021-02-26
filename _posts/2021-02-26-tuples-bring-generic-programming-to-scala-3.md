@@ -67,7 +67,7 @@ as a `(String, Int, Boolean)` which needs to be transformed into a
 briefly looking at how to obtain a tuple from a case class.
 
 Assuming that we know how to transform each element of a tuple into a
-`List[String]`, can we transform any tuple into a `List[String]` ?
+`List[String]`, can we transform any tuple into a `List[String]`?
 
 The answer is yes, and this is possible because Scala 3 introduces types `*:`,
 `EmptyTuple` and `NonEmptyTuple` but also methods `head` and `tail` which allow
