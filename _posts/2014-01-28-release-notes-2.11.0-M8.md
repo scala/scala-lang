@@ -14,7 +14,7 @@ If your code compiled on 2.10.x without deprecation warnings, it should compile 
 We are working with the community to ensure availability of the core artifacts of the Scala 2.11.x eco-system.
 This release is *not* binary compatible with the 2.10.x series, so that we can keep improving the Scala standard library.
 
-Scala 2.11.0-M8 is available for download from [scala-lang.org](https://scala-lang.org/download/2.11.0-M8.html)
+Scala 2.11.0-M8 is available for download from scala-lang.org
 or from [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-M8%22).
 
 The Scala team and contributors [fixed 119 issues](https://issues.scala-lang.org/issues/?jql=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.11.0-M8%22+AND+status+%3D+CLOSED+ORDER+BY+priority+DESC) via [174 merged pull requests](https://github.com/scala/scala/issues?milestone=26&page=1&state=closed)!

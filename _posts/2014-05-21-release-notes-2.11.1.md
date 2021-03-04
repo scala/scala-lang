@@ -14,7 +14,7 @@ This release contains [an important fix](https://github.com/scala/scala/pull/371
 The fix necessarily breaks serialization compatibility between 2.11.0 and 2.11.1 (this is separate from binary compatibility, which is maintained).
 
 Users of distributed systems that rely on serialization to exchange objects (such as akka) should upgrade to Scala 2.11.1 (and akka 2.3.3) immediately.
-We also strongly recommend that libraries that themselves declare classes with [@SerialVersionUID](https://www.scala-lang.org/api/2.11.1/index.html#scala.SerialVersionUID) annotations release a new version and ask their Scala 2.11 users to upgrade.
+We also strongly recommend that libraries that themselves declare classes with `@SerialVersionUID` annotations release a new version and ask their Scala 2.11 users to upgrade.
 
 We apologize for the breakage. We have included a new suite of tests that will ensure stability of serialization for the remainder of the 2.11.x series.
 
