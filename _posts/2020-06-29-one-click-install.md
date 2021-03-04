@@ -20,7 +20,7 @@ You can find the instructions for macOS and Windows in the [Coursier documentati
 The command shown above will install all the following software, if not yet installed:
 
 * a JDK
-* the build tools [sbt](https://www.scala-sbt.org/) and [mill](https://www.lihaoyi.com/mill/)
+* the build tools [sbt](https://www.scala-sbt.org/) and [mill](https://github.com/com-lihaoyi/mill)
 * the [Ammonite](https://ammonite.io/) enhanced REPL
 * [scalafmt](https://scalameta.org/scalafmt/), the Scala formatter
 * the [coursier](https://get-coursier.io/docs/cli-overview) CLI, to install further Scala-based applications
