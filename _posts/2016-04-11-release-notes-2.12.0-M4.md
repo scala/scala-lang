@@ -12,7 +12,7 @@ For more details about what's new in this milestone, including some breaking cha
 
 In total, we merged [135 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M4), of which [16 are by new contributors](https://github.com/scala/scala/pulls?q=is%3Apr+milestone%3A2.12.0-M4+label%3Awelcome) -- welcome! This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M4%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
 
-We'd especially like to thank Felix Mulder for his [excellent work on the new Scaladoc interface](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4)! [Check it out!](https://www.scala-lang.org/files/archive/api/2.12.0-M4/)
+We'd especially like to thank Felix Mulder for his [excellent work on the new Scaladoc interface](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4)! Check it out!
 
 
 Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org).
