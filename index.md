@@ -36,12 +36,12 @@ currentScalaVersion: "2.13.5"
 # Scala backends
 scalaBackends:
   - icon: /resources/img/frontpage/java-logo.png
-    description: JVM
+    description: on the JVM
   - icon: /resources/img/frontpage/js-logo.png
-    description: JavaScript in your browser
+    description: on JavaScript in your browser
     link: https://www.scala-js.org/
   - icon: /resources/img/frontpage/llvm-logo.png
-    description: Natively with LLVM
+    description: natively with LLVM
     link: https://scala-native.readthedocs.io/
     beta: 1
 
