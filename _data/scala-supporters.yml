@@ -17,9 +17,6 @@ supporters:
   - name: Lunatech
     logo: /resources/img/frontpage/lunatech-logo.png
     url: https://lunatech.com/
-  - name: VirtusLab
-    logo: /resources/img/frontpage/virtuslab-logo.png
-    url: https://virtuslab.com/
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/corporate-membership.html
@@ -30,3 +27,6 @@ maintainers:
   - name: Lightbend
     logo: /resources/img/frontpage/lightbend-logo.png
     url: https://www.lightbend.com/
+  - name: VirtusLab
+    logo: /resources/img/frontpage/virtuslab-logo.png
+    url: https://virtuslab.com/
