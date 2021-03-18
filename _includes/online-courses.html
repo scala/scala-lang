@@ -87,7 +87,11 @@
                 {% if course.showDate == true %}
                   {{course.date | date_to_string}}
                 {% else %}
-                  {{site.data.common.texts.courseraLaunchPeriod}}
+		  {% if course.coursera-page %}
+                    {{site.data.common.texts.courseraLaunchPeriod}}
+                  {% else %}
+                    {{site.data.common.texts.continuouslyUpdated}}
+                  {% endif %}
                 {% endif %}
               </li>
             </ul>
