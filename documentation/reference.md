@@ -33,6 +33,7 @@ includeTOC: true
 * Scala 2.10.7
   * [Library API](https://www.scala-lang.org/api/2.10.7/)
 
+<!-- TODO bring these back; ticket is https://github.com/scala/scala-dev/issues/759
 ## Nightly builds
 
 * Scala 2.13.x
@@ -41,6 +42,7 @@ includeTOC: true
 * Scala 2.12.x
   * [Library API](https://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/)
   * [Compiler API](https://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/scala-compiler/)
+-->
 
 ## Previous releases
 
