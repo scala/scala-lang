@@ -25,7 +25,7 @@ sbt.version=1.5.0
 
 ```scala
 // build.sbt
-scalaVersion := "3.0.0-RC2"
+ThisBuild / scalaVersion := "3.0.0-RC2"
 ```
 
 All the default tasks and settings are supported.
@@ -44,8 +44,7 @@ For your own curiosity, you can run the `show tastyFiles` command to see the TAS
 You can change the `scalaVersion` of your project or you can add Scala 3 to the `crossScalaVersions` setting.
 
 ```scala
-// build.sbt
-crossScalaVersions := Seq(“2.13.5”, “3.0.0-RC2”)
+crossScalaVersions := Seq("2.13.5", "3.0.0-RC2")
 ```
 
 It is likely that you need to upgrade some dependencies, to change some compiler options or to remove some compiler plugins. Read the [Scala 3 migration tutorial](https://scalacenter.github.io/scala-3-migration-guide/docs/tutorials/sbt-migration.html) to learn more about those steps.
@@ -54,28 +53,27 @@ It is likely that you need to upgrade some dependencies, to change some compiler
 
 Scala 3 introduces TASTy, an intermediate representation of Scala programs, that is designed for stability during the lifetime of Scala 3.
 The current state of TASTy makes us confident that all Scala 3 minor versions are going to be **backward binary compatible**.
+Thus we will be able to apply the [Semantic Versioning scheme](https://semver.org/) to the Scala compiler.
 
-In other words, your Scala 3.x project can depend on libraries compiled with Scala 3.y, where y is lower or equal to x.
+Concretely it means your Scala 3.x project can depend on libraries compiled with Scala 3.y, where y is lower or equal to x.
 
-This is materialized in sbt by the `scalaBinaryVersion` setting which is set to “3” on all Scala 3 versions (starting from 3.0.0).
+This is materialized in sbt by the `scalaBinaryVersion` setting which is set to "3" on all Scala 3 versions (starting from 3.0.0).
 
 Let's take an example:
 
 ```scala
 // build.sbt
-scalaVersion := "3.0.0"
-
-organization := "my-org"
-name := "my-project"
-version := "1.0.0"
-
-libraryDependency += "org.typelevel" %% "cats-core" % "x.y.z"
+lazy val hello = project.in(file("."))
+  .settings(
+    scalaVersion := "3.0.0",
+    libraryDependencies += "org.typelevel" %% "cats-core" % "x.y.z"
+  )
 ```
 
 We can print the `scalaBinaryVersion`:
 
 ```shell
-sbt:my-project> show scalaBinaryVersion
+sbt:hello> show hello / scalaBinaryVersion
 [info] 3
 ```
 
@@ -83,7 +81,7 @@ As a consequence, the `cats-core` dependency will be resolved to `cats-core_3`.
 
 If I bump the `scalaVersion` to 3.1.0, then the exact same `cats-core_3` artifact will be used and it will still be compatible.
 
-Suppose now that I publish the project as a library, it will be published as `my-project_3` and be available for all projects whose Scala version is greater than 3.1.0.
+Suppose now that I publish the project as a library, it will be published as `hello_3` and be available for all projects whose Scala version is greater than 3.1.0.
 
 This is good news for Scala 3 library maintainers, who will not be pressured to release for the latest Scala 3.x version.
 
@@ -94,13 +92,11 @@ For application developers it allows you to use the most recent Scala 3.x versio
 While the state described above is an undeniable improvement, it does not make the transition from Scala 2.13 to Scala 3 easier.
 Yet we claim this transition will be smoother than ever thanks to the interoperability between the two versions of the language.
 
-### Disclaimer for library maintainers
-
-Using the interoperability between Scala 2.13 and Scala 3 in a published library is generally not safe for your end-users. 
-
-Unless you know exactly what you are doing, it is discouraged to publish a Scala 3 library that depends on a Scala 2.13 library (the scala-library being excluded) or vice versa.
-
-The reason is to prevent library users from ending up with two conflicting versions `x_2.13` and `x_3` of the same x library in their classpath, this problem being unsolvable in some cases.
+> #### *Disclaimer for library maintainers*
+> 
+> *Using the interoperability between Scala 2.13 and Scala 3 in a published library is generally not safe for your end-users.*
+> *Unless you know exactly what you are doing, it is discouraged to publish a Scala 3 library that depends on a Scala 2.13 library (the scala-library being excluded) or vice versa.*
+> *The reason is to prevent library users from ending up with two conflicting versions `foo_2.13` and `foo_3` of the same foo library in their classpath, this problem being unsolvable in some cases.*
 
 ### Using Scala 2.13 libraries in Scala 3
 
@@ -112,21 +108,24 @@ It is now natively available in sbt by using `CrossVersion.for3Use2_13`:
 
 ```scala
 // build.sbt
-scalaVersion := "3.0.0-RC2"
-libraryDependencies +=
-  ("org.typelevel" %% "cats-core" % "x.y.z").cross(CrossVersion.for3Use2_13)
+lazy val hello = project.in(file("."))
+  .serttings(
+    scalaVersion := "3.0.0-RC2",
+    libraryDependencies +=
+      ("org.typelevel" %% "cats-core" % "x.y.z").cross(CrossVersion.for3Use2_13)
+  )
 ```
 
 Here sbt resolves `cats-core_2.13` instead of `cats-core_3` (or more precisely `cats-core_3.0.0-RC2`), and it can compile and run the project successfully.
 
-The story is different for macros since you cannot call a Scala 2 macro in Scala 3.
-But if you run into this case the compiler will clearly state that it is not possible.
+The story is different for macros since the Scala 3 compiler cannot expand a Scala 2.13 macro.
+If you run into this case the compiler will clearly state that it is not possible.
 
 ### Use Scala 3 libraries in Scala 2.13
 
 Conversely, the Scala 2.13 compiler is able to type check most Scala 3 types (not the most exotic ones such as match types) and to resolve Scala 3 given instances.
 
-This feature is called the TASTy reader, because it is implemented by reading TASTy files.
+This is made possible by the Scala 2.13 TASTy reader, contributed by Jamie Thompson at the Scala Center.
 You can learn about it in the [Forward Compatibility](https://www.scala-lang.org/blog/2020/11/19/scala-3-forward-compat.html) article.
 
 The TASTy reader was introduced in `2.13.4` and is still an experimental feature.
@@ -136,21 +135,23 @@ In a Scala 2.13 project, you can declare a Scala 3 dependency using `CrossVersio
 
 ```scala
 // build.sbt
-scalaVersion := "2.13.5"
-scalacOptions += "-Xtasty-reader"
-libraryDependencies +=
-  ("org.typelevel" %% "cats-core" % "x.y.z").cross(CrossVersion.for2_13Use3)
+lazy val hello = project.in(file("."))
+  .settings(
+    scalaVersion := "2.13.5",
+    scalacOptions += "-Xtasty-reader",
+    libraryDependencies +=
+      ("org.typelevel" %% "cats-core" % "x.y.z").cross(CrossVersion.for2_13Use3)
+  )
 ```
 
-Notice here that sbt will try to resolve `cats-core_3`, which cannot exist at the time of writing.
+Notice here that sbt will try to resolve `cats-core_3`, which does not exist at the time of writing.
 But you can try the TASTy reader on `cats-core_3.0.0-RC1` by setting:
 
 ```scala
 libraryDependencies += "org.typelevel" % "cats-core_3.0.0-RC1" % "x.y.z"
 ```
 
-The macro story is the same here.
-The Scala 2.13 compiler cannot execute Scala 3 macros.
+The macro story is the same here: the Scala 2.13 compiler cannot expand a Scala 3 macro.
 
 ### The sandwich pattern
 
@@ -177,7 +178,7 @@ lazy val core = project.in(file("core"))
 Here the classpath of the `main` application contains the Scala 3 compiled classes of the `middle` module which itself depends on the Scala 2.13 classes of the `core` module.
 
 Such a thing is possible as long as all modules depend on the same binary artifacts of their library dependencies.
-Having `x_2.13` and `x_3` under the same classpath is fraught with problems and it won't be permitted by sbt resolvers.
+Having `foo_2.13` and `foo_3`, for some library foo, under the same classpath is fraught with problems and it won't be permitted by sbt resolvers.
 
 This example shows that it is possible to migrate a big Scala application one module at a time, while running the tests continuously to progress confidently.
 
@@ -203,10 +204,13 @@ addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.5.0")
 
 ```scala
 // build.sbt
-scalaVersion := "3.0.0-RC2"
-enablePlugins(ScalaJSPlugin)
-libraryDependency +=
-  ("org.typelevel" %%% "cats-core" % "x.y.z").cross(CrossVersion.for3Use2_13)
+lazy val hello = project.in(file("."))
+  .enablePlugins(ScalaJSPlugin)
+  .settings(
+    scalaVersion := "3.0.0-RC2",
+    libraryDependency +=
+      ("org.typelevel" %%% "cats-core" % "x.y.z").cross(CrossVersion.for3Use2_13)
+  )
 ```
 
 Here sbt resolves the `cats-core_sjs1_2.13` artifact.
