@@ -208,7 +208,7 @@ lazy val hello = project.in(file("."))
   .enablePlugins(ScalaJSPlugin)
   .settings(
     scalaVersion := "3.0.0-RC2",
-    libraryDependency +=
+    libraryDependencies +=
       ("org.typelevel" %%% "cats-core" % "x.y.z").cross(CrossVersion.for3Use2_13)
   )
 ```
