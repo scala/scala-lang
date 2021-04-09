@@ -129,7 +129,7 @@ This is made possible by the Scala 2.13 TASTy reader, contributed by Jamie Thomp
 You can learn about it in the [Forward Compatibility](https://www.scala-lang.org/blog/2020/11/19/scala-3-forward-compat.html) article.
 
 The TASTy reader was introduced in `2.13.4` and is still an experimental feature.
-You can  enable it with the `-Xtasty-reader` compiler option.
+You can  enable it with the `-Ytasty-reader` compiler option.
 
 In a Scala 2.13 project, you can declare a Scala 3 dependency using `CrossVersion.for2_13Use3`:
 
@@ -138,7 +138,7 @@ In a Scala 2.13 project, you can declare a Scala 3 dependency using `CrossVersio
 lazy val hello = project.in(file("."))
   .settings(
     scalaVersion := "2.13.5",
-    scalacOptions += "-Xtasty-reader",
+    scalacOptions += "-Ytasty-reader",
     libraryDependencies +=
       ("org.typelevel" %% "cats-core" % "x.y.z").cross(CrossVersion.for2_13Use3)
   )
