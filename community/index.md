@@ -154,7 +154,7 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 * [Interactive Tour](https://scalatutorials.com/tour)
 * [Functional programming course/exercises](https://github.com/dehun/learn-fp)
 * [Scala Online Courses](https://classpert.com/scala-programming)
-* [Best Scala YouTube Videos](https://www.nbshare.io/blog/best-scala-videos-on-youtube/)
+* [Best Scala Tutorials On YouTube](https://www.nbshare.io/blog/best-scala-tutorials-on-youtube/)
 
 ## Community Libraries and Tools
 
