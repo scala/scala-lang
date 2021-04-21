@@ -109,7 +109,7 @@ It is now natively available in sbt by using `CrossVersion.for3Use2_13`:
 ```scala
 // build.sbt
 lazy val hello = project.in(file("."))
-  .serttings(
+  .settings(
     scalaVersion := "3.0.0-RC2",
     libraryDependencies +=
       ("org.typelevel" %% "cats-core" % "x.y.z").cross(CrossVersion.for3Use2_13)
