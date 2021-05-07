@@ -98,7 +98,7 @@ Discord users can chat about Scala [via this link](https://discord.gg/scala).
 
 Other Scala-related Discord servers include:
 
-* **[Scalameta](https://gitter.im/typelevel/cats)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
+* **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
 * **[Typelevel](https://discord.gg/XF3CXcMzqD)**: about the Typelevel ecosystem for pure-functional programming in Scala
 
 IRC users can chat about Scala on the [Scala IRC channel](https://webchat.freenode.net/?randomnick=1&channels=scala&prompt=1) on Freenode: `irc://irc.freenode.net/scala`
