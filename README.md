@@ -17,12 +17,20 @@ Markdown.
 
 ## Building the site
 Make sure you are in the root directory of the cloned repository.
-### For Compose:
+### With `docker-compose`:
 ```
-bin/serve
+docker-compose up
 ```
 
-### For Bundler:
+When the website dependencies change (the content of the `Gemfile`),
+you have to re-build the Docker image:
+
+```
+docker-compose up --build
+```
+
+### With Bundler:
+
 ```
 bundle install
 bundle exec jekyll serve --incremental
