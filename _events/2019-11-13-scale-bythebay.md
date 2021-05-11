@@ -6,5 +6,5 @@ location: Oakland, CA, USA
 description: ""
 start: 13 November 2019
 end: 15 November 2019
-link-out: https://scale.bythebay.io/
+link-out: https://scalebythebay2019.sched.com/
 ---
