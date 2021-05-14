@@ -35,7 +35,7 @@ Of course, we intend to continue the development of the language in ways other t
 ## Library authors: Join our community build
 
 Scala 3 now has a set of widely-used community libraries that are built against every nightly Scala 3
-snapshot. Currently, this includes shapeless, ScalaPB, algebra, scalatest, scopt and squants.
+snapshot. At present, there are 67 projects included, and the number is growing rapidly.
 Join our [community build](https://github.com/lampepfl/dotty/tree/master/community-build)
 to make sure that our regression suite includes your library.
 
