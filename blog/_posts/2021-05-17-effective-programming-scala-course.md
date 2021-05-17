@@ -64,14 +64,14 @@ status, at the time this blog is written:
 
 - The [Scala Specialization] is a suite of five courses that teach Scala and
   data processing (possibly in parallel or distributed),
-  - [Functional Programming Principles in Scala]: all the lectures and
+  - [Functional Programming Principles in Scala] all the lectures and
     assignments have been updated to Scala 3,
-  - [Functional Program Design]: all the lectures and assignments have been
+  - [Functional Program Design] all the lectures and assignments have been
     updated to Scala 3,
-  - [Parallel Programming]: only the assignments have been updated to Scala 3,
-  - [Big Data Analysis with Scala and Spark]: still on Scala 2.12,
-  - [Functional Programming in Scala Capstone]: still on Scala 2.12,
-- [Programming Reactive Systems]: only the assignments have been updated to Scala 3.
+  - [Parallel Programming] only the assignments have been updated to Scala 3,
+  - [Big Data Analysis with Scala and Spark] still on Scala 2.12,
+  - [Functional Programming in Scala Capstone] still on Scala 2.12,
+- [Programming Reactive Systems] only the assignments have been updated to Scala 3.
 
 We will update our Spark courses to Scala 3 as soon as there is a stable release of
 Spark that supports Scala 3.
