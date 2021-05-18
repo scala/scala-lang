@@ -1,6 +1,29 @@
----
-layout: inner-page-parent
----
+{% comment %}Specific content from child layouts{% endcomment %}
+
+{% comment %}Figure out Scala edition (2 or 3?){% endcomment %}
+
+{% assign scala_edition = page.release_version | slice: 0, 1 %}
+
+{% include headertop.html %}
+{% include headerbottom.html %}
+
+<div class="navigation-fade-screen"></div>
+
+{% include navbar-inner.html %}
+
+
+{% if scala_edition == "3" %}
+<main id="inner-main" class="download-page scala3">
+{% else %}
+<main id="inner-main" class="download-page scala2">
+{% endif %}
+
+<!-- Title -->
+<section class="title-page">
+	<div class="wrap">
+		<h1>{{page.title}}</h1>
+	</div>
+</section>
 
 <section class="books">
   <div class="wrap">
@@ -9,110 +32,32 @@ layout: inner-page-parent
         <div class="ribbon-version">
           <span>{{page.release_version}}</span>
         </div>
+        {% if scala_edition == "3" %}
+          <ul>
+            <li><a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">Release Notes</a></li>
+            <li class="dot">•</li>
+            <li><a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">Changelog</a></li>
+          </ul>
+        {% else %}
         <ul>
           <li><a href="https://github.com/scala/scala/releases">Release Notes</a></li>
           <li class="dot">•</li>
           <li><a href="{{ site.baseurl }}/blog/announcements/">Changelog</a></li>
         </ul>
+        {% endif %}
+
       </div>
       <div class="main-download">
-        <h2>The most popular way to get Scala is either using Scala through sbt, the Scala build tool, or to use Scala through an IDE.</h2>
-        <div class="install-steps">
-          <div class="step">
-            <img src="/resources/img/download/arrow-asset.png" alt="">
-            <div class="number-step">1</div>
-            <div class="text-step">
-              <h3>First, make sure you have the Java 8 JDK (or Java 11 JDK) installed.</h3>
-              <p>To check, open the terminal and type:</p>
-              <p><code>java -version</code><span>(Make sure you have version 1.8 or 11.)</span></p>
-              <p><i>(If you don't have it installed, download Java from <a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html">Oracle Java 8</a>, <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Oracle Java 11</a>, or <a href="https://adoptopenjdk.net/">AdoptOpenJDK 8/11</a>. Refer <a href="https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html">JDK Compatibility</a> for Scala/Java compatiblity detail.</i></p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="number-step">2</div>
-            <div class="text-step">
-              <h3>Then, install Scala:</h3>
-              <p>...either by installing an IDE such as IntelliJ, or sbt, Scala's build tool.</p>
-            </div>
-          </div>
-          <div class="download-options">
-            <div class="download-left">
-              <span class="or">or</span>
-              <div class="description">
-                <img src="/resources/img/download/arrow-left.png" alt="">
-                <p>Best if you prefer a full-featured IDE (recommended for beginners)</p>
-              </div>
-              <a href="" class="btn-download" id="download-intellij-link">
-                <i class="fa fa-download"></i>
-                <span>Download intellij</span>
-              </a>
-              <ul>
-                {% include tutorial-list.html column=1 %}
-              </ul>
-            </div>
-            <div class="download-right">
-              <div class="description">
-                <img src="/resources/img/download/arrow-right.png" alt="">
-                <p>Best if you are familiar with the command line</p>
-              </div>
-              <a href="" class="btn-download" id="download-sbt-link">
-                <i class="fa fa-download"></i>
-                <span>Download Sbt</span>
-              </a>
-              <ul>
-                {% include tutorial-list.html column=0 %}
-              </ul>
-            </div>
-          </div>
-
-          <p class="bottom-lead">
-            Compared to other programming languages, installing Scala is a bit unusual. Scala is unusual because it is usually installed for each of your Scala projects rather than being installed system-wide. Both of the above options manage (via sbt) a specific Scala version per Scala project you create.
-            <br><br>
-            But it's also possible to "install" Scala in numerous other ways; e.g., grab Scala binaries and use Scala from the command line or use Scala in your browser!
-            <br><br>
-          </p>
-
-          <!-- <p class="bottom-lead"><h2>Other</h2></p> -->
-
-          <div class="step other-ways-lead">
-            <div class="number-step"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
-            <div class="text-step">
-              <h2>Other ways to install Scala</h2>
-              <ul>
-                <li>
-                  <a id="download-binaries">Download the Scala binaries for <span id="users-os"></span></a>
-                  <br/><span class="install"><a href="{{ site.baseurl }}/download/install.html">Need help running the binaries?</a></span>
-                </li>
-                <li>Using <a href="https://sdkman.io/">SDKMAN!</a>, you can easily <a href="https://sdkman.io/sdks#scala">install Scala</a> with <code>sdk install scala</code></li>
-                <li>On macOS you can also use <a href="https://brew.sh/">Homebrew</a> and existing <a href="https://formulae.brew.sh/formula/scala">Scala Formulae</a><br/><code>brew update</code><br/><code>brew install scala</code></li>
-                <li>With <a href="https://www.macports.org/">MacPorts</a>, you can get Scala using <code>sudo port install scala2.x</code>command.<br/> For example to install Scala 2.12 simply use<code>sudo port install scala2.12</code></li>
-                <li>Use <a href="https://scastie.scala-lang.org">Scastie</a> to run single-file Scala programs in your browser using multiple Scala compilers; the production Scala 2.x compilers, Scala.js, Dotty, and Typelevel Scala. Save and share executable Scala code snippets.</li>
-                <li>Try Scala in the browser via <a href="https://scalafiddle.io/">ScalaFiddle</a>. This lets you run single-file Scala programs in your browser using Scala.js, including graphical/interactive examples such as <a href="https://scalafiddle.io/sf/KOsXSKv/0">Oscilloscope</a> or <a href="https://scalafiddle.io/sf/4beVrVc/1">Ray Tracer</a></li>
-                <li><a href="https://ammonite.io/">Get Ammonite</a>, a popular Scala REPL</li>
-              </ul>
-              <p>Or are you looking for <a href="{{ site.baseurl }}/download/all.html">previous releases</a> of Scala?</p>
-            </div>
-          </div>
-
-
-          <h3>Release Notes</h3>
-          For a summary of important changes, see the <a href="https://github.com/scala/scala/releases">GitHub release notes</a>.
-          <br/><small>(Or consult our archive of <a href="{{ site.baseurl }}/blog/announcements/">older release notes</a>.)</small>
-
-          {% include download-resource-list.html %}
-          <h3>License</h3>
-          <p>The Scala distribution is released under the {{page.license}}.</p>
-        </div>
-
+        {% if scala_edition == "3" %}
+          {% include downloads-scala3.html %}
+        {% else %}
+          {% include downloads-scala2.html %}
+        {% endif %}
       </div>
     </div>
   </div>
-
-  {% for step in site.data.downloads.stepOne %}
-  <div style="display:none" id="stepOne-{{step.os}}">{{step.text}}</div>
-  {% endfor %} {% for intellijUrl in site.data.downloads.intellijUrls %}
-  <div style="display:none" id="intellij-{{intellijUrl.os}}">{{intellijUrl.url}}</div>
-  {% endfor %} {% for sbtUrl in site.data.downloads.sbtUrls %}
-  <div style="display:none" id="sbt-{{sbtUrl.os}}">{{sbtUrl.url}}</div>
-  {% endfor %}
 </section>
+
+</main>
+
+{% include footer.html %}
