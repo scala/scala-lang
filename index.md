@@ -9,29 +9,34 @@ headerButtonUrl: "/what-is-scala/"
 
 # Links of the Download / API Docs sections
 gettingStarted:
-  mainTitle: "Download"
-  mainUrl: "/download"
-  subtitle: "Getting Started"
-  subtitleLink: "https://docs.scala-lang.org/getting-started.html"
+  mainTitle: "Scala 3.0.0"
+  mainUrl: "/download/scala3.html"
+  subtitle: "Documentation"
+  subtitleLink: "https://docs.scala-lang.org/scala3"
   links:
-    - title: "Milestones, nightlies, etc."
-      url: "/download/scala2.html#other-releases"
-    - title: "All Previous Releases"
-      url: "/download/all.html"
+    - title: "New in Scala 3"
+      url: "https://docs.scala-lang.org/scala3/new-in-scala3.html"
+    - title: "Scala 3 Book"
+      url: "https://docs.scala-lang.org/scala3/book/introduction.html"
+    - title: "Language Reference"
+      url: "https://dotty.epfl.ch/docs/reference/overview.html"
+    - title: "Migration Guide"
+      url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
 apiDocs:
-  mainTitle: "API Docs"
-  mainUrl: "https://www.scala-lang.org/api/?_ga=1.178639076.1310790544.1468501313"
-  subtitle: "Current API Docs"
-  subtitleLink: "https://www.scala-lang.org/api/current/?_ga=1.241039811.1310790544.1468501313"
+  mainTitle: "Scala 2.13.6"
+  mainUrl: "/download/scala2.html"
+  subtitle: "Documentation"
+  subtitleLink: "https://docs.scala-lang.org"
   links:
+    - title: "Current API Docs"
+      url: "https://www.scala-lang.org/api/current/?_ga=1.241039811.1310790544.1468501313"
     - title: "API Docs (other versions)"
       url: "https://scala-lang.org/files/archive/api/"
-    - title: "Scala Documentation"
-      url: "https://docs.scala-lang.org/"
     - title: "Language Specification"
       url: "https://scala-lang.org/files/archive/spec/2.13/"
+    - title: "All Previous Releases"
+      url: "/download/all.html"
 
-currentScalaVersion: "2.13.6"
 
 # Scala backends
 scalaBackends:
