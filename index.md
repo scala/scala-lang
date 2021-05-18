@@ -15,7 +15,7 @@ gettingStarted:
   subtitleLink: "https://docs.scala-lang.org/getting-started.html"
   links:
     - title: "Milestones, nightlies, etc."
-      url: "/download/index.html#other-releases"
+      url: "/download/scala2.html#other-releases"
     - title: "All Previous Releases"
       url: "/download/all.html"
 apiDocs:

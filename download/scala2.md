@@ -22,3 +22,4 @@ resources: [
   ["-non-main-sys", "scala-docs-2.13.6.zip", "https://downloads.lightbend.com/scala/2.13.6/scala-docs-2.13.6.zip", "API docs", "112.56M"],
   ["-non-main-sys", "scala-sources-2.13.6.tar.gz", "https://github.com/scala/scala/archive/v2.13.6.tar.gz", "Sources", ""]
 ]
+---
