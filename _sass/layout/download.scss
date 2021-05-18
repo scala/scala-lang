@@ -112,8 +112,8 @@
                 @include clearfix;
                 margin-top: 38px;
 
-                .download-intellij,
-                .download-sbt {
+                .download-left,
+                .download-right {
                     position: relative;
                     @include span-columns(4 of 8);
                     @include bp(large) {
@@ -196,7 +196,7 @@
         }
     }
 
-    .download-intellij {
+    .download-left, {
       padding-right: 10px;
       position: relative;
       .or {
@@ -212,11 +212,11 @@
       }
     }
 
-    .download-sbt {
+    .download-right {
       padding-left: 10px;
     }
 
-    .download-sbt {
+    .download-right {
         .description {
             top: 60px;
             left: auto;
