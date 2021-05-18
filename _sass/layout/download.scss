@@ -18,7 +18,24 @@
   h2 {
     margin-top: 2em;
   }
+
+  &.select-language {
+
+    .download .main-download {
+      margin-top: 0;
+      margin-bottom: 2em;
+    }
+
+    .download .main-download .install-steps {
+      padding-bottom: 8em;
+      @include bp(large) {
+        border: none;
+        padding-bottom: 1em;
+      }
+    }
+  }
 }
+
 
 .scala3 .ribbon-version {
   background: $brand-tertiary-dotty;
