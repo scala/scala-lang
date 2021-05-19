@@ -3,7 +3,7 @@
 //------------------------------------------------
 
 .scala-main-resources {
-    height: 180px;
+    height: 220px;
     background: $gray-darker;
     position: relative;
 
@@ -21,6 +21,16 @@
         .download {
             @include span-columns(4);
             @include shift(2);
+
+            .button {
+
+              background: $brand-tertiary-dotty;
+              &:active,
+              &:focus,
+              &:hover {
+                background: $brand-secondary;
+              }
+            }
         }
 
         .api-docs {
@@ -32,6 +42,14 @@
                 @include border-right-radius(200px);
                 @include border-bottom-radius(200px);
                 @include border-left-radius(0);
+
+                background: $brand-tertiary;
+
+                &:active,
+                &:focus,
+                &:hover {
+                  background: $brand-secondary;
+                }
             }
         }
         @include bp(large) {

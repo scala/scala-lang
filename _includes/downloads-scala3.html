@@ -1,0 +1,136 @@
+Scala binaries for <strong>{{page.release_version}}</strong> are available at <a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">github</a>.
+
+<h2>Getting Started with Scala 3</h2>
+<div class="install-steps">
+<p>
+  Depending on your experience and your requirements, there exist two ways to
+  install Scala 3 on your computer,
+  either through <a href="https://www.scala-sbt.org/download.html">sbt</a>, or
+  through <a href="https://get-coursier.io/docs/cli-installation">Coursier</a>.
+</p>
+
+<div class="download-options">
+  <div class="download-left">
+    <span class="or">or</span>
+    <a href="https://get-coursier.io/docs/cli-installation" class="btn-download">
+      <i class="fa fa-download"></i>
+      <span>Download Coursier</span>
+    </a>
+    <div class="text-variant">
+      <p>Best if you want to get <strong>started quickly</strong>.</p>
+      <p><i>Coursier will install all the necessary dependencies for you, so after
+         installing Coursier you are ready to go.</i></p>
+    </div>
+  </div>
+  <div class="download-right">
+    <a href="https://www.scala-sbt.org/download.html" class="btn-download">
+      <i class="fa fa-download"></i>
+      <span>Download Sbt</span>
+    </a>
+    <div class="text-variant">
+      <p>Best if you want to work on <strong>larger projects</strong>.</p>
+      <p><i>If you already have sbt installed, it is very easy to switch to Scala version {{page.release_version}}.</i></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2>Installing Scala 3 with <strong>Coursier</strong></h2>
+<div class="install-steps">
+  <div class="step arrow">
+    <img src="/resources/img/download/arrow-asset.png" alt="">
+    <div class="number-step">1</div>
+    <div class="text-step">
+      <h3>Install the <i>Coursier</i> Scala artifact fetcher.</h3>
+      <p>Visit the <a href="https://get-coursier.io/">Coursier website</a> for detailed installation instructions on how to install Coursier.</p>
+      <p><i>(Coursier is the simplest way to get started with Scala, since it will automatically download and install all necessary dependencies for you).</i></p>
+    </div>
+  </div>
+  <!-- <div class="step">
+    <div class="number-step">2</div>
+    <div class="text-step">
+      <h3>Then, prepare your environment</h3>
+      <p>Open a terminal and run the following command: <code>cs setup</code></p>
+      <p><i>(Running this <a href="https://get-coursier.io/docs/cli-setup">command</a> installs the correct Java version along with some other helpful command line tools).</i></p>
+    </div>
+  </div> -->
+  <div class="step arrow">
+    <img src="/resources/img/download/arrow-asset.png" alt="">
+    <div class="number-step">2</div>
+    <div class="text-step">
+      <h3>Then, install Scala 3</h3>
+      <p>Open a terminal and run the following commands:</p>
+      <p><code>cs install scala3-compiler</code><span>to install the Scala 3 compiler.</span></p>
+      <p><code>cs install scala3-repl</code><span>to install the Scala 3 interactive read-eval-print loop.</span></p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="number-step">3</div>
+    <div class="text-step">
+      <h3>Use Scala 3</h3>
+      <p>The command <code>scala3-repl</code> will start a Scala console that you can use to interactively evaluate Scala programs. Within this console, run the command <code>:load test.scala</code> to load and execute the file <code>test.scala</code>.</p>
+      <p>To use the Scala 3 compiler to compile a file <code>test.scala</code> simply run<code>scala3-compiler test.scala</code> in your terminal.</p>
+    </div>
+  </div>
+</div>
+
+
+<h2>Installing Scala 3 with <strong>sbt</strong></h2>
+<div class="install-steps">
+  <div class="step arrow">
+    <img src="/resources/img/download/arrow-asset.png" alt="">
+    <div class="number-step">1</div>
+    <div class="text-step">
+      <h3>First, make sure you have the Java 8 JDK (or Java 11 JDK) installed.</h3>
+      <p>To check, open the terminal and type:</p>
+      <p><code>java -version</code><span>(Make sure you have version 1.8 or 11.)</span></p>
+      <p>The environment variable <code>JAVA_HOME</code> should point to your Java installation.</p>
+      <p><i>(If you don't have it installed, download Java from <a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html">Oracle Java 8</a>, <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Oracle Java 11</a>, or <a href="https://adoptopenjdk.net/">AdoptOpenJDK 8/11</a>. Refer <a href="https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html">JDK Compatibility</a> for Scala/Java compatiblity detail.</i></p>
+    </div>
+  </div>
+  <div class="step arrow">
+    <img src="/resources/img/download/arrow-asset.png" alt="">
+    <div class="number-step">2</div>
+    <div class="text-step">
+      <h3>Install the <i>sbt</i> build tool.</h3>
+      <p>Visit the <a href="https://www.scala-sbt.org/download.html">sbt website</a> for detailed installation instructions on how to install <i>sbt</i>.</p>
+      <p><i>(sbt is a build tool that allows you to compile, run, test, and deploy your Scala projects).</i></p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="number-step">3</div>
+    <div class="text-step">
+      <h3>Create a project and use Scala 3</h3>
+      <p>To create a new Scala 3 project, go to your terminal and run <code>sbt new scala/scala3.g8</code>.</p>
+      <p>After entering the name of your project (let's say <code>MyProject</code>), in your terminal go to the generated folder (for example <code>myproject</code>) and run the command <code>sbt run</code>.</p>
+      <p>You should be greeted with a friendly message.</p>
+      <p><i>(Following conventions for the <a href="https://www.scala-sbt.org/1.x/docs/Directories.html">directory structure</a>, the Scala source files are located under <code>src/main/scala</code>).</i></p>
+    </div>
+  </div>
+</div>
+
+<div class="install-steps">
+  <div class="step other-ways-lead">
+    <div class="number-step"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+    <div class="text-step">
+      <h2>Other ways to install Scala</h2>
+      <ul>
+        <li>
+          Download the Scala binaries for <strong>{{page.release_version}}</strong> at <a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">github</a>.
+          <br/><span class="install"><a href="{{ site.baseurl }}/download/install.html">Need help running the binaries?</a></span>
+        </li>
+        <li>On macOS you can also use <a href="https://brew.sh/">Homebrew</a> and runthe following commands<br>
+            <code>brew update</code><br/><code>brew install lampepfl/brew/dotty</code></li>
+        <li>Use <a href="https://scastie.scala-lang.org/?target=scala3">Scastie</a> to run single-file Scala programs in your browser using multiple Scala compilers; the production Scala 2.x compilers, Scala.js, Scala 3, and Typelevel Scala. Save and share executable Scala code snippets.</li>
+      </ul>
+      <p>Or are you looking for <a href="{{ site.baseurl }}/download/all.html">previous releases</a> of Scala?</p>
+    </div>
+  </div>
+</div>
+
+<h3>Release Notes</h3>
+For a summary of important changes, see the <a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">GitHub release notes</a>.
+<br/><small>(Or consult our archive of <a href="{{ site.baseurl }}/blog/announcements/">older release notes</a>.)</small>
+
+<h3>License</h3>
+<p>The Scala distribution is released under the {{page.license}}.</p>

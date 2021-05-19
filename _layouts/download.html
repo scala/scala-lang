@@ -1,0 +1,77 @@
+{% include headertop.html %}
+{% include headerbottom.html %}
+
+<div class="navigation-fade-screen"></div>
+
+{% include navbar-inner.html %}
+
+<main id="inner-main" class="download-page select-language">
+
+<!-- Title -->
+<section class="title-page">
+	<div class="wrap">
+		<h1>{{page.title}}</h1>
+	</div>
+</section>
+
+{% comment %}Specific content from child layouts{% endcomment %}
+
+<section class="books">
+  <div class="wrap">
+    <div class="inner-box download">
+      <div class="main-download">
+        <h2>Which Scala version do you want to use?</h2>
+        <div class="install-steps">
+          <div class="step">
+            <div class="text-step">
+              <p>You can choose between the battle tested <strong>Scala 2</strong> or the newest <strong>Scala 3</strong>.</p>
+            </div>
+          </div>
+          <div class="download-options">
+            <div class="download-left">
+              <span class="or">or</span>
+              <div class="description">
+                <img src="/resources/img/download/arrow-left.png" alt="">
+                <p>Best if you are starting a new code base and want to use the latest version.</p>
+              </div>
+              <a href="{{ site.baseurl }}/download/scala3.html" class="btn-download scala3">
+                <i class="fa fa-download"></i>
+                <span>Download Scala 3</span>
+              </a>
+              <ul>
+                {% for tutorial in page.scala3tutorials %}
+                  <li><a href="{{tutorial.url}}"><i class="fa fa-file-text-o"></i>{{tutorial.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="download-right">
+              <div class="description">
+                <img src="/resources/img/download/arrow-right.png" alt="">
+                <p>Best if you are still working with an old code base that is not migrated, yet.</p>
+              </div>
+              <a href="{{ site.baseurl }}/download/scala2.html" class="btn-plain-download">
+                <i class="fa fa-download"></i>
+                <span>Download Scala 2</span>
+              </a>
+              <ul>
+                {% for tutorial in page.scala2tutorials %}
+                  <li><a href="{{tutorial.url}}"><i class="fa fa-file-text-o"></i>{{tutorial.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+				<h3>What's new in Scala 3?</h3>
+				<p>
+					For a summary of important changes in Scala 3, see <a href="https://docs.scala-lang.org/scala3/new-in-scala3.html">this page</a>.
+				</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+{% include footer.html %}
