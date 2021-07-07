@@ -10,7 +10,7 @@ headerButtonUrl: "/what-is-scala/"
 # Links of the Download / API Docs sections
 gettingStarted:
   mainTitle: "Scala 3.0.0"
-  mainUrl: "/download/scala3.html"
+  mainUrl: "https://docs.scala-lang.org/scala3/getting-started.html"
   subtitle: "Documentation"
   subtitleLink: "https://docs.scala-lang.org/scala3"
   links:
@@ -22,9 +22,11 @@ gettingStarted:
       url: "https://dotty.epfl.ch/docs/reference/overview.html"
     - title: "Migration Guide"
       url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
+    - title: "Download Scala 3"
+      url: "/download/scala3.html"
 apiDocs:
   mainTitle: "Scala 2.13.6"
-  mainUrl: "/download/scala2.html"
+  mainUrl: "https://docs.scala-lang.org/getting-started.html"
   subtitle: "Documentation"
   subtitleLink: "https://docs.scala-lang.org"
   links:
@@ -36,6 +38,8 @@ apiDocs:
       url: "https://scala-lang.org/files/archive/spec/2.13/"
     - title: "All Previous Releases"
       url: "/download/all.html"
+    - title: "Download Scala 2"
+      url: "/download/scala2.html"
 
 
 # Scala backends
