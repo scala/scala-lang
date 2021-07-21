@@ -19,7 +19,7 @@ gettingStarted:
     - title: "Scala 3 Book"
       url: "https://docs.scala-lang.org/scala3/book/introduction.html"
     - title: "Language Reference"
-      url: "https://dotty.epfl.ch/docs/reference/overview.html"
+      url: "https://docs.scala-lang.org/scala3/reference/overview.html"
     - title: "Migration Guide"
       url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
 apiDocs:
