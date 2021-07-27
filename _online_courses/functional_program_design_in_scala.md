@@ -1,7 +1,7 @@
 ---
 layout: inner-page-no-masthead
 title: Functional Program Design in Scala
-coursera-page: https://www.coursera.org/learn/progfun2
+coursera-page: https://www.coursera.org/learn/scala-functional-program-design
 specialization: fpfun
 specialization-order: 2
 paid: false
@@ -21,4 +21,4 @@ Learning Outcomes. By the end of this course you will be able to:
    functions and state,
  - write simple functional reactive applications.
 
-Recommended background: You should have at least one year programming experience. Proficiency with Java or C# is ideal, but experience with other languages such as C/C++, Python, Javascript or Ruby is also sufficient. You should have some familiarity using the command line. This course is intended to be taken after Functional Programming Principles in Scala: https://www.coursera.org/learn/progfun1.
+Recommended background: You should have at least one year programming experience. Proficiency with Java or C# is ideal, but experience with other languages such as C/C++, Python, Javascript or Ruby is also sufficient. You should have some familiarity using the command line. This course is intended to be taken after Functional Programming Principles in Scala: https://www.coursera.org/learn/scala-functional-programming.
