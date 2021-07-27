@@ -29,9 +29,9 @@ which is a verified mini-degree from Coursera.
 Or to enroll in each course independently (for free, but without a certificate),
 you can visit each course's landing page:
 
-- **[Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1/)**
-- **[Functional Program Design in Scala](https://www.coursera.org/learn/progfun2/)**
-- **[Parallel Programming](https://www.coursera.org/learn/parprog1/)**
+- **[Functional Programming Principles in Scala](https://www.coursera.org/learn/scala-functional-programming/)**
+- **[Functional Program Design in Scala](https://www.coursera.org/learn/scala-functional-program-design/)**
+- **[Parallel Programming](https://www.coursera.org/learn/scala-parallel-programming/)**
 
 More info about each course can be found on the [Scala Specialization page](https://www.coursera.org/specializations/scala), or on
 the [Scala Center's website](https://scala.epfl.ch/). Questions, or to join the discussion about the Scala Center, visit us in the [Scala Center gitter channel](https://gitter.im/scala/center)!

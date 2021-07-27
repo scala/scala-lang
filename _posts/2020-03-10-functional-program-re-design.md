@@ -71,9 +71,9 @@ course targeting beginners and aiming at delivering practical skills (how to mod
 business domain, how to process and validate data, how to use a build tool, etc.).
 
 [online courses]: https://docs.scala-lang.org/learn.html
-[Functional Programming Principles in Scala]: https://www.coursera.org/learn/progfun1
-[Functional Program Design]: https://www.coursera.org/learn/progfun2
-[Parallel Programming]: https://www.coursera.org/learn/parprog1
+[Functional Programming Principles in Scala]: https://www.coursera.org/learn/scala-functional-programming
+[Functional Program Design]: https://www.coursera.org/learn/scala-functional-program-design
+[Parallel Programming]: https://www.coursera.org/learn/scala-parallel-programming
 [Big Data Analysis with Scala and Spark]: https://www.coursera.org/learn/scala-spark-big-data
 [Scala Specialization Capstone Project]: https://www.coursera.org/learn/scala-capstone/
 [specialization]: https://www.coursera.org/specializations/scala

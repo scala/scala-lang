@@ -24,11 +24,11 @@ Encouraged by this success, one year later we launched our second course: Princi
 ## Where we are
 
 We currently have 6 running courses, ranging from the basics of the language to more specific programming techniques:
-- [Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1) (Martin Odersky): still our
+- [Functional Programming Principles in Scala](https://www.coursera.org/learn/scala-functional-programming) (Martin Odersky): still our
   most popular course, introduces both the Scala language and the functional programming paradigm,
-- [Functional Program Design](https://www.coursera.org/learn/progfun2) (Martin Odersky): shows how to apply functional
+- [Functional Program Design](https://www.coursera.org/learn/scala-functional-program-design) (Martin Odersky): shows how to apply functional
   programming techniques to design large applications,
-- [Parallel Programming](https://www.coursera.org/learn/parprog1) (Viktor Kuncak, Aleksandar Prokopec): teaches
+- [Parallel Programming](https://www.coursera.org/learn/scala-parallel-programming) (Viktor Kuncak, Aleksandar Prokopec): teaches
   programming techniques for leveraging multicore machines,
 - [Big Data Analysis with Scala and Spark](https://www.coursera.org/learn/scala-spark-big-data) (Heather Miller):
   teaches how to process datasets that don’t fit into the computer’s memory,

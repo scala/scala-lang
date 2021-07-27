@@ -1,7 +1,7 @@
 ---
 layout: inner-page-no-masthead
 title: Programming Reactive Systems
-coursera-page: https://www.coursera.org/learn/scala-reactive
+coursera-page: https://www.coursera.org/learn/scala-akka-reactive
 edx-page: https://www.edx.org/course/programming-reactive-systems
 paid: false
 showDate: false

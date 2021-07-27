@@ -90,9 +90,9 @@ are still available here:
 [Noel Welsh]: https://noelwelsh.com/
 [Scala Bridge]: https://scalabridge.org/
 [Scala Specialization]: https://www.coursera.org/specializations/scala
-[Functional Programming Principles in Scala]: https://www.coursera.org/learn/progfun1
-[Functional Program Design]: https://www.coursera.org/learn/progfun2
-[Parallel Programming]: https://www.coursera.org/learn/parprog1
+[Functional Programming Principles in Scala]: https://www.coursera.org/learn/scala-functional-programming
+[Functional Program Design]: https://www.coursera.org/learn/scala-functional-program-design
+[Parallel Programming]: https://www.coursera.org/learn/scala-parallel-programming
 [Big Data Analysis with Scala and Spark]: https://www.coursera.org/learn/scala-spark-big-data
 [Functional Programming in Scala Capstone]: https://www.coursera.org/learn/scala-capstone
 [Programming Reactive Systems]: https://www.coursera.org/learn/scala-akka-reactive
