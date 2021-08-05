@@ -11,23 +11,23 @@ The community is also the source of many libraries, tools, and other resources a
 
 ## Who's behind Scala?
 
+Scala was created by
+[Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/).
+
 The Scala language and associated websites are cooperative projects of
 the [Scala Center](https://scala.epfl.ch) at [EPFL](https://epfl.ch),
-[Lightbend](https://www.lightbend.com), and the Scala community
-more broadly, with participation from many companies, organizations,
-and individuals.
+the Scala 3 team in Martin's research group (also at EPFL),
+the Scala team at [Lightbend](https://www.lightbend.com),
+[VirtusLab](https://virtuslab.com), and the Scala community more
+broadly, with participation from many companies, organizations, and
+individuals.
 
-The Scala team at Lightbend concentrates on advancing the language,
-compiler, and standard library.  The Scala Center focuses on education
-(especially online courses), documentation, open source community
-outreach, and tooling.  Community participation in all of these
-efforts is strongly encouraged.
+Scala 2 maintenance is primarily handled by the Lightbend team.
+They also participate in Scala 3 development.
 
-Scala was created by
-[Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/).  Martin and
-his research group at EPFL remain heavily involved with the language,
-including developing [Dotty](https://dotty.epfl.ch), a
-next-generation compiler for Scala.
+The Scala Center focuses on education (especially online courses),
+documentation, open source community outreach, and tooling.  Community
+participation in all of these efforts is strongly encouraged.
 
 ## Forums / Mailing Lists
 
