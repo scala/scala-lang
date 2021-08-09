@@ -27,7 +27,7 @@
         margin-bottom: 40px;
 
         li {
-            &:first-child {
+            &:not(:last-child) {
                 margin-right: 32px;
             }
 
