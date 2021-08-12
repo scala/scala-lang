@@ -62,6 +62,12 @@
 
         line-height: normal;
 
+        &:hover {
+            .course-icon {
+                transform: scale(1.2);
+            }
+        }
+
         .card-text {
 
             margin-left: 0;
