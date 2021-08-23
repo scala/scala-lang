@@ -6,7 +6,7 @@ scala2tutorials:
 - title: "Getting Started with Scala 2"
   url: "https://docs.scala-lang.org/getting-started/index.html"
 - title: "Scala 2 documentation"
-  url: "https://docs.scala-lang.org/scala2/"
+  url: "https://docs.scala-lang.org/"
 
 scala3tutorials:
 - title: "Getting Started with Scala 3"
