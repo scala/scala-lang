@@ -69,7 +69,6 @@ Other, more specialized rooms include:
 * **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other
 * **[scala-native/scala-native](https://gitter.im/scala-native/scala-native)**: for discussion about the Scala to LLVM compiler.
 * **[scala-js/scala-js](https://gitter.im/scala-js/scala-js)**: for discussion about the Scala to JavaScript compiler.
-* **[lampepfl/dotty](https://gitter.im/lampepfl/dotty)**: for discussion about the next generation Scala compiler.
 
 International rooms are available as well:
 
@@ -182,11 +181,6 @@ Staying current:
 * [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
 * [Scala Native](https://www.scala-native.org) compiles Scala code to LLVM for native execution
 * [Scala on Android](https://scala-android.org) community site
-
-## Dotty
-
-* [Dotty](https://dotty.epfl.ch) is a next generation compiler for Scala, under development at EPFL
-    * [Dotty FAQ](https://dotty.epfl.ch/#why-dotty)
 
 ## The Scala Center
 
