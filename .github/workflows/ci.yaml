@@ -6,7 +6,7 @@ on:
     - cron: '00 0 * * *'
 
 jobs:
-  foo:
+  build-and-validate-docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
