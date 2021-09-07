@@ -16,6 +16,7 @@ jobs:
           bundler-cache: true
       - name: Build documents
         run: |
+          bundle update --bundler
           bundle exec jekyll build 2> error.log
           cat >&2 error.log
           ( ! grep -qie Error -e Warn error.log )
