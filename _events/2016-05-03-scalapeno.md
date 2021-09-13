@@ -6,5 +6,5 @@ location: Ramat Gan, Israel
 description: Scalapeño is an annual conference for software engineers focused on the Scala programming language.
 start: 3 May 2016
 end: 3 May 2016
-link-out: https://www.scalapeno.org.il/
+link-out: https://www.scalapeno2018.com/
 ---
