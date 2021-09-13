@@ -6,5 +6,5 @@ location: Kraków, Poland
 description: "Let’s immerse ourselves into Scala Dev Tools"
 start: 15 April 2018
 end: 17 April 2018
-link-out: https://2018.scala.sphere.it/
+link-out: https://sphere.it/event/scala-devtools-2018/
 ---
