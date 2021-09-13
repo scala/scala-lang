@@ -318,7 +318,7 @@ to continue using implicit classes to encode extension methods.
 
 On the other hand, some features of Scala 3 are not mappable to features in Scala 2.13,
 and will cause a compile-time error when using them. A longer list can be seen in the
-migration guide, describing [how Scala 2 reacts to different Scala 3 features](https://scalacenter.github.io/scala-3-migration-guide/docs/compatibility.html#the-scala-2-tasty-reader).
+migration guide, describing [how Scala 2 reacts to different Scala 3 features](https://docs.scala-lang.org/scala3/guides/migration/compatibility-classpath.html#the-scala-213-tasty-reader).
 
 For unsupported features, a best effort is made
 to report errors at the use-site that is problematic. For example,

@@ -154,7 +154,7 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 ## Community-Powered Learning Resources
 
 * [Scala Exercises](http://scala-exercises.47deg.com/)
-* [Scala School](https://twitter.github.com/scala_school/)
+* [Scala School](https://twitter.github.io/scala_school/)
 * [Scala Puzzlers](https://scalapuzzlers.com/)
 * [Scala Cookbook](http://www.scalacookbook.com/)
 * [Interactive Tour](https://scalatutorials.com/tour)

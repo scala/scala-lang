@@ -6,5 +6,5 @@ location: Ramat Gan, Israel
 description: The second annual Israeli Scala conference
 start: 22 September 2014
 end: 22 September 2014
-link-out: http://www.2014.scalapeno.org.il/
+link-out: https://www.scalapeno2018.com/
 ---
