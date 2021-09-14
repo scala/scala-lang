@@ -6,5 +6,5 @@ location: Auckland, New Zealand
 description: Scala Downunder brings together the Scala communities in Australia and New Zealand.
 start: 5 September 2014
 end: 6 September 2014
-link-out: http://scaladownunder.org
+link-out: https://twitter.com/scaladownunder
 ---
