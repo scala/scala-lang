@@ -76,6 +76,8 @@ powerful and well known Python libraries.  You can read more
 > Mykola's contributions bringing support for Scala 3 are really impressive and
 > will enable many new research and production use cases in the future!
 
+cit. Shadaj
+
 A special thanks goes to **Zhendong Ang** who co-menthored Mykola and
 collaborated on the project for his semester project at EPFL.
 
@@ -100,7 +102,7 @@ cit. Alexandre
 
 Scala GSoC 2021 would not have been possible without our Mentors that dedicated
 their time and energy as volunteers to guide new contributors.  Thank you
-mentors for the great work we hope to see you in the next edition(s)! 
+mentors for the great work. We hope to see you in the next edition(s)! 
 
 Here are a few of the comments that students submitted:
 
@@ -157,16 +159,16 @@ https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list
 You should also identify at least one mentor and one backup mentor for each
 proposal. This will speed up the application process but also make the project
 visible to students before the event starts, increasing the chances that
-motivated students will not miss the opportunity to work on your repository.
+motivated students will take the opportunity to work on your repository.
 
 Communication is fundamental too: candidate mentors are encouraged to
 communicate about their participation in GSoC and about project ideas throughout
 the year. Be responsive to students approaching you on the project
-channels (GitHub issues, Discord, Gitter, Twitter…) 
+channels (GitHub issues, Discord, Gitter, Twitter…).
 
 If you maintain a Scala library and would like to be part of Scala GSoC 2022
 with the help of the Scala Center, do not hesitate to contact us at
-[scala-gsoc@epfl.ch](mailto:scala-gsoc@epfl.ch) !
+[scala-gsoc@epfl.ch](mailto:scala-gsoc@epfl.ch)!
 
 ### For Students
 
@@ -203,9 +205,9 @@ For this year’s edition we gathered [28 project
 ideas](https://github.com/scalacenter/GoogleSummerOfCode2021) and 20 candidate
 mentors motivated to support students with such ideas.  We received 10
 applications and after reviewing proposals and assigning students to mentors, we
-retained 4 projects to enter the programme.
+retained 4 projects to enter the program.
 
-For the 2022 Scala GSoC edition we are aiming to attract at least **10 new
+For the 2022 Scala GSoC edition, we are aiming to attract at least **10 new
 students** and we invite you to help us by 
 
  - offering to be a mentor 
