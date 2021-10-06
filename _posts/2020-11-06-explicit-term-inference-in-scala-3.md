@@ -202,7 +202,7 @@ This allows you to have more control over imports without relying on instance na
 ### Find out more
 
 You can learn more about `using` / `given` and about the rules of resolution in
-[the documentation](https://dotty.epfl.ch/docs/reference/contextual/motivation.html).
+[the documentation](https://docs.scala-lang.org/scala3/reference/contextual.html).
 
 ### How was this done in Scala 2?
 

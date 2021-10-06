@@ -89,7 +89,7 @@ By re-compiling an existing library from its TASTy, its class files are regenera
 
 While Scala 3 can generally consume libraries built with Scala 2.13, this does not work for macros. Macro methods defined in 2.13 libraries cannot be used in Scala 3, because the Scala 3 compiler cannot execute the macro at compile-time.
 
-The macro system from Scala 2 is deeply tied to the internals of the Scala 2 compiler and cannot be migrated in a compatible fashion to Scala 3. Instead, Scala 3 ships with a [new macro system](https://dotty.epfl.ch/docs/reference/metaprogramming/toc.html). This means that macro definitions have to be re-written when migrating a codebase to Scala 3. Cross-building is possible by having separate source files for Scala 2 and 3 macro definitions.
+The macro system from Scala 2 is deeply tied to the internals of the Scala 2 compiler and cannot be migrated in a compatible fashion to Scala 3. Instead, Scala 3 ships with a [new macro system](https://docs.scala-lang.org/scala3/reference/metaprogramming.html). This means that macro definitions have to be re-written when migrating a codebase to Scala 3. Cross-building is possible by having separate source files for Scala 2 and 3 macro definitions.
 
 Libraries that define macros can be made available for both Scala 2.13 and Scala 3 by cross-compiling. 
 
