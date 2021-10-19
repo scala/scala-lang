@@ -9,7 +9,7 @@ headerButtonUrl: "/what-is-scala/"
 
 # Links of the Download / API Docs sections
 gettingStarted:
-  mainTitle: "Scala 3.0.2"
+  mainTitle: "Scala 3.1.0"
   mainUrl: "/download/scala3.html"
   subtitle: "Documentation"
   subtitleLink: "https://docs.scala-lang.org/scala3"
