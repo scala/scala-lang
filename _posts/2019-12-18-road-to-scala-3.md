@@ -135,7 +135,7 @@ Our strategy for making your upgrade predictable and manageable comprises:
 
 ### How can I contribute?
 
-Perhaps you've been waiting for the design of Scala 3 to settle down before diving in.  That settling-down is now largely complete, so now is an excellent time to get involved. If you're a Dotty first-timer, read the [getting started page](https://dotty.epfl.ch/docs/usage/getting-started.html).
+Perhaps you've been waiting for the design of Scala 3 to settle down before diving in.  That settling-down is now largely complete, so now is an excellent time to get involved. If you're a Dotty first-timer, read the getting started page on the Dotty site.
 
 There are two basic ways you can help Scala 3 happen:
 
