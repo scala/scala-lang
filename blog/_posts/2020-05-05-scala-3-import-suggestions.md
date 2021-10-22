@@ -314,7 +314,7 @@ Scala 3 addresses these two pain points by:
 - providing actionable feedback, suggesting `import` clauses that might provide
   the missing implicits.
 
-You can already try this feature in [Dotty 0.24.0-RC1](https://dotty.epfl.ch/docs/usage/getting-started.html).
+You can already try this feature in Dotty 0.24.0-RC1.
 
 [2018 Scala developer survey]: https://contributors.scala-lang.org/t/preliminary-developer-survey-results/2681
 [2019 developer survey]: https://scalacenter.github.io/scala-developer-survey-2019/#what-are-the-main-pain-points-in-your-daily-workflow
