@@ -23,7 +23,7 @@ gettingStarted:
     - title: "Migration Guide"
       url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
 apiDocs:
-  mainTitle: "Scala 2.13.6"
+  mainTitle: "Scala 2.13.7"
   mainUrl: "/download/scala2.html"
   subtitle: "Documentation"
   subtitleLink: "https://docs.scala-lang.org"
