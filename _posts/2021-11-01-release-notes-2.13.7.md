@@ -7,7 +7,7 @@ title: "Scala 2.13.7 is now available!"
 
 Highlights:
 
-* Support Scala 3.1
+* Support Scala 3.1 in TASTy reader
 * Support JDK 18
 * Support JDK 16 record syntax in Java sources
 * Improve Android compatibility
