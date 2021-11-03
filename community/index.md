@@ -78,7 +78,7 @@ International rooms are available as well:
 * **[scala/de](https://gitter.im/scala/de)**
 * **[scala/es](https://gitter.im/scala/es)**
 * **[scala/fr](https://gitter.im/scala/fr)**
-* **[scala/it](https://gitter.im/scala/it)**
+* **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
 * **[scala/pl](https://gitter.im/scala/pl)**
 * **[scala/pt](https://gitter.im/scala/pt)**
 * **[scalajp](https://gitter.im/scalajp/)**
