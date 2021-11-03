@@ -78,6 +78,7 @@ International rooms are available as well:
 * **[scala/de](https://gitter.im/scala/de)**
 * **[scala/es](https://gitter.im/scala/es)**
 * **[scala/fr](https://gitter.im/scala/fr)**
+* **[scala/it](https://discord.gg/8wadTgcZVt)*** (Discord)
 * **[scala/pl](https://gitter.im/scala/pl)**
 * **[scala/pt](https://gitter.im/scala/pt)**
 * **[scalajp](https://gitter.im/scalajp/)**
@@ -100,7 +101,6 @@ Other Scala-related Discord servers include:
 
 * **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
 * **[Typelevel](https://discord.gg/XF3CXcMzqD)**: about the Typelevel ecosystem for pure-functional programming in Scala
-* **[ScalaItaly](https://discord.gg/8wadTgcZVt)**: the Italian Scala community Discord server
 
 IRC users can chat about Scala on the #scala IRC channel on Libera: `irc://irc.libera.chat/scala`
 
