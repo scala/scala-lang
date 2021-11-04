@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}"/>
@@ -18,8 +21,7 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     {% endif %}    
     <meta property="og:image" content="{{ site.url }}/resources/img/scala-spiral-3d-2-toned-down.png"/>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
