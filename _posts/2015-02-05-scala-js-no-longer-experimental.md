@@ -153,7 +153,7 @@ There are three main ways to get started with Scala.js:
 
 * [The tutorial](https://www.scala-js.org/doc/tutorial.html)
 * The free e-book [Hands-on Scala.js](https://lihaoyi.github.io/hands-on-scala-js/)
-* The online sandbox [Scala.jsFiddle](http://www.scala-js-fiddle.com/)
+* The online sandbox [ScalaFiddle](https://scalafiddle.io)
 
 So go ahead!
 Use it, love it, and build the web applications of the future!
