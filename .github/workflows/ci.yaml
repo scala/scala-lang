@@ -29,4 +29,4 @@ jobs:
       - name: Proofing (Cron)
         if: ${{ github.event_name == 'schedule' }}
         run: |
-          bundle exec htmlproofer ./_site/ --external_only --only-4xx --http-status-ignore "400,401,429" --empty-alt-ignore --allow-hash-href --url-ignore "/trends.google.com/,/pgp.mit.edu/,/www.oracle.com/"
+          bundle exec htmlproofer ./_site/ --external_only --only-4xx --http-status-ignore "400,401,429" --empty-alt-ignore --allow-hash-href --url-ignore "/trends.google.com/,/pgp.mit.edu/,/www.oracle.com/,/scalafiddle.io/"
