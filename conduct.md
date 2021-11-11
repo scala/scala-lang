@@ -96,7 +96,7 @@ listed above,
 ### Examples of unacceptable behavior
 
 Behavior that will lead to exclusion includes the following points, inspired by the definition of
-“Unacceptable Behavior” in the [Citizen Code of Conduct](http://citizencodeofconduct.org/):
+“Unacceptable Behavior” in the [Citizen Code of Conduct](https://web.archive.org/web/20200330154000/http://citizencodeofconduct.org/):
 
 * Violence, threats of violence or violent language directed against another person.
 * Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.
@@ -119,7 +119,7 @@ Adapted from and/or inspired by multiple successful Codes of Conduct, including:
 * [The Contributor Covenant v1.4.0](https://contributor-covenant.org/version/1/4/)
 * [The Recurse Center's User Manual](https://www.recurse.com/manual#sec-environment)
 * [The 18F Code of Conduct](https://18f.gsa.gov/code-of-conduct/)
-* [Citizen Code of Conduct](http://citizencodeofconduct.org/)
+* [Citizen Code of Conduct](https://web.archive.org/web/20200330154000/http://citizencodeofconduct.org/)
 
 ### License
 
