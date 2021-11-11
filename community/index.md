@@ -176,6 +176,11 @@ Staying current:
 * [Scala Times](https://scalatimes.com) includes library releases
 * [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) includes library releases
 
+Want to start contributing?
+
+[Here](https://github.com/search?q=type%3Aissue+label%3A%22help+wanted%22+label%3A%22good+first+issue%22+language%3AScala+state%3Aopen&type=Issues)
+you can search for all open `Issues` in **Github** that are labbeled as _"help wanted"_ & _"good first issue"_.
+
 ## Non-JVM platforms
 
 * [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
