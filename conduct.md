@@ -101,7 +101,7 @@ Behavior that will lead to exclusion includes the following points, inspired by 
 * Violence, threats of violence or violent language directed against another person.
 * Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.
 * Posting or displaying sexually explicit or violent material.
-* Posting or threatening to post other people’s personally identifying information (including so-called "doxing").
+* Posting or threatening to post other people’s personally identifying information.
 * Personal insults, particularly those related to gender, sexual orientation, race, religion, or disability.
 * Inappropriate photography or recording.
 * Inappropriate physical contact. You should have someone’s consent before touching them.
