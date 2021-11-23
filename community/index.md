@@ -187,6 +187,24 @@ Staying current:
 * [The Scala Center](https://scala.epfl.ch/) is an open source foundation that brings together a coalition of individuals and organizations working together to contribute to Scala.
     * [Scala Center FAQ](https://scala.epfl.ch/faqs.html)
 
+## Scala open source
+
+Want to start making open-source contributions to projects in the
+Scala ecosystem?
+
+Scaladex lists [projects welcoming contributions](https://index.scala-lang.org/search?q=&contributingSearch=true).
+
+Also, on GitHub, a common convention is to use the label "good first issue"
+on issues that are especially easy on-ramps to getting started in
+a particular repo:
+
+* "good first issue" tickets: https://github.com/search?q=type%3Aissue+label%3A%22good+first+issue%22+language%3AScala+state%3Aopen&type=Issues
+
+And, some repos also use a "help wanted" label if the maintainers
+especially desire contributor attention:
+
+* "help wanted" tickets: https://github.com/search?q=type%3Aissue+label%3A%22help+wanted%22+language%3AScala+state%3Aopen&type=Issues
+
 ## Phil Bagwell Memorial Scala Community Award
 
 The [Phil Bagwell Memorial Scala Community Award](./phil-bagwell-award.html) is given to individuals who have made significant efforts to grow the Scala Community.
