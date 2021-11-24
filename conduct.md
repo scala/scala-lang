@@ -124,3 +124,7 @@ Adapted from and/or inspired by multiple successful Codes of Conduct, including:
 ### License
 
 This Code of Conduct is distributed under a [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/3.0/).
+
+### See also
+
+* Our [inclusive language guide](../contribute/inclusive-language/)
