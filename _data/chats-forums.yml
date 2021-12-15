@@ -10,7 +10,7 @@ discourseForums:
 
 discordServers:
   - name: Scala
-    url: https://discord.gg/scala
+    url: https://discord.com/invite/scala
   - name: Scalameta
     url: https://discord.gg/RFpSVth
   - name: Typelevel

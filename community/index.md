@@ -57,7 +57,7 @@ Job postings are not allowed in our other forums and chat rooms.
 
 Our main chat platform is Discord, and the main Scala server is:
 
-* **[Scala](https://discord.gg/scala)**
+* **[Scala](https://discord.com/invite/scala)**
   * the #scala-users channel is especially beginner-friendly
   * the #scala-contributors channel is about moving Scala forward
   * the #jobs channel is the only place we allow job postings
