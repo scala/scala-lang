@@ -21,9 +21,9 @@
   links:
     - title: Community
       url: "/community/"
-    - title: Forums / Mailing Lists
-      url: "/community/index.html#forums--mailing-lists"
-    - title: Chat Rooms & More
+    - title: Forums
+      url: "/community/index.html#forums"
+    - title: Chat
       url: "/community/index.html#chat-rooms"
     - title: Libraries and Tools
       url: "/community/index.html#community-libraries-and-tools"
@@ -52,7 +52,7 @@
       url: "https://github.com/scala"
     - title: Twitter
       url: "https://twitter.com/scala_lang"
-    - title: Gitter
-      url: "https://gitter.im/scala/scala"
     - title: Discord
-      url: "https://discord.gg/scala"
+      url: "https://discord.com/invite/scala"
+    - title: LinkedIn
+      url: "https://www.linkedin.com/company/scala-center/"
