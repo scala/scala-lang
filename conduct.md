@@ -68,9 +68,15 @@ eager to assume good intent and forgive.
 
 ### Domain
 
-The enforcement policies listed above apply to all official Scala channels:
-mailing lists, GitHub repositories and Gitter channels under the scala,
-scalacenter and lampepfl organizations, Discourse, and Scala Center venues and hackathons. For other
+The enforcement policies listed above apply to all official Scala channels,
+including:
+
+* Discourse forums
+* chat rooms on Discord and Gitter
+* GitHub repositories under the scala, scalacenter, and lampepfl organizations
+* Scala Center events and venues
+
+For other
 projects adopting the Scala Code of Conduct, please contact the maintainers of
 those projects for enforcement. If you wish to use this code of conduct for your
 own project, consider explicitly mentioning your moderation policy or making a

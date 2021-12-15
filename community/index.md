@@ -31,7 +31,7 @@ The Scala Center focuses on education (especially online courses),
 documentation, open source community outreach, and tooling.  Community
 participation in all of these efforts is strongly encouraged.
 
-## Forums / Mailing Lists
+## Forums
 
 The Scala Center operates two Discourse forums:
 
@@ -45,66 +45,49 @@ These forums are covered by the [Scala Code of Conduct](../conduct.html).
 
 Lightbend operates a Discourse forum as well:
 
- * **[discuss.lightbend.com](https://discuss.lightbend.com)**: For discussion of reactive architectures, Akka, Play, Lagom, and related tooling including sbt.
+ * **[discuss.lightbend.com](https://discuss.lightbend.com)**: For discussion of reactive architectures, Akka, Play, and related tooling including sbt.
 
 ## Scala Jobs
 
-Employers and job seekers can find each other in the [scala/job-board Gitter room](https://gitter.im/scala/job-board).
+Employers and job seekers can find each other in the #jobs channel of the [Scala Discord](https://discord.gg/scala).
 
-Job listings are not allowed in our other forums and chat rooms.
+Job postings are not allowed in our other forums and chat rooms.
 
 ## Chat Rooms
 
-Our main chat platform is [Gitter](https://gitter.im).  See next section for other platforms.
+Our main chat platform is Discord, and the main Scala server is:
 
-The main Gitter room for Scala is:
+* **[Scala](https://discord.gg/scala)**
+  * the #scala-users channel is especially beginner-friendly
+  * the #scala-contributors channel is about moving Scala forward
+  * the #jobs channel is the only place we allow job postings
+  * ask on #admin if you have questions or suggestions about the server itself
+  * there are many other channels, including #scala-js and #scala-native
 
-* **[scala/scala](https://gitter.im/scala/scala)**: Questions, general discussion, etc. Beginner-friendly.
-
-Other, more specialized rooms include:
-
-* **[scala/center](https://gitter.im/scala/center)**: for discussions about Scala community governance, processes, the Scala Platform, and projects going on at the Scala Center.
-* **[scala/contributors](https://gitter.im/scala/contributors)**: for contributors to discuss work on changes to Scala.
-* **[scala/moocs](https://gitter.im/scala/moocs)**: for talking about the Scala Center's online courses
-* **[scala/job-board](https://gitter.im/scala/job-board)**: for employers and job seekers to connect with each other
-* **[scala-native/scala-native](https://gitter.im/scala-native/scala-native)**: for discussion about the Scala to LLVM compiler.
-* **[scala-js/scala-js](https://gitter.im/scala-js/scala-js)**: for discussion about the Scala to JavaScript compiler.
-
-International rooms are available as well:
-
-* **[scala/scala-india](https://gitter.im/scala/scala-india)**
-* **[scala/ar](https://gitter.im/scala/ar)**
-* **[scala/cn](https://gitter.im/scala/cn)**
-* **[scala/de](https://gitter.im/scala/de)**
-* **[scala/es](https://gitter.im/scala/es)**
-* **[scala/fr](https://gitter.im/scala/fr)**
-* **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
-* **[scala/pl](https://gitter.im/scala/pl)**
-* **[scala/pt](https://gitter.im/scala/pt)**
-* **[scalajp](https://gitter.im/scalajp/)**
-* **[scala_ru](https://t.me/scala_ru)** (Telegram)
-* **[scala_en](https://t.me/scala_en)** (Telegram)
-
-All of the rooms above are covered by the [Scala Code of Conduct](../conduct.html).
-
-There are many other rooms devoted to individual Scala libraries and technologies.
-Examples include:
-
-* **[spark-scala/Lobby](https://gitter.im/spark-scala/Lobby)**: for discussions and questions about using Scala for Spark programming
-* **[typelevel/cats](https://gitter.im/typelevel/cats)**: for discussion about the Cats library of abstractions for functional programming and FP in general.
-
-## Chat Rooms (Discord, IRC)
-
-Discord users can chat about Scala [via this link](https://discord.gg/scala).
-
-Other Scala-related Discord servers include:
+Scala-oriented Discord servers operated by the community include:
 
 * **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
 * **[Typelevel](https://discord.gg/XF3CXcMzqD)**: about the Typelevel ecosystem for pure-functional programming in Scala
 
-IRC users can chat about Scala on the #scala IRC channel on Libera: `irc://irc.libera.chat/scala`
+English-language Scala rooms on other chat platforms besides Discord include:
 
-As with Gitter, the Discord and IRC channels are covered by the [Scala Code of Conduct](../conduct.html). Moderation is handled by community volunteers and by representatives of the Scala Center.
+* **[scala_en](https://t.me/scala_en)** (Telegram)
+* **[scala/scala](https://gitter.im/scala/scala)** (Gitter)
+* **[#scala](https://libera.chat)** (IRC)
+
+International chat rooms are available as well:
+
+* **[scala/scala-india](https://gitter.im/scala/scala-india)** (Gitter)
+* **[scala/ar](https://gitter.im/scala/ar)** (Gitter)
+* **[scala/cn](https://gitter.im/scala/cn)** (Gitter)
+* **[scala/de](https://gitter.im/scala/de)** (Gitter)
+* **[scala/es](https://gitter.im/scala/es)** (Gitter)
+* **[scala/fr](https://gitter.im/scala/fr)** (Gitter)
+* **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
+* **[scala/pl](https://gitter.im/scala/pl)** (Gitter)
+* **[scala/pt](https://gitter.im/scala/pt)** (Gitter)
+* **[scalajp](https://gitter.im/scalajp/)** (Gitter)
+* **[scala_ru](https://t.me/scala_ru)** (Telegram)
 
 ## User Groups
 

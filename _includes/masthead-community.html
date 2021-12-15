@@ -4,7 +4,7 @@
 			<div class="community">
 				<div class="discourse">
 					<h3>Discourse</h3>
-					<span>Forums / mailing lists</span>
+					<span>Forums</span>
 					<ul>
 						{% for forum in site.data.chats-forums.discourseForums %}
 							<li>
@@ -17,20 +17,20 @@
 						{% endfor %}
 					</ul>
 				</div>
-				<div class="gitter">
-					<h3>Gitter</h3>
+				<div class="discord">
+					<h3>Discord</h3>
 					<span>Real-time chat</span>
 					<ul>
-						{% for channel in site.data.chats-forums.gitterChannels %}
+						{% for server in site.data.chats-forums.discordServers %}
 							<li>
-								<a href="{{channel.url}}">
-									<img src="/resources/img/frontpage/gitter-logo.png" alt="{{channel.name}}">
-									<h4>{{channel.name}}</h4>
+								<a href="{{server.url}}">
+									<img src="/resources/img/frontpage/discord-logo.png" alt="{{channel.name}}">
+									<h4>{{server.name}}</h4>
 								</a>
 							</li>
 						{% endfor %}
 					</ul>
-					<span>More chat rooms are listed below.</span>
+					<span>More chat venues are listed below.</span>
 				</div>
 			</div>
 		</div>

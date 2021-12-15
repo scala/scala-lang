@@ -285,7 +285,7 @@
       <h2><span>Talk to us!</span></h2>
     </div>
     <div class="discourse">
-      <h3>Mailing Lists/Forums</h3>
+      <h3>Forums</h3>
       {% for forum in site.data.chats-forums.discourseForums %}
         <a href="{{forum.url}}" class="{{forum.cssClass}}">
           <img src="/resources/img/frontpage/discourse-logo.png" alt="{{forum.title}}">
@@ -294,24 +294,24 @@
         </a>
       {% endfor %}
     </div>
-    <div class="gitter">
+    <div class="discord">
       <h3>Real-Time Chat</h3>
-      {% assign modLimit = site.data.chats-forums.gitterChannels.size | modulo: 2 %}
+      {% assign modLimit = site.data.chats-forums.discordServers.size | modulo: 2 %}
       {% capture channelLimit %}
         {% if modLimit != 0 %}
-          {{site.data.chats-forums.gitterChannels.size | minus: 1}}
+          {{site.data.chats-forums.discordServers.size | minus: 1}}
         {% else %}
-          {{site.data.chats-forums.gitterChannels.size}}
+          {{site.data.chats-forums.discordServers.size}}
         {% endif %}
       {% endcapture %}
-      {% for channel in site.data.chats-forums.gitterChannels limit: channelLimit %}
+      {% for server in site.data.chats-forums.discordServers limit: serverLimit %}
         {% if forloop.first %}
           <ul class="first">
         {% endif %}
         <li>
-          <a href="{{channel.url}}">
-            <img src="/resources/img/frontpage/gitter-logo.png" alt="">
-            <span>{{channel.name}}</span>
+          <a href="{{server.url}}">
+            <img src="/resources/img/frontpage/discord-logo.png" alt="">
+            <span>{{server.name}}</span>
           </a>
         </li>
 
@@ -326,7 +326,7 @@
         {% endif %}
       {% endfor %}
     </div>
-    <h3>More chat rooms are listed on the <a href="/community/">Community</a> page</h3>
+    <h3>More chat servers are listed on the <a href="/community/">Community</a> page</h3>
     {% if page.communities %}
     <div class="communities">
       <h3>Communities</h3>

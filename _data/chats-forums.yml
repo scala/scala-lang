@@ -1,4 +1,3 @@
-# Discourse forums
 discourseForums:
   - title: Scala Users
     subtitle: "for general Scala questions, discussion and library announcements."
@@ -9,19 +8,10 @@ discourseForums:
     url: https://contributors.scala-lang.org/
     cssClass: scala-contributors-discourse
 
-# Gitter channels
-gitterChannels:
-  - name: scala/scala
-    url: https://gitter.im/scala/scala
-  - name: scala/center
-    url: https://gitter.im/scala/center
-  - name: scala/contributors
-    url: https://gitter.im/scala/contributors
-  - name: scala/job-board
-    url: https://gitter.im/scala/job-board
-  - name: spark-scala/Lobby
-    url: https://gitter.im/spark-scala/Lobby
-  - name: scala-native/scala-native
-    url: https://gitter.im/scala-native/scala-native
-  - name: scala-js/scala-js
-    url: https://gitter.im/scala-js/scala-js
+discordServers:
+  - name: Scala
+    url: https://discord.gg/scala
+  - name: Scalameta
+    url: https://discord.gg/RFpSVth
+  - name: Typelevel
+    url: https://discord.gg/XF3CXcMzqD
