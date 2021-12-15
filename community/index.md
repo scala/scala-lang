@@ -62,7 +62,7 @@ Our main chat platform is Discord, and the main Scala server is:
   * the #scala-contributors channel is about moving Scala forward
   * the #jobs channel is the only place we allow job postings
   * ask on #admin if you have questions or suggestions about the server itself
-  * there are many other channels, including #scala-js and #scala-native
+  * there are many other channels, including #spark, #scala-js, and #scala-native
 
 Scala-oriented Discord servers operated by the community include:
 
