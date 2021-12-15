@@ -64,6 +64,8 @@ Our main chat platform is Discord, and the main Scala server is:
   * ask on #admin if you have questions or suggestions about the server itself
   * there are many other channels, including #spark, #scala-js, and #scala-native
 
+The server is covered by the [Scala Code of Conduct](../conduct.html).
+
 Scala-oriented Discord servers operated by the community include:
 
 * **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
