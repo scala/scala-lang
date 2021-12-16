@@ -13,7 +13,7 @@ For further technical guidance, see [Guidance for preventing, detecting, and hun
 
 A project is affected by the log4j vulnerabilities if it contains a vulnerable version of a log4j artifact on its classpath.
 
-You may find below a non-comprenhensive list of core Scala tools and libraries known to be affected by the vulnerability, and in which version (if any) it is addressed.
+You may find below a non-comprehensive list of core Scala tools and libraries known to be affected by the vulnerability, and in which version (if any) it is addressed.
 
 We also give some useful tasks and settings to address the vulnerabilities in applications built with sbt, Mill or Maven.
 
@@ -24,7 +24,7 @@ We also give some useful tasks and settings to address the vulnerabilities in ap
 The following information is provided AS IS, without any warranty of any kind, for your convenience.
 A proper security assessment of any CVE, including the log4j vulnerabilities, remains your sole responsibility.
 
-### Affected tools and libraries with fix available
+### Affected tools and libraries with an available fix
 
 The following core tools and libraries have versions affected by the log4j vulnerability, but have published newer versions with the appropriate patches.
 It is recommended that you upgrade to these versions as soon as possible.
@@ -38,7 +38,7 @@ If this is not possible, for libraries, see the tip below on how to force the de
 | sbt | 1.x < 1.5.7 | 1.5.7 |
 
 Log4j is not enabled by default since sbt 1.4.0, but all users are recommended to upgrade to the latest fixed version.
-Any organization using sbt as part of CI/CD (continuous integration and delivery), automated publishing, and projects that expose TCP/IP entry point during testing may be most vulnerable to an exploit.
+Any organization using sbt as part of CI/CD (continuous integration and delivery), automated publishing, and projects that expose a TCP/IP entry point during testing may be most vulnerable to an exploit.
 
 #### Libraries
 
@@ -46,12 +46,12 @@ Any organization using sbt as part of CI/CD (continuous integration and delivery
 |--------------|---------------|------------------|
 | TBD |  |  |
 
-### Affected tools and libraries without known fix available
+### Affected tools and libraries without a known available fix
 
 The following core tools and libraries are affected by the log4j vulnerability, and have not yet published an updated version with the appropriate patches.
 Consult the CVEs to use any other applicable mitigation that may apply in your case.
 
-It may also be possible to force the dependency of log4j, as explained above.
+It may also be possible to force the dependency of log4j, as explained below.
 
 | Organization | Artifact name |
 |--------------|---------------|
@@ -59,7 +59,7 @@ It may also be possible to force the dependency of log4j, as explained above.
 
 ## Useful sbt tasks and settings
 
-If your application is built with sbt, which is common in the Scala ecosystem, here are some information on how to determine the classpath of your application, and how to force an upgrade of the log4j dependencies.
+If your application is built with sbt, which is common in the Scala ecosystem, here is some information on how to determine the classpath of your application, and how to force an upgrade of the log4j dependencies.
 
 ### `fullClasspath`
 
@@ -152,7 +152,7 @@ $ mvn dependency:build-classpath
 
 More information can be found [in this StackOverflow answer](https://stackoverflow.com/a/27451672/1829647).
 
-Like in sbt, you can force an upgrade of transitivie dependencies of log4j using `<dependency>` entries:
+Like in sbt, you can force an upgrade of transitive dependencies of log4j using `<dependency>` entries:
 
 ```xml
 <dependency>
