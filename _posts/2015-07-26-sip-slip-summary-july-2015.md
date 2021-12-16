@@ -40,7 +40,7 @@ https://github.com/scala/scala/pull/4547 is a closed pull request against Scala 
 ### Invitation to Comment
 
 For the time being, until a formal SLIP submission is contributed, please register interest
-on the [scala/slip gitter channel](https://gitter.im/scala/slip) with your contact details (preferably email, if you don't want to make that public, contact @dickwall directly on gitter).
+on the scala/slip gitter channel with your contact details (preferably email, if you don't want to make that public, contact @dickwall directly on gitter).
 
 ## Implicits in For Comprehensions
 
