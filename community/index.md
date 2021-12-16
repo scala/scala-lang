@@ -66,6 +66,10 @@ Our main chat platform is Discord, and the main Scala server is:
 
 The server is covered by the [Scala Code of Conduct](../conduct.html).
 
+Alternate clients such as [Element](https://element.io) are supported
+via a [Matrix](https://matrix.org) bridge.  Connect to
+`#scala-lang:matrix.org`.
+
 Scala-oriented Discord servers operated by the community include:
 
 * **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
