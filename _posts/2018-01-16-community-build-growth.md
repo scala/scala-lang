@@ -116,12 +116,10 @@ questions you might have are already answered there.
 If you have a question or want to get involved in the community
 build or in open source work on Scala more generally, come to the Scala
 contributors [forum](https://contributors.scala-lang.org) or
-[chat room](https://gitter.im/scala/contributors).
+chat room.
 
 Especially involved or specialized discussions about the community
-build can move to the community build's own
-[Gitter room](https://gitter.im/scala/community-builds) and
-[GitHub issues](https://github.com/scala/community-build/issues).
+build can move to [GitHub issues](https://github.com/scala/community-build/issues).
 
 ## Credits
 

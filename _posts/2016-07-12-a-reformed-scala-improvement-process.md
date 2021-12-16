@@ -31,4 +31,5 @@ Starting next month, that too will see a reformed process mostly due to the fact
 
 #### Talk to us!
 
-Ideas? Questions? Concerns? Come on over to the [Scala Center gitter channel](https://gitter.im/scala/center) and holler at us! Or just come say hi :)
+Ideas? Questions? Concerns? Come on over to our forums and chat rooms and holler at us!
+

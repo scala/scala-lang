@@ -17,7 +17,7 @@ Rob, aka [tpolecat](https://tpolecat.github.io/about.html), is familiar in the S
 * his leadership role in [Typelevel](https://typelevel.org/)
 * his popular open-source projects, including [Doobie](https://github.com/tpolecat/doobie) (a database library) and [Tut](https://github.com/tpolecat/tut) (a tool for machine-checked documentation)
 * his many conference talks on pure-functional programming
-* his tireless efforts on [Gitter](https://gitter.im/scala/scala) and IRC to help newcomers learn Scala and functional programming
+* his tireless efforts on Gitter and IRC to help newcomers learn Scala and functional programming
 
 At his day job, he writes Scala code at the [Gemini Observatory](https://www.gemini.edu/), supporting astronomy research. 🔭✨
 

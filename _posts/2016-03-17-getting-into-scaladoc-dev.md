@@ -123,5 +123,5 @@ Here's a laundry list of things we need to do:
 The full list of ideas and things to do can be found on
 [scala-dev](https://github.com/scala/scala-dev/issues/84). Comment on the issue
 or reach out to one of us (@felixmulder, @heathermiller, @vladureche) on the
-[scala/contributors gitter](https://gitter.im/scala/contributors) if you're
+scala/contributors chat room if you're
 interested in knowing more!

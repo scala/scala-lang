@@ -38,7 +38,7 @@ Areas where participation is welcome include:
     and [docs.scala-lang](https://github.com/scala/scala.github.com/pulls) repos.
 
 You can talk to us about 2.12 on the [scala-internals mailing list](https://groups.google.com/forum/#!forum/scala-internals) 
-and the [scala/contributors Gitter room](https://gitter.im/scala/contributors).
+and the scala/contributors chat room.
 (An [expanded community page](https://www.scala-lang.org/community/) on the Scala site lists these and other forums and resources.)
 
 Your feedback will inform any revisions needed to the schedule described here.

@@ -203,7 +203,7 @@ In practice though, this kind of array can be treated as quasi-immutable, so we 
 
 We are currently working on the new design as part of [SCP-007](https://github.com/scalacenter/advisoryboard/blob/master/proposals/007-collections.md) which is funded by [Scala Center](https://scala.epfl.ch/). At this stage all work is happening in the [collection-strawman](https://github.com/scala/collection-strawman) repository with the goal of refining and completing it to the point where we are confident that it can and should become a part of Scala 2.13. The core project team consists of Julien Richard-Foy (from Scala Center), Martin Odersky, Rex Kerr and myself (as a member of the Scala team at Lightbend who maintain the Scala compiler).
 
-If you'd like to get involved, now is the time to weigh in on the discussions that are happening on the pull requests and issues. We also have a [Gitter channel](https://gitter.im/scala/collection-strawman) and a [Scala Contributors](https://contributors.scala-lang.org/t/ongoing-work-on-standard-collections-redesign/293) discourse discussion thread.
+If you'd like to get involved, now is the time to weigh in on the discussions that are happening on the pull requests and issues. We also have a chat room and a [Scala Contributors](https://contributors.scala-lang.org/t/ongoing-work-on-standard-collections-redesign/293) discourse discussion thread.
 
 A few topics still need further exploration:
 

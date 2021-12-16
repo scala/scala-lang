@@ -79,8 +79,4 @@ logical platform to put this great work on a more stable basis.
 
 We are starting out now with a rough direction and expect that most details of the Center’s working will become clearer once we have gained some experience in our activities. For now, we are soliciting the community for help.
 
-If you have time or funding to contribute, and would like to work on a project that is useful to the community at large, please join us in the [Scala Center gitter channel](https://gitter.im/scala/center) and get involved!
-
-
-
-
+If you have time or funding to contribute, and would like to work on a project that is useful to the community at large, please talk to us on our forums and chat rooms and get involved!

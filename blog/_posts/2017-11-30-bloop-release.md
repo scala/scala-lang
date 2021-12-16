@@ -185,8 +185,8 @@ developers writing Scala code. With this effort, the Scala Center continues its
 commitment to improve the tooling in the Scala ecosystem and help open source
 developers and companies alike be more productive.
 
-If you have a question or want to get involved, come to [the Scala Center Gitter
-channel](https://gitter.im/scala/center) to chat!
+If you have a question or want to get involved, come to our forums and chat rooms
+to talk!
 
 [scalacenter/bloop]: https://github.com/scalacenter/bloop
 [nailgun]: https://github.com/facebook/nailgun/
