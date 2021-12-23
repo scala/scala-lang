@@ -35,7 +35,7 @@ If this is not possible, for libraries, see the tip below on how to force the de
 
 | Tool name | Affected versions | Fixed in version |
 |-----------|-------------------|------------------|
-| sbt | 1.x < 1.5.7 | 1.5.7 |
+| sbt | 1.x < 1.5.8 | 1.5.8 |
 
 Log4j is not enabled by default since sbt 1.4.0, but all users are recommended to upgrade to the latest fixed version.
 Any organization using sbt as part of CI/CD (continuous integration and delivery), automated publishing, and projects that expose a TCP/IP entry point during testing may be most vulnerable to an exploit.
