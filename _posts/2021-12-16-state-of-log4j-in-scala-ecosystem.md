@@ -105,9 +105,9 @@ In the above project, we add the following sbt setting in the appropriate `.sett
 
 ```scala
 libraryDependencies ++= Seq(
-  "org.apache.logging.log4j" % "log4j-api" % "2.16.0",
-  "org.apache.logging.log4j" % "log4j-core" % "2.16.0",
-  "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.16.0",
+  "org.apache.logging.log4j" % "log4j-api" % "2.17.0",
+  "org.apache.logging.log4j" % "log4j-core" % "2.17.0",
+  "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.17.0",
 ),
 ```
 
@@ -117,9 +117,9 @@ Reloading the build and displaying the `fullClasspath`, we can confirm that the 
 $ sbt
 > show myProject/Compile/fullClasspath
 ...
-[info] * Attributed(.../.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.16.0/log4j-api-2.16.0.jar)
-[info] * Attributed(.../.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.16.0/log4j-core-2.16.0.jar)
-[info] * Attributed(.../.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.16.0/log4j-slf4j-impl-2.16.0.jar)
+[info] * Attributed(.../.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.17.0/log4j-api-2.17.0.jar)
+[info] * Attributed(.../.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.17.0/log4j-core-2.17.0.jar)
+[info] * Attributed(.../.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.17.0/log4j-slf4j-impl-2.17.0.jar)
 ...
 [success] Total time: 0 s, completed Dec 16, 2021 11:20:44 AM
 ```
@@ -136,9 +136,9 @@ You can also force an upgrade of transitive dependencies with additional entries
 
 ```scala
 def ivyDeps = Agg(
-  ivy"org.apache.logging.log4j:log4j-api:2.16.0",
-  ivy"org.apache.logging.log4j:log4j-core:2.16.0",
-  ivy"org.apache.logging.log4j:log4j-slf4j-impl:2.16.0",
+  ivy"org.apache.logging.log4j:log4j-api:2.17.0",
+  ivy"org.apache.logging.log4j:log4j-core:2.17.0",
+  ivy"org.apache.logging.log4j:log4j-slf4j-impl:2.17.0",
 )
 ```
 
@@ -158,17 +158,17 @@ Like in sbt, you can force an upgrade of transitive dependencies of log4j using 
 <dependency>
   <groupId>org.apache.logging.log4j</groupId>
   <artifactId>log4j-api</artifactId>
-  <version>2.16.0</version>
+  <version>2.17.0</version>
 </dependency>
 <dependency>
   <groupId>org.apache.logging.log4j</groupId>
   <artifactId>log4j-core</artifactId>
-  <version>2.16.0</version>
+  <version>2.17.0</version>
 </dependency>
 <dependency>
   <groupId>org.apache.logging.log4j</groupId>
   <artifactId>log4j-slf4j-impl</artifactId>
-  <version>2.16.0</version>
+  <version>2.17.0</version>
 </dependency>
 ```
 
