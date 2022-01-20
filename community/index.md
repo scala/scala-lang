@@ -72,8 +72,10 @@ via a [Matrix](https://matrix.org) bridge.  Connect to
 
 Scala-oriented Discord servers operated by the community include:
 
+* **[IntelliJ](https://discord.gg/aUKpZzeHCK)**: the IntelliJ IDEA development environment
 * **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
-* **[Typelevel](https://discord.gg/XF3CXcMzqD)**: about the Typelevel ecosystem for pure-functional programming in Scala
+* **[Play Framework](https://discord.gg/g5s2vtZ4Fa)**: the Play web framework for Scala and Java
+* **[Typelevel](https://discord.gg/XF3CXcMzqD)**: the Typelevel ecosystem for pure-functional programming in Scala
 
 English-language Scala rooms on other chat platforms besides Discord include:
 
