@@ -13,5 +13,7 @@ discordServers:
     url: https://discord.com/invite/scala
   - name: Scalameta
     url: https://discord.gg/RFpSVth
+  - name: Play Framework
+    url: https://discord.gg/g5s2vtZ4Fa
   - name: Typelevel
     url: https://discord.gg/XF3CXcMzqD
