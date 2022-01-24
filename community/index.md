@@ -83,15 +83,9 @@ English-language Scala rooms on other chat platforms besides Discord include:
 
 International chat rooms are available as well:
 
-* **[scala/scala-india](https://gitter.im/scala/scala-india)** (Gitter)
-* **[scala/ar](https://gitter.im/scala/ar)** (Gitter)
 * **[scala/cn](https://gitter.im/scala/cn)** (Gitter)
-* **[scala/de](https://gitter.im/scala/de)** (Gitter)
-* **[scala/es](https://gitter.im/scala/es)** (Gitter)
 * **[scala/fr](https://gitter.im/scala/fr)** (Gitter)
 * **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
-* **[scala/pl](https://gitter.im/scala/pl)** (Gitter)
-* **[scala/pt](https://gitter.im/scala/pt)** (Gitter)
 * **[scalajp](https://gitter.im/scalajp/)** (Gitter)
 * **[scala_ru](https://t.me/scala_ru)** (Telegram)
 
