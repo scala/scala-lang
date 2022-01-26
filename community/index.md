@@ -91,6 +91,9 @@ International chat rooms are available as well:
 * **[scalajp](https://gitter.im/scalajp/)** (Gitter)
 * **[scala_ru](https://t.me/scala_ru)** (Telegram)
 
+Note also that Stack Overflow offers languages other than English, for
+example [the scala tag on es.stackoverflow.com](https://es.stackoverflow.com/questions/tagged/scala).
+
 ## User Groups
 
 Find your local Scala user group on [Scala Space](http://scala.space/) or on Meetup's [Scala meetup list](https://scala.meetup.com/).
