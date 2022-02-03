@@ -76,6 +76,7 @@ Scala-oriented Discord servers operated by the community include:
 * **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
 * **[Play Framework](https://discord.gg/g5s2vtZ4Fa)**: the Play web framework for Scala and Java
 * **[Typelevel](https://discord.gg/XF3CXcMzqD)**: the Typelevel ecosystem for pure-functional programming in Scala
+* **[ZIO](https://discord.gg/3F3xKppyHU)**: the ZIO ecosystem for high performance asynchronous and concurrent programming in Scala
 
 English-language Scala rooms on other chat platforms besides Discord include:
 
@@ -149,6 +150,7 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 * [Functional programming course/exercises](https://github.com/dehun/learn-fp)
 * [Scala Online Courses](https://classpert.com/scala-programming)
 * [Best Scala Tutorials On YouTube](https://www.nbshare.io/blog/best-scala-tutorials-on-youtube/)
+* [Zymposium](https://www.youtube.com/playlist?list=PLvdARMfvom9C8ss18he1P5vOcogawm5uC)
 
 ## Community Libraries and Tools
 
@@ -158,6 +160,7 @@ Finding libraries:
 * [Awesome Scala](https://github.com/lauris/awesome-scala) is "a community driven list of useful Scala libraries, frameworks and software"
 * [Typelevel.org](https://typelevel.org) provides an assortment of popular libraries and extensions to Scala.
 * [Trending Scala repositories](https://github.com/trending?l=scala&since=monthly) on GitHub
+* [ZIO](https://zio.dev) provides an array of high performance, ergonomic libraries for Scala.
 
 Staying current:
 
