@@ -97,7 +97,6 @@ listed above,
   * Lukas Rytz, Lightbend ([lukas.rytz@lightbend.com](mailto:lukas.rytz@lightbend.com))
   * Darja Jovanovic, Scala Center ([darja.jovanovic@epfl.ch](mailto:darja.jovanovic@epfl.ch))
   * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
-  * Kathleen Hayes, Lightbend ([kathleen.hayes@lightbend.com](mailto:kathleen.hayes@lightbend.com))
 
 ### Examples of unacceptable behavior
 
