@@ -6,6 +6,10 @@ by: Julien Richard-Foy
 includeTOC: false
 ---
 
+> **Update**: After a couple of years experimenting with Open edX, we decided
+> to shut down these course instances. You can find an up-to-date list of
+> online courses [here](https://docs.scala-lang.org/online-courses.html).
+
 We are thrilled to announce that our 4 main MOOCs are now also available
 on an [Open edX instance managed at EPFL](https://courseware.epfl.ch).
 
@@ -18,16 +22,16 @@ that confirm that you successfully completed a course).
 
 As a reminder, the courses are the following:
 
-- [Functional Programming Principles in Scala](https://courseware.epfl.ch/courses/course-v1:EPFL+progfun1+2018_T1/info):
+- Functional Programming Principles in Scala:
   An introduction to functional programming (pure functions, recursion, pattern matching, higher-order
   functions, immutable data types, type parameters, equational reasoning),
-- [Functional Program Design in Scala](https://courseware.epfl.ch/courses/course-v1:EPFL+progfun2+2018_T1/info):
+- Functional Program Design in Scala:
   A follow-up of the first course, showing how to apply the functional programming style
   to larger programs. Covers topics such as monads, lazy evaluation, property-based testing,
   futures and dataflow programming.
-- [Parallel Programming](https://courseware.epfl.ch/courses/course-v1:EPFL+parprog1+2018_T1/info):
+- Parallel Programming:
   Introduces the fundamentals of parallel programming, from task parallelism to data parallelism,
-- [Big Data Analysis with Scala and Spark](https://courseware.epfl.ch/courses/course-v1:EPFL+scala-spark-big-data+2018-T1/info):
+- Big Data Analysis with Scala and Spark:
   Extends the data parallel paradigm to the distributed case (as opposed to shared-memory parallel
   or sequential collections), using Spark.
 
