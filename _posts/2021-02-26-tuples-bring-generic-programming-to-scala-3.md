@@ -142,7 +142,7 @@ We can create an entrypoint function and test this implementation:
 def tupleToCsv[X <: Tuple : RowEncoder](tuple: X): List[String] =
   summon[RowEncoder[X]].encodeRow(tuple)
 
-tupleToCsv(("Bob", 42, false)) // List("Bob", 42, false)
+tupleToCsv(("Bob", 42, false)) // List("Bob", "42", "false")
 ```
 
 ## How to obtain a tuple from a case class?
