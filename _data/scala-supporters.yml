@@ -17,6 +17,9 @@ supporters:
   - name: Lunatech
     logo: /resources/img/frontpage/lunatech-logo.png
     url: https://lunatech.com/
+  - name: Knóldus
+    logo: /resources/img/frontpage/knoldus-logo.png
+    url: https://www.knoldus.com/
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/corporate-membership.html
