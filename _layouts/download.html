@@ -20,26 +20,21 @@
   <div class="wrap">
     <div class="inner-box download">
       <div class="main-download">
-        <h2>Which Scala version do you want to use?</h2>
+        <h2>Download or Upgrade Scala</h2>
         <div class="install-steps">
-          <div class="step">
-            <div class="text-step">
-              <p>You can choose between the battle tested <strong>Scala 2</strong> or the newest <strong>Scala 3</strong>.</p>
-            </div>
-          </div>
           <div class="download-options">
             <div class="download-left">
               <span class="or">or</span>
               <div class="description">
                 <img src="/resources/img/download/arrow-left.png" alt="">
-                <p>Best if you are starting a new code base and want to use the latest version.</p>
+                <p>Recommended method for all Scala users.</p>
               </div>
-              <a href="{{ site.baseurl }}/download/scala3.html" class="btn-download scala3">
+              <a href="https://docs.scala-lang.org/getting-started.html" class="btn-download scala3">
                 <i class="fa fa-download"></i>
-                <span>Download Scala 3</span>
+                <span>Get Started with Scala</span>
               </a>
               <ul>
-                {% for tutorial in page.scala3tutorials %}
+                {% for tutorial in page.newcomertutorials %}
                   <li><a href="{{tutorial.url}}"><i class="fa fa-file-text-o"></i>{{tutorial.title}}</a></li>
                 {% endfor %}
               </ul>
@@ -47,14 +42,14 @@
             <div class="download-right">
               <div class="description">
                 <img src="/resources/img/download/arrow-right.png" alt="">
-                <p>Best if you are still working with an old code base that is not migrated, yet.</p>
+                <p>Best if you have an advanced use case.</p>
               </div>
-              <a href="{{ site.baseurl }}/download/scala2.html" class="btn-plain-download">
+              <a href="{{ site.baseurl }}/download/all.html" class="btn-plain-download">
                 <i class="fa fa-download"></i>
-                <span>Download Scala 2</span>
+                <span>Pick a Specific Release</span>
               </a>
               <ul>
-                {% for tutorial in page.scala2tutorials %}
+                {% for tutorial in page.advancedtutorials %}
                   <li><a href="{{tutorial.url}}"><i class="fa fa-file-text-o"></i>{{tutorial.title}}</a></li>
                 {% endfor %}
               </ul>

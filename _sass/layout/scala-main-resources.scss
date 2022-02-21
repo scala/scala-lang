@@ -3,28 +3,28 @@
 //------------------------------------------------
 
 .scala-main-resources {
-    height: 220px;
+    height: 200px;
     background: $gray-darker;
     position: relative;
 
     .resources {
         .button {
-            font-size: $font-size-large;
+            font-size: $font-size-logo-btn;
             display: block;
             @include border-top-radius(200px);
             @include border-right-radius(0);
             @include border-bottom-radius(0);
             @include border-left-radius(200px);
-            padding: $padding-small $padding-large;
+            padding: $padding-medium $padding-mlarge;
         }
 
-        .download {
+        .get-started {
             @include span-columns(4);
             @include shift(2);
 
             .button {
 
-              background: $brand-tertiary-dotty;
+              background: $brand-tertiary;
               &:active,
               &:focus,
               &:hover {
@@ -33,7 +33,7 @@
             }
         }
 
-        .api-docs {
+        .learn-scala {
             @include span-columns(4);
 
             .button {
@@ -53,20 +53,20 @@
             }
         }
         @include bp(large) {
-            .download {
+            .get-started {
                 @include span-columns(6);
                 @include shift(0);
             }
 
-            .api-docs {
+            .learn-scala {
                 @include span-columns(6);
                 margin-right: 0;
             }
         }
 
-        .api-docs,
-        .download {
-            margin-top: -40px;
+        .learn-scala,
+        .get-started {
+            margin-top: -48px;
 
             ul {
                 margin-top: 12px;
@@ -101,18 +101,18 @@
             }
         }
 
-        .api-docs {
+        .learn-scala {
             ul {
                 float: right;
             }
         }
 
         .scala-brand-circle {
-            width: 340px;
-            height: 340px;
+            width: 280px;
+            height: 280px;
             left: 50%;
-            top: -178px;
-            margin-left: -170px;
+            top: -142px;
+            margin-left: -140px;
             background: rgba($gray-darker, 0.4);
             border-radius: 100%;
             position: absolute;
@@ -123,15 +123,15 @@
 
             .circle-solid {
                 background: $gray-darker;
-                width: 224px;
-                height: 224px;
+                width: 198px;
+                height: 198px;
                 border-radius: 100%;
                 text-align: center;
 
                 > img {
                     width: 152px;
                     height: auto;
-                    margin-top: -28px;
+                    margin-top: -40px;
                 }
 
                 .scala-version {
@@ -166,16 +166,16 @@
         padding-bottom: $padding-xlarge;
 
         .resources {
-            .download {
+            .get-started {
                 margin-top: 180px;
             }
 
-            .api-docs {
+            .learn-scala {
                 margin-top: 40px;
             }
 
-            .api-docs,
-            .download {
+            .learn-scala,
+            .get-started {
                 @include span-columns(12);
 
                 .button {
