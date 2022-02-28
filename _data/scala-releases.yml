@@ -10,11 +10,11 @@
   title: Latest 2.12.x maintenance release
   version: 2.12.15
   release_date: September 14, 2021
-- category: "maintenance_version"
-  title: "Last 2.11.x maintenance release"
+- category: maintenance_version
+  title: Last 2.11.x maintenance release
   version: 2.11.12
-  release_date: "November 9, 2017"
-- category: "maintenance_version"
-  title: "Last 2.10.x maintenance release"
+  release_date: November 9, 2017
+- category: maintenance_version
+  title: Last 2.10.x maintenance release
   version: 2.10.7
-  release_date: "November 9, 2017"
+  release_date: November 9, 2017

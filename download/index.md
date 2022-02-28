@@ -1,6 +1,9 @@
 ---
 layout: download
 title: Download
+redirect_from:
+  - /download/scala2.html
+  - /download/scala3.html
 
 advancedtutorials:
 - title: "Scala 3 documentation"
