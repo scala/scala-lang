@@ -97,7 +97,7 @@ For a smorgasbord of examples take a look at [examples](https://janekdb.github.i
 
 ### Dotty and Scala 3
 
-With `dotty` now boosting its share of the development horizon it's important to place GFM into a [dottydoc](https://dotty.epfl.ch/docs/usage/dottydoc.html) and hence Scaladoc 3 context.
+With `dotty` now boosting its share of the development horizon it's important to place GFM into a [dottydoc](https://docs.scala-lang.org/scala3/guides/scaladoc/) and hence Scaladoc 3 context.
 
 In overview `dottydoc` supports the current Scaladoc 2.12 MediaWiki flavored markdown, but it also supports more contemporary flavors of markdown.
 
