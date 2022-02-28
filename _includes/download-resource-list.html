@@ -1,6 +1,39 @@
-<div class="content-primary">
+<div class="text-step">
 
-<h3 id="other-releases">Other Releases</h3>
+<h3>Other resources</h3>
+
+<p>You can find the installer download links for other operating systems, as well as documentation and source code
+  archives for Scala {{page.release_version}} below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Archive</th>
+      <th style="text-align: left">System</th>
+      {% unless page.dont_show_sizes %}
+      <th style="text-align: left">Size</th>
+      {% endunless %}
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for resource in page.resources %}
+    <tr>
+      <td style="text-align: left">
+        <a id="#link{{ resource[0] }}" href="{{ resource[2] }}">
+          {{ resource[1] }}
+        </a>
+      </td>
+      <td style="text-align: left">{{ resource[3] }}</td>
+      {% unless page.dont_show_sizes %}
+      <td style="text-align: left">{{ resource[4] }}</td>
+      {% endunless %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2 id="other-releases">Other Releases</h2>
 
 <p>You can find the links to prior versions or the latest development version below.
 To see a detailed list of changes for each version of Scala please refer to the <a href="{{ site.baseurl }}/download/changelog.html">changelog</a>.</p>
@@ -8,44 +41,14 @@ To see a detailed list of changes for each version of Scala please refer to the 
 <p>Note that different major releases of Scala (e.g. Scala 2.11.x and Scala 2.12.x) are not binary compatible with each other.</p>
 
 <ul>
-  {% for release in page.other_releases %}
-  <li>{{ release[1] }}:
+  {% for release in site.data.scala-releases %}
+  <li>{{ release.title }}:
     <ul>
-      <li><a href="/download/{{ release[2] }}.html">Scala {{ release[2] }}</a> - Released on {{ release[3] }}</li>
+      <li><a href="/download/{{ release.version }}.html">Scala {{ release.version }}</a> - Released on {{ release.release_date }}</li>
     </ul></li>
   {% endfor %}
   <li><a href="https://scala-lang.org/files/archive/nightly/">Nightly builds</a></li>
   <li><a href="/download/changelog.html">Changelog</a></li>
-  <li><a href="/download/all.html">All previous releases</a></li>
+  <li><a href="/download/all.html">All Scala releases</a></li>
 </ul>
-
-<h3>Other resources</h3>
-
-<p>You can find the installer download links for other operating systems, as well as documentation and source code archives for Scala {{page.release_version}} below.</p>
-
-<table>
-<thead><tr>
-  <th style="text-align: left">Archive</th>
-  <th style="text-align: left">System</th>
-  {% unless page.dont_show_sizes %}
-  <th style="text-align: left">Size</th>
-  {% endunless %}
-</tr></thead>
-
-<tbody>
-{% for resource in page.resources %}
-<tr>
-  <td style="text-align: left">
-    <a id="#link{{ resource[0] }}" href="{{ resource[2] }}">
-      {{ resource[1] }}
-    </a>
-  </td>
-  <td style="text-align: left">{{ resource[3] }}</td>
-  {% unless page.dont_show_sizes %}
-  <td style="text-align: left">{{ resource[4] }}</td>
-  {% endunless %}
-</tr>
-{% endfor %}
-</tbody>
-</table>
 </div>

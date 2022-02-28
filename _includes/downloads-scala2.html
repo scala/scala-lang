@@ -1,50 +1,49 @@
+<p>Are you looking for <a href="{{ site.baseurl }}/download/all.html">another release</a> of Scala?</p>
+<h3>Release Notes</h3>
+For a summary of important changes, see the <a href="https://github.com/scala/scala/releases">GitHub release notes</a>.
+<br/><small>(Or consult our archive of <a href="{{ site.baseurl }}/blog/announcements/">older release
+    notes</a>.)</small>
+
 <div class="install-steps">
-  <h3>Release Notes</h3>
-  For a summary of important changes, see the <a href="https://github.com/scala/scala/releases">GitHub release notes</a>.
-  <br /><small>(Or consult our archive of <a href="{{ site.baseurl }}/blog/announcements/">older release
-      notes</a>.)</small>
-
-  <div class="step arrow">
-    <img src="/resources/img/download/arrow-asset.png" alt="">
-    <div class="number-step"><i class="fa fa-check" aria-hidden="true"></i></div>
-    <div class="text-step">
-      <h2>Recommended Download</h2>
-      <div class="download-options">
-        <a href="https://docs.scala-lang.org/getting-started/index.html" class="btn-download" id="get-started-link">
-          <i class="fa fa-download"></i>
-          <span>Get Started With Scala</span>
-        </a>
-      </div>
-    </div>
+  <div class="text-step">
+    <h2>Ways to Install This Release</h2>
+    <ul>
+      <li>
+        Using <a
+          href="https://docs.scala-lang.org/getting-started/index.html#using-the-scala-installer-recommended-way">Coursier
+          CLI</a>, run:<br>
+        <code>cs install scala:{{ page.release_version }} && cs install scalac:{{ page.release_version }}</code>.
+      </li>
+      <li>
+        <a id="download-binaries">Download the Scala binaries for <span id="users-os"></span></a>
+        <br /><span class="install"><a href="{{ site.baseurl }}/download/install.html">Need help running the
+            binaries?</a></span>
+      </li>
+      <li><a href="/documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html">Download and
+          use Scala</a><span> with </span><a href="https://www.jetbrains.com/idea">IntelliJ</a><span> and then </span><a
+          href="/documentation/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html">build a
+          project</a><span>, then </span><a
+          href="/documentation/getting-started-intellij-track/testing-scala-in-intellij-with-scalatest.html">test it.</a>
+      </li>
+      <li>Using <a href="https://sdkman.io/">SDKMAN!</a>, you can easily <a href="https://sdkman.io/sdks#scala">install
+          specific versions of Scala</a> on any platform with <code>sdk install scala {{ site.scalaversion }}</code></li>
+      <li>On macOS you can also use <a href="https://brew.sh/">Homebrew</a> and existing <a
+          href="https://formulae.brew.sh/formula/scala">Scala
+          Formulae</a><br /><code>brew update</code><br /><code>brew install scala</code></li>
+      <li>With <a href="https://www.macports.org/">MacPorts</a>, you can get Scala using
+        <code>sudo port install scala2.x</code>command.<br /> For example to install Scala 2.12 simply
+        use<code>sudo port install scala2.12</code></li>
+      <li>Use <a href="https://scastie.scala-lang.org">Scastie</a> to run single-file Scala programs in your browser using
+        multiple Scala compilers; the production Scala 2.x compilers, Scala.js, Dotty, and Typelevel Scala. Save and share
+        executable Scala code snippets.</li>
+      <li>Try Scala in the browser via <a href="https://scalafiddle.io/">ScalaFiddle</a>. This lets you run single-file
+        Scala programs in your browser using Scala.js, including graphical/interactive examples such as <a
+          href="https://scalafiddle.io/sf/KOsXSKv/0">Oscilloscope</a> or <a href="https://scalafiddle.io/sf/4beVrVc/1">Ray
+          Tracer</a></li>
+      <li><a href="https://ammonite.io/">Get Ammonite</a>, a popular Scala REPL</li>
+    </ul>
   </div>
-  <div class="step other-ways-lead">
-    <div class="number-step"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
-    <div class="text-step">
-      <h2>Other ways to download Scala</h2>
-      <ul>
-        <li>
-          Using <a
-            href="https://docs.scala-lang.org/getting-started/index.html#using-the-scala-installer-recommended-way">Coursier
-            CLI</a>, run:<br>
-          <code>cs install scala:{{ page.release_version }} && cs install scalac:{{ page.release_version }}</code>.
-        </li>
-        <li>
-          <a id="download-binaries">Download the Scala binaries for <span id="users-os"></span></a>
-          <br/><span class="install"><a href="{{ site.baseurl }}/download/install.html">Need help running the binaries?</a></span>
-        </li>
-        <li><a href="/documentation/getting-started-intellij-track/getting-started-with-scala-in-intellij.html">Download and use Scala</a><span> with </span><a href="https://www.jetbrains.com/idea">IntelliJ</a><span> and then </span><a href="/documentation/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html">build a project</a><span>, then </span><a href="/documentation/getting-started-intellij-track/testing-scala-in-intellij-with-scalatest.html">test it.</a></li>
-        <li>Using <a href="https://sdkman.io/">SDKMAN!</a>, you can easily <a href="https://sdkman.io/sdks#scala">install specific versions of Scala</a> on any platform with <code>sdk install scala {{ site.scalaversion }}</code></li>
-        <li>On macOS you can also use <a href="https://brew.sh/">Homebrew</a> and existing <a href="https://formulae.brew.sh/formula/scala">Scala Formulae</a><br/><code>brew update</code><br/><code>brew install scala</code></li>
-        <li>With <a href="https://www.macports.org/">MacPorts</a>, you can get Scala using <code>sudo port install scala2.x</code>command.<br/> For example to install Scala 2.12 simply use<code>sudo port install scala2.12</code></li>
-        <li>Use <a href="https://scastie.scala-lang.org">Scastie</a> to run single-file Scala programs in your browser using multiple Scala compilers; the production Scala 2.x compilers, Scala.js, Dotty, and Typelevel Scala. Save and share executable Scala code snippets.</li>
-        <li>Try Scala in the browser via <a href="https://scalafiddle.io/">ScalaFiddle</a>. This lets you run single-file Scala programs in your browser using Scala.js, including graphical/interactive examples such as <a href="https://scalafiddle.io/sf/KOsXSKv/0">Oscilloscope</a> or <a href="https://scalafiddle.io/sf/4beVrVc/1">Ray Tracer</a></li>
-        <li><a href="https://ammonite.io/">Get Ammonite</a>, a popular Scala REPL</li>
-      </ul>
-      <p>Or are you looking for <a href="{{ site.baseurl }}/download/all.html">previous releases</a> of Scala?</p>
-    </div>
-  </div>
-
   {% include download-resource-list.html %}
 </div>
 <h3>License</h3>
-<p>The Scala distribution is released under the {{page.license}}.</p>
+<p>The Scala {{ page.release_version }} distribution is released under the {{page.license}}.</p>

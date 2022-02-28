@@ -1,4 +1,6 @@
-Scala binaries for <strong>{{page.release_version}}</strong> are available at <a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">github</a>.
+<p>Are you looking for <a href="{{ site.baseurl }}/download/all.html">another release</a> of Scala?</p>
+<br/>
+<p>Scala binaries for <strong>{{page.release_version}}</strong> are available at <a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">github</a>.</p>
 
 <h3>Release Notes</h3>
 For a summary of important changes, see the <a
@@ -7,42 +9,33 @@ For a summary of important changes, see the <a
     notes</a>.)</small>
 
 <div class="install-steps">
-  <div class="step arrow">
-    <img src="/resources/img/download/arrow-asset.png" alt="">
-    <div class="number-step"><i class="fa fa-check" aria-hidden="true"></i></div>
-    <div class="text-step">
-      <h2>Recommended Download</h2>
-      <div class="download-options">
-        <a href="https://docs.scala-lang.org/getting-started/index.html" class="btn-download" id="get-started-link">
-          <i class="fa fa-download"></i>
-          <span>Get Started With Scala</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="step other-ways-lead">
-    <div class="number-step"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
-    <div class="text-step">
-      <h2>Other ways to download Scala</h2>
-      <ul>
-        <li>
-          Using <a href="https://docs.scala-lang.org/getting-started/index.html#using-the-scala-installer-recommended-way">Coursier CLI</a>, run:<br>
-          <code>cs install scala:{{page.release_version}} && cs install scalac:{{page.release_version}}</code>.
-        </li>
-        <li>
-          Download the Scala binaries for <strong>{{page.release_version}}</strong> at <a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">github</a>.
-          <br/><span class="install"><a href="{{ site.baseurl }}/download/install.html">Need help running the binaries?</a></span>
-        </li>
-        <li>Using <a href="https://sdkman.io/">SDKMAN!</a>, you can easily <a href="https://sdkman.io/sdks#scala">install the latest version of Scala</a> on any platform by running the following command:<br>
-            <code>sdk install scala</code>
-        </li>
-        <li>On macOS you can also use <a href="https://brew.sh/">Homebrew</a> and run the following commands:<br>
-            <code>brew update</code><br/><code>brew install lampepfl/brew/dotty</code></li>
-        <li>Use <a href="https://scastie.scala-lang.org/?target=scala3">Scastie</a> to run single-file Scala programs in your browser using multiple Scala compilers; the production Scala 2.x compilers, Scala.js, Scala 3, and Typelevel Scala. Save and share executable Scala code snippets.</li>
-      </ul>
-      <p>Or are you looking for <a href="{{ site.baseurl }}/download/all.html">previous releases</a> of Scala?</p>
-    </div>
+  <div class="text-step">
+    <h2>Ways to Install This Release</h2>
+    <ul>
+      <li>
+        Using <a
+          href="https://docs.scala-lang.org/getting-started/index.html#using-the-scala-installer-recommended-way">Coursier
+          CLI</a>, run:<br>
+        <code>cs install scala:{{page.release_version}} && cs install scalac:{{page.release_version}}</code>.
+      </li>
+      <li>
+        Download the Scala binaries for <strong>{{page.release_version}}</strong> at <a
+          href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">github</a>.
+        <br /><span class="install"><a href="{{ site.baseurl }}/download/install.html">Need help running the
+            binaries?</a></span>
+      </li>
+      <li>Using <a href="https://sdkman.io/">SDKMAN!</a>, you can easily <a href="https://sdkman.io/sdks#scala">install
+          the latest version of Scala</a> on any platform by running the following command:<br>
+        <code>sdk install scala</code>
+      </li>
+      <li>On macOS you can also use <a href="https://brew.sh/">Homebrew</a> and run the following commands:<br>
+        <code>brew update</code><br /><code>brew install lampepfl/brew/dotty</code>
+      </li>
+      <li>Use <a href="https://scastie.scala-lang.org/?target=scala3">Scastie</a> to run single-file Scala programs in
+        your browser using multiple Scala compilers; the production Scala 2.x compilers, Scala.js, Scala 3, and Typelevel
+        Scala. Save and share executable Scala code snippets.</li>
+    </ul>
   </div>
 </div>
 <h3>License</h3>
-<p>The Scala distribution is released under the {{page.license}}.</p>
+<p>The Scala {{ page.release_version }} distribution is released under the {{page.license}}.</p>
