@@ -1,5 +1,6 @@
 <div class="text-step">
 
+{% if page.resources.size > 0 %}
 <h3>Other resources</h3>
 
 <p>You can find the installer download links for other operating systems, as well as documentation and source code
@@ -32,6 +33,7 @@
     {% endfor %}
   </tbody>
 </table>
+{% endif %}
 
 <h2 id="other-releases">Other Releases</h2>
 
