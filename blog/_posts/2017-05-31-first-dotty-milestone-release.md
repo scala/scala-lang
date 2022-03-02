@@ -87,7 +87,6 @@ Starting from this release, we are adopting a time-based release schedule:
 - Every 6 weeks, the latest release candidate becomes a release.
 
 At the end of 6 weeks, the milestone will be promoted to a stable release.
-See here for the full [version number explanation](https://dotty.epfl.ch/docs/usage/version-numbers.html).
 
 ## What are the next steps?
 
