@@ -1,0 +1,20 @@
+- category: current_version
+  title: Current 3.1.x release
+  version: 3.1.1
+  release_date: February 1, 2022
+- category: current_version
+  title: Current 2.13.x release
+  version: 2.13.8
+  release_date: January 12, 2022
+- category: maintenance_version
+  title: Latest 2.12.x maintenance release
+  version: 2.12.15
+  release_date: September 14, 2021
+- category: maintenance_version
+  title: Last 2.11.x maintenance release
+  version: 2.11.12
+  release_date: November 9, 2017
+- category: maintenance_version
+  title: Last 2.10.x maintenance release
+  version: 2.10.7
+  release_date: November 9, 2017

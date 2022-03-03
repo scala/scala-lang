@@ -5,7 +5,7 @@ layout: inner-page-no-masthead
 includeTOC: true
 ---
 
-**To run Scala from the command-line, simply [download]({{ site.baseurl }}/download)
+**To run Scala from the command-line, [download]({{ site.baseurl }}/download)
 the binaries and unpack the archive.**
 
 Start the Scala interpreter (aka the "REPL") by launching `scala` from where
