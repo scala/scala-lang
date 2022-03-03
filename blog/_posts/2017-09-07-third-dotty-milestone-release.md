@@ -18,7 +18,7 @@ You can learn more about Dotty on our [website](https://dotty.epfl.ch).
 
 <!--more-->
 
-This is our third scheduled release according to our [6-week release schedule](https://dotty.epfl.ch/docs/usage/version-numbers.html).
+This is our third scheduled release according to our 6-week release schedule.
 The [previous technology preview](/blog/2017/07/12/second-dotty-milestone-release.html) improved
 stability and reliability:
  - substantial improvement of quality of generated code for pattern matching
