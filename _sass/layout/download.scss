@@ -279,10 +279,14 @@
       }
     }
 
-
-
     .download-right {
       padding-left: 10px;
+      .all-downloads {
+        margin-top: 0.7em;
+        .download-elem {
+          padding: 0px 8px;
+        }
+      }
     }
 
     .download-right {
