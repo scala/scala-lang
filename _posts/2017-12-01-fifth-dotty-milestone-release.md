@@ -18,7 +18,7 @@ You can learn more about Dotty on our [website](https://dotty.epfl.ch).
 
 <!--more-->
 
-This is our fifth scheduled release according to our [6-week release schedule](https://dotty.epfl.ch/docs/usage/version-numbers.html).
+This is our fifth scheduled release according to our 6-week release schedule.
 The [previous technology preview](/blog/2017/10/16/fourth-dotty-milestone-release.html) added
 support for Scala 2.12 and came with a brand new REPL.
 

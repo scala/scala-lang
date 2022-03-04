@@ -22,7 +22,7 @@ The highlights of this release are:
 
 <!--more-->
 
-This is our second scheduled release according to our [6-week release schedule](https://dotty.epfl.ch/docs/usage/version-numbers.html).
+This is our second scheduled release according to our 6-week release schedule.
 
 ## What’s in the 0.2.0-RC1 technology preview?
 The [previous technology preview](/blog/2017/05/31/first-dotty-milestone-release.html) has shipped new language features planned for Scala 3:  
