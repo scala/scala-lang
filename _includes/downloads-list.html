@@ -1,19 +1,55 @@
-{% for top in (0..3) reversed %}
-  {% for major in (0..20) reversed %}
-    {% assign possibleVersionShort = top | append:'.' | append:major %}
-    {% assign sz = possibleVersionShort | size %}
-    {% if 3 == sz %}
-      {% assign possibleVersion = possibleVersionShort | append:'.' %}
-    {% else %}
-      {% assign possibleVersion = possibleVersionShort %}
-    {% endif %}
-    {% for page in site.downloads %}
-      {% assign releaseVersion = page.release_version | truncate:4, '' %}
-      {% if releaseVersion == possibleVersion %}
-<div>
-  <a href="{{ page.url }}">{{ page.title }}</a>
+<p>This page contains a comprehensive archive of previous Scala releases.</p>
+<div class="download-options">
+  <div class="download-left">
+      <h3>Current Releases</h3>
+      <br />
+      <ul>
+        {% for release in site.data.scala-releases %}
+        {% if release.category == "current_version" %}
+        <li>
+          <a href="/download/{{ release.version }}.html">
+            {{ release.title }}: <b>{{ release.version }}</b><br />Released on {{ release.release_date }}
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      <h3>Maintenance Releases</h3>
+      <br />
+      <ul>
+        {% for release in site.data.scala-releases %}
+        {% if release.category == "maintenance_version" %}
+        <li>
+          <a href="/download/{{ release.version }}.html">
+            {{ release.title }}: <b>{{ release.version }}</b><br />Released on {{ release.release_date }}
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+  <div class="download-right">
+    <h3>All Releases</h3>
+    <div class="all-downloads">
+      {% for top in (0..3) reversed %}
+        {% for major in (0..20) reversed %}
+          {% assign possibleVersionShort = top | append:'.' | append:major %}
+          {% assign sz = possibleVersionShort | size %}
+          {% if 3 == sz %}
+            {% assign possibleVersion = possibleVersionShort | append:'.' %}
+          {% else %}
+            {% assign possibleVersion = possibleVersionShort %}
+          {% endif %}
+          {% for page in site.downloads reversed %}
+            {% assign releaseVersion = page.release_version | truncate:4, '' %}
+            {% if releaseVersion == possibleVersion %}
+              <div class="download-elem">
+                <a href="{{ page.url }}">{{ page.title }}</a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
