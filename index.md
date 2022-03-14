@@ -17,7 +17,7 @@ gettingStarted:
     - title: "API Documentation"
       url: "https://www.scala-lang.org/api/current/?_ga=1.241039811.1310790544.1468501313"
     - title: "API Docs (All Releases)"
-      url: "https://scala-lang.org/files/archive/api/"
+      url: "https://docs.scala-lang.org/api/all.html"
     - title: "Language Specification"
       url: "https://scala-lang.org/files/archive/spec/2.13/"
 apiDocs:
