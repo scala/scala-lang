@@ -32,19 +32,21 @@
         <div class="ribbon-version">
           <span>{{page.release_version}}</span>
         </div>
-        {% if scala_edition == "3" %}
-          <ul>
+        <ul>
+          {% if scala_edition == "3" %}
             <li><a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">Release Notes</a></li>
             <li class="dot">•</li>
             <li><a href="https://github.com/lampepfl/dotty/releases/tag/{{page.release_version}}">Changelog</a></li>
-          </ul>
-        {% else %}
-        <ul>
-          <li><a href="https://github.com/scala/scala/releases">Release Notes</a></li>
+          {% else %}
+            <li><a href="https://github.com/scala/scala/releases">Release Notes</a></li>
+            <li class="dot">•</li>
+            <li><a href="{{ site.baseurl }}/blog/announcements/">Changelog</a></li>
+          {% endif %}
+          {% if page.api_docs %}
           <li class="dot">•</li>
-          <li><a href="{{ site.baseurl }}/blog/announcements/">Changelog</a></li>
+          <li><a href="{{ page.api_docs }}">API Docs</a></li>
+          {% endif %}
         </ul>
-        {% endif %}
 
       </div>
       <div class="main-download">
