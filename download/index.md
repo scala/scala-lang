@@ -1,7 +1,8 @@
 ---
 layout: download
-title: Download
+title: Install
 redirect_from:
+  - /install/
   - /download/scala2.html
   - /download/scala3.html
 
