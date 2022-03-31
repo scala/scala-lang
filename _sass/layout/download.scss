@@ -163,16 +163,6 @@
         margin-top: 38px;
     }
 
-    .btn-plain-download {
-        background: $gray-lighter;
-        display: block;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 16px 0;
-        border-radius: 100px;
-        margin-bottom: 34px;
-    }
-
     .btn-download {
         background: $brand-primary;
         display: block;
@@ -204,6 +194,18 @@
         &:hover {
             text-decoration: none;
             background: darken($brand-tertiary-dotty, 10%);
+        }
+    }
+
+    .btn-download.dl-find-all {
+        background: $gray-lighter;
+        font-weight: 500;
+        color: $std-link;
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            background: darken($gray-lighter, 10%);
         }
     }
 
