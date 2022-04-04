@@ -11,6 +11,13 @@
         }
 
     }
+    .upcoming-events {
+        margin-bottom: $padding-medium;
+
+        .inner-box {
+          padding-bottom: 0;
+        }
+    }
 }
 
 .documentation {

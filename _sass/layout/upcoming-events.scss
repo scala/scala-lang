@@ -1,11 +1,36 @@
 .upcoming-events {
-    background: $gray;
 
-    .heading-line {
-        h2 {
-            span {
-                background: $gray;
+    .call-to-action {
+        p {
+            color: $gray-dark;
+            a {
+                color: $gray-dark;
+                &:active,
+                &:focus,
+                &:hover {
+                    color: $brand-primary;
+                }
             }
+
+            &.align-top {
+                margin-bottom: 0px;
+            }
+        }
+
+        &.action-medium {
+            margin-top: 10px;
+            padding-bottom: $padding-small;
+        }
+    }
+
+    .heading-box {
+        margin-bottom: $padding-small;
+        text-align: center;
+        h3 {
+            color: $gray-dark;
+            font-size: 1.25rem;
+            font-weight: $font-regular;
+            padding-bottom: 8px;
         }
     }
 
@@ -22,10 +47,21 @@
     }
 
     .card {
-        background: $gray-dark;
+        border: 2px solid $gray-light;
+        background: $base-border-color-white;
+        .card-text {
+            h4 {
+                color: $gray-dark;
+            }
+            ul {
+                li {
+                    color: $gray-dark;
+                }
+            }
+        }
 
         &:hover {
-            background: $gray-darker;
+            background: darken($base-border-color-white, 70%);
         }
     }
 }
