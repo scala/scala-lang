@@ -69,6 +69,5 @@ scalaIDEs:
     metals: true
     url: "https://scalameta.org/metals/docs/editors/sublime.html"
 # Scala ecosystem
-ecosystemTitle: "Scala ecosystem"
-ecosystemDescription: "The Scala Library Index (or Scaladex) is a representation of a map of all published Scala libraries. With Scaladex, a developer can now query more than 175,000 releases of Scala libraries. Scaladex is officially supported by Scala Center."
+ecosystemTitle: "Scala's libraries unlock your potential"
 ---

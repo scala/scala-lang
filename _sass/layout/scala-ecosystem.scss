@@ -5,20 +5,140 @@
 #site-main {
     .scala-ecosystem {
         padding-bottom: 0;
-        background: url("../img/frontpage/background-scala-ecosystem.jpg") no-repeat center bottom $gray-li;
-        @include image-size();
+        // background: url("../img/frontpage/background-scala-ecosystem.jpg") no-repeat center bottom $gray-li;
+        // @include image-size();
+        background: $gray;
+
+        .awesome-table {
+            background: $gray-darker;
+            padding: 16px 0;
+
+            .awesome-summary {
+                margin-bottom: 16px;
+
+                @include span-columns(4);
+
+                @include bp(large) {
+                    @include span-columns(12);
+                }
+
+                padding: 5px;
+
+                p {
+                    font-size: 1.3rem;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+
+            .awesome-col {
+                @include span-columns(4);
+
+                @include bp(large) {
+                    @include span-columns(12);
+                }
+
+                h3 {
+                    font-family: $base-font-family;
+                    text-transform: uppercase;
+                    // border-bottom: $base-border-gray;
+                    font-size: $font-size-large;
+                }
+
+                .content-card {
+                    background: $gray;
+                    padding: 2px;
+                    margin-bottom: 7px;
+                    display: block;
+                    border-radius: $border-radius-base;
+
+                }
+            }
+
+            .awesome-col {
+                // margin-bottom: 16px;
+                a {
+                    // margin-bottom: 3px;
+
+                    h3 {
+                        color: $gray-light;
+                        transition: $base-transition;
+                        padding: 10px;
+                        // padding-bottom: 8px;
+                        // margin-bottom: 6px;
+                        i {
+                            margin-right: 6px;
+                        }
+                    }
+
+                    ul {
+                        position: relative;
+                        margin-bottom: 4px;
+
+                        li {
+                            color: $base-font-color-light;
+                            font-size: $font-size-small;
+                            display: inline-block;
+
+                            &.dot {
+                                font-size: 10px;
+                            }
+
+                            &.tag {
+                                position: absolute;
+                                right: 0;
+                                top: 3px;
+                                background: $brand-primary;
+                                color: #fff;
+                                text-transform: uppercase;
+                                font-size: 11px;
+                                font-weight: $font-bold;
+                                padding: 1px 5px;
+                            }
+                        }
+
+
+                    }
+
+                    p {
+                        color: $base-font-color;
+                    }
+
+                    &:active,
+                    &:focus,
+                    &:hover {
+                        text-decoration: none;
+                        box-shadow: $box-shadow-item;
+
+                        h3 {
+                            color: #765;
+                            color: $brand-primary;
+                            background: $gray-dark;
+                        }
+                    }
+                }
+            }
+        }
+
+        .button.awesome {
+            font-family: Caveat;
+            font-size:large;
+            text-transform: none;
+            padding: 3px, 7px;
+        }
 
         .heading-line {
             @include clearfix;
 
             h2 {
                 span {
-                    background: #234D57;
+                    background: $gray;
                 }
             }
         }
 
         .browser {
+            // margin-bottom: $padding-medium;
+
             .header-browser {
                 background: $gray-dark;
                 padding: 14px 20px;
@@ -41,7 +161,7 @@
                 background: rgba($gray, 0.5);
                 transition: $base-transition;
                 text-align: center;
-                padding: 70px 0 80px;
+                // padding: 70px 0 80px;
 
                 h2 {
                     color: #fff;
@@ -82,13 +202,6 @@
                         width: 100%;
                     }
                 }
-            }
-        }
-
-        &:hover {
-            .main-browser {
-                background: $gray;
-                padding-bottom: 140px;
             }
         }
     }

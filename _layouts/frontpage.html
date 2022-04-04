@@ -148,18 +148,49 @@
   <div class="wrap">
     <div class="heading-line">
       <h2><span>{{page.ecosystemTitle}}</span></h2>
-      <p class="lead">{{page.ecosystemDescription}}</p>
     </div>
     <div class="browser">
       <div class="header-browser">
-        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/scaladex-logo.png" alt=""></a>
-        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/button-github.png" alt=""></a>
+        <a href="{{site.data.common.scaladexUrl}}" target="_blank"><img src="/resources/img/frontpage/scaladex-logo.png"
+            alt=""></a>
+        <div class="main-browser">
+          <div class="input-control">
+            <span><i class="fa fa-search"></i></span>
+            <input type="text" placeholder="Find an awesome Scala library" id="scaladex-search">
+          </div>
+        </div>
+        <a class="button awesome" href="{{site.data.common.scaladexUrl}}/awesome">Awesome Scala</a>
       </div>
-      <div class="main-browser">
-        <h2>The Scala Library Index</h2>
-        <div class="input-control">
-          <span><i class="fa fa-search"></i></span>
-          <input type="text" placeholder="Search" id="scaladex-search">
+    </div>
+    <div class="awesome-table">
+      <div class="wrap">
+        <div class="awesome-col">
+          <a href="https://index.scala-lang.org/awesome#big-data" class="content-card">
+            <h3><i class="fa fa-search"></i>Big Data Processing</h3>
+          </a>
+          <a href="https://index.scala-lang.org/awesome#mathematics-finance-data-science-and-bioinformatics" class="content-card">
+            <h3><i class="fa fa-search"></i>Machine Learning</h3>
+          </a>
+          <a href="https://index.scala-lang.org/awesome#asynchronous-and-concurrent-programming" class="content-card">
+            <h3><i class="fa fa-search"></i>Streaming Services</h3>
+          </a>
+          <a href="https://index.scala-lang.org/awesome#mathematics-finance-data-science-and-bioinformatics" class="content-card">
+            <h3><i class="fa fa-search"></i>Finance</h3>
+          </a>
+        </div>
+        <div class="awesome-col">
+          <a href="https://index.scala-lang.org/awesome#web-development" class="content-card">
+            <h3><i class="fa fa-search"></i>Full Stack Web Design</h3>
+          </a>
+          <a href="https://index.scala-lang.org/awesome/file-systems-and-processes" class="content-card">
+            <h3><i class="fa fa-search"></i>Use The File System</h3>
+          </a>
+          <a href="https://index.scala-lang.org/awesome#text-format-and-compression" class="content-card">
+            <h3><i class="fa fa-search"></i>Text Processing</h3>
+          </a>
+        </div>
+        <div class="awesome-summary">
+          <p>Scala is widely used in all these areas and more.</p>
         </div>
       </div>
     </div>
