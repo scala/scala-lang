@@ -17,6 +17,9 @@ supporters:
   - name: Lunatech
     logo: /resources/img/frontpage/lunatech-logo.png
     url: https://lunatech.com/
+  - name: Databricks
+    logo: /resources/img/frontpage/databricks-logo.png
+    url: https://databricks.com/
   - name: Knóldus
     logo: /resources/img/frontpage/knoldus-logo.png
     url: https://www.knoldus.com/
