@@ -193,44 +193,6 @@
   </div>
 </section>
 
-<!-- Blog -->
-<section class="new-blog">
-  <div class="wrap">
-    <div class="new">
-      <div class="heading-line">
-        <h2><span>What’s New</span></h2>
-      </div>
-      {% assign firstPost = site.posts | first %}
-      <div class="content-card">
-        <p class="tag-new">{{firstPost.post-type|upcase}}</p>
-        <h3><a href="{{firstPost.url}}">{{firstPost.title}}</a></h3>
-        <span class="date">{{firstPost.date | date: "%A, %B %-d, %Y"}}</span>
-        <p>{{firstPost.content}}</p>
-      </div>
-    </div>
-    <div class="recently">
-      <div class="heading-line">
-        <h2><span>Recently</span></h2>
-      </div>
-      {% for post in site.posts limit:2 offset:1 %}
-        <a href="{{post.url}}" class="content-card">
-          <h3>{{post.title}}</h3>
-          <ul>
-            <li>{{post.date | date: "%A, %B %-d, %Y"}}</li>
-            <li class="dot">•</li>
-            <li>{{post.by}}</li>
-            <li class="tag">{{post.post-type|upcase}}</li>
-          </ul>
-          <p>{{post.content| strip_html | truncate:70}}</p>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-  <div class="call-to-action action-medium">
-    <a href="/blog/" class="button">View our blog</a>
-  </div>
-</section>
-
 <!-- Supporters -->
 <section class="maintenance">
   <div class="wrap">
