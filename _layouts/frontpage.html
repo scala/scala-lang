@@ -259,7 +259,7 @@
       <div class="heading-line">
         <h2><span>Recently</span></h2>
       </div>
-      {% for post in site.posts limit:3 offset:1 %}
+      {% for post in site.posts limit:2 offset:1 %}
         <a href="{{post.url}}" class="content-card">
           <h3>{{post.title}}</h3>
           <ul>
@@ -268,86 +268,13 @@
             <li>{{post.by}}</li>
             <li class="tag">{{post.post-type|upcase}}</li>
           </ul>
-          <p>{{post.content| strip_html | truncate:140}}</p>
+          <p>{{post.content| strip_html | truncate:70}}</p>
         </a>
       {% endfor %}
     </div>
   </div>
   <div class="call-to-action action-medium">
     <a href="/blog/" class="button">View our blog</a>
-  </div>
-</section>
-<!-- Talk to us -->
-<section class="talk-to-us">
-  <div class="wrap">
-    <div class="heading-line">
-      <h2><span>Talk to us!</span></h2>
-    </div>
-    <div class="discourse">
-      <h3>Forums</h3>
-      {% for forum in site.data.chats-forums.discourseForums %}
-        <a href="{{forum.url}}" class="{{forum.cssClass}}">
-          <img src="/resources/img/frontpage/discourse-logo.png" alt="{{forum.title}}">
-          <h4>{{forum.title}}</h4>
-          <p>{{forum.subtitle}}</p>
-        </a>
-      {% endfor %}
-    </div>
-    <div class="discord">
-      <h3>Real-Time Chat</h3>
-      {% assign modLimit = site.data.chats-forums.discordServers.size | modulo: 2 %}
-      {% capture channelLimit %}
-        {% if modLimit != 0 %}
-          {{site.data.chats-forums.discordServers.size | minus: 1}}
-        {% else %}
-          {{site.data.chats-forums.discordServers.size}}
-        {% endif %}
-      {% endcapture %}
-      {% for server in site.data.chats-forums.discordServers limit: serverLimit %}
-        {% if forloop.first %}
-          <ul class="first">
-        {% endif %}
-        <li>
-          <a href="{{server.url}}">
-            <img src="/resources/img/frontpage/discord-logo.png" alt="">
-            <span>{{server.name}}</span>
-          </a>
-        </li>
-
-        {% assign halfLength = forloop.length | divided_by: 2 | floor %}
-        {% if forloop.index == halfLength %}
-          </ul>
-          <ul class="second">
-        {% endif %}
-
-        {% if forloop.last %}
-          </ul>
-        {% endif %}
-      {% endfor %}
-    </div>
-    <h3>More chat servers are listed on the <a href="/community/">Community</a> page</h3>
-    {% if page.communities %}
-    <div class="communities">
-      <h3>Communities</h3>
-      <ul>
-        {% for community in page.communities %}
-          <li>
-            <a href="{{community.url}}"><img src="{{community.icon}}" alt="{{community.name}}"></a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-    <div class="social">
-      <ul>
-        <li>
-          <a href="{{site.data.common.twitterUrl}}"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="{{site.data.common.githubUrl}}"><i class="fa fa-github"></i></a>
-        </li>
-      </ul>
-    </div>
   </div>
 </section>
 
