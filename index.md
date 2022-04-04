@@ -37,9 +37,9 @@ apiDocs:
 # Scala backends
 scalaBackends:
   - icon: /resources/img/frontpage/java-logo.png
-    description: on the JVM
+    description: the Java Virtual Machine
   - icon: /resources/img/frontpage/js-logo.png
-    description: on JavaScript in your browser
+    description: with JavaScript in your browser
     link: https://www.scala-js.org/
   - icon: /resources/img/frontpage/llvm-logo.png
     description: natively with LLVM

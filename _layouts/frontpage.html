@@ -84,31 +84,15 @@
 
 
 <main id="site-main">
-<!-- Scala backends -->
-<section class="runs">
-  <div class="wrap">
-    <h2>{{site.data.common.texts.scalaBackendsTitle}}</h2>
-    <ul>
-      {% for backend in page.scalaBackends %}
-        <li class="masterTooltip" title="{{backend.description}}">
-        <span>
-        <a href="{{backend.link}}"><img src="{{backend.icon}}" alt="{{backend.description}}"></a>
-        </span>
-        {% if backend.beta == 1 %}<span class="beta">beta</span>{% endif %}
-      </li>
-      {% unless forloop.last %}<li></li>{% endunless %}
-      {% endfor %}
-    </ul>
-  </div>
-</section>
 
 <!-- Scala in a Nutshell -->
 <section class="nutshell">
   <div class="wrap">
     <div class="heading-line">
       <h2><span>Scala in a Nutshell</span></h2>
-      <div class="sub-heading">
-        <p> click the boxes below to see Scala in action! </p>
+      <div class="call-to-action action-medium">
+        <p>Click the buttons to see Scala in action,
+          or visit the <a href="/documentation/">Scala Documentation</a> to learn more.</p>
       </div>
     </div>
   </div>
@@ -125,6 +109,7 @@
         <div class="scala-item">
           <h3>{{scalaItem.shortTitle}}</h3>
           <p>{{scalaItem.shortDescription}}</p>
+          <div class="button">click to expand</div>
         </div>
         {% if loopIndexMod == 2 or forloop.last %}
           </div>
@@ -136,10 +121,24 @@
         {% endif %}
       {% endfor %}
     </div>
-    <div class="call-to-action action-medium">
-      <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle}}</a>
-      <p class="align-bottom">or visit the <a href="/documentation/">Scala Documentation</a></p>
-    </div>
+  </div>
+</section>
+
+<!-- Scala backends -->
+<section class="runs">
+  <div class="wrap">
+    <h2>{{site.data.common.texts.scalaBackendsTitle}}</h2>
+    <ul>
+      {% for backend in page.scalaBackends %}
+      <li class="masterTooltip" title="{{backend.description}}">
+        <span>
+          <a href="{{backend.link}}"><img src="{{backend.icon}}" alt="{{backend.description}}"></a>
+        </span>
+        {% if backend.beta == 1 %}<span class="beta">beta</span>{% endif %}
+      </li>
+      {% unless forloop.last %}<li></li>{% endunless %}
+      {% endfor %}
+    </ul>
   </div>
 </section>
 

@@ -11,6 +11,9 @@
                 background: $gray;
             }
         }
+        .call-to-action.action-medium {
+            margin-top: 0px;
+        }
     }
 
     .scala-items-list {
@@ -26,6 +29,12 @@
                 }
 
                 min-height: 165px;
+
+                .button {
+                    margin-top: 10px;
+                    font-size: 0.6rem;
+                    padding: 5px;
+                }
 
                 h3 {
                     color: #fff;

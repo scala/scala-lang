@@ -1,7 +1,7 @@
 ---
 shortTitle: "Pattern Matching"
-shortDescription: "Think “switch” on steroids. Match against class hierarchies, sequences, and more."
-scastieUrl: 
+shortDescription: "Think “switch” on steroids. Match against class hierarchies, sequences, constants and more."
+scastieUrl:
 ---
 <div class="wrap">
 <div class="scala-text">
@@ -34,5 +34,5 @@ def inOrder(t: Tree): List[Int] = t match {
 }</code></pre>
                                     </div>
                                 </div>
-                                
+
                             </div>
