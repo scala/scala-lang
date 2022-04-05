@@ -55,13 +55,20 @@
 
     .supported {
       padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+        @include span-columns(10);
+        @include shift(1);
         @include display(flex);
         @include flex-direction(row);
         @include align-items(center);
-        @include justify-content(space-between);
+        @include justify-content(space-evenly);
         flex-wrap: wrap;
 
         a {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 8px;
 
             img {
                 height: 42px;
