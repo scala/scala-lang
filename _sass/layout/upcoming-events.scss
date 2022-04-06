@@ -34,6 +34,51 @@
         }
     }
 
+    .training-items-list {
+        @include clearfix;
+
+        .training-item {
+            @include span-columns(4);
+            @include omega(3n);
+
+            @include bp(large) {
+                @include span-columns(12);
+            }
+
+            img,
+            .calendar {
+                float: left;
+            }
+
+            img {
+                width: 28px;
+                height: auto;
+            }
+
+            .calendar {
+                span:last-child {
+                    background: $gray-lighter;
+                }
+            }
+
+            .card-text {
+                margin-left: 44px;
+
+                h4 {
+                    margin-bottom: 6px;
+                }
+
+                p {
+                    color: $base-font-color;
+
+                    &:nth-child(2) {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
     .events-items-list {
         @include clearfix;
 
