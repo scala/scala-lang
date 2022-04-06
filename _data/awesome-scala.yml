@@ -1,0 +1,20 @@
+summaryText: Scala is widely used in all these areas and more.
+links:
+- title: Big Data Processing
+  url: https://index.scala-lang.org/awesome#big-data
+- title: Machine Learning
+  url: https://index.scala-lang.org/awesome#mathematics-finance-data-science-and-bioinformatics
+- title: Notebooks
+  url: https://index.scala-lang.org/awesome/code-editors-and-notebooks?sort=stars
+- title: Streaming Services
+  url: https://index.scala-lang.org/awesome#asynchronous-and-concurrent-programming
+- title: Full Stack Web Design
+  url: https://index.scala-lang.org/awesome#web-development
+- title: Serverless
+  url: https://index.scala-lang.org/awesome#deployment-virtualization-and-cloud
+- title: Finance
+  url: https://index.scala-lang.org/awesome#mathematics-finance-data-science-and-bioinformatics
+- title: Use The File System
+  url: https://index.scala-lang.org/awesome/file-systems-and-processes
+- title: Text Processing
+  url: https://index.scala-lang.org/awesome#text-format-and-compression

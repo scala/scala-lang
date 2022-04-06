@@ -163,33 +163,15 @@
     </div>
     <div class="awesome-table">
       <div class="wrap">
-        <div class="awesome-col">
-          <a href="https://index.scala-lang.org/awesome#big-data" class="content-card">
-            <h3><i class="fa fa-search"></i>Big Data Processing</h3>
+        <div class="awesome-items">
+          {% for awesomeLink in site.data.awesome-scala.links %}
+          <a href="{{awesomeLink.url}}" class="content-card">
+            <h3><i class="fa fa-search"></i>{{awesomeLink.title}}</h3>
           </a>
-          <a href="https://index.scala-lang.org/awesome#mathematics-finance-data-science-and-bioinformatics" class="content-card">
-            <h3><i class="fa fa-search"></i>Machine Learning</h3>
-          </a>
-          <a href="https://index.scala-lang.org/awesome#asynchronous-and-concurrent-programming" class="content-card">
-            <h3><i class="fa fa-search"></i>Streaming Services</h3>
-          </a>
-          <a href="https://index.scala-lang.org/awesome#mathematics-finance-data-science-and-bioinformatics" class="content-card">
-            <h3><i class="fa fa-search"></i>Finance</h3>
-          </a>
-        </div>
-        <div class="awesome-col">
-          <a href="https://index.scala-lang.org/awesome#web-development" class="content-card">
-            <h3><i class="fa fa-search"></i>Full Stack Web Design</h3>
-          </a>
-          <a href="https://index.scala-lang.org/awesome/file-systems-and-processes" class="content-card">
-            <h3><i class="fa fa-search"></i>Use The File System</h3>
-          </a>
-          <a href="https://index.scala-lang.org/awesome#text-format-and-compression" class="content-card">
-            <h3><i class="fa fa-search"></i>Text Processing</h3>
-          </a>
+          {% endfor %}
         </div>
         <div class="awesome-summary">
-          <p>Scala is widely used in all these areas and more.</p>
+          <p class="awesome-summary-text">{{site.data.awesome-scala.summaryText}}</p>
         </div>
       </div>
     </div>
