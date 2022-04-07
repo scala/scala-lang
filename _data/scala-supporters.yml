@@ -20,6 +20,11 @@ supporters:
   - name: Databricks
     logo: /resources/img/frontpage/databricks-logo.png
     url: https://databricks.com/
+    wider-logo: true
+  - name: SwissBorg
+    logo: /resources/img/frontpage/swissborg-logo.png
+    url: https://swissborg.com/
+    wider-logo: true
   - name: Knóldus
     logo: /resources/img/frontpage/knoldus-logo.png
     url: https://www.knoldus.com/

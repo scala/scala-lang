@@ -371,7 +371,7 @@
     <h3>{{site.data.common.texts.scalaSupportersTitle}}</h3>
     <div class="supported">
       {% for supporter in site.data.scala-supporters.supporters %}
-        <a href="{{supporter.url}}"><img src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
+        <a href="{{supporter.url}}"><img {% if supporter.wider-logo %} class="logo-with-wider-aspect-ratio" {% endif %} src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
       {% endfor %}
     </div>
   </div>
