@@ -1,0 +1,21 @@
+// COMMUNITY FRONTPAGE
+//------------------------------------------------
+//------------------------------------------------
+
+.community-frontpage {
+    background: $gray;
+
+    .heading-line {
+        h2 {
+            span {
+                background: $gray;
+            }
+        }
+        .call-to-action.action-medium {
+            margin-top: 5px;
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

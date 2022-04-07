@@ -5,20 +5,103 @@
 #site-main {
     .scala-ecosystem {
         padding-bottom: 0;
-        background: url("../img/frontpage/background-scala-ecosystem.jpg") no-repeat center bottom $gray-li;
-        @include image-size();
+        // background: url("../img/frontpage/background-scala-ecosystem.jpg") no-repeat center bottom $gray-li;
+        // @include image-size();
+        background: $gray;
+
+        .awesome-table {
+            background: $gray-darker;
+            padding: 16px 0;
+
+            .awesome-summary {
+                margin-bottom: 16px;
+
+                @include span-columns(4);
+
+                @include bp(large) {
+                    @include span-columns(12);
+                }
+
+                padding: 5px;
+
+                p.awesome-summary-text {
+                    font-size: 1.3rem;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+
+            .awesome-items {
+                @include span-columns(8);
+
+                @include bp(large) {
+                    @include span-columns(12);
+                }
+
+                h3 {
+                    color: $gray-light;
+                    font-family: $base-font-family;
+                    text-transform: uppercase;
+                    // border-bottom: $base-border-gray;
+                    font-size: $font-size-large;
+                }
+
+                float: left;
+                display: block;
+
+                .content-card {
+                    float: left;
+                    background: $gray;
+                    padding: 2px;
+                    margin: 5px 3px;
+                    display: block;
+                    border-radius: $border-radius-base;
+
+                }
+
+                a {
+
+                    h3 {
+                        transition: $base-transition;
+                        padding: 10px;
+                        i {
+                            margin-right: 6px;
+                        }
+                    }
+
+                    &:active,
+                    &:focus,
+                    &:hover {
+                        text-decoration: none;
+                        box-shadow: $box-shadow-item;
+
+                        h3 {
+                            color: $brand-primary;
+                            background: $gray-dark;
+                        }
+                    }
+                }
+            }
+        }
+
+        .button.awesome {
+            font-family: Caveat;
+            font-size:large;
+            text-transform: none;
+            padding: 3px, 7px;
+        }
 
         .heading-line {
             @include clearfix;
 
             h2 {
                 span {
-                    background: #234D57;
+                    background: $gray;
                 }
             }
         }
 
         .browser {
+
             .header-browser {
                 background: $gray-dark;
                 padding: 14px 20px;
@@ -41,7 +124,7 @@
                 background: rgba($gray, 0.5);
                 transition: $base-transition;
                 text-align: center;
-                padding: 70px 0 80px;
+                // padding: 70px 0 80px;
 
                 h2 {
                     color: #fff;
@@ -82,13 +165,6 @@
                         width: 100%;
                     }
                 }
-            }
-        }
-
-        &:hover {
-            .main-browser {
-                background: $gray;
-                padding-bottom: 140px;
             }
         }
     }

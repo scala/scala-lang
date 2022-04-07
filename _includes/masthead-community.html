@@ -36,3 +36,40 @@
 		</div>
 	</div>
 </section>
+<section class="upcoming-events">
+	<div class="wrap">
+		<div class="inner-box">
+			<div class="heading-box">
+				<h3>Upcoming Events and Trainings</h3>
+			</div>
+			<div class="events-items-list">
+				{% assign upcomingEvents = '' | split: ',' %}
+				{% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
+				{% for event in site.events %}
+				{% capture date %}{{event.end|date: '%s'|plus: 86400}}{% endcapture %}
+				{% if now <= date %} {% assign upcomingEvents=upcomingEvents | push: event %} {% endif %} {% endfor %} {% for event in
+					upcomingEvents limit:6 %} <div href="#" class="event-item">
+					<a href="{{event.link-out}}" class="card">
+						<img src="{{event.logo}}" alt="{{event.title}}">
+						<div class="card-text">
+							<h4>{{event.title}}</h4>
+							<ul>
+								<li class="event-location">{{event.location}}</li>
+							</ul>
+							<ul>
+								<li class="date-event">{{event.start | date_to_string}} {% if event.start != event.end %}- {{event.end |
+									date_to_string}}{% endif %}</li>
+							</ul>
+						</div>
+					</a>
+			</div>
+			{% endfor %}
+			</div>
+			<div class="call-to-action action-medium">
+				<p class="align-top">See <a href="/events/">more events</a> or <a
+						href="https://github.com/scala/scala-lang/tree/master/events">add one to our events feed</a></p>
+			</div>
+			{% include upcoming-training.html %}
+		</div>
+	</div>
+</section>

@@ -1,14 +1,20 @@
 ---
 ---
-[
 {% comment %} Grab all the upcoming training sessions defined in _trainings {% endcomment %}
-{% for training in site.trainings %}{% if training.date >= site.time %}
+{% assign upcomingTrainings = '' | split: ',' %}
+{% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
+{% for training in site.trainings %}
+  {% capture date %}{{training.when | date: '%s' | plus: 86400}}{% endcapture %}
+  {% if now <= date %}
+    {% assign upcomingTrainings = upcomingTrainings | push: training %}
+  {% endif %}
+{% endfor %}
+[{% for training in upcomingTrainings %}
   {
-  "title": "{{ training.title | escape }}",
-  "url": "{{ training.link-out | escape }}",
-  "location": "{{ training.location | upcase | escape }}",
-  "when": "{{ training.when | date: "%Y-%m-%d" }}",
-  "organizer": "{{ training.organizer | escape }}"
-  }{% unless forloop.last %},{% endunless %}
-{% endif %}{% endfor%}
+    "title": "{{ training.title | escape }}",
+    "url": "{{ training.link-out | escape }}",
+    "location": "{{ training.location | upcase | escape }}",
+    "when": "{{ training.when | date: "%Y-%m-%d" }}",
+    "organizer": "{{ training.organizer | escape }}"
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
 ]
