@@ -12,7 +12,7 @@ To solve this problem, the Scala Center contracted Alexandre Archambault in Janu
 For example, on Linux, all we now need is:
 
 ```bash
-$ curl -Lo cs https://git.io/coursier-cli-linux && chmod +x cs && ./cs setup
+$ curl -fL "$(curl -w "%{url_effective}\n" -I -L -s -S https://git.io/coursier-cli-"$(uname | tr LD ld)" -o /dev/null).gz" | gzip -d > cs && chmod +x cs && ./cs setup 
 ```
 
 You can find the instructions for macOS and Windows in the [Coursier documentation](https://get-coursier.io/docs/cli-installation).
