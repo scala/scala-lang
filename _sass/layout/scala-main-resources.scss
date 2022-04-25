@@ -3,7 +3,7 @@
 //------------------------------------------------
 
 .scala-main-resources {
-    height: 200px;
+    height: 100px;
     background: $gray-darker;
     position: relative;
 
@@ -69,22 +69,18 @@
             margin-top: -48px;
 
             ul {
+                @include display(flex);
+                @include align-items(center);
                 margin-top: 12px;
-                max-width: 180px;
                 text-align: center;
 
                 li {
-                    &:first-child {
-                        border-bottom: $base-border-white;
-                        font-family: $heading-font-family;
-                        padding-bottom: 4px;
-                        margin-bottom: 2px;
-                        font-weight: $font-bold;
-
-                        a {
-                          font-size: $font-size-large;
-                        }
-                    }
+                    display: inline-block;
+                    font-family: $heading-font-family;
+                    padding-bottom: 4px;
+                    margin-bottom: 2px;
+                    margin-right: 7px;
+                    font-weight: $font-bold;
 
                     a {
                         color: rgba(#fff, 0.90);
@@ -101,8 +97,14 @@
             }
         }
 
+        .get-started {
+            .sublinks {
+                max-width: 180px;
+            }
+        }
+
         .learn-scala {
-            ul {
+            .sublinks {
                 float: right;
             }
         }
@@ -113,8 +115,6 @@
             left: 50%;
             top: -142px;
             margin-left: -140px;
-            background: rgba($gray-darker, 0.4);
-            border-radius: 100%;
             position: absolute;
             z-index: 60;
             @include display(flex);
@@ -123,15 +123,15 @@
 
             .circle-solid {
                 background: $gray-darker;
-                width: 198px;
-                height: 198px;
+                width: 205px;
+                height: 205px;
                 border-radius: 100%;
                 text-align: center;
 
                 > img {
                     width: 152px;
                     height: auto;
-                    margin-top: -40px;
+                    margin-top: -36px;
                 }
 
                 .scala-version {
@@ -167,11 +167,23 @@
 
         .resources {
             .get-started {
-                margin-top: 180px;
+                margin-top: 110px;
             }
 
             .learn-scala {
                 margin-top: 40px;
+            }
+
+            .get-started {
+                .sublinks {
+                    max-width: 100%;
+                }
+            }
+
+            .learn-scala {
+                .sublinks {
+                    float: none;
+                }
             }
 
             .learn-scala,
@@ -186,8 +198,11 @@
                 }
 
                 ul {
+                    @include span-columns(8);
+                    @include shift(2);
                     max-width: 100%;
                     float: none;
+                    align-items: center;
                 }
             }
 
