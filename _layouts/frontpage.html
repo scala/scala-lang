@@ -54,21 +54,27 @@
         <div class="resources">
           <div class="get-started">
             <a href="{{page.gettingStarted.mainUrl}}" class="button">{{page.gettingStarted.mainTitle | upcase}}</a>
-            <ul>
-              <li><a href="{{page.gettingStarted.subtitleLink}}">{{page.gettingStarted.subtitle}}</a></li>
-              {% for link in page.gettingStarted.links %}
-                <li><a href="{{link.url}}">{{link.title}}</a></li>
-              {% endfor %}
-            </ul>
+            <div class="sublinks">
+              <ul>
+                <li><a href="{{page.gettingStarted.subtitleLink}}">{{page.gettingStarted.subtitle}}</a></li>
+                {% for link in page.gettingStarted.links %}
+                  <li>•</li>
+                  <li><a href="{{link.url}}">{{link.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
           </div>
           <div class="learn-scala">
             <a href="{{page.apiDocs.mainUrl}}" class="button">{{page.apiDocs.mainTitle | upcase}}</a>
-            <ul>
-              <li><a href="{{page.apiDocs.subtitleLink}}">{{page.apiDocs.subtitle}}</a></li>
-              {% for link in page.apiDocs.links %}
-                <li><a href="{{link.url}}">{{link.title}}</a></li>
-              {% endfor %}
-            </ul>
+            <div class="sublinks">
+              <ul>
+                <li><a href="{{page.apiDocs.subtitleLink}}">{{page.apiDocs.subtitle}}</a></li>
+                {% for link in page.apiDocs.links %}
+                  <li>•</li>
+                  <li><a href="{{link.url}}">{{link.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
           </div>
           <div class="scala-brand-circle">
             <div class="circle-solid">
