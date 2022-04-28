@@ -8,15 +8,12 @@
   }
 
   h1 {
-    color: rgb(134,161,166);
-  }
-
-  .wrap {
-    margin-bottom: 4em;
+    color: $gray-heading;
   }
 
   h2 {
     margin-top: 2em;
+    margin-bottom: 1em;
   }
 
   &.select-language {
@@ -92,12 +89,12 @@
 
         h2 {
             margin-top: 0;
+            margin-bottom: 20px;
             font-size: 1.75rem;
         }
 
         .install-steps {
             @include clearfix;
-            margin-top: 48px;
             border-bottom: $base-border-gray;
             padding-bottom: 60px;
 

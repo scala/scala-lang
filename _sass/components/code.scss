@@ -23,3 +23,53 @@
 
     }
 }
+
+.text-area-code {
+    code {
+        padding: 2px 6px;
+        color: #859900;
+        background-color: #fff;
+        border-radius: 10px;
+        border: $base-border-gray;
+    }
+}
+
+.code-snippet-area {
+    position: relative; // so we can position the buttons
+
+    &:hover {
+        // display the copy buttons on hover of the whole area
+        .code-snippet-buttons {
+            opacity: 0.95;
+
+            &:active {
+                transition: none;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .code-snippet-buttons {
+        opacity: 0; // default invisible until hover
+        transition: $base-transition;
+        position: absolute; // so we can position the buttons
+        right: 4px;
+        top: 3px;
+
+        button {
+            border: none;
+            background: #fff;
+            font-size: $font-size-medium;
+            color: $gray-darker;
+            cursor: pointer;
+        }
+    }
+
+    .code-snippet-display {
+        code {
+            overflow-x: auto;
+            display: block;
+            border: $base-border-gray;
+        }
+    }
+}

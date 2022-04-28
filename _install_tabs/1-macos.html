@@ -1,0 +1,20 @@
+---
+tabId: macos
+tabLabel: macOS
+---
+<div class="text-area-code wrap-inline">
+  <div class="wrap">
+    <p>Run the following command in your terminal, following the on-screen instructions:</p>
+    {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-brew %}
+    {% assign homebrewAlt = "Alternatively, if you don't use Homebrew:" %}
+    {% capture homebrewDetail %}
+    <div class="wrap-narrow">
+      {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-default %}
+    </div>
+    {% endcapture %}
+    {% include alt-details.html
+      title=homebrewAlt
+      detail=homebrewDetail
+    %}
+  </div>
+</div>

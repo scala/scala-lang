@@ -34,6 +34,8 @@ defaults:
 
 # Custom collections
 collections:
+  install_tabs:
+    output: false
   scala_items:
     output: false
   online_courses:
