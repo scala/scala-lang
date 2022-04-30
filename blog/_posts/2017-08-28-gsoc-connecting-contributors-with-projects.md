@@ -56,7 +56,7 @@ The code for Contributing Info was committed in 2 pull requests, 1 for the [back
 ### Challenge
 One interesting challenge I ran into was filtering a project's issues based on a search term. For example, say a user is searching for all issues related to documentation so they enter "docs" as a search term in the Contributing Search page. A project called akka-http has some beginner-friendly issues, one of which is related to documentation with the title "#22874 - Add examples to Sink.actorRefWithAck and Source.queue docs". Since this is the only issue for akka-http that has "docs" in it's title, it should be the only issue that shows up for akka-http in the search results.
 
-All the projects in Scaladex are stored in an [elasticsearch index](https://www.elastic.co/blog/what-is-an-elasticsearch-index) which is like a database in a relational database. Each project stored in elasticsearch has the following fields:
+All the projects in Scaladex are stored in an [Elasticsearch index](https://www.elastic.co/blog/what-is-an-elasticsearch-index) which is like a database in a relational database. Each project stored in Elasticsearch has the following fields:
 ```
 name: Text
 description: Text
@@ -71,7 +71,7 @@ github: Object
 ```
 Each project has a `github` field of type `Object` containing GitHub info like a project's readme and it's number of commits. The `github` field has a `beginnerIssues` field which is a list of a project's beginner-friendly issues. The `beginnerIssues` field is of type Nested, which is a special version of the `Object` type used for lists of `Object`s. Each issue in `beginnerIssues` is of type `Object` and it has a `number` field and a `title` field.
 
-When Scaladex generates a search query to match the input search term ("docs" from the example above) to an elasticsearch query, all you have to do to match the search term against a project's beginner-friendly issues is add a Nested Query against the `github.beginnerIssues` field and specify you want to match the search term against the issue's `title` field. So this is the Nested Query I added to [DataRepository.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-c5de88d14364dfaadbdecdc462d6c7d1R254) which generates the elasticsearch query:
+When Scaladex generates a search query to match the input search term ("docs" from the example above) to an Elasticsearch query, all you have to do to match the search term against a project's beginner-friendly issues is add a Nested Query against the `github.beginnerIssues` field and specify you want to match the search term against the issue's `title` field. So this is the Nested Query I added to [DataRepository.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-c5de88d14364dfaadbdecdc462d6c7d1R254) which generates the Elasticsearch query:
 ```
 nestedQuery("github.beginnerIssues",
 	termQuery("github.beginnerIssues.title", searchTerm))
@@ -79,14 +79,14 @@ nestedQuery("github.beginnerIssues",
 
 This sort of worked. It would return the correct projects that have issues matching the search term, but instead of returning only the issues related to the search term, it would return all the issues. So in the example with the "docs" search term, all of akka-http's issues would be returned, not just the one related to documentation.
 
-After looking through the elasticsearch documentation for awhile, I came across Inner Hits which can be used with Nested Queries to select out the nested inner objects that matched the query. So inner hits would return only the beginner-friendly issues that matched the search term. So I updated the code that creates the Nested Query to also extract the inner hits that get returned:
+After looking through the Elasticsearch documentation for awhile, I came across Inner Hits which can be used with Nested Queries to select out the nested inner objects that matched the query. So inner hits would return only the beginner-friendly issues that matched the search term. So I updated the code that creates the Nested Query to also extract the inner hits that get returned:
 ```
 nestedQuery("github.beginnerIssues",
 	termQuery("github.beginnerIssues.title", searchTerm))
 .inner(innerHits("issues").size(7))
 ```
 
-And then I added the filtered beginner-friendly issues from inner hits to the project that gets created from the results of the elasticsearch query. I did this by updating the code in [package.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-0aa128fca8ddf4b576663970f7fc4940R39) that reads in each result of the elasticsearch query (`hit`) and converts it to a Scala `Project` object which is used by the server elsewhere.
+And then I added the filtered beginner-friendly issues from inner hits to the project that gets created from the results of the Elasticsearch query. I did this by updating the code in [package.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-0aa128fca8ddf4b576663970f7fc4940R39) that reads in each result of the Elasticsearch query (`hit`) and converts it to a Scala `Project` object which is used by the server elsewhere.
 ```
 implicit object ProjectAs extends HitReader[Project] {
   override def read(hit: Hit): Either[Throwable, Project] = {
