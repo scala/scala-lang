@@ -54,7 +54,7 @@ The Contributing Search page is similar to the normal search page in Scaladex wh
 The code for Contributing Info was committed in 2 pull requests, 1 for the [back-end](https://github.com/scalacenter/scaladex/pull/448) and 1 for the [front-end](https://github.com/scalacenter/scaladex/pull/467).
 
 ### Challenge
-One interesting challenge I ran into was filtering a project's issues based on a search term. For example, say a user is searching for all issues related to documentation so they enter "docs" as a search term in the Contributing Search page. A project called akka-http has some beginner-friendly issues, one of which is related to documentation with the title "#22874 - Add examples to Sink.actorRefWithAck and Source.queue docs". Since this is the only issue for akka-http that has "docs" in it's title, it should be the only issue that shows up for akka-http in the search results.
+One interesting challenge I ran into was filtering a project's issues based on a search term. For example, say a user is searching for all issues related to documentation so they enter "docs" as a search term in the Contributing Search page. A project called akka-http has some beginner-friendly issues, one of which is related to documentation with the title "#22874 - Add examples to Sink.actorRefWithAck and Source.queue docs". Since this is the only issue for akka-http that has "docs" in its title, it should be the only issue that shows up for akka-http in the search results.
 
 All the projects in Scaladex are stored in an [Elasticsearch index](https://www.elastic.co/blog/what-is-an-elasticsearch-index) which is like a database in a relational database. Each project stored in Elasticsearch has the following fields:
 ```
@@ -69,7 +69,7 @@ github: Object
 		title: Text
 ...
 ```
-Each project has a `github` field of type `Object` containing GitHub info like a project's readme and it's number of commits. The `github` field has a `beginnerIssues` field which is a list of a project's beginner-friendly issues. The `beginnerIssues` field is of type Nested, which is a special version of the `Object` type used for lists of `Object`s. Each issue in `beginnerIssues` is of type `Object` and it has a `number` field and a `title` field.
+Each project has a `github` field of type `Object` containing GitHub info like a project's readme and its number of commits. The `github` field has a `beginnerIssues` field which is a list of a project's beginner-friendly issues. The `beginnerIssues` field is of type Nested, which is a special version of the `Object` type used for lists of `Object`s. Each issue in `beginnerIssues` is of type `Object` and it has a `number` field and a `title` field.
 
 When Scaladex generates a search query to match the input search term ("docs" from the example above) to an Elasticsearch query, all you have to do to match the search term against a project's beginner-friendly issues is add a Nested Query against the `github.beginnerIssues` field and specify you want to match the search term against the issue's `title` field. So this is the Nested Query I added to [DataRepository.scala](https://github.com/scalacenter/scaladex/pull/467/commits/5bcecb58e91c52590e4460189d0415db4d4d2e1f#diff-c5de88d14364dfaadbdecdc462d6c7d1R254) which generates the Elasticsearch query:
 ```
@@ -79,7 +79,7 @@ nestedQuery("github.beginnerIssues",
 
 This sort of worked. It would return the correct projects that have issues matching the search term, but instead of returning only the issues related to the search term, it would return all the issues. So in the example with the "docs" search term, all of akka-http's issues would be returned, not just the one related to documentation.
 
-After looking through the Elasticsearch documentation for awhile, I came across Inner Hits which can be used with Nested Queries to select out the nested inner objects that matched the query. So inner hits would return only the beginner-friendly issues that matched the search term. So I updated the code that creates the Nested Query to also extract the inner hits that get returned:
+After looking through the Elasticsearch documentation for a while, I came across Inner Hits which can be used with Nested Queries to select out the nested inner objects that matched the query. So inner hits would return only the beginner-friendly issues that matched the search term. So I updated the code that creates the Nested Query to also extract the inner hits that get returned:
 ```
 nestedQuery("github.beginnerIssues",
 	termQuery("github.beginnerIssues.title", searchTerm))
@@ -129,7 +129,7 @@ With GitHub's REST API, you have to make multiple requests to different routes t
 
 So I replaced keywords with topics for projects in Scaladex and used GitHub’s new GraphQL API to fetch the topics. These topics are fetched for all projects when the server is indexed. A lot more projects have topics than keywords (which had to manually be set by maintainers in Scaladex), so this greatly improved the ability to search for projects based on categories in Scaladex since there are a lot more projects with categories.
 
-Here's the code I added to [GithubDownload.scala](https://github.com/scalacenter/scaladex/commit/a771d7a70fdb7aaa0003abf48aaa87a622d89f03#diff-e03c541cf1bd7ec0322a9a6571160bebR339) which contains the GraphQL query that is put in the POST body of the request sent to GitHub's GraphQL API to fetch topics for a project. You can see the graph-structure of GraphQL in the query. The query first gets a `repository` node and then accesses it's topics through the `repositoryTopics` edge/connection. Then it selects the names of the topics belonging to that repository.
+Here's the code I added to [GithubDownload.scala](https://github.com/scalacenter/scaladex/commit/a771d7a70fdb7aaa0003abf48aaa87a622d89f03#diff-e03c541cf1bd7ec0322a9a6571160bebR339) which contains the GraphQL query that is put in the POST body of the request sent to GitHub's GraphQL API to fetch topics for a project. You can see the graph-structure of GraphQL in the query. The query first gets a `repository` node and then accesses its topics through the `repositoryTopics` edge/connection. Then it selects the names of the topics belonging to that repository.
 ```
 private def topicQuery(repo: GithubRepo): JsObject = {
 
