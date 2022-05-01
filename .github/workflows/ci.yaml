@@ -25,7 +25,7 @@ jobs:
       - name: Proofing (Pull Request)
         if: ${{ github.event_name != 'schedule' }}
         run: |
-          bundle exec htmlproofer ./_site/ --disable-external --only-4xx --empty-alt-ignore --allow-hash-href
+          bundle exec htmlproofer ./_site/ --disable-external --only-4xx --empty-alt-ignore --allow-hash-href --typhoeus-config='{"headers":{"Accept-Encoding":"gzip, deflate"}}'
       - name: Proofing (Cron)
         if: ${{ github.event_name == 'schedule' }}
         run: |
