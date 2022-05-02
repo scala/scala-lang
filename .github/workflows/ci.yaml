@@ -24,11 +24,10 @@ jobs:
           find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \)
           find ./_site \( -type d \( -name events -o -name training \) -prune -false \) -o \( -type f ! -name error.log -empty \) | ( ! read )
       - name: Proofing (local links only)
-        if: $${{ github.event_name == 'pull_request' }}
+        if: github.event_name == 'pull_request'
         run: |
           bundle exec htmlproofer ./_site/ --disable-external --only-4xx --empty-alt-ignore --allow-hash-href
       - name: Proofing (all links)
-        if: $${{ github.event_name != 'pull_request' }}
+        if: github.event_name != 'pull_request'
         run: |
-          echo $${{ github.event_name }}
           bundle exec htmlproofer ./_site/ --external_only --only-4xx --http-status-ignore "400,401,429" --empty-alt-ignore --allow-hash-href --url-ignore "/trends.google.com/,/pgp.mit.edu/,/www.oracle.com/,/scalafiddle.io/" --typhoeus-config='{"headers":{"Accept-Encoding":"gzip, deflate"}}'
