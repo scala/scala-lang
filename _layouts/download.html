@@ -38,7 +38,7 @@ Scala code runner version {{currentScalaRelease}} -- Copyright 2002-2022, LAMP/E
         <div class="recommended-install">
           <h2>Install Scala with <span style="font-weight: bold;">cs setup</span> (recommended)</h2>
           <div>
-            <div class="text-area-code">
+            <div class="text-step">
               <p>To install Scala, it is recommended to use <code>cs setup</code>,
                 the Scala installer powered by Coursier. It installs everything necessary to use the latest Scala release from a
                 command line:
@@ -48,7 +48,7 @@ Scala code runner version {{currentScalaRelease}} -- Copyright 2002-2022, LAMP/E
               {% include tabsection.html id='install-cs-setup-tabs' collection=site.install_tabs %}
             </div>
             {% capture checkSetupDetail %}
-            <div class="text-area-code wrap-inline">
+            <div class="text-step wrap-inline">
               <div class="wrap">
                 <p>Check your setup with the command <code>scala -version</code>, which should output:</p>
                 {% include code-snippet.html nocopy=true language='bash' codeSnippet=scalaDemo %}

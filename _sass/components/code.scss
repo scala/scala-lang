@@ -24,16 +24,6 @@
     }
 }
 
-.text-area-code {
-    code {
-        padding: 2px 6px;
-        color: #859900;
-        background-color: #fff;
-        border-radius: 10px;
-        border: $base-border-gray;
-    }
-}
-
 .code-snippet-area {
     position: relative; // so we can position the buttons
 
@@ -53,8 +43,8 @@
         opacity: 0; // default invisible until hover
         transition: $base-transition;
         position: absolute; // so we can position the buttons
-        right: 4px;
-        top: 3px;
+        right: 3px;
+        top: 5px;
 
         button {
             border: none;
@@ -62,14 +52,6 @@
             font-size: $font-size-medium;
             color: $gray-darker;
             cursor: pointer;
-        }
-    }
-
-    .code-snippet-display {
-        code {
-            overflow-x: auto;
-            display: block;
-            border: $base-border-gray;
         }
     }
 }
