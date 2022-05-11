@@ -178,21 +178,6 @@ var toggleStickyToc = function() {
     }
 }
 
-$(document).ready(function() {
-  // for each .alt-details div, find the .alt-details-toggle button,
-  // and add a click handler to toggle the visibility of the .alt-details-detail
-
-  $('.alt-details').each(function() {
-    var toggle = $(this).find('.alt-details-toggle');
-    var details = $(this).find('.alt-details-detail');
-    toggle.click(function() {
-      details.css('display') === 'none' ? details.show() : details.hide();
-      toggle.toggleClass('alt-details-closed');
-    });
-    toggle.click();
-  });
-});
-
 // Blog search
 $(document).ready(function() {
   if ($("#blog-search-bar").length) {
