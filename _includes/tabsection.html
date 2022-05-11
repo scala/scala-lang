@@ -1,0 +1,15 @@
+<div {% if include.id %} id="{{include.id}}" {% endif %} class="tabsection">
+  <ul class="nav-tab">
+    {% for tabRoot in include.collection %}
+    <li class="item-tab">
+      <a class="item-tab-link {% if tabRoot.defaultTab %} active{% endif %}"
+         data-target="{{tabRoot.tabId}}">{{tabRoot.tabLabel}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% for tabRoot in include.collection %}
+  <div class="tabcontent {% if tabRoot.defaultTab %}active{% endif %}" data-tab="{{tabRoot.tabId}}">
+    {{tabRoot.content}}
+  </div>
+  {% endfor %}
+</div>
