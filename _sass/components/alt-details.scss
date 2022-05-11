@@ -41,12 +41,14 @@
 
     .alt-details-control + .alt-details-toggle + .alt-details-detail {
         // by default, hide the details
-        display: none;
+        position: absolute;
+        top: -999em;
+        left: -999em;
     }
 
     .alt-details-control:checked + .alt-details-toggle + .alt-details-detail {
         // show the details when the control is checked
-        display: block;
+        position: static;
     }
 
     .alt-details-control:checked + .alt-details-toggle:after {
