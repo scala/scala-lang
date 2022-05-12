@@ -1,15 +1,27 @@
-<div {% if include.id %} id="{{include.id}}" {% endif %} class="tabsection">
-  <ul class="nav-tab">
+<div id="{{include.id}}" class="tabsection">
+  {% for tabRoot in include.collection %}
+  <input
+    type="radio"
+    name="{{include.id}}_tabs"
+    id="{{tabRoot.tabId}}_description"
+    data-target="{{tabRoot.tabId}}"
+    hidden
+    aria-hidden="true"
+    {% if tabRoot.defaultTab %}checked{% endif %}
+  >
+  {% endfor %}
+  <ul hidden aria-hidden="true" class="nav-tab">
     {% for tabRoot in include.collection %}
     <li class="item-tab">
-      <a class="item-tab-link {% if tabRoot.defaultTab %} active{% endif %}"
-         data-target="{{tabRoot.tabId}}">{{tabRoot.tabLabel}}</a>
+      <label class="item-tab-link" for="{{tabRoot.tabId}}_description">{{tabRoot.tabLabel}}</label>
     </li>
     {% endfor %}
   </ul>
-  {% for tabRoot in include.collection %}
-  <div class="tabcontent {% if tabRoot.defaultTab %}active{% endif %}" data-tab="{{tabRoot.tabId}}">
-    {{tabRoot.content}}
+  <div class="tabcontent">
+    {% for tabRoot in include.collection %}
+    <section id="{{tabRoot.tabId}}_content">
+      {{tabRoot.content}}
+    </section>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
