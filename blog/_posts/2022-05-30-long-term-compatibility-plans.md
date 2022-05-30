@@ -56,7 +56,7 @@ More importantly, during work on 3.2, we realized that maintaining this flag may
 
 Finally, we have reached the agreement that the best course of action would be to split Scala development into two lines, called “Scala LTS” and “Scala Next”. Both would live as separate branches in the compiler repository. Both will have separate, but possibly synchronized releases. Porting changes from one to the other should be easy and common.
 
-Scala Next will be the line that the development of the language is taking place on. It would receive frequent minor updates and all experimental language features will leave here.
+Scala Next will be the line that the development of the language is taking place on. It would receive frequent minor updates and all experimental language features will live here.
 
 Scala LTS on the other hand will be the stable long-term support line. One LTS will only receive patch updates which means that all releases of the same LTS line will be forward and backward compatible in terms of output. The only changes between releases will be bug fixes, non-language changes (doctool, semanticDB, reporting), and small quality-of-life enhancements (only if we are sure we are not breaking any compatibility guarantees. After more than two years we may decide to nominate one of the releases from the Next line as the new LTS. After that, we guarantee that the old LTS will be supported for at least one additional year. That means that the time of support for each LTS release is at least three years.
 
