@@ -72,7 +72,9 @@ Once the LTS & Next model is implemented, we suggest the following practices for
 
 ### Owners of commercial projects
 
-You should stick to the LTS version. It will give you the best tooling support and a stable compiler. If you are migrating a bigger project from Scala 2, you should migrate it straight to the newest LTS.
+We suggest you stick to the LTS version. It will give you the best tooling support and a stable compiler. If you are migrating a bigger project from Scala 2, you should migrate it straight to the newest LTS.
+
+You may also choose to be up to date with the latest minor version. That will allow you to use new features as soon as they are added to the language. However, you will need to be ready for frequent compiler updates. Otherwise, your project may end up with an unsupported version of the language.
 
 ### Library maintainers
 
