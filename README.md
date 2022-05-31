@@ -31,6 +31,14 @@ docker-compose up --build
 
 ### With Bundler:
 
+Install bundler first:
+
+```
+sudo gem install bundler
+```
+
+Then:
+
 ```
 bundle install
 bundle exec jekyll serve --incremental
