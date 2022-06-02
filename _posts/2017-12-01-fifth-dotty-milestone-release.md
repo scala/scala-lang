@@ -136,7 +136,7 @@ using Dotty with sbt, see the
 
 ### IDE support
 It is very easy to start using the Dotty IDE in any Dotty project by following
-the [IDE guide](https://dotty.epfl.ch/docs/usage/ide-support.html).
+the IDE guide (EDIT: dead link).
 
 
 ### Standalone installation
