@@ -68,7 +68,7 @@ The server is covered by the [Scala Code of Conduct](../conduct.html).
 
 Alternate clients such as [Element](https://element.io) are supported
 via a [Matrix](https://matrix.org) bridge.  Connect to
-`#scala-lang:matrix.org` to access the main Discord channel, or explore `#scala-space:matrix.org` to see channels from all over the Scala community (many are briged in from other places like Discord, Gitter, or IRC).
+`#scala-lang:matrix.org` to access the main Discord channel, or explore `#scala-space:matrix.org` to see channels from all over the Scala community (many are bridged in from other places like Discord, Gitter, or IRC).
 
 Scala-oriented Discord servers operated by the community include:
 
