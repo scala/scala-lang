@@ -135,9 +135,8 @@ using Dotty with sbt, see the
 [example project](https://github.com/lampepfl/dotty-example-project).
 
 ### IDE support
-It is very easy to start using the Dotty IDE in any Dotty project by following
-the IDE guide (EDIT: dead link).
-
+It is very easy to start using an IDE in any Dotty project by following
+the IDE sections of the <a href="https://docs.scala-lang.org/scala3/getting-started.html">getting-started page</a>.
 
 ### Standalone installation
 Releases are available for download on the _Releases_
