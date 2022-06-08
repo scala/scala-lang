@@ -45,4 +45,4 @@ We are looking forward to seeing you online!
 
 [moocs]: https://docs.scala-lang.org/online-courses.html
 [exts]: https://extensionschool.ch
-[Effective Programming in Scala]: https://www.extensionschool.ch/learn/effective-programming-in-scala
+[Effective Programming in Scala]: https://extensionschool.ch/learn/effective-programming-in-scala?utm_source=scala_lang&utm_medium=blog&utm_campaign=announcement
