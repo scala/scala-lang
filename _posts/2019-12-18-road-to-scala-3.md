@@ -115,7 +115,7 @@ We consider the availability of core tooling to be an integral part of the Scala
 
 * **Compatibility Checker**: [MiMa](https://github.com/lightbend/migration-manager) is a tool used by library authors to verify binary compatibility of new releases. For Scala 3, once TASTy support has matured, binary compatibility will no longer be relevant. Instead, a new tool will check TASTy API compatibility.
 
-* **IDEs**: The support for Scala 3 in Visual Studio Code is [available](https://dotty.epfl.ch/docs/usage/ide-support.html) and used by the compiler developers, and we will continue to improve it. IntelliJ has been experimenting with Dotty support [for a while](https://blog.jetbrains.com/scala/2017/03/23/scala-plugin-for-intellij-idea-2017-1-cleaner-ui-sbt-shell-repl-worksheet-akka-support-and-more/) and their team is determined to support Scala 3 when it becomes available.
+* **IDEs**: The support for Scala 3 in Visual Studio Code is available and used by the compiler developers, and we will continue to improve it. IntelliJ has been experimenting with Dotty support [for a while](https://blog.jetbrains.com/scala/2017/03/23/scala-plugin-for-intellij-idea-2017-1-cleaner-ui-sbt-shell-repl-worksheet-akka-support-and-more/) and their team is determined to support Scala 3 when it becomes available.
 
 * **Syntax**: Scala 3 might allow [optional braces](https://dotty.epfl.ch/docs/reference/other-new-features/indentation.html) and [a new syntax for control structures](https://dotty.epfl.ch/docs/reference/other-new-features/control-syntax.html) – these features are currently labelled experimental and being evaluated. To ensure a consistent code style, we will ensure the release includes a robust formatting and syntax conversion tools.
 
