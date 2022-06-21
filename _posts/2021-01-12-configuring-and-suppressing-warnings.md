@@ -59,7 +59,7 @@ warning: 1 feature warning; re-run with -feature for details
 4 warnings
 ```
 
-Using `-deprecation` and `-feature` these warnings are reported individually. As we will see later, these two flags are shorthands for changing the `-Wconf` configurarion.
+Using `-deprecation` and `-feature` these warnings are reported individually. As we will see later, these two flags are shorthands for changing the `-Wconf` configuration.
 
 ```scala
 $> scalac Test.scala -deprecation -feature
