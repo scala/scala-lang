@@ -33,11 +33,13 @@ participation in all of these efforts is strongly encouraged.
 
 ## Forums
 
-The Scala Center operates two Discourse forums:
+The Scala Center operates the following Discourse forums:
 
  * **[users.scala-lang.org](https://users.scala-lang.org)**: The main forum for questions, discussions, and announcements about programming in Scala. Beginner questions are very welcome. Any question can and should receive a courteous and insightful answer.  (Replaces the old scala-user and scala-announce groups.)
 
  * **[contributors.scala-lang.org](https://contributors.scala-lang.org)**: For anything related to moving Scala forward; from Scala Platform library discussions, to Scala Improvement Process discussions, to development work on the Scala compiler, standard library, and modules. Core maintainers and open-source contributors are both welcome, as well as those who want to see what’s coming down the pipe and would like to be involved.  (Replaces the old scala-internals, scala-language, scala-debate, scala-sips, and scala-tools groups.)
+
+ * **[teachers.scala-lang](https://teachers.scala-lang.org)**: Discussions related to the usage of Scala to teach programming: material, tooling, guidelines. 
 
 Discourse is an open-source forum and mailing list platform. You can participate via the web, or you can use "mailing list mode", where you receive posts in your inbox and can reply to them via email. The web interface provides statistics, upvoting, polls, and other features. Posts can be written in Markdown, including syntax highlighting.
 
@@ -156,7 +158,7 @@ items and opinions.  Ask your Scala friends who they follow on Twitter
 Finding libraries:
 
 * [Scaladex](https://index.scala-lang.org), maintained by the Scala Center, is "an index of the known Scala ecosystem"
-* [Awesome Scala](https://github.com/lauris/awesome-scala) is "a community driven list of useful Scala libraries, frameworks and software"
+* [Awesome Scala](https://index.scala-lang.org/awesome) is "a community driven list of useful Scala libraries, frameworks and software"
 * [Typelevel.org](https://typelevel.org) provides an assortment of popular libraries and extensions to Scala.
 * [Trending Scala repositories](https://github.com/trending?l=scala&since=monthly) on GitHub
 
