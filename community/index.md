@@ -90,6 +90,7 @@ International chat rooms are available as well:
 * **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
 * **[scalajp](https://gitter.im/scalajp/)** (Gitter)
 * **[scala_ru](https://t.me/scala_ru)** (Telegram)
+* **[Scala Ukraine](https://t.me/scala_ukraine)** (Telegram)
 
 Note also that Stack Overflow offers languages other than English, for
 example [the scala tag on es.stackoverflow.com](https://es.stackoverflow.com/questions/tagged/scala).
