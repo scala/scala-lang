@@ -5,10 +5,10 @@ by: Adrien Piquerez, Scala Center
 title: Secure the Dependencies of your Scala Project on Github
 ---
 
-We released [sbt-dependency-submission][sbt-dependency-submisison], a GitHub action that submits the dependencies of sbt builds to the [GitHub Dependency submission API](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/using-the-dependency-submission-api) (currently in beta).
+We released [sbt-dependency-submission][sbt-dependency-submission], a GitHub action that submits the dependencies of sbt builds to the [GitHub Dependency submission API](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/using-the-dependency-submission-api) (currently in beta).
 This action, once installed in a Github workflow, allows you to view the [Dependency graph](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph) in Github and to receive regular security reports from [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts).
 
-A similar action for the Mill build tool, the [mill-dependency-submission][mill-dependency-submisison] action, developed by Chris Kipp, is also available.
+A similar action for the Mill build tool, the [mill-dependency-submission][mill-dependency-submission] action, developed by Chris Kipp, is also available.
 Other solutions are available for Maven and Gradle as well.
 
 The next sections explain the motivation behind this project, show how to get started, compare Dependabot and Scala Steward, and list similar solutions for other build tools.
@@ -30,10 +30,10 @@ With this tool, we hope to contribute to building a more secure Scala open sourc
 
 ## Setting up the workflow
 
-Before installing the dependency submission action, you need to ensure that the `Dependency Graph` view is enabled in the `Settings > Code security and analysis` tab of your GitHub repository.
+Before installing the dependency submission action, you need to ensure that the `Dependency graph` view is enabled in the `Settings > Code security and analysis` tab of your GitHub repository.
 You should also consider enabling `Dependabot alerts`.
 
-![Dependency Graph](/resources/img/blog/github/dependency-graph.jpg)
+![Dependency graph](/resources/img/blog/github/dependency-graph.jpg)
 
 To install the action, add a new workflow in the `.github/workflows` folder, with the following definition:
 
@@ -45,11 +45,6 @@ on:
   push:
     branches:
       - main # default branch of the project
-
-# The API requires write permission on the repository to submit dependencies
-permissions:
-  contents: write
-
 
 jobs:
   update-graph:
@@ -65,10 +60,9 @@ jobs:
 ```
 
 This default definition should work in many sbt builds out-of-the-box.
-The action will check that the working directory contains an sbt project, it will install an sbt plugin, and run a command, added by that plugin, that extracts all resolved dependencies from all Scala projects on all Scala versions.
+Given a valid sbt build, the action installs an sbt plugin that will extract all transitive library dependencies from all subprojects on all Scala versions.
 
-If you need to exclude a project on a Scala version, because sbt cannot resolve its dependencies, you can use the `modules-ignore` input.
-You can learn more about this in the [documentation page](https://github.com/marketplace/actions/sbt-dependency-submission) of the action.
+For troubleshooting, please refer to the [documentation](https://github.com/marketplace/actions/sbt-dependency-submission) of the action.
 
 ## Scala Steward and GitHub Dependabot
 
@@ -78,6 +72,9 @@ It is used in more than a thousand open-source repositories and many proprietary
 Dependabot and Scala Steward can be used as complementary tools.
 Scala Steward, as a preventive tool, can help you keep your dependencies up-to-date, which reduces the risk of security vulnerabilities.
 Dependabot, as a monitoring tool, can notify you when a vulnerability is found, so that you can act quickly.
+
+Dependabot can also send PRs to update dependencies, but in static configuration files only.
+It can update the actions in your Github workflows, or the Maven dependencies in your POM files, but not the dependencies in the `build.sbt` or `build.sc` files.
 
 ## Other supported build tools
 
@@ -89,10 +86,10 @@ Dependabot supports Maven through static analysis of POM files.
 You can enable the Dependency graph view and Dependabot in the `Settings > Code security and analysis` page.
 
 ### Mill
-The [mill-dependency-submission][mill-dependency-submisison] action, developed by Chris Kipp, can extract the dependencies of a Mill build.
+The [mill-dependency-submission][mill-dependency-submssion] action, developed by Chris Kipp, can extract the dependencies of a Mill build.
 
 To install it:
- - Enable the `Dependency Graph` view, and optionally the `Dependabot alerts`, in the `Settings > Code security and analysis` page of your repository.
+ - Enable the `Dependency graph` view, and optionally the `Dependabot alerts`, in the `Settings > Code security and analysis` page of your repository.
  - Add this workflow in you repository:
 
 ```yaml
@@ -103,10 +100,6 @@ on:
   push:
     branches:
       - main # default branch of the project
-
-# The API requires write permission on the repository to submit dependencies
-permissions:
-  contents: write
 
 jobs:
   update-graph:
@@ -123,17 +116,17 @@ jobs:
 ```
 ### Gradle
 
-Gradle users can use the [gradle-dependency-submission][gradle-dependency-submisison] action.
+Gradle users can use the [gradle-dependency-submission][gradle-dependency-submission] action.
 
 ## Summary
 
-In Github, it is now possible to use pre-made actions, like [sbt-dependency-submisison][sbt-dependency-submisison] or [mill-dependency-submisison][mill-dependency-submisison], to extract full graphs of dependencies at build time.
+In Github, it is now possible to use pre-made actions, like [sbt-dependency-submission][sbt-dependency-submission] or [mill-dependency-submission][mill-dependency-submission], to extract full graphs of dependencies at build time.
 This allows Dependabot to analyze the dependencies and publish regular reports of vulnerabilities.
 Only project administrators, organization owners and users with explicit access can see the Dependabot reports.
 
 The sbt-dependency-submission action is a fresh tool that relies on the beta Dependency submission API, but the cost of trying it is low and it will help you secure your sbt builds.
 Give it a try and report any bug at [scalacenter/sbt-dependency-submission](https://github.com/scalacenter/sbt-dependency-submission).
 
-[sbt-dependency-submisison]: https://github.com/marketplace/actions/sbt-dependency-submission
-[mill-dependency-submisison]: https://github.com/marketplace/actions/mill-dependency-submission
-[gradle-dependency-submisison]: https://github.com/marketplace/actions/gradle-dependency-submission
+[sbt-dependency-submission]: https://github.com/marketplace/actions/sbt-dependency-submission
+[mill-dependency-submission]: https://github.com/marketplace/actions/mill-dependency-submission
+[gradle-dependency-submission]: https://github.com/marketplace/actions/gradle-dependency-submission
