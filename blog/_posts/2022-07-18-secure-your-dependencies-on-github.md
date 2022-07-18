@@ -86,7 +86,7 @@ Dependabot supports Maven through static analysis of POM files.
 You can enable the Dependency graph view and Dependabot in the `Settings > Code security and analysis` page.
 
 ### Mill
-The [mill-dependency-submission][mill-dependency-submssion] action, developed by Chris Kipp, can extract the dependencies of a Mill build.
+The [mill-dependency-submission][mill-dependency-submission] action, developed by Chris Kipp, can extract the dependencies of a Mill build.
 
 To install it:
  - Enable the `Dependency graph` view, and optionally the `Dependabot alerts`, in the `Settings > Code security and analysis` page of your repository.
