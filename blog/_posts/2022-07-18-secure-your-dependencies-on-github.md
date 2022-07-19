@@ -53,10 +53,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: scalacenter/sbt-dependency-submission@v2
-    with:
-      ## Optional: Define the working directory of your build.
-      ## It should contain the build.sbt file.
- 	    working-directory: ‘./’
+        with:
+          ## Optional: Define the working directory of your build.
+          ## It should contain the build.sbt file.
+          working-directory: './'
 ```
 
 This default definition should work in many sbt builds out-of-the-box.
