@@ -43,7 +43,7 @@ Open source software, similarly to commercial ones, will not thrive unless it re
 Aware of this issue, open source communities started to compile “awesome” lists of open source projects organized by topics.
 Some examples are [vinta/awesome-python](https://github.com/vinta/awesome-python), [akullp/awesome-java](https://github.com/akullpp/awesome-java), [veggiemonk/awesome-docker](https://github.com/veggiemonk/awesome-docker) and many many more (see [bayandin/awesome-awesomeness](http://bayandin/awesome-awesomeness)).
 
-The high number of stars of these Github repositories show how popular they are in the world of open source software.
+The high number of stars of these GitHub repositories show how popular they are in the world of open source software.
 
 The Scala ecosystem is no exception, it has its own very popular awesome repository.
 Created by Lauris Dzilums in 2014 and maintained by a few community members, [lauris/awesome-scala](https://github.com/lauris/awesome-scala) has accumulated more than 8.3K stargazers over 8 years.
@@ -59,7 +59,7 @@ We believe we can achieve these goals using Scaladex.
 Scaladex is powered by a database of more than 7000 Scala projects, allowing us to explore them with filters (e.g., Scala versions and platforms) and sorting criteria (e.g., GitHub stars).
 
 In addition, it is fully automated: it receives new Scala POMs from Maven Central and fetches their corresponding projects from GitHub.
-It is also connected to the Github authentication service to grant library authors the permission to edit their project settings.
+It is also connected to the GitHub authentication service to grant library authors the permission to edit their project settings.
 Thus we were able to integrate an “Awesome Scala” experience in Scaladex, that is updated automatically, loaded dynamically and managed by the library authors (with no intervention from the administrators).
 
 ## Call to action
