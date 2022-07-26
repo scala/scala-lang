@@ -1,7 +1,7 @@
 ---
 layout: blog-detail
 post-type: blog
-by: Julien Richard-Foy (Scala Center)
+by: Julien Richard-Foy, Scala Center
 title: "Teach Programming with Scala"
 ---
 
@@ -63,5 +63,5 @@ exchange best practices and work together on tools to improve your experience
 as teachers.
 
 [teach]: {% link teach.md %}
-[community]: https://teachers.scala-lang.org
+[community of teachers]: https://teachers.scala-lang.org
 [contribute]: mailto:scala.center@epfl.ch?subject=Teaching
