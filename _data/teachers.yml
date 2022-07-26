@@ -1,0 +1,75 @@
+- name: Bartosz Balis
+  institution: AGH University of Science and Technology, Poland
+  location:
+    longitude: 19.9136192
+    latitude: 50.0668858
+- name: Björn Regnell
+  institution: Lund University, Sweden
+  location:
+    longitude: 13.203493
+    latitude: 55.7119483
+- name: Jim Newton
+  institution: EPITA, France
+  location:
+    longitude: 2.3551565
+    latitude: 48.7979973
+- name: Jonathan Brächthaeuser
+  institution: Tübingen University, Germany
+  location:
+    longitude: 9.04158
+    latitude: 48.5294782
+- name: Lalit Pant
+  institution: Kogics, India
+  location:
+    longitude: 77.9469233
+    latitude: 30.3254097
+- name: Laurent Moccozet
+  institution: Université de Genève, Switzerland
+  location:
+    longitude: 6.1429217
+    latitude: 46.199444
+- name: Lionel Parreaux
+  institution: Hong Kong University of Science and Technology, Hong Kong
+  location:
+    longitude: 114.2632715
+    latitude: 22.3363998
+- name: Mark Lewis
+  institution: Trinity University, United States
+  location:
+    longitude: -98.4855322
+    latitude: 29.4618769
+- name: Martin Odersky
+  institution: École Polytechnique Fédérale de Lausanne, Switzerland
+  location:
+    longitude: 6.5600475
+    latitude: 46.5185825
+- name: Michał Kowalczkiwicz
+  institution: University of Wrocław, Poland
+  location:
+    longitude: 17.0322743
+    latitude: 51.1140086
+- name: Michel Schinz
+  institution: École Polytechnique Fédérale de Lausanne, Switzerland
+  location:
+    longitude: 6.5654067
+    latitude: 46.5189865
+- name: Nastaran Fatemi
+  institution: Haute École d’Ingénierie et de Gestion du canton de Vaud, Switzerland
+  location:
+    longitude: 6.6571205
+    latitude: 46.7792436
+- name: Philip Haller
+  institution: KTH Royal Institute of Technology, Sweden
+  location:
+    longitude: 18.0680626
+    latitude: 59.3498706
+- name: Roman Debski
+  institution: AGH University of Science and Technology, Poland
+  location:
+    longitude: 19.9149496
+    latitude: 50.0689793
+- name: Sukyoung Ryu
+  institution: Korea Advanced Institute of Science and Technology, South Korea
+  location:
+    longitude: 127.358196
+    latitude: 36.3721427
