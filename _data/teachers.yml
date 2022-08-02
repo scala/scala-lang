@@ -8,6 +8,16 @@
   location:
     longitude: 13.203493
     latitude: 55.7119483
+- name: Brian Howard
+  institution: DePauw University, United States
+  location:
+    longitude: -86.8635
+    latitude: 39.6394
+- name: Chris Okasaki
+  institution: United States Military Academy at West Point, United States
+  location:
+    longitude: -73.9571
+    latitude: 41.3889
 - name: Jim Newton
   institution: EPITA, France
   location:
@@ -18,6 +28,11 @@
   location:
     longitude: 9.04158
     latitude: 48.5294782
+- name: Juan M. Serrano
+  institution: University Rey Juan Carlos, Spain
+  location:
+    longitude: -3.877161467041959
+    latitude: 40.33560214407111
 - name: Lalit Pant
   institution: Kogics, India
   location:
@@ -73,18 +88,3 @@
   location:
     longitude: 127.358196
     latitude: 36.3721427
-- name: Juan M. Serrano
-  institution: University Rey Juan Carlos, Spain
-  location:
-    longitude: -3.877161467041959
-    latitude: 40.33560214407111
-- name: Brian Howard
-  institution: DePauw University, United States
-  location:
-    longitude: -86.8635
-    latitude: 39.6394
-- name: Chris Okasaki
-  institution: United States Military Academy at West Point, United States
-  location:
-    longitude: -73.9571
-    latitude: 41.3889
