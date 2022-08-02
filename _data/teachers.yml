@@ -18,6 +18,11 @@
   location:
     longitude: -73.9571
     latitude: 41.3889
+- name: Christian Urban
+  institution: King’s College London, United Kingdom
+  location:
+    longitude: -0.1181857
+    latitude: 51.5114897
 - name: Jim Newton
   institution: EPITA, France
   location:
@@ -88,3 +93,8 @@
   location:
     longitude: 127.358196
     latitude: 36.3721427
+- name: Vyacheslav Grebenyuk
+  institution: Kharkiv National University of Radio Electronics, Ukraine
+  location:
+    longitude: 36.2264517
+    latitude: 50.0150941
