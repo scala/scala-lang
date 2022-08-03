@@ -5,34 +5,52 @@ by: Paweł Marks, VirtusLab
 title: Long-term compatibility plans for Scala 3
 ---
 
-Scala 3 has stronger compatibility guarantees than Scala 2 ever had. That allows us to improve the language at a much faster pace than it was possible before 3.0. However, with the current scheme, when you bump the dependencies of your project, you may also have to bump the version of Scala used by the project. After an extended evaluation, we have decided to solve them by creating a new kind of Scala release - Scala LTS, that will be supported and receive updates for at least three years after the initial release.
+## Key takeaways
 
-This post aims to explain what were the problems we are trying to solve and how we envision Scala LTS to work.
+- Scala 3 compiler that you are using to compile your code should be treated the same way as any library dependency in your project. You shouldn't be afraid of updating it. Bumping the patch version (e.g. 3.1.2 -> 3.1.3) is a no-brainer. Bumping the minor version (e.g. 3.1.3 -> 3.2.0) requires the same considerations as changing the minor version of any other dependency but is generally preferable.
+- You do not need to cross-compile between Scala 3 versions.
+- If you are maintaining a library, you should drop Scala 3.0. Also, you should upgrade to Scala 3.2 in your next minor release.
+- We are testing that the code passing the compilation with previous versions of the compiler will keep compiling in future releases unless the fact that the code was compiling was a bug in the compiler. We are using hundreds of real-life projects to test that.
+- After evaluation, we have dropped the experimental `-scala-output-version` flag, as it turned out to be hard to maintain and potentially harmful to the ecosystem.
+- Soon, we will start releasing Long-Term Support versions of the compiler for the users that require enhanced stability.
 
 ## About compatibility
 
-Compilers, as all software really, are constantly evolving. Since the initial release of Scala 3, there have been six stable versions of the compiler. Each of them has brought performance and stability enhancements, fixed bugs, improved reporting or introduced some new experimental features to the language. Even though we still treat all those versions as an implementation of the same language. What allows us to think in such a way is the compatibility guarantees.
+Compilers, as all software really, are constantly evolving. Since the initial release of Scala 3, there have been seven stable versions of the compiler. Each has brought performance and stability enhancements, fixed bugs, improved reporting or introduced some new experimental features to the language. Even though we still treat all those versions as an implementation of the same language. What allows us to think in such a way is the compatibility guarantees.
 
-The term “compatibility” is usually used quite vaguely. In the Scala world, the first intuition for this term could be phrased as follows: a new version of Scala is compatible with a previous version of Scala if a program that used to work with the previous version still works with the new version. Let me examine the term “compatibility” closer right now. For Scala 3 compiler, there are actually two things that are named “compatibility”: source compatibility and output compatibility.
+The term *compatibility* is usually used quite vaguely. In the Scala world, the first intuition for this term could be phrased as follows: a new version of Scala is compatible with a previous version of Scala if a program that used to work with the earlier version still works with the latest version. Let me examine the term *compatibility* closer right now. For Scala 3 compiler, two things are named *compatibility*: source and output compatibility.
 
-We say that two versions of the compiler are source compatible if every single project that can be compiled with one version can also be compiled with the other, and the resulting programs behave in the same way. We put a lot of effort into assuring that source compatibility is preserved between the patch releases, and every infringement of it between minor versions is easy to fix. All in all, breaking it is usually not a big deal, as it can be easily detected at compile time. The worst consequence it can cause is temporarily locking the affected codebase on one version of the compiler.
+We say that two compiler versions are source compatible if every single project that can be compiled with one version can also be compiled with the other, and the resulting programs behave the same way. We put a lot of effort into ensuring that source compatibility is preserved between the patch releases, and every infringement between minor versions is easy to fix. To enforce that, we are running builds of hundred of open-source Scala 3 projects every night. Moreover, after every release candidate, we are testing the compiler on practically all open-source projects that were ever published for Scala 3.
 
-Output compatibility is much more tricky and essential for our long-term plans for Scala. In the rest of this post, the term “compatibility” will always refer to output compatibility. We can say that compiler `A` is output compatible with compiler `B` when compiler `B` can use the output (binaries and TASTy files) generated by compiler `A` and it understands it correctly.
+Also, it is worth noting that braking source compatibility is usually not a big deal, as it can be easily detected at compile time. Fixing those problems in the past usually only involved specifying explicit types in some places where the programmer used type inference. If your project is affected by breakage in the source compatibility, you often need to make only small adjustments. In the worst-case scenario, you will be locked on one version of the compiler for some time. That, however, will not affect projects depending on your code.
 
-We can further subdivide compatibility to forward and backward. We say that the two versions are forward compatible when the older compiler can depend on the output of the newer one. Conversely, backward compatibility means that the newer compiler can use the output of the older version. Scala 3 guarantees backward compatibility between all releases and forward compatibility between patch releases in the same minor line. That means that Scala `3.a.x` can consume the output of Scala `3.b.y` only if `a` is greater or equal to `b`. For example, the output of the Scala 3.0.2 compiler can be used by Scala 3.0.1 or 3.1.0. On the other hand, code compiled with Scala 3.1.0 cannot be a dependency of any project compiled with 3.0.2.
+Output compatibility (sometimes called *binary compatibility*, especially in Scala 2 contexts) is much more tricky and essential for our long-term plans for Scala. In the rest of this post, the term *compatibility* will always refer to output compatibility. We can say that compiler `A` is output compatible with compiler `B` when compiler `B` can use the output (binaries and TASTy files) generated by compiler `A` and understands it correctly.
+
+We can further subdivide compatibility to forward and backward. We say that the two versions are forward compatible when the older compiler can depend on the output of the newer one. Conversely, backward compatibility means that the newer compiler can use the output of the older version. Scala 3 guarantees backward compatibility between all releases and forward compatibility between patch releases in the same minor line. That means that Scala `3.a.x` can consume the output of Scala `3.b.y` only if `a' is greater or equal to`b`. For example, the output of the Scala 3.0.2 compiler can be used by Scala 3.0.1 or 3.1.0. On the other hand, code compiled with Scala 3.1.0 cannot be a dependency of any project compiled with 3.0.2.
+
+## What Scala should I use?
+
+So, we know what output compatibility is and what Scala 3 is guaranteeing. But what does it means in practice? What version of the compiler should I choose for my project? The compiler team believes that the good answer for this question is always *the newest one*.
+
+We believe that you should treat the compiler as one of your dependencies. If you are ok with updating the versions of your library dependencies, there should be no reason not to update the compiler version. In most cases, you wouldn't even notice that the Scala version has changed. Still, you can get better compilation performance, improved error messages, and most importantly, you may be able to use newly stabilized features of the language and the standard library.
+
+If you are a library author following the semantic versioning, we advise you to introduce new minor versions of the compiler only in minor releases of your library. New patch versions of the compiler can be introduced anytime, as they are forward and backward compatible.
+
+That may be surprising if you have experience developing libraries for Scala 2. For example, migrating any codebase from 2.11 to 2.12 was a huge undertaking. Since they were not output-compatible, most libraries needed to resort to cross-compilation to support both versions. Thanks to the guarantees of Scala 3, there is no longer a need for cross-compilation. For example, the migration from Scala 3.1 to Scala 3.2 for the large majority of the projects would only require changing the version in the build definition.
+// TODO: PUT HERE THE EXACT PERCENTAGE OF PROJECTS THAT WILL BE AFFECTED BY THE SOURCE INCOMPATIBILITIES BETWEEN 3.1 AND 3.2
 
 ## The problem
 
-While this sounds good, it can be problematic for an intertwined ecosystem. Even though we do what we can to make the transition between minor versions of the compiler as smooth as possible, there will always be projects stuck on older versions for various reasons. That means that they may not be able to update some of their dependencies if said libraries updated themselves to the newer compiler. That, in order, encourages libraries to stay on the oldest possible version of the compiler, which bars them from potentially beneficial improvements in the newer compilers.
+While this sounds good, there is one problem with intertwined ecosystems. Even though we do what we can to make the transition between minor versions of the compiler as smooth as possible, there will always be projects stuck on older versions for various reasons. That means they may be unable to update some of their dependencies if said libraries updated themselves to the newer compiler. That, in order, encourages libraries to stay on the oldest possible version of the compiler, which bars them from potentially beneficial improvements in the newer compilers.
 
-Let’s examine the simple example. We have a project that for some reason, is stuck on Scala 3.1. We depend on version 1.3.5 of some library that was compiled with Scala 3.1. The library publishes version 1.4.0 with the compiler updated to 3.2. We cannot update our dependency because of output incompatibility. That also means that all patches for security issues won’t be available unless the library author decides to backport them and release them as version 1.3.6. Knowing all this, the library author would never migrate from Scala 3.1 to 3.2.
+Let's examine the simple example. For some reason, we have a project that is stuck on Scala 3.1. We depend on version 1.3.5 of a library compiled with Scala 3.1. The library publishes version 1.4.0 with the compiler updated to 3.2. We cannot update our dependency because of output incompatibility. That also means that all patches for security issues won't be available unless the library author decides to backport them and release them as version 1.3.6. With that knowledge, the library author would be very reluctant to migrate from Scala 3.1 to 3.2.
 
-## Searching for solution
+## Searching for a solution
 
 We have been discussing and testing various potential solutions in the past few months. Today we want to tell more about the attempts that failed and present the solution that we believe is the best for the future of Scala.
 The three main criteria we were using to examine potential solutions were:
 
-- The burden on library authors - we don’t want library maintainers and authors to feel overwhelmed by making frequent changes to the compiler that require actions on their side
+- The burden on library authors - we don't want library maintainers and authors to feel overwhelmed by making frequent changes to the compiler that require actions on their side
 - The burden on the compiler maintainers - the compiler team has limited resources, so if maintaining compatibility required a considerable amount of work, we would have much less time to spend on improvements and bug fixes in the compiler
 - Innovativeness - some features require updating the minor version of the compiler (native image-friendly lazy vals being the latest example), and we want them delivered to the users as soon as possible. Also, we want important bug fixes to be delivered to users regardless of their update policy.
 
@@ -44,43 +62,45 @@ For a short time, we have considered releasing a patch version for each supporte
 
 ### Maintaining every minor release
 
-The lighter version of the aforementioned approach was to keep our current compatibility guarantees, but at the same time provide backports of important bug fixes to the previous minor versions. That would still be a massive workload for us, and it would have the additional drawback of discouraging people from updating to the new minor releases.
+The lighter version of the approach mentioned above was to keep our current compatibility guarantees while providing backports of important bug fixes to the previous minor versions. That would still be a massive workload for us, and it would have the additional drawback of discouraging people from updating to the new minor releases.
 
 ### Configurable output version
 
 This was the solution that we invested the most into. It was discussed in detail in [the previous blog post]({{ site.baseurl }}/blog/2022/04/12/scala-3.1.2-released.html#configurable-scala-output-version). To summarize: in 3.1.2, we have shipped a new experimental compiler flag that allowed developers to make the compiler generate output that is usable by older versions of the compiler. While this would allow all projects to receive important fixes, it would probably result in a strange state where all the libraries are released with output version 3.1, similar to how nearly all java libraries are still released with output version 8, even though Java 8 is eight years old.
 
-More importantly, during work on 3.2, we realized that maintaining this flag may be more challenging than anticipated. With time, it will be increasingly harder to be sure that our handling of it is correct. **Thus we have decided to remove the possibility of configuring the output version altogether in Scala 3.2.**
+More importantly, during work on 3.2, we realized that maintaining this flag may be more challenging than anticipated. With time, it will be increasingly harder to be sure that our handling of it is correct. **Thus, we have decided to remove the possibility of configuring the output version altogether in Scala 3.2.**
 
 ## Our solution: Scala LTS & Scala Next
 
-Finally, we have reached the agreement that the best course of action would be to split Scala development into two lines, called “Scala LTS” and “Scala Next”. Both would live as separate branches in the compiler repository. Both will have separate, but possibly synchronized releases. Porting changes from one to the other should be easy and common.
+Finally, we have agreed that the best course of action would be to split Scala development into two lines, called *Scala LTS* and *Scala Next*. Both would live as separate branches in the compiler repository. Both will have separate but possibly synchronized releases. Porting changes from one to the other should be easy and common.
 
-Scala Next will be the line that the development of the language is taking place on. It would receive frequent minor updates and all experimental language features will live here.
+Scala Next will be the line on which the language development is taking place. It will receive frequent minor updates, and all experimental language features will live here.
 
-Scala LTS on the other hand will be the stable long-term support line. One LTS will only receive patch updates which means that all releases of the same LTS line will be forward and backward compatible in terms of output. The only changes between releases will be bug fixes, non-language changes (doctool, semanticDB, reporting), and small quality-of-life enhancements (only if we are sure we are not breaking any compatibility guarantees. After more than two years we may decide to nominate one of the releases from the Next line as the new LTS. After that, we guarantee that the old LTS will be supported for at least one additional year. That means that the time of support for each LTS release is at least three years.
+Scala LTS, on the other hand, will be the stable long-term support line. One LTS will only receive patch updates which means that all releases of the same LTS line will be forward and backward compatible in terms of output. The only changes between releases will be bug fixes, non-language changes (doctool, semanticDB, reporting), and minor quality-of-life enhancements (only if we are sure we are not breaking any compatibility guarantees). After more than two years, we may decide to nominate one of the releases from the Next line as the new LTS. After that, we guarantee that the compiler team will support the previous LTS for at least one additional year. That means the support time for each LTS release is at least three years.
+
+We think this will allow projects to retain a more conservative approach to updating the compiler versions and still receive the bug fixes and some improvements.
 
 ![Scala LTS Roadmap]({{ site.baseurl }}/resources/img/scala3-lts-roadmap.svg)
 
 ### The compatibility guarantees in the new model
 
-The new model doesn’t change our compatibility guarantees. We are keeping forward and backward compatibility within a single minor version and backward compatibility across different minor versions. That means that the code compiled with Scala LTS can be used as a dependency by all Scala Next versions newer than said LTS, but not the other way around.
+The new model doesn't change our compatibility guarantees. We keep forward and backward compatibility within a single minor version and backward compatibility across different minor versions. That means that the code compiled with Scala LTS can be used as a dependency by all Scala Next versions newer than said LTS, but not the other way around.
 
 ## The (future) best practices
 
-Once the LTS & Next model is implemented, we suggest the following practices for different groups of users:
+Once the LTS & Next model is in place, we suggest the following practices for different groups of users:
 
 ### Owners of commercial projects
 
 We suggest you stick to the LTS version. It will give you the best tooling support and a stable compiler. If you are migrating a bigger project from Scala 2, you should migrate it straight to the newest LTS.
 
-You may also choose to be up to date with the latest minor version. That will allow you to use new features as soon as they are added to the language. However, you will need to be ready for frequent compiler updates. Otherwise, your project may end up with an unsupported version of the language.
+You may also choose to be up to date with the latest minor version. That will allow you to use new features as soon as they are added to the language. However, you will need to be ready for frequent compiler updates. Otherwise, your project may end up with an unsupported language version.
 
 ### Library maintainers
 
-Unless your library is built around some new language feature that is available only on Next, you should stick to LTS to have the widest possible user base. If your library contains multiple modules, some of them may require Scala Next. It is perfectly fine as long as you keep in mind that modules compiled with Scala LTS cannot depend on them (the other way around is ok). Also, users using your library from Scala LTS won’t be able to access modules built with Next.
+Unless your library is built around some new language feature available only on Next, you should stick to LTS to have the broadest possible user base. If your library contains multiple modules, some of them may require Scala Next. It is perfectly fine as long as you keep in mind that modules compiled with Scala LTS cannot depend on them (the other way around is ok). Also, users using your library from Scala LTS won't be able to access modules built with Next.
 
-Remember that whenever you are bumping a minor version of the compiler (e.g., moving from the previous Scala LTS line to the next), you also need to bump the minor version of your library.
+Remember that when you bump a minor version of the compiler (e.g., moving from the previous Scala LTS line to the next), you also need to bump the minor version of your library.
 
 ### Authors of hobby or standalone research projects
 
