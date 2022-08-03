@@ -15,7 +15,7 @@ courses. The scalable language also scales for teaching!
 
 > “Scala is a fantastic teaching language as it is less prone to wear down the
 > grit of my students compared to other programming languages that I have used
-> for teaching introductory computer science, such as Java and Python.”
+> for teaching introductory computer science.”
 > 
 > Björn Regnell, Lund University, Sweden.
 
