@@ -78,6 +78,11 @@
   location:
     longitude: 6.6571205
     latitude: 46.7792436
+- name: Otto Seppälä and Juha Sorva
+  institution: Aalto University, Finland
+  location:
+    longitude: 24.8254933
+    latitude: 60.1866719
 - name: Philipp Haller
   institution: KTH Royal Institute of Technology, Sweden
   location:
