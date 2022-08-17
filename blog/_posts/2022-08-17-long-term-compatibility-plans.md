@@ -7,10 +7,10 @@ title: Long-term compatibility plans for Scala 3
 
 ## Key takeaways
 
-- Scala 3 compiler that you are using to compile your code should be treated the same way as any library dependency in your project. You shouldn't be afraid of updating it. Bumping the patch version (e.g. 3.1.2 -> 3.1.3) is a no-brainer. Bumping the minor version (e.g. 3.1.3 -> 3.2.0) requires the same considerations as changing the minor version of any other dependency but is generally preferable.
+- The Scala 3 version that you are using to compile your code should be treated the same way as any library dependency in your project. You shouldn't be afraid of updating it. Bumping the patch version (e.g. 3.1.2 -> 3.1.3) is a no-brainer. Bumping the minor version (e.g. 3.1.3 -> 3.2.0) requires the same considerations as changing the minor version of any other dependency, yet is generally advisable.
 - You should not cross-compile between Scala 3 versions.
 - If you are maintaining a library, you should drop Scala 3.0. Also, you should upgrade to Scala 3.2 in your next minor release.
-- We are testing that the code passing the compilation with previous versions of the compiler will keep compiling in future releases, unless the fact that the code was compiling was a bug in the compiler. We are using hundreds of real-life projects to test that.
+- We are testing that the code that compiles with previous versions of the compiler will still compile in future releases, unless the fact that the code was compiling was a bug in the compiler. We are using hundreds of real-life projects to test that.
 - After evaluation, we have dropped the experimental `-scala-output-version` flag, as it turned out to be too hard to maintain and potentially harmful to the ecosystem.
 - Soon, we will start releasing Long-Term Support versions of the compiler for the users that require enhanced stability.
 
