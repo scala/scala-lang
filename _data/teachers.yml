@@ -93,6 +93,11 @@
   location:
     longitude: 19.9149496
     latitude: 50.0689793
+- name: Ryan Dougherty
+  institution: United States Military Academy at West Point, United States
+  location:
+    longitude: -73.9571
+    latitude: 41.3889
 - name: Sukyoung Ryu
   institution: Korea Advanced Institute of Science and Technology, South Korea
   location:
