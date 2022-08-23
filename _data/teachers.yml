@@ -1,110 +1,100 @@
-- name: Bartosz Balis
-  institution: AGH University of Science and Technology, Poland
-  location:
-    longitude: 19.9136192
-    latitude: 50.0668858
-- name: Björn Regnell
-  institution: Lund University, Sweden
-  location:
-    longitude: 13.203493
-    latitude: 55.7119483
-- name: Brian Howard
-  institution: DePauw University, United States
-  location:
-    longitude: -86.8635
-    latitude: 39.6394
-- name: Chris Okasaki
-  institution: United States Military Academy at West Point, United States
-  location:
-    longitude: -73.9571
-    latitude: 41.3889
-- name: Christian Urban
-  institution: King’s College London, United Kingdom
-  location:
-    longitude: -0.1181857
-    latitude: 51.5114897
-- name: Jim Newton
-  institution: EPITA, France
-  location:
-    longitude: 2.3551565
-    latitude: 48.7979973
-- name: Jonathan Brächthaeuser
-  institution: Tübingen University, Germany
-  location:
-    longitude: 9.04158
-    latitude: 48.5294782
-- name: Juan M. Serrano
-  institution: University Rey Juan Carlos, Spain
-  location:
-    longitude: -3.877161467041959
-    latitude: 40.33560214407111
-- name: Lalit Pant
-  institution: Kogics, India
-  location:
-    longitude: 77.9469233
-    latitude: 30.3254097
-- name: Laurent Moccozet
-  institution: Université de Genève, Switzerland
-  location:
-    longitude: 6.1429217
-    latitude: 46.199444
-- name: Lionel Parreaux
-  institution: Hong Kong University of Science and Technology, Hong Kong
-  location:
-    longitude: 114.2632715
-    latitude: 22.3363998
-- name: Mark Lewis
-  institution: Trinity University, United States
-  location:
-    longitude: -98.4855322
-    latitude: 29.4618769
-- name: Martin Odersky
-  institution: École Polytechnique Fédérale de Lausanne, Switzerland
-  location:
-    longitude: 6.5600475
-    latitude: 46.5185825
-- name: Michał Kowalczkiwicz
-  institution: University of Wrocław, Poland
-  location:
-    longitude: 17.0322743
-    latitude: 51.1140086
-- name: Michel Schinz
-  institution: École Polytechnique Fédérale de Lausanne, Switzerland
-  location:
-    longitude: 6.5654067
-    latitude: 46.5189865
-- name: Nastaran Fatemi
-  institution: Haute École d’Ingénierie et de Gestion du canton de Vaud, Switzerland
-  location:
-    longitude: 6.6571205
-    latitude: 46.7792436
-- name: Otto Seppälä and Juha Sorva
-  institution: Aalto University, Finland
+- institution: Aalto University, Finland
+  name: Otto Seppälä and Juha Sorva
   location:
     longitude: 24.8254933
     latitude: 60.1866719
-- name: Philipp Haller
-  institution: KTH Royal Institute of Technology, Sweden
-  location:
-    longitude: 18.0680626
-    latitude: 59.3498706
-- name: Roman Debski
-  institution: AGH University of Science and Technology, Poland
+- institution: AGH University of Science and Technology, Poland
+  name: Roman Debski and Bartosz Balis
   location:
     longitude: 19.9149496
     latitude: 50.0689793
-- name: Sukyoung Ryu
-  institution: Korea Advanced Institute of Science and Technology, South Korea
+- institution: DePauw University, United States
+  name: Brian Howard
   location:
-    longitude: 127.358196
-    latitude: 36.3721427
-- name: Vyacheslav Grebenyuk
-  institution: Kharkiv National University of Radio Electronics, Ukraine
+    longitude: -86.8635
+    latitude: 39.6394
+- institution: École Polytechnique Fédérale de Lausanne, Switzerland
+  name: Martin Odersky and Michel Schinz
+  location:
+    longitude: 6.5600475
+    latitude: 46.5185825
+- institution: EPITA, France
+  name: Jim Newton
+  location:
+    longitude: 2.3551565
+    latitude: 48.7979973
+- institution: Haute École d’Ingénierie et de Gestion du canton de Vaud, Switzerland
+  name: Nastaran Fatemi
+  location:
+    longitude: 6.6571205
+    latitude: 46.7792436
+- institution: Hong Kong University of Science and Technology, Hong Kong
+  name: Lionel Parreaux
+  location:
+    longitude: 114.2632715
+    latitude: 22.3363998
+- institution: Kharkiv National University of Radio Electronics, Ukraine
+  name: Vyacheslav Grebenyuk
   location:
     longitude: 36.2264517
     latitude: 50.0150941
-- name: William Billingsley
-  institution: University of New England, Australia
+- institution: King’s College London, United Kingdom
+  name: Christian Urban
+  location:
+    longitude: -0.1181857
+    latitude: 51.5114897
+- institution: Kogics, India
+  name: Lalit Pant
+  location:
+    longitude: 77.9469233
+    latitude: 30.3254097
+- institution: Korea Advanced Institute of Science and Technology, South Korea
+  name: Sukyoung Ryu
+  location:
+    longitude: 127.358196
+    latitude: 36.3721427
+- institution: KTH Royal Institute of Technology, Sweden
+  name: Philipp Haller
+  location:
+    longitude: 18.0680626
+    latitude: 59.3498706
+- institution: Lund University, Sweden
+  name: Björn Regnell
+  location:
+    longitude: 13.203493
+    latitude: 55.7119483
+- institution: Trinity University, United States
+  name: Mark Lewis
+  location:
+    longitude: -98.4855322
+    latitude: 29.4618769
+- institution: Tübingen University, Germany
+  name: Jonathan Brächthaeuser
+  location:
+    longitude: 9.04158
+    latitude: 48.5294782
+- institution: United States Military Academy at West Point, United States
+  name: Chris Okasaki
+  location:
+    longitude: -73.9571
+    latitude: 41.3889
+- institution: Université de Genève, Switzerland
+  name: Laurent Moccozet
+  location:
+    longitude: 6.1429217
+    latitude: 46.199444
+- institution: University of New England, Australia
+  name: William Billingsley
   location:
     longitude: 151.643
     latitude: -30.487
+- institution: University of Wrocław, Poland
+  name: Michał Kowalczkiwicz
+  location:
+    longitude: 17.0322743
+    latitude: 51.1140086
+- institution: University Rey Juan Carlos, Spain
+  name: Juan M. Serrano
+  location:
+    longitude: -3.877161467041959
+    latitude: 40.33560214407111
