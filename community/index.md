@@ -135,7 +135,7 @@ Community:
 
 * [Scala Times](https://scalatimes.com) weekly Scala newspaper
 * [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) weekly Scala newspaper
-* [Scala Love](https://scala.love/) Podcast about the Scala programming language and its community
+* [Tooling Talks](https://www.tooling-talks.com) A series of talks about Scala and tooling.
 * [The Scala Logs](https://twitter.com/thescalalogs) Podcast with interviews with developers, open source contributors, subject matter experts, and the like
 
 Many Scala users are active on Twitter for sharing Scala-related news
