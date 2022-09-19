@@ -8,8 +8,8 @@ title: "Scala 2.13.9 is now available!"
 This release
 improves compatibility with Scala 3,
 supports JDK 19,
-updates `-release` and `-target`,
-adds `-Wnonunit-statement` which warns when values in statement position are discarded,
+updates `-release` and deprecates `-target`,
+adds `-Wnonunit-statement` to warn on discarded values,
 improves security,
 and fixes various bugs.
 
