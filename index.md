@@ -37,8 +37,7 @@ scalaBackends:
     link: https://www.scala-js.org/
   - icon: /resources/img/frontpage/llvm-logo.png
     description: natively with LLVM
-    link: https://scala-native.readthedocs.io/
-    beta: 1
+    link: https://scala-native.org/
 
 # Scala IDEs
 scalaIDEs:
