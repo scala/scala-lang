@@ -99,7 +99,7 @@ example [the scala tag on es.stackoverflow.com](https://es.stackoverflow.com/que
 
 ## User Groups
 
-Find your local Scala user group on [Scala Space](http://scala.space/) or on Meetup's [Scala meetup list](https://scala.meetup.com/).
+Most local Scala user groups are listed on [Meetup](https://meetup.com/).
 
 Group organizers can talk to each other on [Scala User Group Organizers](https://www.meetup.com/Scala-User-Groups/).
 
