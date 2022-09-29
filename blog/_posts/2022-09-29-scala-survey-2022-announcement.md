@@ -9,7 +9,7 @@ title: Participate in the Scala Survey 2022!
 
 ## The Scala Team wants to hear from you!
 
-We want to make the language we all love as amazing as it possibly can be. We want to know which way the Scala community is moving and which parts of the Scala language you utilize the most. That’s why we are asking you to help by taking part in the Scala Survey 2022.
+We want to make the language we all love as amazing as possible. We want to know which way the Scala community is moving and which parts of the Scala language you utilize the most. That’s why ask you to help by participating in the Scala Survey 2022.
 
 Survey: [Scala Survey 2022](https://scala-survey-2022.virtuslab.com/)
 
