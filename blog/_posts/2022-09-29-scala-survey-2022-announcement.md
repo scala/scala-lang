@@ -15,7 +15,7 @@ Survey: [Scala Survey 2022](https://scala-survey-2022.virtuslab.com/)
 
 ## About the survey
 
-Completing the survey should take 4-12 minutes. The survey is anonymous and most of the questions are optional, so if you don’t have that much time, you don’t have to answer all of them.
+Completing the survey should take 4-12 minutes. The survey is anonymous, and most of the questions are optional, so if you don’t have that much time, you don’t have to answer all of them.
 
 **Who is the survey intended for?** Everyone. Whether you’re an experienced Scala Developer or just starting your Scala journey, we count on your participation.
 
