@@ -23,6 +23,6 @@ After the survey closes, we will publish the aggregated results on the [Scala bl
 
 ## What else can I do to help?
 
-Spread the word! Help us get answers from as many diverse groups as possible. So share the survey on social media, your office, your university, meetups, and other communities.
+Spread the word! Help us get answers from as many diverse groups as possible. So share the survey on social media, in your office, at your university, at meetups, and in other communities.
 
 The Survey will close on **21.10.2022**.
