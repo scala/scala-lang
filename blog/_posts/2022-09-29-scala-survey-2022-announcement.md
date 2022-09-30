@@ -17,7 +17,11 @@ The Survey will close on **21.10.2022**.
 
 ## About the survey
 
-Completing the survey should take 4-12 minutes. The survey is anonymous, and most of the questions are optional, so if you don’t have that much time, you don’t have to answer all of them.
+Completing the survey should take 4-12 minutes, and is anonymous. 
+
+Your responses will help us understand Scala's strengths and weaknesses. They will also help in guiding the development priorities for the Scala team.
+
+We are interested in learning what libraries and tools people are using, what platforms they support, the future direction of tooling focus, where people are learning to use scala/training engineers, etc.
 
 **Who is the survey intended for?** Everyone. Whether you’re an experienced Scala Developer or just starting your Scala journey, we count on your participation.
 
