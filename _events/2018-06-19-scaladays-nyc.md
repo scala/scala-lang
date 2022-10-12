@@ -6,5 +6,5 @@ location: New York, NY, USA
 description: ""
 start: 19 June 2018
 end: 21 June 2018
-link-out: https://www.scaladays.org/2018/new-york
+link-out: https://www.scaladays.org/
 ---

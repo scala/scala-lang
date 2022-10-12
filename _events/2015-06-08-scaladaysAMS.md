@@ -6,5 +6,5 @@ location: Amsterdam, The Netherlands
 description: ""
 start: 8 June 2015
 end: 10 June 2015
-link-out: https://scaladays.org/assets/archive/amsterdam2015.html
+link-out: https://scaladays.org/
 ---
