@@ -6,5 +6,5 @@ location: New York, NY, USA
 description: ""
 start: 10 June 2013
 end: 12 June 2013
-link-out: https://scaladays.org/assets/archive/ny2013/index.html
+link-out: https://scaladays.org/
 ---
