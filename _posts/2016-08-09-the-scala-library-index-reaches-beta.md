@@ -27,7 +27,7 @@ One can imagine many more features for us to include in Scaladex– for example,
 
 ## How does it work?
 
-We run a daily process to discover and download published releases (.pom files). We currently index artifacts found on Bintray and Maven Central via the [JCenter repository](https://bintray.com/bintray/jcenter). Scala libraries normally include the Scala compiler major and minor version in the artifact name. We automatically find any library following this convention. (If you don't follow it, you can create a pull request to [add your library to the index](https://github.com/scalacenter/scaladex-data/edit/master/non-standard.json).)
+We run a daily process to discover and download published releases (.pom files). We currently index artifacts found on Bintray and Maven Central via the JCenter repository. Scala libraries normally include the Scala compiler major and minor version in the artifact name. We automatically find any library following this convention. (If you don't follow it, you can create a pull request to [add your library to the index](https://github.com/scalacenter/scaladex-data/edit/master/non-standard.json).)
 
 When we have all the release information, we can group them by the GitHub repository they provide and we generate a project page from the combination of info found on GitHub and on Bintray/Maven Central. If you forgot to include your project's GitHub URL you can always [claim your project manually](https://github.com/scalacenter/scaladex-data/edit/master/claims.json) via a pull request.
 
