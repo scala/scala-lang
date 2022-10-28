@@ -149,7 +149,7 @@ make Java reflection faster? If I care so much about performance,
 surely I should avoid using reflection at all?
 
 The real reason these methods need to be fast is to aid efficient
-implementation of lambdas, in both Java and Scala. And they aid
+implementation of lambdas, in both Java and Scala. Additionally, they aid
 efficient implementation of dynamic languages on the
 JVM. `MethodHandle` was added to the JVM at the same time as
 `invokeDynamic`, which serves those same two purposes.
