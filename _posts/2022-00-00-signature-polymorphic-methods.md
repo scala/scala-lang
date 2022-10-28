@@ -157,6 +157,23 @@ JVM. `MethodHandle` was added to the JVM at the same time as
 > TODO: Is this actually accurate? I suspect it is, but I should
 > dig around and confirm it, and perhaps add links.)
 
+> TODO: I should improve the bit about "efficient implementation
+> of lambdas". Adam Vandervorst wrote:
+> > I'm a bit confused by the "Are these methods good for anything else" section
+> > I deduce Java only uses it in "MethodHandle and VarHandle" and Scala just gained the barebones implementation.
+> I replied:
+> That's a good point. I will try to improve that section. In order to improve it properly, I need to dig a little deeper into how MethodHandle and VarHandle are used internally in the Java and Scala compilers.
+> Jason (et al) definitely used MethodHandle when adding lambda support to the compiler back end for Scala 2.12, but I need to dig and see whether we are specifically using the signature polymorphic methods.
+> I don't want to get too deep into it in the blog post itself, but I would like to expand it a bit and need to do a bit more research in order to make the expansion accurate.
+
+> TODO: I might rethink how I'm presenting the issue of speed here. As I wrote to
+> Adam:
+> that's kind of what I was getting at with the " If I care so much about performance, surely I should avoid using reflection at all?"
+> if I understand correctly, if you aren't a language implementer, then boxing overhead in reflection is probably the least of your worries
+> but the methods are signature polymorphic regardless
+> so we need the compiler support in Scala in order for the methods to even be callable at all by users who don't care about speed
+> it's a bit tricky to convey this without making the post overlong
+
 ## How is this implemented in Scala 2?
 
 > TODO -- keep it brief
