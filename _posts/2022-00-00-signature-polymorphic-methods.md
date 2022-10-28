@@ -43,16 +43,25 @@ Yes: since Scala 2.11.5, and more fully since Scala 2.12.16.  Scala 3
 now has the support too, as of Scala 3.3.0-RC1.
 
 The initial Scala 2 implementation was done by [Jason Zaugg] in 2014
-and refined later by Lukas Rytz. The latest version, with all fixes,
+and refined later by [Lukas Rytz]. The latest version, with all fixes,
 landed in Scala 2.12.16 (released June 2022).
 
 Just recently, [Dale Wijnand] ported the feature to Scala 3, with the
 assistance of [Guillaume Martres] and myself, [Seth Tisue].
 
 (Jason, Lukas, Dale, and myself are members of the Scala compiler team
-at Lightbend. We maintain Scala 2 and also contribute to Scala 3.
+at [Lightbend]. We maintain Scala 2 and also contribute to Scala 3.
 Guillaume has worked on the Scala 3 compiler for some years, previously
-at LAMP and now at the Scala Center.)
+at [LAMP] and now at the [Scala Center].)
+
+[Jason Zaugg]: https://github.com/retronym
+[Lukas Rytz]: https://github.com/lrytz
+[Dale Wijnand]: https://github.com/dwijnand
+[Seth Tisue]: https://github.com/SethTisue
+[Guillaume Martres]: https://github.com/smarter
+[Lightbend]: https://lightbend.com
+[LAMP]: https://www.epfl.ch/labs/lamp/
+[Scala Center]: https://scala.epfl.ch
 
 ## What signature polymorphic methods exist?
 
@@ -100,7 +109,7 @@ The following example should help make all of this clearer.
 
 ## How do I call a signature polymorphic method from Scala?
 
-Take [`MethodHandle`] for example. It provides an `invokeExact`
+Take `MethodHandle` for example. It provides an `invokeExact`
 method. Its signature as seen from Scala is:
 
     def invokeExact(args: AnyRef*): AnyRef
@@ -133,9 +142,11 @@ Signature polymorphism helped us here in two ways:
 
 ## Are these methods good for anything else?
 
-Great question! Doesn't it seem puzzling that Oracle would go to so
-much trouble to make Java reflection faster? If I care so much about
-performance, surely I should avoid using reflection at all?
+Great question!
+
+Doesn't it seem puzzling that Oracle would go to so much trouble to
+make Java reflection faster? If I care so much about performance,
+surely I should avoid using reflection at all?
 
 The real reason these methods need to be fast is to aid efficient
 implementation of lambdas, in both Java and Scala. And they aid
@@ -154,12 +165,12 @@ illustrates the following compiler internals/techniques:
 
 > TODO
 
-For details, see [PR 4139], [PR 5594], [PR 9530], and [PR 9930].
+For details, see [PR 4139](), [PR 5594](), [PR 9530](), and [PR 9930]().
 
-[PR 4139](https://github.com/scala/scala/pull/4139)
-[PR 5594](https://github.com/scala/scala/pull/5594)
-[PR 9530](https://github.com/scala/scala/pull/9530)
-[PR 9930](https://github.com/scala/scala/pull/9930)
+[PR 4139]: https://github.com/scala/scala/pull/4139
+[PR 5594]: https://github.com/scala/scala/pull/5594
+[PR 9530]: https://github.com/scala/scala/pull/9530
+[PR 9930]: https://github.com/scala/scala/pull/9930
 
 ## What's different in the Scala 3 version?
 
