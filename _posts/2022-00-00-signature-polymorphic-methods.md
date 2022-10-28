@@ -200,7 +200,7 @@ trouble. Later in compilation, we detect which call sites are the
 product of this transform, drop the cast, and emit the correct
 bytecode.
 
-For details, see (PR link).
+For details, see [the pull request](https://github.com/lampepfl/dotty/pull/16225).
 
 ## Questions? Discussion?
 
