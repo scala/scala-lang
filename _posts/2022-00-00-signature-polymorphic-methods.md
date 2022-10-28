@@ -99,7 +99,7 @@ flexibility, for two reasons:
 
 First, Java generics only work on reference types, not primitive
 types.  Scala does not have this limitation, but pays for it by
-incurring boxing at runtime when primitive types are used in generic
+incurring boxing at run-time when primitive types are used in generic
 contexts.
 
 Second, methods (in both languages) may only have a fixed number of
