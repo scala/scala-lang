@@ -9,7 +9,7 @@ Scala is one of the few programming languages that was born in academia and proc
 
 ## The Scala 3 Compiler Academy
 
-One such solution is the Scala 3 Compiler Academy. In Summer 2021, the Scala team at EPFL conducted the first iteration of the Scala 3 Compiler Issue Spree. The online pair programming event featured small teams of 2-3 people working together in Zoom breakout rooms to fix various Dotty bugs and learn the art of the compiler one from another. The aim of the event was to foster knowledge transfer between the compiler maintainers.
+One such solution is the Scala 3 Compiler Academy. In Summer 2021, the Scala team at EPFL conducted the first iteration of the Scala 3 Compiler Issue Spree. The online pair programming event featured small teams of 2-3 people working together in Zoom breakout rooms to fix various Scala 3 bugs and learn the art of the compiler one from another. The aim of the event was to foster knowledge transfer between the compiler maintainers.
 
 A lot changed over the past year. We've successfully conducted over 20 iterations of the Spree, gradually opened it to motivated learners from outside our core teams, polished our workflows, and started a [YouTube channel](https://www.youtube.com/channel/UCIH0OgqE54-KEvYDg4LRhKQ) where we regularly post educational videos about how the compiler works.
 
