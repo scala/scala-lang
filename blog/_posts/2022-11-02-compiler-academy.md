@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Anatolii Kmetiuk, Scala Center
-title: Scala 3 Compiler Academy moves to Discord
+title: The Scala 3 Compiler Academy moves to Discord
 ---
 
 Scala is one of the few programming languages that was born in academia and proceeded to become an industry standard. Scala stands for "Scalable Language", and with its scaling to industry, the workload on the core team also scales. In the academic environment, research is the primary focus, not language maintenance. So, to cope with the emerging challenges of scale, new solutions must be explored.
