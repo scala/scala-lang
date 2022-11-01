@@ -97,6 +97,28 @@ International chat rooms are available as well:
 Note also that Stack Overflow offers languages other than English, for
 example [the scala tag on es.stackoverflow.com](https://es.stackoverflow.com/questions/tagged/scala).
 
+## Reporting issues
+
+If you're having a problem with Scala, your first line of defense is
+our forums and chat rooms. Especially if you're new to the language,
+it's likely the unexpected behavior you're seeing isn't a bug.
+It's best to discuss the matter with more experienced users before
+filing a bug report.
+
+That said, bugs do occur and bug reports are valuable. You can report
+bugs here:
+
+Scala 2 compiler, standard library, and language spec:
+
+* [scala/bug](https://github.com/scala/bug/issues)
+
+Scala 3 compiler and standard library additions:
+
+* [lampepfl/dotty](https://github.com/lampepfl/dotty/issues)
+
+Don't forget to search past issues first to see if the issue has
+already been reported.
+
 ## User Groups
 
 Most local Scala user groups are listed on [Meetup](https://meetup.com/).
