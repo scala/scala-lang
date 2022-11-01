@@ -25,7 +25,7 @@ The Scala 3 Compiler Academy is your chance to become a part of a community of l
 
 The Spree is organized by the Scala Center. We are committed to keeping the Spree community professional and friendly, so before you can join any of the Sprees, you will need to complete the one-time onboarding process including an interview with a Scala Center representative.
 
-While participating in the official Scala spaces, including the official Discord server and the Compiler Academy community, you are required to follow the [Code of Conduct](https://www.scala-lang.org/conduct/). Scala Center reserves the right to refuse your participation in the Compiler Academy at any point at our sole discretion.
+While participating in the official Scala spaces, including the official Discord server and the Compiler Academy community, you are required to follow the [Code of Conduct](https://www.scala-lang.org/conduct/). The Scala Center reserves the right to refuse your participation in the Compiler Academy at any point at its sole discretion.
 
 ## Logistics
 
