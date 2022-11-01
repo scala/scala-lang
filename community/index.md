@@ -100,10 +100,10 @@ example [the scala tag on es.stackoverflow.com](https://es.stackoverflow.com/que
 ## Reporting issues
 
 If you're having a problem with Scala, your first line of defense is
-our forums and chat rooms. Especially if you're new to the language,
-it's likely the unexpected behavior you're seeing isn't a bug.
-It's best to discuss the matter with more experienced users before
-filing a bug report.
+our forums and chat rooms. The unexpected behavior you're seeing might
+not be a bug. Especially if you're new to the language, it's best to
+discuss the matter with more experienced users before filing a bug
+report.
 
 That said, bugs do occur and bug reports are valuable. You can report
 bugs here:
