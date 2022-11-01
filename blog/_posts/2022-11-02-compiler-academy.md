@@ -19,7 +19,7 @@ The Compiler Academy started to gain more presence in the community, and more pe
 
 If you're a lifelong learner passionate about all things programming, you may have wondered what happens when your favorite language compiles your code. Maybe you have aspirations to contribute your ideas and solutions to the compiler one day. Or maybe you're eager to understand how a modern cutting-edge compiler works because you'd like to develop a programming language of your own.
 
-Scala 3 Compiler Academy is your chance to become a part of the community of like-minded people and learn the compiler together!
+The Scala 3 Compiler Academy is your chance to become a part of a community of like-minded people and learn the compiler together!
 
 ## Rules of Participation
 
