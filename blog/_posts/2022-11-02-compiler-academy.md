@@ -29,7 +29,7 @@ While participating in the official Scala spaces, including the official Discord
 
 ## Logistics
 
-Scala 3 Compiler Academy Issue Spree is an online event that takes place every 3 weeks, on Tuesdays at 17:00-19:00 CE(S)T. Before your first Spree you will meet with a Scala Center representative for a short onboarding interview. After that, you will be able to register for each event separately, possibly specifying your preferences about the issue you'll be working on. You then will be assigned to a team of 2-3 people, and during the Spree, you'll be working on the same issue (not necessarily the one you specified in your registration) in a Zoom breakout room.
+The Scala 3 Compiler Academy Issue Spree is an online event that takes place every 3 weeks, on Tuesdays at 17:00-19:00 CE(S)T. Before your first Spree, you will meet with a Scala Center representative for a short onboarding interview. After that, you will be able to register for each event separately, possibly specifying your preferences about the issue you'll be working on. You then will be assigned to a team of 2-3 people, and during the Spree, you'll be working on the same issue (not necessarily the one you specified in your registration) in a Zoom breakout room.
 
 To register for participation and schedule an onboarding call, fill in the following [form](https://airtable.com/shr01mNvkz4oEZH38).
 
