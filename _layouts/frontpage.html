@@ -36,7 +36,16 @@
         <div class="inner-text">
           <h1>{{page.headerTitle}}</h1>
           <p>{{page.headerSubtitle}}</p>
-          <a href="{{page.headerButtonUrl}}" class="button">{{page.headerButtonTitle | upcase}}</a>
+          {% for release in site.data.scala-releases %}
+          {% if release.category == "current_version" %}
+          <a href="/download/{{ release.version }}.html" class="button">
+           Scala {{ release.version }}
+          </a>
+          {% endif %}
+          {% endfor %}
+          <a href="/download/all.html" class="button">
+            All Releases
+          </a>
         </div>
         <div id="position-marker" class="marker">
           <div class="info-marker">
