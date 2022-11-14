@@ -18,7 +18,7 @@ Overall, Liangyong's work makes Scala Native builds even more performant time- a
 ## Doodle Explore
 [Scala Doodle](https://github.com/creativescala/doodle) is a compositional graphics library for generative art in Scala that enables users to declaratively create art pieces and other visualizations. A Doodle graphic is generally parameterized by one or more variables such as stroke width and background color, or sometimes something more domain-specific like the magnitude of gravity or iterations of a fractal. In any of these cases, the creator of a graphic may want to use a GUI for changing the parameters to fine-tune the art piece or provide a means to make the graphic interactive.
 
-Mikail Khan, mentored by Noel Welsh, developed such a GUI during the Summer of 2022 – have a look at this [documentation microsite](https://creativescala.github.io/doodle-explore/) for a quick demo.
+Mikail Khan, mentored by Noel Welsh, developed a domain-specific language for describing GUIs during the Summer of 2022 – have a look at this [documentation microsite](https://creativescala.github.io/doodle-explore/) for a quick demo.
 
 The project will be especially interesting for Scala educators. For experienced and novice programmers alike, it's important to quickly get feedback on what your code is doing – this is how we learn. Even more so it is important for people who have just started their journey in programming. Having a visual feedback you can play with is a great feature that can be used to teach Scala to newcomers.
 
