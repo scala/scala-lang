@@ -298,7 +298,7 @@ as a community, can stand up to the challenge to complete this project to end.
 [minutes]: https://scala.epfl.ch/minutes/2017/09/12/september-12-2017.html
 [SCP-014]: https://scala.epfl.ch/minutes/2017/09/12/september-12-2017.html#scp-014-production-ready-scalamacrosscalamacros
 [SIP-16]: https://github.com/scala/docs.scala-lang/pull/57#issuecomment-239210760
-[SIP-29]: https://docs.scala-lang.org/sips/inline-meta.html#losing-whiteboxity
+[SIP-29]: https://github.com/scala/improvement-proposals/pull/28
 [SIP]: https://docs.scala-lang.org/sips/index.html
 ["Two Approaches to Portable Macros"]: https://www.dropbox.com/s/2xzcczr3q77veg1/gestalt.pdf
 [whitebox def macros]: https://contributors.scala-lang.org/t/pre-sip-whitebox-def-macros/1210
