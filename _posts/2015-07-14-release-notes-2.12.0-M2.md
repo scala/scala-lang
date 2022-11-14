@@ -82,7 +82,6 @@ The following modules have been removed from the Scala 2.12 distribution:
 
 * Scala standard library actors.
   We recommend [Akka actors](https://akka.io/) instead.
-  See the [Scala actors migration guide](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html).
 * Akka actors.
   The Scala distribution and the `scala-library-all` dependency no longer include Akka actors.
   To use Akka, [add it as a dependency](https://doc.akka.io/docs/akka/2.3.11/intro/getting-started.html).

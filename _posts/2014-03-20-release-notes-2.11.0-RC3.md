@@ -127,7 +127,7 @@ The following language "warts" have been deprecated:
 We'd like to emphasize the following library deprecations:
 
 * [#3103](https://github.com/scala/scala/pull/3103), [#3191](https://github.com/scala/scala/pull/3191), [#3582](https://github.com/scala/scala/pull/3582) Collection classes and methods that are (very) difficult to extend safely have been slated for being marked `final`. Proxies and wrappers that were not adequately implemented or kept up-to-date have been deprecated, along with other minor inconsistencies.
-* scala-actors is now deprecated and will be removed in 2.12; please follow the steps in the [Actors Migration Guide](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors
+* scala-actors is now deprecated and will be removed in 2.12;
 * [SI-7958](https://issues.scala-lang.org/browse/SI-7958) Deprecate `scala.concurrent.future` and `scala.concurrent.promise`
 * [SI-3235](https://issues.scala-lang.org/browse/SI-3235) Deprecate `round` on `Int` and `Long` ([#3581](https://github.com/scala/scala/pull/3581)).
 * We are looking for maintainers to take over the following modules: [scala-swing](https://github.com/scala/scala-swing), [scala-continuations](https://github.com/scala/scala-continuations). 2.12 will not include them if no new maintainer is found.

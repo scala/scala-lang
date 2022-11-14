@@ -45,7 +45,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * The experimental .NET backend has been removed from the compiler.
   * In Scala 2.10.0, new implementations of the Pattern Matcher and the Bytecode Emitter
       were shipped. We have now removed the old implementations.
-  * scala-actors is now deprecated; we advise users to follow the steps in the [Actors Migration Guide](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors, which have been included in the distribution since 2.10.0.
+  * scala-actors is now deprecated.
   * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)
 * Language
   * Case classes with > 22 parameters are now supported [SI-7296](https://issues.scala-lang.org/browse/SI-7296)

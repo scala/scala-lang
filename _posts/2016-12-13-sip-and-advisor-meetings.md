@@ -41,7 +41,7 @@ and the committee agreed on clarified voting rules.  A new vote on
 SIP-27 was held under the new rules, and the proposal was accepted,
 pending a final round of changes by Dale.
 
-Also discussed was [SIP-20](https://docs.scala-lang.org/sips/improved-lazy-val-initialization.html) (Improved lazy val initialization),
+Also discussed was [SIP-20](https://github.com/scala/improvement-proposals/pull/19) (Improved lazy val initialization),
 proposed by Dmitry Petrashko and others.  The proposal was
 marked as dormant, since it has only been implemented in Dotty.
 A volunteer is needed to implement it in the main Scala compiler.

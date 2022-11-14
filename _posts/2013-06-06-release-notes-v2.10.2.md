@@ -61,7 +61,6 @@ Since 2.10.2 is strictly a bug-fix release, here's an overview of the most promi
     * [https://docs.scala-lang.org/overviews/parallel-collections/overview.html](https://docs.scala-lang.org/overviews/parallel-collections/overview.html)
 *   Akka Actors now part of the distribution
     * scala.actors have been deprecated and the akka implementation is now included in the distribution.
-    * See the [actors migration project](https://docs.scala-lang.org/overviews/core/actors-migration-guide.html) for more information.
 *   Performance Improvements
     * Faster inliner
     * `Range#sum` is now O(1)

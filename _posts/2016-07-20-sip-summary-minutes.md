@@ -31,7 +31,7 @@ Two other passed their first iteration as proposed by [the new
 process](https://docs.scala-lang.org/sips/sip-submission.html):
 
 * **[SIP-25 Trait Parameters](https://docs.scala-lang.org/sips/trait-parameters.html)**, Reviewer: Adriaan Moors ([review comments](https://github.com/scala/scala.github.com/pull/428#issuecomment-233401911))
-* **[SIP-20 Improved Lazy Val Initialization](https://docs.scala-lang.org/sips/improved-lazy-val-initialization.html)**, Reviewer: Sébastien Doeraene ([review comments](https://github.com/scala/scala.github.com/pull/206#issuecomment-232939781))
+* **[SIP-20 Improved Lazy Val Initialization](https://github.com/scala/improvement-proposals/pull/19)**, Reviewer: Sébastien Doeraene ([review comments](https://github.com/scala/scala.github.com/pull/206#issuecomment-232939781))
 
 The final SIP discussed one was postponed at the request of the authors:
 
