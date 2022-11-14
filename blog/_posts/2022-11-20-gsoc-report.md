@@ -32,7 +32,7 @@ Unlike most rules that only rely on the Scalafix & SemanticDB APIs, `ExplicitRes
 Razvan Vacaru, mentored by Brice Jaglin and Meriam Lachkar made a significant progress towards the goal of supporting Scala 3 in `ExplicitResultTypes` by cross-compiling all Scalafix modules to Scala 3. You can find a detailed report [here](https://github.com/rvacaru/GsoC-2022-Scalafix).
 
 ## Semantic Highlighting in Metals
-Semantic Highlighting is a part of the default LSP (Language Server Protocol – what connects Metals to your favorite code editor to bring all nice developer experience to you) spec, which is not yet supported by Metals. This would allow the highlighting of tokens (keywords etc.) based on the semantic information about the code. This is especially useful with things like soft keywords in Scala 3, but not only.
+Semantic Highlighting is a part of the default LSP (Language Server Protocol – what connects Metals to your favorite code editor to bring all nice developer experience to you) spec, but it is not yet supported by Metals. This would allow the highlighting of tokens (keywords etc.) based on semantic information about the code. This is especially useful with things like soft keywords in Scala 3, but not only.
 
 Semantic Highlighting is a long-standing [feature request](https://github.com/scalameta/metals-feature-requests/issues/57) in Metals. Having a finer-grained, smarter code highlighting would enhance the developer experience, making Scala even more pleasant to work with.
 
