@@ -4,7 +4,7 @@ post-type: blog
 by: Anatolii Kmetiuk, Scala Center
 title: "Google Summer of Code 2022: How It Was"
 ---
-We've recently completed another successful Google Summer of Code program. Designed to bring more beginners into programming communities, the program is a part of Scala Center's strategy to make the Scala language more newcomer-friendly.
+We've recently completed another successful Google Summer of Code program. Designed to bring more beginners into programming communities, the program is a part of Scala Center's strategy to make contributing to the Scala language more newcomer-friendly.
 
 This year, we welcomed four students guided by five mentors. They contributed to projects such as Scala Native, Creative Scala, Scalafix, and Metals. In this article, you can find a short summary of what was done as well as the links to find out more.
 
