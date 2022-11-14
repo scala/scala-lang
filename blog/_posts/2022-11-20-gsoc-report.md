@@ -24,7 +24,7 @@ The project will be especially interesting for Scala educators. For experienced 
 
 The final report for this project is available [here](https://static.mikail-khan.com/gsoc-report/).
 
-## Towards Scalafix cross-compilation to Scala 3
+## Towards Scala 3 support for Scalafix `ExplicitResultTypes`: cross-compiling to Scala 3
 Scalafix is a linting, code completion, and rewriting tool for Scala codebases. It is an important migration tool that makes it easier for Scala 2 users to migrate to Scala 3.
 
 Scalafix currently cross-compiles for Scala 2.11, 2.12, and 2.13. Having it cross-compile to Scala 3 is challenging for a number of reasons but is important. Cross-compilation to Scala 3 would mean that the rules written in Scala 3 will be compatible and compilable in Scala 2.
