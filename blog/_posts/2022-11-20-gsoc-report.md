@@ -4,12 +4,12 @@ post-type: blog
 by: Anatolii Kmetiuk, Scala Center
 title: "Google Summer of Code 2022: How It Was"
 ---
-We've recently completed another successful Google Summer of Code program. Designed to bring more beginners into programming communities, the program is a part of Scala Center's strategy to make contributing to the Scala language more newcomer-friendly.
+We've recently completed another successful Google Summer of Code program. Designed to bring more beginners into programming communities, the participation in the program is a part of Scala Center's strategy to make contributing to the Scala language more newcomer-friendly.
 
 This year, we welcomed four students guided by five mentors. They contributed to projects such as Scala Native, Creative Scala, Scalafix, and Metals. In this article, you can find a short summary of what was done as well as the links to find out more.
 
 ## Scala Native: Linker Optimization
-Scala Native is an optimizing ahead-of-time compiler and runtime for Scala. It enables the programmer to compile Scala to native code that does not require a JVM for its execution. Scala Native is great for performance-critical applications – think embedded software – that require tight memory control while allowing all the type-safety and compile-time verification advantages that come with Scala.
+[Scala Native](https://scala-native.org/) is an optimizing ahead-of-time compiler and runtime for Scala. It enables the programmer to compile Scala to native code that does not require a JVM for its execution. Scala Native is great for performance-critical applications – think embedded software – that require tight memory control while allowing all the type-safety and compile-time verification advantages that come with Scala.
 
 During GSoC 2022, Liangyong Yu, mentored by Wojciech Mazur, was working on making Scala Native faster and more memory-efficient. He introduced incremental compilation that reduced the build time by 21% on average. Also, he developed a benchmarking infrastructure to measure the performance of Scala Native builds. Considerable work was done on the optimizer of Scala Native which resulted in decreased memory consumption.
 
@@ -39,7 +39,7 @@ Semantic Highlighting is a long-standing [feature request](https://github.com/sc
 Shintaro Sasaki, mentored by Tomasz Godzik, has been working on the project during the Summer of 2022. Currently, the project is still a work-in-progress – you can follow its development at the following [PR](https://github.com/scalameta/metals/pull/4444).
 
 ## Conclusion
-A lot of important work was done during this installment of Google Summer of Code. This work makes Scala even more performant in certain areas, brings even more options for Scala educators to teach Scala, and enhances the Scala migration and development experience.
+The work done during GSoC 2022 makes Scala even more performant in certain areas, brings even more options for Scala educators to teach Scala, and enhances the Scala migration and development experience.
 
 The Scala community has gained four more contributors as a result of the program. We would like to thank the students whom we mentored this year – Liangyong Yu, Mikail Khan, Razvan Vacaru, Shintaro Sasaki – for their contribution to keeping Scala awesome.
 
