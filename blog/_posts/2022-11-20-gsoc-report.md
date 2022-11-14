@@ -27,7 +27,7 @@ The final report for this project is available [here](https://static.mikail-khan
 ## Towards Scala 3 support for Scalafix `ExplicitResultTypes`: cross-compiling to Scala 3
 Scalafix is a linting and rewriting tool for Scala codebases. `ExplicitResultTypes` is one of the built-in rule, which inserts type annotations for inferred public members.
 
-Scalafix currently cross-compiles for Scala 2.11, 2.12, and 2.13. Having it cross-compile to Scala 3 is challenging for a number of reasons but is important. Cross-compilation to Scala 3 would mean that the rules written in Scala 3 will be compatible and compilable in Scala 2.
+Unlike most rules that only rely on the Scalafix & SemanticDB APIs, `ExplicitResultTypes` also depends on the Scala presentation compiler, requiring users to run Scalafix with the Scala binary version targeted by the source files they want to annotate. As Scalafix is currently only cross-compiled to Scala 2.11, 2.12 and 2.13, it is not trivial to interact with the Scala 3 compiler and thus `ExplicitResultTypes` cannot run on Scala 3 source files at the moment.
 
 Razvan Vacaru, mentored by Brice Jaglin and Meriam Lachkar made a significant progress towards the goal of supporting Scala 3 in `ExplicitResultTypes` by cross-compiling all Scalafix modules to Scala 3. You can find a detailed report [here](https://github.com/rvacaru/GsoC-2022-Scalafix).
 
