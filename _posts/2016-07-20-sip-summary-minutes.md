@@ -35,7 +35,7 @@ process](https://docs.scala-lang.org/sips/sip-submission.html):
 
 The final SIP discussed one was postponed at the request of the authors:
 
-* **[SIP-22 Async](https://docs.scala-lang.org/sips/async.html)**, Reviewer: Eugene Burmako ([review comments](https://github.com/scala/scala.github.com/pull/213#issuecomment-232940053))
+* **[SIP-22 Async](https://github.com/scala/improvement-proposals/pull/21)**, Reviewer: Eugene Burmako ([review comments](https://github.com/scala/scala.github.com/pull/213#issuecomment-232940053))
 
 In the case of SIP-22, the authors will reopen it when they feel like taking up
 the proposal again, and addressing the issues they must look into next; in

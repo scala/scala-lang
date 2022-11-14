@@ -16,14 +16,14 @@ The other two progressed and will have a follow-up iteration.
 
 The rejected proposals were:
 
--   [SIP-12: Uncluttering Scala's syntax for control structures](https://docs.scala-lang.org/sips/uncluttering-control.html).
+-   [SIP-12: Uncluttering Scala's syntax for control structures](https://github.com/scala/improvement-proposals/pull/12).
     Originally proposed in 2011. The proposal suggested syntax changes
     in if's, for and while loops, moving Scala's syntax away from Java
     and C-like languages. Whereas such changes may be arguably more
     beautiful, the Committee agreed that would give more problems
     than benefits. Seth Tisue, the appointed reviewer, fully explains
     the Committee's reaction [here](https://github.com/scala/scala.github.com/issues/555).
--   [SIP-16: Self-cleaning macros](https://docs.scala-lang.org/sips/self-cleaning-macros.html).
+-   [SIP-16: Self-cleaning macros](https://github.com/scala/improvement-proposals/pull/15).
     Originally proposed in 2012. Macros add a whole new dimension to the
     Scala language. Their experimental implementation was adopted by a
     lot of Scala libraries and were immensely useful for the creation
@@ -52,9 +52,9 @@ speaking up and collaborating with the process—your vibrant
 responses will greatly enrich our future deliberations.
 
 Next month, we’ll discuss five more proposals, including
-[SIP-21: Spores](https://docs.scala-lang.org/sips/spores.html) and
+[SIP-21: Spores](https://github.com/scala/improvement-proposals/pull/20) and
 [SIP-24: Repeated by-name
-parameters](https://docs.scala-lang.org/sips/repeated-byname.html).
+parameters](https://github.com/scala/improvement-proposals/pull/23).
 We hope to finish off the list of old proposals in the queue and focus
 ourselves on the most recent proposals and the ones that are to
 come!
