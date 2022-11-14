@@ -34,7 +34,7 @@ Razvan Vacaru, mentored by Brice Jaglin and Meriam Lachkar made a significant pr
 ## Semantic Highlighting in Metals
 Semantic Highlighting is a part of the default LSP (Language Server Protocol – what connects Metals to your favorite code editor to bring all nice developer experience to you) spec, but it is not yet supported by Metals. This would allow the highlighting of tokens (keywords etc.) based on semantic information about the code. This is especially useful with things like soft keywords in Scala 3, but not only.
 
-Semantic Highlighting is a long-standing [feature request](https://github.com/scalameta/metals-feature-requests/issues/57) in Metals. Having a finer-grained, smarter code highlighting would enhance the developer experience, making Scala even more pleasant to work with.
+Semantic Highlighting is a long-standing [feature request](https://github.com/scalameta/metals-feature-requests/issues/57) in Metals. Having a finer-grained, smarter code highlighting would enhance the developer experience, making Scala even more pleasant to work with across all the different editors.
 
 Shintaro Sasaki, mentored by Tomasz Godzik, has been working on the project during the Summer of 2022. Currently, the project is still a work-in-progress – you can follow its development at the following [PR](https://github.com/scalameta/metals/pull/4444).
 
