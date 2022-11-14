@@ -29,7 +29,7 @@ Scalafix is a linting, code completion, and rewriting tool for Scala codebases. 
 
 Scalafix currently cross-compiles for Scala 2.11, 2.12, and 2.13. Having it cross-compile to Scala 3 is challenging for a number of reasons but is important. Cross-compilation to Scala 3 would mean that the rules written in Scala 3 will be compatible and compilable in Scala 2.
 
-Razvan Vacaru, mentored by Brice Jaglin and Meriam Lachkar made a significant progress in this area by making it possible for a couple of Scalafix modules to cross-compile to Scala 3. You can find a detailed report [here](https://github.com/rvacaru/GsoC-2022-Scalafix).
+Razvan Vacaru, mentored by Brice Jaglin and Meriam Lachkar made a significant progress towards the goal of supporting Scala 3 in `ExplicitResultTypes` by cross-compiling all Scalafix modules to Scala 3. You can find a detailed report [here](https://github.com/rvacaru/GsoC-2022-Scalafix).
 
 ## Semantic Highlighting in Metals
 Semantic Highlighting is a part of the default LSP (Language Server Protocol – what connects Metals to your favorite code editor to bring all nice developer experience to you) spec, which is not yet supported by Metals. This would allow the highlighting of tokens (keywords etc.) based on the semantic information about the code. This is especially useful with things like soft keywords in Scala 3, but not only.
