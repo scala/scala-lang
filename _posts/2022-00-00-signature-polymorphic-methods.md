@@ -14,7 +14,7 @@ into how it is specified and implemented in both Scala 2 and Scala 3.
 
 The Scala 3 implementation is new, and that's the occasion for this
 blog post. Thanks to this recent work, Scala 3 users can now access
-the entire Java reflection API.
+the entire Java reflection API, as of Scala 3.3.0-RC1.
 
 ## Should I keep reading?
 
@@ -49,10 +49,10 @@ landed in Scala 2.12.16 (released June 2022).
 Just recently, [Dale Wijnand] ported the feature to Scala 3, with the
 assistance of [Guillaume Martres] and myself, [Seth Tisue].
 
-(Jason, Lukas, Dale, and myself are members of the Scala compiler team
+Jason, Lukas, Dale, and myself are members of the Scala compiler team
 at [Lightbend]. We maintain Scala 2 and also contribute to Scala 3.
 Guillaume has worked on the Scala 3 compiler for some years, previously
-at [LAMP] and now at the [Scala Center].)
+at [LAMP] and now at the [Scala Center].
 
 [Jason Zaugg]: https://github.com/retronym
 [Lukas Rytz]: https://github.com/lrytz
@@ -75,8 +75,7 @@ could possibly have run into this feature!
 That's because users are not allowed to define their own signature
 polymorphic methods. Only the Java standard library can do that, and
 so far, the creators of Java have only used the feature in these two
-classes. (Perhaps the feature will be made more widely available in
-some future JVM version?)
+classes.
 
 ## What does "signature polymorphism" mean, exactly?
 
@@ -117,7 +116,7 @@ method. Its signature as seen from Scala is:
 Signature polymorphism means that the `AnyRef`s here are just
 placeholders for types to be supplied later.
 
-To see this work in practice, let's adapt one of the examples in
+To see this work in practice, let's adapt an example from
 the Javadoc. From Scala, we'll make a reflective call to the `replace`
 method on a `String`:
 
@@ -193,21 +192,24 @@ For details, see [PR 4139](), [PR 5594](), [PR 9530](), and [PR 9930]().
 
 We had to work harder in Scala 3 because it wasn't enough to have an
 an in-memory representation for signature polymorphic call sites.  The
-call sites must also have a representation in TASTy. (Unlike Scala 2
-pickles, TASTy represents method bodies too, not only method
-signatures.)
+call sites must also have a representation in TASTy. (Scala 2
+pickles only represent method signatures; in contrast, TASTy
+represents method bodies too.)
 
-Our initial implementation plan was to add a new node type to TASTy.
-We got this working, but it seemed unsatisfying to change TASTy to
-support such a rarely-used feature.
+Our initial implementation plan was to add a new node type to TASTy,
+and that's what we ended up doing.
 
-> TODO: Did we in fact go with Jason's approach, in the end?
+> TODO: point out what's interesting
 
-So in the end, we took a different approach, based on a suggestion
-from Jason Zaugg. It works by rewriting each call site to include a
+For details, see [the pull request](https://github.com/lampepfl/dotty/pull/16225).
+
+### The path not taken
+
+Along the way we explored an alternative approach, suggested by Jason
+Zaugg, which involved rewriting each call site to include a
 cast to a structural type containing an appropriately typed method.
 
-For example, the `replace` call-site in the example above is
+In that version, the `replace` call-site in the example above was
 rewritten from:
 
     mh.invokeExact("daddy", 'd', 'n'): String
@@ -220,15 +222,19 @@ to:
       }
     ].invokeExact("daddy", 'd', 'n')
 
-(The actual rewrite is applied to in-memory ASTs, rather than to
+(The actual rewrite was applied to in-memory ASTs, rather than to
 source code.)
 
-The transformed code can be written and read as TASTy without
-trouble. Later in compilation, we detect which call sites are the
+The transformed code could be written and read as TASTy without
+trouble. Later in compilation, we detected which call sites are the
 product of this transform, drop the cast, and emit the correct
 bytecode.
 
-For details, see [the pull request](https://github.com/lampepfl/dotty/pull/16225).
+In the end, we didn't go with this approach. As Sébastien Doeraene
+pointed out, we avoided a new tag but we gave new semantics to
+existing tags that older compilers wouldn't understand. Therefore the
+work still couldn't ship until the next minor version of the compiler.
+Besides, avoiding the new tag complicated the implementation.
 
 ## Questions? Discussion?
 
