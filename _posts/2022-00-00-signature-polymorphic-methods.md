@@ -242,6 +242,8 @@ These are welcome on the Scala Contributors forum thread at:
 
 * (Discourse link, with link back to this post)
 
+> TODO: include a link to the relevant section of the JLS
+
 > TODO: find the JEP and any design discussions;
 > VarHandle JEP https://openjdk.org/jeps/193
 > hmm wait, did MethodHandle actually land in JDK 7?
