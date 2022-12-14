@@ -136,12 +136,6 @@ Work experience, hackathons, local user groups, youtube tutorials, internal comp
 
 Going forward it would be useful to reinclude some of the “other” options in the main questions, and further determine which books/docs/courses were useful.
 
-## Outtakes
-
-This year’s survey is the first post-Scala 3 survey we launched, and although it already gives a good base - we will be able to understand more after running it in the following years and start seeing trends appear.
-
-Until that time, we have shared with you our main take-aways.
-
 
 [dev-preview-blog]: /2021/03/08/scala-3-developers-preview-survey-results.html
 [compat-blog]: /blog/2022/08/17/long-term-compatibility-plans.html
