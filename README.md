@@ -18,16 +18,16 @@ Markdown.
 ## Building the site
 Make sure you are in the root directory of the cloned repository.
 ### With `docker-compose`:
-```
-docker-compose up
-```
 
-When the website dependencies change (the content of the `Gemfile`),
-you have to re-build the Docker image:
+To build and view site with Docker:
 
-```
-docker-compose up --build
-```
+    env UID="$(id -u)" GID="$(id -g)" docker-compose up
+
+It will incrementally build and serve site at `http://localhost:4000`.
+
+In case the Dockerfile changed, re-build it with:
+
+    env UID="$(id -u)" GID="$(id -g)" docker-compose up --build
 
 ### With Bundler:
 
