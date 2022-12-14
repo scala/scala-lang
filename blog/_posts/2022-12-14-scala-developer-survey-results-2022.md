@@ -3,6 +3,7 @@ layout: blog-detail
 post-type: blog
 by: Scala Center team
 title: Scala Developer Survey 2022 Results
+description: A glance at the results of the 2022 Scala Developer Survey. We'll dive into how we collected the data, briefly look at some takeaways, and share some interesting statistics.
 ---
 
 The Scala Developer Survey 2022 was launched in October, and in ten days it attracted over 2200 responses. Today we are pleased to share the results with you.
