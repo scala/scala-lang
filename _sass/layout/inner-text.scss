@@ -2,7 +2,8 @@
 //------------------------------------------------
 //------------------------------------------------
 .inner-text {
-  position: relative;
+    position: relative;
+
     h1 {
         font-family: $base-font-family;
         font-size: 2.813rem;
@@ -16,9 +17,14 @@
         color: #fff;
         margin-bottom: $padding-medium;
     }
+
     @include span-columns(8);
     @include bp(large) {
-         @include span-columns(12);
+        @include span-columns(12);
+
+        .button {
+            margin-bottom: 3px;
+        }
 
         h1 {
             font-size: 2.213rem;
