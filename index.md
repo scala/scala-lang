@@ -9,7 +9,7 @@ headerButtonUrl: "/what-is-scala/"
 
 # Links of the Download / API Docs sections
 gettingStarted:
-  mainTitle: "Get Started"
+  mainTitle: "Setup Scala"
   mainUrl: "https://docs.scala-lang.org/getting-started.html"
   subtitle: "API Docs"
   subtitleLink: "https://docs.scala-lang.org/api/all.html"
