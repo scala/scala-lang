@@ -112,10 +112,10 @@ here (dead link: https://github.com/propensive/collection-strawman/blob/master/s
 We are working with GitHub to support syntax highlighting for Skala, but it's
 not there yet.
 
-You can also [try out Skala for yourself
-today](https://github.com/fmasion/skala) with the fully-functional compiler
-and REPL. Instructions on running the compiler are in the [README
-file](https://github.com/fmasion/skala/blob/master/README.md).
+You can also try out Skala for yourself
+today (https://github.com/fmasion/skala) with the fully-functional compiler
+and REPL. Instructions on running the compiler are in the README
+file (https://github.com/fmasion/skala/blob/master/README.md).
 
 [![skala-repl](/resources/img/skala-repl.png)](/resources/img/skala-repl.png)
 
@@ -169,7 +169,7 @@ completely natural, so we intend to fully embrace it.
 
 ## Get involved!
 
-We have come a long way in getting [Skala](https://github.com/fmasion/skala)
+We have come a long way in getting Skala
 to this stage, and there continues to be much exciting work going into the
 language. With the help of organizations like the
 [Skalazentrum](https://scala.epfl.ch/), [Typstufe](https://typelevel.org),
