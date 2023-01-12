@@ -41,7 +41,11 @@
     <!-- Custom stylesheet -->
     <link href="{{ site.baseurl }}/resources/css/unslider-dots.css" rel="stylesheet" type="text/css">
     <link href="{{ site.baseurl }}/resources/css/unslider.css" rel="stylesheet" type="text/css">
+    {% if page.darkmodeCode %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/highlightjs-dark.css" type="text/css" />
+    {% else %}
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/highlightjs.css" type="text/css" />
+    {% endif %}
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/style.css" type="text/css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/vendor/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/vendor/monokai.css" type="text/css" />

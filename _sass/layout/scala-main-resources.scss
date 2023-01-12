@@ -3,7 +3,7 @@
 //------------------------------------------------
 
 .scala-main-resources {
-    height: 100px;
+    height: 105px;
     background: $gray-darker;
     position: relative;
 
@@ -110,11 +110,11 @@
         }
 
         .scala-brand-circle {
-            width: 280px;
-            height: 280px;
+            width: 190px;
+            height: 190px;
             left: 50%;
-            top: -142px;
-            margin-left: -140px;
+            top: -97px;
+            margin-left: -96px;
             position: absolute;
             z-index: 60;
             @include display(flex);
@@ -123,15 +123,15 @@
 
             .circle-solid {
                 background: $gray-darker;
-                width: 205px;
-                height: 205px;
+                width: 185px;
+                height: 185px;
                 border-radius: 100%;
                 text-align: center;
 
                 > img {
-                    width: 152px;
+                    width: 120px;
                     height: auto;
-                    margin-top: -36px;
+                    margin-top: -15px;
                 }
 
                 .scala-version {

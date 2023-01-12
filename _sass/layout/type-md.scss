@@ -164,7 +164,6 @@
             overflow-x: auto;
             display: block;
             font-size: $font-size-medium;
-            @include border-radius($border-radius-base);
             padding: 10px 7px;
         }
     }
