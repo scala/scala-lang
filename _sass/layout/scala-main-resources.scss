@@ -19,8 +19,8 @@
         }
 
         .get-started {
-            @include span-columns(4);
-            @include shift(2);
+            @include span-columns(4.2);
+            @include shift(1.8);
 
             .button {
 
@@ -34,7 +34,7 @@
         }
 
         .learn-scala {
-            @include span-columns(4);
+            @include span-columns(4.2);
 
             .button {
                 text-align: right;

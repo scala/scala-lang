@@ -13,14 +13,6 @@ headerButtonUrl: "/what-is-scala/"
 gettingStarted:
   mainTitle: "Get Started"
   mainUrl: "https://docs.scala-lang.org/getting-started.html"
-  subtitle: "API Docs"
-  subtitleLink: "https://docs.scala-lang.org/api/all.html"
-  links:
-    - title: "Migrate to Scala 3"
-      url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
-apiDocs:
-  mainTitle: "Learn Scala"
-  mainUrl: "https://docs.scala-lang.org"
   subtitle: "Scala Book"
   subtitleLink: "https://docs.scala-lang.org/scala3/book/introduction.html"
   links:
@@ -28,6 +20,14 @@ apiDocs:
       url: "https://docs.scala-lang.org/tour/tour-of-scala.html"
     - title: "Courses"
       url: "https://docs.scala-lang.org/online-courses.html"
+apiDocs:
+  mainTitle: "Documentation"
+  mainUrl: "https://docs.scala-lang.org"
+  subtitle: "API Docs"
+  subtitleLink: "https://docs.scala-lang.org/api/all.html"
+  links:
+    - title: "Migrate to Scala 3"
+      url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
 
 
 # Scala backends
