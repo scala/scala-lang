@@ -18,8 +18,12 @@
       <div class="wrap">
         <!-- Navigation -->
         <nav class="navigation" role="menu">
-          <a href="/" class="navigation-bdand">
-            <img src="/resources/img/frontpage/scala-logo-white@2x.png" alt="">
+          <div class="navigation-bdand-vfill-lg hide-lg">
+            <!-- spacer to substitute for hidden logo, disappears below the large breakpoint -->
+          </div>
+          <a href="/" class="navigation-bdand show-lg">
+            <!-- show standard nav logo below the large breakpoint -->
+            <img src="/resources/img/frontpage/scala-logo-white@2x.png" alt=""/>
           </a>
           <div class="navigation-panel-button">
             <i class="fa fa-bars"></i>
@@ -33,22 +37,26 @@
           </ul>
         </nav>
       </div>
-      <div class="wrap">
+      <div class="wrap flex-row-align-end">
         <!-- Inner Text -->
         <div class="col-lg-6">
           <div class="inner-text">
-            <h1>{{page.headerTitle}}</h1>
-            <p>{{page.headerSubtitle}}</p>
-            {% for release in site.data.scala-releases %}
-            {% if release.category == "current_version" %}
-            <a href="/download/{{ release.version }}.html" class="button">
-              Scala {{ release.version }}
-            </a>
-            {% endif %}
-            {% endfor %}
-            <a href="/download/all.html" class="button">
-              All Releases
-            </a>
+            <div class="hero-logo hide-lg"></div>
+            <h2>{{page.headerSubtitle}}</h2>
+            <div class="button-row__container">
+              <div class="button-row">
+                {% for release in site.data.scala-releases %}
+                {% if release.category == "current_version" %}
+                <a href="/download/{{ release.version }}.html" class="button">
+                  Scala {{ release.version }}
+                </a>
+                {% endif %}
+                {% endfor %}
+                <a href="/download/all.html" class="button">
+                  All Releases
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-lg-6">
@@ -99,6 +107,42 @@
 
 <main id="site-main">
 
+<!-- Why Scala -->
+<section class="nutshell">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>Why Scala?</span></h2>
+    </div>
+  </div>
+  <div class="scala-items-list">
+    <div class="items-menu">
+      {% for scalaItem in site.why_scala_items %}
+      {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
+
+      {% if loopIndexMod == 0 %}
+      {% assign codeSnippets = '' | split: ',' %}
+      <div class="wrap scala-item-row">
+        {% endif %}
+        {% assign codeSnippets = codeSnippets | push: scalaItem.content %}
+        <div class="scala-item scala-item_why-scala ">
+          <div class="scala-item_content">
+            <h3>{{scalaItem.shortTitle}}</h3>
+            <p>{{scalaItem.shortDescription}}</p>
+          </div>
+        </div>
+        {% if loopIndexMod == 2 or forloop.last %}
+      </div>
+      <div class="items-content">
+        {% for snippet in codeSnippets %}
+        <div class="items-code">{{snippet}}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- Scala in a Nutshell -->
 <section class="nutshell">
   <div class="wrap">
@@ -117,12 +161,14 @@
 
         {% if loopIndexMod == 0 %}
           {% assign codeSnippets = '' | split: ',' %}
-          <div class="wrap">
+          <div class="wrap scala-item-row">
         {% endif %}
         {% assign codeSnippets = codeSnippets | push: scalaItem.content %}
-        <div class="scala-item">
-          <h3>{{scalaItem.shortTitle}}</h3>
-          <p>{{scalaItem.shortDescription}}</p>
+        <div class="scala-item hoverable">
+          <div class="scala-item_content">
+            <h3>{{scalaItem.shortTitle}}</h3>
+            <p>{{scalaItem.shortDescription}}</p>
+          </div>
           <div class="button button-more">More...</div>
         </div>
         {% if loopIndexMod == 2 or forloop.last %}

@@ -18,22 +18,42 @@
 
     .scala-items-list {
         .items-menu {
+            .scala-item-row {
+                @include display(flex);
+                @include flex-direction(row);
+                @include bp(large) {
+                    @include flex-direction(column); // switch to single column
+                }
+            }
             .scala-item {
-                @include span-columns(4);
+                @include display(flex);
+                @include flex-direction(column);
+                @include justify-content(space-between);
+                @include align-items(center);
+
+                // width
+                width: 33.33%;
+                @include bp(large) {
+                    width: 100%;
+                }
+
+                // max 3 items per row
                 @include omega(3n);
+
                 padding: $padding-small;
                 text-align: center;
                 transition: $base-transition;
-                @include bp(medium) {
-                     @include span-columns(12);
-                }
-
-                min-height: 165px;
 
                 .button {
                     margin-top: 10px;
                     font-size: 0.6rem;
                     padding: 5px;
+                }
+
+                .button.button_expand-info {
+                    font-size: $font-size-small;
+                    padding: 5px 15px;
+                    margin-top: $font-size-large;
                 }
 
                 h3 {
@@ -50,9 +70,9 @@
                 }
 
 
-                &:active,
-                &:focus,
-                &:hover {
+                &.hoverable:active,
+                &.hoverable:focus,
+                &.hoverable:hover {
                     cursor: pointer;
                     background: $gray-dark;
                 }
