@@ -150,7 +150,8 @@ In addition to keeping the Scala Improvement Process going, and reducing the num
 library, we will:
 
 - **Make the compiler error messages clearer and more actionable.** The compiler should help developers write correct code
-  instead of “just complaining” about incorrect code. You can find a list of related issues
+  instead of “just complaining” about incorrect code. The compiler should also guide you to write maintainable code (ie,
+  it should provide linting features). You can find a list of related issues
   [here](https://github.com/lampepfl/dotty/issues?q=is%3Aopen+is%3Aissue+label%3Aarea%3Areporting).
 - **Bring the compiler’s suggestions into the IDEs.** Instead of emitting only text output, the compiler
   will produce structured output that IDEs (Metals and IntelliJ) will be able to read to automatically provide “quick
@@ -176,7 +177,8 @@ In addition to maintaining the Scala website and managing our online course lear
 - **Add “task-oriented” content to the documentation.** Currently, the documentation is rather “language features oriented”,
   but it does not really help solve concrete problems. We will select a set of libraries (the “Scala Toolkit”) and we
   will write tutorials showing how to perform common programming tasks (working with JSON, writing tests, etc.).
-  We will use libraries created by the community and that do not require advanced knowledge of Scala.
+  We will use libraries created by the community and that do not require advanced knowledge of Scala. Last, we will
+  help the authors of those libraries to perform the usual maintenance tasks.
 - **Improve the content of the course
   [Effective Programming in Scala](https://docs.scala-lang.org/online-courses.html#effective-programming-in-scala).**
   We will address the feedback we received from the learners of the course to smoothen the learning curve.
