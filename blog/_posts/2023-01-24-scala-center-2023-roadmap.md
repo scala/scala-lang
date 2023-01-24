@@ -1,7 +1,7 @@
 ---
 layout: blog-detail
 post-type: blog
-by: the Scala Center team
+by: Julien Richard-Foy and the Scala Center team
 title: Scala Center Roadmap for 2023 and Beyond
 description: Highlights of the achievements of the Scala Center in 2022, and roadmap for 2023.
 ---
@@ -43,15 +43,15 @@ In this section, we highlight our main achievements in 2022. You can find our co
 ### Language, Compiler, Standard Library
 
 **We overhauled and restarted the [Scala Improvement Process](https://docs.scala-lang.org/sips/).** Since last
-summer, the diverse members of SIP Committee meet monthly to decide the evolution of the language. As we explained
+summer, the SIP Committee members meet monthly to decide the evolution of the language. As we explained
 in the [announcement]({% link blog/_posts/2022-07-13-scala-improvement-process-reloaded.md %}), the main changes of
 the new process are the following. First, the proposals are thoroughly discussed by a team of three reviewers, publicly
 on [GitHub](https://github.com/scala/improvement-proposals) before the whole Committee votes on them during their
 monthly meetings. Second, there is a new stage where proposals are accepted as experimental features before the Committee
 votes again to promote them to stable features.
 
-**We improved [generic Mirror](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror) synthesis.**
-Mirrors are critical to metaprogramming in Scala 3, they enable implementation of type class derivation without
+**We improved meta-programming, especially [generic Mirror](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror)
+synthesis.** Mirrors are critical to metaprogramming in Scala 3, they enable implementation of type class derivation without
 advanced metaprogramming techniques such as macros. Mirror synthesis now supports more cases
 ([generic tuples](https://github.com/lampepfl/dotty/pull/15250),
 [local and inner classes](https://github.com/lampepfl/dotty/pull/15847)), is more reliable
@@ -89,7 +89,9 @@ always show both Scala 2 and Scala 3 code examples when possible.
 
 **We offered individualized support to our MOOCs’ learners.** We published the course “Effective Programming in Scala”
 to the [Extension School platform](https://www.extensionschool.ch/learn/effective-programming-in-scala). This
-platform allows the learners to have regular 1-on-1 meetings with our instructors along their learning journey. Learn
+platform allows the learners to have regular 1-on-1 meetings with our instructors along their learning journey. If you
+need to learn Scala, or if your company needs to train developers, the Extension School provides a cost-effective way
+to be trained by the Scala Center team. Learn
 more about the motivation in the previous [announcement]({% link blog/_posts/2022-06-08-learn-scala-at-epfl-extension-school.md %}).
 
 ### Developer Experience
@@ -105,8 +107,8 @@ manual download of the release artifacts).
 
 ### Community and Contributor Experience
 
-**We co-organized the [ScalaCon](http://www.scalacon.org/) online conference.** We were in charge of the program and
-the program committee.
+**We co-organized the [ScalaCon](https://www.scalacon.org/) online conference.** We were in charge of the program and
+the program committee. The talk videos are available online [here](https://www.youtube.com/playlist?list=PL3t6y1EktOPhflaXB28Kw7kwRb30K0W-P).
 
 **We published videos about Scala 3.** [Let’s Talk About Scala 3](https://www.youtube.com/playlist?list=PLTx-VKTe8yLxYQfX_eGHCxaTuWvvG28Ml)
 is a series of videos where we share interesting, useful, and cool things related to Scala 3. We published 4 new
@@ -114,14 +116,15 @@ videos in 2022.
 
 **We improved the code editing experience in [Scastie](https://scastie.scala-lang.org).** Scastie is the online Scala
 code editor that is used every day by one thousand developers to share code snippets in the community. We have 
-implemented “IDE features” such as autocompletion and showing type information under the mouse pointer.
+implemented “IDE features” such as autocompletion and showing type information under the mouse pointer. Under the hood,
+we reused some components of Metals.
 
-**We mentored new contributors to the Scala 3 compiler.** Diving into the compiler is not an easy task. The Compiler
+**We mentored new contributors to the Scala 3 compiler.** The Compiler
 Academy organizes online pair-programming events to mentor new contributors on the compiler codebase. You can learn
 more about the Compiler Academy in [this blog article]({% link blog/_posts/2022-11-02-compiler-academy.md %}).
 
 **We implemented the building blocks of a new tool to detect incompatibilities between programs.** Guaranteeing the
-absence of incompatibilities between library dependencies is the cornerstone of a peaceful Scala ecosystem. We have
+absence of incompatibilities between library dependencies is the cornerstone of a seamless Scala ecosystem. We have
 implemented a prototype of a new tool to detect incompatibilities between two versions of a program (like
 [MiMa](https://github.com/lightbend/mima), but based on the TASTy representation of programs instead of JVM bytecode).
 Our work is based on [TASTy Query](https://github.com/scalacenter/tasty-query), which will be the basis of tools to
@@ -139,7 +142,7 @@ main organizations that are [behind Scala](https://www.scala-lang.org/community/
 ([LAMP](https://lamp.epfl.ch), [Lightbend](https://lightbend.com), and [VirtusLab](https://virtuslab.com)). We are
 grateful to all of them.
 
-In the following subsections we remind our ongoing and recurring projects, and we present our most important goals as
+In the following subsections we remind you of our ongoing and recurring projects, and we present our most important goals as
 well as some additional stretch goals that would need more resources.
 
 The roadmap we present here is of course subject to adjustments throughout the year.
@@ -181,7 +184,7 @@ In addition to maintaining the Scala website and managing our online course lear
   help the authors of those libraries to perform the usual maintenance tasks.
 - **Improve the content of the course
   [Effective Programming in Scala](https://docs.scala-lang.org/online-courses.html#effective-programming-in-scala).**
-  We will address the feedback we received from the learners of the course to smoothen the learning curve.
+  We will address the feedback we received from the learners of the course to smooth the learning curve.
 
 Our stretch goals include: update our [Spark course](https://docs.scala-lang.org/online-courses.html#scala-specialization),
 teach Scala to first year Bachelor students at EPFL, and create a new Scala course for beginners (with no experience at
@@ -213,7 +216,7 @@ and provide TASTy trees to semantic rules in Scalafix.
 
 ### Community and Contributor Experience
 
-In addition to continuing co-organizing ScalaDays, participating to conferences, publishing positive content about
+In addition to continuing co-organizing [Scala Days](https://scaladays.org/), participating to conferences, publishing positive content about
 Scala, leading the Compiler Academy, and maintaining tools for contributors ([Scastie](https://scastie.scala-lang.org),
 [Scaladex](https://index.scala-lang.org), [scalafix](https://scalacenter.github.io/scalafix/)), we will:
 
