@@ -17,17 +17,31 @@ Markdown.
 
 ## Building the site
 Make sure you are in the root directory of the cloned repository.
-### With `docker-compose`:
+### With `Docker Compose`:
 
-To build and view site with Docker:
+You need to have [Docker Engine](https://docs.docker.com/engine/) and [Docker Compose](https://docs.docker.com/compose/) installed on your machine.
+Under macOS (Intel or Apple silicon), instead of installing [Docker Desktop](https://docs.docker.com/desktop/) you can also use [HomeBrew](https://brew.sh/) with [Colima](https://github.com/abiosoft/colima): `brew install colima docker`.  
+UID and GID environment variables are needed to avoid docker from writing files as root in your directory.
 
-    env UID="$(id -u)" GID="$(id -g)" docker-compose up
+```
+env UID="$(id -u)" GID="$(id -g)" docker-compose up
+```
 
-It will incrementally build and serve site at `http://localhost:4000`.
+The generated site is available at `http://localhost:4000`.
 
-In case the Dockerfile changed, re-build it with:
+When the website dependencies change (the content of the `Gemfile`),
+you have to re-build the Docker image:
 
-    env UID="$(id -u)" GID="$(id -g)" docker-compose up --build
+```
+env UID="$(id -u)" GID="$(id -g)" docker-compose up --build
+```
+
+If you have problems with the Docker image or want to force the rebuild of the Docker image:
+```
+env UID="$(id -u)" GID="$(id -g)" docker-compose build --no-cache
+```
+
+
 
 ### With Bundler:
 
