@@ -48,7 +48,8 @@ in the [announcement]({% link blog/_posts/2022-07-13-scala-improvement-process-r
 the new process are the following. First, the proposals are thoroughly discussed by a team of three reviewers, publicly
 on [GitHub](https://github.com/scala/improvement-proposals) before the whole Committee votes on them during their
 monthly meetings. Second, there is a new stage where proposals are accepted as experimental features before the Committee
-votes again to promote them to stable features.
+votes again to promote them to stable features. The new Scala Improvement Process is the first result of our governance
+strategy whose goal is to establish all the necessary decision-making processes for the community, by the community.
 
 **We improved meta-programming, especially [generic Mirror](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror)
 synthesis.** Mirrors are critical to metaprogramming in Scala 3, they enable implementation of type class derivation without
@@ -107,8 +108,13 @@ manual download of the release artifacts).
 
 ### Community and Contributor Experience
 
-**We co-organized the [ScalaCon](https://www.scalacon.org/) online conference.** We were in charge of the program and
-the program committee. The talk videos are available online [here](https://www.youtube.com/playlist?list=PL3t6y1EktOPhflaXB28Kw7kwRb30K0W-P).
+**We co-organized the [ScalaCon](https://www.scalacon.org/) online conference and participated in several in-person community
+events.** In April 2022, for the first time in 2.5 years, events could finally take place in person. Our team encouraged
+many Scala User Groups to restart their regular Scala Meetups. We gave talks and organized [Open-Source Sprees](https://github.com/scalacenter/sprees)
+at local events in Europe. We were also involved in the online conference ScalaCon: we were in charge of the program and
+the program committee, and we presented several talks including a keynote [Towards a Healthy & Resilient Scala Community](https://youtu.be/svWnwU5PXxE)
+where we presented our strategy for the governance of Scala. The talk videos of the whole conference are available online
+[here](https://www.youtube.com/playlist?list=PL3t6y1EktOPhflaXB28Kw7kwRb30K0W-P).
 
 **We published videos about Scala 3.** [Let’s Talk About Scala 3](https://www.youtube.com/playlist?list=PLTx-VKTe8yLxYQfX_eGHCxaTuWvvG28Ml)
 is a series of videos where we share interesting, useful, and cool things related to Scala 3. We published 4 new
@@ -216,24 +222,27 @@ and provide TASTy trees to semantic rules in Scalafix.
 
 ### Community and Contributor Experience
 
-In addition to continuing co-organizing [Scala Days](https://scaladays.org/), participating to conferences, publishing positive content about
-Scala, leading the Compiler Academy, and maintaining tools for contributors ([Scastie](https://scastie.scala-lang.org),
+In addition to participating to events, encouraging and supporting local Scala user groups and Scala conferences around
+the world, publishing positive content about Scala, leading the Compiler Academy, coordinating the Google Summer of
+Code, and maintaining tools for contributors ([Scastie](https://scastie.scala-lang.org),
 [Scaladex](https://index.scala-lang.org), [scalafix](https://scalacenter.github.io/scalafix/)), we will:
 
+- **Co-organize [Scala Days](https://scaladays.org/).** We will be responsible for the program and co-located events,
+  such as ScalaBridge, Scala Spree, and other community summits. The conference will take place June 4th-7th in Seattle,
+  USA, and September 11th-14th in Madrid, Spain.
+- **Organize a Tooling Summit.** We will bring together the main actors of the tooling ecosystem (IntelliJ team, Metals
+  team, compiler team, build tools maintainers), and agree on the next steps for a reliable and seamless integration
+  of the pieces of tooling ecosystem.
 - **Add support for standalone Scala programs in Scastie.** Currently, Scastie creates an sbt project for every snippet.
   This adds a performance overhead, and makes it impossible to just copy-paste a snippet to run it locally (because
   you also need to re-create the sbt configuration locally). We will fix this issue by supporting a “standalone” mode
   where the configuration will be defined via Scala CLI directives.
 - **Publish TASTy-MiMa.** This tool will be able to detect incompatibilities between two versions of a program, based
   on their TASTy representation. We will complete its implementation and make it available to the community.
-- **Streamline the way to publish the documentation of Scala libraries.** Currently, there are many tools one can use
-  to publish documentation about their open-source projects (Scaladoc, Paradox, Laika, Docusaurus, etc.). Developers
-  should not have to study or experiment with many tools to produce the documentation they need. We will simplify how
-  to produce API documentation, how to “typecheck” the code examples, how to keep multiple versions of the documentation
-  online, and how to define custom “template directives” in Scala.
 
-Our stretch goals include: coordinate Google Summer of Code, create a Scala Center online shop, stabilize and document
-the HTTP API of Scaladex, make it easy to find projects to contribute to in Scaladex, implement GitHub [precise code
+Our stretch goals include: create a Scala Center online shop, finalize the training materials for Scala moderators, revise
+and update the Scala Center bylaws, stabilize and document the HTTP API of Scaladex, make it easy to find projects to
+contribute to in Scaladex, streamline the way to publish the documentation of Scala libraries, implement GitHub [precise code
 navigation](https://docs.github.com/en/repositories/working-with-files/using-files/navigating-code-on-github#precise-and-search-based-navigation)
 for Scala, and simplify the usage of remote caching techniques in continuous integration systems.
 
