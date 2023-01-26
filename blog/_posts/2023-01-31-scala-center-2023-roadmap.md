@@ -25,7 +25,7 @@ The Scala ecosystem is made of the following pillars:
   structure and the content of the website, to create and maintain high-quality online educational content (including
   online courses), and to help the community to contribute to the website.
 - **Developer experience:** Scala programmers often don’t interact directly with the compiler, but they use a tool
-  (build tool, compiler server) that does that for them. They also use tools to edit, analyze, navigate through,
+  (build tool, compile server) that does that for them. They also use tools to edit, analyze, navigate through,
   transform, compile, run, and debug Scala programs. The role of the Scala Center is to make sure these tools are as
   easy to use as possible, that they work reliably for everyone, and deliver a great developer experience.
 - **Community and contributor experience:** the last pillar is the result of the work done _outside_ the Scala Center.
@@ -45,7 +45,7 @@ In this section, we highlight our main achievements in 2022. You can find our co
 **We overhauled and restarted the [Scala Improvement Process](https://docs.scala-lang.org/sips/).** Since last
 summer, the SIP Committee members meet monthly to decide the evolution of the language. As we explained
 in the [announcement]({% link blog/_posts/2022-07-13-scala-improvement-process-reloaded.md %}), the main changes of
-the new process are the following. First, the proposals are thoroughly discussed by a team of three reviewers, publicly
+the new process are the following. Firstly, the proposals are thoroughly discussed by a team of three reviewers, publicly
 on [GitHub](https://github.com/scala/improvement-proposals) before the whole Committee votes on them during their
 monthly meetings. Second, there is a new stage where proposals are accepted as experimental features before the Committee
 votes again to promote them to stable features. The new Scala Improvement Process is the first result of our governance
@@ -64,7 +64,7 @@ advanced metaprogramming techniques such as macros. Mirror synthesis now support
 **We generalized the definition of methods in Scala** by allowing type parameters to be interleaved with regular parameters.
 This change notably allows methods to take type parameters whose bounds depend on value parameters. You can learn more
 about the motivation behind this change in the proposal document:
-[SIP-47 - Clause Interleaving](https://docs.scala-lang.org/sips/clause-interleaving.html). Last, we lifted a current
+[SIP-47 - Clause Interleaving](https://docs.scala-lang.org/sips/clause-interleaving.html). Lastly, we lifted a current
 language restriction that prevents eta-expansion to be applied to polymorphic methods. You can learn more about this
 change in the proposal document:
 [SIP-49 - Polymorphic Eta-Expansion](https://docs.scala-lang.org/sips/polymorphic-eta-expansion.html). Both proposals
@@ -74,7 +74,7 @@ have been accepted by the SIP Committee and are under development in the compile
 
 **We improved the usability of the Scala website (this website).** The website had not seen a major rework since 2013,
 and it does not represent the full picture that we would like Scala newcomers to see. To this effect, we have removed
-the split of Scala 2 vs Scala 3 on [the landing page](https://github.com/scala/scala-lang/pull/1344) and on
+the split of Scala 2 vs Scala 3 on [the landing page](https://github.com/scala/scala-lang/pull/1344) and in
 [the documentation](https://github.com/scala/docs.scala-lang/pull/2430), consolidated the “Getting Started” instructions
 ([scala-lang#1344](https://github.com/scala/scala-lang/pull/1344),
 [scala-lang#1348](https://github.com/scala/scala-lang/pull/1348),
@@ -133,6 +133,8 @@ more about the Compiler Academy in [this blog article]({% link blog/_posts/2022-
 absence of incompatibilities between library dependencies is the cornerstone of a seamless Scala ecosystem. We have
 implemented a prototype of a new tool to detect incompatibilities between two versions of a program (like
 [MiMa](https://github.com/lightbend/mima), but based on the TASTy representation of programs instead of JVM bytecode).
+We explained [here](https://github.com/scalacenter/tasty-mima#motivation) why we need this tool in addition to the
+classic MiMa.
 Our work is based on [TASTy Query](https://github.com/scalacenter/tasty-query), which will be the basis of tools to
 perform static analysis of Scala programs (it is already used by the Metals debugger).
 
@@ -155,7 +157,7 @@ The roadmap we present here is of course subject to adjustments throughout the y
 
 ### Language, Compiler, Standard Library
 
-In addition to keeping the Scala Improvement Process going, and reducing the number of bugs in the compiler and standard
+In addition to keeping the Scala Improvement Process ongoing, and reducing the number of bugs in the compiler and standard
 library, we will:
 
 - **Make the compiler error messages clearer and more actionable.** The compiler should help developers write correct code
@@ -186,7 +188,7 @@ In addition to maintaining the Scala website and managing our online course lear
 - **Add “task-oriented” content to the documentation.** Currently, the documentation is rather “language features oriented”,
   but it does not really help solve concrete problems. We will select a set of libraries (the “Scala Toolkit”) and we
   will write tutorials showing how to perform common programming tasks (working with JSON, writing tests, etc.).
-  We will use libraries created by the community and that do not require advanced knowledge of Scala. Last, we will
+  We will use libraries created by the community and that do not require advanced knowledge of Scala. Lastly, we will
   help the authors of those libraries to perform the usual maintenance tasks.
 - **Improve the content of the course
   [Effective Programming in Scala](https://docs.scala-lang.org/online-courses.html#effective-programming-in-scala).**
