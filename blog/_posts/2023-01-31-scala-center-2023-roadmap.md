@@ -232,7 +232,7 @@ Code, and maintaining tools for contributors ([Scastie](https://scastie.scala-la
   USA, and September 11th-14th in Madrid, Spain.
 - **Organize a Tooling Summit.** We will bring together the main actors of the tooling ecosystem (IntelliJ team, Metals
   team, compiler team, build tools maintainers), and agree on the next steps for a reliable and seamless integration
-  of the pieces of tooling ecosystem.
+  of the pieces of the tooling ecosystem.
 - **Add support for standalone Scala programs in Scastie.** Currently, Scastie creates an sbt project for every snippet.
   This adds a performance overhead, and makes it impossible to just copy-paste a snippet to run it locally (because
   you also need to re-create the sbt configuration locally). We will fix this issue by supporting a “standalone” mode
@@ -251,8 +251,8 @@ for Scala, and simplify the usage of remote caching techniques in continuous int
 In this article, we have looked at the pillars of the Scala ecosystem, and for each of them we have listed the main
 outcome of our work in 2022, and our main goals for 2023.
 
-Achieving these goals is possible only with your [support](https://scala.epfl.ch/faqs.html) and with the help of all
-the [people behind Scala](https://www.scala-lang.org/community/#whos-behind-scala). Thank you all!
+Thanks to your support, and with the help of all the [people behind Scala](https://www.scala-lang.org/community/#whos-behind-scala),
+we came this far! Help us go even further by [supporting the Scala Center](https://scala.epfl.ch/faqs.html).
 
 You can find our detailed roadmap for the current quarter [here](https://scala.epfl.ch/projects.html),
 and track our progress by looking at our [quarterly reports](https://scala.epfl.ch/records.html), or by browsing the
