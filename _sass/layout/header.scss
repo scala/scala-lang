@@ -47,17 +47,6 @@
             background: linear-gradient($brand-secondary, 40%, $gray-darker);
             position: relative;
             padding-bottom: 120px;
-
-            // &:before {
-            //     content: "";
-            //     position: absolute;
-            //     background: url("../img/frontpage/background-header-home.jpg") no-repeat center center;
-            //     @include image-size();
-            //     left: 0;
-            //     width: 100%;
-            //     height: 100%;
-            //     z-index: -1;
-            // }
         }
     }
 }
