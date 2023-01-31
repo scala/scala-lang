@@ -28,12 +28,12 @@ shortDescription: "Scala is ideal for teaching programming to beginners as well 
 
   <div class="scala-code">
 
-    <div class="code-element">
+    <div class="code-element dark">
       <div class="bar-code"><span>HelloWorld.scala</span></div>
       <pre><code>@main def run() = println("Hello, World!")</code></pre>
     </div>
 
-    <div class="code-element">
+    <div class="code-element dark">
       <div class="bar-code"><span>Modules.scala</span></div>
       <pre><code>// A module that can access the data stored in a database
 class DatabaseAccess(connection: Connection):
@@ -51,7 +51,7 @@ class HttpServer(databaseAccess: DatabaseAccess):
 
   <div class="scala-code">
 
-    <div class="code-element">
+    <div class="code-element dark">
       <div class="bar-code"><span>Modeling.scala</span></div>
       <pre><code>/** A Player can either be a Bot, or a Human.
   * In case it is a Human, it has a name.
@@ -61,7 +61,7 @@ enum Player:
   case Human(name: String)</code></pre>
     </div>
 
-    <div class="code-element">
+    <div class="code-element dark">
       <div class="bar-code"><span>Algorithms.scala</span></div>
       <pre><code>// Average number of contacts a person has according to age
 def contactsByAge(people: Seq[Person]): Map[Int, Double] =

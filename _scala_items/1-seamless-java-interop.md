@@ -1,11 +1,11 @@
 ---
 shortTitle: "Seamless Java Interop"
 shortDescription: "Scala runs on the JVM, so Java and Scala stacks can be freely mixed for totally seamless integration."
-scastieUrl: 
+scastieUrl:
 ---
 <div class="wrap">
   <div class="scala-code">
-    <div class="code-element">
+    <div class="code-element dark">
       <div class="bar-code"><span>Author.scala</span></div>
       <pre><code>class Author(val firstName: String,
     val lastName: String) extends Comparable[Author] {
@@ -21,7 +21,7 @@ object Author {
   def loadAuthorsFromFile(file: java.io.File): List[Author] = ???
 }</code></pre>
     </div>
-    <div class="code-element">
+    <div class="code-element dark">
       <div class="bar-code"><span>App.java</span></div>
       <pre><code>import static scala.collection.JavaConversions.asJavaCollection;
 

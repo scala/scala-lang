@@ -1,7 +1,7 @@
 ---
 shortTitle: "Traits"
 shortDescription: "Combine the flexibility of Java-style interfaces with the power of classes. Think principled multiple-inheritance."
-scastieUrl: 
+scastieUrl:
 ---
 {% comment %}
 Borrowed from
@@ -9,7 +9,7 @@ https://gleichmann.wordpress.com/2009/10/21/scala-in-practice-composing-traits-l
 {% endcomment %}
 <div class="wrap">
                                 <div class="scala-code">
-                                    <div class="code-element">
+                                    <div class="code-element dark">
                                         <div class="bar-code"><span>Traits</span></div>
                                         <pre><code>abstract class Spacecraft {
   def engage(): Unit

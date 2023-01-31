@@ -1,11 +1,11 @@
 ---
 shortTitle: "Concurrency & Distribution"
 shortDescription: "Use data-parallel operations on collections, use actors for concurrency and distribution, or futures for asynchronous programming."
-scastieUrl: 
+scastieUrl:
 ---
 <div class="wrap">
                                 <div class="scala-code">
-                                    <div class="code-element">
+                                    <div class="code-element dark">
                                         <div class="bar-code"><span>Concurrent/Distributed</span></div>
                                         <pre><code>val x = Future { someExpensiveComputation() }
 val y = Future { someOtherExpensiveComputation() }

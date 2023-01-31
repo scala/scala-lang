@@ -1,7 +1,7 @@
 ---
 shortTitle: "Higher-order functions"
 shortDescription: "Functions are first-class objects. Compose them with guaranteed type safety. Use them anywhere, pass them to anything."
-scastieUrl: 
+scastieUrl:
 ---
 <div class="wrap">
               <div class="scala-text scala-text-large">
@@ -10,7 +10,7 @@ scastieUrl:
   with a concise syntax.</p>
               </div>
               <div class="scala-code">
-                <div class="code-element">
+                <div class="code-element dark">
                   <div class="bar-code"><span>Scala</span></div>
                   <pre><code>val people: Array[Person]
 
@@ -20,7 +20,7 @@ val (minors, adults) = people partition (_.age &lt; 18)</code></pre>
                 </div>
               </div>
               <div class="scala-code">
-                <div class="code-element">
+                <div class="code-element dark">
                   <div class="bar-code"><span>Java</span></div>
                   <pre><code>List&lt;Person&gt; people;
 
