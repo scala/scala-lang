@@ -1,6 +1,6 @@
 ---
 optionId: collections-ops
-scastieLink: 'https://scastie.scala-lang.org/IRGiFXDhQPeOXYsW41FnCw'
+scastieLink: 'https://scastie.scala-lang.org/UUmbjLZMRim4kogxDWncmw'
 codeTitle: 'Functional programming with immutable collections'
 description: "High-level operations avoid the need for complex and error-prone loops."
 ---
@@ -10,7 +10,7 @@ val fruits =
   List("apple", "banana", "avocado", "papaya")
 
 val countsToFruits = // count how many 'a' in each fruit
-  fruits.groupBy(f => f.count(_ == 'a'))
+  fruits.groupBy(fruit => fruit.count(_ == 'a'))
 
 for (count, fruits) <- countsToFruits do
   println(s"with 'a' × $count = $fruits")

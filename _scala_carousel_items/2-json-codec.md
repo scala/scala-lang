@@ -2,7 +2,7 @@
 optionId: json-codec
 scastieLink: 'https://scastie.scala-lang.org/WNnVCqZeR1ufyXxyqsiqag'
 codeTitle: "Encode and decode custom data types to JSON"
-description: "The pluggable derivation system quickly gives custom types new capabilities."
+description: "The pluggable derivation system gives custom types new capabilities."
 ---
 
 ```scala
