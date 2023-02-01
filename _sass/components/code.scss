@@ -7,7 +7,7 @@
 }
 
 .code-background.dark {
-    background: #22272e;
+    background: $code-bg-color-dark;
 }
 
 .code-carousel {
@@ -71,12 +71,25 @@
 
         pre {
             margin: 0;
-            padding: 0 25px 10px 25px; // looks better with no JS
+            padding: 30px 25px 10px 25px;
 
             code {
                 padding: 0;
             }
         }
+
+        &.compact {
+            pre {
+                padding: 10px 25px; // no top padding, buttons appear inline
+            }
+            @include bp(small) {
+                // restore non compact padding on small screens
+                pre {
+                    padding: 30px 25px 10px 25px;
+                }
+            }
+        }
+
 
     }
 
@@ -146,6 +159,13 @@
 
 .code-element {
     margin-bottom: 20px;
+    position: relative;
+
+    .code-snippet-buttons {
+        position: absolute;
+        z-index: 60;
+        right: 0px;
+    }
 
     pre {
         margin-top: 0;
@@ -200,7 +220,7 @@
     color: $gray-darker;
     cursor: pointer;
     margin: 4px;
-    padding: 5px;
+    padding: 3px 5px;
 
     a {
         color: $gray-darker;
@@ -212,10 +232,15 @@
     }
 }
 
-.code-background.dark {
+.code-snippet-buttons.dark {
+
     .code-snippet-button {
-        background: #22272e;
+        background: $code-bg-color-dark;
         color: #fff;
+
+        &:hover {
+            background: $code-bg-color-dark-highlight;
+        }
 
         a {
             color: #fff;

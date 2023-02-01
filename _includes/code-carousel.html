@@ -1,7 +1,11 @@
 {% assign firstOption = true %}
 {% assign darkClassOpt = '' %}
+{% assign compactClassOpt = '' %}
 {% if page.darkmodeCode %}
   {% assign darkClassOpt = 'dark' %}
+{% endif %}
+{% if include.compact %}
+  {% assign compactClassOpt = 'compact' %}
 {% endif %}
 <div id="{{include.id}}" class="code-carousel">
   {% assign totalSize = 0 %}
@@ -22,9 +26,9 @@
   <div class="content-area">
     {% for example in include.collection %}
     <section id="{{example.optionId}}_content">
-      <div class="code-element {{darkClassOpt}}">
+      <div class="code-element {{darkClassOpt}} {{compactClassOpt}}">
         <div class="bar-code"><span>{{example.codeTitle}}</span></div>
-        <div class="code-background {{darkClassOpt}} code-snippet-buttons">
+        <div class=" {{darkClassOpt}} code-snippet-buttons {{compactClassOpt}}">
           <button class="code-snippet-button">
             <a href="{{ example.scastieLink }}" target="_blank">
               Run in playground <i class="fa-solid fa-play"></i>
