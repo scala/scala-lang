@@ -1,7 +1,7 @@
 ---
 ---
 
-// Sliding Panel and scala in a nutshell
+// Sliding Panel
 $(document).ready(function() {
     $('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function(e) {
         $('.navigation-menu,.navigation-fade-screen').toggleClass('is-visible');
@@ -22,8 +22,7 @@ $(document).ready(function() {
             var jButton = $(button);
             var expandButton = jButton.children('.button-more');
             if (expandButton.length > 0) {
-                var target = jButton.is('.scala-item__governance') ? expandButton : jButton;
-                target.click(function(event) {
+                expandButton.click(function(event) {
                     var activeCode = contents.eq(index2);
                     var others = allContents.not(activeCode);
                     allButtons.removeClass('active');

@@ -38,6 +38,8 @@ collections:
     output: false
   why_scala_items:
     output: false
+  scala_use_case_items:
+    output: false
   scala_carousel_items:
     output: false
   scala_items:

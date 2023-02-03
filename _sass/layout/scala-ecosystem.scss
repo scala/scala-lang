@@ -7,6 +7,8 @@
         // background: url("../img/frontpage/background-scala-ecosystem.jpg") no-repeat center bottom $gray-li;
         // @include image-size();
         background: $gray;
+        padding-bottom: 20px;
+
 
         .awesome-table {
             background: $gray-darker;
@@ -30,11 +32,11 @@
             }
 
             .awesome-items {
-                @include span-columns(8);
+                @include span-columns(12);
 
-                @include bp(large) {
-                    @include span-columns(12);
-                }
+                // @include bp(large) {
+                //     @include span-columns(12);
+                // }
 
                 h3 {
                     color: $gray-light;

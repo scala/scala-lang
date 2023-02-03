@@ -64,6 +64,18 @@ scalaIDEs:
     icon: /resources/img/frontpage/sublime.png
     metals: true
     url: "https://scalameta.org/metals/docs/editors/sublime.html"
+
+# Why Scala
+whyScalaTitle: "Why Scala?"
+
+# Scala use cases
+useCaseTitle: "Proven Use Cases"
+useCaseIntroduction: "People around the world trust Scala to build useful software, some of the most popular domains include:"
+
 # Scala ecosystem
 ecosystemTitle: "Scala's libraries unlock your potential"
+
+# Scala users
+scalaUsersTitle: "Users of Scala"
+scalaUsersIntroduction: "Scala is used by thousands of developers, students, hobbyists and teachers around the world. See why you should try it."
 ---

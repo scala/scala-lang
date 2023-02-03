@@ -24,9 +24,9 @@
         &:before {
             content: "";
             display: block;
-            height: 1px;
+            height: 5px;
             position: absolute;
-            top: 50%;
+            top: 45%;
             width: 100%;
             background: $base-border-color-white;
         }
