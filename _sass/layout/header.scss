@@ -7,7 +7,7 @@
     background: $gray-darker;
 
     .new-on-the-blog {
-      background: rgba($gray-darker, 0.8);
+      background: rgba($banner-notice-bg, 0.8);
       text-align: center;
       padding: 8px 0;
       color: #fff;
@@ -44,7 +44,7 @@
     &.header-home {
         background: none;
         .header-background {
-            background: linear-gradient($brand-secondary, 40%, $gray-darker);
+            background: $header-bg;
             position: relative;
             padding-bottom: 120px;
         }

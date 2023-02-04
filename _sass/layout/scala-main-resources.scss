@@ -4,7 +4,7 @@
 
 .scala-main-resources {
     height: 105px;
-    background: $gray-darker;
+    background: $banner-bg;
     position: relative;
 
     .resources {
@@ -82,9 +82,11 @@
                     margin-right: 7px;
                     font-weight: $font-bold;
 
+                    color: rgba(#fff, 0.90);
+
                     a {
-                        color: rgba(#fff, 0.90);
                         font-size: $font-size-medium;
+                        color: rgba(#fff, 0.90);
 
                         &:active,
                         &:focus,
@@ -122,7 +124,7 @@
             @include justify-content(center);
 
             .circle-solid {
-                background: $gray-darker;
+                background: $gray-darkest;
                 width: 185px;
                 height: 185px;
                 border-radius: 100%;
