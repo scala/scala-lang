@@ -1,8 +1,9 @@
 ---
-category: blog-detail
+layout: blog-detail
 post-type: blog
 by: Sébastien Doeraene
 title: "10 years of Scala.js"
+description: An overview and celebration of the past 10 years of Scala.js
 ---
 
 10 years ago, on February 5, 2013, we made the [first commit to Scala.js](https://github.com/scala-js/scala-js/commit/9ad7627c2418e5d345375705ca087a60e3aa2c22).
