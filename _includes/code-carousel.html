@@ -1,0 +1,72 @@
+{% assign firstOption = true %}
+{% assign darkClassOpt = '' %}
+{% assign compactClassOpt = '' %}
+{% if page.darkmodeCode %}
+  {% assign darkClassOpt = 'dark' %}
+{% endif %}
+{% if include.compact %}
+  {% assign compactClassOpt = 'compact' %}
+{% endif %}
+<div id="{{include.id}}" class="code-carousel">
+  {% assign totalSize = 0 %}
+  {% for example in include.collection %}
+  <input
+    type="radio"
+    name="{{include.id}}_tabs"
+    id="{{example.optionId}}_description"
+    data-target="{{example.optionId}}"
+    class="code-carousel_control"
+    hidden
+    aria-hidden="true"
+    {% if firstOption %}checked{% endif %}
+  >
+  {% assign firstOption = false %}
+  {% assign totalSize = totalSize | plus: 1 %}
+  {% endfor %}
+  <div class="content-area">
+    {% for example in include.collection %}
+    <section id="{{example.optionId}}_content">
+      <div class="code-element {{darkClassOpt}} {{compactClassOpt}}">
+        <div class="bar-code"><span>{{example.codeTitle}}</span></div>
+        <div class=" {{darkClassOpt}} code-snippet-buttons {{compactClassOpt}}">
+          <button class="code-snippet-button">
+            <a href="{{ example.scastieLink }}" target="_blank">
+              Run in playground <i class="fa-solid fa-play"></i>
+            </a>
+          </button>
+        </div>
+        <div class="code-snippet-area">
+          <div class="progress-label code-background {{darkClassOpt}}">
+            {{forloop.index}}<span class="progress-out-of"> /{{totalSize}}</span>
+          </div>
+          {% if forloop.first %}
+            {% assign previousIdx = include.collection.length | minus: 1 %}
+          {% else %}
+            {% assign previousIdx = forloop.index0 | minus: 1 %}
+          {% endif %}
+          {% if forloop.last %}
+            {% assign nextIdx = 0 %}
+          {% else %}
+            {% assign nextIdx = forloop.index %}
+          {% endif %}
+          <div class="arrow-switcher arrow-switcher_left {{darkClassOpt}}">
+            <label for="{{include.collection[previousIdx].optionId}}_description">
+              <i class="fa-solid fa-chevron-left"></i>
+            </label>
+          </div>
+          <div class="arrow-switcher arrow-switcher_right {{darkClassOpt}}">
+            <label for="{{include.collection[nextIdx].optionId}}_description">
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+          </div>
+          <div class="code-background {{darkClassOpt}}">
+            <!-- the code snippet should be a raw markdown code block -->
+            {{example.content}}
+          </div>
+        </div>
+      </div>
+      <p>{{example.description}}</p>
+    </section>
+    {% endfor %}
+  </div>
+</div>

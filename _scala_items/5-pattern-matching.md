@@ -20,7 +20,7 @@ deconstructs the arguments of a <code>Node</code>.
                                 </div>
 
                                 <div class="scala-code">
-                                    <div class="code-element">
+                                    <div class="code-element dark">
                                         <div class="bar-code"><span>Pattern matching</span></div>
                                         <pre><code>// Define a set of case classes for representing binary trees.
 sealed abstract class Tree

@@ -7,7 +7,7 @@
     background: $gray-darker;
 
     .new-on-the-blog {
-      background: rgba($gray-darker, 0.8);
+      background: rgba($banner-notice-bg, 0.8);
       text-align: center;
       padding: 8px 0;
       color: #fff;
@@ -44,20 +44,9 @@
     &.header-home {
         background: none;
         .header-background {
-            background: rgba($gray-darker, 0.45);
+            background: $header-bg;
             position: relative;
-            padding-bottom: 150px;
-
-            &:before {
-                content: "";
-                position: absolute;
-                background: url("../img/frontpage/background-header-home.jpg") no-repeat center center;
-                @include image-size();
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-            }
+            padding-bottom: 120px;
         }
     }
 }

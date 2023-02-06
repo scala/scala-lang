@@ -323,6 +323,40 @@ $(document).ready(function () {
   }
 });
 
+$(document).ready(function () {
+  // set up automatic switching of code carousel
+  $(".code-carousel").each(function () {
+    var carousel = this;
+    var inputs = [];
+    $(carousel).children("input.code-carousel_control").each(function () {
+      inputs.push(this);
+    });
+
+    // if there is more than one section, set up automatic switching
+    if (inputs.length > 1) {
+
+      var cancelled = false;
+
+      var index = inputs.findIndex(input => input.checked);
+
+      // switch every 8 seconds while the page is visible and not cancelled
+      const intervalHandle = setInterval(() => {
+        if (!document.hidden && !cancelled) {
+          const nextIndex = (index + 1) % inputs.length;
+          inputs[nextIndex].checked = true;
+          index = nextIndex;
+        }
+      }, 8000);
+
+      carousel.addEventListener("click", function cancelTicker() {
+        carousel.removeEventListener("click", cancelTicker);
+        cancelled = true;
+        clearInterval(intervalHandle);
+      });
+    }
+  });
+});
+
 var image = { width: 1680, height: 1100 };
 var target = { x: 1028, y: 290 };
 

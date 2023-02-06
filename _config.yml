@@ -36,6 +36,8 @@ defaults:
 collections:
   install_tabs:
     output: false
+  scala_carousel_items:
+    output: false
   scala_items:
     output: false
   online_courses:

@@ -1,26 +1,255 @@
 // CODE
 //------------------------------------------------
 //------------------------------------------------
+
+.code-background {
+    background: #fdfdf7;
+}
+
+.code-background.dark {
+    background: $code-bg-color-dark;
+}
+
+.code-carousel {
+
+    .code-carousel_control {
+        display: none;
+    }
+
+    .progress-label {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        color: #222;
+
+        z-index: 40;
+
+        padding-left: 3px;
+
+        .progress-out-of {
+            color: #666;
+            font-size: $font-size-xsmall;
+        }
+
+        font-size: $font-size-small;
+    }
+
+    .progress-label.dark {
+        color: #fff;
+
+        .progress-out-of {
+            color: #aaa;
+        }
+    }
+
+    .content-area {
+        width: 100%;
+
+        section {
+            position: absolute;
+            top: -999em;
+            left: -999em;
+
+            pre {
+                opacity: 0;
+            }
+
+            transition: 400ms;
+        }
+
+        p {
+            text-align: center;
+            font-size: $font-size-small;
+            color: $base-font-color-inverse;
+        }
+    }
+
+
+    .code-element {
+        margin: 0 0 5px 0;
+        font-size: $font-size-medium;
+
+        pre {
+            margin: 0;
+            padding: 30px 25px 10px 25px;
+
+            code {
+                padding: 0;
+            }
+        }
+
+        &.compact {
+            pre {
+                padding: 10px 25px; // no top padding, buttons appear inline
+            }
+            @include bp(small) {
+                // restore non compact padding on small screens
+                pre {
+                    padding: 30px 25px 10px 25px;
+                }
+            }
+        }
+
+
+    }
+
+    .arrow-switcher {
+        position: absolute; // so we can position the buttons
+        color: #444;
+        font-size: $font-size-carousel-arrow;
+        height: 100%;
+
+        z-index: 50;
+
+        label {
+            @include display(flex);
+            @include flex-direction(column);
+            @include justify-content(center);
+            height: 100%;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(#666, 0.3);
+            }
+        }
+    }
+
+    .arrow-switcher.dark {
+        color: #fff;
+
+        label {
+            &:hover {
+                background: rgba(#fff, 0.3);
+            }
+        }
+    }
+
+    .arrow-switcher_right {
+        right: 0px;
+
+        label {
+            padding: 5px 5px 5px 25px;
+        }
+    }
+
+    .arrow-switcher_left {
+        left: 0px;
+
+        label {
+            padding: 5px 25px 5px 5px;
+        }
+    }
+
+    input:checked:nth-child(1)~.content-area>section:nth-child(1),
+    input:checked:nth-child(2)~.content-area>section:nth-child(2),
+    input:checked:nth-child(3)~.content-area>section:nth-child(3),
+    input:checked:nth-child(4)~.content-area>section:nth-child(4),
+    input:checked:nth-child(5)~.content-area>section:nth-child(5),
+    input:checked:nth-child(6)~.content-area>section:nth-child(6),
+    input:checked:nth-child(7)~.content-area>section:nth-child(7),
+    input:checked:nth-child(8)~.content-area>section:nth-child(8),
+    input:checked:nth-child(9)~.content-area>section:nth-child(9) {
+        position: static;
+        pre {
+            opacity: 1;
+        }
+    }
+
+}
+
 .code-element {
     margin-bottom: 20px;
+    position: relative;
+
+    .code-snippet-buttons {
+        position: absolute;
+        z-index: 60;
+        right: 0px;
+    }
 
     pre {
         margin-top: 0;
     }
 
     code {
-        padding: 20px;
+        // style that would be injected by hljs when JS is enabled
+        display: block;
+        font-family: 'Consolas';
+        border: none;
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
     }
 
     .bar-code {
         background: #B4BBBD;
         text-align: center;
         padding: 2px 0;
-        font-size: $font-size-small;
+        font-size: $font-size-medium;
         font-weight: $font-bold;
         min-height: 26px;
         @include border-radius($border-radius-base $border-radius-base 0 0);
 
+    }
+}
+
+.code-element.dark {
+    code {
+        color: #adbac7;
+    }
+
+    .bar-code {
+        background: #404a4e;
+        color: #ccc;
+    }
+}
+
+.code-snippet-buttons {
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-end);
+}
+
+.code-snippet-button {
+    // style shared by _includes/code-snippet.html and _includes/code-carousel.html
+    border: $base-border-gray;
+    background: #fff;
+    border-radius: 3px;
+    font-size: $font-size-small;
+    color: $gray-darker;
+    cursor: pointer;
+    margin: 4px;
+    padding: 3px 5px;
+
+    a {
+        color: $gray-darker;
+
+        &:hover {
+            color: $gray-darker;
+            text-decoration: none;
+        }
+    }
+}
+
+.code-snippet-buttons.dark {
+
+    .code-snippet-button {
+        background: $code-bg-color-dark;
+        color: #fff;
+
+        &:hover {
+            background: $code-bg-color-dark-highlight;
+        }
+
+        a {
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -45,13 +274,5 @@
         position: absolute; // so we can position the buttons
         right: 3px;
         top: 5px;
-
-        button {
-            border: none;
-            background: #fff;
-            font-size: $font-size-medium;
-            color: $gray-darker;
-            cursor: pointer;
-        }
     }
 }

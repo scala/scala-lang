@@ -1,15 +1,23 @@
 // INNER TEXT
 //------------------------------------------------
 //------------------------------------------------
-.inner-text {
-    position: relative;
 
+.col-lg-6 {
+    @include span-columns(6);
+
+    @include bp(large) {
+        @include span-columns(12);
+        padding-bottom: 8px;
+    }
+}
+
+.inner-text {
     h1 {
         font-family: $base-font-family;
-        font-size: 2.813rem;
+        font-size: min(2.85vw, 2.21rem);
         font-weight: $font-black;
         color: #fff;
-        margin: $padding-medium 0 ($padding-medium / 2) 0;
+        margin: $padding-small 20px $padding-small 0;
     }
 
     p {
@@ -18,17 +26,14 @@
         margin-bottom: $padding-medium;
     }
 
-    @include span-columns(8);
     @include bp(large) {
-        @include span-columns(12);
-
         .button {
             margin-bottom: 3px;
         }
 
         h1 {
-            font-size: 2.213rem;
-            margin: 0 0 ($padding-medium / 2) 0;
+            font-size: 2.5rem;
+            margin: ($padding-medium / 2) 0;
         }
     }
 }

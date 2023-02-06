@@ -32,28 +32,27 @@
             {% endfor %}
           </ul>
         </nav>
+      </div>
+      <div class="wrap">
         <!-- Inner Text -->
-        <div class="inner-text">
-          <h1>{{page.headerTitle}}</h1>
-          <p>{{page.headerSubtitle}}</p>
-          {% for release in site.data.scala-releases %}
-          {% if release.category == "current_version" %}
-          <a href="/download/{{ release.version }}.html" class="button">
-           Scala {{ release.version }}
-          </a>
-          {% endif %}
-          {% endfor %}
-          <a href="/download/all.html" class="button">
-            All Releases
-          </a>
-        </div>
-        <div id="position-marker" class="marker">
-          <div class="info-marker">
-              <span class="arrow">
-              <img src="/resources/img/frontpage/arrow.png" alt="pushpin">
-              </span>
-            {{site.data.common.texts.frontpageMarker}}
+        <div class="col-lg-6">
+          <div class="inner-text">
+            <h1>{{page.headerTitle}}</h1>
+            <p>{{page.headerSubtitle}}</p>
+            {% for release in site.data.scala-releases %}
+            {% if release.category == "current_version" %}
+            <a href="/download/{{ release.version }}.html" class="button">
+              Scala {{ release.version }}
+            </a>
+            {% endif %}
+            {% endfor %}
+            <a href="/download/all.html" class="button">
+              All Releases
+            </a>
           </div>
+        </div>
+        <div class="col-lg-6">
+          {% include code-carousel.html id='scala-main-carousel' collection=site.scala_carousel_items compact=true %}
         </div>
       </div>
     </div>
