@@ -157,6 +157,7 @@ Community:
 
 * [Scala Times](https://scalatimes.com) weekly Scala newspaper
 * [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala) weekly Scala newspaper
+* [Scala News](https://www.scalanews.net) source for Scala news and blog feeds
 * [Tooling Talks](https://www.tooling-talks.com) A series of talks about Scala and tooling.
 * [The Scala Logs](https://twitter.com/thescalalogs) Podcast with interviews with developers, open source contributors, subject matter experts, and the like
 
