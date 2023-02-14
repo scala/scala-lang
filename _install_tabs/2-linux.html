@@ -4,7 +4,10 @@ tabLabel: Linux
 ---
 <div class="text-step wrap-inline">
   <div class="wrap">
-    <p>Run the following command in your terminal, following the on-screen instructions:</p>
-    {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.linux %}
+    <p>Run the following command in your terminal, following the on-screen instructions.</p>
+    <p>On the x86-64 architecture:</p>
+    {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.linux-x86-64 %}
+    <p>Otherwise, on the ARM64 architecture:</p>
+    {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.linux-arm64 %}
   </div>
 </div>
