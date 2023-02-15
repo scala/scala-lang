@@ -6,10 +6,13 @@ tabLabel: macOS
   <div class="wrap">
     <p>Run the following command in your terminal, following the on-screen instructions:</p>
     {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-brew %}
-    {% assign homebrewAlt = "Alternatively, if you don't use Homebrew:" %}
+    {% assign homebrewAlt = "Alternatively for Apple Silicon, or if you don't use Homebrew:" %}
     {% capture homebrewDetail %}
     <div class="wrap-narrow">
-      {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-default %}
+      <p>On the Apple Silicon (M1, M2, …) architecture:</p>
+      {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-arm64 %}
+      <p>Otherwise, on the x86-64 architecture:</p>
+      {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-x86-64 %}
     </div>
     {% endcapture %}
     {% include alt-details.html
