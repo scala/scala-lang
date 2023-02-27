@@ -26,7 +26,7 @@ jobs:
       - name: Proofing (local links only)
         if: github.event_name == 'pull_request'
         run: |
-          bundle exec htmlproofer ./_site/ --disable-external --only-4xx --empty-alt-ignore --allow-hash-href
+          bundle exec htmlproofer ./_site/ --disable-external=true --only-4xx --ignore-empty-alt --allow-hash-href
       - name: Proofing (all links)
         if: github.event_name != 'pull_request'
         run: |
