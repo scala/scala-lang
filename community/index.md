@@ -90,7 +90,7 @@ International chat rooms are available as well:
 * **[scala/cn](https://gitter.im/scala/cn)** (Gitter)
 * **[scala/fr](https://gitter.im/scala/fr)** (Gitter)
 * **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
-* **[scalajp](https://gitter.im/scalajp/)** (Gitter)
+* **[scalajp/public](https://gitter.im/scalajp/public)** (Gitter)
 * **[scala_ru](https://t.me/scala_ru)** (Telegram)
 * **[Scala Ukraine](https://t.me/scala_ukraine)** (Telegram)
 
