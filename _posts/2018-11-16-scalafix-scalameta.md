@@ -145,7 +145,7 @@ Cloud Dataflow.
 [Alessandro Marrella](https://github.com/amarrella) also contributed migration
 rewrites for http4s, a typeful, functional, streaming HTTP library for Scala.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New releases:<br>* v0.18.21: bugfix<br>* v0.20.0-M2: too much for a tweet. Notably, a scalafix to ease upgrading from v0.18.<br>* v0.20.0 is targeted for November 12. <a href="https://t.co/d0VB3NPC5A">https://t.co/d0VB3NPC5A</a></p>&mdash; http4s (@http4s) <a href="https://twitter.com/http4s/status/1059840385021853698?ref_src=twsrc%5Etfw">November 6, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">New releases:<br>* v0.18.21: bugfix<br>* v0.20.0-M2: too much for a tweet. Notably, a scalafix to ease upgrading from v0.18.<br>* v0.20.0 is targeted for November 12. </p>&mdash; http4s (@http4s) <a href="https://twitter.com/http4s/status/1059840385021853698?ref_src=twsrc%5Etfw">November 6, 2018</a></blockquote>
 
 We hope that Scalafix rules will help reduce the pain when upgrading library
 dependencies with breaking changes.

@@ -204,7 +204,7 @@ Issue(s) | Commit | Message
 [SI-7039](https://issues.scala-lang.org/browse/SI-7039) | [8ae0e2a](https://github.com/scala/scala/commit/8ae0e2a) | <notextile>SI-7039 unapplySeq result type independent of subpattern count</notextile>
 [SI-5833](https://issues.scala-lang.org/browse/SI-5833) | [0574172](https://github.com/scala/scala/commit/0574172) | <notextile>SI-5833 Fixes tail-of-Nil problem in RefinedType#normalizeImpl</notextile>
 [SI-6667](https://issues.scala-lang.org/browse/SI-6667) | [b67f8e5](https://github.com/scala/scala/commit/b67f8e5) | <notextile>[nomerge] SI-6667 Demote a new ambiguity error to a lint warning.</notextile>
-[SI-6017](https://issues.scala-lang.org/browse/SI-6017) | [0e8d8c7](https://github.com/scala/scala/commit/0e8d8c7) | <notextile>SI-6017 Scaladoc: Show all letters without dangling links</notextile>
+[SI-6017](https://issues.scala-lang.org/browse/SI-6017) | [0e8d8c7](https://github.com/scala/scala/commit/0e8d8c735e9a4590d3f74b549b8453f46335709a) | <notextile>SI-6017 Scaladoc: Show all letters without dangling links</notextile>
 [SI-6017](https://issues.scala-lang.org/browse/SI-6017) | [3f0bce9](https://github.com/scala/scala/commit/3f0bce9) | <notextile>SI-6017 Generate Scaladoc's index links in Scala side</notextile>
 [SI-6578](https://issues.scala-lang.org/browse/SI-6578) | [a6137d1](https://github.com/scala/scala/commit/a6137d1) | <notextile>Fix SI-6578. Deprecated `askType` because of possible race conditions in type checker.</notextile>
 [SI-7008](https://issues.scala-lang.org/browse/SI-7008) | [f1701f7](https://github.com/scala/scala/commit/f1701f7) | <notextile>SI-7008 @throws annotations are now populated in reflect</notextile>
@@ -471,7 +471,7 @@ sha | Title
 [8ae0e2a](https://github.com/scala/scala/commit/8ae0e2a) | <notextile>SI-7039 unapplySeq result type independent of subpattern count</notextile>
 [0574172](https://github.com/scala/scala/commit/0574172) | <notextile>SI-5833 Fixes tail-of-Nil problem in RefinedType#normalizeImpl</notextile>
 [b67f8e5](https://github.com/scala/scala/commit/b67f8e5) | <notextile>[nomerge] SI-6667 Demote a new ambiguity error to a lint warning.</notextile>
-[0e8d8c7](https://github.com/scala/scala/commit/0e8d8c7) | <notextile>SI-6017 Scaladoc: Show all letters without dangling links</notextile>
+[0e8d8c7](https://github.com/scala/scala/commit/0e8d8c735e9a4590d3f74b549b8453f46335709a) | <notextile>SI-6017 Scaladoc: Show all letters without dangling links</notextile>
 [3f0bce9](https://github.com/scala/scala/commit/3f0bce9) | <notextile>SI-6017 Generate Scaladoc's index links in Scala side</notextile>
 [a6137d1](https://github.com/scala/scala/commit/a6137d1) | <notextile>Fix SI-6578. Deprecated `askType` because of possible race conditions in type checker.</notextile>
 [02dd4c9](https://github.com/scala/scala/commit/02dd4c9) | <notextile>reflecting @throws defined in Scala code</notextile>

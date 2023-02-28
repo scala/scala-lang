@@ -14,7 +14,7 @@ us to work on compiler/build performance:
 
 <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">
 If the Scala Center had 1 engineer free for 1 month what is the most meaningful thing we could do to help your day-to-day Scala development?
-</p>&mdash; Scala (@scala_lang) <a href="https://twitter.com/scala_lang/status/928242963091808256">8th November 2017</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>&mdash; Scala (@scala_lang) <a href="https://twitter.com/scala_lang/status/928242963091808256">8th November 2017</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## What is bloop?
 
@@ -67,7 +67,7 @@ see a significant difference.
 
 <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr"> Scala Tooling has got to
 a point where people say "compiler performance" and what they really mean is "sbt performance".
-</p>&mdash; Jorge (@jvican) <a href="https://twitter.com/jvican/status/928601470232129536">9th November 2017</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>&mdash; Jorge (@jvican) <a href="https://twitter.com/jvican/status/928601470232129536">9th November 2017</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Next, we introduce you some numbers that compare compilation times between
 `sbt` and `bloop` in different medium-to-large open-source projects. In all of
