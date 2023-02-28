@@ -151,7 +151,7 @@ fast startup time!
   &mdash; Ólafur Páll Geirsson (@olafurpg)
   <a href="https://twitter.com/olafurpg/status/857559907876433920">April 27, 2017</a>
 </blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## What to expect for Scala Native 0.3?
 

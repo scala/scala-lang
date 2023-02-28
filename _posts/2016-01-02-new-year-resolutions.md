@@ -40,7 +40,7 @@ Unfortunately, most of us fall all too easily into the complexity
 trap, as Alex Payne's tweet sums it up very nicely.
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">“Complexity is like a bug light for smart people. We can&#39;t resist it, even though we know it&#39;s bad for us.” <a href="https://web.archive.org/web/20181125011301/http://idlewords.com/talks/website_obesity.htm">http://idlewords.com/talks/website_obesity.htm</a></p>&mdash; Alex Payne (@al3x) January 1, 2016</blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I have been as guilty of complication as everybody else. Is
 `CanBuildFrom` the most appropriate solution to deal with the
