@@ -34,6 +34,7 @@ apiDocs:
 scalaBackends:
   - icon: /resources/img/frontpage/java-logo.png
     description: the Java Virtual Machine
+    link: https://scala-lang.org/
   - icon: /resources/img/frontpage/js-logo.png
     description: with JavaScript in your browser
     link: https://www.scala-js.org/
