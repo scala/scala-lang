@@ -2,7 +2,7 @@
 category: blog-detail
 post-type: blog
 by: Johanna Reichen, Scala Center
-title: "Contribution equals Impact – Towards a Responsible, Sustainable, and Resilient Open Source Ecosystem for Scala"
+title: "Contribution Equals Impact – Towards a Responsible, Sustainable, and Resilient Open Source Ecosystem for Scala"
 ---
 Prepare yourselves for a series of exciting blog posts!  
 
