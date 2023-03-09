@@ -108,4 +108,9 @@
   location:
     longitude: 2.5876883468165737
     latitude: 48.84274497346383
+- institution: Université Sorbonne Paris Nord, France
+  name: Pierre Boudes
+  location:
+    longitude: 2.34003
+    latitude: 48.95888
     
