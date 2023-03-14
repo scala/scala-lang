@@ -50,6 +50,8 @@
   links:
     - title: GitHub
       url: "https://github.com/scala"
+    - title: Mastodon
+      url: https://fosstodon.org/@scala_lang
     - title: Twitter
       url: "https://twitter.com/scala_lang"
     - title: Discord

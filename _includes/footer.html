@@ -5,7 +5,12 @@
           <ul class="{{item.class}}">
             <li><h3>{{item.title}}</h3></li>
             {% for link in item.links %}
-              <li><a href="{{link.url}}">{{link.title}}</a></li>
+              {% if link.title == "Mastodon" %}
+                 <!-- special case Manstodon to validate with rel="me" -->
+                <li><a rel="me" href="{{link.url}}">{{link.title}}</a></li>
+              {% else %}
+                <li><a href="{{link.url}}">{{link.title}}</a></li>
+              {% endif %}
             {% endfor %}
           </ul>
         {% endfor %}
