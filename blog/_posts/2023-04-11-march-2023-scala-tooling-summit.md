@@ -6,7 +6,7 @@ title: March 2023 - Scala Tooling Summit
 description: A recap of the recent Scala Tooling Summit in Lausanne, Switzerland.
 ---
 
-<img style="max-height: 350px; display: block; margin: auto;" src="{{ site.baseurl }}/resources/img/march-2023-tooling-summit-stairs.jpg" alt="Scala stairs with people standing on the stairs">
+<img style="max-height: 350px; display: block; margin: auto; width: auto;" src="{{ site.baseurl }}/resources/img/march-2023-tooling-summit-stairs.jpg" alt="Scala stairs with people standing on the stairs">
 
 Tooling is a pivotal part of the developer experience. Often when someone asks
 about a new language or how another developer enjoys working in a certain
