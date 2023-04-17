@@ -227,4 +227,4 @@ The [Phil Bagwell Memorial Scala Community Award](./phil-bagwell-award.html) is 
 
 Read-only archives of these retired groups remain available.
 
- * [scala-user](https://groups.google.com/g/scala-user), [scala-announce](https://groups.google.com/g/scala-announce), [scala-language](https://groups.google.com/g/scala-language), [scala-debate](https://groups.google.com/g/scala-debate), [scala-internals](https://groups.google.com/g/scala-internals), [scala-tools](https://groups.google.com/g/scala-tools), [scala-sips](https://groups.google.com/g/scala-sips)
+ * [scala-user](https://groups.google.com/g/scala-user), [scala-announce](https://groups.google.com/g/scala-announce), [scala-language](https://groups.google.com/g/scala-language), [scala-debate](https://groups.google.com/g/scala-debate), [scala-internals](https://groups.google.com/g/scala-internals), [scala-sips](https://groups.google.com/g/scala-sips)
