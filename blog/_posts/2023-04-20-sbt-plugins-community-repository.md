@@ -41,9 +41,10 @@ steps, everything was back to normal.
 
 ## Current State
 
-The situation is now back to normal: the read-only repository `repo.scala-sbt.org` backed
-by an Artifactory instance works again and all the Scala builds should be able to resolve
-their plugin dependencies as before.
+Thanks to the efforts of Eugene Yokota and the support from the company JFrog, the situation
+is now back to normal: the read-only repository `repo.scala-sbt.org` backed by an Artifactory
+instance works again and all the Scala builds should be able to resolve their plugin
+dependencies as before.
 
 However, as mentioned by Seth Tisue in [a
 comment](https://github.com/sbt/sbt/issues/7202#issuecomment-1500220344), the event
@@ -71,10 +72,10 @@ Last, it also hosts old releases of sbt (before the 1.x era) and Play framework.
 
 For the record, here is the exhaustive list of URLs and their respective content:
 
-- https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases - sbt plugins for sbt 1.x, 0.13.x, 0.12.x etc.
-- https://repo.typesafe.com/typesafe/ivy-releases - sbt main artifacts prior to sbt 1.x, and other artifacts such as Play.
-- https://repo.scala-sbt.org/scalasbt/debian - sbt DEB installers.
-- https://repo.scala-sbt.org/scalasbt/rpm - sbt RPM installers.
+- `https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases` - sbt plugins for sbt 1.x, 0.13.x, 0.12.x etc.
+- `https://repo.typesafe.com/typesafe/ivy-releases` - sbt main artifacts prior to sbt 1.x, and other artifacts such as Play.
+- `https://repo.scala-sbt.org/scalasbt/debian` - sbt DEB installers.
+- `https://repo.scala-sbt.org/scalasbt/rpm` - sbt RPM installers.
 
 ## Next Steps
 
