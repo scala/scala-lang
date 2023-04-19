@@ -11,8 +11,8 @@ and outline what we can do to avoid such problems in the future.
 
 ## The Incident
 
-On the 7th of April 2023, many projects of the Scala ecosystem could not anymore resolve
-sbt plugins from the community repository `repo.scala-sbt.org` (examples
+On the 7th of April 2023, many projects of the Scala ecosystem could not resolve
+sbt plugins from the community repository `repo.scala-sbt.org` anymore (examples
 [here](https://github.com/sbt/sbt-dynver/issues/239#issuecomment-1499791434),
 [here](https://github.com/playframework/playframework/issues/11675#issuecomment-1499869916),
 [here](https://github.com/sbt/sbt/issues/7204), and
@@ -23,12 +23,12 @@ sbt plugins from the community repository `repo.scala-sbt.org` (examples
 To understand what happened, here is some background information. sbt plugins are packaged
 as modules published to Ivy or Maven repositories. Historically, sbt plugins used to be
 published primarily to the sbt community repository hosted on Bintray. However, in 2021,
-JFrog has [sunsetted the Bintray
+JFrog [sunsetted the Bintray
 service](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/).
-Since then, JFrog has granted the Scala Center a cloud-hosted Artifactory instance for free.
-As it was explained in the [release notes of sbt
+Since then, JFrog has provided the Scala Center a cloud-hosted Artifactory instance for free.
+As explained in the [release notes of sbt
 1.5.1](https://eed3si9n.com/bintray-to-jfrog-artifactory-migration-status-and-sbt-1.5.1),
-this Artifactory instance has been used as a read-only repository to host all the sbt
+this Artifactory instance is used as a read-only repository to host all the sbt
 plugins that were published to the community repository at that time, but the recommendation
 to plugin authors was to switch to the Maven Central repository.
 
@@ -52,7 +52,7 @@ highlighted a weakness in the Scala ecosystem infrastructure.
 
 In practice, what do we rely on the sbt community repository for?
 
-The sbt community repository is primarily used for two purposes:
+The sbt community repository has two primary purposes:
 
 1. It hosts “old” versions of sbt plugins that may still be used today in Scala projects.
    It is important to note that those sbt plugins are not necessarily that old. Some of
@@ -81,7 +81,7 @@ solutions.
 [Matthias Kurz](https://github.com/sbt/sbt/issues/7202#issuecomment-1500657923)
 looked at the sbt plugins that are used in his machine and that are currently
 hosted only on `repo.scala-sbt.org`. He then created issues on the corresponding
-GitHub repositories to migrate them to the Maven Central, and even
+GitHub repositories to migrate them to Maven Central, and even
 submitted pull requests to perform that migration for some of those projects.
 
 [Johannes Rudolph](https://github.com/spray/sbt-revolver/issues/100#issuecomment-1500841604),
@@ -89,6 +89,9 @@ submitted pull requests to perform that migration for some of those projects.
 and [Chris Kipp](https://github.com/sbt/sbt-license-report/pull/52)
 followed up by migrating the projects `sbt-revolver`, `sbt-sdlc`, and
 `sbt-license-report` to Maven Central.
+
+We encourage every sbt plugin maintainer to publish their releases to Maven Central
+if this is not the case already.
 
 Eugene Yokota, who is also the [community
 representative](https://github.com/scalacenter/advisoryboard/pull/120) of the
