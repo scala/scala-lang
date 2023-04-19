@@ -5,13 +5,13 @@ by: Julien Richard-Foy, Scala Center
 title: "sbt Plugins Community Repository"
 ---
 
-The 7th of April 2023, many Scala builds stopped working because an outage affected the sbt community repository.
-In this blog post, we explain what the sbt community repository is and what it stores, we report on the incident
-that happened, and we outline what we can do to avoid such problems in the future.
+On the 7th of April 2023, many Scala builds stopped working because an outage affected the sbt community repository.
+In this blog post, we explain what the sbt community repository is and what it stores, report on the incident,
+and outline what we can do to avoid such problems in the future.
 
 ## The Incident
 
-The 7th of April 2023, many projects of the Scala ecosystem could not anymore resolve
+On the 7th of April 2023, many projects of the Scala ecosystem could not anymore resolve
 sbt plugins from the community repository `repo.scala-sbt.org` (examples
 [here](https://github.com/sbt/sbt-dynver/issues/239#issuecomment-1499791434),
 [here](https://github.com/playframework/playframework/issues/11675#issuecomment-1499869916),
@@ -48,12 +48,7 @@ dependencies as before.
 
 However, as mentioned by Seth Tisue in [a
 comment](https://github.com/sbt/sbt/issues/7202#issuecomment-1500220344), the event
-highlighted a weakness in the Scala ecosystem infrastructure, which is well illustrated by
-this comic:
-
-<p style="text-align: center">
-  <img style="max-width: 385px" src="https://imgs.xkcd.com/comics/dependency.png" alt="Dependency" />
-</p>
+highlighted a weakness in the Scala ecosystem infrastructure.
 
 In practice, what do we rely on the sbt community repository for?
 
@@ -62,13 +57,13 @@ The sbt community repository is primarily used for two purposes:
 1. It hosts “old” versions of sbt plugins that may still be used today in Scala projects.
    It is important to note that those sbt plugins are not necessarily that old. Some of
    them are stable and they simply didn't get a new release in the past two years,
-   meaning that they had no chances to migrate to the Central Maven repository.
+   meaning that they had no chance to migrate to the Central Maven repository.
 2. It also hosts the Linux packages (deb and rpm) of sbt releases. Note that that part
-   is not read-only: we still publish Linux packages of new sbt releases there. These
+   is not read-only: Eugene Yokota still publishes new sbt releases there. These
    packages are used by all the Scala developers who install `sbt` via a Linux package
    manager (and by many Docker images that provide `sbt`).
 
-Last, it also hosts old releases of sbt (before the 1.x era) and Play framework.
+Lastly, it also hosts old releases of sbt (before the 1.x era) and Play framework.
 
 For the record, here is the exhaustive list of URLs and their respective content:
 
@@ -79,7 +74,7 @@ For the record, here is the exhaustive list of URLs and their respective content
 
 ## Next Steps
 
-The outage lasted less than 24 hours and yet it impacted many developers. In
+The outage lasted less than 24 hours and impacted many developers. In
 response to the incident, several members of the community started investigating
 solutions.
 
