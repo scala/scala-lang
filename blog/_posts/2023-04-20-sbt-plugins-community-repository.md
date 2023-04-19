@@ -30,7 +30,7 @@ As it was explained in the [release notes of sbt
 1.5.1](https://eed3si9n.com/bintray-to-jfrog-artifactory-migration-status-and-sbt-1.5.1),
 this Artifactory instance has been used as a read-only repository to host all the sbt
 plugins that were published to the community repository at that time, but the recommendation
-to plugin authors was to switch to the Central Maven repository.
+to plugin authors was to switch to the Maven Central repository.
 
 In practice, the Artifactory instance sponsored by JFrog expires automatically after a
 year, and we have to explicitly ask for renewal. What happened the [7th of
@@ -57,7 +57,7 @@ The sbt community repository is primarily used for two purposes:
 1. It hosts “old” versions of sbt plugins that may still be used today in Scala projects.
    It is important to note that those sbt plugins are not necessarily that old. Some of
    them are stable and they simply didn't get a new release in the past two years,
-   meaning that they had no chance to migrate to the Central Maven repository.
+   meaning that they had no chance to migrate to Maven Central.
 2. It also hosts the Linux packages (deb and rpm) of sbt releases. Note that that part
    is not read-only: Eugene Yokota still publishes new sbt releases there. These
    packages are used by all the Scala developers who install `sbt` via a Linux package
@@ -81,14 +81,14 @@ solutions.
 [Matthias Kurz](https://github.com/sbt/sbt/issues/7202#issuecomment-1500657923)
 looked at the sbt plugins that are used in his machine and that are currently
 hosted only on `repo.scala-sbt.org`. He then created issues on the corresponding
-GitHub repositories to migrate them to the Central Maven repository, and even
+GitHub repositories to migrate them to the Maven Central, and even
 submitted pull requests to perform that migration for some of those projects.
 
 [Johannes Rudolph](https://github.com/spray/sbt-revolver/issues/100#issuecomment-1500841604),
 [Eugene Yokota](https://github.com/sbt/sbt-sdlc/pull/5),
 and [Chris Kipp](https://github.com/sbt/sbt-license-report/pull/52)
 followed up by migrating the projects `sbt-revolver`, `sbt-sdlc`, and
-`sbt-license-report` to the Central Maven repository.
+`sbt-license-report` to Maven Central.
 
 Eugene Yokota, who is also the [community
 representative](https://github.com/scalacenter/advisoryboard/pull/120) of the
