@@ -6,8 +6,8 @@ title: "sbt Plugins Community Repository"
 ---
 
 On the 7th of April 2023, many Scala builds stopped working because an outage affected the sbt community repository.
-In this blog post, we explain what the sbt community repository is and what it stores, report on the incident,
-and outline what we can do to avoid such problems in the future.
+In this blog post, we describe the sbt community repository, report on the incident, and outline
+actions taken so far. There will be more action in the future and a followup blog post.
 
 ## The Incident
 
