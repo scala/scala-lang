@@ -79,5 +79,5 @@ certificates of completion. Our work would not be possible without your support.
 [Programming Reactive Systems]: https://coursera.org/learn/scala-akka-reactive
 [Effective Programming in Scala]: https://coursera.org/learn/effective-scala
 [Big Data Analysis with Scala and Spark]: https://coursera.org/learn/scala-spark-big-data
-[Scala Capstone Project]: https://coursera.org/learn/scala-capstone-project
+[Scala Capstone Project]: https://coursera.org/learn/scala-capstone
 [rank]: https://www.freecodecamp.org/news/most-popular-free-online-courses/
