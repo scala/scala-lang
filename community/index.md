@@ -158,6 +158,7 @@ Community:
 * [Scala Times](https://scalatimes.com) weekly Scala newspaper
 * [This Week in Scala](https://petr-zapletal.medium.com) weekly Scala newspaper
 * [Scala News](https://www.scalanews.net) source for Scala news and blog feeds
+  * [blog directory](https://www.scalanews.net/Resources/Blog_Directory.html)
 * [Tooling Talks](https://www.tooling-talks.com) A series of talks about Scala and tooling.
 * [The Scala Logs](https://twitter.com/thescalalogs) Podcast with interviews with developers, open source contributors, subject matter experts, and the like
 
