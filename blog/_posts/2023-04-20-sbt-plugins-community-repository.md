@@ -9,6 +9,8 @@ On the 7th of April 2023, many Scala builds stopped working because an outage af
 In this blog post, we describe the sbt community repository, report on the incident, and outline
 actions taken so far. There will be more action in the future and a followup blog post.
 
+Update: we have announced our action plan on the [Contributors Forum](https://contributors.scala-lang.org/t/roadmap-for-the-sbt-community-repository/6195).
+
 ## The Incident
 
 On the 7th of April 2023, many projects of the Scala ecosystem could not resolve
