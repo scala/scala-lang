@@ -1,0 +1,35 @@
+cards:
+  - title: "Scala Improvement Process"
+    description: "SIPs are the primary mechanism for proposing new features, collecting community feedback, and building consensus around future development."
+    links:
+      - name: SIP Committee Members
+        url: https://docs.scala-lang.org/sips/process-specification.html#the-sip-committee
+      - name: SIP Process Specification
+        url: https://docs.scala-lang.org/sips/process-specification.html
+  - title: "Scala 3 Maintenance"
+    description: "Who maintains the Scala 3 compiler?"
+    links:
+      - name: People
+        url: https://github.com/lampepfl/dotty/blob/main/MAINTENANCE.md#compiler
+      - name: Process
+        url: https://github.com/lampepfl/dotty/blob/main/MAINTENANCE.md
+  - title: "Tooling"
+    description: "Learn about who maintains the Scala tooling. Process and people are TBD, stay tuned."
+    links:
+      - name: "Scala Tooling Summit of March 2023"
+        url: https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html
+  - title: "Moderation"
+    description: "Learn about how is the Scala community moderated."
+    links:
+      - name: Code of Conduct
+        url: https://www.scala-lang.org/conduct/
+      - name: "Moderation Team"
+        url: https://www.scala-lang.org/conduct/#contact
+      - name: "Inclusive Language Guide"
+        url: https://docs.scala-lang.org/contribute/inclusive-language-guide.html
+      - name: "Communication Channels"
+        url: https://docs.scala-lang.org/community/
+  - title: "Update Frequency"
+    description: "This page is updated every 6 months by the Scala Center."
+    dontExpand: true
+    links: []

@@ -1,3 +1,54 @@
+<section class="nutshell">
+  <div class="wrap">
+    <div class="inner-box">
+      <div class="heading-box">
+        <h3 id="governance">Governance</h3>
+      </div>
+      <div class="community">
+        <div class="scala-items-list">
+          <div class="items-menu">
+            {% for scalaItem in site.data.governance.cards %}
+              {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
+
+              {% if loopIndexMod == 0 %}
+                {% assign codeSnippets = '' | split: ',' %}
+                <div class="wrap">
+              {% endif %}
+
+              <!-- Show the below content only if the scalaItem.expandable either doesn't exist or is false -->
+              {% unless scalaItem.dontExpand %}
+              {% capture box_content %}
+                <ul class="vertical-buttons-list">
+                  {% for link in scalaItem.links %}
+                    <li><a href="{{ link.url }}" class="button">{{ link.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endcapture %}
+              {% assign codeSnippets = codeSnippets | push: box_content %}
+              {% endunless %}
+              <div class="scala-item">
+                <h3>{{scalaItem.title}}</h3>
+                <p>{{scalaItem.description}}</p>
+                {% unless scalaItem.dontExpand %}
+                <div class="button button-more">More...</div>
+                {% endunless %}
+              </div>
+              {% if loopIndexMod == 2 or forloop.last %}
+                </div>
+                <div class="items-content">
+                  {% for snippet in codeSnippets %}
+                  <div class="items-code">{{snippet}}</div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="table-of-content">
 	<div class="wrap">
 		<div class="inner-box">
