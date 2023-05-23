@@ -1,8 +1,8 @@
-<section class="nutshell">
+<section class="governance">
   <div class="wrap">
     <div class="inner-box">
       <div class="heading-box">
-        <h3 id="governance">Governance</h3>
+        <h2 id="governance">Governance</h2>
       </div>
       <div class="community">
         <div class="scala-items-list">
@@ -18,19 +18,27 @@
               <!-- Show the below content only if the scalaItem.expandable either doesn't exist or is false -->
               {% unless scalaItem.dontExpand %}
               {% capture box_content %}
-                <ul class="vertical-buttons-list">
-                  {% for link in scalaItem.links %}
-                    <li><a href="{{ link.url }}" class="button">{{ link.name }}</a></li>
-                  {% endfor %}
-                </ul>
+							<div class="wrap">
+								<ul class="vertical-buttons-list">
+									{% for link in scalaItem.links %}
+									{% if link.text %}
+									<li><p>{{ link.text }}</p></li>
+									{% else %}
+									<li><a href="{{ link.url }}" class="button button-expand" target="_blank" rel="none">{{ link.name }}</a></li>
+									{% endif %}
+									{% endfor %}
+								</ul>
+							</div>
               {% endcapture %}
               {% assign codeSnippets = codeSnippets | push: box_content %}
               {% endunless %}
-              <div class="scala-item">
-                <h3>{{scalaItem.title}}</h3>
-                <p>{{scalaItem.description}}</p>
+              <div class="scala-item scala-item__governance">
+								<div class="top">
+									<h4>{{scalaItem.title}}</h4>
+									<p>{{scalaItem.description}}</p>
+								</div>
                 {% unless scalaItem.dontExpand %}
-                <div class="button button-more">More...</div>
+                <div class="button button-more">{{scalaItem.expandText}}</div>
                 {% endunless %}
               </div>
               {% if loopIndexMod == 2 or forloop.last %}
@@ -54,7 +62,7 @@
 		<div class="inner-box">
 			<div class="community">
 				<div class="discourse">
-					<h3>Discourse</h3>
+					<h2>Discourse</h2>
 					<span>Forums</span>
 					<ul>
 						{% for forum in site.data.chats-forums.discourseForums %}
@@ -69,7 +77,7 @@
 					</ul>
 				</div>
 				<div class="discord">
-					<h3>Discord</h3>
+					<h2>Discord</h2>
 					<span>Real-time chat</span>
 					<ul>
 						{% for server in site.data.chats-forums.discordServers %}
@@ -91,7 +99,7 @@
 	<div class="wrap">
 		<div class="inner-box">
 			<div class="heading-box">
-				<h3>Upcoming Events and Trainings</h3>
+				<h2>Upcoming Events and Trainings</h2>
 			</div>
 			<div class="events-items-list">
 				{% assign upcomingEvents = '' | split: ',' %}

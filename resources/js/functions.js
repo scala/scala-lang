@@ -20,20 +20,24 @@ $(document).ready(function() {
 
         items.each(function(index2, button) {
             var jButton = $(button);
-            jButton.click(function(event) {
-                var activeCode = contents.eq(index2);
-                var others = allContents.not(activeCode);
-                allButtons.removeClass('active');
-                others.hide();
+            var expandButton = jButton.children('.button-more');
+            if (expandButton.length > 0) {
+                var target = jButton.is('.scala-item__governance') ? expandButton : jButton;
+                target.click(function(event) {
+                    var activeCode = contents.eq(index2);
+                    var others = allContents.not(activeCode);
+                    allButtons.removeClass('active');
+                    others.hide();
 
-                if (activeCode.is(":visible")) {
-                    activeCode.hide();
-                } else {
-                    jButton.addClass('active')
-                    activeCode.show();
-                }
+                    if (activeCode.is(":visible")) {
+                        activeCode.hide();
+                    } else {
+                        jButton.addClass('active')
+                        activeCode.show();
+                    }
 
-            });
+                });
+              }
         });
     });
 });

@@ -18,6 +18,13 @@
           padding-bottom: 0;
         }
     }
+    .governance {
+      margin-bottom: $padding-medium;
+
+      .inner-box {
+        padding-bottom: 0;
+      }
+    }
 }
 
 .documentation {
@@ -81,8 +88,9 @@
     padding-bottom: $padding-small;
     .discourse,
     .discord {
-        h3 {
+        h2 {
             margin-top: 0;
+            font-size: $font-size-title;
         }
         @include span-columns(6);
 
