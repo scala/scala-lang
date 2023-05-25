@@ -23,7 +23,7 @@ cards:
       - name: "Scala Tooling Summit of March 2023"
         url: https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html
   - title: "Moderation"
-    description: "Learn about how is the Scala community moderated."
+    description: "Learn how the Scala community is moderated."
     expandText: "Process & People"
     links:
       - name: "Moderation Team"
