@@ -1,3 +1,4 @@
+introText: This section is updated every 6 months by the Scala Center.
 cards:
   - title: "Scala Improvement Process"
     description: "The SIP is the primary mechanism for evolving the Scala language."
@@ -34,7 +35,3 @@ cards:
         url: https://docs.scala-lang.org/contribute/inclusive-language-guide.html
       - name: "Communication Channels"
         url: https://docs.scala-lang.org/community/
-  - title: "Update Frequency"
-    description: "This page is updated every 6 months by the Scala Center."
-    dontExpand: true
-    links: []
