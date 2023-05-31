@@ -30,7 +30,7 @@ cards:
     description: "Learn how the Scala community is moderated."
     expandText: "Process & People"
     links:
-      - text: "The Scala community is moderated by the Moderation Team over all the official communication channels. The moderation is governed by the Code of Conduct"
+      - text: "The Scala community is moderated by the Moderation Team over all the official communication channels. The moderation is governed by the Code of Conduct."
       - name: "Moderation Team"
         url: https://www.scala-lang.org/conduct/#contact
       - name: Code of Conduct
