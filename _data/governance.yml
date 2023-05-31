@@ -4,6 +4,9 @@ cards:
     description: "The SIP is the primary mechanism for evolving the Scala language."
     expandText: "Process & People"
     links:
+      - text: "This process aims to evolve Scala openly and collaboratively. Anyone from the community is welcome to submit a Scala Improvement Proposal (SIP), which is then reviewed and discussed by a Committee. Every month, the Committee votes on the proposals to accept in the language."
+      - name: SIP Homepage
+        url: https://docs.scala-lang.org/sips/index.html
       - name: SIP Committee Members
         url: https://docs.scala-lang.org/sips/process-specification.html#the-sip-committee
       - name: SIP Process Specification
@@ -27,6 +30,7 @@ cards:
     description: "Learn how the Scala community is moderated."
     expandText: "Process & People"
     links:
+      - text: "The Scala community is moderated by the Moderation Team over all the official communication channels. The moderation is governed by the Code of Conduct"
       - name: "Moderation Team"
         url: https://www.scala-lang.org/conduct/#contact
       - name: Code of Conduct
@@ -35,3 +39,23 @@ cards:
         url: https://docs.scala-lang.org/contribute/inclusive-language-guide.html
       - name: "Communication Channels"
         url: https://docs.scala-lang.org/community/
+  - title: "Scala Center"
+    description: "The organization fostering the Scala community, education, and OSS library development."
+    expandText: "Learn More"
+    links:
+      - name: "Homepage"
+        url: https://scala.epfl.ch/
+      - name: Team
+        url: https://scala.epfl.ch/team.html
+      - name: "Advisory Board"
+        url: https://github.com/scalacenter/advisoryboard#the-scala-center-advisory-board
+      - name: "5 Year Report"
+        url: https://scala.epfl.ch/records/first-five-years/
+  - title: "Scala 2 Maintenance"
+    description: "Who maintains the Scala 2 compiler?"
+    expandText: "Process & People"
+    links:
+      - name: "Contribution Process"
+        url: "https://github.com/scala/scala#how-to-contribute"
+      - name: "Core Maintainers"
+        url: "https://github.com/scala/scala#get-in-touch"
