@@ -1,4 +1,3 @@
-introText: This section is updated every 6 months by the Scala Center.
 cards:
   - title: "Scala Improvement Process"
     description: "The SIP is the primary mechanism for evolving the Scala language."
