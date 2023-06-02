@@ -1,3 +1,4 @@
+introText: The development of this page is in progress.
 cards:
   - title: "Scala Improvement Process"
     description: "The SIP is the primary mechanism for evolving the Scala language."
