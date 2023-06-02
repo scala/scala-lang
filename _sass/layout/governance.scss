@@ -1,0 +1,80 @@
+// GOVERNANCE
+//------------------------------------------------
+//------------------------------------------------
+
+.governance {
+    // background: $gray-nutshell;
+
+    .vertical-buttons-list {
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        padding: 15px 0;
+        li {
+            margin-bottom: 10px;
+        }
+        // @include align-items(center);
+        // @include justify-content(flex-start);
+    }
+
+    .button-expand {
+        text-align: center;
+        display: block;
+    }
+
+    .button-more {
+        font-size: $font-size-small;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .scala-items-list {
+        .items-menu {
+            .scala-item {
+                @include span-columns(4);
+                @include omega(3n);
+
+                @include display(flex);
+                @include flex-direction(column);
+                // @include align-items(center);
+                @include justify-content(space-between);
+                padding: 15px 10px;
+                text-align: center;
+                transition: $base-transition;
+                // border: 1px solid $gray-light;
+                margin-top: 15px;
+                @include bp(large) {
+                     @include span-columns(12);
+                }
+
+                min-height: 150px;
+
+                h4 {
+                    font-size: $font-size-h3;
+                    color: #000;
+                    text-transform: uppercase;
+                    font-family: $base-font-family;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: $font-size-medium;
+                }
+
+                &.active {
+                    background: $gray-light;
+                }
+            }
+
+            .items-content {
+                background: $gray-light;
+                transition: $base-transition;
+
+                .items-code {
+                    display: none;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
