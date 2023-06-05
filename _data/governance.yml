@@ -38,7 +38,7 @@ cards:
       - name: "Inclusive Language Guide"
         url: https://docs.scala-lang.org/contribute/inclusive-language-guide.html
       - name: "Communication Channels"
-        url: https://docs.scala-lang.org/community/
+        url: https://scala-lang.org/community/
   - title: "Scala Center"
     description: "The organization fostering the Scala community, education, and OSS library development."
     expandText: "Learn More"
