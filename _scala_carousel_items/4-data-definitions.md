@@ -1,6 +1,6 @@
 ---
 optionId: data-definitions
-scastieLink: 'https://scastie.scala-lang.org/2plItYkVS4enZCFwBIPnZA'
+scastieLink: 'https://scastie.scala-lang.org/VcczUlAVT8mHTl7tpGmiJg'
 codeTitle: 'Define data types and pattern match on them with ease'
 description: "Model domains precisely, and make choices based on the shape of data."
 ---
