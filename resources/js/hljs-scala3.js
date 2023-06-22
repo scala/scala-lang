@@ -171,10 +171,16 @@ function highlightDotty(hljs) {
   const STRING = {
     className: 'string',
     variants: [
-      hljs.QUOTE_STRING_MODE,
+      // triple-quote strings must have higher precedence otherwise `foo"""{"bar": "Baz"}"""` interpolates as [foo"", "{", message": ", Baz, "}", ""]
       {
         begin: '"""', end: '"""',
         contains: [hljs.BACKSLASH_ESCAPE],
+        relevance: 10
+      },
+      hljs.QUOTE_STRING_MODE,
+      {
+        begin: alphaId.source + '"""', end: '"""',
+        contains: [hljs.BACKSLASH_ESCAPE, SUBST],
         relevance: 10
       },
       {
@@ -182,11 +188,6 @@ function highlightDotty(hljs) {
         contains: [hljs.BACKSLASH_ESCAPE, SUBST],
         illegal: /\n/,
         relevance: 5
-      },
-      {
-        begin: alphaId.source + '"""', end: '"""',
-        contains: [hljs.BACKSLASH_ESCAPE, SUBST],
-        relevance: 10
       }
     ]
   }
