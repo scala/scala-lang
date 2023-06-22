@@ -70,6 +70,7 @@ $(document).ready(function() {
     hljs.configure({
       languages: ["scala", "bash"]
     })
+    hljs.registerLanguage("scala", highlightDotty);
     hljs.initHighlighting();
 });
 
