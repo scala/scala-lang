@@ -229,18 +229,23 @@
 <section class="nutshell">
   <div class="wrap">
     <div class="heading-line">
-      <h2><span>{{page.scalaUsersTitle}}</span></h2>
+      <!-- TODO: add this title when other sub-sections are included -->
+      <!-- <h2><span>{{page.scalaUsersTitle}}</span></h2> -->
+      <h2><span>{{site.scala_items[0].shortTitle}}</span></h2>
     </div>
-    <div class="section-text ta-c">
+    <!-- TODO: add this summary when other sub-sections are included -->
+    <!-- <div class="section-text ta-c">
       <p>{{page.scalaUsersIntroduction}}</p>
-    </div>
-    <div class="scala-items-grid g-cols-2">
+    </div> -->
+    <!-- TODO: change class to `g-cols-2` when other sub-sections are included -->
+    <div class="scala-items-grid g-cols-1">
       <div class="items-menu">
         {% for scalaItem in site.scala_items %}
         <div class="scala-item scala-item_scala-users ">
           <div class="scala-item_content">
             <img class="scala-item_icon" src="/resources/img/icons/{{scalaItem.icon}}" alt="{{scalaItem.shortTitle}}" />
-            <h3>{{scalaItem.shortTitle}}</h3>
+            <!-- TODO: add this title when other sub-sections are included -->
+            <!-- <h3>{{scalaItem.shortTitle}}</h3> -->
             <p>{{scalaItem.shortDescription}}</p>
           </div>
           <!-- TODO restore if we have actual pages prepared -->

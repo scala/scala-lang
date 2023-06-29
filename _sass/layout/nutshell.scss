@@ -5,6 +5,13 @@
 .nutshell {
     background: $gray-nutshell;
 
+
+    .scala-item_icon {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
     .image-caption {
         font-style: italic;
         text-align: center;
@@ -78,6 +85,21 @@
             }
         }
 
+        &.g-cols-1 {
+            .items-menu {
+                grid-template-columns: 1fr;
+                align-items: center;
+                justify-items: center;
+
+                .scala-item {
+                    width: 600px;
+                    @include bp(large) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
         .items-menu {
             @include display(grid);
             justify-content: space-between;
@@ -85,11 +107,6 @@
             grid-auto-flow: dense;
             @include bp(large) {
                 grid-template-columns: 1fr;
-            }
-            .scala-item_icon {
-                width: 100px;
-                height: 100px;
-                padding: 10px;
             }
             .scala-item {
                 @include display(flex);
