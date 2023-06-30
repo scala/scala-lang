@@ -12,7 +12,7 @@ icon: "icon5.svg"
           <h3>Principled Concurrency</h3>
           <p class="emph">Scala's expressivity and compiler-enforced saftey makes it easier to construct reliable concurrent code.</p>
           <p>With Scala, your programs take full advantage of multi-core and distributed architectures, ensure safe access to resources, and apply back-pressure to data producers according to your processing rate.</p>
-          <p>One popular open-source option for managing concurrency in Scala is <a href="https://typelevel.org/cats-effect/" target="_blank" rel="none">Cats Effect</a>, combined with <a href="" target="_blank" rel="none">http4s</a> for defining servers and routing. Click below to see other solutions.</p>
+          <p>One popular open-source option for managing concurrency in Scala is <a href="https://typelevel.org/cats-effect/" target="_blank" rel="none">Cats Effect</a>, combined with <a href="https://http4s.org" target="_blank" rel="none">http4s</a> for defining servers and routing. Click below to see other solutions.</p>
           <a class="button button_call-to-action" href="https://index.scala-lang.org/awesome#asynchronous-and-concurrent-programming" target="_blank" rel="none">libraries for Concurrency and distribution</a>
       </div>
   </div>
