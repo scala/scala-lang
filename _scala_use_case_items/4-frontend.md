@@ -1,8 +1,7 @@
 ---
 shortTitle: "Frontend Web"
-shortDescription: "Harness the Scala and JavaScript ecosystems together.
-Develop robust apps that run anywhere: from browsers to Node.js to serverless platforms."
-expandText: "Why Scala.js"
+shortDescription: "Reactive UI's backed by types. Use the same Scala libraries across the stack. Integrate with the JavaScript library and tooling ecosystem."
+expandText: "build for frontend"
 anchorTarget: "explore-scalajs"
 icon: "icon8.svg"
 ---
@@ -38,7 +37,7 @@ response.onComplete { resp => println(s"updated $dog") }</code></pre>
     <div class="scala-code">
         <div class="scala-text scala-text-large">
             <h3>Interoperability with JavaScript</h3>
-            <p class="emph">Call into JS libraries, or export your Scala.js code to other JS modules.</p>
+            <p class="emph">Call into JS libraries from the npm ecosystem, or export your Scala.js code to other JS modules. Integrate with Vite for instant live-reloading.</p>
             <p>Leverage the JavaScript ecosystem of libraries. Use <a href="https://scalablytyped.org/" target="_blank" rel="none">ScalablyTyped</a> to generate types for JavaScript libraries from TypeScript definitions.</p>
             <a class="button button_call-to-action" href="http://www.scala-js.org/libraries/facades.html" target="_blank" rel="none">Scala.js facades for popular JavaScript libraries</a>
         </div>
