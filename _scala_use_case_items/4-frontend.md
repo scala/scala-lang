@@ -11,7 +11,7 @@ icon: "icon8.svg"
     <div class="scala-code">
         <div class="scala-text scala-text-large">
             <h3>Portable Code and Libraries</h3>
-            <p class="emph">Write the code once and have it run on the front-end as well as on the backend.</p>
+            <p class="emph">Write the code once and have it run on the frontend as well as on the backend.</p>
             <p>Reuse the same libraries and testing frameworks on both sides. Write API endpoints that are typechecked across the stack.</p>
             <p>For example: define your data model in a shared module. Then use <a href="https://github.com/softwaremill/sttp" target="_blank" rel="none">sttp</a> to send data to the backend, all while <a href="https://github.com/com-lihaoyi/upickle" target="_blank" rel="none">upickle</a> handles seamless conversion to JSON, and also reads JSON back into your model on the backend.</p>
             <a class="button button_call-to-action" href="https://index.scala-lang.org/search?languages=3.x&languages=2.13&platforms=sjs1&q=*" target="_blank" rel="none">More Scala.js libraries and frameworks</a>
@@ -62,7 +62,7 @@ ReactDOM.render(Counter(0), mountNode)</code></pre>
             <h3>Poweful User Interface Libraries</h3>
             <p class="emph">Write robust UIs with the Scala.js UI libraries.</p>
             <p>Pick your preferred style: <a href="https://laminar.dev" target="_blank" rel="none">Laminar</a> for a pure Scala solution, <a href="https://slinky.dev" target="_blank" rel="none">Slinky</a> for the React experience, or <a href="https://tyrian.indigoengine.io" target="_blank" rel="none">Tyrian</a> or <a href="https://github.com/japgolly/scalajs-react" target="_blank" rel="none">scalajs-react</a> for the pure FP-minded developers.</p>
-            <a class="button button_call-to-action" href="https://index.scala-lang.org/awesome/web-frontend?sort=stars&languages=3.x&languages=2.13&platforms=sjs0.6" target="_blank" rel="none">See more Scala.js libraries for frontend and UI</a>
+            <a class="button button_call-to-action" href="https://index.scala-lang.org/awesome/web-frontend?sort=stars&languages=3.x&languages=2.13&platforms=sjs1" target="_blank" rel="none">See more Scala.js libraries for frontend and UI</a>
         </div>
     </div>
     <div class="scala-code">

@@ -65,7 +65,7 @@ def fetch2 = fetchWeather(server2) // expensive Network IO
       <div class="scala-text scala-text-large">
           <h3>Case Study: Reusable Code with Tapir</h3>
           <p class="emph">Harness the “Code as Data” Paradigm: define once, use everywhere.</p>
-          <p>Scala is a very flexible language. Its rich type system and metaprogramming facilities give the power to automatically derive helpful utilities from your code.</p>
+          <p>Scala's rich type system and metaprogramming facilities give the power to automatically derive helpful utilities from your code.</p>
           <p>One such example library is <a href="https://tapir.softwaremill.com/en/latest/#" target="_blank" rel="none">Tapir</a>, letting you use Scala as a declarative language to describe your HTTP endpoints. From this single source of truth, you can automatically derive their server implementation, their client implementation, and both human-readable and machine-readable documentation.</p>
           <p>Because everything is derived from a type-safe definition, endpoint invocations are checked to be safe at compile-time, across the frontend and backend.</p>
           <a class="button button_call-to-action" href="https://tapir.softwaremill.com/en/latest/#" target="_blank" rel="none">Read more in the Tapir docs</a>
@@ -88,7 +88,9 @@ val server = serverBuilder(port = "8080")
   .addEndpoint(reportEndpoint.handle(fetchReport))
   .start()
 val client = clientReader
-  .toRequest(reportEndpoint, "http://localhost:8080")</code></pre>
+  .toRequest(reportEndpoint, "http://localhost:8080")
+val report: Future[Report] =
+  client("5ca1a-78fc8d6") // call like any function</code></pre>
       </div>
   </div>
 </div>
