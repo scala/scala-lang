@@ -121,9 +121,7 @@ already been reported.
 
 ## User Groups
 
-Most local Scala user groups are listed on [Meetup](https://meetup.com/).
-
-Group organizers can talk to each other on [Scala User Group Organizers](https://www.meetup.com/Scala-User-Groups/).
+Most local Scala user groups are listed on [Meetup](https://www.meetup.com/topics/scala/).
 
 ## Conferences
 
