@@ -1,7 +1,7 @@
 ---
 shortTitle: "Command Line"
 shortDescription: "Superpower your scripts with the Scala command. Get hands-on with the Scala Toolkit. Easily add libraries. Build CLI apps with instant startup."
-expandText: "Building Utilities"
+expandText: "Scripting Utilities"
 anchorTarget: "build-scala-tools"
 icon: "icon4.svg"
 ---
@@ -36,7 +36,7 @@ os.list(os.pwd).sortBy(os.size).foreach(println)</code></pre>
         <div class="scala-text scala-text-large">
             <h3>Get productive with the Scala Toolkit</h3>
             <p class="emph">The Scala Toolkit is a good fit for writing a script, prototyping, or bootstrapping a new application.</p>
-            <p>Including a selection of approachable libraries to perform everyday tasks, Toolkit helps you work with files and processes, parse JSON, send HTTP requests and unit test code.</p>
+            <p>Including a selection of approachable libraries to perform everyday tasks, the Scala Toolkit helps you work with files and processes, parse JSON, send HTTP requests and unit test code.</p>
             <p>Toolkit libraries work great on the JVM, JS and Native platforms, all while leveraging a simple code style.</p>
             <a class="button button_call-to-action" href="https://docs.scala-lang.org/toolkit/introduction.html" target="_blank" rel="none">find useful snippets in the Toolkit Tutorials</a>
         </div>
@@ -64,7 +64,7 @@ os.write(os.pwd / "response.json", response.body)</code></pre>
 <div class="scala-row">
     <div class="scala-code">
         <div class="scala-text scala-text-large">
-            <h3>Compile to native, then deploy easily</h3>
+            <h3>Package to native, deploy easily</h3>
             <p class="emph">Package your apps to native binaries for instant startup time.</p>
             <p>Deploy to Docker images, JS scripts, Spark or Hadoop jobs, and more.</p>
             <a class="button button_call-to-action" href="https://scala-cli.virtuslab.org/docs/commands/package" target="_blank" rel="none">other ways to package applications</a>

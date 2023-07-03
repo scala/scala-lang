@@ -20,7 +20,7 @@ icon: "icon11.svg"
         <div class="code-element dark">
             <div class="bar-code"><span>Analyse data across a cluster with Spark</span></div>
             <pre><code class="language-scala">// Count the number of words in a text source
-val textFile = sc.textFile("hdfs://...")
+val textFile = spark.textFile("hdfs://...")
 val counts = textFile
   .flatMap(line => line.split(" "))
   .map(word => (word, 1))

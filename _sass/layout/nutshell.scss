@@ -56,6 +56,8 @@
                 top: -10px;
                 background: none;
 
+                box-shadow: none;
+
                 &:active,
                 &:focus,
                 &:hover {
@@ -178,6 +180,10 @@
 
                         &.scala-row_align-start {
                             @include align-items(start);
+                        }
+
+                        &:has(+ .scala-row) {
+                            margin-bottom: 20px;
                         }
                     }
 

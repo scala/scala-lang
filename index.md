@@ -13,11 +13,11 @@ headerButtonUrl: "/what-is-scala/"
 gettingStarted:
   mainTitle: "Get Started"
   mainUrl: "https://docs.scala-lang.org/getting-started.html"
-  subtitle: "Scala Book"
-  subtitleLink: "https://docs.scala-lang.org/scala3/book/introduction.html"
+  subtitle: "Overview"
+  subtitleLink: "https://docs.scala-lang.org/tour/tour-of-scala.html"
   links:
-    - title: "Tour"
-      url: "https://docs.scala-lang.org/tour/tour-of-scala.html"
+    - title: "Guide"
+      url: "https://docs.scala-lang.org/scala3/book/introduction.html"
     - title: "Courses"
       url: "https://docs.scala-lang.org/online-courses.html"
 apiDocs:

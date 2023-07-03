@@ -1,7 +1,7 @@
 ---
 shortTitle: "Frontend Web"
 shortDescription: "Reactive UI's backed by types. Use the same Scala libraries across the stack. Integrate with the JavaScript library and tooling ecosystem."
-expandText: "build for frontend"
+expandText: "building frontend"
 anchorTarget: "explore-scalajs"
 icon: "icon8.svg"
 ---

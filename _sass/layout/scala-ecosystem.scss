@@ -45,19 +45,8 @@
 
                 .content-card {
                     float: left;
-                    // border: 2px solid $gray-dark;
-                    // padding: 2px;
-                    background: $brand-secondary;
-                    margin: 5px 3px;
+                    margin: 3px;
                     display: block;
-                    border-radius: $border-radius-base;
-
-                    &:active,
-                    &:focus,
-                    &:hover {
-                        background: $brand-primary;
-                    }
-
                 }
 
                 a {
@@ -66,7 +55,6 @@
 
                         font-size: $font-size-small;
                         transition: $base-transition;
-                        padding: 10px;
                         i {
                             margin-right: 6px;
                         }
