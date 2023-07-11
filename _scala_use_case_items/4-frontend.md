@@ -58,7 +58,7 @@ ReactDOM.render(Counter(0), mountNode)</code></pre>
 <div class="scala-row">
     <div class="scala-code">
         <div class="scala-text scala-text-large">
-            <h3>Poweful User Interface Libraries</h3>
+            <h3>Powerful User Interface Libraries</h3>
             <p class="emph">Write robust UIs with the Scala.js UI libraries.</p>
             <p>Pick your preferred style: <a href="https://laminar.dev" target="_blank" rel="none">Laminar</a> for a pure Scala solution, <a href="https://slinky.dev" target="_blank" rel="none">Slinky</a> for the React experience, or <a href="https://tyrian.indigoengine.io" target="_blank" rel="none">Tyrian</a> or <a href="https://github.com/japgolly/scalajs-react" target="_blank" rel="none">scalajs-react</a> for the pure FP-minded developers.</p>
             <a class="button button_call-to-action" href="https://index.scala-lang.org/awesome/web-frontend?sort=stars&languages=3.x&languages=2.13&platforms=sjs1" target="_blank" rel="none">See more Scala.js libraries for frontend and UI</a>
