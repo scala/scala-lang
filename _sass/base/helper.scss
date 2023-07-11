@@ -3,27 +3,74 @@
 //------------------------------------------------
 
 .wrap {
-	@include outer-container;
-	@include padding(0 20px);
+  @include outer-container;
+  @include padding(0 20px);
+  @include bp(large) {
+    @include outer-container(880px);
+  }
 }
 
 .place-inline { // add vertical margin
-	@include outer-container;
-	@include margin(20px 0);
+  @include outer-container;
+  @include margin(20px 0);
 }
 
 .wrap-inline { // add vertical padding
-	@include outer-container;
-	@include padding(20px 0);
+  @include outer-container;
+  @include padding(20px 0);
+  @include bp(large) {
+    @include outer-container(880px);
+  }
 }
 
 .wrap-narrow {
-	@include outer-container;
-	@include padding(0 10px);
+  @include outer-container;
+  @include padding(0 10px);
+  @include bp(large) {
+    @include outer-container(880px);
+  }
 }
 
 .dot {
-	font-size: 10px;
-	color: rgba($base-font-color-light, 0.6);
-	margin: 0 3px;
+  font-size: 10px;
+  color: rgba($base-font-color-light, 0.6);
+  margin: 0 3px;
+}
+
+.hide-lg {
+  display: block;
+
+  @include bp(large) {
+    display: none;
+  }
+}
+
+.show-lg {
+  display: none;
+
+  @include bp(large) {
+    display: block;
+  }
+}
+
+.col-lg-6 {
+  @include span-columns(6);
+
+  @include bp(large) {
+    @include span-columns(12);
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.flex-row-align-end {
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+}
+
+.ta-c {
+  text-align: center;
 }

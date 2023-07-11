@@ -8,8 +8,11 @@
     text-transform: uppercase;
     color: #fff;
     background: $brand-secondary;
-    border-radius: $border-radius-base;
+    border-radius: $border-radius-bold;
     display: inline-block;
+
+    box-shadow: 0 4px 7px 0  rgba(0, 0, 0, 0.2);
+
 
     &:active,
     &:focus,

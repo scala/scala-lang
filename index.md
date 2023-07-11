@@ -4,8 +4,8 @@ layout: frontpage
 darkmodeCode: true
 
 # Header texts
-headerTitle: "The Scala Programming Language"
-headerSubtitle: "Scala combines object-oriented and functional programming in one concise, high-level language. Scala's static types help avoid bugs in complex applications, and its JVM and JavaScript runtimes let you build high-performance systems with easy access to huge ecosystems of libraries."
+headerTitle: "Scala"
+headerSubtitle: "A programming language that scales with you: from small scripts to large multiplatform applications."
 headerButtonTitle: "Learn More"
 headerButtonUrl: "/what-is-scala/"
 
@@ -13,21 +13,21 @@ headerButtonUrl: "/what-is-scala/"
 gettingStarted:
   mainTitle: "Get Started"
   mainUrl: "https://docs.scala-lang.org/getting-started.html"
+  subtitle: "Overview"
+  subtitleLink: "https://docs.scala-lang.org/tour/tour-of-scala.html"
+  links:
+    - title: "Guide"
+      url: "https://docs.scala-lang.org/scala3/book/introduction.html"
+    - title: "Courses"
+      url: "https://docs.scala-lang.org/online-courses.html"
+apiDocs:
+  mainTitle: "Documentation"
+  mainUrl: "https://docs.scala-lang.org"
   subtitle: "API Docs"
   subtitleLink: "https://docs.scala-lang.org/api/all.html"
   links:
     - title: "Migrate to Scala 3"
       url: "https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html"
-apiDocs:
-  mainTitle: "Learn Scala"
-  mainUrl: "https://docs.scala-lang.org"
-  subtitle: "Scala Book"
-  subtitleLink: "https://docs.scala-lang.org/scala3/book/introduction.html"
-  links:
-    - title: "Tour"
-      url: "https://docs.scala-lang.org/tour/tour-of-scala.html"
-    - title: "Courses"
-      url: "https://docs.scala-lang.org/online-courses.html"
 
 
 # Scala backends
@@ -64,6 +64,18 @@ scalaIDEs:
     icon: /resources/img/frontpage/sublime.png
     metals: true
     url: "https://scalameta.org/metals/docs/editors/sublime.html"
+
+# Why Scala
+whyScalaTitle: "Why Scala?"
+
+# Scala use cases
+useCaseTitle: "Proven Use Cases"
+useCaseIntroduction: "People around the world trust Scala to build useful software, some of the most popular domains include:"
+
 # Scala ecosystem
 ecosystemTitle: "Scala's libraries unlock your potential"
+
+# Scala users
+scalaUsersTitle: "Users of Scala"
+scalaUsersIntroduction: "Scala is used by thousands of developers, students, hobbyists and teachers around the world. See why you should try it."
 ---

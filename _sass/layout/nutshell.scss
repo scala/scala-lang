@@ -5,6 +5,19 @@
 .nutshell {
     background: $gray-nutshell;
 
+
+    .scala-item_icon {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .image-caption {
+        font-style: italic;
+        text-align: center;
+        color: $base-font-color-inverse;
+    }
+
     .heading-line {
         h2 {
             span {
@@ -16,24 +29,99 @@
         }
     }
 
-    .scala-items-list {
+    .scala-items-grid {
+
+        .button {
+            font-size: 0.6rem;
+            padding: 5px;
+            margin-top: 5px;
+
+            &.button_call-to-action {
+                font-size: $font-size-small;
+                text-align: center;
+                padding: 5px 15px;
+                width: 100%;
+            }
+
+            &.button_return-anchor {
+                font-family: $base-font-family;
+                text-transform: none;
+                // font-weight: normal;
+                font-size: $font-size-medium;
+                color: $base-font-color-inverse;
+                display: block;
+                position: relative;
+                text-align: center;
+                width: 100%;
+                top: -10px;
+                background: none;
+
+                box-shadow: none;
+
+                &:active,
+                &:focus,
+                &:hover {
+                    background: $brand-primary;
+                    color: #fff;
+                }
+            }
+        }
+
+
+        &.g-cols-4 {
+            .items-menu {
+                grid-template-columns: repeat(4, 1fr);
+                @include bp(large) {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        &.g-cols-2 {
+            .items-menu {
+                grid-template-columns: repeat(2, 1fr);
+
+                @include bp(large) {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        &.g-cols-1 {
+            .items-menu {
+                grid-template-columns: 1fr;
+                align-items: center;
+                justify-items: center;
+
+                .scala-item {
+                    width: 600px;
+                    @include bp(large) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
         .items-menu {
+            @include display(grid);
+            justify-content: space-between;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: dense;
+            @include bp(large) {
+                grid-template-columns: 1fr;
+            }
             .scala-item {
-                @include span-columns(4);
-                @include omega(3n);
-                padding: $padding-small;
+                @include display(flex);
+                @include flex-direction(column);
+                @include justify-content(space-between);
+                @include align-items(center);
+
+                padding: $padding-xsmall $padding-small;
                 text-align: center;
                 transition: $base-transition;
-                @include bp(medium) {
-                     @include span-columns(12);
-                }
 
-                min-height: 165px;
-
-                .button {
-                    margin-top: 10px;
-                    font-size: 0.6rem;
-                    padding: 5px;
+                &:has(+ .items-content:target) {
+                    background: $gray-darker;
                 }
 
                 h3 {
@@ -49,34 +137,96 @@
                     font-size: $font-size-large;
                 }
 
-
-                &:active,
-                &:focus,
-                &:hover {
-                    cursor: pointer;
-                    background: $gray-dark;
-                }
-
-                &.active {
-                    background: $gray-dark;
+                .button {
+                    &.button_call-to-action {
+                        margin-top: $font-size-large;
+                    }
                 }
             }
 
             .items-content {
-                background: $gray-dark;
+                grid-column: 1 / -1;
+                background: $gray-darker;
                 transition: $base-transition;
+                display: none;
+
+                &:target {
+                    display: block;
+                }
+
+                .items-content_close {
+                    font-size: $font-size-carousel-arrow;
+                    color: $base-font-color-light;
+                    &:hover {
+                        color: $base-font-color-inverse;
+                    }
+                }
 
                 .items-code {
-                    display: none;
+                    // display: none;
                     background: $gray-dark;
-                    padding: 65px 0;
+                    padding: 25px 0 5px 0;
+
+                    .scala-row {
+                        @include display(flex);
+                        @include flex-direction(row);
+                        // @include justify-content(space-between);
+                        @include align-items(center);
+                        // margin-bottom: 20px;
+
+                        @include bp(large) {
+                            @include flex-direction(column);
+                        }
+
+                        &.scala-row_align-start {
+                            @include align-items(start);
+                        }
+
+                        &:has(+ .scala-row) {
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.625rem;
+                        color: #fff;
+                        margin-bottom: 10px;
+
+                        &:not(:first-child) {
+                            margin-top: 20px;
+                        }
+
+
+                        @include bp(large) {
+                            text-align: center;
+                        }
+                    }
+
+                    .emph {
+                        font-style: oblique;
+                        font-weight: bold;
+                    }
+
+                    .code-separator {
+                        border: 1px solid $code-bg-color-dark-highlight;
+                    }
 
                     .scala-code {
 
-                      @include span-columns(6);
-                      @include bp(large) {
-                        @include span-columns(12);
-                      }
+                        margin: 0 5px;
+                        width: 50%;
+
+                        @include bp(large) {
+                            margin: 0;
+                            width: 100%;
+                        }
+
+                        /* set display type of containers of <pre> elements (see https://stackoverflow.com/a/14406386/561721) */
+                        .code-element {
+                            display: table;
+                            table-layout: fixed;
+                            width: 100%;
+                        }
                     }
 
                     .scala-text {
@@ -87,24 +237,29 @@
                             border-radius: 2px;
                             margin: 0 3px;
                         }
-                        @include span-columns(6);
-                        @include bp(large) {
-                          @include span-columns(12);
-                        }
 
-                        h3 {
-                            font-size: 1.625rem;
-                            color: #fff;
-                            margin-bottom: 20px;
+                        margin: 0 5px;
+                        width: 50%;
+
+                        @include bp(large) {
+                            margin: 0;
+                            width: 100%;
                         }
 
                         p {
                             color: $base-font-color-inverse;
+                            margin-bottom: 8px;
+
+                            @include bp(large) {
+                                text-align: center;
+                            }
                         }
 
                         &.scala-text-large {
-                          @include span-columns(12);
-                          margin-bottom: 30px;
+                            width: 100%;
+                            margin: 0;
+                            // @include span-columns(12);
+                            margin-bottom: 20px;
                         }
                     }
                 }

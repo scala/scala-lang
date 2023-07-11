@@ -44,6 +44,7 @@ $base-font-color-inverse: rgba(#fff, 0.70);
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Kalam:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Caveat');
+
 //------------------------------------------------
 $base-font-family: 'Lato', sans-serif;
 $heading-font-family: 'Roboto Slab', serif;
@@ -60,7 +61,7 @@ $font-size-small: 0.875rem; // 14px
 $font-size-xsmall:  0.75rem; // 12px
 
 $font-size-h2: 1.375rem; // 22px
-$font-size-h3: $font-size-large; // 17px
+$font-size-h3: 1.275rem;
 
 //------------------------------------------------
 $base-line-height: 1.6;
@@ -90,7 +91,9 @@ $padding-large: 40px;
 $padding-mlarge: 35px;
 $padding-medium: 30px;
 $padding-small: 20px;
+$padding-xsmall: 10px;
 //------------------------------------------------
+$border-radius-bold: 5px;
 $border-radius-base: 3px;
 $border-radius-small: 2px;
 $border-radius-medium: 10px;

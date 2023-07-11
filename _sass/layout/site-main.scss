@@ -3,9 +3,17 @@
 //------------------------------------------------
 #site-main {
     section {
-        padding: $padding-xlarge 0;
+        padding-bottom: $padding-large;
+
+        .section-text {
+            p {
+                color: $base-font-color-inverse;
+                font-size: $font-size-large;
+                margin-bottom: $padding-xsmall;
+            }
+        }
     }
     section:first-child {
-        padding: 10px 50px;
+        padding-top: $padding-medium;
     }
 }

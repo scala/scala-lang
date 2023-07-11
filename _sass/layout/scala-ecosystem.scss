@@ -7,10 +7,12 @@
         // background: url("../img/frontpage/background-scala-ecosystem.jpg") no-repeat center bottom $gray-li;
         // @include image-size();
         background: $gray;
+        padding-bottom: 20px;
+
 
         .awesome-table {
-            background: $gray-darker;
-            padding: 16px 0;
+            border: 3px solid $gray-dark;
+            padding: 8px 0;
 
             .awesome-summary {
                 margin-bottom: 16px;
@@ -30,38 +32,29 @@
             }
 
             .awesome-items {
-                @include span-columns(8);
-
-                @include bp(large) {
-                    @include span-columns(12);
-                }
+                @include span-columns(12);
 
                 h3 {
                     color: $gray-light;
                     font-family: $base-font-family;
                     text-transform: uppercase;
-                    // border-bottom: $base-border-gray;
-                    font-size: $font-size-large;
+                    font-size: $font-size-medium;
                 }
 
-                float: left;
                 display: block;
 
                 .content-card {
                     float: left;
-                    background: $gray;
-                    padding: 2px;
-                    margin: 5px 3px;
+                    margin: 3px;
                     display: block;
-                    border-radius: $border-radius-base;
-
                 }
 
                 a {
 
                     h3 {
+
+                        font-size: $font-size-small;
                         transition: $base-transition;
-                        padding: 10px;
                         i {
                             margin-right: 6px;
                         }
@@ -72,11 +65,6 @@
                     &:hover {
                         text-decoration: none;
                         box-shadow: $box-shadow-item;
-
-                        h3 {
-                            color: $brand-primary;
-                            background: $gray-dark;
-                        }
                     }
                 }
             }
@@ -147,9 +135,24 @@
 
                     input {
                         padding: 12px 18px 12px 50px;
+                        color: $base-font-color-inverse;
+                        background: $gray-li;
                         border-radius: $border-radius-small;
                         width: 100%;
                         font-weight: $font-bold;
+
+                        &::placeholder {
+                            color: $base-font-color-inverse;
+                        }
+
+                        &:focus,
+                        &:active {
+                            background: #fff;
+                            color: $base-font-color-light;
+                            &::placeholder {
+                                color: $base-font-color-light;
+                            }
+                        }
                     }
                 }
                 @include bp(medium) {

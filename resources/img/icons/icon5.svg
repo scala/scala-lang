@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Calque_2"
+   viewBox="0 0 108.3 108.3"
+   version="1.1"
+   sodipodi:docname="icon5.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3248"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="7.5438594"
+     inkscape:cx="54.216281"
+     inkscape:cy="54.150002"
+     inkscape:window-width="1296"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Calque_2" />
+  <defs
+     id="defs3211">
+    <style
+       id="style3206">.cls-1{stroke-width:4.38px;}.cls-1,.cls-2{fill:none;stroke:#3c616a;stroke-linecap:round;stroke-miterlimit:10;}.cls-3{fill:#f05a2c;}.cls-4{clip-path:url(#clippath-1);}.cls-2{stroke-width:7.3px;}</style>
+    <clipPath
+       id="clippath-1">
+      <circle
+         class="cls-2"
+         cx="54.15"
+         cy="54.15"
+         r="50.5"
+         id="circle3208" />
+    </clipPath>
+  </defs>
+  <g
+     id="Content">
+    <g
+       id="Icons">
+      <g
+         id="g3243">
+        <g
+           id="g3237">
+          <circle
+             class="cls-2"
+             cx="54.15"
+             cy="54.15"
+             r="50.5"
+             id="circle3213" />
+          <g
+             id="g3235">
+            <g
+               class="cls-4"
+               clip-path="url(#clippath-1)"
+               id="g3231">
+              <path
+                 class="cls-1"
+                 d="M54.15,3.65c13.95,0,25.25,25.25,25.25,50.5s-11.3,50.5-25.25,50.5"
+                 id="path3215" />
+              <path
+                 class="cls-1"
+                 d="M54.15,3.65c-13.95,0-25.25,25.25-25.25,50.5s11.3,50.5,25.25,50.5"
+                 id="path3217" />
+              <line
+                 class="cls-1"
+                 x1="54.15"
+                 y1="3.65"
+                 x2="54.15"
+                 y2="104.65"
+                 id="line3219" />
+              <line
+                 class="cls-1"
+                 x1="-.22"
+                 y1="54.15"
+                 x2="123.77"
+                 y2="54.15"
+                 id="line3221" />
+              <line
+                 class="cls-1"
+                 x1="-.22"
+                 y1="79.4"
+                 x2="123.77"
+                 y2="79.4"
+                 id="line3223" />
+              <line
+                 class="cls-2"
+                 x1="-.22"
+                 y1="104.65"
+                 x2="123.77"
+                 y2="104.65"
+                 id="line3225" />
+              <line
+                 class="cls-1"
+                 x1="-.22"
+                 y1="28.9"
+                 x2="123.77"
+                 y2="28.9"
+                 id="line3227" />
+              <line
+                 class="cls-2"
+                 x1="-.22"
+                 y1="3.65"
+                 x2="123.77"
+                 y2="3.65"
+                 id="line3229" />
+            </g>
+            <circle
+               class="cls-2"
+               cx="54.15"
+               cy="54.15"
+               r="50.5"
+               id="circle3233" />
+          </g>
+        </g>
+        <path
+           class="cls-3"
+           d="M33.27,39.48c-1.79,0-3.55-.72-4.83-2-1.26-1.28-2-3.03-2-4.82s.73-3.55,2-4.83c1.28-1.26,3.03-2,4.83-2s3.56,.73,4.82,2c1.26,1.28,2,3.03,2,4.83s-.73,3.56-2,4.82-3.03,2-4.82,2Z"
+           id="path3239" />
+        <path
+           class="cls-3"
+           d="M79.81,60.97c-1.79,0-3.55-.72-4.83-2-1.26-1.28-2-3.03-2-4.82s.73-3.55,2-4.83c1.28-1.26,3.03-2,4.83-2s3.56,.73,4.82,2c1.26,1.28,2,3.03,2,4.83s-.73,3.56-2,4.82-3.03,2-4.82,2Z"
+           id="path3241" />
+      </g>
+    </g>
+  </g>
+  <path
+     style="fill:#de3423;stroke-width:0.132558"
+     d="m 31.16448,39.028911 c -1.843984,-0.628048 -3.06874,-1.700012 -3.926952,-3.43705 -2.194772,-4.442259 1.039877,-9.613145 6.034566,-9.646812 4.194333,-0.02827 7.460908,3.930326 6.615053,8.016451 -0.815114,3.937617 -4.963661,6.347705 -8.722667,5.067411 z"
+     id="path3287" />
+  <path
+     style="fill:#de3423;stroke-width:0.132558"
+     d="m 77.664129,60.529161 c -1.787815,-0.631111 -3.081348,-1.783178 -3.888099,-3.46288 -0.747866,-1.557103 -0.903681,-2.853172 -0.532382,-4.428361 1.072632,-4.550513 6.396228,-6.686043 10.250809,-4.112053 2.360586,1.57634 3.503618,4.414255 2.866435,7.116775 -0.54439,2.308951 -2.151873,4.084084 -4.425017,4.886519 -0.682649,0.24098 -1.155163,0.309435 -2.135873,0.309435 -0.98071,0 -1.453224,-0.06846 -2.135873,-0.309435 z"
+     id="path3326" />
+</svg>
