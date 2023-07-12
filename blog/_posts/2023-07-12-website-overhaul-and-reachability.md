@@ -22,3 +22,7 @@ In the last few months, [Jamie Thompson](https://github.com/bishabosha), enginee
 All the `*.scala-lang.org` websites (such as this website, as well as [https://docs.scala-lang.org](https://docs.scala-lang.org) or [https://users.scala-lang.org](https://users.scala-lang.org)) are hosted on [EPFL](https://epfl.ch) servers. In late 2022, EPFL decided to block the requests coming from some networks because they got too many attacks from them. An unfortunate consequence was that [the Scala websites were unreachable from some VPNs](https://github.com/scala/scala-lang/issues/1456). This led the company Lightbend to submit a Scala Center Proposal to [ensure the reachability of the Scala websites](https://github.com/scalacenter/advisoryboard/blob/main/proposals/031-scala-websites-vpn.md) in June this year.
 
 We are happy to announce that our system administrator has set up a reverse proxy in front of the EPFL server. The reverse proxy now handles the traffic to all the Scala websites, which should solve the reachability issue. In case you are still rejected, please let us know in the corresponding [issue](https://github.com/scala/scala-lang/issues/1456).
+
+## Support the Scala Center
+
+The improvements described in this blog post were funded by the members of the Scala Center advisory board and by individual donors. We encourage Scala users to help Scala grow by [donating](https://scala.epfl.ch/donate.html) or encouraging their employers to [join the board](https://scala.epfl.ch/corporate-membership.html).
