@@ -2,14 +2,16 @@
 layout: blog-detail
 post-type: blog
 by: Julien Richard-Foy (Scala Center)
-title: Website Overhaul and Improved Reachability
+title: "Websites: Front Page Overhauled, Site Reachability Improved"
 ---
 
-We are happy to announce that the homepage of this website has been overhauled to highlight better the use cases of Scala and to clarify what makes the language unique. Additionally, this website and all the other `*.scala-lang.org` websites should now be reachable from VPNs.
+We are happy to announce that the Scala home page has been overhauled to highlight better the use cases of Scala and to clarify what makes the language unique.
 
-## Homepage Overhaul
+Additionally, this website and all the other `*.scala-lang.org` websites should now be reachable from VPNs.
 
-In the last few months, [Jamie Thompson](https://github.com/bishabosha) has been making several improvements to the Scala homepage to put more emphasis on the use cases of Scala. The most notable changes compared to [one year ago](http://web.archive.org/web/20220316071028/https://www.scala-lang.org/) are:
+## Home Page Overhaul
+
+In the last few months, [Jamie Thompson](https://github.com/bishabosha), engineer at the Scala Center, has been making several improvements to the Scala home page to put more emphasis on the use cases of Scala. The most notable changes compared to [one year ago](http://web.archive.org/web/20220316071028/https://www.scala-lang.org/) are:
 - less content: we focus on answering the questions “why Scala?” and “what is Scala?”.
 - simpler tagline: instead of going through a list of language features we give a more general description: “a programming language that scales with you: from small scripts to large multiplatform applications”.
 - executable code examples: because developers like playing with concrete examples, we showcase some strengths of Scala in a carousel of code examples that can be edited and run on Scastie.
