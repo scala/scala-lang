@@ -79,7 +79,10 @@ classes.
 
 ## What does "signature polymorphism" mean, exactly?
 
-As the [Javadoc for `MethodHandle`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/invoke/MethodHandle.html) says,
+There is a formal description in [JLS 15.12.3](), but a more readable
+version is in the [Javadoc for
+`MethodHandle`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/invoke/MethodHandle.html).
+It says:
 
 > A signature polymorphic method is one which can operate with any of
 > a wide range of call signatures and return types.
@@ -105,6 +108,8 @@ Second, methods (in both languages) may only have a fixed number of
 type parameters.
 
 The following example should help make all of this clearer.
+
+* [JLS 15.12.3]: https://docs.oracle.com/javase/specs/jls/se17/html/jls-15.html#jls-15.12.3
 
 ## How do I call a signature polymorphic method from Scala?
 
@@ -189,9 +194,9 @@ request](https://github.com/lampepfl/dotty/pull/16225).
 
 ### The path not taken
 
-Along the way we explored an alternative approach, suggested by Jason
-Zaugg, which involved rewriting each call site to include a
-cast to a structural type containing an appropriately typed method.
+Along the way we explored an alternative approach, suggested by Jason,
+which involved rewriting each call site to include a cast to a
+structural type containing an appropriately typed method.
 
 In that version, the `replace` call-site in the example above was
 rewritten from:
@@ -226,17 +231,3 @@ complicated the implementation.
 These are welcome on the Scala Contributors forum thread at:
 
 * (TODO Discourse link, with link back to this post)
-
-> TODO: include a link to the relevant section of the JLS
-
-> TODO: find the JEP and any design discussions;
-> VarHandle JEP https://openjdk.org/jeps/193
-> hmm wait, did MethodHandle actually land in JDK 7?
-> yes! https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/MethodHandle.html
->   references signature polymorphism
-
-> TODO: link to something that explains what Java reflection even is?
-
-> TODO:
-> cover the type ascription vs cast design issue?
-> (Java has casts, in Scala type ascription is more idiomatic)?
