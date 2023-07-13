@@ -113,4 +113,14 @@
   location:
     longitude: 2.34003
     latitude: 48.95888
+- institution: University of Zurich, Switzerland
+  name: Guido Salvaneschi
+  location:
+    longitude: 8.54876
+    latitude: 47.41319
+- institution: University of St. Gallen, Switzerland
+  name: Guido Salvaneschi
+  location:
+    longitude: 9.37472
+    latitude: 47.43111
     
