@@ -109,7 +109,7 @@ type parameters.
 
 The following example should help make all of this clearer.
 
-* [JLS 15.12.3]: https://docs.oracle.com/javase/specs/jls/se17/html/jls-15.html#jls-15.12.3
+[JLS 15.12.3]: https://docs.oracle.com/javase/specs/jls/se17/html/jls-15.html#jls-15.12.3
 
 ## How do I call a signature polymorphic method from Scala?
 
