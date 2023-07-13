@@ -13,8 +13,8 @@ This blog post explains the feature and why it exists. We also delve
 into how it is specified and implemented in both Scala 2 and Scala 3.
 
 The Scala 3 implementation is new, and that's the occasion for this
-blog post. Thanks to this recent work, Scala 3 users can now access
-the entire Java reflection API, as of Scala 3.3.0-RC1.
+blog post. Thanks to this recent work, **Scala 3 users can now access
+the entire Java reflection API**, as of Scala 3.3.0.
 
 ## Should I keep reading?
 
@@ -40,13 +40,13 @@ or stored.
 ## Is signature polymorphism supported in Scala?
 
 Yes: since Scala 2.11.5, and more fully since Scala 2.12.16.  Scala 3
-now has the support too, as of Scala 3.3.0-RC1.
+now has the support too, as of Scala 3.3.0.
 
 The initial Scala 2 implementation was done by [Jason Zaugg] in 2014
 and refined later by [Lukas Rytz]. The latest version, with all fixes,
 landed in Scala 2.12.16 (released June 2022).
 
-Just recently, [Dale Wijnand] ported the feature to Scala 3, with the
+Recently, [Dale Wijnand] ported the feature to Scala 3, with the
 assistance of [Guillaume Martres] and myself, [Seth Tisue].
 
 Jason, Lukas, Dale, and myself are members of the Scala compiler team
@@ -145,43 +145,25 @@ Great question!
 
 Doesn't it seem puzzling that Oracle would go to so much trouble to
 make Java reflection faster? If I care so much about performance,
-surely I should avoid using reflection at all?
+surely I should avoid using reflection entirely?
 
 The real reason these methods need to be fast is to aid efficient
-implementation of lambdas, in both Java and Scala. Additionally, they aid
-efficient implementation of dynamic languages on the
-JVM. `MethodHandle` was added to the JVM at the same time as
-`invokeDynamic`, which serves those same two purposes.
+implementation of dynamic languages on the JVM. `MethodHandle` was
+added to the JVM at the same time as `invokeDynamic`, as part of
+[JSR-292](), which aimed to support efficient implementation of JRuby
+and other alternative JVM languages. (`invokeDynamic` is additionally
+used for implementing lambdas; see [this writeup on Stack Overflow]().)
 
-> TODO: Is this actually accurate? I suspect it is, but I should
-> dig around and confirm it, and perhaps add links.)
-
-> TODO: I should improve the bit about "efficient implementation
-> of lambdas". Adam Vandervorst wrote:
-> > I'm a bit confused by the "Are these methods good for anything else" section
-> > I deduce Java only uses it in "MethodHandle and VarHandle" and Scala just gained the barebones implementation.
-> I replied:
-> That's a good point. I will try to improve that section. In order to improve it properly, I need to dig a little deeper into how MethodHandle and VarHandle are used internally in the Java and Scala compilers.
-> Jason (et al) definitely used MethodHandle when adding lambda support to the compiler back end for Scala 2.12, but I need to dig and see whether we are specifically using the signature polymorphic methods.
-> I don't want to get too deep into it in the blog post itself, but I would like to expand it a bit and need to do a bit more research in order to make the expansion accurate.
-
-> TODO: I might rethink how I'm presenting the issue of speed here. As I wrote to
-> Adam:
-> that's kind of what I was getting at with the " If I care so much about performance, surely I should avoid using reflection at all?"
-> if I understand correctly, if you aren't a language implementer, then boxing overhead in reflection is probably the least of your worries
-> but the methods are signature polymorphic regardless
-> so we need the compiler support in Scala in order for the methods to even be callable at all by users who don't care about speed
-> it's a bit tricky to convey this without making the post overlong
+[JSR-292]: https://www.infoq.com/articles/invokedynamic/
+[this writeup on Stack Overflow]: https://stackoverflow.com/questions/30002380/why-are-java-8-lambdas-invoked-using-invokedynamic
 
 ## How is this implemented in Scala 2?
 
-> TODO -- keep it brief
+Jason Zaugg describes his initial JDK 7 implementation in [PR 4139]()
+and shows how the resulting bytecode looks.
 
-illustrates the following compiler internals/techniques:
-
-> TODO
-
-For details, see [PR 4139](), [PR 5594](), [PR 9530](), and [PR 9930]().
+See also these well-documented followups: [PR 5594]() for JDK 9, [PR
+9530]() for JDK 11, and [PR 9930]() for JDK 17.
 
 [PR 4139]: https://github.com/scala/scala/pull/4139
 [PR 5594]: https://github.com/scala/scala/pull/5594
@@ -192,16 +174,18 @@ For details, see [PR 4139](), [PR 5594](), [PR 9530](), and [PR 9930]().
 
 We had to work harder in Scala 3 because it wasn't enough to have an
 an in-memory representation for signature polymorphic call sites.  The
-call sites must also have a representation in TASTy. (Scala 2
-pickles only represent method signatures; in contrast, TASTy
-represents method bodies too.)
+call sites must also have a representation in TASTy, so we had to add
+a new TASTy node type. (Scala 2 pickles only represent method
+signatures; in contrast, TASTy represents method bodies too.)
 
-Our initial implementation plan was to add a new node type to TASTy,
-and that's what we ended up doing.
+To represent a signature polymorphic call site internally, we
+synthesize a method type based on the types at the call site.  One can
+imagine the original signature-polymorphic method as being infinitely
+overloaded, with each individual overload only being brought into
+existence as needed.
 
-> TODO: point out what's interesting
-
-For details, see [the pull request](https://github.com/lampepfl/dotty/pull/16225).
+For details, see [the pull
+request](https://github.com/lampepfl/dotty/pull/16225).
 
 ### The path not taken
 
@@ -231,16 +215,17 @@ product of this transform, drop the cast, and emit the correct
 bytecode.
 
 In the end, we didn't go with this approach. As Sébastien Doeraene
-pointed out, we avoided a new tag but we gave new semantics to
-existing tags that older compilers wouldn't understand. Therefore the
-work still couldn't ship until the next minor version of the compiler.
-Besides, avoiding the new tag complicated the implementation.
+pointed out, although this approach avoided adding a new TASTy tag, it
+also gave new semantics to existing tags that older compilers wouldn't
+understand. Therefore the work still couldn't ship until the next
+minor version of the compiler.  Besides, avoiding the new tag
+complicated the implementation.
 
 ## Questions? Discussion?
 
 These are welcome on the Scala Contributors forum thread at:
 
-* (Discourse link, with link back to this post)
+* (TODO Discourse link, with link back to this post)
 
 > TODO: include a link to the relevant section of the JLS
 
