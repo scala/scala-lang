@@ -105,7 +105,8 @@ incurring boxing at run-time when primitive types are used in generic
 contexts.
 
 Second, methods (in both languages) may only have a fixed number of
-type parameters.
+type parameters, but we need one varying type for each parameter
+of the method we want to call reflectively.
 
 The following example should help make all of this clearer.
 
