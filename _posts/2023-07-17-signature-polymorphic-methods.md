@@ -148,16 +148,17 @@ Signature polymorphism helped us here in two ways:
 
 Great question!
 
-Doesn't it seem puzzling that Oracle would go to so much trouble to
-make Java reflection faster? If I care so much about performance,
-surely I should avoid using reflection entirely?
+Doesn't it seem puzzling that the designers of Java would go to so
+much trouble to make Java reflection faster? If I care so much about
+performance, shouldn't I avoid using reflection entirely?
 
 The real reason these methods need to be fast is to aid efficient
 implementation of dynamic languages on the JVM. `MethodHandle` was
 added to the JVM at the same time as `invokeDynamic`, as part of
 [JSR-292], which aimed to support efficient implementation of JRuby
 and other alternative JVM languages. (`invokeDynamic` is additionally
-used for implementing lambdas; see [this writeup on Stack Overflow].)
+used for implementing lambdas, in both Java and Scala; see [this
+writeup on Stack Overflow].)
 
 [JSR-292]: https://www.infoq.com/articles/invokedynamic/
 [this writeup on Stack Overflow]: https://stackoverflow.com/questions/30002380/why-are-java-8-lambdas-invoked-using-invokedynamic
