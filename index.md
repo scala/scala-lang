@@ -70,7 +70,7 @@ whyScalaTitle: "Why Scala?"
 
 # Scala use cases
 useCaseTitle: "Proven Use Cases"
-useCaseIntroduction: "People around the world trust Scala to build useful software, some of the most popular domains include:"
+useCaseIntroduction: "People around the world trust Scala to build useful software. Popular domains include"
 
 # Scala ecosystem
 ecosystemTitle: "Scala's libraries unlock your potential"
