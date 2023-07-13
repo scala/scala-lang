@@ -58,6 +58,11 @@
   location:
     longitude: 18.0680626
     latitude: 59.3498706
+- institution: KTH Royal Institute of Technology, Kista Campus
+  name: Paris Carbone
+  location:
+    longitude: 17.944321
+    latitude: 59.402481    
 - institution: Lund University, Sweden
   name: Björn Regnell
   location:
