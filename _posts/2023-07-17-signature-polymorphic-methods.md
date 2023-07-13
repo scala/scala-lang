@@ -79,7 +79,7 @@ classes.
 
 ## What does "signature polymorphism" mean, exactly?
 
-There is a formal description in [JLS 15.12.3](), but a more readable
+There is a formal description in [JLS 15.12.3], but a more readable
 version is in the [Javadoc for
 `MethodHandle`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/invoke/MethodHandle.html).
 It says:
@@ -155,20 +155,20 @@ surely I should avoid using reflection entirely?
 The real reason these methods need to be fast is to aid efficient
 implementation of dynamic languages on the JVM. `MethodHandle` was
 added to the JVM at the same time as `invokeDynamic`, as part of
-[JSR-292](), which aimed to support efficient implementation of JRuby
+[JSR-292], which aimed to support efficient implementation of JRuby
 and other alternative JVM languages. (`invokeDynamic` is additionally
-used for implementing lambdas; see [this writeup on Stack Overflow]().)
+used for implementing lambdas; see [this writeup on Stack Overflow].)
 
 [JSR-292]: https://www.infoq.com/articles/invokedynamic/
 [this writeup on Stack Overflow]: https://stackoverflow.com/questions/30002380/why-are-java-8-lambdas-invoked-using-invokedynamic
 
 ## How is this implemented in Scala 2?
 
-Jason Zaugg describes his initial JDK 7 implementation in [PR 4139]()
+Jason Zaugg describes his initial JDK 7 implementation in [PR 4139]
 and shows how the resulting bytecode looks.
 
-See also these well-documented followups: [PR 5594]() for JDK 9, [PR
-9530]() for JDK 11, and [PR 9930]() for JDK 17.
+See also these well-documented followups: [PR 5594] for JDK 9,
+[PR 9530] for JDK 11, and [PR 9930] for JDK 17.
 
 [PR 4139]: https://github.com/scala/scala/pull/4139
 [PR 5594]: https://github.com/scala/scala/pull/5594
