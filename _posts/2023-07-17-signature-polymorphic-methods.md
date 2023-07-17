@@ -232,4 +232,4 @@ complicated the implementation.
 
 These are welcome on the Scala Contributors forum thread at:
 
-* (TODO Discourse link, with link back to this post)
+* https://contributors.scala-lang.org/t/blog-post-signature-polymorphic-methods-in-scala/6245
