@@ -230,6 +230,5 @@ complicated the implementation.
 
 ## Questions? Discussion?
 
-These are welcome on the Scala Contributors forum thread at:
+These are welcome on the [Scala Contributors forum thread](https://contributors.scala-lang.org/t/blog-post-signature-polymorphic-methods-in-scala/6245).
 
-* https://contributors.scala-lang.org/t/blog-post-signature-polymorphic-methods-in-scala/6245
