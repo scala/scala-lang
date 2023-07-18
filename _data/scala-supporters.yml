@@ -2,32 +2,15 @@ supporters:
   - name: EPFL
     logo: /resources/img/frontpage/epfl-logo.png
     url: https://www.epfl.ch
-  - name: Goldman Sachs
-    logo: /resources/img/frontpage/goldman-logo.png
-    url: https://www.goldmansachs.com
   - name: 47 Degrees
     logo: /resources/img/frontpage/47deg-logo.png
     url: https://www.47deg.com/
-  - name: Twitter
-    logo: /resources/img/frontpage/twitter-logo.png
-    url: https://www.twitter.com
   - name: Spotify
     logo: /resources/img/frontpage/spotify-logo.png
     url: https://www.spotify.com/
   - name: Lunatech
     logo: /resources/img/frontpage/lunatech-logo.png
     url: https://lunatech.com/
-  - name: Databricks
-    logo: /resources/img/frontpage/databricks-logo.png
-    url: https://databricks.com/
-    wider-logo: true
-  - name: SwissBorg
-    logo: /resources/img/frontpage/swissborg-logo.png
-    url: https://swissborg.com/
-    wider-logo: true
-  - name: Knóldus
-    logo: /resources/img/frontpage/knoldus-logo.png
-    url: https://www.knoldus.com/
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/corporate-membership.html
