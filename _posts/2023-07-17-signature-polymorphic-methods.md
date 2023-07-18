@@ -27,7 +27,7 @@ aficionados, Scala and Java language mavens, and compiler hackers.
 
 Compiler support is needed when you use some portions of the Java
 reflection API, namely `MethodHandle` (since Java 7) and `VarHandle`
-(since Java 11).
+(since Java 9).
 
 `MethodHandle` provides reflective access to methods on JVM classes,
 regardless of whether the methods were defined in Java, Scala, or some
