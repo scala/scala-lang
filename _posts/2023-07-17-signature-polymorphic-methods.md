@@ -1,5 +1,5 @@
 ---
-category: blog-detail
+layout: blog-detail
 post-type: blog
 by: Seth Tisue, Lightbend
 title: "Signature polymorphic methods in Scala"
