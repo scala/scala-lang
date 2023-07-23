@@ -3,6 +3,8 @@ layout: blog-detail
 post-type: blog
 by: Seth Tisue, Lightbend
 title: "Signature polymorphic methods in Scala"
+redirect_from:
+  - /blog-detail/2023/07/17/signature-polymorphic-methods.html
 ---
 
 Java 7 introduced a curious and little-known feature to the Java
