@@ -12,7 +12,7 @@ icon: "icon11.svg"
             <h3>Big Data Analysis</h3>
             <p class="emph">Analyse petabytes of data in parallel on single-node machines or on clusters.</p>
             <p>Compute either in batches or in real-time. Execute fast, distributed relational operations on your data, or train machine learning algorithms.</p>
-            <p>Work with popular storage and computation engines such as <a href="https://spark.apache.org" target="_blank" rel="none">Spark</a>, <a href="https://kafka.apache.org" target="_blank" rel="none">Kafka</a> <a href="https://hadoop.apache.org" target="_blank" rel="none">Hadoop</a>, <a href="https://flink.apache.org" target="_blank" rel="none">Flink</a>, <a href="https://cassandra.apache.org" target="_blank" rel="none">Cassandra</a>, <a href="https://delta.io" target="_blank" rel="none">Delta Lake</a> and more.</p>
+            <p>Work with popular storage and computation engines such as <a href="https://spark.apache.org" target="_blank" rel="none">Spark</a>, <a href="https://kafka.apache.org" target="_blank" rel="none">Kafka</a>, <a href="https://hadoop.apache.org" target="_blank" rel="none">Hadoop</a>, <a href="https://flink.apache.org" target="_blank" rel="none">Flink</a>, <a href="https://cassandra.apache.org" target="_blank" rel="none">Cassandra</a>, <a href="https://delta.io" target="_blank" rel="none">Delta Lake</a> and more.</p>
             <a class="button button_call-to-action" href="https://index.scala-lang.org/awesome#big-data" target="_blank" rel="none">Libraries for processing big data</a>
         </div>
     </div>
