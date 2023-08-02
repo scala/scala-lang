@@ -36,5 +36,5 @@ Here is a brief summary of all the events:
 |----------------|-------------|--------------------------------|----------------------|----------------------------------------------------------------------------------------------------|
 | SIP            | 11th Sept   | 17:30                          | ❌                   | N/A                                                                                                |
 | Scala Bridge   | 12th Sept   | 9:00 - 15:00, Room TBD         | ✅                   | [Register here](https://xebiaform.typeform.com/to/ZIWcng6z)                                       |
-| Tooling Summit | 12th Sept   | 8:30, Room TBD                 | ❌✅                 | N/A                                                                                                |
+| Tooling Summit | 12th Sept   | 8:30, Room TBD                 | ❌                 | N/A                                                                                                |
 | Scala Spree    | 15th Sept   | 13:30, Room 101                | ✅                   | [Register here](https://airtable.com/appguX08g5OTDTZ4z/shrwSI11zJHmh7CkZ)                          |
