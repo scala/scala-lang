@@ -9,7 +9,7 @@ title: "The Scala Week in Madrid"
 After almost four years, we can meet again. The whole Scala Center team is coming to Madrid in September for the Scala Days conference and we hope to see you there! Check out the conference program and read further about the co-located events we are holding before and after the main Scala Days event.
 Use code [**ScalaCenter25**](https://47deg.swoogo.com/scala-days-madrid/register?code=ScalaCenter25) for 25% off or apply for a scholarship [**here**](https://xebiaform.typeform.com/to/BJzHuOsQ).
 
-## Free co-located
+## Free and co-located
 
 We are delighted to announce the exciting, free, and accessible co-located events about Scala! Starting from the 11th of September, 2023, the Scala Center team will be hosting a series of activities at Universidad Rey Juan Carlos (located at Sede Madrid-Argüelles, C. de Quintana, 21, 28008 Madrid, Spain). This is a unique opportunity for Scala enthusiasts, maintainers, and newcomers to come together, share knowledge, and contribute to the vibrant Scala ecosystem.
 
