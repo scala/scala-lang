@@ -24,7 +24,7 @@ The [**Scala Spree**](https://github.com/scalacenter/sprees) is scheduled for th
 ### Tooling Summit & SIP Meeting
 
 Besides the events open to the whole community, we will be conducting in-person meetings between people involved in various Scala-related groups and committees.
-We are will be organising the second iteration of the **Tooling Summit**. The Tooling Summit is a bi-annual gathering of the Scala tooling stakeholders where we ensure all tooling teams are in sync with each other and the compiler team. We will be following up on the progress done since the [last Tooling Summit](https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html) and discussing the steps to take for the future development of the tooling ecosystem.
+We are organising the second iteration of the **Tooling Summit**. The Tooling Summit is a bi-annual gathering of the Scala tooling stakeholders where we ensure all tooling teams are in sync with each other and the compiler team. We will be following up on the progress done since the [last Tooling Summit](https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html) and discussing the steps to take for the future development of the tooling ecosystem.
 Another event we are organising is the [**Scala Improvement Process (SIP)**](https://docs.scala-lang.org/sips/index.html). This process is crucial for deciding how the Scala language evolves, taking into account the opinions of all stakeholders.
 In-person summits of such kind are indispensable for better cohesion between all the stakeholders, as online platforms can only do so much in terms of forging connections.
 
