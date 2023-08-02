@@ -21,7 +21,7 @@ We are happy to be hosting [**Scala Bridge**](https://scalabridge.org/) on the 1
 
 The [**Scala Spree**](https://github.com/scalacenter/sprees) is scheduled for the 15th of September at 1:30 PM in Room 101 of the University of Madrid. The Spree brings together the Scala community to hack on open-source projects of local authors. If you're a local OSS maintainer or a contributor eager to participate, this event is a great opportunity to interact and collaborate. [**Register here**](https://airtable.com/appguX08g5OTDTZ4z/shrwSI11zJHmh7CkZ).
 
-### Tooling Summit & the SIP Meeting
+### Tooling Summit & SIP Meeting
 
 Besides the events open to the whole community, we will be conducting in-person meetings between people involved in various Scala-related groups and committees.
 We are will be organising the second iteration of the **Tooling Summit**. The Tooling Summit is a bi-annual gathering of the Scala tooling stakeholders where we ensure all tooling teams are in sync with each other and the compiler team. We will be following up on the progress done since the [last Tooling Summit](https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html) and discussing the steps to take for the future development of the tooling ecosystem.
