@@ -28,9 +28,13 @@ We are organising the second iteration of the **Tooling Summit**. The Tooling Su
 Another event we are organising is the [**Scala Improvement Process (SIP)**](https://docs.scala-lang.org/sips/index.html). This process is crucial for deciding how the Scala language evolves, taking into account the opinions of all stakeholders.
 In-person summits of such kind are indispensable for better cohesion between all the stakeholders, as online platforms can only do so much in terms of forging connections.
 
-We look forward to a productive and engaging week of Scala at the University of Madrid! Big thanks to the local Scala Madrid user group for their support in organising this event. Stay tuned for more information and updates on these events.
+We look forward to a productive and engaging week of Scala at the University of Madrid! Big thanks to the local Scala Madrid user group for their support in organising this event, and big thanks to [Habla Computing](http://www.hablapps.com/), the functional architecture studio, for sponsoring the event:
 
-Here is a brief summary of all the events:
+[![Habla Computing]({{ site.baseurl }}/resources/img/blog/2023-08-02-scala-week/habla_computing_logo.png)](http://www.hablapps.com/)
+
+Stay tuned for more information and updates on these events.
+
+Here is a brief summary about all the events:
 
 | Event          | When        | Where                          | Accessible to public | Registration Link                                                                                   |
 |----------------|-------------|--------------------------------|----------------------|----------------------------------------------------------------------------------------------------|
