@@ -17,7 +17,7 @@ In the inaugural piece of this series, we spotlight [Goldman Sachs](https://www.
 Founded in 1869 and headquartered in New York City with offices in all major financial centers around the world, Goldman Sachs delivers a broad range of financial services to a large and diversified client base that includes corporations, financial institutions, governments, and individuals.
 
 Between 2016 and 2022, Goldman Sachs played an important role as an advisory board member of the Scala Center, significantly contributing to the Scala community's evolution.
-We had the privilege of engaging with [Kay XiongPachay](https://www.linkedin.com/in/kay-xiongpachay/), one of the Program Managers of Goldman Sachs' Open Source Program Office (OSPO), in a comprehensive interview.
+We had the privilege of engaging with [Kay XiongPachay](https://www.linkedin.com/in/kay-xiongpachay/), the Program Manager of Goldman Sachs' Open Source Program Office (OSPO), in a comprehensive interview.
 
 Kay shares valuable insights on how to effectively establish a successful OSPO and define its objectives, highlighting the strategic benefits a well-structured OSPO can bring to an organization's open-source efforts.
 
