@@ -7,38 +7,6 @@ $(document).ready(function() {
         $('.navigation-menu,.navigation-fade-screen').toggleClass('is-visible');
         e.preventDefault();
     });
-
-    var menus = $('.items-menu');
-    var allContents = $('.items-code');
-    var allButtons = $('.scala-item');
-
-    menus.each(function(index1, row) {
-        var row = $(row);
-        var items = row.find('.scala-item');
-        var content = row.children('.items-content');
-        var contents = content.children('.items-code');
-
-        items.each(function(index2, button) {
-            var jButton = $(button);
-            var expandButton = jButton.children('.button-more');
-            if (expandButton.length > 0) {
-                expandButton.click(function(event) {
-                    var activeCode = contents.eq(index2);
-                    var others = allContents.not(activeCode);
-                    allButtons.removeClass('active');
-                    others.hide();
-
-                    if (activeCode.is(":visible")) {
-                        activeCode.hide();
-                    } else {
-                        jButton.addClass('active')
-                        activeCode.show();
-                    }
-
-                });
-              }
-        });
-    });
 });
 
 // Tooltip

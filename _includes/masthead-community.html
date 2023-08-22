@@ -1,135 +1,131 @@
-<section class="governance">
+<section class="governance table-of-content">
   <div class="wrap">
     <div class="inner-box">
       <div class="heading-box">
         <h2 id="governance">Governance</h2>
-				<p>{{site.data.governance.introText}}</p>
       </div>
       <div class="community">
-        <div class="scala-items-list">
+        <div class="scala-items-grid">
           <div class="items-menu">
             {% for scalaItem in site.data.governance.cards %}
-              {% assign loopIndexMod = forloop.index | minus: 1 | modulo: 3 %}
-
-              {% if loopIndexMod == 0 %}
-                {% assign codeSnippets = '' | split: ',' %}
-                <div class="wrap">
-              {% endif %}
-
               <!-- Show the below content only if the scalaItem.expandable either doesn't exist or is false -->
-              {% unless scalaItem.dontExpand %}
-              {% capture box_content %}
-							<div class="wrap">
-								<ul class="vertical-buttons-list">
-									{% for link in scalaItem.links %}
-									{% if link.text %}
-									<li><p>{{ link.text }}</p></li>
-									{% else %}
-									<li><a href="{{ link.url }}" class="button button-expand" target="_blank" rel="none">{{ link.name }}</a></li>
-									{% endif %}
-									{% endfor %}
-								</ul>
-							</div>
-              {% endcapture %}
-              {% assign codeSnippets = codeSnippets | push: box_content %}
-              {% endunless %}
               <div class="scala-item scala-item__governance">
-								<div class="top">
-									<h4>{{scalaItem.title}}</h4>
-									<p>{{scalaItem.description}}</p>
-								</div>
+                <div class="top">
+                  <h4>{{scalaItem.title}}</h4>
+                  <p>{{scalaItem.description}}</p>
+                </div>
                 {% unless scalaItem.dontExpand %}
-                <div class="button button-more">{{scalaItem.expandText}}</div>
+                <a href="#{{scalaItem.anchorTarget}}" class="button button-more">{{scalaItem.expandText}}</a>
                 {% endunless %}
               </div>
-              {% if loopIndexMod == 2 or forloop.last %}
+              <div id="{{scalaItem.anchorTarget}}" class="items-content">
+                {% unless scalaItem.dontExpand %}
+                <div class="wrap">
+                  <a id="{{scalaItem.anchorTarget}}-close" class="items-content_close" href="#{{scalaItem.anchorTarget}}-close"><i
+                      class="fa fa-close"></i></a>
                 </div>
-                <div class="items-content">
-                  {% for snippet in codeSnippets %}
-                  <div class="items-code">{{snippet}}</div>
-                  {% endfor %}
+                <div class="items-code">
+                  <div class="wrap">
+                    <ul class="vertical-buttons-list">
+                      {% for link in scalaItem.links %}
+                      {% if link.text %}
+                      <li>
+                        {{ link.text | markdownify }}
+                      </li>
+                      {% elsif link.fancy %}
+                      <li><div class="button button-announce">{{ link.fancy }}</div></li>
+                      {% else %}
+                      <li><a href="{{ link.url }}" class="button button-expand" target="_blank" rel="none">{{ link.name }}</a></li>
+                      {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </div>
-              {% endif %}
+                {% endunless %}
+              </div>
             {% endfor %}
           </div>
         </div>
+      </div>
+      <div class="community">
+        <div class="summary">{{site.data.governance.introText | markdownify}}</div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="table-of-content">
-	<div class="wrap">
-		<div class="inner-box">
-			<div class="community">
-				<div class="discourse">
-					<h2>Discourse</h2>
-					<span>Forums</span>
-					<ul>
-						{% for forum in site.data.chats-forums.discourseForums %}
-							<li>
-								<img src="/resources/img/frontpage/discourse-logo.png" alt="{{forum.title}}">
-								<div>
-									<h4><a href="{{forum.url}}">{{forum.title}}</a></h4>
-									<p>{{forum.subtitle}}</p>
-								</div>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div class="discord">
-					<h2>Discord</h2>
-					<span>Real-time chat</span>
-					<ul>
-						{% for server in site.data.chats-forums.discordServers %}
-							<li>
-								<a href="{{server.url}}">
-									<img src="/resources/img/frontpage/discord-logo.png" alt="{{channel.name}}">
-									<h4>{{server.name}}</h4>
-								</a>
-							</li>
-						{% endfor %}
-					</ul>
-					<span>More chat venues are listed below.</span>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="wrap">
+    <div class="inner-box">
+      <div class="community">
+        <div class="discourse">
+          <h2>Discourse</h2>
+          <span>Forums</span>
+          <ul>
+            {% for forum in site.data.chats-forums.discourseForums %}
+              <li>
+                <img src="/resources/img/frontpage/discourse-logo.png" alt="{{forum.title}}">
+                <div>
+                  <h4><a href="{{forum.url}}">{{forum.title}}</a></h4>
+                  <p>{{forum.subtitle}}</p>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="discord">
+          <h2>Discord</h2>
+          <span>Real-time chat</span>
+          <ul>
+            {% for server in site.data.chats-forums.discordServers %}
+              <li>
+                <a href="{{server.url}}">
+                  <img src="/resources/img/frontpage/discord-logo.png" alt="{{channel.name}}">
+                  <h4>{{server.name}}</h4>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+          <span>More chat venues are listed below.</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="upcoming-events">
-	<div class="wrap">
-		<div class="inner-box">
-			<div class="heading-box">
-				<h2>Upcoming Events and Trainings</h2>
-			</div>
-			<div class="events-items-list">
-				{% assign upcomingEvents = '' | split: ',' %}
-				{% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
-				{% for event in site.events %}
-				{% capture date %}{{event.end|date: '%s'|plus: 86400}}{% endcapture %}
-				{% if now <= date %} {% assign upcomingEvents=upcomingEvents | push: event %} {% endif %} {% endfor %} {% for event in
-					upcomingEvents limit:6 %} <div href="#" class="event-item">
-					<a href="{{event.link-out}}" class="card">
-						<img src="{{event.logo}}" alt="{{event.title}}">
-						<div class="card-text">
-							<h4>{{event.title}}</h4>
-							<ul>
-								<li class="event-location">{{event.location}}</li>
-							</ul>
-							<ul>
-								<li class="date-event">{{event.start | date_to_string}} {% if event.start != event.end %}- {{event.end |
-									date_to_string}}{% endif %}</li>
-							</ul>
-						</div>
-					</a>
-			</div>
-			{% endfor %}
-			</div>
-			<div class="call-to-action action-medium">
-				<p class="align-top">See <a href="/events/">more events</a> or <a
-						href="https://github.com/scala/scala-lang/tree/master/events">add one to our events feed</a></p>
-			</div>
-			{% include upcoming-training.html %}
-		</div>
-	</div>
+  <div class="wrap">
+    <div class="inner-box">
+      <div class="heading-box">
+        <h2>Upcoming Events and Trainings</h2>
+      </div>
+      <div class="events-items-list">
+        {% assign upcomingEvents = '' | split: ',' %}
+        {% capture now %}{{site.time | date: '%s' | plus: 0}}{% endcapture %}
+        {% for event in site.events %}
+        {% capture date %}{{event.end|date: '%s'|plus: 86400}}{% endcapture %}
+        {% if now <= date %} {% assign upcomingEvents=upcomingEvents | push: event %} {% endif %} {% endfor %} {% for event in
+          upcomingEvents limit:6 %} <div href="#" class="event-item">
+          <a href="{{event.link-out}}" class="card">
+            <img src="{{event.logo}}" alt="{{event.title}}">
+            <div class="card-text">
+              <h4>{{event.title}}</h4>
+              <ul>
+                <li class="event-location">{{event.location}}</li>
+              </ul>
+              <ul>
+                <li class="date-event">{{event.start | date_to_string}} {% if event.start != event.end %}- {{event.end |
+                  date_to_string}}{% endif %}</li>
+              </ul>
+            </div>
+          </a>
+      </div>
+      {% endfor %}
+      </div>
+      <div class="call-to-action action-medium">
+        <p class="align-top">See <a href="/events/">more events</a> or <a
+            href="https://github.com/scala/scala-lang/tree/master/events">add one to our events feed</a></p>
+      </div>
+      {% include upcoming-training.html %}
+    </div>
+  </div>
 </section>
