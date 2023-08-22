@@ -2,7 +2,7 @@
 layout: blog-detail
 post-type: blog
 by: Johanna Reichen (Scala Center)
-title: "Contribution Equals Impact: A Spotlight on Goldman Scachs - A Leader in Open Source Contributions"
+title: "Contribution Equals Impact: A Spotlight on Goldman Sachs - A Leader in Open Source Contributions"
 ---
 
 # Contribution Equals Impact: A Spotlight on Goldman Sachs - A Leader in Open Source Contributions
