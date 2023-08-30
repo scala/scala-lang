@@ -95,7 +95,6 @@ listed above,
   choose who you are talking to:
   * Seth Tisue, Lightbend ([seth.tisue@lightbend.com](mailto:seth.tisue@lightbend.com))
   * Lukas Rytz, Lightbend ([lukas.rytz@lightbend.com](mailto:lukas.rytz@lightbend.com))
-  * Darja Jovanovic, Scala Center ([darja.jovanovic@epfl.ch](mailto:darja.jovanovic@epfl.ch))
   * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
 
 ### Examples of unacceptable behavior
