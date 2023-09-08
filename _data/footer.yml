@@ -21,6 +21,8 @@
   links:
     - title: Community
       url: "/community/"
+    - title: Governance
+      url: "/community/index.html#governance"
     - title: Forums
       url: "/community/index.html#forums"
     - title: Chat
