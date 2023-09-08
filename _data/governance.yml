@@ -1,8 +1,44 @@
-introText: The development of this page is in progress.
+introText: |
+  The Scala Programming Language is an open source project, created at [EPFL](https://epfl.ch) by
+  [Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/). Decisions on major language changes are made by
+  the community through the Scala Improvement Process (SIP).
+  Scala's associated websites and user forums are managed by the [Scala Center](https://scala.epfl.ch).
+  The Scala Tooling Summit is organised by the Scala Center, bringing together the various teams and organizations
+  that maintain tools for Scala to collaborate and improve the tooling experience for all.
+  Recommendations for
+  the Scala Center's activities can be made by [joining its Advisory Board](https://scala.epfl.ch/corporate-membership.html).
+  Major contributions to the Scala language come from the Scala Center, [Martin's research group at EPFL](https://www.epfl.ch/labs/lamp/), and
+  the Scala teams at [Lightbend](https://www.lightbend.com) and [VirtusLab](https://virtuslab.com).
+  Contributions also come from the Scala community more broadly, with participation
+  from many companies, organizations, and individuals.
+
 cards:
+  - title: "Scala Center"
+    description: "The organization fostering the Scala community, education, and OSS library/tool development."
+    expandText: "Learn More"
+    anchorTarget: "gov-scala-center"
+    links:
+      - text: |
+          The Scala Center contributes to the language core, open source Scala tooling and libraries, and
+          delivers high-quality education materials.
+          It fosters conversations in the community, and coordinates with various parties to unblock and improve
+          the Scala ecosystem.
+          [Joining the Advisory Board](https://scala.epfl.ch/corporate-membership.html) is an effective way to
+          have your voice heard, as well as supporting the Center to achieve its goals.
+      - name: "Advisory Board Proceedings"
+        url: https://github.com/scalacenter/advisoryboard#the-scala-center-advisory-board
+      - name: "5 Year Impact Report"
+        url: https://scala.epfl.ch/records/first-five-years/
+      - name: "2023 Roadmap"
+        url: https://www.scala-lang.org/blog/2023/01/31/scala-center-2023-roadmap.html
+      - name: Team
+        url: https://scala.epfl.ch/team.html
+      - name: "Homepage"
+        url: https://scala.epfl.ch/
   - title: "Scala Improvement Process"
     description: "The SIP is the primary mechanism for evolving the Scala language."
     expandText: "Process & People"
+    anchorTarget: "gov-sip"
     links:
       - text: "This process aims to evolve Scala openly and collaboratively. Anyone from the community is welcome to submit a Scala Improvement Proposal (SIP), which is then reviewed and discussed by a Committee. Every month, the Committee votes on the proposals to accept in the language."
       - name: SIP Homepage
@@ -11,51 +47,45 @@ cards:
         url: https://docs.scala-lang.org/sips/process-specification.html#the-sip-committee
       - name: SIP Process Specification
         url: https://docs.scala-lang.org/sips/process-specification.html
+  - title: "Scala Tooling Summit"
+    description: "Bringing together maintainers of build tools, linters, IDEs, and other tools."
+    expandText: "Process & People"
+    anchorTarget: "gov-tooling"
+    links:
+      - text: "The process and people behind the Scala Tooling Summit are still TBD, however you can read below about previously held summits."
+      - fancy: "Process & People TBD"
+      - fancy: "Scala Tooling Summit of September 2023"
+      - name: "Scala Tooling Summit of March 2023"
+        url: https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html
+  - title: "Scala 2 Maintenance"
+    description: "Managing the Scala 2 compiler, standard library and documentation."
+    expandText: "Process & People"
+    anchorTarget: "gov-scala-2"
+    links:
+      - name: "Core Maintainers"
+        url: "https://github.com/scala/scala#get-in-touch"
+      - name: "Contribution Process"
+        url: "https://github.com/scala/scala#how-to-contribute"
   - title: "Scala 3 Maintenance"
     description: "Managing the Scala 3 compiler, standard library and documentation."
     expandText: "Process & People"
+    anchorTarget: "gov-scala-3"
     links:
       - name: Core Maintainers
         url: https://github.com/lampepfl/dotty/blob/main/MAINTENANCE.md#compiler
       - name: Maintenance Procedures
         url: https://github.com/lampepfl/dotty/blob/main/MAINTENANCE.md
-  - title: "Tooling"
-    description: "Managing build tools, linters, IDEs, and other tools."
-    expandText: "Process & People"
-    links:
-      - text: "Process and People are TBD, please stay tuned! However you can read below about the Scala Tooling Summit:"
-      - name: "Scala Tooling Summit of March 2023"
-        url: https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html
   - title: "Moderation"
     description: "Learn how the Scala community is moderated."
     expandText: "Process & People"
+    anchorTarget: "gov-moderation"
     links:
-      - text: "The Scala community is moderated by the Moderation Team over all the official communication channels. The moderation is governed by the Code of Conduct."
-      - name: "Moderation Team"
-        url: https://www.scala-lang.org/conduct/#contact
+      - text: "The Scala community is moderated by the Moderation Team over all the official communication channels hosted by the Scala organisation. The moderation is governed by the Code of Conduct."
       - name: Code of Conduct
         url: https://www.scala-lang.org/conduct/
       - name: "Inclusive Language Guide"
         url: https://docs.scala-lang.org/contribute/inclusive-language-guide.html
       - name: "Communication Channels"
         url: https://scala-lang.org/community/
-  - title: "Scala Center"
-    description: "The organization fostering the Scala community, education, and OSS library development."
-    expandText: "Learn More"
-    links:
-      - name: "Homepage"
-        url: https://scala.epfl.ch/
-      - name: Team
-        url: https://scala.epfl.ch/team.html
-      - name: "Advisory Board"
-        url: https://github.com/scalacenter/advisoryboard#the-scala-center-advisory-board
-      - name: "5 Year Report"
-        url: https://scala.epfl.ch/records/first-five-years/
-  - title: "Scala 2 Maintenance"
-    description: "Who maintains the Scala 2 compiler?"
-    expandText: "Process & People"
-    links:
-      - name: "Contribution Process"
-        url: "https://github.com/scala/scala#how-to-contribute"
-      - name: "Core Maintainers"
-        url: "https://github.com/scala/scala#get-in-touch"
+      - name: "Moderation Team"
+        url: https://www.scala-lang.org/conduct/#contact

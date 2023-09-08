@@ -3,7 +3,31 @@
 //------------------------------------------------
 
 .governance {
-    // background: $gray-nutshell;
+
+    .heading-box {
+        h2 {
+            margin-top: 0;
+            font-size: $font-size-title;
+            border-bottom: $base-border-gray;
+            display: block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__intro {
+        text-align: justify;
+    }
+
+    .community {
+        padding-top: $padding-xsmall;
+        padding-bottom: $padding-small;
+
+        .summary {
+            font-style: italic;
+            font-size: $font-size-small;
+        }
+    }
 
     .vertical-buttons-list {
         @include display(flex);
@@ -13,8 +37,6 @@
         li {
             margin-bottom: 10px;
         }
-        // @include align-items(center);
-        // @include justify-content(flex-start);
     }
 
     .button-expand {
@@ -22,32 +44,58 @@
         display: block;
     }
 
+    .button-announce {
+        text-align: center;
+        background: $gray-light;
+        border: 1px solid $base-font-color-light;
+        display: block;
+
+        color: $base-font-color-light;
+
+        box-shadow: none;
+
+        &:hover {
+            background: $gray-light;
+            color: $base-font-color-light;
+        }
+    }
+
     .button-more {
+        margin-top: $font-size-small;
         font-size: $font-size-small;
+        width: 100%;
         padding: 5px;
         cursor: pointer;
     }
 
-    .scala-items-list {
-        .items-menu {
-            .scala-item {
-                @include span-columns(4);
-                @include omega(3n);
+    .scala-items-grid {
 
+        .items-menu {
+            @include display(grid);
+            justify-content: space-between;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: dense;
+
+            @include bp(large) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include bp(medium) {
+                grid-template-columns: 1fr;
+            }
+
+            .scala-item {
                 @include display(flex);
                 @include flex-direction(column);
-                // @include align-items(center);
                 @include justify-content(space-between);
-                padding: 15px 10px;
+                @include align-items(center);
+
+                padding: $padding-xsmall $padding-small;
                 text-align: center;
                 transition: $base-transition;
-                // border: 1px solid $gray-light;
-                margin-top: 15px;
-                @include bp(large) {
-                     @include span-columns(12);
-                }
 
-                min-height: 150px;
+                &:has(+ .items-content:target) {
+                    background: $gray-light;
+                }
 
                 h4 {
                     font-size: $font-size-h3;
@@ -67,12 +115,27 @@
             }
 
             .items-content {
+                grid-column: 1 / -1;
                 background: $gray-light;
                 transition: $base-transition;
 
+                display: none;
+
+                &:target {
+                    display: block;
+                }
+
+                .items-content_close {
+                    font-size: $font-size-carousel-arrow;
+                    color: $base-font-color-light;
+
+                    &:hover {
+                        color: $base-font-color;
+                    }
+                }
+
                 .items-code {
-                    display: none;
-                    padding: 5px 0;
+                    background: $gray-lighter;
                 }
             }
         }

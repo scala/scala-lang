@@ -12,7 +12,7 @@ The community is also the source of many libraries, tools, and other resources a
 ## Who's behind Scala?
 
 Scala was created by
-[Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/).
+[Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/) at [EPFL](https://epfl.ch).
 
 The Scala language and associated websites are cooperative projects of
 the [Scala Center](https://scala.epfl.ch) at [EPFL](https://epfl.ch),
@@ -39,7 +39,7 @@ The Scala Center operates the following Discourse forums:
 
  * **[contributors.scala-lang.org](https://contributors.scala-lang.org)**: For anything related to moving Scala forward; from Scala Platform library discussions, to Scala Improvement Process discussions, to development work on the Scala compiler, standard library, and modules. Core maintainers and open-source contributors are both welcome, as well as those who want to see what’s coming down the pipe and would like to be involved.  (Replaces the old scala-internals, scala-language, scala-debate, scala-sips, and scala-tools groups.)
 
- * **[teachers.scala-lang](https://teachers.scala-lang.org)**: Discussions related to the usage of Scala to teach programming: material, tooling, guidelines. 
+ * **[teachers.scala-lang](https://teachers.scala-lang.org)**: Discussions related to the usage of Scala to teach programming: material, tooling, guidelines.
 
 Discourse is an open-source forum and mailing list platform. You can participate via the web, or you can use "mailing list mode", where you receive posts in your inbox and can reply to them via email. The web interface provides statistics, upvoting, polls, and other features. Posts can be written in Markdown, including syntax highlighting.
 
