@@ -7,9 +7,7 @@ title: "The Scala Center Fundraising Campaign"
 
 # The Scala Center Fundraising Campaign
 
-TL;TR
-
-The non-profit Scala foundation, Scala Center, is launching a fundraising campaign to support its work in 2024 and beyond. We aim to form new partnerships with companies who are interested in supporting the Scala Center's activities and the Scala community. Individual donors are also welcome. Inspired to join forces for a sustainable Scala open source ecosystem? [Get in touch](https://airtable.com/appu0c7lWteTaOonJ/shrMKPncLDdVK5cyW) with us today. If you are attending Scala Days Madrid, visit our booth to speak in person.
+TL;DR: The non-profit Scala foundation, Scala Center, is launching a fundraising campaign to support its work in 2024 and beyond. We aim to form new partnerships with companies who are interested in supporting the Scala Center's activities and the Scala community. Individual donors are also welcome. Inspired to join forces for a sustainable Scala open source ecosystem? [Get in touch](https://airtable.com/appu0c7lWteTaOonJ/shrMKPncLDdVK5cyW) with us today. If you are attending Scala Days Madrid, visit our booth to speak in person.
 
 ## About the Scala Center
 
