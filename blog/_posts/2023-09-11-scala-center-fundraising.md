@@ -21,7 +21,7 @@ By supporting the Scala Center, you're ensuring the long-term reliability of the
 
 The Scala Center is actively engaged in developing state-of-the-art tooling, coordinating vital working groups such as the Scala Improvement Process (SIP) and Tooling Summit, which are instrumental in shaping the future of Scala. We also offer free MOOCs, providing accessible education to those interested in learning Scala. Additionally, we play a crucial role in community moderation, ensuring a healthy and respectful environment for Scala users worldwide. Your support will empower us to continue these critical activities and even expand our initiatives.
 
-Inspired to join forces for a sustainable Scala open source ecosystem? [Get in touch](](https://airtable.com/appu0c7lWteTaOonJ/shrMKPncLDdVK5cyW)) with us today or if you are joining the Scala Days Madrid, stop by our booth and speak in person.
+Inspired to join forces for a sustainable Scala open source ecosystem? [Get in touch](https://airtable.com/appu0c7lWteTaOonJ/shrMKPncLDdVK5cyW) with us today or if you are joining the Scala Days Madrid, stop by our booth and speak in person.
 
 And if you're not a company but an individual Scala programmer, you can still contribute to the Scala Center by becoming a [supporter](https://scala.epfl.ch/records/first-five-years/support)!
 
