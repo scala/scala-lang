@@ -149,6 +149,7 @@ There is a large and active Scala community on the [/r/Scala](https://reddit.com
 Official:
 
 * [Blog/News Page](https://www.scala-lang.org/blog/) on this site
+* [@scala_lang](https://fosstodon.org/@scala_lang) on Mastodon
 * [@scala_lang](https://twitter.com/scala_lang) on Twitter
 
 Community:
