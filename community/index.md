@@ -91,7 +91,7 @@ International chat rooms are available as well:
 * **[Scala Fr](https://discord.gg/w6VUKrrZK3)** (Discord)
 * **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
 * **[Scala Jp](https://discord.gg/SaXM8s4Cyr)** (Discord)
-* **[Scala-Poland](http://scala-poland.eu)** (Slack)
+* **[Scala Poland](https://join.slack.com/t/scala-poland/shared_invite/zt-1jeq834yd-iOTH4U1Gto3YWu_lEVY5oA)** (Slack)
 * **[scala_ru](https://t.me/scala_ru)** (Telegram)
 * **[Scala Ukraine](https://t.me/scala_ukraine)** (Telegram)
 
