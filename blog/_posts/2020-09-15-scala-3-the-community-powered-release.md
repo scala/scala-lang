@@ -33,7 +33,7 @@ Project roadmaps and updates are published on [Contributors discourse under the 
 * The Scala Center Advisory Board [companies](https://scala.epfl.ch/#advisory-board-member-list) are supporting the Scala 3 release in different manners & capacities. All of them shared their advice and encouraged the Scala Center to take part, and some of them (such as Lightbend, VirtusLab, Lunatech, 47 Degrees) with additional engineering resources and day-to-day logistics.
 
 
-* VirtusLab powers the efforts around [Scala3Doc](https://contributors.scala-lang.org/t/scala3doc-doctool-for-scala-3/4477) implementation and [Metals](https://scalameta.org/metals/) (IDE supporting Dotty via LSP). They have also recently got involved in the compiler (porting Scala 2 backend changes into Dotty for now) and [Scala Native](https://scala-native.readthedocs.io/en/v0.3.9-docs/) development & maintenance (road to supporting first Scala 2.12 and eventually Dotty). VirtusLab will continue its involvement in Metals / Dotty until the very release of Dotty and later on for the foreseeable future.
+* VirtusLab powers the efforts around [Scala3Doc](https://contributors.scala-lang.org/t/scala3doc-doctool-for-scala-3/4477) implementation and [Metals](https://scalameta.org/metals/) (IDE supporting Dotty via LSP). They have also recently got involved in the compiler (porting Scala 2 backend changes into Dotty for now) and [Scala Native](https://scala-native.org) development & maintenance (road to supporting first Scala 2.12 and eventually Dotty). VirtusLab will continue its involvement in Metals / Dotty until the very release of Dotty and later on for the foreseeable future.
 
 
 
