@@ -4,7 +4,9 @@ This repository contains the source for the [scala-lang.org](https://scala-lang.
 
 It does not contain the source for the [docs.scala-lang.org](https://docs.scala-lang.org) subdomain. You can visit the [docs.scala-lang repository](https://github.com/scala/docs.scala-lang) if you are interested in contributing to the Scala documentation site.
 
-The source for the Scala compiler and standard library are at https://github.com/scala/scala. Bug reports are at https://github.com/scala/bug.
+The repository for Scala 3 itself is https://github.com/lampepfl/dotty .
+
+Scala 2 is at https://github.com/scala/scala. Scala 2 bug reports are at https://github.com/scala/bug.
 
 ## Dependencies
 
