@@ -55,6 +55,8 @@ Employers and job seekers can find each other in the #jobs channel of the [Scala
 
 Job postings are not allowed in our other forums and chat rooms.
 
+The [Scala Reddit](https://www.reddit.com/r/scala/) has a monthly "who is hiring?" thread.
+
 ## Chat Rooms
 
 Our main chat platform is Discord, and the main Scala server is:
