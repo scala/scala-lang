@@ -34,7 +34,7 @@ Spearheaded by Neville Li and supported by an internal 'Scala expert' team, Scio
 
 While Scio remains in a pre-stable (0.x) release cycle, it has significantly evolved. The range of connectors has expanded beyond Spotify's needs, many of them implemented by developers from the open source community.
 
-Among them, there can be a mention for the recent [Neo4J](https://neo4j.com/) graph database connector. Conceptualizing and building it was a result of a fruitful collaboration between the Scio user who opened the pull-request, a Neo4j specialist and Scio maintainers. \
+Among them, there can be a mention for the recent [Neo4J](https://neo4j.com/) graph database connector. Conceptualizing and building it was a result of a fruitful collaboration between the Scio user who opened the pull-request, a Neo4j specialist and Scio maintainers.
 
 
 However, the journey wasn't all smooth sailing. Early on, the relatively small development team found themselves unable to promptly address certain issues or pull requests, giving a poor impression of their commitment to support external initiatives and to general maintenance. They also struggled to effectively communicate their roadmap and upcoming releases to external users.
