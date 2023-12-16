@@ -6,17 +6,13 @@ title: "Scala 3: My migration journey"
 description: I want to share my journey from Scala 2 to Scala 3 and discuss migration to Scala 3
 ---
 
+I want to share my journey from Scala 2 to Scala 3 and discuss migration to Scala 3.
+
 ## Implicit context
 
-Before doing any actual personal work, based on the internet discussions, I had an impression that switching to Scala 3 would be quite painful — in practice, it was pretty straightforward.
+I am just a software engineer. Before doing any actual personal work, based on the internet discussions, I had an impression that switching to Scala 3 would be quite painful — in practice, it was pretty straightforward.
 
-In the retrospect, this was the case because I (and my team) fall into the following buckets:
-
-- Don’t use IntelliJ;
-- Don’t use macros;
-- Use Typelevel stack.
-
-It wouldn’t be as smooth if any of these were different.
+In retrospect, our experience was determined by the technology stack and tools that I (and my team) use: microservices, Typelevel stack, VS Code with Metals, and, most importantly, no macros. It might not be as smooth if any of these wasn't the case.
 
 Let’s start in my world first, follow the primary migration steps, and then talk about what to do if your setup and stack differ.
 
@@ -32,7 +28,7 @@ Should you rewrite one service at a time? In what order? Or should you leave the
 
 It’s also an excellent time to discuss the benefits and trade-offs. And keep it fair. For example, if you just want a new syntax, is it worth disturbing an old service that hasn’t been touched in years? Well, it’s up to you to decide.
 
-*We decided to write all the new services in Scala 3 (where most of the future work will happen) and keep the rest. Consequently, onboarding new devs without prior Scala experience is one of my biggest challenges.* W*hen they switch from Scala 3 service to Scala 2, they bump into hurdles — some of the “intuitive” concepts don’t work as expected anymore. This requires more explanation; they seem to have to learn some things twice.*
+*We decided to write all the new services in Scala 3 (where most of the future work will happen) and keep the rest. Consequently, onboarding new devs without prior Scala experience is one of my biggest challenges. When they switch from Scala 3 service to Scala 2, they bump into hurdles — some of the “intuitive” concepts don’t work as expected anymore. This requires more explanation; they seem to have to learn some things twice.*
 
 Okay, we defined what migration means, but how exactly do we go about it?
 
@@ -50,11 +46,13 @@ Other questions you might need to consider:
 
 Thanks to the [interoperability](https://docs.scala-lang.org/scala3/guides/migration/compatibility-source.html) between Scala 3 and Scala 2.13, it might be more accessible or crucial to upgrade to Scala 2.13 first. You have to keep this in mind.
 
-*By this point, we knew that all our services were on 2.13; we knew how many internal libraries needed to be used from both Scala versions and what external libraries had no Scala 3 support: what is the status, what is missing, and what can we do to deal with it. For example, a couple of libraries got a Scala 3 release by the time we were done with the investigation, and one `circe` ”extras” library was replaced with two lines of boilerplate.*
+*By this point, we knew that all our services were on 2.13; we knew how many internal libraries needed to be used from both Scala versions and what external libraries had no Scala 3 support: what the status is, what is missing, and what we can do to deal with it. For example, a couple of libraries got a Scala 3 release by the time we were done with the investigation, and one `circe` ”extras” library was replaced with two lines of boilerplate.*
 
 ## Step 2. Draw the rest of the owl
 
-After all the meetings and/or writings comes the time to do the actual work. When you have concrete questions or action items, remember that [Scala 3 migration guides](https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html) are your friends. For example, it covers how to port compiler options and sbt projects. Great reference resource.
+After all the meetings and/or writings comes the time to do the actual work. When you have concrete questions or action items, remember that [Scala 3 migration guides](https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html) are your friends. For example, it covers how to port compiler options and build configurations. Great reference resource.
+
+> Note that you can find further help from the community on [Scala Discord](https://discord.com/invite/scala).
 
 We don’t have to go into these details right now. Instead, let’s talk about the bigger picture and a few other things to remember.
 
@@ -70,7 +68,7 @@ There are multiple ways of sharing a library between Scala 2 and Scala 3 service
 
 Imagine you have an internal library (e.g., auth-handling, specific DB-connector, peculiar API) used by your existing Scala 2 services that will also be used by Scala 3 services. If your library on Scala 2 uses the `ducks` library and your Scala 3 application uses `ducks` as well, you get two conflicting versions `ducks_2.13` and `ducks_3`.
 
-To solve this, you can cross-publish your library to both versions by adding one line to your build:
+To solve this, with sbt, you can cross-publish your library to both versions by adding one line to your build:
 
 ```scala
 + crossScalaVersions := List("2.13.12", "3.3.1")
@@ -97,12 +95,21 @@ Otherwise, you might need [to help them](https://docs.scala-lang.org/contribute/
 ### Dealing with plugins
 
 Similar to dependencies, some plugins stay working, and some — are redundant and can be dropped.
-For instance, the first plugin I was happy to retire was `better-monadic-for`, because Scala 3 already gives me better for-comprehensions:
+
+For instance, the first plugin I was happy to retire was `better-monadic-for`, because Scala 3 already gives me better for-comprehensions. For example, we can define implicit values inside for-comprehensions:
 
 ```scala
+// Scala 3
 for
-  // Can't do this in vanilla Scala 2:
   given Logger[IO] <- makeLoggerOrSomething 
+  result <- doX
+yield doY(result)
+```
+
+```scala
+// Scala 2 with better-monadic-for
+for
+  implicit0(logger: Logger[IO]) <- makeLoggerOrSomething 
   result <- doX
 yield doY(result)
 ```
@@ -131,7 +138,7 @@ Scala-3-rewrite allows you to get rid of the old workarounds as well as challeng
 
 To me, using VS Code with Metals and Scala 3 doesn’t feel different from using these with Scala 2 a couple of years ago. And it’s only getting better.
 
-[IntelliJ IDEA 2023.2](https://blog.jetbrains.com/scala/2023/07/26/intellij-scala-plugin-2023-2-is-out/) brought enhanced Scala 3 support, and the team is constantly working on improvements. [Metals](https://scalameta.org/metals/) has regular [releases](https://scalameta.org/metals/blog/) driven by [Scala Center](https://scala.epfl.ch/), [VirtusLab](https://virtuslab.com/), and contributors from the community. So, if you haven’t recently tried either, now is a good time.
+[IntelliJ IDEA 2023.2](https://blog.jetbrains.com/scala/2023/07/26/intellij-scala-plugin-2023-2-is-out/) brought enhanced Scala 3 support, and the team is constantly working on improvements ([IntelliJ IDEA 2023.3](https://blog.jetbrains.com/scala/2023/12/07/intellij-scala-plugin-2023-3-is-out/) was released just when I was writing this). [Metals](https://scalameta.org/metals/) has regular [releases](https://scalameta.org/metals/blog/) driven by [Scala Center](https://scala.epfl.ch/), [VirtusLab](https://virtuslab.com/), and contributors from the community. So, if you haven’t recently tried either, now is a good time.
 
 ### What to do about macros (and other issues)
 
