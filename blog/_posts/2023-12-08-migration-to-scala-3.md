@@ -6,11 +6,11 @@ title: "Scala 3: My migration journey"
 description: I want to share my journey from Scala 2 to Scala 3 and discuss migration to Scala 3
 ---
 
-I want to share my journey from Scala 2 to Scala 3 and discuss migration to Scala 3.
+My name is Jay, I am a software engineer and developer advocate. We've recently migrated the project from Scala 2 to Scala 3 at $WORK, and in this article, I'd like to share the lessons learned and tips.
 
 ## Implicit context
 
-I am just a software engineer. Before doing any actual personal work, based on the internet discussions, I had an impression that switching to Scala 3 would be quite painful — in practice, it was pretty straightforward.
+Before doing any actual personal work, based on the internet discussions, I had an impression that switching to Scala 3 would be quite painful — in practice, it was pretty straightforward.
 
 In retrospect, our experience was determined by the technology stack and tools that I (and my team) use: microservices, Typelevel stack, VS Code with Metals, and, most importantly, no macros. It might not be as smooth if any of these wasn't the case.
 
@@ -50,7 +50,7 @@ Thanks to the [interoperability](https://docs.scala-lang.org/scala3/guides/migr
 
 ## Step 2. Draw the rest of the owl
 
-After all the meetings and/or writings comes the time to do the actual work. When you have concrete questions or action items, remember that [Scala 3 migration guides](https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html) are your friends. For example, it covers how to port compiler options and build configurations. Great reference resource.
+After all the meetings and/or writings comes the time to do the actual work. When you have concrete questions or action items, remember that [Scala 3 migration guides](https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html) are your friends. For example, they cover how to port compiler options and build configurations. Great reference resource.
 
 > Note that you can find further help from the community on [Scala Discord](https://discord.com/invite/scala).
 
