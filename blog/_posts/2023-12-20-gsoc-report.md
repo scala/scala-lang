@@ -6,7 +6,7 @@ title: "Google Summer of Code 2023 Report"
 ---
 We've just wrapped up another fruitful iteration of the Google Summer of Code initiative. This program is a key component of the Scala Center's approach to encouraging more newcomers to contribute to the Scala language, reinforcing its commitment to making Scala contributions more accessible to beginners.
 
-This time around, we had the pleasure of welcoming 6 contributors. Their contributions were directed toward various projects, including data visualization, type-level and asyncronous programming, metaprogramming and more. This article provides a brief overview of their achievements, along with links for further details.
+This time around, we had the pleasure of welcoming 6 contributors. Their contributions were directed toward various projects, including data visualization, type-level and asynchronous programming, metaprogramming and more. This article provides a brief overview of their achievements, along with links for further details.
 
 ## Unlocking the Full Potential of Scala Web Development
 Akseli Ristola worked on integrating Scala 3 support into a [web development template](https://github.com/wiringbits/scala-webapp-template/commits?author=akseliristola) project under the supervision of Alexis Hernandez. This project focused on leveraging the advanced features of Scala 3 to enhance web application development, addressing current limitations and exploring new potentials in Scala-based web frameworks.
