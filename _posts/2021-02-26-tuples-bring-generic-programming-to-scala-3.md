@@ -147,16 +147,10 @@ tupleToCsv(("Bob", 42, false)) // List("Bob", "42", "false")
 
 ## How to obtain a tuple from a case class?
 
-Scala 3 introduces the
-[`Mirror`](https://dotty.epfl.ch/docs/reference/contextual/derivation.html)
-type-class which provides type-level information about the components and
-labels of types. [A paragraph from that
-documentation](https://dotty.epfl.ch/docs/reference/contextual/derivation.html#types-supporting-derives-clauses)
-is particularly interesting for our use case:
-
-> The compiler automatically generates instances of `Mirror` for `enum`s and
-> their cases, **case classes** and case objects, sealed classes or traits
-> having only case classes and case objects as children.
+Scala 3 introduces the `Mirror` type class,
+which provides type-level information about the components and labels of types.
+For typical case classes, `Mirror` instances are generated automatically by the compiler
+(see [here](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror-1) for more details).
 
 That's why we can obtain a tuple from a case class using:
 ```scala
