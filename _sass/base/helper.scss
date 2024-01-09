@@ -74,3 +74,21 @@
 .ta-c {
   text-align: center;
 }
+
+// in markdown, put a div with class "markdown-compact-table-anchor" before the table
+.markdown-compact-table-anchor + table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  th,
+  td {
+    padding: 0 !important;
+  }
+
+  th {
+    background: $gray-lighter;
+  }
+
+  td {
+    font-size: 14px;
+  }
+}
