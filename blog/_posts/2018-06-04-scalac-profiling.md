@@ -5,6 +5,14 @@ by: Jorge Vicente Cantero
 title: "Speeding Up Compilation Time with scalac-profiling"
 ---
 
+**Notice (2024)** Since this blog post was published, a documentation site
+for scalac-profiling was created at
+https://scalacenter.github.io/scalac-profiling/ .  Some of the details
+in this post may now be out of date, but much of the information is
+still relevant.
+
+### Introduction (2018)
+
 In this blog article, I’d like to introduce you to a new tool that we’ve
 developed at the Scala Center called scalac-profiling, which aims to help you
 better understand what is slowing down compilation in your project.
