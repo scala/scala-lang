@@ -63,7 +63,7 @@ We are planning to add (some) support for Java 9 in the near future. Full Java 9
 
 ### Build tool
 
-We recommend using [sbt 0.13.13](https://www.scala-sbt.org/download.html). Simply bump the `scalaVersion` setting in your existing project, or start a new project using `sbt new scala/scala-seed.g8`. We strongly recommend upgrading to sbt 0.13.13 for [templating support using the new command](https://github.com/sbt/sbt/pull/2705), [faster compilation](https://github.com/sbt/sbt/pull/2754), and [much more](https://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#sbt+0.13.13).
+We recommend using [sbt 0.13.13](https://www.scala-sbt.org/download/). Simply bump the `scalaVersion` setting in your existing project, or start a new project using `sbt new scala/scala-seed.g8`. We strongly recommend upgrading to sbt 0.13.13 for [templating support using the new command](https://github.com/sbt/sbt/pull/2705), [faster compilation](https://github.com/sbt/sbt/pull/2754), and [much more](https://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#sbt+0.13.13).
 
 Please head over to the [scala-seed repo](https://github.com/scala/scala-seed.g8) to extend this [giter8 template](https://github.com/foundweekends/giter8) with an example of your favorite 2.12 feature!
 
