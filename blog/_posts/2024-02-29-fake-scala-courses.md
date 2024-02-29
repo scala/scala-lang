@@ -21,8 +21,8 @@ We would also like to remind the Scala community of the exhaustive list of domai
 - [scala-lang.org](https://www.scala-lang.org/), notably including the following main subdomains:
     - https://www.scala-lang.org/, the main website, which you are currently reading
     - https://docs.scala-lang.org/, the documentation website
-- [scala-js.org](https://www.scala-js.org
-- [scala-native.org](https://scala-native.org/en/stable/) for the platform-specific dialects of Scala
+- [scala-js.org](https://www.scala-js.org)
+- [scala-native.org](https://scala-native.org/en/stable/)
 - epfl.ch (notably [scala.epfl.ch](https://scala.epfl.ch/)), [virtuslab.com](https://virtuslab.com/), [lightbend.com](https://www.lightbend.com/): the websites of the 3 major institution and companies stewarding the Scala organization.
 
 ## Identifying scams
