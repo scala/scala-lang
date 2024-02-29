@@ -7,7 +7,6 @@ title: Beware of fake online Scala courses
 Lately, there has been an increased amount of fraud in the Scala community related to online courses. In this post, we mention some recent events that have been brought to our attention, and remind the community of trustworthy sources and ways to identify scams.
 
 ## Recent events
-
 We are aware of at least the following incidents involving fraud:
 
 - Some bad actor was running a website under the domain scala dash language dot org, which was an exact copy of the official Scala's website, scala-lang.org. The scammers posed as an online recruiting firm and asked candidates applying for their "jobs" to complete Scala courses there, for a fee.
