@@ -54,12 +54,12 @@ strategy whose goal is to establish all the necessary decision-making processes 
 **We improved meta-programming, especially [generic Mirror](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror)
 synthesis.** Mirrors are critical to metaprogramming in Scala 3, they enable implementation of type class derivation without
 advanced metaprogramming techniques such as macros. Mirror synthesis now supports more cases
-([generic tuples](https://github.com/lampepfl/dotty/pull/15250),
-[local and inner classes](https://github.com/lampepfl/dotty/pull/15847)), is more reliable
-([dotty#15279](https://github.com/lampepfl/dotty/pull/15279),
-[dotty#15404](https://github.com/lampepfl/dotty/pull/15404),
-[dotty#15814](https://github.com/lampepfl/dotty/pull/15814)), and provides
-[more detailed explanations in case of failure](https://github.com/lampepfl/dotty/pull/15164).
+([generic tuples](https://github.com/scala/scala3/pull/15250),
+[local and inner classes](https://github.com/scala/scala3/pull/15847)), is more reliable
+([dotty#15279](https://github.com/scala/scala3/pull/15279),
+[dotty#15404](https://github.com/scala/scala3/pull/15404),
+[dotty#15814](https://github.com/scala/scala3/pull/15814)), and provides
+[more detailed explanations in case of failure](https://github.com/scala/scala3/pull/15164).
 
 **We generalized the definition of methods in Scala** by allowing type parameters to be interleaved with regular parameters.
 This change notably allows methods to take type parameters whose bounds depend on value parameters. You can learn more
@@ -163,7 +163,7 @@ library, we will:
 - **Make the compiler error messages clearer and more actionable.** The compiler should help developers write correct code
   instead of “just complaining” about incorrect code. The compiler should also guide you to write maintainable code (ie,
   it should provide linting features). You can find a list of related issues
-  [here](https://github.com/lampepfl/dotty/issues?q=is%3Aopen+is%3Aissue+label%3Aarea%3Areporting).
+  [here](https://github.com/scala/scala3/issues?q=is%3Aopen+is%3Aissue+label%3Aarea%3Areporting).
 - **Bring the compiler’s suggestions into the IDEs.** Instead of emitting only text output, the compiler
   will produce structured output that IDEs (Metals and IntelliJ) will be able to read to automatically provide “quick
   fixes” to the users. This should reduce the implementation (and maintenance) costs on the IDE side.

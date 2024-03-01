@@ -194,7 +194,7 @@ overloaded, with each individual overload only being brought into
 existence as needed.
 
 For details, see [the pull
-request](https://github.com/lampepfl/dotty/pull/16225).
+request](https://github.com/scala/scala3/pull/16225).
 
 ### The path not taken
 

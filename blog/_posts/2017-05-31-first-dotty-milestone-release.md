@@ -47,7 +47,7 @@ using Dotty with sbt, see the
 
 Releases are available for download on the _Releases_
 section of the Dotty repository: 
-[https://github.com/lampepfl/dotty/releases](https://github.com/lampepfl/dotty/releases).
+[https://github.com/scala/scala3/releases](https://github.com/scala/scala3/releases).
 
 We also provide a [homebrew](https://brew.sh/) package that can be installed by running
 
@@ -92,9 +92,9 @@ At the end of 6 weeks, the milestone will be promoted to a stable release.
 
 Over the coming weeks and months, we plan to work on the following topics:
 
- - [Integrate Local optimizations developed in Dotty linker](https://github.com/lampepfl/dotty/pull/2513);
- - [Add Language-level support for HMaps and HLists](https://github.com/lampepfl/dotty/pull/2199);
- - [Port global optimizations from Dotty linker](https://github.com/lampepfl/dotty/pull/1840).
+ - [Integrate Local optimizations developed in Dotty linker](https://github.com/scala/scala3/pull/2513);
+ - [Add Language-level support for HMaps and HLists](https://github.com/scala/scala3/pull/2199);
+ - [Port global optimizations from Dotty linker](https://github.com/scala/scala3/pull/1840).
 
 If you want to get your hands dirty with any of this, now is a good
 moment to get involved! Join the team of contributors, including
@@ -115,7 +115,7 @@ Join our [community build](https://github.com/lampepfl/dotty-community-build)
  to make sure that our regression suite includes your library.
 
 
-To get started, see <https://github.com/lampepfl/dotty>.
+To get started, see <https://github.com/scala/scala3>.
 
 
 [Scastie]: https://scastie.scala-lang.org/R5kUfVbTRpmS4l4CrO1HlA

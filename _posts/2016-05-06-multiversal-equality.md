@@ -8,7 +8,7 @@ discourse: true
 
 I have been working recently on making equality tests using `==` and
 `!=` safer in Scala. This has led to a [Language Enhancement
-Proposal](https://github.com/lampepfl/dotty/issues/1247) which I summarize in this blog.
+Proposal](https://github.com/scala/scala3/issues/1247) which I summarize in this blog.
 
 ## Why Change Equality?
 
@@ -118,7 +118,7 @@ backwards compatibility, we allow comparisons of such types as well,
 by means of a fall-back `eqAny` instance. But we do not allow comparisons
 between types that have an `Eq` instance and types that have none.
 Details are explained in the
-[proposal](https://github.com/lampepfl/dotty/issues/1247).
+[proposal](https://github.com/scala/scala3/issues/1247).
 
 ## Properties
 

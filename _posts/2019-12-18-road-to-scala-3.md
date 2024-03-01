@@ -167,7 +167,7 @@ If you don't have time to do a cross-build yourself, consider asking your users 
 
 #### Working on Scala itself
 
-The Dotty team welcomes contributors, including first-time Scala contributors.  Scala 3 has already benefited considerably from years of active external participation [on GitHub](https://github.com/lampepfl/dotty). For guidance and getting-started help, there is an active [chat room on Gitter](https://gitter.im/lampepfl/dotty).  There are many ways to be helpful that don't require large time outlays or a background in compiler hacking.
+The Dotty team welcomes contributors, including first-time Scala contributors.  Scala 3 has already benefited considerably from years of active external participation [on GitHub](https://github.com/scala/scala3). For guidance and getting-started help, there is an active [chat room on Gitter](https://gitter.im/lampepfl/dotty).  There are many ways to be helpful that don't require large time outlays or a background in compiler hacking.
 
 If you are already a Scala 2 contributor, you are welcome to move to the new repo, but you might also choose to stay focused on Scala 2 for now if you prefer. Scala 2 will be maintained for several more years, and many kinds of improvements remain possible and desirable in the 2.13 series, subject to the usual compatibility constraints.  Standard library fixes are directly applicable to both versions; back end improvements benefit both compilers; improved linting could help Scala 2 users get their codebases ready for 3.
 

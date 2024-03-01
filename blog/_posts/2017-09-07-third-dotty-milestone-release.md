@@ -30,12 +30,12 @@ stability and reliability:
 ## What’s in the 0.3.0-RC2 technology preview?
 This technology preview further improves stability and reliability. Some highlighted PRs are:
  - IDE bug fixes:
- [#2986](https://github.com/lampepfl/dotty/pull/2986),
- [#2932](https://github.com/lampepfl/dotty/pull/2932),
- [#2885](https://github.com/lampepfl/dotty/pull/2885),
- [#2876](https://github.com/lampepfl/dotty/pull/2876),
- [#2870](https://github.com/lampepfl/dotty/pull/2870),
- [#2872](https://github.com/lampepfl/dotty/pull/2872) by [@odersky] and [@smarter].
+ [#2986](https://github.com/scala/scala3/pull/2986),
+ [#2932](https://github.com/scala/scala3/pull/2932),
+ [#2885](https://github.com/scala/scala3/pull/2885),
+ [#2876](https://github.com/scala/scala3/pull/2876),
+ [#2870](https://github.com/scala/scala3/pull/2870),
+ [#2872](https://github.com/scala/scala3/pull/2872) by [@odersky] and [@smarter].
 
 
 ## How can you try it out?
@@ -62,7 +62,7 @@ using Dotty with sbt, see the
 ### Standalone installation
 Releases are available for download on the _Releases_
 section of the Dotty repository:
-[https://github.com/lampepfl/dotty/releases](https://github.com/lampepfl/dotty/releases)
+[https://github.com/scala/scala3/releases](https://github.com/scala/scala3/releases)
 
 We also provide a [homebrew](https://brew.sh/) package that can be installed by running:
 
@@ -84,16 +84,16 @@ You can try it out there without installing anything.
 ## What are the next steps?
 Over the coming weeks and months, we plan to work on the following topics:
 
- - [Add support for using Dotty generated classes with Scala 2.12](https://github.com/lampepfl/dotty/pull/2827)
- - [Add Language-level support for HMaps and HLists](https://github.com/lampepfl/dotty/pull/2199);
+ - [Add support for using Dotty generated classes with Scala 2.12](https://github.com/scala/scala3/pull/2827)
+ - [Add Language-level support for HMaps and HLists](https://github.com/scala/scala3/pull/2199);
  - Upstream more optimizations from Dotty Linker
- - [Add support for existing in the same classpath with Scala 2.12](https://github.com/lampepfl/dotty/pull/2827)
- - [Add native Dotty REPL](https://github.com/lampepfl/dotty/pull/2991)
+ - [Add support for existing in the same classpath with Scala 2.12](https://github.com/scala/scala3/pull/2827)
+ - [Add native Dotty REPL](https://github.com/scala/scala3/pull/2991)
 
 ## Questions / Reporting Bugs
 If you have questions or any sort of feedback, feel free to send us a message on our
 [Gitter channel](https://gitter.im/lampepfl/dotty). If you encounter a bug, please
-[open an issue on GitHub](https://github.com/lampepfl/dotty/issues/new).
+[open an issue on GitHub](https://github.com/scala/scala3/issues/new).
 
 ## Contributing
 Thank you to all the contributors who made this release possible!
@@ -119,7 +119,7 @@ According to `git shortlog -sn --no-merges 0.2.0-RC1..0.3.0-RC2` these are:
 If you want to get your hands dirty with any of this, now is a good moment to get involved!
 You can have a look at our [Getting Started page](https://dotty.epfl.ch/docs/contributing/getting-started.html),
 our [Awesome Error Messages](https://scala-lang.org/blog/2016/10/14/dotty-errors.html) or some of
-the simple [Dotty issues](https://github.com/lampepfl/dotty/issues?q=is%3Aissue+is%3Aopen+label%3Aexp%3Anovice).
+the simple [Dotty issues](https://github.com/scala/scala3/issues?q=is%3Aissue+is%3Aopen+label%3Aexp%3Anovice).
 They make perfect entry-points into hacking on the compiler.
 
 We are looking forward to having you join the team of contributors.
@@ -132,7 +132,7 @@ Join our [community build](https://github.com/lampepfl/dotty-community-build)
 to make sure that our regression suite includes your library.
 
 
-To get started, see [https://github.com/lampepfl/dotty](https://github.com/lampepfl/dotty).
+To get started, see [https://github.com/scala/scala3](https://github.com/scala/scala3).
 
 
 [Scastie]: https://scastie.scala-lang.org/?target=dotty

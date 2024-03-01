@@ -72,9 +72,9 @@ cards:
     anchorTarget: "gov-scala-3"
     links:
       - name: Core Maintainers
-        url: https://github.com/lampepfl/dotty/blob/main/MAINTENANCE.md#compiler
+        url: https://github.com/scala/scala3/blob/main/MAINTENANCE.md#compiler
       - name: Maintenance Procedures
-        url: https://github.com/lampepfl/dotty/blob/main/MAINTENANCE.md
+        url: https://github.com/scala/scala3/blob/main/MAINTENANCE.md
   - title: "Moderation"
     description: "Learn how the Scala community is moderated."
     expandText: "Process & People"
