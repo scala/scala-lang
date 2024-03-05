@@ -1,0 +1,6 @@
+{% comment %}use the variable 'message' to include markdown text to display in the alert.{% endcomment %}
+
+<div class="new-on-the-blog alert-warning" data-message_id="{{include.message_id}}">
+  <p>{{include.message|markdownify}}</p>
+  <span class="hide-alert"><i class="fa fa-close"></i></span>
+</div>

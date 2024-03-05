@@ -8,6 +8,7 @@
 <!-- Header -->
   <header id="site-header" class="header-home">
     <div class="header-background">
+      {% include alert-banner-inner.html message=site.data.messages.scam-banner message_id='scam-courses-feb-2024' %}
       <div class="new-on-the-blog">
         <p>New on the blog:
           {% assign newPost = site.posts.first %}
