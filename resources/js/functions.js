@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 // Show Blog
 $(".hide").click(function() {
-    $(".new-on-the-blog").hide();
+    $(this).parent().hide(); // hide only the parent element of this button
     updatePointer();
 });
 
@@ -217,6 +217,71 @@ $(document).ready(function() {
     $('.btn-run').click(run);
     CodeMirror.commands.run = run;
   }
+});
+
+// Browser Storage Support (https://stackoverflow.com/a/41462752/2538602)
+function storageAvailable(type) {
+  try {
+    var storage = window[type],
+      x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  }
+  catch (e) {
+    return false;
+  }
+}
+
+// Store preferences in local storage and use them
+$(document).ready(function () {
+
+  const Storage = (namespace) => {
+    return ({
+      getPreference(key, defaultValue) {
+        const res = localStorage.getItem(`${namespace}.${key}`);
+        return res === null ? defaultValue : res;
+      },
+      setPreference(key, value, onChange) {
+        const old = this.getPreference(key, null);
+        if (old !== value) { // activate effect only if value changed.
+          localStorage.setItem(`${namespace}.${key}`, value);
+          onChange(old);
+        }
+      }
+    });
+  };
+
+  function setupAlertCancel(alert, storage) {
+    const messageId = alert.data('message_id');
+    let onHide = () => { };
+    if (messageId) {
+      const key = `alert.${messageId}`;
+      const isHidden = storage.getPreference(key, 'show') === 'hidden';
+      if (isHidden) {
+        alert.hide();
+      }
+      onHide = () => storage.setPreference(key, 'hidden', _ => { });
+    }
+
+
+    alert.find('.hide-alert').click(function () {
+      alert.hide(), onHide();
+    });
+  }
+
+  function setupAllAlertCancels(storage) {
+    var alertBanners = $(".new-on-the-blog.alert-warning");
+    if (alertBanners.length) {
+      setupAlertCancel(alertBanners, storage);
+    }
+  }
+
+  if (storageAvailable('localStorage')) {
+    const PreferenceStorage = Storage('org.scala-lang.preferences');
+    setupAllAlertCancels(PreferenceStorage);
+  }
+
 });
 
 // OS detection
