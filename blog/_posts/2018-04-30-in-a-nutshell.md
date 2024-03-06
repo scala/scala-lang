@@ -40,7 +40,7 @@ very interesting possibilities to pursue in the future.
 
 OK, but what is Tasty _exactly_? An up-to-date version of the Tasty
 file format is described in file
-[TastyFormat.scala](https://github.com/lampepfl/dotty/blob/master/tasty/src/dotty/tools/tasty/TastyFormat.scala)
+[TastyFormat.scala](https://github.com/scala/scala3/blob/master/tasty/src/dotty/tools/tasty/TastyFormat.scala)
 of the `dotc` compiler for Scala 3.
 
 ## What Does Tasty Have to Do with Macros?
@@ -120,7 +120,7 @@ compiler frontend!
 
 ## Next Steps
 
-The next step, [currently under way](https://github.com/lampepfl/dotty/pull/4279), is to connect these definitions to the Tasty file format. We do this by rewriting them as
+The next step, [currently under way](https://github.com/scala/scala3/pull/4279), is to connect these definitions to the Tasty file format. We do this by rewriting them as
 [extractors](https://docs.scala-lang.org/tour/extractor-objects.html)
 that implement each data type in terms of the data structures used by
 the `dotc` compiler which are then pickled and unpickled in the Tasty
@@ -170,7 +170,7 @@ driven by the annotation happens after type checking.
 
 We believe the lack of whitebox macros can be alleviated to some degree by having
 more expressive forms of computed types. A sketch of such as system is outlined
-in [Dotty PR 3844](https://github.com/lampepfl/dotty/pull/3844).
+in [Dotty PR 3844](https://github.com/scala/scala3/pull/3844).
 
 The Scala 3 language will also directly incorporate some constructs
 that so far required advanced macro code to define. In particular:
@@ -194,5 +194,5 @@ The future Scala 3 macro design is intended to replace the existing def macros a
 What do you think of the macro roadmap? To discuss, there's a [thread](https://contributors.scala-lang.org/t/what-kinds-of-macros-should-scala-3-support/1850) on
 [Scala Contributors](https://contributors.scala-lang.org). Your feedback
 there will be very valuable. There is also lots of scope to shape the
-future by contributing to the development in the [Dotty](https://github.com/lampepfl/dotty) repo.
+future by contributing to the development in the [Dotty](https://github.com/scala/scala3) repo.
 

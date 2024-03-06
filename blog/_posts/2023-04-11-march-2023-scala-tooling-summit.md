@@ -96,7 +96,7 @@ summit!
 The idea would be that fixes like this can come directly from the compiler
 ensuring that all tooling that interacts with it can benefit. You can follow the
 progress on this work in [this Dotty mega issue on structured
-diagnostics](https://github.com/lampepfl/dotty/issues/14904).
+diagnostics](https://github.com/scala/scala3/issues/14904).
 
 ### JetBrains / Scala Center education collaboration
 

@@ -332,5 +332,5 @@ instead of `concat((1, 2), (3, 4))`, similarly to how we implemented `*:`.
 
 We can use the same approach for other functions on tuples, I invite you to
 have a look at the [source code of the standard
-library](https://github.com/lampepfl/dotty/blob/87102a0b182849c71f61a6febe631f767bcc72c3/library/src-bootstrapped/scala/Tuple.scala)
+library](https://github.com/scala/scala3/blob/87102a0b182849c71f61a6febe631f767bcc72c3/library/src-bootstrapped/scala/Tuple.scala)
 to see how the other operators are implemented.

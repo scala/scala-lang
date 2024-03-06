@@ -155,7 +155,7 @@ Notes:
 
 ### SIP: Auto-uncurry n-ary functions
 
-There is no SIP tracking issue as yet, but information can be found here: [https://github.com/lampepfl/dotty/issues/897](https://github.com/lampepfl/dotty/issues/897)
+There is no SIP tracking issue as yet, but information can be found here: [https://github.com/scala/scala3/issues/897](https://github.com/scala/scala3/issues/897)
 
 No issue created as yet, but [@odersky](https://github.com/odersky) will create one if needed
 

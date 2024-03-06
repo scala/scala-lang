@@ -134,8 +134,8 @@ And what about Scala 3?  Dotty has its own community build,
 and it continues to grow. It now contains 25 repos, compared to 5
 a year ago.
 
-Here is the [list of included repos](https://github.com/lampepfl/dotty/tree/master/community-build/community-projects).  If you want to add something,
-there are [instructions](https://github.com/lampepfl/dotty/tree/master/community-build/test/scala/dotty/communitybuild).
+Here is the [list of included repos](https://github.com/scala/scala3/tree/main/community-build/community-projects).  If you want to add something,
+there are [instructions](https://github.com/scala/scala3/tree/main/community-build/test/scala/dotty/communitybuild).
 
 ## Credits
 

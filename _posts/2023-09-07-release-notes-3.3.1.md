@@ -3,7 +3,7 @@ category: announcement
 permalink: /news/3.3.1
 title: "Scala 3.3.1 LTS is now available!"
 ---
-[Scala 3.3.1 LTS](https://github.com/lampepfl/dotty/releases/tag/3.3.1) is now available!
+[Scala 3.3.1 LTS](https://github.com/scala/scala3/releases/tag/3.3.1) is now available!
 
 This version adds support for records in Java dependencies of Scala projects. It also brings improvements to the bytecode generation and a new linting rule: `-Wnonunit-statement`.
 

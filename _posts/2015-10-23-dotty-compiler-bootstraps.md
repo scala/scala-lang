@@ -7,7 +7,7 @@ title: We got liftoff! The Dotty compiler for Scala bootstraps.
 
 ## We got liftoff!
 
-The [Dotty project](https://github.com/lampepfl/dotty)
+The [Dotty project](https://github.com/scala/scala3)
 is a platform to develop new technology for Scala
 tooling and to try out concepts of future Scala language versions.
 Its compiler is a new design intended to reflect the
@@ -67,4 +67,4 @@ Samuel Gruetter ([@samuelgruetter](https://github.com/samuelgruetter)),
 Vera Salvis ([@vsalvis](https://github.com/vsalvis)),
 and Jason Zaugg ([@retronym](https://github.com/retronym)).
 
-To get started: <https://github.com/lampepfl/dotty>.
+To get started: <https://github.com/scala/scala3>.

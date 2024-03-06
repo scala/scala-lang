@@ -3,7 +3,7 @@ category: announcement
 permalink: /news/3.2.2
 title: "Scala 3.2.2 is now available!"
 ---
-[Scala 3.2.2](https://github.com/lampepfl/dotty/releases/tag/3.2.2) is now available!
+[Scala 3.2.2](https://github.com/scala/scala3/releases/tag/3.2.2) is now available!
 
 This version not only fixes bugs but also brings two new flags:
 

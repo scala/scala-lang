@@ -117,7 +117,7 @@ Scala 2 compiler, standard library, and language spec:
 
 Scala 3 compiler and standard library additions:
 
-* [lampepfl/dotty](https://github.com/lampepfl/dotty/issues)
+* [scala/scala3](https://github.com/scala/scala3/issues)
 
 Don't forget to search past issues first to see if the issue has
 already been reported.

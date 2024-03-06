@@ -97,7 +97,7 @@ information for the error or warning.
 
 So - this is what you do:
 
-1. Go to the [Error messages issue](https://github.com/lampepfl/dotty/issues/1589)
+1. Go to the [Error messages issue](https://github.com/scala/scala3/issues/1589)
 2. Read the howto on error messages
 3. Choose an error message you want to help with and post a comment saying
    which one(s)

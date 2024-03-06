@@ -27,7 +27,7 @@ _All Scala Users_
 _Contributors (authors and maintainers)_
 
 * Share your opinion on [Contributors forum](https://contributors.scala-lang.org/) (any topic that you deem important)
-* Get involved on the [Scala 3 repo](https://github.com/lampepfl/dotty/)
+* Get involved on the [Scala 3 repo](https://github.com/scala/scala3/)
 
 _Companies and organizations who are trying out Scala 3_
 
