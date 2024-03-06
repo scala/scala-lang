@@ -23,7 +23,7 @@ We would also like to remind the Scala community of the exhaustive list of domai
     - https://docs.scala-lang.org/, the documentation website
 - [scala-js.org](https://www.scala-js.org)
 - [scala-native.org](https://scala-native.org/en/stable/)
-- epfl.ch (notably [scala.epfl.ch](https://scala.epfl.ch/)), [virtuslab.com](https://virtuslab.com/), [lightbend.com](https://www.lightbend.com/): the websites of the 3 major institution and companies stewarding the Scala organization.
+- epfl.ch (notably [scala.epfl.ch](https://scala.epfl.ch/)), [virtuslab.com](https://virtuslab.com/), [lightbend.com](https://www.lightbend.com/): the websites of the three major institutions and companies stewarding the Scala organization.
 
 ## Identifying scams
 Here are some ways of how to identify a potential scam:
