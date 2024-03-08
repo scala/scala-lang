@@ -206,4 +206,4 @@ they have done for this project, and a special thanks to a contributor who also 
 We have many plans for the future of Scala Native. Our top priorities include Scala 3 support and support for more architectures such as ARM
 Stay tuned for the next updates...
 
-For more changes coming in Scala Native 0.4.0, check out the [changelog](https://scala-native.readthedocs.io/en/latest/changelog/0.4.0.html).
+For more changes coming in Scala Native 0.4.0, check out the [changelog](https://scala-native.org/en/v0.4.0/changelog/index.html).
