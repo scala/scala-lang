@@ -17,13 +17,15 @@ Both instances are scam and, as of the date of this blog, are taken down. We've 
 ## Trustworthy sources
 The Scala Center would like to use this opportunity to remind you of the only places on the Internet where you can find our official online courses are documented on the [official website](https://docs.scala-lang.org/online-courses.html#programming-reactive-systems). All of them offer a high-quality learning experience, and most are free to audit (i.e. without the final certificate or human involvement in grading).
 
-We would also like to remind the Scala community of the exhaustive list of domains from which you can find trustworthy information coming from the Scala organization:
+We would also like to remind the Scala community of the complete list of domains where the Scala organization publishes information:
 - [scala-lang.org](https://www.scala-lang.org/), notably including the following main subdomains:
     - https://www.scala-lang.org/, the main website, which you are currently reading
     - https://docs.scala-lang.org/, the documentation website
 - [scala-js.org](https://www.scala-js.org)
 - [scala-native.org](https://scala-native.org/en/stable/)
 - epfl.ch (notably [scala.epfl.ch](https://scala.epfl.ch/)), [virtuslab.com](https://virtuslab.com/), [lightbend.com](https://www.lightbend.com/): the websites of the three major institutions and companies stewarding the Scala organization.
+
+Naturally, there are trustworthy Scala materials available online from a variety of sources, not only from the Scala organization itelf! We maintain a (necessarily incomplete) list of significant third-party resources on our [Community page](https://scala-lang.org/community/).
 
 ## Identifying scams
 Here are some ways of how to identify a potential scam:
