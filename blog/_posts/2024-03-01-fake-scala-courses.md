@@ -25,7 +25,7 @@ We would also like to remind the Scala community of the complete list of domains
 - [scala-native.org](https://scala-native.org/en/stable/)
 - epfl.ch (notably [scala.epfl.ch](https://scala.epfl.ch/)), [virtuslab.com](https://virtuslab.com/), [lightbend.com](https://www.lightbend.com/): the websites of the three major institutions and companies stewarding the Scala organization.
 
-Naturally, there are trustworthy Scala materials available online from a variety of sources, not only from the Scala organization itelf! We maintain a (necessarily incomplete) list of significant third-party resources on our [Community page](https://scala-lang.org/community/).
+Naturally, there are trustworthy Scala materials available online from a variety of sources, not only from the Scala organization itself! We maintain a (necessarily incomplete) list of significant third-party resources on our [Community page](https://scala-lang.org/community/).
 
 ## Identifying scams
 Here are some ways of how to identify a potential scam:
