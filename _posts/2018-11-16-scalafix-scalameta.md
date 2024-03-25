@@ -40,10 +40,6 @@ documentation. Key pages of the site include:
   started with the SemanticDB command-line tools `metac`, `metacp` and `metap`.
 - [Trees guide](https://scalameta.org/docs/trees/guide.html): learn how to
   parse, construct, traverse and transform Scala syntax trees.
-- [ScalaFiddle playground](https://scalameta.org/docs/trees/scalafiddle.html):
-  explore Scalameta APIs directly in the browser with access to code completions
-  and fast edit/compile/run feedback. Big thanks to
-  [scalafiddle.io](https://scalafiddle.io/) for providing a great service!
 
 Visit [scalacenter.github.io/scalafix](https://scalacenter.github.io/scalafix/)
 to see the new Scalafix documentation. Key pages of the site include:
