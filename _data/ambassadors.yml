@@ -1,0 +1,7 @@
+- name: Template Ambassador
+  description: Knows everything
+  image: /resources/img/frontpage/scala-spiral.png
+  city: Lausanne, Switzerland
+  email: scala.center@epfl.ch
+  twitter: scala_lang
+  mastodon: https://fosstodon.org/@scala_lang
