@@ -1,0 +1,79 @@
+---
+layout: inner-page-no-masthead
+title: Scala Ambassadors
+permalink: /ambassadors/
+includeTOC: false
+---
+<style>
+  .ambassadors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ambassador-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    width: 300px;
+  }
+  .ambassador-image {
+    border-radius: 50%;
+  }
+</style>
+
+<main>
+  <div class="heading-box">
+    <h2>Scala Ambassadors</h2>
+  </div>
+  <div>
+    <p>Scala Ambassadors are independent community members who are known and have been recognized for their contributions to the community. They are active and welcoming individuals, happy to help newcomers, organize events, teach, speak at conferences, create content, and otherwise contribute to the Scala community.</p>
+    <br/>
+    <h3 style="text-align: center;">What does it mean for me?</h3>
+    <p>Scala Ambassadors are here to help you. They are happy to answer your questions, help you get started with Scala, or point you in the right direction. You can ask an Ambassador, for example, about:
+        <ul style="list-style-type: disc; padding: 10px;">
+        <li>How to get started with Scala.</li>
+        <li>How to start speaking at a Scala event.</li>
+        <li>How to organize a Scala event.</li>
+        <li>General technical questions about Scala.</li>
+      </ul>
+
+      You can recognize an Ambassador by them having the following sticker:
+    </p>
+    <div>
+      <img src="/resources/img/scala-ambassador-sticker-sample.png" alt="Scala Ambassador sticker" style="display: block; margin-left: auto; margin-right: auto; border-radius: 50%; height: 200px; object-fit: contain;">
+    </div>
+    <br/>
+    <h3 style="text-align: center;">Ambassadors</h3>
+    <div class="ambassadors">
+      {% for ambassador in site.data.ambassadors %}
+        <div class="ambassador-item">
+            <img src="{{ambassador.image}}" alt="{{ambassador.name}}" class="ambassador-image" style="width: 100px; height: 100px; display: inline;">
+          <p class="ambassador-name"><b>{{ambassador.name}}</b></p>
+          <p class="ambassador-city">
+            <i class="fa-solid fa-location-dot"></i> {{ambassador.city}}
+          </p>
+          <p class="ambassador-contact">
+            {% if ambassador.email %}
+              <a href="mailto:{{ambassador.email}}">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+            {% endif %}
+            {% if ambassador.twitter %}
+              <a href="https://twitter.com/{{ambassador.twitter}}" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            {% endif %}
+            {% if ambassador.mastodon %}
+              <a href="{{ambassador.mastodon}}" target="_blank">
+                <i class="fa-brands fa-mastodon"></i>
+              </a>
+            {% endif %}
+          </p>
+          <p class="ambassador-description">{{ambassador.description}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
