@@ -5,3 +5,9 @@
   email: scala.center@epfl.ch
   twitter: scala_lang
   mastodon: https://fosstodon.org/@scala_lang
+
+- name: Seth Tisue
+  description: Scala Discord moderator, Scala 2 compiler team member (at Lightbend). also work on Scala 3, Scala websites, more. I'm "SethTisue" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  image: https://avatars.githubusercontent.com/u/161079
+  city: Reno, Nevada, USA
+  mastodon: https://fosstodon.org/@SethTisue
