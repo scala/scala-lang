@@ -70,6 +70,21 @@ includeTOC: false
                 <i class="fa-brands fa-mastodon"></i>
               </a>
             {% endif %}
+            {% if ambassador.github %}
+              <a href="https://github.com/{{ambassador.github}}" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            {% endif %}
+            {% if ambassador.linkedin %}
+              <a href="{{ambassador.linkedin}}" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            {% endif %}
+            {% if ambassador.meetup %}
+              <a href="{{ambassador.meetup}}" target="_blank">
+                <i class="fa-brands fa-meetup"></i>
+              </a>
+            {% endif %}
           </p>
           <p class="ambassador-description">{{ambassador.description}}</p>
         </div>
