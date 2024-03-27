@@ -18,3 +18,9 @@
   city: San Francisco Bay Area, California, USA
   twitter: SalarRahmanian
   mastodon: https://social.softinio.com/@softinio
+
+- name: Krzysztof Romanowski
+  description: After 13 years, I am still in love with Scala. I am leading the Scala department at VirtusLab, including teams working on Scala 3, Metals, Scala CLI, and more.  I'm "romanowski_kr" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  image: https://github.com/romanowski.png
+  city: Kraków, Poland
+  twitter: RomanowskiKr
