@@ -12,7 +12,7 @@ This new effort aims to:
 
 * strengthen the Scala community
 * promote a positive image of Scala
-* recognize and support the independent work of active community members who volunteer time to growing the community
+* recognize and support the independent work of active community members
 
 ## What are Ambassadors? 🤔
 
@@ -24,13 +24,13 @@ Ambassadors have volunteered to work with the Scala Center and the community to:
 * improve communication between everyone involved with Scala
 * aid and support each other's efforts
 
-Ambassadors are encouraged to:
+We encourage Ambassadors to:
 
 * Be present whenever possible at their local community events
 * Start new community events if they aren't already happening
 * Be visible to other community members as Ambassadors
 * Be perceived by the other community members as go-to people to find high quality answers to Scala-related questions
-* Relay community feedback to the Scala organization
+* Relay community feedback to the [Scala organization](https://scala-lang.org/community/#whos-behind-scala)
 
 ## Ask an Ambassador! 🙋
 
@@ -68,6 +68,6 @@ We'll cover this in a subsequent blog post.
 
 ## Background 📔
 
-The Ambassadors initiative was first publicly mentioned in the Center's [Roadmap for 2024](https://www.scala-lang.org/blog/2024/02/06/scala-center-2024-roadmap.html), which we invite you to peruse if you haven't seen it already.
+The Ambassadors initiative was first publicly mentioned in the Center's [Roadmap for 2024](https://www.scala-lang.org/blog/2024/02/06/scala-center-2024-roadmap.html). We invite you to peruse the whole roadmap, if you haven't already.
 
-The initiative first took concrete shape at [Scalar 2024](https://www.scalar-conf.com) in Warsaw. Thanks to the conference organiers and to everyone who participated in these discussions.
+The initiative first took concrete shape at [Scalar 2024](https://www.scalar-conf.com) in Warsaw, at which many of our first batch of ambassadors were present. Thanks to the conference organizers and to everyone who participated in these discussions.
