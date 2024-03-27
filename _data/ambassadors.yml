@@ -29,6 +29,12 @@
   twitter: SalarRahmanian
   mastodon: https://social.softinio.com/@softinio
 
+- name: Krzysztof Romanowski
+  description: After 13 years, I am still in love with Scala. I am leading the Scala department at VirtusLab, including teams working on Scala 3, Metals, Scala CLI, and more.  I'm "romanowski_kr" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  image: https://github.com/romanowski.png
+  city: Kraków, Poland
+  twitter: RomanowskiKr
+
 - name: Seth Tisue
   description: Scala Discord moderator, Scala 2 compiler team member (at Lightbend). also work on Scala 3, Scala websites, more. I'm "SethTisue" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
   image: https://avatars.githubusercontent.com/u/161079
