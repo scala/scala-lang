@@ -68,6 +68,6 @@ We'll cover this in a subsequent blog post.
 
 ## Background 📔
 
-The Ambassadors initiative was first publicly mentioned in the Center's [Roadmap for 2024](https://www.scala-lang.org/blog/2024/02/06/scala-center-2024-roadmap.html), which we invite you to peruse if you haven't seen it already.
+The Ambassadors initiative was first publicly mentioned in the Center's [Roadmap for 2024](https://www.scala-lang.org/blog/2024/02/06/scala-center-2024-roadmap.html). We invite you to peruse the whole roadmap, if you haven't already.
 
 The initiative first took concrete shape at [Scalar 2024](https://www.scalar-conf.com) in Warsaw, at which many of our first batch of ambassadors were present. Thanks to the conference organizers and to everyone who participated in these discussions.
