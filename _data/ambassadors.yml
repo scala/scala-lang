@@ -1,16 +1,26 @@
-- name: Template Ambassador
-  description: Knows everything
-  image: /resources/img/frontpage/scala-spiral.png
-  city: Lausanne, Switzerland
-  email: scala.center@epfl.ch
-  twitter: scala_lang
-  mastodon: https://fosstodon.org/@scala_lang
+## We understand that not all ambassadors will want to include
+## an email address here. But if you don't include an email address,
+## please provide enough information so that someone can contact you
+## privately by some other means.
 
-- name: Seth Tisue
-  description: Scala Discord moderator, Scala 2 compiler team member (at Lightbend). also work on Scala 3, Scala websites, more. I'm "SethTisue" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
-  image: https://avatars.githubusercontent.com/u/161079
-  city: Reno, Nevada, USA
-  mastodon: https://fosstodon.org/@SethTisue
+#- name: Template Ambassador
+#  description: Knows everything
+#  image: /resources/img/frontpage/scala-spiral.png
+#  city: Lausanne, Switzerland
+#  email: scala.center@epfl.ch
+#  twitter: scala_lang
+#  github: scala
+#  linkedin: https://www.linkedin.com/in/janedoe/
+#  mastodon: https://fosstodon.org/@janedoe
+#  meetup: https://www.meetup.com/your/url/here
+
+- name: David A. Gil
+  description: Senior Scala Engineer (Scala 2 & 3), Organizer of AI&DG, Speaker. I'm "dagmendez" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  image: https://avatars.githubusercontent.com/u/103842788
+  city: Santiago de Compostela, Galicia, Spain
+  github: dagmendez
+  linkedin: https://www.linkedin.com/groups/9545608/
+  meetup: https://www.meetup.com/es-ES/big-data-e-inteligencia-artificial-galicia/
 
 - name: Salar Rahmanian
   description: Scala developer and enthusiast. I also organize Scala events around San Francisco Bay Area, California.  I'm "softinio" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
@@ -24,3 +34,11 @@
   image: https://github.com/romanowski.png
   city: Kraków, Poland
   twitter: RomanowskiKr
+
+- name: Seth Tisue
+  description: Scala Discord moderator, Scala 2 compiler team member (at Lightbend). also work on Scala 3, Scala websites, more. I'm "SethTisue" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  image: https://avatars.githubusercontent.com/u/161079
+  city: Reno, Nevada, USA
+  github: SethTisue
+  mastodon: https://fosstodon.org/@SethTisue
+  linkedin: https://www.linkedin.com/in/sethtisue/
