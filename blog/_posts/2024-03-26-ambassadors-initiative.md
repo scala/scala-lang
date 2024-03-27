@@ -30,7 +30,7 @@ We encourage Ambassadors to:
 * Start new community events if they aren't already happening
 * Be visible to other community members as Ambassadors
 * Be perceived by the other community members as go-to people to find high quality answers to Scala-related questions
-* Relay community feedback to the Scala organization
+* Relay community feedback to the [Scala organization](https://scala-lang.org/community/#whos-behind-scala)
 
 ## Ask an Ambassador! 🙋
 
