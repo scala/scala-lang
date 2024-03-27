@@ -38,12 +38,15 @@ includeTOC: false
         <li>How to organize a Scala event.</li>
         <li>General technical questions about Scala.</li>
       </ul>
-
-      You can recognize an Ambassador by them having the following sticker:
+    <h3 style="text-align: center;">Contacting Ambassadors</h3>
+      At events, you can recognize an Ambassador by them having the following sticker:
     </p>
     <div>
       <img src="/resources/img/scala-ambassador-sticker-sample.png" alt="Scala Ambassador sticker" style="display: block; margin-left: auto; margin-right: auto; border-radius: 50%; height: 200px; object-fit: contain;">
     </div>
+    <p>
+      Ambassadors can be contacted a variety of ways, varying by their own preference. In the list below, Discord usernames (when present) are on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+    </p>
     <br/>
     <h3 style="text-align: center;">Ambassadors</h3>
     <div class="ambassadors">
@@ -53,6 +56,9 @@ includeTOC: false
           <p class="ambassador-name"><b>{{ambassador.name}}</b></p>
           <p class="ambassador-city">
             <i class="fa-solid fa-location-dot"></i> {{ambassador.city}}
+            {% if ambassador.discord %}
+            <br><i class="fa-brands fa-discord"></i> {{ambassador.discord}}
+            {% endif %}
           </p>
           <p class="ambassador-contact">
             {% if ambassador.email %}

@@ -15,17 +15,19 @@
 #  meetup: https://www.meetup.com/your/url/here
 
 - name: David A. Gil
-  description: Senior Scala Engineer (Scala 2 & 3), Organizer of AI&DG, Speaker. I'm "dagmendez" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  description: Senior Scala Engineer (Scala 2 & 3), Organizer of AI&DG, Speaker.
   image: https://avatars.githubusercontent.com/u/103842788
   city: Santiago de Compostela, Galicia, Spain
+  discord: dagmendez
   github: dagmendez
   linkedin: https://www.linkedin.com/groups/9545608/
   meetup: https://www.meetup.com/es-ES/big-data-e-inteligencia-artificial-galicia/
 
 - name: Salar Rahmanian
-  description: Scala developer and enthusiast. I also organize Scala events around San Francisco Bay Area, California.  I'm "softinio" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  description: Scala developer and enthusiast. I also organize Scala events around San Francisco Bay Area, California.
   image: https://avatars.githubusercontent.com/u/3371635
   city: San Francisco Bay Area, California, USA
+  discord: softinio
   twitter: SalarRahmanian
   mastodon: https://social.softinio.com/@softinio
 
@@ -36,9 +38,10 @@
   twitter: RomanowskiKr
 
 - name: Seth Tisue
-  description: Scala Discord moderator, Scala 2 compiler team member (at Lightbend). also work on Scala 3, Scala websites, more. I'm "SethTisue" on the <a href="https://discord.com/invite/scala">Scala Discord</a>.
+  description: Scala Discord moderator, Scala 2 compiler team member (at <a href="https://www.lightbend.com">Lightbend</a>). Also work on Scala 3, Scala websites, more. Based in Reno, but visit SF Bay Area often.
   image: https://avatars.githubusercontent.com/u/161079
   city: Reno, Nevada, USA
+  discord: SethTisue
   github: SethTisue
   mastodon: https://fosstodon.org/@SethTisue
   linkedin: https://www.linkedin.com/in/sethtisue/
