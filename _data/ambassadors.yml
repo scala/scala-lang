@@ -76,6 +76,15 @@
   github: Gedochao
   linkedin: https://www.linkedin.com/in/piotr-ch/
 
+- name: Paweł Marks
+  description: Coordinator in Scala Org, Scala 3 Release Officer. Enthusiastic about spreading love for Scala.
+  image: /ambassadors/pawel.jpg
+  city: Kraków, Poland
+  discord: kordyjan
+  github: Kordyjan
+  twitter: Kordyjan
+  linkedin: https://www.linkedin.com/in/pawel-marks/
+
 - name: Maciej Gorywoda
   description: Product Marketing Manager at JetBrains, IntelliJ Scala team. Runs <a href="https://www.youtube.com/@makingthematrix/videos">an educational Scala YouTube channel</a>. 
   image: https://avatars.githubusercontent.com/u/4498008
