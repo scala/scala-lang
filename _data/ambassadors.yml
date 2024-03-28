@@ -127,6 +127,15 @@
   discord: monmcguigan
   linkedin: https://www.linkedin.com/in/monica-mcguigan/
 
+- name: Jonathan Winandy
+  description: Data Engineering Manager, Org at Scala.IO, Scala-FR discord admin
+  image: /ambassadors/jonathanw.jpeg
+  city: Nantes, France
+  discord: ahoyjon
+  twitter: ahoy_jon
+  github: ahoy-jon
+  linkedin: https://www.linkedin.com/in/jwinandy/
+
 - name: Jakub Kozłowski
   description: Open-source contributor and maintainer, conference speaker and <a href="https://www.youtube.com/@kubukoz_">small-time YouTuber</a>.
   image: https://github.com/kubukoz.png
