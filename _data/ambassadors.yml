@@ -102,3 +102,10 @@
   twitter: LucasNouguier
   github: iusildra
   linkedin: https://www.linkedin.com/in/lucas-nouguier/
+
+- name: Monica McGuigan
+  description: Conference speaker, data engineering, functional programmer at JPMorgan.
+  image: /ambassadors/monica.jpg
+  city: London, England
+  discord: monmcguigan
+  linkedin: https://www.linkedin.com/in/monica-mcguigan/
