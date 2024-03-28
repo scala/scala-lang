@@ -16,7 +16,7 @@ This new effort aims to:
 
 ## What are Ambassadors? 🤔
 
-Ambassadors are leaders and key figures in the Scala community.
+Ambassadors are key figures in the Scala community: speakers, organizers, teachers, content creators, open source maintainers, and so on.
 
 Ambassadors have volunteered to work with the Scala Center and the community to:
 
