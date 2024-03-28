@@ -10,9 +10,9 @@ We are pleased to announce the launch of the Scala Ambassadors initiative.
 
 This new effort aims to:
 
-* strengthen the Scala community
-* promote a positive image of Scala
-* recognize and support the independent work of active community members
+* Strengthen the Scala community
+* Promote a positive image of Scala
+* Recognize and support the independent work of active community members
 
 ## What are Ambassadors? 🤔
 
