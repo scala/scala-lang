@@ -20,9 +20,9 @@ Ambassadors are leaders and key figures in the Scala community.
 
 Ambassadors have volunteered to work with the Scala Center and the community to:
 
-* help newcomers learn Scala and become part of the community
-* improve communication between everyone involved with Scala
-* aid and support each other's efforts
+* Help newcomers learn Scala and become part of the community
+* Improve communication between everyone involved with Scala
+* Aid and support each other's efforts
 
 We encourage Ambassadors to:
 
