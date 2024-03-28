@@ -67,3 +67,53 @@
   linkedin: https://www.linkedin.com/in/luksow/
   mastodon: https://fosstodon.org/@luksow
   meetup: https://www.meetup.com/ScalaWAW/
+
+- name: Piotr Chabelski
+  description: Product Manager of the Scala 3 Compiler, maintainer of Scala CLI, Scala tooling engineer & enthusiast.
+  image: /ambassadors/piotr.jpg
+  city: Warsaw, Poland
+  discord: gedochao
+  github: Gedochao
+  linkedin: https://www.linkedin.com/in/piotr-ch/
+
+- name: Zainab Ali
+  description: London Scala User Group organizer, conference speaker, open source contributor and maintainer
+  image: /ambassadors/zainab.jpg
+  city: London, England
+  discord: zainabali
+  github: zainab-ali
+  linkedin: https://www.linkedin.com/in/zainab-ali-fp/
+
+- name: Paweł Marks
+  description: Coordinator in Scala Org, Scala 3 Release Officer. Enthusiastic about spreading love for Scala.
+  image: /ambassadors/pawel.jpg
+  city: Kraków, Poland
+  discord: kordyjan
+  github: Kordyjan
+  twitter: Kordyjan
+  linkedin: https://www.linkedin.com/in/pawel-marks/
+
+- name: Maciej Gorywoda
+  description: Product Marketing Manager at JetBrains, IntelliJ Scala team. Runs <a href="https://www.youtube.com/@makingthematrix/videos">an educational Scala YouTube channel</a>. 
+  image: https://avatars.githubusercontent.com/u/4498008
+  city: Berlin, Germany
+  discord: makingthematrix
+  twitter: makingthematrix
+  github: makingthematrix
+  linkedin: https://www.linkedin.com/in/mgorywoda/  
+
+- name: Lucas Nouguier
+  description: Master's student in Computer Science at Polytech Montpellier & Software Engineer Assistant at Teads. Also part of the ScalaIO org.
+  image: /ambassadors/lucas.jpeg
+  city: Montpellier, France
+  discord: iusildra
+  twitter: LucasNouguier
+  github: iusildra
+  linkedin: https://www.linkedin.com/in/lucas-nouguier/
+
+- name: Monica McGuigan
+  description: Conference speaker, data engineering, functional programmer at JPMorgan.
+  image: /ambassadors/monica.jpg
+  city: London, England
+  discord: monmcguigan
+  linkedin: https://www.linkedin.com/in/monica-mcguigan/
