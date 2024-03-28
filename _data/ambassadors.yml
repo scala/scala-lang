@@ -76,6 +76,14 @@
   github: Gedochao
   linkedin: https://www.linkedin.com/in/piotr-ch/
 
+- name: Zainab Ali
+  description: London Scala User Group organizer, conference speaker, open source contributor and maintainer
+  image: /ambassadors/zainab.jpg
+  city: London, England
+  discord: zainabali
+  github: zainab-ali
+  linkedin: https://www.linkedin.com/in/zainab-ali-fp/
+
 - name: Paweł Marks
   description: Coordinator in Scala Org, Scala 3 Release Officer. Enthusiastic about spreading love for Scala.
   image: /ambassadors/pawel.jpg
