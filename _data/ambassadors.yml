@@ -57,6 +57,15 @@
   mastodon: https://fosstodon.org/@SethTisue
   linkedin: https://www.linkedin.com/in/sethtisue/
 
+- name: Daniel Ciocîrlan
+  description: Scala developer and instructor. Creator of <a href="https://rockthejvm.com">Rock the JVM</a>, an online learning platform dedicated to training software engineers on Scala and all major libraries and tools in the Scala ecosystem.
+  image: /ambassadors/daniel_ciocirlan.jpg
+  city: Bucharest, Romania
+  discord: danielciocirlan
+  github: rockthejvm
+  twitter: rockthejvm
+  linkedin: https://linkedin.com/in/danielciocirlan/
+
 - name: Łukasz Sowa
   description: Managing partner @ Iterators, organizer of ScalaWAW meetup, programme committee member of several Scala-related conferences, Scala open source contributor.
   image: https://www.luksow.com/assets/img/me.jpg
