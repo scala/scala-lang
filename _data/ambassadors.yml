@@ -3,16 +3,16 @@
 ## please provide enough information so that someone can contact you
 ## privately by some other means.
 
-#- name: Template Ambassador
-#  description: Knows everything
-#  image: /resources/img/frontpage/scala-spiral.png
-#  city: Lausanne, Switzerland
-#  email: scala.center@epfl.ch
-#  twitter: scala_lang
-#  github: scala
-#  linkedin: https://www.linkedin.com/in/janedoe/
-#  mastodon: https://fosstodon.org/@janedoe
-#  meetup: https://www.meetup.com/your/url/here
+# - name: Template Ambassador
+#   description: Knows everything
+#   image: /resources/img/frontpage/scala-spiral.png
+#   city: Lausanne, Switzerland
+#   email: scala.center@epfl.ch
+#   twitter: scala_lang
+#   github: scala
+#   linkedin: https://www.linkedin.com/in/janedoe/
+#   mastodon: https://fosstodon.org/@janedoe
+#   meetup: https://www.meetup.com/your/url/here
 
 - name: David A. Gil
   description: Senior Scala Engineer (Scala 2 & 3), Organizer of AI&DG, Speaker.
@@ -103,13 +103,13 @@
   linkedin: https://www.linkedin.com/in/pawel-marks/
 
 - name: Maciej Gorywoda
-  description: Product Marketing Manager at JetBrains, IntelliJ Scala team. Runs <a href="https://www.youtube.com/@makingthematrix/videos">an educational Scala YouTube channel</a>. 
+  description: Product Marketing Manager at JetBrains, IntelliJ Scala team. Runs <a href="https://www.youtube.com/@makingthematrix/videos">an educational Scala YouTube channel</a>.
   image: https://avatars.githubusercontent.com/u/4498008
   city: Berlin, Germany
   discord: makingthematrix
   twitter: makingthematrix
   github: makingthematrix
-  linkedin: https://www.linkedin.com/in/mgorywoda/  
+  linkedin: https://www.linkedin.com/in/mgorywoda/
 
 - name: Lucas Nouguier
   description: Master's student in Computer Science at Polytech Montpellier & Software Engineer Assistant at Teads. Also part of the ScalaIO org.
@@ -146,3 +146,9 @@
   mastodon: https://mstdn.party/@kubukoz
   linkedin: https://www.linkedin.com/in/%F0%9F%91%BE-jakub-koz%C5%82owski-5ab49542/
 
+- name: Anatolii Kmetiuk
+  description: Scala Center graduate, enthusiastic about getting newcomers passionate about Scala and pointing them in the right direction.
+  image: https://github.com/anatoliykmetyuk.png
+  city: Tokyo, Japan
+  email: anatoliykmetyuk@gmail.com
+  linkedin: https://www.linkedin.com/in/akmetiuk/
