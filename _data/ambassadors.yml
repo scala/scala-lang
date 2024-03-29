@@ -152,3 +152,12 @@
   city: Tokyo, Japan
   email: anatoliykmetyuk@gmail.com
   linkedin: https://www.linkedin.com/in/akmetiuk/
+
+- name: Nicolas Rinaudo
+  description: Enjoys functional programming in statically typed programming languages
+  image: https://avatars.githubusercontent.com/u/836994
+  city: Fontainebleau, France
+  twitter: NicolasRinaudo
+  github: nrinaudo
+  linkedin: https://www.linkedin.com/in/nicolasrinaudo/
+  mastodon: https://functional.cafe/@NicolasRinaudo
