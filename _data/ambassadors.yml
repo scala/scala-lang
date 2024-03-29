@@ -3,16 +3,16 @@
 ## please provide enough information so that someone can contact you
 ## privately by some other means.
 
-#- name: Template Ambassador
-#  description: Knows everything
-#  image: /resources/img/frontpage/scala-spiral.png
-#  city: Lausanne, Switzerland
-#  email: scala.center@epfl.ch
-#  twitter: scala_lang
-#  github: scala
-#  linkedin: https://www.linkedin.com/in/janedoe/
-#  mastodon: https://fosstodon.org/@janedoe
-#  meetup: https://www.meetup.com/your/url/here
+# - name: Template Ambassador
+#   description: Knows everything
+#   image: /resources/img/frontpage/scala-spiral.png
+#   city: Lausanne, Switzerland
+#   email: scala.center@epfl.ch
+#   twitter: scala_lang
+#   github: scala
+#   linkedin: https://www.linkedin.com/in/janedoe/
+#   mastodon: https://fosstodon.org/@janedoe
+#   meetup: https://www.meetup.com/your/url/here
 
 - name: David A. Gil
   description: Senior Scala Engineer (Scala 2 & 3), Organizer of AI&DG, Speaker.
