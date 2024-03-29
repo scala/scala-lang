@@ -103,13 +103,13 @@
   linkedin: https://www.linkedin.com/in/pawel-marks/
 
 - name: Maciej Gorywoda
-  description: Product Marketing Manager at JetBrains, IntelliJ Scala team. Runs <a href="https://www.youtube.com/@makingthematrix/videos">an educational Scala YouTube channel</a>. 
+  description: Product Marketing Manager at JetBrains, IntelliJ Scala team. Runs <a href="https://www.youtube.com/@makingthematrix/videos">an educational Scala YouTube channel</a>.
   image: https://avatars.githubusercontent.com/u/4498008
   city: Berlin, Germany
   discord: makingthematrix
   twitter: makingthematrix
   github: makingthematrix
-  linkedin: https://www.linkedin.com/in/mgorywoda/  
+  linkedin: https://www.linkedin.com/in/mgorywoda/
 
 - name: Lucas Nouguier
   description: Master's student in Computer Science at Polytech Montpellier & Software Engineer Assistant at Teads. Also part of the ScalaIO org.
@@ -146,3 +146,8 @@
   mastodon: https://mstdn.party/@kubukoz
   linkedin: https://www.linkedin.com/in/%F0%9F%91%BE-jakub-koz%C5%82owski-5ab49542/
 
+- name: Anatolii Kmetiuk
+  description: Scala Center graduate, enthusiastic about getting newcomers passionate about Scala and pointing them in the right direction.
+  image: https://github.com/anatoliykmetyuk.png
+  city: Tokyo, Japan
+  linkedin: https://www.linkedin.com/in/akmetiuk/
