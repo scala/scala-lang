@@ -32,7 +32,7 @@
   linkedin: https://www.linkedin.com/in/darjajovanovic/
 
 - name: Salar Rahmanian
-  description: Scala developer and enthusiast. I also organize Scala events around San Francisco Bay Area, California.
+  description: Scala developer and enthusiast. I <a href="https://lu.ma/scala">organize Scala events</a> around San Francisco Bay Area, California. I am also the creator of <a href="https://www.scalanews.net">Scala News</a>.
   image: https://avatars.githubusercontent.com/u/3371635
   city: San Francisco Bay Area, California, USA
   discord: softinio
