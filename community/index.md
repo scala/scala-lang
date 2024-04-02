@@ -80,6 +80,11 @@ Scala-oriented Discord servers operated by the community include:
 * **[Scalameta](https://discord.gg/RFpSVth)**: Scalameta-based tooling: Metals, Scalameta, Scalafix, Scalafmt, and Mdoc
 * **[Play Framework](https://discord.gg/g5s2vtZ4Fa)**: the Play web framework for Scala and Java
 * **[Typelevel](https://discord.gg/XF3CXcMzqD)**: the Typelevel ecosystem for pure-functional programming in Scala
+* **[ZIO](https://discord.gg/2ccFBr4)**: the ZIO ecosystem for Type-safe, composable asynchronous and concurrent programming in Scala
+* **[Laminar](https://discord.gg/JTrUxhq7sj)**: the Laminar, Native Scala.js library for building user interfaces
+* **[Smithy4s](https://discord.gg/wvVga94s8r)**: the smithy4s for generating Scala code from Smithy files.
+* **[indigo](https://discord.gg/b5CD47g)**: the Indigo, Scala 2D game engine based on functional programming
+
 
 English-language Scala rooms on other chat platforms besides Discord include:
 
