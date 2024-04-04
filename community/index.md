@@ -84,6 +84,7 @@ Scala-oriented Discord servers operated by the community include:
 * **[Laminar](https://discord.gg/JTrUxhq7sj)**: the Laminar, Native Scala.js library for building user interfaces
 * **[Smithy4s](https://discord.gg/wvVga94s8r)**: the smithy4s for generating Scala code from Smithy files.
 * **[indigo](https://discord.gg/b5CD47g)**: the Indigo, Scala 2D game engine based on functional programming
+* **[Scala Space](https://discord.gg/vcHsmEQx)**: Discord server for VirtusLab's and Software Mill's open source projects
 
 
 English-language Scala rooms on other chat platforms besides Discord include:
