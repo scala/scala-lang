@@ -59,7 +59,7 @@ The [Scala Reddit](https://www.reddit.com/r/scala/) has a monthly "who is hiring
 
 ## Scala LinkedIn Group
 
-The [Scala Enthusiasts Group](https://www.linkedin.com/groups/746917/) is a place for Scala professionals to connect and share information. Via this group you can come into contact with people and companies using scala.
+The [Scala Enthusiasts Group](https://www.linkedin.com/groups/746917/) is a place for Scala professionals to share information and come into contact with people and companies using Scala.
 
 ## Chat Rooms
 
