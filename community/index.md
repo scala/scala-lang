@@ -57,6 +57,10 @@ Job postings are not allowed in our other forums and chat rooms.
 
 The [Scala Reddit](https://www.reddit.com/r/scala/) has a monthly "who is hiring?" thread.
 
+## Scala LinkedIn Group
+
+The [Scala Enthusiasts Group](https://www.linkedin.com/groups/746917/) is a place for Scala professionals to share information and come into contact with people and companies using Scala.
+
 ## Chat Rooms
 
 Our main chat platform is Discord, and the main Scala server is:
