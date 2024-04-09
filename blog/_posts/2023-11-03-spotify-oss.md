@@ -78,7 +78,7 @@ In conclusion, Spotify's future vision in the expanding open source landscape is
 
 A key part of their strategy is to stop pursuing initiatives that no longer make sense and invest in those that do. Michel emphasizes the need to minimize disappointment, properly share the product vision, and ensure that their open source processes are clearly communicated.
 
-Michel further pointed out that Spotify has a [Slack workspace](https://slackin.spotify.com), where everyone can discuss or get support on the open source projects they maintain. Most of these projects are also advertised in Spotify’s [developer blog posts](https://engineering.atspotify.com/).
+Michel further pointed out that Spotify has a Slack workspace where everyone can discuss or get support on the open source projects they maintain. Most of these projects are also advertised in Spotify’s [developer blog posts](https://engineering.atspotify.com/).
 
 Their advice for companies looking to enter the open source space is to invest time in open source initiatives. It's an invaluable learning tool for developers, helping them grow as they navigate the intricacies of creating general-purpose software.
 
