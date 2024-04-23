@@ -24,22 +24,22 @@ We have 11 different Scala-ized pride flags available on t-shirts. Each design i
 **Click a shirt design below for ordering information!**
 
 <center>
-<a href="https://teespring.com/scala-pride-2018"><img style="max-height: 380px; max-width: 319px;" src="{{ site.baseurl }}/resources/img/01-pride.jpg" alt="Pride"></a>
-<a href="https://teespring.com/scala-pride-2018"><img style="max-height: 380px; max-width: 283px;" src="{{ site.baseurl }}/resources/img/01-pride-womens.jpg" alt="Pride"></a>
+<img style="max-height: 380px; max-width: 319px;" src="{{ site.baseurl }}/resources/img/01-pride.jpg" alt="Pride">
+<img style="max-height: 380px; max-width: 283px;" src="{{ site.baseurl }}/resources/img/01-pride-womens.jpg" alt="Pride">
 </center>
 
 <center>
 <img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/02-bi.jpg" alt="Bi pride">
-<a href="https://teespring.com/scala-pride-trans-pride"><img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/03-trans.jpg" alt="Trans pride"></a>
+<img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/03-trans.jpg" alt="Trans pride">
 <img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/04-genderqueer.jpg" alt="Genderqueer pride">
 
-<a href="https://teespring.com/scala-pride"><img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/05-leather.jpg" alt="Leather pride"></a>
-<a href="https://teespring.com/scala-lesbian-labrys-pride"><img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/06-lesbian-labrys.jpg" alt="Lesbian/Labrys pride"></a>
-<a href="https://teespring.com/scala-pride-pansexual-pride"><img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/07-pan.jpg" alt="Pansexual pride"></a>
+<img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/05-leather.jpg" alt="Leather pride">
+<img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/06-lesbian-labrys.jpg" alt="Lesbian/Labrys pride">
+<img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/07-pan.jpg" alt="Pansexual pride">
 
 <img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/08-agender.jpg" alt="Agender pride">
-<a href="https://teespring.com/scala-gender-fluid-prid"><img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/09-gender-fluid.jpg" alt="Gender-fluid pride"></a>
-<a href="https://teespring.com/scala-asexual-pride"><img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/10-asexual.jpg" alt="Asexual pride"></a>
+<img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/09-gender-fluid.jpg" alt="Gender-fluid pride">
+<img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/10-asexual.jpg" alt="Asexual pride">
 
-<a href="https://teespring.com/scala-non-binary-pride"><img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/11-non-binary.jpg" alt="Non-binary pride"></a>
+<img style="max-height: 270px; max-width: 227px;" src="{{ site.baseurl }}/resources/img/11-non-binary.jpg" alt="Non-binary pride">
 </center>
