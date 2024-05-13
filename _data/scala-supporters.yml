@@ -5,6 +5,9 @@ supporters:
   - name: Spotify
     logo: /resources/img/frontpage/spotify-logo.png
     url: https://www.spotify.com/
+  - name: JetBrains
+    logo: /resources/img/frontpage/jetbrains-logo.png
+    url: https://www.jetbrains.com/
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/corporate-membership.html
