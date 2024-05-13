@@ -8,6 +8,7 @@ supporters:
   - name: JetBrains
     logo: /resources/img/frontpage/jetbrains-logo.png
     url: https://www.jetbrains.com/
+    wider-logo: true
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/corporate-membership.html
