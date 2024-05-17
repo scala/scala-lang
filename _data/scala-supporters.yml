@@ -2,9 +2,6 @@ supporters:
   - name: EPFL
     logo: /resources/img/frontpage/epfl-logo.png
     url: https://www.epfl.ch
-  - name: Spotify
-    logo: /resources/img/frontpage/spotify-logo.png
-    url: https://www.spotify.com/
   - name: JetBrains
     logo: /resources/img/frontpage/jetbrains-logo.png
     url: https://www.jetbrains.com/
