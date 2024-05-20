@@ -1,6 +1,6 @@
 ---
 category: event
-title: Functional Scala 2024
+title: Functional Scala
 logo: /resources/img/functional-scala-logo.png
 location: London, UK
 description: "Functional Scala 2024 is a two-day conference in London with amazing speakers from around the world passionate about Scala."
