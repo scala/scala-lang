@@ -1,15 +1,15 @@
 - category: current_version
   title: Current 3.4.x release
-  version: 3.4.1
-  release_date: March 29, 2024
+  version: 3.4.2
+  release_date: May 16, 2024
 - category: current_version
   title: Current 3.3.x LTS release
   version: 3.3.3
   release_date: February 29, 2024
 - category: current_version
   title: Current 2.13.x release
-  version: 2.13.13
-  release_date: February 26, 2024
+  version: 2.13.14
+  release_date: May 1, 2024
 - category: maintenance_version
   title: Latest 2.12.x maintenance release
   version: 2.12.19

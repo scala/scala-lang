@@ -2,15 +2,10 @@ supporters:
   - name: EPFL
     logo: /resources/img/frontpage/epfl-logo.png
     url: https://www.epfl.ch
-  - name: 47 Degrees
-    logo: /resources/img/frontpage/47deg-logo.png
-    url: https://www.47deg.com/
-  - name: Spotify
-    logo: /resources/img/frontpage/spotify-logo.png
-    url: https://www.spotify.com/
-  - name: Lunatech
-    logo: /resources/img/frontpage/lunatech-logo.png
-    url: https://lunatech.com/
+  - name: JetBrains
+    logo: /resources/img/frontpage/jetbrains-logo.png
+    url: https://www.jetbrains.com/
+    wider-logo: true
   - name: Your company
     logo: /resources/img/frontpage/company-logo.png
     url: https://scala.epfl.ch/corporate-membership.html
