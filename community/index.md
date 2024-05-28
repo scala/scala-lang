@@ -93,7 +93,6 @@ Scala-oriented Discord servers operated by the community include:
 * **[Creative Scala](https://discord.gg/rRhcFbJxVG)**: Making Scala fun through non-traditional means
 
 
-
 English-language Scala rooms on other chat platforms besides Discord include:
 
 * **[scala_en](https://t.me/scala_en)** (Telegram)
