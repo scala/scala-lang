@@ -31,6 +31,8 @@ The Scala Center focuses on education (especially online courses),
 documentation, open source community outreach, and tooling.  Community
 participation in all of these efforts is strongly encouraged.
 
+To receive security announcements or contact us about security issues, see our [security policy](/security/).
+
 ## Forums
 
 The Scala Center operates the following Discourse forums:
