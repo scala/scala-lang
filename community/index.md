@@ -140,6 +140,10 @@ Scala 3 compiler and standard library additions:
 Don't forget to search past issues first to see if the issue has
 already been reported.
 
+## Security
+
+To receive security announcements or contact us about security issues, see our [security policy](/security/).
+
 ## User Groups
 
 Most local Scala user groups are listed on [Meetup](https://www.meetup.com/topics/scala/).

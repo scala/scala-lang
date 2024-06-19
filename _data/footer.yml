@@ -49,6 +49,8 @@
       url: "/conduct.html"
     - title: License
       url: "/license/"
+    - title: Security Policy
+      url: "/security/"
 - title: Social
   class: social
   links:
