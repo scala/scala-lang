@@ -47,17 +47,31 @@
             <div class="button-row__container">
               <div class="button-row">
                 {% for release in site.data.scala-releases %}
-                {% if release.category == "current_version" %}
-                <a href="/download/{{ release.version }}.html" class="button">
-                  Scala {{ release.version }}
-                </a>
+                {% assign version_slice = release.version | slice: 0, 2 %}
+                {% if release.category == 'current_version' %}
+                  {% if version_slice == '3.' %}
+                    {% unless release.title contains "LTS" %}
+                    <a href="/download/{{ release.version }}.html" class="button">
+                      Latest Release: {{ release.version }}
+                    </a>
+                    {% endunless %}
+                    {% if release.title contains "LTS" %}
+                    <a href="/download/{{ release.version }}.html" class="button">
+                      LTS Release: {{ release.version }}
+                    </a>
+                    {% endif %}
+                  {% else %}
+                    {% assign scala_2_version = release.version %}
+                  {% endif %}
                 {% endif %}
                 {% endfor %}
-                <a href="/download/all.html" class="button">
-                  All Releases
-                </a>
               </div>
             </div>
+            <p>
+              <a href="/download/all.html">
+                Scala {{scala_2_version}} and older releases
+              </a>
+            </p>
           </div>
         </div>
         <div class="col-lg-6">

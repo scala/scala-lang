@@ -37,6 +37,10 @@
             margin-bottom: $padding-medium;
         }
 
+        p {
+            margin-top: 10px;
+        }
+
         @include bp(large) {
             .button {
                 margin-bottom: 3px;
@@ -44,6 +48,11 @@
 
             h2 {
                 font-size: 1.4rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.2rem;
                 text-align: center;
             }
         }
