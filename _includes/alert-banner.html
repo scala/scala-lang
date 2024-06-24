@@ -1,5 +1,7 @@
 {% comment %}use the variable 'message' to include markdown text to display in the alert.{% endcomment %}
 
+{% unless include.message_id == 'disabled' %}
 <header id="site-header" class="header-home">
   {% include alert-banner-inner.html message=include.message message_id=include.message_id %}
 </header>
+{% endunless %}
