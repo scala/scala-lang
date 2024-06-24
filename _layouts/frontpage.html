@@ -44,27 +44,31 @@
           <div class="inner-text">
             <div class="hero-logo hide-lg"></div>
             <h2>{{page.headerSubtitle}}</h2>
+
+            {% for release in site.data.scala-releases %}
+              {% assign version_slice = release.version | slice: 0, 2 %}
+              {% if release.category == 'current_version' %}
+                {% if version_slice == '3.' %}
+                  {% unless release.title contains "LTS" %}
+                    {% assign scala_next_release = release %}
+                  {% endunless %}
+                  {% if release.title contains "LTS" %}
+                    {% assign scala_lts_release = release %}
+                  {% endif %}
+                {% else %}
+                  {% assign scala_2_version = release.version %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+
             <div class="button-row__container">
               <div class="button-row">
-                {% for release in site.data.scala-releases %}
-                {% assign version_slice = release.version | slice: 0, 2 %}
-                {% if release.category == 'current_version' %}
-                  {% if version_slice == '3.' %}
-                    {% unless release.title contains "LTS" %}
-                    <a href="/download/{{ release.version }}.html" class="button">
-                      Latest Release: {{ release.version }}
-                    </a>
-                    {% endunless %}
-                    {% if release.title contains "LTS" %}
-                    <a href="/download/{{ release.version }}.html" class="button">
-                      LTS Release: {{ release.version }}
-                    </a>
-                    {% endif %}
-                  {% else %}
-                    {% assign scala_2_version = release.version %}
-                  {% endif %}
-                {% endif %}
-                {% endfor %}
+                <a href="/download/{{ scala_next_release.version }}.html" class="button">
+                  Latest Release: {{ scala_next_release.version }}
+                </a>
+                <a href="/download/{{ scala_lts_release.version }}.html" class="button">
+                  LTS Release: {{ scala_lts_release.version }}
+                </a>
               </div>
             </div>
             <p>
