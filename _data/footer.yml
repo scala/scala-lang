@@ -23,6 +23,8 @@
       url: "/community/"
     - title: Governance
       url: "/community/index.html#governance"
+    - title: Scala Ambassadors
+      url: "/ambassadors/"
     - title: Forums
       url: "/community/index.html#forums"
     - title: Chat

@@ -31,6 +31,12 @@ The Scala Center focuses on education (especially online courses),
 documentation, open source community outreach, and tooling.  Community
 participation in all of these efforts is strongly encouraged.
 
+## Ambassadors
+
+Ambassadors are key figures in the Scala community: speakers, organizers, teachers, content creators, open source maintainers, and so on. They are often present at community events, or open to answering questions.
+
+To learn more and discover who is an ambassador near you: see the dedicated [Scala Ambassadors](../ambassadors/) page.
+
 ## Forums
 
 The Scala Center operates the following Discourse forums:
