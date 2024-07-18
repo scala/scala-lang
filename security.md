@@ -22,6 +22,7 @@ used for signing the artifacts under the `org.scala-lang` namespace on [Maven Ce
 |:-------------------------------------------------:|:---------:|:-----------------------------------------------------------------------------------------------------------------------:|
 | 86DA 41A5 E169 9C9C EBE9 64A8 A905 2B1B 6D92 E560 | RSA-4096  | [Download Public Key](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x86da41a5e1699c9cebe964a8a9052b1b6d92e560) |
 | ACF3 9CCD ED38 E2C6 F089 8BF2 8F7F 6C04 5196 7B84 | RSA-4096  | [Download Public Key](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xacf39ccded38e2c6f0898bf28f7f6c0451967b84) |
+| 2A5E 8B33 8438 CAC7 033F 9D8F B8A0 45C0 A6EC 398E | RSA-4096  | [Download Public Key](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2a5e8b338438cac7033f9d8fb8a045c0a6ec398e) |
 
 ## Reporting Vulnerabilities
 
