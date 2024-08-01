@@ -106,7 +106,7 @@ This will issue warnings when the choice of `given` has changed:
 If the pre-3.5 behavior is preferred, you can explicitly pass the
 desired given:
 ```scala
-@main def run = printComponent(using libComponent)
+@main def run = printComponent(using userComponent)
 ```
 
 To determine the correct explicit parameter (which could involve a
@@ -118,7 +118,7 @@ scalac client.scala -Xprint:typer
 This will output all parameters explicitly:
 ```scala
 ...
-@main def run: Unit = printComponent(libComponent)
+@main def run: Unit = printComponent(userComponent)
 ...
 ```
 
