@@ -138,6 +138,35 @@ This will output all parameters explicitly:
 ...
 ```
 
+### Explicit Prioritization by Owner
+
+One effective way to ensure that the most specific given instance is
+selected -— particularly useful when migrating libraries to Scala 3.5 -—
+is to leverage the inheritance rules as outlined in point 8 of [the
+language
+reference](https://docs.scala-lang.org/scala3/reference/changed-features/implicit-resolution.html):
+
+```scala
+class General
+class Specific extends General
+
+class LowPriority:
+  given a:General()
+
+object NormalPriority extends LowPriority:
+  given b:Specific()
+
+def run =
+  import NormalPriority.given
+  val x = summon[General]
+  val _: Specific = x // <- b was picked
+```
+
+The idea is to enforce prioritization through the inheritance
+hierarchies of classes that provide `given` instances. By importing the
+`given` instances from the object with the highest priority, you can
+control which instance is selected by the compiler.
+
 ### Outlook
 
 We are considering adding `-rewrite` rules that automatically insert
