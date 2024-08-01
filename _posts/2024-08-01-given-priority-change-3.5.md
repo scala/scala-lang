@@ -2,16 +2,17 @@
 layout: blog-detail
 post-type: blog
 by: Oliver Bračevac, EPFL
-title: "Changes to Givens Prioritization in Scala 3.5"
+title: "Changes to Givens in Scala 3.5"
 ---
 
-## Motivation
+## New Prioritization of Givens
 
 Starting with Scala 3.5, the prioritization of givens has been
 improved to better handle inheritance triangles, resulting in enhanced
 typeclass support.
 
-Consider a scenario with the following inheritance triangle of type classes:
+Consider a scenario with the following inheritance triangle of type
+classes:
 ```scala
 trait Functor[F[_]]:
   extension [A, B](x: F[A]) def map(f: A => B): F[B]
@@ -40,19 +41,24 @@ than the other. However, all we really need is the functionality of
 
 In Scala 3.5, the compiler now selects the instance with the _most
 general_ subtype that satisfies the context bound of `fmap`. In this
-case, it chooses `a:Functor[List]`.
+case, it chooses the desired `a:Functor[List]`.
 
 Inheritance triangles like this are common in practice, and the
 prioritization change in Scala 3.5 makes working with them more
 intuitive and straightforward.
 
-## Tips for Migrating to 3.5
+### Community Impact
 
 Based on our evaluation using the [open community
 build](https://github.com/VirtusLab/community-build3), the impact of
 this change on existing Scala 3 projects has been minimal. However,
 there may still be cases where the behavior of existing programs
-changes due to the new prioritization of givens.
+changes due to the new prioritization of givens. Cf. below for
+tips to migrate to Scala 3.5.
+
+
+## Tips for Migrating to the New Prioritization
+
 
 In some cases, the new prioritization might silently select the wrong
 `given`. For example, consider a library that provides a default
@@ -82,12 +88,9 @@ given userComponent: UserComponent = UserComponent()
 // Scala 3.5: prints "library-defined"
 ```
 
-To detect such "silent" changes, we recommend compiling under Scala
-3.5 with the `-source:3.6-migration` flag:
-```bash
-scalac client.scala -source:3.6-migration
-```
-This will issue warnings when the choice of `given` has changed:
+Scala 3.5 will automatically issue
+warnings when the choice of `given` has changed:
+
 ```scala
 -- Warning: client.scala:11:30 ------------------------------------------
 11 |@main def run = printComponent
@@ -101,7 +104,20 @@ This will issue warnings when the choice of `given` has changed:
    |           New choice from Scala 3.6: the second alternative
 ```
 
-### Explicit Parameters
+
+### Useful Compiler Options
+
+In future releases (Scala 3.6+), automatic warnings related to changes
+in the selection of givens, as described above, will no longer be
+issued by default. However, these warnings can be reactivated using
+the `-source:3.5` option with `scalac`.
+
+Additionally, combining Scala 3.5 with the `-source:3.6` option can be
+useful to verify that implicit search results will not be ambiguous in
+future versions or to test your application at runtime with the new
+rules in effect.
+
+### Resorting to Explicit Parameters
 
 If the pre-3.5 behavior is preferred, you can explicitly pass the
 desired given:
@@ -126,3 +142,51 @@ This will output all parameters explicitly:
 
 We are considering adding `-rewrite` rules that automatically insert
 explicit parameters when a change in choice is detected.
+
+
+## Towards Context Bounds as Givens
+
+We are gradually phasing out remaining uses of Scala 2 style
+`implicit`s in favor of the `given`/`using` syntax.  Scala 3.5 marks
+the first step in transitioning context bounds on type parameters to
+givens, with this transition expected to be completed in the upcoming
+Scala 3.6 release.
+
+Currently, context bounds on type parameters still desugar into
+`implicit` parameters:
+
+```scala
+def f[Element : Eq : Ordering] = summon[Eq[Element]].toOrdering 
+// expands to:
+def f[Element >: Nothing <: Any](implicit evidence$1: Eq[Element],
+      implicit evidence$2: Order[Element]): Ordering[Element] =
+      evidence$2.toOrdering
+```
+
+Prior to Scala 3.5, it was possible to pass `implicit` arguments
+explicitly for context bounds as if they were regular arguments. In
+Scala 3.5, however, these parameters must be qualified with `using`:
+
+```scala
+val eq: Eq[Int] = ???
+val ord: Order[Int] = ???
+f(eq, ord)       // ok in Scala < 3.5, error in 3.5
+f(using eq, ord) // ok in Scala 3.5
+```
+
+At this stage, the change does not affect the expansion of functions
+like `f` above, which still rely on `implicit` parameters. However,
+this is a crucial step towards facilitating the eventual transition to
+`given`s for context bounds in Scala 3.6.
+
+To assist with the migration to explicit `using` clauses, Scala 3.5
+provides an error message and offers automatic rewrites:
+
+```scala
+-- Error: bounds.scala:10:2 ----------------------------------------------
+10 |  f(eq, ord)  // error
+   |  ^
+   |Context bounds will map to context parameters.
+   |A `using` clause is needed to pass explicit arguments to them.
+   |This code can be rewritten automatically under -rewrite -source 3.4-migration.
+```
