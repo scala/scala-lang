@@ -117,6 +117,35 @@ useful to verify that implicit search results will not be ambiguous in
 future versions or to test your application at runtime with the new
 rules in effect.
 
+#### Suppressing Warnings
+
+If you need to suppress the new warning related to changes in `given`
+search preference, you can use Scala’s facilities for configuring
+warnings. For example, you can suppress the warning globally via the
+command line:
+
+```bash
+scalac file.scala "-Wconf:msg=Given search preference:s"
+```
+
+It is also possible to selectively suppress the warning
+using the  [`@nowarn` annotation](https://www.scala-lang.org/api/current/scala/annotation/nowarn.html):
+
+```scala
+import scala.annotation.nowarn
+
+class A
+class B extends A
+
+given A()
+given B()
+
+@nowarn("msg=Given search preference")
+val x = summon[A]
+```
+
+For more details, you can consult the guide on [configuring and suppressing warnings]({{ site.baseurl }}/2021/01/12/configuring-and-suppressing-warnings.html).
+
 ### Resorting to Explicit Parameters
 
 If the pre-3.5 behavior is preferred, you can explicitly pass the
@@ -167,11 +196,13 @@ hierarchies of classes that provide `given` instances. By importing the
 `given` instances from the object with the highest priority, you can
 control which instance is selected by the compiler.
 
-**Note**: Due to the release cut-off, Scala 3.5.0 may still report a
+#### Upcoming Bugfixes
+
+ Due to the release cut-off, Scala 3.5.0 may still report a
 warning that the above pattern will be ambiguous in Scala
 3.6. However, this warning is incorrect. The issue has already been
-resolved, and the improvements will be included in an upcoming bugfix
-release.
+resolved, and an upcoming bugfix release will improve the
+accuracy of warnings.
 
 
 ### Outlook
