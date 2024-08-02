@@ -167,6 +167,13 @@ hierarchies of classes that provide `given` instances. By importing the
 `given` instances from the object with the highest priority, you can
 control which instance is selected by the compiler.
 
+**Note**: Due to the release cut-off, Scala 3.5.0 may still report a
+warning that the above pattern will be ambiguous in Scala
+3.6. However, this warning is incorrect. The issue has already been
+resolved, and the improvements will be included in an upcoming bugfix
+release.
+
+
 ### Outlook
 
 We are considering adding `-rewrite` rules that automatically insert
