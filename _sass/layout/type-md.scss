@@ -151,7 +151,7 @@
     li,
     p {
         code {
-            font-family: 'Consolas';
+            font-family: 'Consolas', monospace;
             background-color: #fff;
             color: #859900;
             @include border-radius($border-radius-medium);
