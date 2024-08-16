@@ -2,66 +2,15 @@
 layout: blog-detail
 post-type: blog
 by: Oliver Bračevac, EPFL
-title: "Changes to Givens in Scala 3.5"
+title: "Upcoming Changes to Givens in Scala 3.7"
 ---
 
-## New Prioritization of Givens
+## New Prioritization of Givens in Scala 3.7
 
-Starting with Scala 3.5, the prioritization of givens has been
-improved to better handle inheritance triangles, resulting in enhanced
-typeclass support.
+Scala 3.7 introduces changes to how `givens` are resolved, which can
+affect program behavior when multiple givens are present.
 
-Consider a scenario with the following inheritance triangle of type
-classes:
-```scala
-trait Functor[F[_]]:
-  extension [A, B](x: F[A]) def map(f: A => B): F[B]
-trait Monad[F[_]] extends Functor[F] { ... }
-trait Traverse[F[_]] extends Functor[F] { ... }
-```
-and corresponding instances:
-```scala
-given a:Functor[List]  = ...
-given b:Monad[List]    = ...
-given c:Traverse[List] = ...
-```
-Now, let’s use these in the following context:
-```scala
-def fmap[F[_] : Functor, A, B](c: F[A])(f: A => B): F[B] = c.map(f)
-fmap(List(1,2,3))(_.toString)
-// ^ rejected by Scala < 3.5, now accepted by Scala 3.5
-```
-
-Before Scala 3.5, the compiler would reject the `fmap` call due to
-ambiguity. Since it prioritizes the `given` instance with the _most
-specific_ subtype of the context bound `Functor`, both `c` and `b` are
-valid candidates for `Functor[List]`, but neither is more specific
-than the other. However, all we really need is the functionality of
-`a:Functor[List]`!
-
-In Scala 3.5, the compiler now selects the instance with the _most
-general_ subtype that satisfies the context bound of `fmap`. In this
-case, it chooses the desired `a:Functor[List]`.
-
-Inheritance triangles like this are common in practice, and the
-prioritization change in Scala 3.5 makes working with them more
-intuitive and straightforward.
-
-### Community Impact
-
-Based on our evaluation using the [open community
-build](https://github.com/VirtusLab/community-build3), the impact of
-this change on existing Scala 3 projects has been minimal. However,
-there may still be cases where the behavior of existing programs
-changes due to the new prioritization of givens. Cf. below for
-tips to migrate to Scala 3.5.
-
-
-## Tips for Migrating to the New Prioritization
-
-
-In some cases, the new prioritization might silently select the wrong
-`given`. For example, consider a library that provides a default
+For example, consider a library that provides a default
 `given` for a component:
 ```scala
 // library code
@@ -74,8 +23,9 @@ given libComponent: LibComponent = LibComponent()
 def printComponent(using c:LibComponent) = println(c.msg)
 ```
 
-Clients of the library might have relied on the “most specific”
-prioritization to override the default given with a user-defined one:
+Up until Scala 3.6, clients of the library could override
+`libComponent` with a user-defined one through subtyping
+
 ```scala
 // client code
 class UserComponent extends LibComponent:
@@ -83,13 +33,85 @@ class UserComponent extends LibComponent:
 
 given userComponent: UserComponent = UserComponent()
 
-@main def run = printComponent 
-// Scala < 3.5: prints "user-defined"
-// Scala 3.5: prints "library-defined"
+@main def run = printComponent
 ```
 
-Scala 3.5 will automatically issue
-warnings when the choice of `given` has changed:
+Let's run the example:
+
+```scala
+run // Scala <= 3.6: prints "user-defined"
+    // Scala 3.7: prints "library-defined"
+```
+
+What happened? In Scala 3.6 and earlier, the compiler prioritizes the
+`give`n with the _most specific_ compatible subtype
+(`userComponent`). However, in Scala 3.7, it selects the value with the
+_most general_ subtype instead (`libComponent`).
+
+
+### Motivation: Better Handling of Inheritance Triangles & Typeclasses
+
+Why change the priority to the `given` with the most general subtype?
+This adjustment makes working with inheritance triangles more
+intuitive.
+
+For example, functional programmers will recognize the following
+inheritance triangle of common typeclasses:
+
+```scala
+trait Functor[F[_]]:
+  extension [A, B](x: F[A]) def map(f: A => B): F[B]
+trait Monad[F[_]] extends Functor[F] { ... }
+trait Traverse[F[_]] extends Functor[F] { ... }
+```
+Now, suppose we have corresponding instances of these typeclasses for `List`:
+```scala
+given Functor[List]  = ...
+given Monad[List]    = ...
+given Traverse[List] = ...
+```
+Let’s use these in the following context:
+```scala
+def fmap[F[_] : Functor, A, B](c: F[A])(f: A => B): F[B] = c.map(f)
+
+fmap(List(1,2,3))(_.toString)
+// ^ rejected by Scala < 3.7, now accepted by Scala 3.7
+```
+
+Before Scala 3.7, the compiler would reject the `fmap` call due to
+ambiguity. Since it prioritized the `given` instance with the most
+specific subtype of the context bound `Functor`, both `Monad[List]` and
+`Traverse[List]` were valid candidates for `Functor[List]`, but neither
+was more specific than the other. However, all that’s required is the
+functionality of `Functor[List]`, the _most general_ instance, which Scala
+3.7 correctly picks.
+
+This change aligns the behavior of the compiler with the practical
+needs of developers, making the handling of common triangle inheritance
+patterns more predictable.
+
+## Migrating to the New Prioritization
+
+### Community Impact
+
+We have conducted experiments on the [open community
+build](https://github.com/VirtusLab/community-build3) that showed that
+the proposed scheme will result in a more intuitive and predictable
+given resolution. The negative impact on the existing projects is very
+small. We have tested 1500 open-source libraries, and new rules are
+causing problems for less than a dozen of them.
+
+### Roadmap
+
+The new `given` resolution scheme, which will be the default in Scala
+3.7, can already be explored in Scala 3.5. This early access allows
+the community ample time to test and adapt to the upcoming changes.
+
+**Scala 3.5**
+
+Starting with Scala 3.5, you can compile with `-source 3.6` to receive
+warnings if the new `given` resolution scheme would affect your
+code. This is how the warning might look:
 
 ```scala
 -- Warning: client.scala:11:30 ------------------------------------------
@@ -101,21 +123,21 @@ warnings when the choice of `given` has changed:
    |             (libComponent : LibComponent)
    |           has changed.
    |           Previous choice          : the first alternative
-   |           New choice from Scala 3.6: the second alternative
+   |           New choice from Scala 3.7: the second alternative
 ```
 
+Additionally, you can compile with `-source 3.7` or `-source future`
+to fully enable the new prioritization and start experiencing its
+effects.
 
-### Useful Compiler Options
+**Scala 3.6**
 
-In future releases (Scala 3.6+), automatic warnings related to changes
-in the selection of givens, as described above, will no longer be
-issued by default. However, these warnings can be reactivated using
-the `-source:3.5` option with `scalac`.
+In Scala 3.6, these warnings will be on by default.
 
-Additionally, combining Scala 3.5 with the `-source:3.6` option can be
-useful to verify that implicit search results will not be ambiguous in
-future versions or to test your application at runtime with the new
-rules in effect.
+**Scala 3.7**
+
+Scala 3.7 will finalize the transition, making the new given
+prioritization the standard behavior.
 
 #### Suppressing Warnings
 
@@ -146,17 +168,22 @@ val x = summon[A]
 
 For more details, you can consult the guide on [configuring and suppressing warnings]({{ site.baseurl }}/2021/01/12/configuring-and-suppressing-warnings.html).
 
-### Resorting to Explicit Parameters
+###  Workarounds
 
-If the pre-3.5 behavior is preferred, you can explicitly pass the
+Here are some practical strategies to help you smoothly adapt to the
+new given resolution scheme:
+
+#### Resorting to Explicit Parameters
+
+If the pre-3.7 behavior is preferred, you can explicitly pass the
 desired given:
 ```scala
 @main def run = printComponent(using userComponent)
 ```
 
 To determine the correct explicit parameter (which could involve a
-complex expression), it can be helpful to compile with Scala 3.4 (or
-earlier) using the `-Xprint:typer` flag:
+complex expression), it can be helpful to compile with an earlier
+Scala version using the `-Xprint:typer` flag:
 ```scala
 scalac client.scala -Xprint:typer
 ```
@@ -167,10 +194,10 @@ This will output all parameters explicitly:
 ...
 ```
 
-### Explicit Prioritization by Owner
+#### Explicit Prioritization by Owner
 
 One effective way to ensure that the most specific given instance is
-selected -— particularly useful when migrating libraries to Scala 3.5 -—
+selected -— particularly useful when migrating libraries to Scala 3.7 -—
 is to leverage the inheritance rules as outlined in point 8 of [the
 language
 reference](https://docs.scala-lang.org/scala3/reference/changed-features/implicit-resolution.html):
@@ -196,64 +223,10 @@ hierarchies of classes that provide `given` instances. By importing the
 `given` instances from the object with the highest priority, you can
 control which instance is selected by the compiler.
 
-#### Upcoming Bugfixes
-
- Due to the release cut-off, Scala 3.5.0 may still report a
-warning that the above pattern will be ambiguous in Scala
-3.6. However, this warning is incorrect. The issue has already been
-resolved, and an upcoming bugfix release will improve the
-accuracy of warnings.
-
-
 ### Outlook
 
 We are considering adding `-rewrite` rules that automatically insert
 explicit parameters when a change in choice is detected.
 
 
-## Towards Context Bounds as Givens
 
-We are gradually phasing out remaining uses of Scala 2 style
-`implicit`s in favor of the `given`/`using` syntax.  Scala 3.5 marks
-the first step in transitioning context bounds on type parameters to
-givens, with this transition expected to be completed in the upcoming
-Scala 3.6 release.
-
-Currently, context bounds on type parameters still desugar into
-`implicit` parameters:
-
-```scala
-def f[Element : Eq : Ordering] = summon[Eq[Element]].toOrdering 
-// expands to:
-def f[Element >: Nothing <: Any](implicit evidence$1: Eq[Element],
-      implicit evidence$2: Order[Element]): Ordering[Element] =
-      evidence$2.toOrdering
-```
-
-Prior to Scala 3.5, it was possible to pass `implicit` arguments
-explicitly for context bounds as if they were regular arguments. In
-Scala 3.5, however, these parameters must be qualified with `using`:
-
-```scala
-val eq: Eq[Int] = ???
-val ord: Order[Int] = ???
-f(eq, ord)       // ok in Scala < 3.5, error in 3.5
-f(using eq, ord) // ok in Scala 3.5
-```
-
-At this stage, the change does not affect the expansion of functions
-like `f` above, which still rely on `implicit` parameters. However,
-this is a crucial step towards facilitating the eventual transition to
-`given`s for context bounds in Scala 3.6.
-
-To assist with the migration to explicit `using` clauses, Scala 3.5
-provides an error message and offers automatic rewrites:
-
-```scala
--- Error: bounds.scala:10:2 ----------------------------------------------
-10 |  f(eq, ord)  // error
-   |  ^
-   |Context bounds will map to context parameters.
-   |A `using` clause is needed to pass explicit arguments to them.
-   |This code can be rewritten automatically under -rewrite -source 3.4-migration.
-```
