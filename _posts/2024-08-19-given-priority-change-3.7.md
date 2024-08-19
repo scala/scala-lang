@@ -168,6 +168,13 @@ val x = summon[A]
 
 For more details, you can consult the guide on [configuring and suppressing warnings]({{ site.baseurl }}/2021/01/12/configuring-and-suppressing-warnings.html).
 
+**Caution**: Suppressing warnings should be viewed as a temporary
+workaround, not a long-term solution. While it can help address rare
+false positives from the compiler, it merely postpones the inevitable
+need to update your codebase or the libraries your project depends
+on. Relying on suppressed warnings may lead to unexpected issues when
+upgrading to future versions of the Scala compiler.
+
 ###  Workarounds
 
 Here are some practical strategies to help you smoothly adapt to the
