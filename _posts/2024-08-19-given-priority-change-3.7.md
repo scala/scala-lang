@@ -7,8 +7,8 @@ title: "Upcoming Changes to Givens in Scala 3.7"
 
 ## New Prioritization of Givens in Scala 3.7
 
-Scala 3.7 introduces changes to how `givens` are resolved, which can
-affect program behavior when multiple givens are present.
+Scala 3.7 will introduce changes to how `given`s are resolved, which can
+affect program behavior when multiple `given`s are present.
 
 For example, consider a library that provides a default
 `given` for a component:
@@ -44,7 +44,7 @@ run // Scala <= 3.6: prints "user-defined"
 ```
 
 What happened? In Scala 3.6 and earlier, the compiler prioritizes the
-`give`n with the _most specific_ compatible subtype
+`given` with the _most specific_ compatible subtype
 (`userComponent`). However, in Scala 3.7, it selects the value with the
 _most general_ subtype instead (`libComponent`).
 
