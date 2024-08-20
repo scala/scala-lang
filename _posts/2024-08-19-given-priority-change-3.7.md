@@ -60,86 +60,10 @@ inheritance patterns more predictable.
 
 ### Source Incompatibility of the New Givens Prioritization
 
-Unfortunately, this change might affect source compatibility of some Scala codebases.
-Let's consider a library that provides a default
-`given` for a component:
-```scala
-// library code
-class LibComponent:
-    def msg = "library-defined"
-
-// default provided by library
-given libComponent: LibComponent = LibComponent()
-
-def printComponent(using c:LibComponent) = println(c.msg)
-```
-
-Up until Scala 3.6, clients of the library could override
-`libComponent` with a user-defined one through subtyping
-
-```scala
-// client code
-class UserComponent extends LibComponent:
-    override def msg = "user-defined"
-
-given userComponent: UserComponent = UserComponent()
-
-@main def run = printComponent
-```
-
-Let's run the example:
-
-```scala
-run // Scala <= 3.6: prints "user-defined"
-    // Scala 3.7: prints "library-defined"
-```
-
-What happened? In Scala 3.6 and earlier, the compiler prioritizes the
-`given` with the _most specific_ compatible subtype
-(`userComponent`). However, in Scala 3.7, it selects the value with the
-_most general_ subtype instead (`libComponent`).
-
-## New Prioritization of Givens in Scala 3.7
-
-Scala 3.7 will introduce changes to how `given`s are resolved, which may affect program behavior when multiple `given`s are present. The aim of this change is to make `given` resolution more predictable, but it could lead to challenges during migration to Scala 3.7 or later versions. In this article, we’ll explore the motivation behind these changes, potential issues, and provide migration guides to help developers prepare for the transition.
-
-### Motivation: Better Handling of Inheritance Triangles & Typeclasses
-
-The motivation for changing the prioritization of `givens` stems from the need to make interactions within inheritance hierarchies, particularly inheritance triangles, more intuitive. This adjustment addresses a common issue where the compiler struggles with ambiguity in complex typeclass hierarchies.
-
-Consider the following common inheritance triangle in functional programming:
-
-```scala
-trait Functor[F[_]]:
-  extension [A, B](x: F[A]) def map(f: A => B): F[B]
-trait Monad[F[_]] extends Functor[F] { ... }
-trait Traverse[F[_]] extends Functor[F] { ... }
-```
-
-Now, suppose we have corresponding instances of these typeclasses for `List`:
-
-```scala
-given Functor[List]  = ...
-given Monad[List]    = ...
-given Traverse[List] = ...
-```
-
-Let’s use these in the following context:
-
-```scala
-def fmap[F[_] : Functor, A, B](c: F[A])(f: A => B): F[B] = c.map(f)
-
-fmap(List(1,2,3))(_.toString)
-// ^ rejected by Scala < 3.7, now accepted by Scala 3.7
-```
-
-Before Scala 3.7, the compiler would reject the `fmap` call due to ambiguity. The issue arose because the compiler prioritized the `given` instance with the most specific subtype of the context bound `Functor`. Both `Monad[List]` and `Traverse[List]` were valid candidates for `Functor[List]`, but neither was more specific than the other. However, all that’s required is the functionality of `Functor[List]`, the _most general_ instance, which Scala 3.7 now correctly picks.
-
-This change aligns compiler behavior with developers' expectations, making it easier to work with common inheritance patterns without encountering unnecessary ambiguity.
-
-### Source Incompatibility of the New Givens Prioritization
-
-While the new `given` prioritization improves predictability, it may affect source compatibility in existing Scala codebases. Let’s consider an example where a library provides a default `given` for a component:
+While the new `given` prioritization improves predictability, it may
+affect source compatibility in existing Scala codebases. Let’s
+consider an example where a library provides a default `given` for a
+component:
 
 ```scala
 // library code
@@ -152,7 +76,8 @@ given libComponent: LibComponent = LibComponent()
 def printComponent(using c: LibComponent) = println(c.msg)
 ```
 
-Up until Scala 3.6, clients of the library could override `libComponent` with a user-defined one through subtyping:
+Up until Scala 3.6, clients of the library could override
+`libComponent` with a user-defined one through subtyping:
 
 ```scala
 // client code
@@ -171,7 +96,10 @@ run // Scala <= 3.6: prints "user-defined"
     // Scala 3.7: prints "library-defined"
 ```
 
-What happened? In Scala 3.6 and earlier, the compiler prioritized the `given` with the _most specific_ compatible subtype (`userComponent`). However, in Scala 3.7, it selects the value with the _most general_ subtype instead (`libComponent`).
+What happened? In Scala 3.6 and earlier, the compiler prioritized the
+`given` with the _most specific_ compatible subtype
+(`userComponent`). However, in Scala 3.7, it selects the value with
+the _most general_ subtype instead (`libComponent`).
 
 This shift in prioritization can lead to unexpected changes in
 behavior when migrating to Scala 3.7, requiring developers to review
@@ -186,7 +114,7 @@ with the migration process.
 We have conducted experiments on the [open community
 build](https://github.com/VirtusLab/community-build3) that showed that
 the proposed scheme will result in a more intuitive and predictable
-given resolution. The negative impact on the existing projects is very
+`given` resolution. The negative impact on the existing projects is very
 small. We have tested 1500 open-source libraries, and new rules are
 causing problems for less than a dozen of them.
 
@@ -225,7 +153,7 @@ In Scala 3.6, these warnings will be on by default.
 
 **Scala 3.7**
 
-Scala 3.7 will finalize the transition, making the new given
+Scala 3.7 will finalize the transition, making the new `given`
 prioritization the standard behavior.
 
 #### Suppressing Warnings
@@ -267,12 +195,12 @@ upgrading to future versions of the Scala compiler.
 ###  Workarounds
 
 Here are some practical strategies to help you smoothly adapt to the
-new given resolution scheme:
+new `given` resolution scheme:
 
 #### Resorting to Explicit Parameters
 
 If the pre-3.7 behavior is preferred, you can explicitly pass the
-desired given:
+desired `given`:
 ```scala
 @main def run = printComponent(using userComponent)
 ```
@@ -292,7 +220,7 @@ This will output all parameters explicitly:
 
 #### Explicit Prioritization by Owner
 
-One effective way to ensure that the most specific given instance is
+One effective way to ensure that the most specific `given` instance is
 selected -— particularly useful when migrating libraries to Scala 3.7 -—
 is to leverage the inheritance rules as outlined in point 8 of [the
 language
