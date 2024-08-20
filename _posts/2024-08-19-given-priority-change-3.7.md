@@ -99,8 +99,6 @@ What happened? In Scala 3.6 and earlier, the compiler prioritizes the
 (`userComponent`). However, in Scala 3.7, it selects the value with the
 _most general_ subtype instead (`libComponent`).
 
-Here's the revised version with improved transitions and adjustments for the reordering:
-
 ## New Prioritization of Givens in Scala 3.7
 
 Scala 3.7 will introduce changes to how `given`s are resolved, which may affect program behavior when multiple `given`s are present. The aim of this change is to make `given` resolution more predictable, but it could lead to challenges during migration to Scala 3.7 or later versions. In this article, we’ll explore the motivation behind these changes, potential issues, and provide migration guides to help developers prepare for the transition.
