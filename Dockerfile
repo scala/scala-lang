@@ -8,5 +8,4 @@ COPY Gemfile .
 COPY Gemfile.lock .
 
 RUN echo -n "bundle version: " && bundle --version
-RUN chmod u+s /bin/chown
 RUN bundle install
