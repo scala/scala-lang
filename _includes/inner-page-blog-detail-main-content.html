@@ -4,7 +4,7 @@
 			<div class="inner-box">
 				<div class="blog-detail-head">
 					<div>
-						<p>{{page.date | date: "%A %-d %B %Y"}}</p>
+						<time datetime="{{page.date}}">{{page.date | date: "%A %-d %B %Y"}}</time>
 						<p>{{page.by}}</p>
 					</div>
 					{% if page.tags %}

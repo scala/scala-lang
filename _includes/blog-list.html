@@ -16,7 +16,7 @@
 					{% for post in paginator.posts %}
 						<div class="blog-item">
 							<h2><a href="{{post.url}}">{{post.title}}</a></h2>
-							<p class="blog-date">{{post.date | date: "%A %-d %B %Y"}}</p>
+							<time datetime="{{post.date}}" class="blog-date">{{post.date | date: "%A %-d %B %Y"}}</time>
 							{% if post.by %}<p class="blog-author">{{post.by}}</p>{% endif %}
 							{% if post.tags %}
 								<ul class="tag-list">

@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="main-page-column">
-  <div class="article-date">{{ page.date | date: "%B %-d, %Y" }}</div>
+  <time datetime="{{page.date}}" class="article-date">{{ page.date | date: "%B %-d, %Y" }}</time>
   {% if page.by %}
     <div class="written">Written By: <span class="by">{{ page.by }}</span></div>
   {% endif %}
