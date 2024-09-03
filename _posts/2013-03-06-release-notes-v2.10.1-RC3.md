@@ -117,7 +117,7 @@ As for 2.10.0, here's an overview of the most prominent new features and improve
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
 A lot of developers have already come up with very cool applications for them.
-Some examples can be seen at [http://scalamacros.org/news/2012/11/05/status-update.html](http://scalamacros.org/news/2012/11/05/status-update.html).
+Some examples can be seen at [hxxp://scalamacros.org/news/2012/11/05/status-update.html](hxxp://scalamacros.org/news/2012/11/05/status-update.html).
 
 
 #### A big thank you to all the contributors!

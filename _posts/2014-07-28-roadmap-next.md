@@ -26,7 +26,7 @@ This release focuses on improving the standard library.
    1. Lazy collections through improved views, including Java 8 streams interop.
    2. Parallel collections with performance improvements obtained from operation fusion and more efficient parallel scheduling.
    3. An integrated abstraction to handle validation.
-3. The (independent) [scala.meta](http://scalamacros.org/news/2014/07/16/roadmap-for-scala-macros.html) project aims to establish a new standard for reflection and macro programming. It will be considered for integration in the standard library once it is mature and stable.
+3. The (independent) [scala.meta](hxxp://scalamacros.org/news/2014/07/16/roadmap-for-scala-macros.html) project aims to establish a new standard for reflection and macro programming. It will be considered for integration in the standard library once it is mature and stable.
 4. As in every Scala release, we’ll also work on improving compiler performance. Since this release focuses on the library, compiler changes will be strictly internal.
 
 Backwards compatibility and migration strategy: The changes to collections might require source code to be rewritten, even though this should be rare. However, we aim to maintain source code compatibility modulo an automatic migration tool (analogous to `go fix` for Go) that can do the rewriting automatically. Ideally, that tool should be robust and expressive enough to support cross-building.
