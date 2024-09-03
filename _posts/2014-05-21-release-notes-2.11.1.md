@@ -46,7 +46,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * The compiler has been modularized internally, to separate the presentation compiler, scaladoc and the REPL. We hope this will make it easier to contribute. In this release, all of these modules are still packaged in scala-compiler.jar. We plan to ship them in separate JARs in 2.12.x.
 * Reflection, macros and quasiquotes
   * Please see [this detailed changelog](https://docs.scala-lang.org/overviews/macros/changelog211.html) that lists all significant changes and provides advice on forward and backward compatibility.
-  * See also this [summary](http://scalamacros.org/news/index.html) of the experimental side of the 2.11 development cycle.
+  * See also this [summary](hxxp://scalamacros.org/news/index.html) of the experimental side of the 2.11 development cycle.
   * [#3321](https://github.com/scala/scala/pull/3321) introduced [Sprinter](https://vladimirnik.github.io/sprinter/), a new AST pretty-printing library! Very useful for tools that deal with source code.
 * Back-end
   * The [GenBCode back-end](https://github.com/scala/scala/pull/2620) (experimental in 2.11). See [@magarciaepfl's extensive documentation](https://magarciaepfl.github.io/scala/).

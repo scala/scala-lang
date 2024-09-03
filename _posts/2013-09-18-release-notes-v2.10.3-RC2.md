@@ -112,7 +112,7 @@ Since 2.10.3 is strictly a bug-fix release, here's an overview of the most promi
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
 A lot of developers have already come up with very cool applications for them.
-Some examples can be seen at [http://scalamacros.org/news/2012/11/05/status-update.html](http://scalamacros.org/news/2012/11/05/status-update.html).
+Some examples can be seen at [hxxp://scalamacros.org/news/2012/11/05/status-update.html](hxxp://scalamacros.org/news/2012/11/05/status-update.html).
 
 
 
