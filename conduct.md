@@ -96,6 +96,7 @@ listed above,
   * Seth Tisue, Lightbend ([seth.tisue@lightbend.com](mailto:seth.tisue@lightbend.com))
   * Lukas Rytz, Lightbend ([lukas.rytz@lightbend.com](mailto:lukas.rytz@lightbend.com))
   * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
+  * Tomasz Godzik, VirtusLab ([tgodzik@virtuslab.com](mailto:tgodzik@virtuslab.com))
 
 ### Examples of unacceptable behavior
 
