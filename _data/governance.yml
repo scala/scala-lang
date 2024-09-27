@@ -13,6 +13,31 @@ introText: |
   from many companies, organizations, and individuals.
 
 cards:
+  - title: "Scala Improvement Process"
+    description: "The SIP is the primary mechanism for evolving the Scala language."
+    expandText: "Process & People"
+    anchorTarget: "gov-sip"
+    links:
+      - text: "This process aims to evolve Scala openly and collaboratively. Anyone from the community is welcome to submit a Scala Improvement Proposal (SIP), which is then reviewed and discussed by a Committee. Every month, the Committee votes on the proposals to accept in the language."
+      - name: SIP Homepage
+        url: https://docs.scala-lang.org/sips/index.html
+      - name: SIP Committee Members
+        url: https://docs.scala-lang.org/sips/process-specification.html#the-sip-committee
+      - name: SIP Process Specification
+        url: https://docs.scala-lang.org/sips/process-specification.html
+  - title: "People behind Scala"
+    description: "Responsible for managing the Scala compiler, standard library and documentation."
+    expandText: "Learn more"
+    anchorTarget: "gov-scala"
+    links:
+      - name: "Scala Core Decision Team"
+        url: "/scala-core"
+      - name: "Scala 3 Compiler team"
+        url: "/maintainers"
+      - name: "Scala 2 Compiler team"
+        url: "https://github.com/scala/scala#get-in-touch"
+      - name: "Release process"
+        url: "/releasing"
   - title: "Scala Center"
     description: "The organization fostering the Scala community, education, and OSS library/tool development."
     expandText: "Learn More"
@@ -35,57 +60,3 @@ cards:
         url: https://scala.epfl.ch/team.html
       - name: "Homepage"
         url: https://scala.epfl.ch/
-  - title: "Scala Improvement Process"
-    description: "The SIP is the primary mechanism for evolving the Scala language."
-    expandText: "Process & People"
-    anchorTarget: "gov-sip"
-    links:
-      - text: "This process aims to evolve Scala openly and collaboratively. Anyone from the community is welcome to submit a Scala Improvement Proposal (SIP), which is then reviewed and discussed by a Committee. Every month, the Committee votes on the proposals to accept in the language."
-      - name: SIP Homepage
-        url: https://docs.scala-lang.org/sips/index.html
-      - name: SIP Committee Members
-        url: https://docs.scala-lang.org/sips/process-specification.html#the-sip-committee
-      - name: SIP Process Specification
-        url: https://docs.scala-lang.org/sips/process-specification.html
-  - title: "Scala Tooling Summit"
-    description: "Bringing together maintainers of build tools, linters, IDEs, and other tools."
-    expandText: "Process & People"
-    anchorTarget: "gov-tooling"
-    links:
-      - text: "The process and people behind the Scala Tooling Summit are still TBD, however you can read below about previously held summits."
-      - fancy: "Process & People TBD"
-      - fancy: "Scala Tooling Summit of September 2023"
-      - name: "Scala Tooling Summit of March 2023"
-        url: https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html
-  - title: "Scala 2 Maintenance"
-    description: "Managing the Scala 2 compiler, standard library and documentation."
-    expandText: "Process & People"
-    anchorTarget: "gov-scala-2"
-    links:
-      - name: "Core Maintainers"
-        url: "https://github.com/scala/scala#get-in-touch"
-      - name: "Contribution Process"
-        url: "https://github.com/scala/scala#how-to-contribute"
-  - title: "Scala 3 Maintenance"
-    description: "Managing the Scala 3 compiler, standard library and documentation."
-    expandText: "Process & People"
-    anchorTarget: "gov-scala-3"
-    links:
-      - name: Core Maintainers
-        url: https://github.com/scala/scala3/blob/main/MAINTENANCE.md#compiler
-      - name: Maintenance Procedures
-        url: https://github.com/scala/scala3/blob/main/MAINTENANCE.md
-  - title: "Moderation"
-    description: "Learn how the Scala community is moderated."
-    expandText: "Process & People"
-    anchorTarget: "gov-moderation"
-    links:
-      - text: "The Scala community is moderated by the Moderation Team over all the official communication channels hosted by the Scala organisation. The moderation is governed by the Code of Conduct."
-      - name: Code of Conduct
-        url: https://www.scala-lang.org/conduct/
-      - name: "Inclusive Language Guide"
-        url: https://docs.scala-lang.org/contribute/inclusive-language-guide.html
-      - name: "Communication Channels"
-        url: https://scala-lang.org/community/
-      - name: "Moderation Team"
-        url: https://www.scala-lang.org/conduct/#contact

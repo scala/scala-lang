@@ -1,0 +1,80 @@
+---
+layout: inner-page-no-masthead
+title: Scala Core Team
+permalink: /scala-core/
+includeTOC: false
+---
+<style>
+  .scala-core {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .scala-core-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    width: 300px;
+  }
+  .scala-core-image {
+    border-radius: 50%;
+  }
+</style>
+
+<main>
+  <div class="heading-box">
+    <h2>Scala Core Team</h2>
+  </div>
+  <div>
+    <p>Scala Core is the main team responsible for decisions deciding the direction of the Scala language.</p>
+    <div class="scala-core">
+      {% for coreMember in site.data.scala-core %}
+        <div class="scala-core-item">
+            <img src="{{coreMember.image}}" alt="{{coreMember.name}}" class="core-image" style="width: 100px; height: 100px; display: inline;">
+          <p class="core-name"><b>{{coreMember.name}}</b></p>
+          <p class="core-city">
+            <i class="fa-solid fa-location-dot"></i> {{coreMember.city}}
+            {% if coreMember.discord %}
+            <br><i class="fa-brands fa-discord"></i> {{coreMember.discord}}
+            {% endif %}
+          </p>
+          <p class="core-contact">
+            {% if coreMember.email %}
+              <a href="mailto:{{coreMember.email}}">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+            {% endif %}
+            {% if coreMember.twitter %}
+              <a href="https://twitter.com/{{coreMember.twitter}}" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            {% endif %}
+            {% if coreMember.mastodon %}
+              <a href="{{coreMember.mastodon}}" target="_blank">
+                <i class="fa-brands fa-mastodon"></i>
+              </a>
+            {% endif %}
+            {% if coreMember.github %}
+              <a href="https://github.com/{{coreMember.github}}" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            {% endif %}
+            {% if coreMember.linkedin %}
+              <a href="{{coreMember.linkedin}}" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            {% endif %}
+            {% if coreMember.meetup %}
+              <a href="{{coreMember.meetup}}" target="_blank">
+                <i class="fa-brands fa-meetup"></i>
+              </a>
+            {% endif %}
+          </p>
+          <p class="core-description">{{coreMember.description}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div> 
+</main>

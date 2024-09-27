@@ -1,0 +1,104 @@
+# - name: Core Team
+#   description: Knows everything
+#   image: /resources/img/frontpage/scala-spiral.png
+#   city: Lausanne, Switzerland
+#   email: scala.center@epfl.ch
+#   twitter: scala_lang
+#   github: scala
+#   linkedin: https://www.linkedin.com/in/janedoe/
+#   mastodon: https://fosstodon.org/@janedoe
+#   meetup: https://www.meetup.com/your/url/here
+
+- name: Martin Odersky
+  description: Language Creator
+  github: odersky
+
+- name: Piotr Chabelski
+  description: Product Manager
+  github: Gedochao
+
+- name: Tomasz Godzik
+  description: VirtusLab Compiler Team Leader
+  github: tgodzik
+
+- name: Oliver Bračevac
+  description: LAMP Compiler Team Leader
+  github: bracevac
+
+- name: Dale Wijnand
+  description: Specialised Engineer (Matching), Compiler Engineer
+  github: dwijnand
+
+- name: Matt Bovel
+  description: Compiler Engineer
+  github: mbovel
+
+- name: Eugene Flesselle
+  description: Compiler Engineer
+  github: EugeneFlesselle
+
+- name: Hamza Remmal
+  description: Compiler Engineer, Infrastructure Manager
+  github: hamzaremmal
+
+- name: Yichen Xu
+  description: Compiler team member
+  github: Linyxus
+
+- name: Yaoyu Zhao
+  description: Compiler team member
+  github: noti0na1
+
+- name: Anna Herlihy
+  description: Compiler team member
+  github: aherlihy
+
+- name: Kacper Korban
+  description: Compiler engineer
+  github: KacperFKorban
+
+- name: Guillaume Martres
+  description: Compiler team member
+  github: smarter
+
+- name: Sébastien Doeraene
+  description: Compiler team member
+  github: sjrd
+
+- name: Jędrzej Rochala
+  description: Tooling Engineer
+  github: rochala
+
+- name: Katarzyna Marek
+  description: Tooling Engineer
+  github: kasiaMarek
+
+- name: Jan Chyb
+  description: Compiler Engineer
+  github: jchyb
+
+- name: Mikołaj Fornal
+  description: Compiler Engineer
+  github: Florian3k
+
+- name: Michał Pałka
+  description: Release Officer (LTS)
+  github: prolativ
+
+- name: Wojciech Mazur
+  description: Scala Native Engineer, Release Officer
+  github: WojciechMazur
+
+- name: Rikito Taniguchi
+  description: Scala Native Engineer
+  github: tanishiking
+
+- name: Dimi Racordon
+  description: Scala Native Engineer
+  github: kyouko-taiga
+
+- name: Nguyen Pham
+  description: Scala Native Engineer
+  github: natsukagami
+
+

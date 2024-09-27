@@ -1,0 +1,78 @@
+# - name: Core Team
+#   description: Knows everything
+#   image: /resources/img/frontpage/scala-spiral.png
+#   city: Lausanne, Switzerland
+#   email: scala.center@epfl.ch
+#   twitter: scala_lang
+#   github: scala
+#   linkedin: https://www.linkedin.com/in/janedoe/
+#   mastodon: https://fosstodon.org/@janedoe
+#   meetup: https://www.meetup.com/your/url/here
+
+- name: Martin Odersky
+  description: Language Creator
+  image: /scala-core/martin.jpeg
+  city: Lousanne, Switzerland
+  github: odersky
+  twitter: odersky
+  linkedin: https://www.linkedin.com/in/sethtisue/
+
+- name: Oliver Bračevac
+  description: LAMP Representative
+  image: /scala-core/oliver-bracevac.jpeg
+  city: Lousanne, Switzerland
+  github: bracevac
+  linkedin: https://www.linkedin.com/in/oliverbracevac2407/
+
+- name: Piotr Chabelski
+  description: Product Manager
+  image: /scala-core/piotr.jpg
+  city: Warsaw, Poland
+  discord: gedochao
+  github: Gedochao
+  linkedin: https://www.linkedin.com/in/piotr-ch/
+
+- name: Sébastien Doeraene
+  description: Scala Center Representative, Spec Supervisor
+  image: /scala-core/sjrd.png
+  city: Warsaw, Poland
+  discord: sjrd
+  github: sjrd
+  twitter: sjrdoeraene
+
+- name: Lukas Rytz
+  description: Lightbend Representative
+  image: /scala-core/lrytz.png
+  city: Bern, Switzerland
+  discord: lrytz
+  github: lrytz
+  linkedin: https://www.linkedin.com/in/lukas-rytz-a33267b6/
+
+- name: Tomasz Godzik
+  description: VirtusLab Representative, Coordinator 
+  image: /scala-core/tgodzik.jpg
+  city: Kraków, Poland
+  discord: tgodzik
+  github: tgodzik
+  twitter: TomekGodzik
+  mastodon: https://fosstodon.org/@tgodzik
+  linkedin: https://www.linkedin.com/in/tomasz-godzik-53300782/
+
+- name: Wojciech Mazur
+  description: Scala Native Representative, Release Officer, Community Build Maintainer 
+  image: /scala-core/wojciech-mazur.jpg
+  city: Kraków, Poland
+  discord: tgodzik
+  github: WojciechMazur
+  twitter: WojciechM_dev
+  linkedin: https://www.linkedin.com/in/wojciech-mazur-3970a8121/
+
+- name: Seth Tisue
+  description: Community Advocate
+  image: /scala-core/seth.jpg
+  city: Reno, Nevada, USA
+  discord: SethTisue
+  github: SethTisue
+  mastodon: https://fosstodon.org/@SethTisue
+  linkedin: https://www.linkedin.com/in/sethtisue/
+

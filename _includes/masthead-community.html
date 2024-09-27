@@ -1,59 +1,3 @@
-<section class="governance table-of-content">
-  <div class="wrap">
-    <div class="inner-box">
-      <div class="heading-box">
-        <h2 id="governance">Governance</h2>
-      </div>
-      <div class="community">
-        <div class="scala-items-grid">
-          <div class="items-menu">
-            {% for scalaItem in site.data.governance.cards %}
-              <!-- Show the below content only if the scalaItem.expandable either doesn't exist or is false -->
-              <div class="scala-item scala-item__governance">
-                <div class="top">
-                  <h4>{{scalaItem.title}}</h4>
-                  <p>{{scalaItem.description}}</p>
-                </div>
-                {% unless scalaItem.dontExpand %}
-                <a href="#{{scalaItem.anchorTarget}}" class="button button-more">{{scalaItem.expandText}}</a>
-                {% endunless %}
-              </div>
-              <div id="{{scalaItem.anchorTarget}}" class="items-content">
-                {% unless scalaItem.dontExpand %}
-                <div class="wrap">
-                  <a id="{{scalaItem.anchorTarget}}-close" class="items-content_close" href="#{{scalaItem.anchorTarget}}-close"><i
-                      class="fa fa-close"></i></a>
-                </div>
-                <div class="items-code">
-                  <div class="wrap">
-                    <ul class="vertical-buttons-list">
-                      {% for link in scalaItem.links %}
-                      {% if link.text %}
-                      <li>
-                        {{ link.text | markdownify }}
-                      </li>
-                      {% elsif link.fancy %}
-                      <li><div class="button button-announce">{{ link.fancy }}</div></li>
-                      {% else %}
-                      <li><a href="{{ link.url }}" class="button button-expand" target="_blank" rel="none">{{ link.name }}</a></li>
-                      {% endif %}
-                      {% endfor %}
-                    </ul>
-                  </div>
-                </div>
-                {% endunless %}
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      <div class="community">
-        <div class="summary">{{site.data.governance.introText | markdownify}}</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="table-of-content">
   <div class="wrap">
     <div class="inner-box">
@@ -92,6 +36,37 @@
     </div>
   </div>
 </section>
+
+<section class="moderation">
+  <div class="wrap">
+    <div class="inner-box">
+      <div class="heading-box">
+        <h2>Moderation</h2>
+      </div>
+      <div class="description">
+        <span>
+          The Scala community is moderated by the Moderation Team over all
+          the official communication channels hosted by the Scala
+          organisation. The moderation is governed by the Code of
+          Conduct.
+        </span>
+      </div>
+      <div class="links-list" >
+          {% for link in site.data.chats-forums.moderationLinks %}
+          <div href="#" class="links-item">
+          <a href="{{link.url}}">
+            <div class="links-card-text">
+              <h3>{{link.name}}</h3>
+            </div>
+          </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="upcoming-events">
   <div class="wrap">
     <div class="inner-box">
