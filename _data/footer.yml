@@ -19,8 +19,6 @@
 - title: Community
   class: community
   links:
-    - title: Governance
-      url: "/governance/index.html#governance"
     - title: Community
       url: "/community/"
     - title: Scala Ambassadors
@@ -43,6 +41,8 @@
 - title: Scala
   class: scala
   links:
+    - title: Governance
+      url: "/governance/index.html#governance"
     - title: Blog
       url: "/blog/"
     - title: Code of Conduct

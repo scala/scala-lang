@@ -12,7 +12,7 @@
 - name: Martin Odersky
   description: Language Creator
   image: /scala-core/martin.jpeg
-  city: Lousanne, Switzerland
+  city: Lausanne, Switzerland
   github: odersky
   twitter: odersky
   linkedin: https://www.linkedin.com/in/sethtisue/
@@ -20,7 +20,7 @@
 - name: Oliver Bračevac
   description: LAMP Representative
   image: /scala-core/oliver-bracevac.jpeg
-  city: Lousanne, Switzerland
+  city: Lausanne, Switzerland
   github: bracevac
   linkedin: https://www.linkedin.com/in/oliverbracevac2407/
 
@@ -35,7 +35,7 @@
 - name: Sébastien Doeraene
   description: Scala Center Representative, Spec Supervisor
   image: /scala-core/sjrd.png
-  city: Warsaw, Poland
+  city: Lausanne, Switzerland
   discord: sjrd
   github: sjrd
   twitter: sjrdoeraene

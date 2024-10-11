@@ -24,8 +24,6 @@ moderationLinks:
   - name: Code of Conduct
     url: https://www.scala-lang.org/conduct/
   - name: "Inclusive Language Guide"
-    url: https://docs.scala-lang.org/contribute/inclusive-language-guide.html
-  - name: "Communication Channels"
     url: https://scala-lang.org/community/
   - name: "Moderation Team"
     url: https://www.scala-lang.org/conduct/#contact
