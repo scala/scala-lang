@@ -22,11 +22,11 @@
   github: tgodzik
 
 - name: Oliver Bračevac
-  description: LAMP Compiler Team Leader
+  description: LAMP Compiler Team Leader, Specialised Engineer (CC)
   github: bracevac
 
 - name: Dale Wijnand
-  description: Specialised Engineer (Matching), Compiler Engineer
+  description: Compiler Engineer, Specialised Engineer (Matching)
   github: dwijnand
 
 - name: Matt Bovel
@@ -38,47 +38,47 @@
   github: EugeneFlesselle
 
 - name: Hamza Remmal
-  description: Compiler Engineer, Infrastructure Manager
+  description: Infrastructure Manager
   github: hamzaremmal
 
 - name: Yichen Xu
-  description: Compiler team member
+  description: Compiler Engineer
   github: Linyxus
 
 - name: Yaoyu Zhao
-  description: Compiler team member
+  description: Compiler Engineer
   github: noti0na1
 
 - name: Anna Herlihy
-  description: Compiler team member
+  description: Compiler Engineer
   github: aherlihy
 
 - name: Kacper Korban
-  description: Compiler engineer
+  description: Compiler Engineer
   github: KacperFKorban
 
 - name: Guillaume Martres
-  description: Compiler team member
+  description: Spec Supervisor
   github: smarter
 
 - name: Sébastien Doeraene
-  description: Compiler team member
+  description: Spec Supervisor, Compiler Engineer
   github: sjrd
 
 - name: Jędrzej Rochala
-  description: Tooling Engineer
+  description: Tooling Engineer, Specialised Engineer (Pres. Compiler)
   github: rochala
 
 - name: Katarzyna Marek
-  description: Tooling Engineer
+  description: Tooling Engineer, Specialised Engineer (IDE)
   github: kasiaMarek
 
 - name: Jan Chyb
-  description: Compiler Engineer
+  description: Compiler Engineer, Specialised Engineer (Macros)
   github: jchyb
 
 - name: Mikołaj Fornal
-  description: Compiler Engineer
+  description: Compiler Engineer, Specialised Engineer (Doctool)
   github: Florian3k
 
 - name: Michał Pałka
@@ -86,7 +86,7 @@
   github: prolativ
 
 - name: Wojciech Mazur
-  description: Scala Native Engineer, Release Officer
+  description: Scala Native Team Leader, Release Officer (Next)
   github: WojciechMazur
 
 - name: Rikito Taniguchi
