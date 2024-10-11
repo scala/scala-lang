@@ -16,14 +16,11 @@
       url: "/download/"
     - title: All versions
       url: "/download/all.html"
-- title: Governance
-  class: governance
-  links:
-    - title: Governance
-      url: "/governance/index.html#governance"
 - title: Community
   class: community
   links:
+    - title: Governance
+      url: "/governance/index.html#governance"
     - title: Community
       url: "/community/"
     - title: Scala Ambassadors
