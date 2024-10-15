@@ -1,17 +1,3 @@
-introText: |
-  The Scala Programming Language is an open source project, created at [EPFL](https://epfl.ch) by
-  [Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/). Decisions on major language changes are made by
-  the community through the Scala Improvement Process (SIP).
-  Scala's associated websites and user forums are managed by the [Scala Center](https://scala.epfl.ch).
-  The Scala Tooling Summit is coordinated by the Scala Center, bringing together the various teams and organizations
-  that maintain tools for Scala to collaborate and improve the tooling experience for all.
-  Recommendations for
-  the Scala Center's activities can be made by [joining its Advisory Board](https://scala.epfl.ch/corporate-membership.html).
-  Major contributions to the Scala language come from the Scala Center, [Martin's research group at EPFL](https://www.epfl.ch/labs/lamp/), and
-  the Scala teams at [Lightbend](https://www.lightbend.com) and [VirtusLab](https://virtuslab.com).
-  Contributions also come from the Scala community more broadly, with participation
-  from many companies, organizations, and individuals.
-
 cards:
   - title: "Scala Improvement Process"
     description: "The SIP is the primary mechanism for evolving the Scala language."
@@ -25,7 +11,7 @@ cards:
         url: https://docs.scala-lang.org/sips/process-specification.html#the-sip-committee
       - name: SIP Process Specification
         url: https://docs.scala-lang.org/sips/process-specification.html
-  - title: "People behind Scala"
+  - title: "Teams behind Scala"
     description: "Responsible for managing the Scala compiler, standard library and documentation."
     expandText: "Learn more"
     anchorTarget: "gov-scala"
@@ -36,10 +22,10 @@ cards:
         url: "/maintainers"
       - name: "Scala 2 Compiler team"
         url: "https://github.com/scala/scala#get-in-touch"
-      - name: "Release process"
-        url: "/releasing"
+      - name: "Development guarantees"
+        url: "/development"
   - title: "Scala Center"
-    description: "The organization fostering the Scala community, education, and OSS library/tool development."
+    description: "Scala language foundation coordinating Scala governance, community, education, and OSS library/tool development."
     expandText: "Learn More"
     anchorTarget: "gov-scala-center"
     links:
@@ -48,15 +34,13 @@ cards:
           delivers high-quality education materials.
           It fosters conversations in the community, and coordinates with various parties to unblock and improve
           the Scala ecosystem.
-          [Joining the Advisory Board](https://scala.epfl.ch/corporate-membership.html) is an effective way to
-          have your voice heard, as well as supporting the Center to achieve its goals.
-      - name: "Advisory Board Proceedings"
-        url: https://github.com/scalacenter/advisoryboard#the-scala-center-advisory-board
+          Joining the Advisory Board is an effective way to
+          participate in Scala governance, have your voice heard, as well as supporting the Center to achieve its goals.
+      - name: "Join the Scala Governance"
+        url: https://scala.epfl.ch/corporate-membership.html
       - name: "5 Year Impact Report"
         url: https://scala.epfl.ch/records/first-five-years/
-      - name: "2023 Roadmap"
-        url: https://www.scala-lang.org/blog/2023/01/31/scala-center-2023-roadmap.html
-      - name: Team
-        url: https://scala.epfl.ch/team.html
+      - name: "2024 Roadmap"
+        url: https://www.scala-lang.org/blog/2024/02/06/scala-center-2024-roadmap.html
       - name: "Homepage"
         url: https://scala.epfl.ch/

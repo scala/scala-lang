@@ -1,7 +1,7 @@
 ---
 layout: inner-page-no-masthead
 title: Scala 3 release process
-permalink: /releasing/
+permalink: /development/
 includeTOC: true
 ---
 
