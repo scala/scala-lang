@@ -11,7 +11,7 @@
 
 - name: Martin Odersky
   description: Language Creator
-  image: /scala-core/martin.jpeg
+  image: /scala-core/martin.png
   city: Lausanne, Switzerland
   github: odersky
   twitter: odersky

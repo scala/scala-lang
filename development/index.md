@@ -1,94 +1,249 @@
 ---
 layout: inner-page-no-masthead
-title: Scala 3 release process
+title: Scala development guarantees
 permalink: /development/
 includeTOC: true
 ---
 
-# Scala 3 Development
+## The TL;DR
+
+1. There are 2 distribution lines of Scala 3: **Scala Next** and **Scala LTS**.
+2. The **Scala Next** line is the **default** to be used by most users,
+   containing the latest features, bug fixes and improvements.
+3. The **Scala LTS** line is advised to be used for publishing **libraries**.
+   (Some especially conservative users might also choose it over Scala Next.)
+4. Bug fixes and usability improvements from the Scala Next line are regularly
+   backported to the currently supported LTS lines.
+5. Scala minor releases (3.x) are backwards compatible, meaning libraries built
+   with older versions can be consumed by newer versions. Patch releases (3.5.x)
+   are backwards and forwards compatible.
+6. Thus, existing source code continues to compile when upgrading to a new
+   version, except for rare situations when a bugfix requires breaking source
+   compatibility.
+
+## Contribute to Scala
+
+Scala is and always has been an open source effort. It is a collaboration
+between multiple entities (business, nonprofits, individuals) and relies on
+community contributions as much as the work of its maintainers.
+
+If you are interested to contribute code, be sure to start by visiting
+[the GitHub repository of the compiler](https://github.com/scala/scala3) (or the
+[standard library](https://github.com/scala/scala/tree/2.13.x/src/library)).
+
+If you’d like for your organization to work with us more closely, please contact
+scala.center (at) epfl.ch which will be able to arrange the possible
+collaboration.
 
 ## Semantic Versioning of the Language
 
-Scala 3 follows Semantic Versioning. Each version number has a well-defined meaning, following the major.minor.patch scheme, with each component representing a subset of our compatibility guarantees.
-Patch versions
-Also known as maintenance releases.
+Scala 3 follows [Semantic Versioning](https://semver.org/). Each version number
+has a well-defined meaning, following the `major.minor.patch` scheme, with each
+component representing a subset of our compatibility guarantees.
 
-Good examples would be 3.3.3 -> 3.3.4 or 3.5.0 -> 3.5.1, only increasing the patch component of the version scheme. They are generally focused on bug fixes, but may also include usability improvements (such as better error messages), performance enhancements or internal changes (refactorings, optimizations). 
+### Patch versions
 
-Patch versions are guaranteed to be both forward and backward compatible. This means a library compiled with Scala 3.3.3 can be consumed by a project built with Scala 3.3.0 and vice versa.
+`Patch` versions increase the patch component of the version scheme. Examples
+are 3.3.3 \-\> 3.3.4 or 3.5.0 \-\> 3.5.1.
 
-## Minor versions
+These are generally focused on bug fixes. They may also include usability
+improvements (such as better error messages), performance enhancements or
+internal changes (refactorings, optimizations). Patch releases can also add
+experimental features intended for trial and evaluation by interested users;
+such features are never enabled by default, only via explicit opt-in.
 
-Also known as feature releases.
+**Patch versions are guaranteed to be both forward and backward compatible.**
+This means a library compiled with, for example, Scala 3.3.3 can be consumed by
+a project built with any other past for future Scala 3.3.x version, and vice
+versa.
 
-Good examples would be 3.3.4 -> 3.4.0 or 3.4.3 -> 3.5.0, increasing the minor component of the version scheme. They are generally focused on features, with the limitation that any new feature has to be backward-compatible. Those features could be bigger usability improvements (like adding linting in 3.3.0), loosening implementation restrictions (like allowing exports in extension clauses in 3.2.0), adding new tools (like adding Scala CLI as the new scala runner in 3.5.0) and others. However, those changes are never intended to change the existing semantics of working code.
+### Minor versions
 
-Also, do note that changes requiring the SIP Committee approval usually have to be delivered in the next minor version.
+Minor versions increase the `minor` component of the version scheme. Examples
+are 3.3.4 \-\> 3.4.0 or 3.4.3 \-\> 3.5.0.
 
-Minor versions are guaranteed to be backwards compatible. This means that code compiled with Scala 3.2.x can still be used in Scala 3.3.x, 3.4.x, 3.5.x or any other future version, indefinitely. However, the opposite is not true. Code compiled with Scala 3.5.x cannot be used in a Scala 3.4.x project. Allowing this would not be considered safe. For instance, the Scala 3.5 code might want to access a library method which did not exist in 3.4.
+They are generally focused on features, with the limitation that any new feature
+has to be backward compatible. Those features could be bigger usability
+improvements (like adding linting in 3.3.0), loosening implementation
+restrictions (like allowing exports in extension clauses in 3.2.0), adding new
+tools (like adding Scala CLI as the new `scala` runner in 3.5.0) and others. We
+take utmost care to not change the existing semantics of any working code
+whenever it is avoidable. Some changes might be possible, but if detected they
+will be announced properly beforehand.
 
-## Major versions
+Language changes requiring the SIP Committee approval usually have to be
+delivered in a minor version.
 
-Only major versions could, theoretically, introduce both backwards and forwards incompatible changes. However, we do not plan to increase a new major version of Scala in the foreseeable future. That means no Scala 4 on the horizon, period. For all intents and purposes, the major version of the language remains final and immutable until announced otherwise.
+**Minor versions are guaranteed to be backwards TASTy and binary compatible.**
+This means that code compiled with Scala 3.2.x can still be used in Scala 3.3.x,
+3.4.x, 3.5.x or any other future version, indefinitely. However, the opposite is
+not true. Code compiled with Scala 3.5.x cannot be used in a Scala 3.4.x
+project. Allowing this would not be considered safe. For instance, the Scala 3.5
+code might want to access a library method which did not exist in 3.4.
 
-## Output compatibility
+### Major versions
 
-The guarantees described above are called output compatibility. They encompass binary compatibility (compatibility on the level of generated bytecode) and TASTy compatibility (the possibility for the newer versions to read well-defined and structured metadata describing the original source code necessary for correct linking). 
+**Only major versions could, theoretically, introduce both backwards and
+forwards incompatible changes.** However, **we do not plan to increase a new
+major version of Scala in the currently foreseeable future**. There is currently
+no Scala 4 on the horizon. The major version of the language remains final and
+immutable until announced otherwise.
 
-Some languages, like Rust, require users to compile the sources of all their dependencies. Scala is different. Developers can get already compiled artifacts from a repository like Maven Central. Thanks to the output compatibility guarantees, a library published there can be used by projects compiled with any future version of Scala, without the need for cross-publishing or any other intervention from the maintainers.
+### Output compatibility
 
-This also works nicely when a critical security problem is found in some older but still used version of the library that was compiled with a not-up-to-date version of the language. Assuming following the recommended practice of bumping the minor compiler version only in minor releases of the library, the maintainers can fix the bug easily without needing to bump the compiler version and then release the fix in a patch release. All projects that depend on a problematic version of the library can switch to the newly-released patch, no matter what version of the language they are using.
+The guarantees described above are called output compatibility. They encompass
+binary compatibility (compatibility on the level of generated bytecode) and
+TASTy compatibility (the possibility for the newer versions to read well-defined
+and structured metadata describing the original source code necessary for
+correct linking).
 
-## Source compatibility
+Thanks to the output compatibility guarantees, a published library can be used
+with any future version of Scala, without the need for cross-publishing or any
+other intervention from the maintainers.
 
-Apart from output compatibility, a concept of source compatibility exists.  It means that a developer can change the version of the compiler they are using without making any changes in the source code and still receive the same resulting program. As with output compatibility, we (slightly counterintuitively) can say that two versions of the compiler are source backward compatible if the code created for an older version works with a newer version. If the change is the reverse, and the developer is downgrading the compiler, we call it forward compatibility.
+This is especially useful when a critical security problem is found in an older
+version of the library that was compiled with an older version of the language.
+If the maintainers follow the standard practice of only bumping the minor
+compiler version in minor library releases, they can fix the bug without needing
+to bump the compiler version and then release the fix in a patch release. All
+projects that depend on a problematic version of the library can switch to the
+newly-released patch, no matter what version of the language they are using.
 
-In the compiler team, we are paying attention to source compatibility and ensuring that code that is compiling today should compile with the future versions of the compiler. We cannot always guarantee that. Like any other compiler and any other piece of software, the Scala compiler can have bugs. In very rare cases, the fact that some code is considered correct may be a result of a bug in the compiler. Fixing this bug may result in code that was previously compiling, stopping doing so in newer versions. Moreover, sometimes fixing the compiler bug affecting one snippet of code may slightly change the type inference in another snippet, causing problems, like failures related to implicit search.
+### Source compatibility
 
-There is a multi-layer safety net to catch source incompatibilities early so they do not make it into the stable versions of the compiler.
+Source compatibility means that a developer can change the version of the
+compiler they are using without making any changes in the source code and still
+receive a program that will function in the same way. As with output
+compatibility, we (slightly counterintuitively) can say that two versions of the
+compiler are backward source compatible if the code created for an older version
+works with a newer version. The reverse, when the developer is downgrading the
+compiler, is called forward compatibility.
 
-The first layer of such a net is an extensive set of compiler tests. Every time a new bug is found, at least one new snippet is added. Failure of any of those snippets on any of the pull requests means that the PR cannot be merged.
+In the compiler team, we are paying attention to source compatibility and
+ensuring that code compiling today should compile with future versions of the
+compiler. We cannot always guarantee that. Like any other compiler and any other
+piece of software, the Scala compiler can have bugs. In very rare cases, the
+fact that some code is considered correct may be the result of a bug in the
+compiler. Fixing this bug may result in code that was previously compiling to
+stop doing so in a newer version. Moreover, sometimes improving type inference
+for some code snippets may degrade it for another snippet, causing problems like
+failures related to implicit search.
 
-The second layer is a compilation of fixed versions of over 70 popular Scala libraries. Failures of compilation or tests in any of those libraries also block the merging of the PR.
+There is a multi-layer safety net to catch source incompatibilities early so
+they do not make it into the stable versions of the compiler.
 
-The last layer is the Open Community Build, introduced around the release of Scala 3.2. It runs weekly, building the entire Scala 3 open-source ecosystem. It tries to build every single open-source project ever released for Scala 3. Every failure here is investigated and treated as a high-priority bug.
+The first layer is obviously an extensive
+[set of compiler tests](https://github.com/scala/scala3/tree/main/tests) run on
+each PR.
 
-Additionally, we run it for every RC version, as well as some Pull Requests deemed to require closer scrutiny. We treat regressions detected by the Open Community Build very seriously. If necessary, we may prolong the RC period and delay a release to give ourselves time to fix a particularly troublesome regression.
+The second layer is an integration test that builds over 70 popular Scala
+libraries. Failures of compilation or tests in any of those libraries also block
+merging of the PR.
 
-Scala LTS & Scala Next
-Scala 3 is currently developed in 2 parallel lines, code-named Scala LTS (for Long Term Support) and Scala Next.
+The last layer is the **Open Community Build**, introduced around the release of
+Scala 3.2. It runs weekly, building the entire Scala 3 open-source ecosystem.
+Every failure here is investigated and treated as a high-priority bug. For more
+information on how to add your project to the community build consult
+[the README](https://github.com/VirtusLab/community-build3)
 
-## Scala LTS
+We also run the Open Community Build for every RC version, as well as some Pull
+Requests deemed to require closer scrutiny. We analyze all regressions detected
+by the Open Community Build to ascertain their impact on the ecosystem. If
+necessary, we may prolong the RC period and delay a release to give ourselves
+time to fix a particularly troublesome regression.
 
-Scala LTS is the preferred target version for libraries. Within the lifetime of a given Scala LTS line, a particular minor version series is treated as the LTS. Currently, it is the Scala 3.3.x series.
+## Scala Distributions
 
-It is possible to use a library if it was published with the same minor version (x in 3.x.y) or lower than the one you use. There are 2 main reasons for preferring LTS for use with libraries: extended support and source compatibility guarantees. Any other minor Scala version receives patches with bug fixes and small usability improvements only until the release of the next minor version. For example, Scala 3.1 will forever remain on the 3.1.3 patch, and all later fixes were available only in Scala 3.2.0 and later versions. The LTS line is unique due to the extended support. Each LTS line receives patches with bug fixes and usability improvements ported from the newer versions. Those patches are guaranteed until at least a year after the release of the next LTS line. Moreover, we ensure that there will be no new LTS line for at least two years after the first release of the current LTS line. This means guaranteed patch releases for a period longer than three years after the initial release.
+Scala 3 is currently developed in 2 parallel **distributions** (or **lines**),
+code-named **Scala LTS** (for **Long Term Support**) and **Scala Next**.
 
-## Scala Next
+### Scala LTS
 
-Scala Next is the default line that is actively developed by the compiler team, and is the preferred target version for all non-library projects. This means that if the API of your project is not meant to be consumed by other Scala projects, it is advised to use Scala Next rather than LTS.
+**Scala LTS** is a designated **minor** version that is the **preferred target
+version for libraries**. Currently, it is the Scala 3.3.x series.
 
-Do not be confused; there is nothing experimental or unstable about Scala Next. We keep all the compatibility guarantees and maintenance practices that have been well-established since Scala 3.0.0. 
+It is possible to use a library if it was published with the same minor version
+(x in 3.x.y) or lower than the one you use. There are 2 main reasons for
+preferring LTS for building libraries: extended support and source compatibility
+guarantees. Any other minor Scala version receives patches with bug fixes and
+small usability improvements only until the release of the next minor version.
+For example, Scala 3.1 will forever remain on the 3.1.3 patch, and all later
+fixes were available only in Scala 3.2.0 and later versions. The LTS line
+receives patches with bug fixes and usability improvements ported from the newer
+versions. **Those patches are guaranteed until at least a year after the release
+of the next LTS line**. Moreover, **we ensure that there will be no new LTS line
+for at least two years after the first release of the current LTS line**. This
+means guaranteed patch releases for a period longer than three years after the
+initial release.
 
-Every significant new feature requires a two-phase approval from the Scala Improvement Committee: first after the design phase and second after the experimentation and initial user feedback. We also keep track of all potential source-compatibility breakages using the Open Community Build. The only difference is that with Scala Next, we prioritize speed of delivery over full source compatibility. 
+### Scala Next
 
-This means that while there should not be any significant intended incompatibilities, small changes in type inference resulting from fixing bugs may occur. If the incompatibility is minor and the result of a newly introduced bug, we will prioritize fixing it before the next release candidate, but we will usually not delay the release. In the unlikely case where the incompatibility would be major, we may end up reverting changes which caused it (possibly along with a seemingly unrelated feature or bug fix) and only bring them back in a future version, when we have a proper fix. Most users will never experience any source compatibility breakages if they stay on stable Scala Next releases.
+**Scala Next** is the default line that the compiler team actively develops. It
+is the **preferred target version for all non-library projects**. If the API of
+your project is not meant to be consumed by other Scala projects, we advise to
+use Scala Next rather than LTS.
+
+Do not be confused; **there is nothing experimental or unstable about Scala
+Next**. The difference to LTS is that Scala Next is the target for language
+changes (after approval by the SIP Committee), larger new features and
+occasional bugfixes that may affect source compatibility. All of our testing and
+maintenance practices apply in the same way to Scala Next and LTS.
 
 ## Schedule, Iterations and Roadmap
 
-Scala 3 is developed in iterations, according to a roadmap as designed by its Product Manager and governed by the Scala Core Team. Each iteration is tied to a given Scala Next release.
+Scala 3 is developed in iterations, according to a roadmap as designed by its
+Product Manager and governed by the Scala Core Team \[governance link\]. Each
+iteration is tied to a given Scala Next release.
 
-The length of an iteration is normally between 6 and 12 weeks, with 6 weeks being treated as the default for cycles devoted to a patch version and 8 weeks for a minor version. The length of a given iteration and its type (minor or patch) is decided by the Scala Core Team at the end of the previous one, taking into account the current team capacity, recent developments and the contents of the roadmap. Under normal circumstances, there should be at least 2 patch versions between subsequent minor versions in the Scala Next line. This means that after Scala 3.5.0 is released, it is unlikely for us to work on Scala 3.6.0 before 3.5.1 and 3.5.2 are out. The aim is to hold to a schedule which allows for delivering stable and timely releases, with a fresh batch of enhancements and fixes for the Scala Next and LTS lines, while holding technical debt at a healthy minimum.
+The Scala Compiler Team aims for a set schedule. However, we work on a
+best-effort basis, delays and extensions may happen. The Scala Core Team
+reserves the right to readjust the schedule as deemed necessary, with the
+language users’ best interest in mind.
 
-At the end of each iteration, an RC (Release Candidate) version is published, available for the Scala ecosystem to be tested. If no regressions have been detected in a given RC for at least a week, it is deemed suitable to be re-released as the new stable version. If any regressions were detected, the Scala Compiler Team makes plans for fixing them with due priority and a new RC is released when they are ready. This continues until either an RC is ready to become a stable version regression-less, or until the end of the subsequent iteration, at which time the most stable (usually the last) RC becomes a stable version. We do not work on release candidates for a given version indefinitely, but any known problems in a given release are identified and listed in the release notes.
- 
-Even though the Scala Compiler Team holds itself accountable to a set schedule, we work on a best-effort basis, delays and extensions may happen. The Scala Core Team reserves itself the right to readjust the schedule as deemed necessary, with the language users’ best interest in mind.
+### Scala Next Iterations
 
-## Key takeaways
+The length of an iteration is normally between 6 and 12 weeks. We default to 6
+weeks for cycles devoted to a patch version and 8 weeks for a minor version. The
+length of a given iteration and its type (minor or patch) is decided by the
+Scala Core Team at the end of the previous one. It takes into account the
+current team capacity, recent developments and the contents of the roadmap.
+Under normal circumstances, there should be at least 2 patch versions between
+consecutive minor versions in the Scala Next line. For example, after the
+release of Scala 3.5.0, we are unlikely to work on Scala 3.6.0 before 3.5.1 and
+3.5.2 are out. The aim is to hold to a schedule which allows for delivering
+stable and timely releases, with a fresh batch of enhancements and fixes for the
+Scala Next and LTS lines, while holding technical debt at a healthy minimum.
 
-- The Scala Next line is the default to be used by most users, containing the recent features, bug fixes and improvements.
-- The Scala LTS line is advised to be used for libraries.
-- On average, a new Scala Next line patch or minor version is expected to get released every 6 to 12 weeks.
-- A release candidate of the subsequent Scala Next version should be released along with it, or shortly thereafter.
-- Subsequent release candidates are being released until all known bugs are fixed or until the end of the current iteration, whichever comes first, at which point the best release candidates get re-released as a stable version.
-- Bug fixes and usability improvements from the Scala Next line are regularly backported to the currently supported LTS lines.
+### Scala Next Releases
+
+At the end of each Scala Next iteration, an RC (Release Candidate) version is
+published for the community to test and the next development iteration starts.
+If no regressions are detected in a given RC for **at least a week**, it is
+deemed suitable to be re-released as the new stable version.
+
+Otherwise, a new RC is released until either no more regressions are known, or
+the iteration for the next version ends. At this point, the most stable RC is
+released and remaining problems are listed in the release notes. Of course we
+will not release a final version if it has critical known issues.
+
+As a result, we expect to release **a new Scala Next stable version every 6 to
+12 weeks**.
+
+### Scala LTS Iterations
+
+There are no dedicated iterations for working on Scala LTS. Scala LTS is tied to
+Scala Next iterations instead. Any relevant bug fixes introduced in Scala Next
+are successively backported to the LTS. Each PR merged that is included in the
+current Next version will be analyzed for compatibility and merged if possible
+to the current LTS branch.
+
+### Scala LTS Releases
+
+We expect to publish a release candidate of a new Scala LTS patch version around
+the time Scala Next `3.<current-minor>.2` is out. Then (with possible
+intermediary release candidates) that should turn into a stable LTS release
+around the time Scala Next `3.<next-minor>.0` is out. For example, we would
+release Scala LTS 3.3.6-RC1 together with Scala Next 3.6.2, and then we should
+have a stable Scala LTS 3.3.6 by the time Scala Next 3.7.0 is out.
+
+As a result, we expect to release **a new Scala LTS patch every 3 to 6 months**.
