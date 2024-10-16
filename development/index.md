@@ -35,7 +35,7 @@ If you’d like for your organization to work with us more closely, please conta
 scala.center (at) epfl.ch which will be able to arrange the possible
 collaboration.
 
-## Semantic Versioning of the Language
+## Semantic versioning of the language
 
 Scala 3 follows [Semantic Versioning](https://semver.org/). Each version number
 has a well-defined meaning, following the `major.minor.patch` scheme, with each
@@ -152,7 +152,7 @@ by the Open Community Build to ascertain their impact on the ecosystem. If
 necessary, we may prolong the RC period and delay a release to give ourselves
 time to fix a particularly troublesome regression.
 
-## Scala Distributions
+## Scala distributions
 
 Scala 3 is currently developed in 2 parallel **distributions** (or **lines**),
 code-named **Scala LTS** (for **Long Term Support**) and **Scala Next**.
@@ -194,7 +194,7 @@ changes (after approval by the SIP Committee), larger new features and
 occasional bugfixes that may affect source compatibility. All of our testing and
 maintenance practices apply in the same way to Scala Next and LTS.
 
-## Schedule, Iterations and Roadmap
+## Schedule, iterations and roadmap
 
 Scala 3 is developed in iterations, according to a roadmap as designed by its
 Product Manager and governed by the [Scala Core Team](/scala-core). Each
@@ -205,7 +205,7 @@ best-effort basis, delays and extensions may happen. The Scala Core Team
 reserves the right to readjust the schedule as deemed necessary, with the
 language users’ best interest in mind.
 
-### Scala Next Iterations
+### Scala Next iterations
 
 The length of an iteration is normally between 6 and 12 weeks. We default to 6
 weeks for cycles devoted to a patch version and 8 weeks for a minor version. The
@@ -219,7 +219,7 @@ release of Scala 3.5.0, we are unlikely to work on Scala 3.6.0 before 3.5.1 and
 stable and timely releases, with a fresh batch of enhancements and fixes for the
 Scala Next and LTS lines, while holding technical debt at a healthy minimum.
 
-### Scala Next Releases
+### Scala Next releases
 
 At the end of each Scala Next iteration, an RC (Release Candidate) version is
 published for the community to test and the next development iteration starts.
@@ -234,7 +234,7 @@ will not release a final version if it has critical known issues.
 As a result, we expect to release **a new Scala Next stable version every 6 to
 12 weeks**.
 
-### Scala LTS Iterations
+### Scala LTS iterations
 
 There are no dedicated iterations for working on Scala LTS. Scala LTS is tied to
 Scala Next iterations instead. Any relevant bug fixes introduced in Scala Next
@@ -242,7 +242,7 @@ are successively backported to the LTS. Each PR merged that is included in the
 current Next version will be analyzed for compatibility and merged if possible
 to the current LTS branch.
 
-### Scala LTS Releases
+### Scala LTS releases
 
 We expect to publish a release candidate of a new Scala LTS patch version around
 the time Scala Next `3.<current-minor>.2` is out. Then (with possible

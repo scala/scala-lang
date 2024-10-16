@@ -2,6 +2,7 @@
 category: announcement
 permalink: /news/new-governance
 title: "Scala: a mature open-source project"
+by: Scala Core Team
 ---
 
 In over twenty years of developing Scala, we’ve learned that good project governance is the key to the maturity, resilience, and health of any open-source project, even more so for a project of the size and complexity of Scala. We learned that governance is iterative and ever-evolving, to follow the project’s development needs and adjust to them. We also learned that transparency is very important to build trust and stability. These are the guiding principles for the Scala teams at LAMP, Lightbend, Scala Center, and VirtusLab, [the organisations that drive Scala development](/governance/#whos-behind-scala).
@@ -61,7 +62,7 @@ You can now find a list of Scala maintainers and their roles on the updated Gove
 
 Following the major Scala 3 release in May 2021, the Scala teams faced many challenges. To name a few: Would Scala 3 succeed? How would the ecosystem migrate, and how long would it take? Who would provide and coordinate the resources necessary to operate and advance this big project? At the time of the release, the pool of Scala 3 experts was quite small and existing governance was not adapted to absorb the big change. With significant engineering and time commitment, financial investment and expertise from companies backing Scala, incredible support from the community contributors, and various community driven Scala organisations, we have overcome these challenges and delivered a stable and reliable Scala project.
 
-## Acknowledgments
+## Acknowledgements
 
 We have the pleasure to recognise those organisations and individuals who have significantly contributed to bringing the Scala project to this stage.
 
