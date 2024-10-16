@@ -134,12 +134,10 @@ Scala-oriented Discord servers operated by the community include:
 English-language Scala rooms on other chat platforms besides Discord include:
 
 - **[scala_en](https://t.me/scala_en)** (Telegram)
-- **[scala/scala](https://gitter.im/scala/scala)** (Gitter)
 - **[#scala](https://libera.chat)** (IRC)
 
 International chat rooms are available as well:
 
-- **[scala/cn](https://gitter.im/scala/cn)** (Gitter)
 - **[Scala Fr](https://discord.gg/w6VUKrrZK3)** (Discord)
 - **[scala/it](https://discord.gg/8wadTgcZVt)** (Discord)
 - **[Scala Jp](https://discord.gg/SaXM8s4Cyr)** (Discord)

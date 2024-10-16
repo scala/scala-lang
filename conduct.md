@@ -72,7 +72,7 @@ The enforcement policies listed above apply to all official Scala channels,
 including:
 
 * Discourse forums
-* chat rooms on Discord and Gitter
+* chat rooms on Discord
 * GitHub repositories under the scala, scalacenter, and lampepfl organizations
 * Scala Center events and venues
 
