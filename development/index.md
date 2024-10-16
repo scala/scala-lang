@@ -27,7 +27,7 @@ Scala is and always has been an open source effort. It is a collaboration
 between multiple entities (business, nonprofits, individuals) and relies on
 community contributions as much as the work of its maintainers.
 
-If you are interested to contribute code, be sure to start by visiting
+If you are interested in contributing to Scala, be sure to start by visiting
 [the GitHub repository of the compiler](https://github.com/scala/scala3) (or the
 [standard library](https://github.com/scala/scala/tree/2.13.x/src/library)).
 
