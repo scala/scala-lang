@@ -192,7 +192,7 @@ maintenance practices apply in the same way to Scala Next and LTS.
 ## Schedule, Iterations and Roadmap
 
 Scala 3 is developed in iterations, according to a roadmap as designed by its
-Product Manager and governed by the Scala Core Team \[governance link\]. Each
+Product Manager and governed by the [Scala Core Team](/scala-core). Each
 iteration is tied to a given Scala Next release.
 
 The Scala Compiler Team aims for a set schedule. However, we work on a

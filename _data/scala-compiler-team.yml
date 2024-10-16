@@ -1,28 +1,21 @@
-# - name: Core Team
+# - name: John Doe
 #   description: Knows everything
-#   image: /resources/img/frontpage/scala-spiral.png
-#   city: Lausanne, Switzerland
-#   email: scala.center@epfl.ch
-#   twitter: scala_lang
 #   github: scala
-#   linkedin: https://www.linkedin.com/in/janedoe/
-#   mastodon: https://fosstodon.org/@janedoe
-#   meetup: https://www.meetup.com/your/url/here
 
 - name: Martin Odersky
   description: Language Creator
   github: odersky
 
 - name: Piotr Chabelski
-  description: Product Manager
+  description: Product Manager, Specialised Engineer (Scala CLI)
   github: Gedochao
 
 - name: Tomasz Godzik
-  description: VirtusLab Compiler Team Leader
+  description: VirtusLab Compiler Team Leader, Specialised Engineer (IDE)
   github: tgodzik
 
 - name: Oliver Bračevac
-  description: LAMP Compiler Team Leader, Specialised Engineer (CC)
+  description: LAMP Compiler Team Leader, Specialised Engineer (Capture Checking)
   github: bracevac
 
 - name: Dale Wijnand
@@ -38,7 +31,7 @@
   github: EugeneFlesselle
 
 - name: Hamza Remmal
-  description: Infrastructure Manager
+  description: Infrastructure Maintainer
   github: hamzaremmal
 
 - name: Yichen Xu

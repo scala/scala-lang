@@ -7,7 +7,6 @@
 #   github: scala
 #   linkedin: https://www.linkedin.com/in/janedoe/
 #   mastodon: https://fosstodon.org/@janedoe
-#   meetup: https://www.meetup.com/your/url/here
 
 - name: Martin Odersky
   description: Language Creator
@@ -15,7 +14,7 @@
   city: Lausanne, Switzerland
   github: odersky
   twitter: odersky
-  linkedin: https://www.linkedin.com/in/sethtisue/
+  linkedin: https://www.linkedin.com/in/odersky/
 
 - name: Oliver Bračevac
   description: LAMP Representative
