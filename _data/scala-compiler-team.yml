@@ -5,93 +5,115 @@
 - name: Martin Odersky
   description: Language Creator
   github: odersky
+  org: EPFL
 
 - name: Piotr Chabelski
   description: Product Manager, Specialised Engineer (Scala CLI)
   github: Gedochao
+  org: VirtusLab
 
 - name: Tomasz Godzik
   description: VirtusLab Compiler Team Leader, Specialised Engineer (IDE)
   github: tgodzik
+  org: VirtusLab
 
 - name: Oliver Bračevac
-  description: LAMP Compiler Team Leader, Specialised Engineer (Capture Checking)
+  description:
+    LAMP Compiler Team Leader, Specialised Engineer (Capture Checking)
   github: bracevac
+  org: EPFL
 
 - name: Dale Wijnand
   description: Compiler Engineer, Specialised Engineer (Matching)
   github: dwijnand
+  org: Lightbend
 
 - name: Matt Bovel
   description: Compiler Engineer
   github: mbovel
+  org: EPFL
 
 - name: Eugene Flesselle
   description: Compiler Engineer
   github: EugeneFlesselle
+  org: EPFL
 
 - name: Hamza Remmal
   description: Compiler Engineer, Infrastructure Maintainer
   github: hamzaremmal
+  org: EPFL
 
 - name: Yichen Xu
   description: Compiler Engineer
   github: Linyxus
+  org: EPFL
 
 - name: Yaoyu Zhao
   description: Compiler Engineer
   github: noti0na1
+  org: EPFL
 
 - name: Anna Herlihy
   description: Compiler Engineer
   github: aherlihy
+  org: EPFL
 
 - name: Kacper Korban
   description: Compiler Engineer
   github: KacperFKorban
+  org: EPFL
 
 - name: Guillaume Martres
   description: Spec Supervisor
   github: smarter
+  org: Scala Center
 
 - name: Sébastien Doeraene
   description: Spec Supervisor, Compiler Engineer
   github: sjrd
+  org: Scala Center
 
 - name: Jędrzej Rochala
   description: Tooling Engineer, Specialised Engineer (Pres. Compiler)
   github: rochala
+  org: VirtusLab
 
 - name: Katarzyna Marek
   description: Tooling Engineer, Specialised Engineer (IDE)
   github: kasiaMarek
+  org: VirtusLab
 
 - name: Jan Chyb
   description: Compiler Engineer, Specialised Engineer (Macros)
   github: jchyb
+  org: VirtusLab
 
 - name: Mikołaj Fornal
   description: Compiler Engineer, Specialised Engineer (Doctool)
   github: Florian3k
+  org: VirtusLab
 
 - name: Michał Pałka
   description: Release Officer (LTS)
   github: prolativ
+  org: VirtusLab
 
 - name: Wojciech Mazur
   description: Scala Native Team Leader, Release Officer (Next)
   github: WojciechMazur
+  org: VirtusLab
 
 - name: Rikito Taniguchi
   description: Scala Native Engineer
   github: tanishiking
+  org: VirtusLab
 
 - name: Dimi Racordon
   description: Scala Native Engineer
   github: kyouko-taiga
+  org: EPFL
 
 - name: Nguyen Pham
   description: Scala Native Engineer
   github: natsukagami
-
-
+  org: EPFL

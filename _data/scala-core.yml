@@ -15,6 +15,7 @@
   github: odersky
   twitter: odersky
   linkedin: https://www.linkedin.com/in/odersky/
+  org: EPFL
 
 - name: Oliver Bračevac
   description: LAMP Representative
@@ -22,6 +23,7 @@
   city: Lausanne, Switzerland
   github: bracevac
   linkedin: https://www.linkedin.com/in/oliverbracevac2407/
+  org: EPFL
 
 - name: Piotr Chabelski
   description: Product Manager
@@ -30,6 +32,7 @@
   discord: gedochao
   github: Gedochao
   linkedin: https://www.linkedin.com/in/piotr-ch/
+  org: VirtusLab
 
 - name: Sébastien Doeraene
   description: Scala Center Representative, Spec Supervisor
@@ -38,6 +41,7 @@
   discord: sjrd
   github: sjrd
   twitter: sjrdoeraene
+  org: Scala Center
 
 - name: Lukas Rytz
   description: Lightbend Representative
@@ -46,6 +50,7 @@
   discord: lrytz
   github: lrytz
   linkedin: https://www.linkedin.com/in/lukas-rytz-a33267b6/
+  org: Lightbend
 
 - name: Tomasz Godzik
   description: VirtusLab Representative, Coordinator 
@@ -56,6 +61,7 @@
   twitter: TomekGodzik
   mastodon: https://fosstodon.org/@tgodzik
   linkedin: https://www.linkedin.com/in/tomasz-godzik-53300782/
+  org: VirtusLab
 
 - name: Wojciech Mazur
   description: Scala Native Representative, Release Officer, Community Build Maintainer 
@@ -65,6 +71,7 @@
   github: WojciechMazur
   twitter: WojciechM_dev
   linkedin: https://www.linkedin.com/in/wojciech-mazur-3970a8121/
+  org: VirtusLab
 
 - name: Seth Tisue
   description: Community Advocate
@@ -74,4 +81,5 @@
   github: SethTisue
   mastodon: https://fosstodon.org/@SethTisue
   linkedin: https://www.linkedin.com/in/sethtisue/
+  org: Lightbend
 
