@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/new-governance
+permalink: /news/new-governance.html
 title: "Scala: a mature open-source project"
 by: Scala Core Team
 ---
