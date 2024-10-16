@@ -157,6 +157,11 @@ time to fix a particularly troublesome regression.
 Scala 3 is currently developed in 2 parallel **distributions** (or **lines**),
 code-named **Scala LTS** (for **Long Term Support**) and **Scala Next**.
 
+More information about why we decided on this specific release cadence can be
+found in an
+[earlier blogpost](/blog/2022/08/17/long-term-compatibility-plans.html), but the
+relevant information can be found below.
+
 ### Scala LTS
 
 **Scala LTS** is a designated **minor** version that is the **preferred target
