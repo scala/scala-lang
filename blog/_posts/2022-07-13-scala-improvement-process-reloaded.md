@@ -21,17 +21,14 @@ It is our pleasure to present the new SIP Committee members:
 
 * Björn Regnell, Lund University
 * Chris Andrews, Morgan Stanley
-* Gabriele Petronella, buildo
 * Guillaume Martres, EPFL
-* Iulian Dragos, Databricks
+* Haoyi Li, Databricks
 * Lukas Rytz, Lightbend
 * Martin Odersky, EPFL
 * Oron Port, DFiant Inc
-* Paweł Marks, VirtusLab
-* Raúl Raja, 47 Degrees
 * Sébastien Doeraene, Scala Center
 
-The committee chair is Julien Richard-Foy, Scala Center.
+The committee chair is Dimi Racordon, Scala Center.
 
 The members are invited to serve 1- or 2-year terms. Thereafter, they may be re-invited, but not for more than 2 full terms. Afterwards, they would need to have a break before they can be re-invited again. We hope to have many great Scala contributors being a part of the SIP committee in the upcoming years, to share their experience and enrich the Scala language in the process.
 
