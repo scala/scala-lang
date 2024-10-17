@@ -11,29 +11,6 @@ local user groups, and conferences.
 The community is also the source of many libraries, tools, and other resources
 around Scala.
 
-## Ambassadors
-
-Ambassadors are key figures in the Scala community: speakers, organizers,
-teachers, content creators, open source maintainers, and so on. They are often
-present at community events, or open to answering questions.
-
-To learn more and discover who is an ambassador near you: see the dedicated
-[Scala Ambassadors](../ambassadors/) page.
-
-## Scala Tooling Summit
-
-Scala tooling summit is an event with a purpose of bringing together maintainers
-of build tools, linters, IDEs, and other tools. These summits are usually held
-alongside major Scala conferences. During the event they discuss ongoing
-problems within the tooling ecosystem and work towards solving them.
-
-Previously held tooling summits:
-
-- Scala Tooling Summit of September 2023
-- [Scala Tooling Summit of March 2023](https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html)
-
-The announcement of each new tooling summit will be public.
-
 ## Forums
 
 The Scala Center operates the following Discourse forums:
@@ -70,33 +47,16 @@ Lightbend operates a Discourse forum as well:
 - **[discuss.lightbend.com](https://discuss.lightbend.com)**: For discussion of
   reactive architectures, Akka, Play, and related tooling including sbt.
 
-## Scala Jobs
-
-Employers and job seekers can find each other in the #jobs channel of the
-[Scala Discord](https://discord.gg/scala).
-
-Job postings are not allowed in our other forums and chat rooms.
-
-The [Scala Reddit](https://www.reddit.com/r/scala/) has a monthly "who is
-hiring?" thread.
-
-## Scala LinkedIn Group
-
-The [Scala Enthusiasts Group](https://www.linkedin.com/groups/746917/) is a
-place for Scala professionals to share information and come into contact with
-people and companies using Scala.
-
-## Chat Rooms
+## Chat rooms
 
 Our main chat platform is Discord, and the main Scala server is:
 
 - **[Scala](https://discord.com/invite/scala)**
-  - the #scala-users channel is especially beginner-friendly
-  - the #scala-contributors channel is about moving Scala forward
-  - the #jobs channel is the only place we allow job postings
-  - ask on #admin if you have questions or suggestions about the server itself
-  - there are many other channels, including #spark, #scala-js, and
-    #scala-native
+    - the #scala-users channel is especially beginner-friendly
+    - the #scala-contributors channel is about moving Scala forward
+    - the #jobs channel is the only place we allow job postings
+    - ask on #admin if you have questions or suggestions about the server itself
+    - there are many other channels, including #spark, #scala-js, and #scala-native
 
 The server is covered by the [Scala Code of Conduct](../conduct.html).
 
@@ -149,41 +109,18 @@ International chat rooms are available as well:
 Note also that Stack Overflow offers languages other than English, for example
 [the scala tag on es.stackoverflow.com](https://es.stackoverflow.com/questions/tagged/scala).
 
-## Reporting issues
+## Events
 
-If you're having a problem with Scala, your first line of defense is our forums
-and chat rooms. The unexpected behavior you're seeing might not be a bug.
-Especially if you're new to the language, it's best to discuss the matter with
-more experienced users before filing a bug report.
-
-That said, bugs do occur and bug reports are valuable. You can report bugs here:
-
-Scala 2 compiler, standard library, and language spec:
-
-- [scala/bug](https://github.com/scala/bug/issues)
-
-Scala 3 compiler and standard library additions:
-
-- [scala/scala3](https://github.com/scala/scala3/issues)
-
-Don't forget to search past issues first to see if the issue has already been
-reported.
-
-## Security
-
-To receive security announcements or contact us about security issues, see our
-[security policy](/security/).
-
-## User Groups
-
-Most local Scala user groups are listed on
-[Meetup](https://www.meetup.com/topics/scala/).
-
-## Conferences
+### Conferences
 
 See our [events page](/events/).
 
-## ScalaBridge
+### Meetups
+
+Some local Scala user groups are listed on
+[Meetup](https://www.meetup.com/topics/scala/).
+
+### ScalaBridge
 
 Volunteers organizing free introductory Scala programming workshops for
 underrepresented groups, to improve diversity in the Scala community.
@@ -191,6 +128,51 @@ underrepresented groups, to improve diversity in the Scala community.
 - [ScalaBridge site](https://scalabridge.org)
 - [How to organize](https://scalabridge.org/organizers): advice and help on how
   to bring ScalaBridge to your city
+
+### Tooling summits
+
+Scala tooling summit is an event with a purpose of bringing together maintainers
+of build tools, linters, IDEs, and other tools. These summits are usually held
+alongside major Scala conferences. During the event they discuss ongoing
+problems within the tooling ecosystem and work towards solving them.
+
+Previously held tooling summits:
+
+- Scala Tooling Summit of September 2023
+- [Scala Tooling Summit of March 2023](https://www.scala-lang.org/blog/2023/04/11/march-2023-scala-tooling-summit.html)
+
+The announcement of each new tooling summit will be public.
+
+## The Scala Center
+
+[The Scala Center](https://scala.epfl.ch/) is an open source foundation that
+brings together a coalition of individuals and organizations working together
+to contribute to Scala. See the [Center's FAQ](https://scala.epfl.ch/faqs.html).
+
+## Ambassadors
+
+Ambassadors are key figures in the Scala community: speakers, organizers,
+teachers, content creators, open source maintainers, and so on. They are often
+present at community events, or open to answering questions.
+
+To learn more and discover who is an ambassador near you: see the dedicated
+[Scala Ambassadors](../ambassadors/) page.
+
+## Scala jobs
+
+Employers and job seekers can find each other in the #jobs channel of the
+[Scala Discord](https://discord.com/invite/scala).
+
+Job postings are not allowed in our other forums and chat rooms.
+
+The [Scala Reddit](https://www.reddit.com/r/scala/) has a monthly "who is
+hiring?" thread.
+
+## Scala on LinkedIn
+
+The [Scala Enthusiasts Group](https://www.linkedin.com/groups/746917/) is a
+place for Scala professionals to share information and come into contact with
+people and companies using Scala.
 
 ## Stack Overflow
 
@@ -200,10 +182,10 @@ very popular programmer Q&A site.
 
 ## Reddit
 
-There is a large and active Scala community on the
+There is a large and active Scala community on the community-managed
 [/r/Scala](https://reddit.com/r/scala) subreddit.
 
-## Sources of Scala News
+## Sources of Scala news
 
 Official:
 
@@ -227,7 +209,7 @@ Many Scala users are active on Twitter for sharing Scala-related news items and
 opinions. Ask your Scala friends who they follow on Twitter (besides
 [@scala_lang](https://twitter.com/scala_lang)!).
 
-## Community-Powered Learning Resources
+## Learning resources
 
 - [Scala Exercises](http://scala-exercises.org/)
 - [Scala School](https://twitter.github.io/scala_school/)
@@ -237,7 +219,7 @@ opinions. Ask your Scala friends who they follow on Twitter (besides
 - [Functional programming course/exercises](https://github.com/dehun/learn-fp)
 - [Best Scala Tutorials On YouTube](https://www.nbshare.io/blog/best-scala-tutorials-on-youtube/)
 
-## Community Libraries and Tools
+## Libraries and tools
 
 Finding libraries:
 
@@ -263,12 +245,32 @@ Staying current:
   native execution
 - [Scala on Android](https://scala-android.org) community site
 
-## The Scala Center
+The [Scala Discord](https://discord.com/invite/scala) has #scala-js, #scala-native, and #scala-android channels.
 
-- [The Scala Center](https://scala.epfl.ch/) is an open source foundation that
-  brings together a coalition of individuals and organizations working together
-  to contribute to Scala.
-  - [Scala Center FAQ](https://scala.epfl.ch/faqs.html)
+## Security
+
+To receive security announcements or contact us about security issues, see our
+[security policy](/security/).
+
+## Reporting issues
+
+If you're having a problem with Scala, your first line of defense is our forums
+and chat rooms. The unexpected behavior you're seeing might not be a bug.
+Especially if you're new to the language, it's best to discuss the matter with
+more experienced users before filing a bug report.
+
+That said, bugs do occur and bug reports are valuable. You can report bugs here:
+
+Scala 2 compiler, standard library, and language spec:
+
+- [scala/bug](https://github.com/scala/bug/issues)
+
+Scala 3 compiler and standard library additions:
+
+- [scala/scala3](https://github.com/scala/scala3/issues)
+
+Don't forget to search past issues first to see if the issue has already been
+reported.
 
 ## Scala open source
 
