@@ -239,6 +239,10 @@ opinions. Ask your Scala friends who they follow on Twitter (besides
 
 ## Community Libraries and Tools
 
+Integrated Development Environments:
+
+* [Scala IDEs](https://docs.scala-lang.org/getting-started/scala-ides.html) discusses main Scala IDEs
+  
 Finding libraries:
 
 - [Scaladex](https://index.scala-lang.org), maintained by the Scala Center, is
