@@ -42,7 +42,7 @@
   class: scala
   links:
     - title: Governance
-      url: "/governance/index.html#governance"
+      url: "/governance/"
     - title: Blog
       url: "/blog/"
     - title: Code of Conduct
