@@ -56,7 +56,7 @@ One big hurdle in the Scala 3 journey was the backlog of issues on the Scala rep
 
 ### Easier access to Scala maintainers
 
-You can now find a list of Scala maintainers and their roles on the updated Governance page, under [“Teams Behind Scala”](/governance/#gov-scala). We invite Scala users and contributors to tag maintainers on Scala related issues, according to their expertise and role, to further help responsiveness. Also, we encourage everyone to follow and engage with maintainers on official [GitHub discussions](https://github.com/scala/scala3/discussions), [Users](https://users.scala-lang.org/) and [Contributors](https://contributors.scala-lang.org/) forums, [Discord chat rooms](https://discord.com/invite/scala).
+You can now find lists of Scala maintainers and their roles on the new [Governance page](/governance). We invite Scala users and contributors to tag maintainers on Scala related issues, according to their expertise and role, to further help responsiveness. Also, we encourage everyone to follow and engage with maintainers on official [GitHub discussions](https://github.com/scala/scala3/discussions), [Users](https://users.scala-lang.org/) and [Contributors](https://contributors.scala-lang.org/) forums, [Discord chat rooms](https://discord.com/invite/scala).
 
 ### Conclusion
 
