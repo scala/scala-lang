@@ -10,7 +10,7 @@ includeTOC: true
 Scala was created by [Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/)
 at [EPFL](https://epfl.ch).
 
-The Scala language and associated websites are cooperative projects of these
+The Scala language and associated websites are cooperative projects of the following
 four groups:
 
 * the [Scala Center](https://scala.epfl.ch) at [EPFL](https://epfl.ch)
