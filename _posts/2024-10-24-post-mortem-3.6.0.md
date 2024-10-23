@@ -11,12 +11,12 @@ Central_
 
 On Friday, 18th of October 2024, during the publication process of **3.6.0-RC1**
 an incident occurred that ended up in publishing Scala **3.6.0** instead. After
-an internal investigation, we pinpointed the incident to be of technical nature.
+an internal investigation, we pinpointed the incident to be technical in nature.
 
-Within one hour of catching the issue, the
-[Scala Core Team](https://scala-lang.org/scala-core/) mitigated the problem and
-started the Scala **3.6.1** release – that is to be treated as RC, which is
-available since Saturday 19th October. Scala **3.6.0** was abandoned and
+Within one hour of the issue being reported, the
+[Scala Core Team](https://scala-lang.org/scala-core/) mitigated the problem by
+starting the Scala **3.6.1** release – which is to be treated like an RC; it has
+been available since Saturday 19th October. Scala **3.6.0** was abandoned and
 promptly announced to the public as broken.
 
 We apologize to the Scala users for any inconvenience it might have caused. We
@@ -40,23 +40,22 @@ sometime in the second half of November.
 ## How does it affect users?
 
 Scala 3.6.0 is a broken release \- it should never be used by users of Scala.
-The results of the compilation might not be consumed by stable versions of the
+The results of the compilation might not be consumable by stable versions of the
 compiler or TASTy based tooling.  
 Tooling that automatically uses the latest available version of Scala will use
 the hot-fix release 3.6.1, which should be treated as a Release Candidate
 version. We don’t encourage most users to upgrade yet, unless for testing
-purposes. Instead, use the stable 3.5.2 and wait with upgrades until 3.6.2 is
-out.
+purposes. Instead, use the stable 3.5.2 and wait to upgrade until 3.6.2 is out.
 
 ## What happened?
 
-During the publication of Scala **3.6.0-RC1** to the Sonatype Maven
-repository**,** a mistake occurred and we released **a misconfigured 3.6.0**
-instead. As a result, the released version of the compiler produces TASTy files
-in the experimental version that cannot be consumed by stable TASTy consumers
-(e.g. the Scala compiler, tasty-query, Scaladoc). Setting the TASTy version to
-an experimental one is a standard procedure when releasing a new release
-candidate of a minor version of Scala 3\.
+During the publication of Scala **3.6.0-RC1** to the Sonatype Maven repository,
+a mistake occurred and we released **a misconfigured 3.6.0** instead. As a
+result, the released version of the compiler produces TASTy files in the
+experimental version that cannot be consumed by stable TASTy consumers (e.g. the
+Scala compiler, tasty-query, Scaladoc). Setting the TASTy version to an
+experimental one is a standard procedure when releasing a new release candidate
+of a minor version of Scala 3.
 
 ## What immediate steps were taken?
 
@@ -90,7 +89,7 @@ libraries produced by Scala 3.6.1 or later.
 We decided to publish Scala 3.6.1 as a follow-up ASAP so that the most recent
 version doesn’t include the experimental TASTy flag nor RC settings. With 3.6.1
 we ensured tooling will, at the very least, refer to a Scala version that
-actually could be considered stable.
+actually could be considered reasonably stable.
 
 We don’t yet encourage users to upgrade to Scala 3.6.1 on their own, except for
 testing purposes. Users should wait with upgrades until a future announcement.
@@ -135,6 +134,6 @@ the following processes as preventative measures:
 - Additional, manual approval of published artifacts to the staging Maven
   repository.
 - We will be mindful of the day of week for releases, and avoid Thursdays and
-  Fridays at all costs.
+  Fridays.
 - We will ensure that every change associated with the release process is well
   documented internally.
