@@ -125,9 +125,7 @@ Some local Scala user groups are listed on
 Volunteers organizing free introductory Scala programming workshops for
 underrepresented groups, to improve diversity in the Scala community.
 
-- [ScalaBridge site](https://scalabridge.org)
-- [How to organize](https://scalabridge.org/organizers): advice and help on how
-  to bring ScalaBridge to your city
+- [London chapter](https://www.scalabridgelondon.org)
 
 ### Tooling summits
 
