@@ -108,7 +108,7 @@ The following modules have been removed from the Scala 2.12 distribution:
   We recommend [Akka actors](https://akka.io/) instead.
 * Akka actors.
   The Scala distribution and the `scala-library-all` dependency no longer include Akka actors.
-  To use Akka, [add it as a dependency](https://doc.akka.io/docs/akka/2.4.0/intro/getting-started.html).
+  To use Akka, add it as a dependency.
 * Continuations plugin.
   ([Community maintainers sought](https://github.com/scala/scala-continuations).)
 
