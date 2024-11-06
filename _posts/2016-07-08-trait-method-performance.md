@@ -541,7 +541,7 @@ The talk "JVM Mechanics" by Doug Hawkins was also mentioned above
 it is a great overview on the JIT, inliner and optimizer. For an overview I can also recommend a
 [longer blog post](https://middlewaresnippets.blogspot.ch/2014/11/java-virtual-machine-code-generation.html)
 by René van Wijk and a
-[shorter one](https://www.lmax.com/blog/staff-blogs/2016/03/05/observing-jvm-warm-effects/)
+[shorter one](https://technology.lmax.com/posts/observing-jvm-warm-up-effects/)
 by Mark Price focussing on the JIT compilers.
 
 The JVM has an excessive number of flags for logging and tweaking:
