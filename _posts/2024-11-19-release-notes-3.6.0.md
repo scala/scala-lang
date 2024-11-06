@@ -16,7 +16,6 @@ Besides multiple bugfixes, this release stabilises multiple experimental feature
 
 The first major feature we're going to cover is the [clause interleaving](https://docs.scala-lang.org/sips/clause-interleaving.html).
 With this change to the language, you're able to define multiple type parameter lists or place them after the first arguments list. Clause interleaving would benefit the path-dependent API creators.
-It would eliminate the need for intermediate representations introducing runtime overhead or usage of complicated polymorphic functions.
 
 ```scala
 trait Key { type Value }
@@ -57,7 +56,7 @@ extension (values: Seq[User])
     case User(name = `name`, id = userId) => userId
 ```
 
-Last, but not least, named tuples are opening a new paradigm of metaprogramming by letting you to compute structural types without need for macros!
+Last, but not least, named tuples are opening a new paradigm of metaprogramming by letting you compute structural types without need for macros!
 The `Selectable` trait now has a `Fields` type member that can be instantiated to a named tuple.
 
 ```scala
@@ -78,14 +77,14 @@ You can read more about named tuples in the [dedicated section of Scala 3 refere
 ## SIP-62 - For-Comprehension Improvements
 
 Starting with Scala 3.6.0 you can take advantage of improvements to the for-comprehesnions syntax.
-Major user-facing improvement introduced by [SIP-62](https://docs.scala-lang.org/sips/better-fors.html) is ability to start for-comprehension block with aliases:
+Major user-facing improvement introduced by [SIP-62](https://docs.scala-lang.org/sips/better-fors.html) is the ability to start a for-comprehension block with aliases:
 
 ```scala
-for {
-  a = 1
-  b <- Some(2)
-  c <- doSth(a)
-  extension (values: Seq[T]) def toSorted: Seq[T] = ???
+  for
+    a = 1
+    b <- Some(2)
+    c <- doSth(a)
+  yield b + c
 ```
 
 It also introduces changes to how your code is desugared by the compiler, leading to a more optimized code by removing some redundant calls.
@@ -95,9 +94,8 @@ It also introduces changes to how your code is desugared by the compiler, leadin
 This release stabilises the [SIP-64](https://docs.scala-lang.org/sips/sips/typeclasses-syntax.html) introduced as experimental in Scala 3.5.0. These changes provide you with the new syntax for defining type class instances.
 The goal of these changes is to simplify and narrow the syntax rules required to create a given instance. To name a few:
 
-- you can now replace the `with` keyword with `:` when defining the simple type classes,
+- you can now replace the `with` keyword with `:` when defining simple type classes,
 - context bounds can now be named and aggregated using `T : {A, B}` syntax,
-- given methods defining requring contextual arguments can now be defined and chained using value
 - conditional givens can also be defined with parameters
 - by-name givens can be defined using conditional given with empty parameters list
 
@@ -110,7 +108,7 @@ trait Order[T]:
 given Order[Int]:
   def compare(x: Int, y: Int): Int = ???
 
-// Named given using named context bound parameter
+// Named given instance using named context bound parameter
 given listOrdering: [T: Order as elementOrder] => Order[List[T]]:
   def compare(x: List[T], y: List[T]): Int = elementOrder.compare(x.head, y.head)
 
@@ -133,7 +131,7 @@ given context: () => Context = ???
 ```
 
 Other changes to type classes involve the stabilisation of context bounds for type members.
-The next mechanism allows to definition of an abstract given instance that needs to be provided by the class implementing trait that defines abstract given.
+This mechanism allows defining an abstract given instance that needs to be provided by a class implementing the trait that defines an abstract given.
 
 ```scala
 trait Collection:
@@ -155,7 +153,7 @@ _**Note**: It is important not to confuse changes under SIP-64 with the [experim
 
 ## SIP-56 Amendment: Match types extractors follow aliases and singletons
 
-Scala 3.6.0 also stabilises the improvements of match types previously available under `-language:experimental.betterMatchTypeExtractors`. These changes were amending the match type specification and adjusting the implementation of match types to resolve some of the issues reported by users. Under the new rules, it is possible to correctly resolve aliases and singleton types.
+Scala 3.6.0 also stabilises the improvements of match types previously available under `-language:experimental.betterMatchTypeExtractors`. These changes were amending the match type specification and adjusting the implementation of match types under [SIP-56](https://docs.scala-lang.org/sips/match-types-spec.html) to resolve some of the issues reported by users. Under the new rules, it is possible to correctly resolve aliases and singleton types.
 
 ```scala
 trait A:
@@ -192,7 +190,7 @@ val Some(appVersion) = config.get("appVersion").runtimeChecked
 
 Until Scala 3.6.0 context bound parameters were always desugared to `implicit` arguments, starting with 3.6.0 these would be mapped to `using` parameters instead.
 This change should not affect the majority of users, however, it can lead to differences in how implicits are resolved.
-Resolution of implicits can slightly differ depending on whether we're requesting them using `implicit` or `using` parameter, or depending on whether it was defined using `implicit` or `given` keywords. The special behaviours were introduced to a smooth migration from Scala 2 to brand new implicits resolution in Scala 3.
+Resolution of implicits can slightly differ depending on whether we're requesting them using `implicit` or `using` parameter, or depending on whether they were defined using `implicit` or `given` keywords. The special behaviours were introduced to smoothen migration from Scala 2 to brand new implicits resolution in Scala 3.
 This change might also affect some of the projects that use compiler plugins or macros to inspect the implicit argument lists of the function calls - these might require some minor fixes, eg. when filtering symbols by their flags.
 
 <!-- TODO: Create and link docs describing differences between given/implicit -->
@@ -202,9 +200,9 @@ This change might also affect some of the projects that use compiler plugins or 
 In the [Scala 3.5.0 release notes](https://scala-lang.org/blog/2024/08/22/scala-3.5.0-released.html) we've announced upcoming changes to givens, due to their peculiar problem with prioritization. Currently, the compiler always tries to select the instance with the most specific subtype of the requested type. In the future, it would change to always selecting the instance with the most general subtype that satisfies the context-bound.
 
 Starting from Scala 3.6.0, code whose behaviour can differ between new and old rules (ambiguity on new, passing on old, or vice versa) will emit warnings, but the old rules will still be applied.
-Running the compiler with `-source:3.5` will allow you to temporarily keep using the old rules; with `-source:3.7` or `-source:future` you will get to use the new scheme.
+Running the compiler with `-source:3.5` will allow you to temporarily keep using the old rules; with `-source:3.7` or `-source:future` the new scheme will be used.
 
-For the detailed motivation of changes with examples of code that will be easier to write and understand, see our recent blog post - Upcoming Changes to Givens in Scala 3.7.
+For the detailed motivation of changes with examples of code that will be easier to write and understand, see our recent blog post - [Upcoming Changes to Givens in Scala 3.7]({{ site.baseurl }}/2024/08/19/given-priority-change-3.7.html).
 
 ## Require named arguments for Java-defined annotations
 
