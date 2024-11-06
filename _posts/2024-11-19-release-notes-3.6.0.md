@@ -4,7 +4,7 @@ permalink: /news/3.6.0
 title: "Scala 3.6.0 is now available!"
 ---
 
-<!-- TODO: Headline image -->
+![Scala 3.6]({{ site.baseurl }}/resources/img/scala-3.6-launch.jpg)
 
 We're happy to announce the next minor release of Scala - 3.6.0 is finally out!
 
