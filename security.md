@@ -17,7 +17,7 @@ To set up email notifications for new security announcements, read [this post](h
 We strongly encourage reporting security issues in Scala to us privately before disclosing them in public.
 
 The email address for security related communication is `security@scala-lang.org`.
-Messages are delivered to the Scala Security Team, which includes people from EPFL, the Scala Center, VirtusLab and Lightbend.
+Messages are delivered to the Scala Security Team, which includes people from EPFL, the Scala Center, VirtusLab, and Akka.
 
 We strive to acknowledge reports within 2 business days.
 In case you don't receive a reply within a few days and would like to escalate, our advice is to ask for a contact person in a forum hosted by the Scala organization:

@@ -44,13 +44,13 @@
   org: Scala Center
 
 - name: Lukas Rytz
-  description: Lightbend Representative
+  description: Akka Representative
   image: /scala-core/lrytz.png
   city: Bern, Switzerland
   discord: lrytz
   github: lrytz
   linkedin: https://www.linkedin.com/in/lukas-rytz-a33267b6/
-  org: Lightbend
+  org: Akka
 
 - name: Tomasz Godzik
   description: VirtusLab Representative, Coordinator 
@@ -81,5 +81,4 @@
   github: SethTisue
   mastodon: https://fosstodon.org/@SethTisue
   linkedin: https://www.linkedin.com/in/sethtisue/
-  org: Lightbend
-
+  org: Akka

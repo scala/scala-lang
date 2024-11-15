@@ -13,9 +13,9 @@ maintainers:
   - name: Scala Center
     logo: /resources/img/frontpage/scalacenter-logo.png
     url: https://scala.epfl.ch/
-  - name: Lightbend
-    logo: /resources/img/frontpage/lightbend-logo.png
-    url: https://www.lightbend.com/
+  - name: Akka
+    logo: /resources/img/frontpage/akka-logo.png
+    url: https://akka.io/
   - name: VirtusLab
     logo: /resources/img/frontpage/virtuslab-logo.png
     url: https://virtuslab.com/
