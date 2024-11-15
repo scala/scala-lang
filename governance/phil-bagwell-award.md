@@ -29,7 +29,7 @@ Additionally, the candidate should have significant contributions in one or more
   The candidate should show that they are able to bring people together.
 
 Phil Bagwell is remembered for his contributions to building the Scala community.
-In [a 2012 blog post](https://www.lightbend.com/blog/rip-phil-bagwell), Prof. Martin Odersky remembers Phil and his special place in the Scala community.
+In [a 2012 blog post](https://web.archive.org/web/20160311185839/https://www.lightbend.com/blog/rip-phil-bagwell), Prof. Martin Odersky remembers Phil and his special place in the Scala community.
 This award seeks to build that which he helped start.
 
 ## Past winners
