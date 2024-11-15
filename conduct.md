@@ -93,8 +93,8 @@ listed above,
   forwards to general moderators at the Scala Center, or
 * send an e-mail to one of the following general moderators if you want to
   choose who you are talking to:
-  * Seth Tisue, Lightbend ([seth.tisue@lightbend.com](mailto:seth.tisue@lightbend.com))
-  * Lukas Rytz, Lightbend ([lukas.rytz@lightbend.com](mailto:lukas.rytz@lightbend.com))
+  * Seth Tisue, Akka ([seth.tisue@akka.io](mailto:seth.tisue@akka.io))
+  * Lukas Rytz, Akka ([lukas.rytz@akka.io](mailto:lukas.rytz@akka.io))
   * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
   * Tomasz Godzik, VirtusLab ([tgodzik@virtuslab.com](mailto:tgodzik@virtuslab.com))
 

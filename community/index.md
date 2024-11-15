@@ -42,10 +42,10 @@ syntax highlighting.
 
 These forums are covered by the [Scala Code of Conduct](../conduct.html).
 
-Lightbend operates a Discourse forum as well:
+Akka operates a Discourse forum as well:
 
-- **[discuss.lightbend.com](https://discuss.lightbend.com)**: For discussion of
-  reactive architectures, Akka, Play, and related tooling including sbt.
+- **[discuss.akka.io](https://discuss.akka.io)**: For discussion of
+  the Akka libraries, Akka SDK, and reactive architectures.
 
 ## Chat rooms
 
