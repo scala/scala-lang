@@ -24,71 +24,6 @@ trait DB {
 }
 ```
 
-## SIP-58 - Named Tuples
-
-Another stabilized feature in this release are the Named Tuples. These have been introduced as experimental in Scala 3.5.0 and allowed you to give meaningful names to tuple elements and use those names during constructing, destructuring, and pattern matching.
-
-```scala
-extension [T](seq: Seq[T])
-  def partitionBy(predicate: PartialFunction[T, Boolean]): (matching: Seq[T], unmatched: Seq[T]) =
-    seq.partition(predicate.unapply(_).isDefined)
-
-@main def onlySmallRealNumbers =
-  List(
-    (x = 1, y = 0),
-    (x = 2, y = 3),
-    (x = 0, y = 1),
-    (x = 3, y = 0),
-  ).partitionBy:
-    case (x = real, y = 0) => real < 5
-  .matching.map(_.x)
-  .foreach(println)
-```
-
-This change also introduces improvements to extractors of case classes. You can now define named extractors for a selection of fields, allowing you to unclutter your code from unused variables.
-
-```scala
-case class User(id: Int, name: String, surname: String)
-
-extension (values: Seq[User])
-  //  Collect user IDs of every entry that has the name matching argument
-  def idsWithName(name: String) = values.collect:
-    case User(name = `name`, id = userId) => userId
-```
-
-Last, but not least, named tuples are opening a new paradigm of metaprogramming by letting you compute structural types without need for macros!
-The `Selectable` trait now has a `Fields` type member that can be instantiated to a named tuple.
-
-```scala
-class QueryResult[T](rawValues: Map[String, Any]) extends Selectable:
-  type Fields = NamedTuple.Map[NamedTuple.From[T], Option]
-  def selectDynamic(fieldName: String) = rawValues.get(fieldName)
-  
-case class City(zipCode: Int, name: String)
-
-@main def Test =
-  val query: QueryResult[City] = QueryResult(Map("name" -> "Lausanne"))
-  assert(query.name.contains("Lausanne"))
-  assert(query.zipCode.isEmpty)
-```
-
-You can read more about named tuples in the [dedicated section of Scala 3 reference documentation](https://scala-lang.org/api/3.6.2/docs/docs/reference/other-new-features/named-tuples.html).
-
-## SIP-62 - For-Comprehension Improvements
-
-Starting with Scala 3.6.2 you can take advantage of improvements to the for-comprehesnions syntax.
-Major user-facing improvement introduced by [SIP-62](https://docs.scala-lang.org/sips/better-fors.html) is the ability to start a for-comprehension block with aliases:
-
-```scala
-  for
-    a = 1
-    b <- Some(2)
-    c <- doSth(a)
-  yield b + c
-```
-
-It also introduces changes to how your code is desugared by the compiler, leading to a more optimized code by removing some redundant calls.
-
 ## SIP-64 - Improve Syntax for Context Bounds and Givens
 
 This release stabilises the [SIP-64](https://docs.scala-lang.org/sips/sips/typeclasses-syntax.html) introduced as experimental in Scala 3.5.0. These changes provide you with the new syntax for defining type class instances.
@@ -170,6 +105,21 @@ type InvF[Y] = Y match
 def Test = summon[InvF[B] =:= String] // was error: selector B does not uniquely determine parameter x
 ```
 
+## Experimental SIP-62 - For-Comprehension Improvements
+
+Starting with Scala 3.6.2 you can take advantage of improvements to the for-comprehesnions syntax.
+Major user-facing improvement introduced by [SIP-62](https://docs.scala-lang.org/sips/better-fors.html) is the ability to start a for-comprehension block with aliases:
+
+```scala
+  for
+    a = 1
+    b <- Some(2)
+    c <- doSth(a)
+  yield b + c
+```
+
+It also introduces changes to how your code is desugared by the compiler, leading to a more optimized code by removing some redundant calls.
+
 ## Experimental SIP-57 - Replace non-sensical `@unchecked` annotations
 
 One of the new, experimental, features is the implementation of [SIP-57](https://docs.scala-lang.org/sips/replace-nonsensical-unchecked-annotation.html) introducing a `runtimeChecked` extension method replacing some usages of `@unchecked` annotation using a more convenient syntax. A common use case for `runtimeChecked` is to assert that a pattern will always match, either for convenience or because there is a known invariant that the types can not express.
@@ -219,6 +169,61 @@ Let's take the following example:
 Reordering the fields is binary-compatible but it might affect the meaning of `@Annotation(1)`
 Starting from Scala 3.6, named arguments are required for Java-defined annotations.
 The compiler can provide you with automatic rewrites introducing now required names, using `-source:3.6-migration, -rewrite` flags. The rewrites are done on a best-effort basis and should be inspected for correctness by the users.
+
+## Experimental SIP-58 - Named Tuples
+
+Named Tuples have been introduced as experimental in Scala 3.5.0. This feature is now ready to be tested, but is not yet stablized.
+We encourage you to try named tuples and to report your feedback [on the public forum](https://contributors.scala-lang.org/t/pre-sip-named-tuples).
+Named Tuples allow you to give meaningful names to tuple elements and use those names during constructing, destructuring, and pattern matching.
+
+```scala
+//> using options -experimental -language:experimental.namedTuples
+extension [T](seq: Seq[T])
+  def partitionBy(predicate: PartialFunction[T, Boolean]): (matching: Seq[T], unmatched: Seq[T]) =
+    seq.partition(predicate.unapply(_).isDefined)
+
+@main def onlySmallRealNumbers =
+  List(
+    (x = 1, y = 0),
+    (x = 2, y = 3),
+    (x = 0, y = 1),
+    (x = 3, y = 0),
+  ).partitionBy:
+    case (x = real, y = 0) => real < 5
+  .matching.map(_.x)
+  .foreach(println)
+```
+
+This change also introduces improvements to extractors of case classes. You can now define named extractors for a selection of fields, allowing you to unclutter your code from unused variables.
+
+```scala
+//> using options -experimental -language:experimental.namedTuples
+case class User(id: Int, name: String, surname: String)
+
+extension (values: Seq[User])
+  //  Collect user IDs of every entry that has the name matching argument
+  def idsWithName(name: String) = values.collect:
+    case User(name = `name`, id = userId) => userId
+```
+
+Last, but not least, named tuples are opening a new paradigm of metaprogramming by letting you compute structural types without need for macros!
+The `Selectable` trait now has a `Fields` type member that can be instantiated to a named tuple.
+
+```scala
+//> using options -experimental -language:experimental.namedTuples
+class QueryResult[T](rawValues: Map[String, Any]) extends Selectable:
+  type Fields = NamedTuple.Map[NamedTuple.From[T], Option]
+  def selectDynamic(fieldName: String) = rawValues.get(fieldName)
+  
+case class City(zipCode: Int, name: String)
+
+@main def Test =
+  val query: QueryResult[City] = QueryResult(Map("name" -> "Lausanne"))
+  assert(query.name.contains("Lausanne"))
+  assert(query.zipCode.isEmpty)
+```
+
+You can read more about named tuples in the [dedicated section of Scala 3 reference documentation](https://scala-lang.org/api/3.6.2/docs/docs/reference/experimental/named-tuples.html).
 
 # What’s next?
 <!-- TODO: Fill me -->
