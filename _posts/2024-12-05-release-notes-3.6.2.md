@@ -238,7 +238,12 @@ case class City(zipCode: Int, name: String)
 You can read more about named tuples in the [dedicated section of Scala 3 reference documentation](https://scala-lang.org/api/3.6.2/docs/docs/reference/experimental/named-tuples.html).
 
 # What’s next?
-<!-- TODO: Fill me -->
+
+The Scala 3.6.2 will be followed by at least 2 patch releases, during which we will focus on bug fixes and improvements to experimental features based on your feedback.
+You can expect Scala 3.6.3 to be released in the middle of January followed by 3.6.4 by the end of Q1 2025.
+In Q2 2025 we're planning a new minor release of Scala 3.7 that might bring stabilisation to some of the experimental features. We are encouraging you to test out the experimental features mentioned in this article and share your feedback with the Scala team.
+
+Currently, we are also preparing a Scala 3.3.5 LTS patch release - it would include all backportable changes introduced until Scala 3.5.2. It should be released in January 2025.
 
 # Contributors
 
