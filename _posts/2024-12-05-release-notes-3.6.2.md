@@ -20,7 +20,7 @@ We apologize to the Scala users for any inconvenience it might have caused.
 
 # What’s new in Scala 3.6?
 
-Besides multiple bugfixes, this release stabilises multiple experimental features introduced to Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new amazing possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
+Besides multiple bugfixes, this release stabilises multiple experimental features introduced to Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
 
 ## SIP-47 - Clause Interleaving
 
@@ -121,11 +121,13 @@ Starting with Scala 3.6.2 you can take advantage of improvements to the for-comp
 Major user-facing improvement introduced by [SIP-62](https://docs.scala-lang.org/sips/better-fors.html) is the ability to start a for-comprehension block with aliases:
 
 ```scala
+//> using options -experimental -language:experimental.betterFors
+@main def betterFors = 
   for
     a = 1
     b <- Some(2)
-    c <- doSth(a)
-  yield b + c
+    c <- Option.when(a < 5)(10)
+  yield b * c
 ```
 
 It also introduces changes to how your code is desugared by the compiler, leading to a more optimized code by removing some redundant calls.
