@@ -8,6 +8,16 @@ title: "Scala 3.6.2 is now available!"
 
 We're happy to announce the next minor release of Scala - 3.6.2 is finally out!
 
+# What happend to Scala 3.6.0 and 3.6.1?
+
+During the release of 3.6.0-RC1, an accident caused the publishing of artefacts versioned as 3.6.0 to the immutable Maven repository.
+To mitigate possible damage we've released a hotfix release 3.6.1 to prevent automatic tooling from using a broken version of the compiler.
+Versions 3.6.0 (a broken release) and 3.6.1 (a hotfix release) should never be used.
+The incident was described in detail at [Scala 3.6.0 Post Mortem blogpost](https://www.scala-lang.org/news/post-mortem-3.6.0.html).
+
+Scala 3.6.2 should effectively be regarded as "3.6.0" for all intents and purposes.
+We apologize to the Scala users for any inconvenience it might have caused.
+
 # What’s new in Scala 3.6?
 
 Besides multiple bugfixes, this release stabilises multiple experimental features introduced to Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new amazing possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
