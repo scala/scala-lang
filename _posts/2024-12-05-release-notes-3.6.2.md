@@ -1,14 +1,14 @@
 ---
 category: announcement
-permalink: /news/3.6.0
-title: "Scala 3.6.0 is now available!"
+permalink: /news/3.6.2
+title: "Scala 3.6.2 is now available!"
 ---
 
 ![Scala 3.6]({{ site.baseurl }}/resources/img/scala-3.6-launch.jpg)
 
-We're happy to announce the next minor release of Scala - 3.6.0 is finally out!
+We're happy to announce the next minor release of Scala - 3.6.2 is finally out!
 
-# What’s new in 3.6.0?
+# What’s new in Scala 3.6?
 
 Besides multiple bugfixes, this release stabilises multiple experimental features introduced to Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new amazing possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
 
@@ -72,11 +72,11 @@ case class City(zipCode: Int, name: String)
   assert(query.zipCode.isEmpty)
 ```
 
-You can read more about named tuples in the [dedicated section of Scala 3 reference documentation](https://scala-lang.org/api/3.6.0/docs/docs/reference/other-new-features/named-tuples.html).
+You can read more about named tuples in the [dedicated section of Scala 3 reference documentation](https://scala-lang.org/api/3.6.2/docs/docs/reference/other-new-features/named-tuples.html).
 
 ## SIP-62 - For-Comprehension Improvements
 
-Starting with Scala 3.6.0 you can take advantage of improvements to the for-comprehesnions syntax.
+Starting with Scala 3.6.2 you can take advantage of improvements to the for-comprehesnions syntax.
 Major user-facing improvement introduced by [SIP-62](https://docs.scala-lang.org/sips/better-fors.html) is the ability to start a for-comprehension block with aliases:
 
 ```scala
@@ -147,13 +147,13 @@ class Set[T] extends Collection:
   override given Order[Element] = ??? // custom implementation provided by the user
 ```
 
-See the updated [Contextual Abstractions](https://scala-lang.org/api/3.6.0/docs/docs/reference/contextual/givens.html) chapter of the Scala 3 reference guide to learn more about these changes.
+See the updated [Contextual Abstractions](https://scala-lang.org/api/3.6.2/docs/docs/reference/contextual/givens.html) chapter of the Scala 3 reference guide to learn more about these changes.
 
 _**Note**: It is important not to confuse changes under SIP-64 with the [experimental modularity improvements](https://dotty.epfl.ch/docs/reference/experimental/typeclasses.html) available under `-language:experimental.modularity` and `-source:future`. These changes are still being developed in the experimental phase and would require SIP committee acceptance before stabilisation.
 
 ## SIP-56 Amendment: Match types extractors follow aliases and singletons
 
-Scala 3.6.0 also stabilises the improvements of match types previously available under `-language:experimental.betterMatchTypeExtractors`. These changes were amending the match type specification and adjusting the implementation of match types under [SIP-56](https://docs.scala-lang.org/sips/match-types-spec.html) to resolve some of the issues reported by users. Under the new rules, it is possible to correctly resolve aliases and singleton types.
+Scala 3.6 also stabilises the improvements of match types previously available under `-language:experimental.betterMatchTypeExtractors`. These changes were amending the match type specification and adjusting the implementation of match types under [SIP-56](https://docs.scala-lang.org/sips/match-types-spec.html) to resolve some of the issues reported by users. Under the new rules, it is possible to correctly resolve aliases and singleton types.
 
 ```scala
 trait A:
@@ -188,7 +188,7 @@ val Some(appVersion) = config.get("appVersion").runtimeChecked
 
 ## Switch mapping of context bounds to using clauses
 
-Until Scala 3.6.0 context bound parameters were always desugared to `implicit` arguments, starting with 3.6.0 these would be mapped to `using` parameters instead.
+Until Scala 3.6 context bound parameters were always desugared to `implicit` arguments, starting with Scala 3.6 these would be mapped to `using` parameters instead.
 This change should not affect the majority of users, however, it can lead to differences in how implicits are resolved.
 Resolution of implicits can slightly differ depending on whether we're requesting them using `implicit` or `using` parameter, or depending on whether they were defined using `implicit` or `given` keywords. The special behaviours were introduced to smoothen migration from Scala 2 to brand new implicits resolution in Scala 3.
 This change might also affect some of the projects that use compiler plugins or macros to inspect the implicit argument lists of the function calls - these might require some minor fixes, eg. when filtering symbols by their flags.
@@ -199,7 +199,7 @@ This change might also affect some of the projects that use compiler plugins or 
 
 In the [Scala 3.5.0 release notes](https://scala-lang.org/blog/2024/08/22/scala-3.5.0-released.html) we've announced upcoming changes to givens, due to their peculiar problem with prioritization. Currently, the compiler always tries to select the instance with the most specific subtype of the requested type. In the future, it would change to always selecting the instance with the most general subtype that satisfies the context-bound.
 
-Starting from Scala 3.6.0, code whose behaviour can differ between new and old rules (ambiguity on new, passing on old, or vice versa) will emit warnings, but the old rules will still be applied.
+Starting from Scala 3.6, code whose behaviour can differ between new and old rules (ambiguity on new, passing on old, or vice versa) will emit warnings, but the old rules will still be applied.
 Running the compiler with `-source:3.5` will allow you to temporarily keep using the old rules; with `-source:3.7` or `-source:future` the new scheme will be used.
 
 For the detailed motivation of changes with examples of code that will be easier to write and understand, see our recent blog post - [Upcoming Changes to Givens in Scala 3.7]({{ site.baseurl }}/2024/08/19/given-priority-change-3.7.html).
@@ -217,7 +217,7 @@ Let's take the following example:
 ```
 
 Reordering the fields is binary-compatible but it might affect the meaning of `@Annotation(1)`
-Starting from Scala 3.6.0, named arguments are required for Java-defined annotations.
+Starting from Scala 3.6, named arguments are required for Java-defined annotations.
 The compiler can provide you with automatic rewrites introducing now required names, using `-source:3.6-migration, -rewrite` flags. The rewrites are done on a best-effort basis and should be inspected for correctness by the users.
 
 # What’s next?
@@ -227,6 +227,6 @@ The compiler can provide you with automatic rewrites introducing now required na
 
 Thank you to all the contributors who made this release possible 🎉
 
-According to git shortlog -sn --no-merges 3.5.2..3.6.0 these are:
+According to git shortlog -sn --no-merges 3.5.2..3.6.2 these are:
 
 <!-- TODO: Fill me -->
