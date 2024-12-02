@@ -17,6 +17,8 @@ This year, we invite you to join us again! We have re-opened the `#advent-of-cod
 
 Here you can discuss the puzzles, share solutions, and ask for help.
 
+The channel topic also has a link to a Scala-specific leaderboard, with a code for joining.
+
 ### Read and share solutions on our website
 
 We have also created a new section for the 2024 edition on the [Scala Center Advent of Code website](https://scalacenter.github.io/scala-advent-of-code/2024/).
