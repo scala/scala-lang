@@ -22,7 +22,7 @@ The channel topic also has a link to a Scala-specific leaderboard, with a code f
 ### Read and share solutions on our website
 
 We have also created a new section for the 2024 edition on the [Scala Center Advent of Code website](https://scalacenter.github.io/scala-advent-of-code/2024/).
-Starting December 1st, we are posting a daily article corresponding to the day’s puzzle (ending December 25th). Each article shows a sample splution and explains how it works.
+Starting December 1st, we are posting a daily article corresponding to the day’s puzzle (ending December 25th). Each article shows a sample solution and explains how it works.
 
 We want to showcase how Scala helps you write elegant solutions out-of-the-box, so we will restrict ourselves to only using the standard library.
 
