@@ -179,7 +179,31 @@ Let's take the following example:
 ```
 
 Reordering the fields is binary-compatible but it might affect the meaning of `@Annotation(1)`
-Starting from Scala 3.6, named arguments are required for Java-defined annotations.
+Starting from Scala 3.6, named arguments are required for Java-defined annotations that define multiple parameters. Java defined annotations with a single parameter named `value` can still be used anonymously.
+
+```Java
+  public @interface CanonicalAnnotation {
+    String value() default "";
+  }
+  public @interface CustomAnnotation {
+    String param() default "";
+  }
+```
+
+```Scala
+class NoExplicitNames(
+  @CanonicalAnnotation() useDefault: String,
+  @CanonicalAnnotation(value = "myValue") named: String
+  @CanonicalAnnotation("myValue") unnamed: String
+)
+
+class ExplicitNamesRequired(
+  @CustomAnnotation() useDefault: String,
+  @CustomAnnotation(param = "myParam") named: String
+  @CustomAnnotation("unnamedParam") invalid: String // error
+)
+```
+
 The compiler can provide you with automatic rewrites introducing now required names, using `-source:3.6-migration, -rewrite` flags. The rewrites are done on a best-effort basis and should be inspected for correctness by the users.
 
 ## Experimental SIP-58 - Named Tuples
