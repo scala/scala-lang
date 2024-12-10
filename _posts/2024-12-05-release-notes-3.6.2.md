@@ -79,6 +79,8 @@ Other changes to type classes involve the stabilisation of context bounds for ty
 This mechanism allows defining an abstract given instance that needs to be provided by a class implementing the trait that defines an abstract given.
 
 ```scala
+trait Order[T]
+
 trait Collection:
   // abstract member context-bound
   type Element: Order
@@ -139,6 +141,7 @@ One of the new, experimental, features is the implementation of [SIP-57](https:/
 Some typical use cases might be looking up an expected entry in a dynamically loaded dictionary-like structure:
 
 ```scala
+//> using options -experimental
 trait AppConfig:
   def get(key: String): Option[String]
 val config: AppConfig = ???
@@ -154,8 +157,6 @@ Until Scala 3.6 context bound parameters were always desugared to `implicit` arg
 This change should not affect the majority of users, however, it can lead to differences in how implicits are resolved.
 Resolution of implicits can slightly differ depending on whether we're requesting them using `implicit` or `using` parameter, or depending on whether they were defined using `implicit` or `given` keywords. The special behaviours were introduced to smoothen migration from Scala 2 to brand new implicits resolution in Scala 3.
 This change might also affect some of the projects that use compiler plugins or macros to inspect the implicit argument lists of the function calls - these might require some minor fixes, eg. when filtering symbols by their flags.
-
-<!-- TODO: Create and link docs describing differences between given/implicit -->
 
 ## Work on a better scheme for given prioritization
 
