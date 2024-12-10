@@ -187,7 +187,7 @@ Let's take the following example:
 
 Reordering the fields is binary-compatible but it might affect the meaning of `@Annotation(1)`
 Starting from Scala 3.6, named arguments are required for Java-defined annotations that define multiple parameters.
-If the Java-defined annotation contains paramter named `value` its name can be ommited only when annotation is applied using a single argument.
+If the Java-defined annotation contains parameter named `value` its name can be omitted only when annotation is applied using a single argument.
 
 ```Java
   public @interface Example {
@@ -200,7 +200,7 @@ If the Java-defined annotation contains paramter named `value` its name can be o
 ```
 
 ```Scala
-// Annotation with `value: String = "", param: String = ""` paramters
+// Annotation with `value: String = "", param: String = ""` parameters
 @Example() 
 def onlyDefaults: Unit = ()
 
