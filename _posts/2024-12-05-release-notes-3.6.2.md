@@ -186,29 +186,45 @@ Let's take the following example:
 ```
 
 Reordering the fields is binary-compatible but it might affect the meaning of `@Annotation(1)`
-Starting from Scala 3.6, named arguments are required for Java-defined annotations that define multiple parameters. Java defined annotations with a single parameter named `value` can still be used anonymously.
+Starting from Scala 3.6, named arguments are required for Java-defined annotations that define multiple parameters.
+If the Java-defined annotation contains paramter named `value` its name can be ommited only when annotation is applied using a single argument.
 
 ```Java
-  public @interface CanonicalAnnotation {
+  public @interface Example {
     String value() default "";
+    String param() default "";
   }
-  public @interface CustomAnnotation {
+  public @interface NoValueExample {
     String param() default "";
   }
 ```
 
 ```Scala
-class NoExplicitNames(
-  @CanonicalAnnotation() useDefault: String,
-  @CanonicalAnnotation(value = "myValue") named: String
-  @CanonicalAnnotation("myValue") unnamed: String
-)
+// Annotation with `value: String = "", param: String = ""` paramters
+@Example() 
+def onlyDefaults: Unit = ()
 
-class ExplicitNamesRequired(
-  @CustomAnnotation() useDefault: String,
-  @CustomAnnotation(param = "myParam") named: String
-  @CustomAnnotation("unnamedParam") invalid: String // error
-)
+@Example("param") 
+def valueWithDefaults: Unit = ()
+
+@Example(value = "ok", param = "fine")
+def multipleParams: Unit = ()
+
+@Example("a", "b") // error, both parameters should be named
+def multipleUnnamedParams: Unit = ()
+
+@Example("first", param = "second") // error, `"first"` argument should be named
+def multipleMixedParams: Unit = ()
+
+// Annotation with `param: String = ""` parameters
+@NoValueExample()
+def defaultOnly: Unit = ()
+
+@NoValueExample(param = "foo")
+def namedParam: Unit = ()
+
+@NoValueExample("foo") // error, the only parameter is not named `value`
+def invalidUnnamedParam: Unit = () 
 ```
 
 The compiler can provide you with automatic rewrites introducing now required names, using `-source:3.6-migration, -rewrite` flags. The rewrites are done on a best-effort basis and should be inspected for correctness by the users.
