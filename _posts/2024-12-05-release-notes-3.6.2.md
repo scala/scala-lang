@@ -273,6 +273,49 @@ Currently, we are also preparing a Scala 3.3.5 LTS patch release - it would incl
 
 Thank you to all the contributors who made this release possible 🎉
 
-According to git shortlog -sn --no-merges 3.5.2..3.6.2 these are:
+According to `git shortlog -sn --no-merges 3.5.2..3.6.2` these are:
 
-<!-- TODO: Fill me -->
+```
+   128  Martin Odersky
+    53  Wojciech Mazur
+    44  Dale Wijnand
+    35  Hamza REMMAL
+    33  Kacper Korban
+    31  Eugene Flesselle
+    22  Hamza Remmal
+    11  Katarzyna Marek
+    10  Matt Bovel
+     9  noti0na1
+     9  rochala
+     8  Jamie Thompson
+     8  Jan Chyb
+     7  Adrien Piquerez
+     7  Som Snytt
+     7  Sébastien Doeraene
+     7  dependabot[bot]
+     6  Yichen Xu
+     5  EnzeXing
+     5  Guillaume Martres
+     4  Fengyun Liu
+     4  kasiaMarek
+     3  Martin Duhem
+     3  Oliver Bracevac
+     3  Piotr Chabelski
+     2  Aleksander Rainko
+     2  David Hua
+     2  Florian3k
+     2  HarrisL2
+     2  Joel Wilsson
+     2  Jędrzej Rochala
+     2  Kenji Yoshida
+     1  Eugene Yokota
+     1  Kavin Satheeskumar
+     1  Lorenzo Gabriele
+     1  Michel Charpentier
+     1  Ondrej Lhotak
+     1  Raphael Jolly
+     1  Tomasz Godzik
+     1  Yuito Murase
+     1  crunchyfrog
+     1  philippus
+```
