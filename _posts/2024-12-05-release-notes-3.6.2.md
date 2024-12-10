@@ -8,7 +8,7 @@ title: "Scala 3.6.2 is now available!"
 
 We're happy to announce the next minor release of Scala - 3.6.2 is finally out!
 
-# What happend to Scala 3.6.0 and 3.6.1?
+# What happened to Scala 3.6.0 and 3.6.1?
 
 During the release of 3.6.0-RC1, an accident caused the publishing of artefacts versioned as 3.6.0 to the immutable Maven repository.
 To mitigate possible damage we've released a hotfix release 3.6.1 to prevent automatic tooling from using a broken version of the compiler.
@@ -20,7 +20,7 @@ We apologize to the Scala users for any inconvenience it might have caused.
 
 # What’s new in Scala 3.6?
 
-Besides multiple bugfixes, this release stabilises multiple experimental features introduced to Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
+Besides multiple bugfixes, this release stabilises multiple experimental features introduced to the Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
 
 ## SIP-47 - Clause Interleaving
 
@@ -117,7 +117,7 @@ def Test = summon[InvF[B] =:= String] // was error: selector B does not uniquely
 
 ## Experimental SIP-62 - For-Comprehension Improvements
 
-Starting with Scala 3.6.2 you can take advantage of improvements to the for-comprehesnions syntax.
+Starting with Scala 3.6.2 you can take advantage of improvements to the for-comprehensions syntax.  
 Major user-facing improvement introduced by [SIP-62](https://docs.scala-lang.org/sips/better-fors.html) is the ability to start a for-comprehension block with aliases:
 
 ```scala
@@ -184,7 +184,7 @@ The compiler can provide you with automatic rewrites introducing now required na
 
 ## Experimental SIP-58 - Named Tuples
 
-Named Tuples have been introduced as experimental in Scala 3.5.0. This feature is now ready to be tested, but is not yet stablized.
+Named Tuples have been introduced as experimental in Scala 3.5.0. This feature is now ready to be tested, but is not yet stabilized.
 We encourage you to try named tuples and to report your feedback [on the public forum](https://contributors.scala-lang.org/t/pre-sip-named-tuples).
 Named Tuples allow you to give meaningful names to tuple elements and use those names during constructing, destructuring, and pattern matching.
 
