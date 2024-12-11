@@ -276,7 +276,7 @@ This section answers the questions:
 * What versions of Scala 2 are maintained?
 * How long will maintenance last?
 
-## Scala 2.13 maintenance
+### Scala 2.13 maintenance
 
 Scala 2.13 maintenance is expected to continue indefinitely.
 
@@ -294,7 +294,7 @@ Most Scala 2 maintenance is done by the Scala team at [Akka](https://akka.io) (t
 
 These remarks apply to Scala 2 itself, that is, the compiler and standard library. Making effective use of Scala 2 also depends on a healthy tooling and library ecosystem. Much of that ecosystem is outside of our direct control, but we help maintainers as much as we can.
 
-## Scala 2.12 maintenance
+### Scala 2.12 maintenance
 
 Scala 2.12 will remain fundamental to the Scala ecosystem for as long as sbt 1.x (which requires 2.12) remains in wide use.
 
@@ -306,7 +306,7 @@ Therefore, there is no plan to end-of-life Scala 2.12 entirely. Maintenance will
 
 But compared to 2.13, maintenance of 2.12 is already minimal and will remain so.
 
-## Scala 2.11 status
+### Scala 2.11 status
 
 Scala 2.11 reached end-of-life in 2016.
 
