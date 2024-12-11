@@ -5,7 +5,7 @@ permalink: /development/
 includeTOC: true
 ---
 
-## The TL;DR
+## Scala 3 TL;DR
 
 1. There are 2 distribution lines of Scala 3: **Scala Next** and **Scala LTS**.
 2. The **Scala Next** line is the **default** to be used by most users,
@@ -21,6 +21,26 @@ includeTOC: true
    version, except for rare situations when a bugfix requires breaking source
    compatibility.
 
+## Scala 2 TL;DR
+
+Maintenance of Scala 2.13 will continue indefinitely.
+
+Minimal maintenance of Scala 2.12 will continue as long as
+sbt 1 remains in wide use.
+
+## The role of the Scala Center
+
+The [Scala Center](https://scala.epfl.ch) is a not-for-profit foundation that stewards the Scala programming language. The Scala Center is funded mainly by corporate sponsorships and donations. It is vital for the future of Scala to ensure the continued existence and health of the Scala Center.
+
+Companies interested in the continued maintenance of Scala 3 and Scala 2 should help to fund the Scala Center by joining the Center’s advisory board, or through direct donations.
+
+When you support the Center, make sure to keep the Center appraised of what Scala versions are of concern to your company.
+
+To learn more about supporting the Center, read this September 2023 blog post, [The Scala Center Fundraising Campaign](https://www.scala-lang.org/blog/2023/09/11/scala-center-fundraising.html).
+
+If you’d like for your organization to work with us more closely, please contact
+scala.center (at) epfl.ch to discuss possible collaboration.
+
 ## Contribute to Scala
 
 Scala is and always has been an open source effort. It is a collaboration
@@ -31,11 +51,7 @@ If you are interested in contributing to Scala, be sure to start by visiting
 [the GitHub repository of the compiler](https://github.com/scala/scala3) (or the
 [standard library](https://github.com/scala/scala/tree/2.13.x/src/library)).
 
-If you’d like for your organization to work with us more closely, please contact
-scala.center (at) epfl.ch which will be able to arrange the possible
-collaboration.
-
-## Semantic versioning of the language
+## Scala 3 semantic versioning
 
 Scala 3 follows [Semantic Versioning](https://semver.org/). Each version number
 has a well-defined meaning, following the `major.minor.patch` scheme, with each
@@ -152,7 +168,7 @@ by the Open Community Build to ascertain their impact on the ecosystem. If
 necessary, we may prolong the RC period and delay a release to give ourselves
 time to fix a particularly troublesome regression.
 
-## Scala distributions
+## Scala 3 distributions
 
 Scala 3 is currently developed in 2 parallel **distributions** (or **lines**),
 code-named **Scala LTS** (for **Long Term Support**) and **Scala Next**.
@@ -162,9 +178,9 @@ found in an
 [earlier blogpost](/blog/2022/08/17/long-term-compatibility-plans.html), but the
 relevant information can be found below.
 
-### Scala LTS
+### Scala 3 LTS
 
-**Scala LTS** is a designated **minor** version that is the **preferred target
+**Scala 3 LTS** is a designated **minor** version that is the **preferred target
 version for libraries**. Currently, it is the Scala 3.3.x series.
 
 It is possible to use a library if it was published with the same minor version
@@ -183,7 +199,7 @@ initial release.
 
 ### Scala Next
 
-**Scala Next** is the default line that the compiler team actively develops. It
+**Scala Next** is the default line that the Scala 3 compiler team actively develops. It
 is the **preferred target version for all non-library projects**. If the API of
 your project is not meant to be consumed by other Scala projects, we advise to
 use Scala Next rather than LTS.
@@ -194,7 +210,7 @@ changes (after approval by the SIP Committee), larger new features and
 occasional bugfixes that may affect source compatibility. All of our testing and
 maintenance practices apply in the same way to Scala Next and LTS.
 
-## Schedule, iterations and roadmap
+## Scala 3 schedule, iterations and roadmap
 
 Scala 3 is developed in iterations, according to a roadmap as designed by its
 Product Manager and governed by the [Scala Core Team](/scala-core). Each
@@ -252,3 +268,52 @@ release Scala LTS 3.3.6-RC1 together with Scala Next 3.6.2, and then we should
 have a stable Scala LTS 3.3.6 by the time Scala Next 3.7.0 is out.
 
 As a result, we expect to release **a new Scala LTS patch every 3 to 6 months**.
+
+## Scala 2 maintenance
+
+This section answers the questions:
+
+* What versions of Scala 2 are maintained?
+* How long will maintenance last?
+
+## Scala 2.13 maintenance
+
+Scala 2.13 maintenance is expected to continue indefinitely.
+
+"Indefinitely" means as long into the future as anyone can possibly anticipate, certainly for years to come. The Scala Center has no plan and no desire to retire the Scala 2.13 series.
+
+This means that:
+
+* Security vulnerabilities will be addressed.
+* Compatibility with new JVM versions will be ensured.
+* Interoperability with Scala 3 will continue and migration to Scala 3 will be supported.
+* Pull requests will be reviewed and, when feasible, merged.
+* Releases will continue indefinitely, typically every 3 to 6 months. (This cadence may slow down over time.)
+
+Most Scala 2 maintenance is done by the Scala team at [Akka](https://akka.io) (the company formerly known as Lightbend), in coordination with the Scala Center and the Scala 3 team.
+
+These remarks apply to Scala 2 itself, that is, the compiler and standard library. Making effective use of Scala 2 also depends on a healthy tooling and library ecosystem. Much of that ecosystem is outside of our direct control, but we help maintainers as much as we can.
+
+## Scala 2.12 maintenance
+
+Scala 2.12 will remain fundamental to the Scala ecosystem for as long as sbt 1.x (which requires 2.12) remains in wide use.
+
+Therefore, there is no plan to end-of-life Scala 2.12 entirely. Maintenance will continue, so that:
+
+* Security vulnerabilities will be addressed.
+* Compatibility with new JVM versions will be ensured.
+* Occasional releases will continue as-needed.
+
+But compared to 2.13, maintenance of 2.12 is already minimal and will remain so.
+
+## Scala 2.11 status
+
+Scala 2.11 reached end-of-life in 2016.
+
+It remains available and it is usable in some contexts, but it is no longer maintained.
+
+## Commercial support for Scala
+
+Akka offers [commercial support](https://akka.io) for Scala. The Scala team at Akka are the primary maintainers of Scala 2. They are very active in Scala 3 development as well. The Akka libraries are fully supported on both Scala 2 and Scala 3.
+
+VirtusLab offers [commercial support](https://virtuslab.com/expertise/scala/) for Scala as well. Their team manages Scala 3 releases and development. VirtusLab provides services to modernise Scala projects, including Scala 3 migration.
