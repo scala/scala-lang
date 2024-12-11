@@ -48,7 +48,7 @@ As before, Scala 2 has stable 2.13 and 2.12 distributions.
 
 ### Predictable and frequent releases
 
-The new governance model and structure improved the coordination between different teams working on Scala development and releases. We have been testing the model since February 2024 and we are confident that technical decisions around Scala releases and distributions are now synchronised and running smoothly. As a result, Scala 3 users experience [predictable, well-managed releases](/development/#schedule-iterations-and-roadmap), typically at six to twelve week intervals.
+The new governance model and structure improved the coordination between different teams working on Scala development and releases. We have been testing the model since February 2024 and we are confident that technical decisions around Scala releases and distributions are now synchronised and running smoothly. As a result, Scala 3 users experience [predictable, well-managed releases](/development/#scala-3-schedule-iterations-and-roadmap), typically at six to twelve week intervals.
 
 ### Standardised backlog management on the Scala repo
 
