@@ -188,8 +188,9 @@ There is a large and active Scala community on the community-managed
 Official:
 
 - [Blog/News Page](https://www.scala-lang.org/blog/) on this site
+- [@scala-lang](https://bsky.app/profile/scala-lang.bsky.social) on Bluesky
 - [@scala_lang](https://fosstodon.org/@scala_lang) on Mastodon
-- [@scala_lang](https://twitter.com/scala_lang) on Twitter
+- [@scala_lang](https://x.com/scala_lang) on X
 
 Community:
 
@@ -199,13 +200,12 @@ Community:
   - [blog directory](https://www.scalanews.net/Resources/Blog_Directory.html)
 - [Tooling Talks](https://www.tooling-talks.com) A series of talks about Scala
   and tooling.
-- [The Scala Logs](https://twitter.com/thescalalogs) Podcast with interviews
+- [The Scala Logs](https://x.com/thescalalogs) Podcast with interviews
   with developers, open source contributors, subject matter experts, and the
   like
 
-Many Scala users are active on Twitter for sharing Scala-related news items and
-opinions. Ask your Scala friends who they follow on Twitter (besides
-[@scala_lang](https://twitter.com/scala_lang)!).
+Many Scala users are active on social media, sharing Scala-related
+news items and opinions. Ask your Scala friends who they follow.
 
 ## Learning resources
 
@@ -222,7 +222,7 @@ opinions. Ask your Scala friends who they follow on Twitter (besides
 Integrated Development Environments:
 
 * [Scala IDEs](https://docs.scala-lang.org/getting-started/scala-ides.html) discusses main Scala IDEs
-  
+
 Finding libraries:
 
 - [Scaladex](https://index.scala-lang.org), maintained by the Scala Center, is
