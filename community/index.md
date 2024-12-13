@@ -188,7 +188,7 @@ There is a large and active Scala community on the community-managed
 Official:
 
 - [Blog/News Page](https://www.scala-lang.org/blog/) on this site
-- [@scala-lang](https://bsky.app/profile/scala-lang.bsky.social) on Bluesky
+- [@scala-lang](https://bsky.app/profile/scala-lang.org) on Bluesky
 - [@scala_lang](https://fosstodon.org/@scala_lang) on Mastodon
 - [@scala_lang](https://x.com/scala_lang) on X
 
