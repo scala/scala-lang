@@ -1,6 +1,7 @@
 # SNS URLs
 githubUrl: https://github.com/scala/scala
-twitterUrl: https://twitter.com/scala_lang
+blueskyUrl: https://bsky.app/profile/scala-lang.bsky.social
+twitterUrl: https://x.com/scala_lang
 scaladexUrl: https://scaladex.scala-lang.org
 scastieUrl: https://scastie.scala-lang.org
 courseraMoocsUrl: https://www.coursera.org/specializations/scala
