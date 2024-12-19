@@ -568,7 +568,7 @@ details of the `-XX:+PrintCompilation` output and other details of the JIT proce
 The [glossary](https://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html) on the HotSpot
 wiki contains some useful nomenclature.
 
-Finally, a [slide deck](https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf) by Paul
+Finally, a [slide deck](https://web.archive.org/web/20240819093556/https://www.cs.princeton.edu/picasso/mats/HotspotOverview.pdf) by Paul
 Hohensee that covers many details of HotSpots internals.
 
 # Discussion
