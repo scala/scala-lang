@@ -16,7 +16,7 @@ Following on from [last year's blog post](https://scala-lang.org/blog/2024/01/10
 
 At the [Scala Center](https://scala.epfl.ch), we love writing code in Scala, and we hope you do too. One of our core priorities is to _communicate excitement about Scala_, which motivates us to participate in the Advent of Code and share experiences solving problems with Scala with the wider programming community.
 
-Another key priority is to improve the _onboarding experience for newcomers_. Part of that experience comes from the first impressions someone has reading Scala code. We hope that through hosting articles on [our solutions website][sc-advent-of-code], newcomers can see that programming in Scala is an elegant way to solve problems. As a follow up, we aim to make this website more visible, or at least a selection from it, as a showcase for newcomers ("Scala by example").
+Another key priority is to improve the _onboarding experience for newcomers_. Part of that experience comes from the first impressions someone has reading Scala code. We hope that through hosting articles on [our solutions website][sc-advent-of-code], newcomers can see that programming in Scala is an elegant way to solve problems.
 
 ## Engagement from the community
 
