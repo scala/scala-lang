@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/2.13.0-RC3
+permalink: /news/2.13.0-RC3/
 title: "Scala 2.13.0-RC3 is now available!"
 ---
 Scala 2.13.0-RC3 fixes a few late-breaking bugs.

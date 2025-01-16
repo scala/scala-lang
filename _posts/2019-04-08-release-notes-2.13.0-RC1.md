@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/2.13.0-RC1
+permalink: /news/2.13.0-RC1/
 title: "Scala 2.13.0-RC1 is now available!"
 ---
 Scala 2.13.0-RC1 further refines and polishes the new collections API, among other improvements.

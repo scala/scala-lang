@@ -1,6 +1,6 @@
 ---
 post-type: announcement
-permalink: /news/2.12.3
+permalink: /news/2.12.3/
 title: "Scala 2.12.3 is now available!"
 ---
 [Scala 2.12.3](https://github.com/scala/scala/releases/tag/v2.12.3) is now available.

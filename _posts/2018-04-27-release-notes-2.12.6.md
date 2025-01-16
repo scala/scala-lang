@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/2.12.6
+permalink: /news/2.12.6/
 title: "Scala 2.12.6 is now available!"
 ---
 

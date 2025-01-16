@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/2.12.13
+permalink: /news/2.12.13/
 title: "Scala 2.12.13 is now available!"
 ---
 [Scala 2.12.13](https://github.com/scala/scala/releases/tag/v2.12.13) is now available!

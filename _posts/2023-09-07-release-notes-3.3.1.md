@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/3.3.1
+permalink: /news/3.3.1/
 title: "Scala 3.3.1 LTS is now available!"
 ---
 [Scala 3.3.1 LTS](https://github.com/scala/scala3/releases/tag/3.3.1) is now available!
