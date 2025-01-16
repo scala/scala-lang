@@ -32,7 +32,7 @@ We give a special shout-out to [Paweł Cembaluk](https://github.com/AvaPL), who 
 
 ### Explainer articles
 
-As usual, we reached out to the community to help write the daily articles that show well-coded, well-explained solutions. The community organized a posting schedule which led to 22 completed articles, plus we expect to fill in the missing three soon. Thank you to all the authors who contributed. Each article has the author's name at the top. The articles are on [our solutions website][sc-advent-of-code].
+As usual, we reached out to the community to help write the daily articles that show well-coded, well-explained solutions. The community organized a posting schedule which led to 24 completed articles. Thank you to all the authors who contributed. Each article has the author's name at the top. The articles are on [our solutions website][sc-advent-of-code].
 
 ## Summary
 
