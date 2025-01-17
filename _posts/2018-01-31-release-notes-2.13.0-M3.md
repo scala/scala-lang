@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/2.13.0-M3
+permalink: /news/2.13.0-M3/
 title: "Scala 2.13.0-M3 is now available!"
 ---
 

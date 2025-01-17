@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/3.2.2
+permalink: /news/3.2.2/
 title: "Scala 3.2.2 is now available!"
 ---
 [Scala 3.2.2](https://github.com/scala/scala3/releases/tag/3.2.2) is now available!

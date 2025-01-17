@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/3.5.1
+permalink: /news/3.5.1/
 title: "Scala 3.5.1 is now available!"
 ---
 Scala 3.5.1 is now available!

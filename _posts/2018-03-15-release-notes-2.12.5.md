@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/2.12.5
+permalink: /news/2.12.5/
 title: "Scala 2.12.5 is now available!"
 ---
 [Scala 2.12.5](https://github.com/scala/scala/releases/tag/v2.12.5) is now available.
