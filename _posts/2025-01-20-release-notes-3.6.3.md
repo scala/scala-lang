@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/3.6.3
+permalink: /news/3.6.3/
 title: "Scala 3.6.3 is now available!"
 ---
 Scala 3.6.3 is now available!
