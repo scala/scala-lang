@@ -1,6 +1,6 @@
 ---
 category: announcement
-permalink: /news/3.3.5
+permalink: /news/3.3.5/
 title: "Scala 3.3.5 is now available!"
 ---
 Scala 3.3.5 LTS is now available!
@@ -14,8 +14,8 @@ Notable changes:
 - Support for JDK 23
 - Added the `-Wall` option that enables all linting warnings
 
-Breaking changes: 
+Breaking changes:
 
-- Aligned `-Wconf` parsing order with Scala 2 semantics: `-Wconf:x,y` now means `-Wconf:x -Wconf:y`, with y overruling x, rather than the reverse (to align with Scala 3.4+ and with user intuition [#21985](https://github.com/scala/scala3/pull/21985)
+- Aligned `-Wconf` parsing order with Scala 2 semantics: `-Wconf:x,y` now means `-Wconf:x -Wconf:y`, with y overruling x, rather than the reverse to align with Scala 3.4+ and with user intuition [#21985](https://github.com/scala/scala3/pull/21985)
 
 For a full list of changes and contributor credits, please refer to the [release notes](https://github.com/scala/scala3/releases/tag/3.3.5).
