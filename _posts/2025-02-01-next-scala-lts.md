@@ -78,7 +78,10 @@ Java examples include:
   next version will require JDK 17
 - [Jetty](https://jetty.org/docs/jetty/12/index.html) requires JDK 17
 - [Logback](https://logback.qos.ch/dependencies.html) requires JDK 11
+- [JavaFX](https://gluonhq.com/products/javafx/) requires JDK 21
+- [Vaadin](https://github.com/vaadin/platform/releases/tag/24.6.0) requires JDK 17
 - [Quarkus](https://quarkus.io/blog/quarkus-3-7-released/) requires JDK 17
+- [TensorFlow](https://github.com/tensorflow/java) requires JDK 11
 
 Scala examples include:
 
