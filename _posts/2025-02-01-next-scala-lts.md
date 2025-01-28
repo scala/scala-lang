@@ -76,7 +76,9 @@ Java examples include:
   will require JDK 17
 - [Hibernate](https://hibernate.org/orm/releases/6.6/) requires JDK 11 and the
   next version will require JDK 17
+- [Jetty](https://jetty.org/docs/jetty/12/index.html) requires JDK 17
 - [Logback](https://logback.qos.ch/dependencies.html) requires JDK 11
+- [Quarkus](https://quarkus.io/blog/quarkus-3-7-released/) requires JDK 17
 
 Scala examples include:
 
