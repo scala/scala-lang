@@ -198,11 +198,7 @@ Community:
 - [This Week in Scala](https://petr-zapletal.medium.com) weekly Scala newspaper
 - [Scala News](https://www.scalanews.net) source for Scala news and blog feeds
   - [blog directory](https://www.scalanews.net/Resources/Blog_Directory.html)
-- [Tooling Talks](https://www.tooling-talks.com) A series of talks about Scala
-  and tooling.
-- [The Scala Logs](https://x.com/thescalalogs) Podcast with interviews
-  with developers, open source contributors, subject matter experts, and the
-  like
+- [Scala Space podcast](https://www.youtube.com/@scalaspace) by VirtusLab and SoftwareMill
 
 Many Scala users are active on social media, sharing Scala-related
 news items and opinions. Ask your Scala friends who they follow.
