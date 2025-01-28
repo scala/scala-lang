@@ -68,7 +68,17 @@ fixes. Staying on JDK 8 might directly impact issues within your business
 applications.
 
 Some larger projects within JVM and Scala ecosystems have already dropped JDK 8
-support in favor of JDK 11 or even 17. Some examples are:
+support in favor of JDK 11 or even 17.
+
+Java examples include:
+
+- [Spring 6](https://spring.io/blog/2022/11/16/spring-framework-6-0-goes-ga)
+  will require JDK 17
+- [Hibernate](https://hibernate.org/orm/releases/6.6/) requires JDK 11 and the
+  next version will require JDK 17
+- [Logback](https://logback.qos.ch/dependencies.html) requires JDK 11
+
+Scala examples include:
 
 - [Spark 4](https://github.com/apache/spark/pull/43005#issuecomment-1731344040)
   will require JDK 17
@@ -77,12 +87,7 @@ support in favor of JDK 11 or even 17. Some examples are:
   [will require JDK 17](https://github.com/playframework/playframework/issues/12179)
   in the next major release
 - [Akka](https://github.com/akka/akka/pull/32127) requires JDK 11
-- [Spring 6](https://spring.io/blog/2022/11/16/spring-framework-6-0-goes-ga)
-  will require JDK 17
-- [Logback](https://logback.qos.ch/dependencies.html) requires JDK 11
 - [Apache Kafka](https://kafka.apache.org/documentation/#java) requires JDK 11
-- [Hibernate](https://hibernate.org/orm/releases/6.6/) requires JDK 11 and the
-  next version will require JDK 17
 - [ZIO](https://github.com/zio/zio/pull/8434) requires JDK 11
 - [Li Haoyi's ecosystem](https://github.com/com-lihaoyi) requires JDK 11 across
   the board
