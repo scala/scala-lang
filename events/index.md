@@ -2,6 +2,7 @@
 layout: events
 title: Upcoming events
 permalink: /events/
+reversed: false
 
 # Pagination
 paginate:

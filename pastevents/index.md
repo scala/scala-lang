@@ -2,6 +2,7 @@
 layout: pastevents
 title: Past events
 permalink: /pastevents/
+reversed: true
 
 # Pagination
 paginate:
