@@ -1,39 +1,39 @@
 ---
 category: announcement
 permalink: /news/next-scala-lts.html
-title: "Next Scala 3 LTS version"
+title: "Next Scala 3 LTS version will increase minimum required JDK version"
 by: Tomasz Godzik
 ---
 
-**TLDR;**
+**TL;DR**
 
-An API used in the `lazy val` implementation will be removed in a future JDK.
-Its replacement is only available on JDK 9+. Therefore, the Scala 3 Next minors
-in 2025 Q4 and the next LTS will drop JDK 8 support.
+The Scala 3 Next minors in 2025 Q4 and the next LTS will drop JDK 8 support. We are seeking feedback on whether the new minimum JDK should be 11 or 17.
 
 ## Intro
 
 For the compiler’s second LTS version, the Scala 3 compiler team will be
-dropping support for JDK 8 and is considering which later JDK to use.
+dropping support for JDK 8 and is considering which later JDK to require —
+perhaps 11, perhaps 17.
 
 ## Immediate motivation
 
 The recent [JEP 471](https://openjdk.org/jeps/471) stated that the memory-access
-methods in sun.misc.Unsafe are scheduled for removal in a future release.
-Currently, Scala 3 uses sun.misc.Unsafe in its implementation of lazy values.
+methods in `sun.misc.Unsafe` are scheduled for removal in a future release.
+Currently, Scala 3 uses `sun.misc.Unsafe` in its implementation of lazy values.
 This was needed due to compatibility with JDK 8. In order to support JDK 25+, we
-will need to drop usage of Unsafe. We are investigating the required changes
-under [this issue](https://github.com/scala/scala3/issues/9013). It also started
-to dawn on the compiler team that we might consider stopping to support JDK 8
-altogether in a future release of Scala 3.
+will need to drop usage of `Unsafe`. We are investigating the required changes
+under [this issue](https://github.com/scala/scala3/issues/9013).
+
+It also started to dawn on the compiler team that we might consider dropping
+support for JDK 8 altogether in a future release of Scala 3.
 
 ## Long term motivation
 
 Switching to a newer version of the JDK would allow both the compiler and the
 Scala ecosystem to start using new features and standard library improvements
-brought in by JDK 9+. brought in by JDK 9+. This might include a number of JEPs,
-which the compiler team will investigate during the coming year. To check the
-current status, take a look at the issues marked with the
+brought in by JDK 9+. This might include a number of JEPs (JDK Enhancement
+Proposals), which the compiler team will investigate during the coming year. To
+check the current status, take a look at the issues marked with the
 [JEP label](https://github.com/scala/scala3/issues?q=is%3Aissue+is%3Aopen+label%3Acompat%3Ajava%3Ajep).
 
 Some of the features that might be interesting to the Scala community are:
@@ -73,13 +73,14 @@ support in favor of JDK 11 or even 17.
 Java examples include:
 
 - [Spring 6](https://spring.io/blog/2022/11/16/spring-framework-6-0-goes-ga)
-  will require JDK 17
+  requires JDK 17
 - [Hibernate](https://hibernate.org/orm/releases/6.6/) requires JDK 11 and the
   next version will require JDK 17
 - [Jetty](https://jetty.org/docs/jetty/12/index.html) requires JDK 17
 - [Logback](https://logback.qos.ch/dependencies.html) requires JDK 11
 - [JavaFX](https://gluonhq.com/products/javafx/) requires JDK 21
-- [Vaadin](https://github.com/vaadin/platform/releases/tag/24.6.0) requires JDK 17
+- [Vaadin](https://github.com/vaadin/platform/releases/tag/24.6.0) requires JDK
+  17
 - [Quarkus](https://quarkus.io/blog/quarkus-3-7-released/) requires JDK 17
 - [TensorFlow](https://github.com/tensorflow/java) requires JDK 11
 
@@ -98,15 +99,15 @@ Scala examples include:
   the board
 
 It is always possible not to update your libraries and compiler version, which
-will avoid having to switch to a newer JDK. However, it is highly discouraged,
+will avoid having to switch to a newer JDK. However, that is highly discouraged,
 as it will make you vulnerable to potential security risks.
 
 ## Plan for making the switch
 
 The current plan is to drop support of JDK 8 in one of the future minor releases
-of Scala 3 and in the next LTS. The JDK will be either 11 or 17, depending on
-the community feedback and our investigations. The current estimate for the next
-LTS is Q4 2025.
+of Scala 3 and in the next LTS. The new minimum JDK will be either 11 or 17,
+depending on the community feedback and our investigations. The current estimate
+for the next LTS is Q4 2025.
 
 One major challenge will be to preserve backward compatibility. As we change the
 encoding of `lazy val`s, we must still be able to use libraries compiled with
@@ -117,14 +118,16 @@ earlier Scala 3 versions.
 The current line of LTS under 3.3.x will be supported for at least another year
 after the release of the next LTS version. That should give you plenty of time
 to migrate. After that, no more security fixes will be available for Scala 3
-versions supporting JDK 8. If you are using Scala 3 on JDK 8, do let us know!
+versions supporting JDK 8.
 
-If it is not possible for you to switch, be sure to send us your feedback so
-that we can figure out a way to help you migrate.
+If you are using Scala 3 on JDK 8, do let us know! If it is not possible for you
+to switch, be sure to send us your feedback so that we can figure out a way to
+help you migrate.
 
 ## Discussions and further reading
 
 You can track the current work related to lazy values under
-[this issue](https://github.com/scala/scala3/issues/9013). Discussions on the
-topic of dropping JDK 8 support will soon be available on the
+[this issue](https://github.com/scala/scala3/issues/9013).
+
+Discussions on the topic of dropping JDK 8 support will soon be available on the
 [Scala contributors forum](https://contributors.scala-lang.org/)
