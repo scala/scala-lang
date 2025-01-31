@@ -7,7 +7,8 @@ by: Tomasz Godzik
 
 **TL;DR**
 
-The Scala 3 Next minors in 2025 Q4 and the next LTS will drop JDK 8 support. We are seeking feedback on whether the new minimum JDK should be 11 or 17.
+The Scala 3 Next minors in 2025 Q4 and the next LTS will drop JDK 8 support. We
+are seeking feedback on whether the new minimum JDK should be 11 or 17.
 
 ## Intro
 
@@ -129,5 +130,5 @@ help you migrate.
 You can track the current work related to lazy values under
 [this issue](https://github.com/scala/scala3/issues/9013).
 
-Discussions on the topic of dropping JDK 8 support will soon be available on the
-[Scala contributors forum](https://contributors.scala-lang.org/)
+Discussion on the topic of dropping JDK 8 support is available on the
+[Scala contributors forum](https://contributors.scala-lang.org/t/next-scala-3-lts-version-will-increase-minimum-required-jdk-version)
