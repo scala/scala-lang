@@ -1,7 +1,7 @@
 ---
 category: announcement
 permalink: /news/next-scala-lts.html
-title: "Next Scala 3 LTS version will increase minimum required JDK version"
+title: "Next Scala 3 LTS series will increase minimum required JDK version"
 by: Tomasz Godzik
 ---
 
@@ -10,22 +10,16 @@ by: Tomasz Godzik
 The Scala 3 Next minors in 2025 Q4 and the next LTS will drop JDK 8 support. We
 are seeking feedback on whether the new minimum JDK should be 11 or 17.
 
-## Intro
-
-For the compiler’s second LTS version, the Scala 3 compiler team will be
-dropping support for JDK 8 and is considering which later JDK to require —
-perhaps 11, perhaps 17.
-
 ## Immediate motivation
 
-The recent [JEP 471](https://openjdk.org/jeps/471) stated that the memory-access
-methods in `sun.misc.Unsafe` are scheduled for removal in a future release.
-Currently, Scala 3 uses `sun.misc.Unsafe` in its implementation of lazy values.
-This was needed due to compatibility with JDK 8. In order to support JDK 25+, we
-will need to drop usage of `Unsafe`. We are investigating the required changes
-under [this issue](https://github.com/scala/scala3/issues/9013).
+The memory-access methods in `sun.misc.Unsafe` are scheduled for removal in a
+future JDK, as stated in the recent [JEP 471](https://openjdk.org/jeps/471).
+Currently, Scala 3 uses `sun.misc.Unsafe` in its implementation of `lazy val`.
+In order to support JDK 25+, we will need to drop usage of `Unsafe`. We are
+investigating the required changes under
+[this issue](https://github.com/scala/scala3/issues/9013).
 
-It also started to dawn on the compiler team that we might consider dropping
+It then started to dawn on the compiler team that we might consider dropping
 support for JDK 8 altogether in a future release of Scala 3.
 
 ## Long term motivation
@@ -40,11 +34,10 @@ check the current status, take a look at the issues marked with the
 Some of the features that might be interesting to the Scala community are:
 
 - [JEP 181](https://github.com/scala/scala3/issues/22292) will allow classes
-  that are logically part of the same code entity, but which are compiled to
-  distinct class files, to access each other's private members. This is
-  especially useful for nested classes or companions. Currently, the Scala
-  compiler has to insert public bridge methods to broaden the accessibility of
-  those members.
+  that are logically connected, to access each other's private members. This
+  could be useful for representing nested classes and companion objects.
+  (Currently, the Scala compiler has to insert public bridge methods to broaden
+  the accessibility of those members.)
 - [JEP 409](https://github.com/scala/scala3/issues/22298) introduces sealed
   classes. It would allow the compiler to better represent Scala's sealed trait
   hierarchies.
@@ -60,15 +53,16 @@ authors. They currently have to take into account a large number of different
 versions, both for correctness and performance. Thus, the benefits of this
 change will be felt ecosystem-wide.
 
-JDK 8 was first published on 18th March 2014, over 10 years ago. JDKs have
-advanced greatly through that period. In order to stay competitive, using those
-advancements is a must. A lot of the existing distributions, such as
-[Oracle's one](https://www.oracle.com/java/technologies/java-se-support-roadmap.html),
+JDK 8 was first published in 2014, over 10 years ago. JDKs have advanced greatly
+since then. In order to stay competitive, using those advancements is a must. A
+lot of the existing distributions, including
+[Oracle's own](https://www.oracle.com/java/technologies/java-se-support-roadmap.html),
 have already stopped or will soon stop updating JDK 8 with security and other
-fixes. Staying on JDK 8 might directly impact issues within your business
-applications.
+fixes. It is of course possible not to update your libraries and compiler
+version, to avoid having to switch to a newer JDK. However, that is highly
+discouraged, as it will make you vulnerable to potential security risks.
 
-Some larger projects within JVM and Scala ecosystems have already dropped JDK 8
+Some larger projects in the Java and Scala ecosystems have already dropped JDK 8
 support in favor of JDK 11 or even 17.
 
 Java examples include:
@@ -99,9 +93,7 @@ Scala examples include:
 - [Li Haoyi's ecosystem](https://github.com/com-lihaoyi) requires JDK 11 across
   the board
 
-It is always possible not to update your libraries and compiler version, which
-will avoid having to switch to a newer JDK. However, that is highly discouraged,
-as it will make you vulnerable to potential security risks.
+This shows that the rest of the industry is already moving away from JDK 8.
 
 ## Plan for making the switch
 
