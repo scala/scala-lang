@@ -1,7 +1,7 @@
 ---
 layout: blog-detail
 post-type: blog
-by: Seth Tisue, Akka
+by: Seth Tisue, Akka (and Scala Core Team)
 title: "Scala 2 maintenance plans"
 ---
 
