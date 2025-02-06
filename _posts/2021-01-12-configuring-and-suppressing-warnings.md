@@ -3,7 +3,6 @@ layout: blog-detail
 post-type: blog
 by: Lukas Rytz
 title: "Configuring and suppressing warnings in Scala"
-isHighlight: true
 ---
 
 Scala 2.13.2 introduced the `-Wconf` compiler flag to globally configure reporting of warnings, and the `@nowarn` annotation to locally suppress them. This addition to Scala 2.13 proved very popular, so it was backported to 2.12 and just released in 2.12.13. Having more control over compiler warnings makes them a lot more valuable:
