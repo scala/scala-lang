@@ -1,6 +1,6 @@
 ---
 
-category: news
+category: blog
 title: "Google Summer of Code 2014"
 by: "Tobias Schlatter"
 author: "Tobias Schlatter"

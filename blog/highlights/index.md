@@ -1,14 +1,14 @@
 ---
 layout: blog-list
 title: Blog
-permalink: /blog/news/
-category: news
+permalink: /blog/highlights/
+category: highlights
 
 paginate:
   collection:   posts
   permalink:    /:num/
   title_suffix: " - :num"
-  category:     'news'
+  category:     'highlights'
   reversed:     false
   per_page:     10
 ---

@@ -1,6 +1,6 @@
 ---
 
-category: news
+category: blog
 title: "Scala Workshop (Scala2013) Student Talks to be Awarded Full ECOOP Registration!"
 ---
 

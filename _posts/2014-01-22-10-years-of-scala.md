@@ -1,6 +1,6 @@
 ---
 
-category: news
+category: blog
 title: "10 Years of Scala"
 by: "Martin Odersky"
 ---

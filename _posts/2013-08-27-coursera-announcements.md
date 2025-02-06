@@ -1,6 +1,6 @@
 ---
 
-category: news
+category: blog
 by: "Martin Odersky"
 title: "New Online Courses"
 ---

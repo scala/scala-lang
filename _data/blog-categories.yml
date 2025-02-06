@@ -1,9 +1,9 @@
 - categoryId: blog
   title: Blog
   url: /blog/posts/
-- categoryId: news
-  title: News
-  url: /blog/news/
+- categoryId: highlights
+  title: Highlights
+  url: /blog/highlights
 - categoryId: announcements
   title: Announcement
   url: /blog/announcements/
