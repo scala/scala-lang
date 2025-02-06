@@ -1,6 +1,6 @@
 ---
 
-category: news
+category: blog
 title: "Google Summer of Code 2015"
 by: "Vojin Jovanovic"
 author: "Vojin Jovanovic"

@@ -1,6 +1,6 @@
 ---
 
-category: news
+category: blog
 author: "Heather Miller"
 title: "Scala Workshop (Scala2013) Program Announced!"
 ---

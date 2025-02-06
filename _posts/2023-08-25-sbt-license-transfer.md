@@ -1,5 +1,5 @@
 ---
-category: news
+category: blog
 by: Jamie Thompson (Scala Center)
 title: Lightbend transfers ownership of sbt to the Scala Center
 ---
