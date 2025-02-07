@@ -128,7 +128,7 @@ Some local Scala user groups are listed on
  - [SF Scala](http://www.meetup.com/SF-Scala/)
  - [Scala Bay](https://www.meetup.com/scala-bay/)
 
-The [Scalendar](https://scalac.io/blog/) newsletter lists events each month.
+The [Scalendar](https://scalac.io/blog/) newsletter has a monthly issue for upcoming events.
 
 ### ScalaBridge
 
