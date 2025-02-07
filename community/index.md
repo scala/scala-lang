@@ -121,6 +121,7 @@ Some local Scala user groups are listed on
 [Meetup](https://www.meetup.com/topics/scala/).
 
  - [London Scala User Group](https://www.meetup.com/london-scala/)
+ - [Warsaw Scala Enthusiasts](https://www.meetup.com/ScalaWAW/)
  - [Kraków Scala User Group](https://www.meetup.com/Krakow-Scala-User-Group/)
  - [Wrocław Scala User Group](https://www.meetup.com/wroclaw-scala-user-group/)
 
