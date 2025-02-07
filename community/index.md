@@ -124,6 +124,9 @@ Some local Scala user groups are listed on
  - [Warsaw Scala Enthusiasts](https://www.meetup.com/ScalaWAW/)
  - [Kraków Scala User Group](https://www.meetup.com/Krakow-Scala-User-Group/)
  - [Wrocław Scala User Group](https://www.meetup.com/wroclaw-scala-user-group/)
+ - [Bay Area Scala](https://lu.ma/scala)
+ - [SF Scala](http://www.meetup.com/SF-Scala/)
+ - [Scala Bay](https://www.meetup.com/scala-bay/)
 
 ### ScalaBridge
 
