@@ -120,6 +120,10 @@ See our [events page](/events/).
 Some local Scala user groups are listed on
 [Meetup](https://www.meetup.com/topics/scala/).
 
+ - [London Scala User Group](https://www.meetup.com/london-scala/)
+ - [Kraków Scala User Group](https://www.meetup.com/Krakow-Scala-User-Group/)
+ - [Wrocław Scala User Group](https://www.meetup.com/wroclaw-scala-user-group/)
+
 ### ScalaBridge
 
 Volunteers organizing free introductory Scala programming workshops for
