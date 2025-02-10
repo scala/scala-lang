@@ -127,6 +127,8 @@ Some local Scala user groups are listed on
  - [Bay Area Scala](https://lu.ma/scala)
  - [SF Scala](http://www.meetup.com/SF-Scala/)
  - [Scala Bay](https://www.meetup.com/scala-bay/)
+ - [Atlanta Scala](https://www.meetup.com/atlanta-scala)
+ - [Dallas Scala Enthusiasts](https://www.meetup.com/dallas-scala-enthusiasts)
  - [Functional World](https://www.meetup.com/functionalworld)
 
 The [Scalendar](https://scalac.io/blog/) newsletter has a monthly issue for upcoming events.
