@@ -4,6 +4,8 @@ category: blog
 title: "Google Summer of Code 2014"
 by: "Tobias Schlatter"
 author: "Tobias Schlatter"
+redirect_from:
+  - /news/2014/02/24/scala-team-approved-to-be-gsoc-mentor-organization.html
 ---
 
 **This year the Scala team applied again for

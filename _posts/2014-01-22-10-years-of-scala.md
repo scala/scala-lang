@@ -3,6 +3,8 @@
 category: blog
 title: "10 Years of Scala"
 by: "Martin Odersky"
+redirect_from:
+  - /news/2014/01/22/10-years-of-scala.html
 ---
 The first release of Scala
 [happened ten years ago](http://article.gmane.org/gmane.comp.lang.scala/17)

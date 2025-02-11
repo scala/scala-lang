@@ -3,6 +3,8 @@
 category: blog
 by: "Martin Odersky"
 title: "New Online Courses"
+redirect_from:
+  - /news/2013/08/27/coursera-announcements.html
 ---
 
 Last year, the Scala team and I developed a massive open online course

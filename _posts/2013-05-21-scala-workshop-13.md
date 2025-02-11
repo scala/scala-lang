@@ -3,6 +3,8 @@
 category: blog
 author: "Heather Miller"
 title: "Scala Workshop (Scala2013) Program Announced!"
+redirect_from:
+  - /news/2013/05/21/scala-workshop-13.html
 ---
 The [Scala2013 Workshop Program](http://lampwww.epfl.ch/~hmiller/scala2013/program.html) is now available! We're quite excited about this year's program-- we received a record number of submissions, leading to a first-class program spanning compilation & metaprogramming, parallelism/concurrency, verification & synthesis, debugging tools and more!
  

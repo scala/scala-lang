@@ -2,6 +2,8 @@
 
 category: blog
 title: "Prof. Philip Wadler to Keynote at the Scala Workshop (Scala2013)!"
+redirect_from:
+  - /news/2013/04/11/philip-wadler-sw13.html
 ---
 
 We're excited to announce that Prof. Philip Wadler will be keynoting at this

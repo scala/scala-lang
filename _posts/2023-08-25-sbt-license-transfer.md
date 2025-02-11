@@ -2,6 +2,8 @@
 category: blog
 by: Jamie Thompson (Scala Center)
 title: Lightbend transfers ownership of sbt to the Scala Center
+redirect_from:
+  - /news/2023/08/25/sbt-license-transfer.html
 ---
 
 As of June 2023, [Lightbend](https://www.lightbend.com) has transferred the complete ownership to the [Scala Center](https://scala.epfl.ch) of the [sbt organisation](https://github.com/sbt) on GitHub, the sbt logo, the [@scala_sbt](https://twitter.com/scala_sbt) social media account, and the [scala-sbt.org](https://www.scala-sbt.org) domain.
