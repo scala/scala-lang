@@ -4,6 +4,8 @@ category: blog
 title: "Google Summer of Code 2015"
 by: "Vojin Jovanovic"
 author: "Vojin Jovanovic"
+redirect_from:
+  - /news/2015/03/16/GSoC-projects.html
 ---
 
 **This year the Scala team applied again for
