@@ -120,6 +120,19 @@ See our [events page](/events/).
 Some local Scala user groups are listed on
 [Meetup](https://www.meetup.com/topics/scala/).
 
+ - [London Scala User Group](https://www.meetup.com/london-scala/)
+ - [Warsaw Scala Enthusiasts](https://www.meetup.com/ScalaWAW/)
+ - [Kraków Scala User Group](https://www.meetup.com/Krakow-Scala-User-Group/)
+ - [Wrocław Scala User Group](https://www.meetup.com/wroclaw-scala-user-group/)
+ - [Bay Area Scala](https://lu.ma/scala)
+ - [SF Scala](http://www.meetup.com/SF-Scala/)
+ - [Scala Bay](https://www.meetup.com/scala-bay/)
+ - [Atlanta Scala](https://www.meetup.com/atlanta-scala)
+ - [Dallas Scala Enthusiasts](https://www.meetup.com/dallas-scala-enthusiasts)
+ - [Functional World](https://www.meetup.com/functionalworld)
+
+The [Scalendar](https://scalac.io/blog/) newsletter has a monthly issue for upcoming events.
+
 ### ScalaBridge
 
 Volunteers organizing free introductory Scala programming workshops for
