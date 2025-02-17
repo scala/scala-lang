@@ -1,7 +1,7 @@
 ---
 category: event
 title: Lambda World
-logo: /resources/img/lambda-world2.png
+logo: logo:/resources/img/lambda-world.png
 location: Cadiz, Spain
 description: "The Fun-Fun * Functional Programming Experience"
 start: 23 October 2025
