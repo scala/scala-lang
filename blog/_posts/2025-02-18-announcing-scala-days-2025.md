@@ -5,8 +5,8 @@ by: The Scala Center
 title: "Announcing Scala Days 2025"
 ---
 
-We are very happy to announce that [Scala Days](https://scaladays.org/) will be taking place in Scala's sunny hometown of Lausanne, Switzerland, 19-21 August 2025.
-The conference is organised by the Scala Center at the SwissTech Convention Center, at the heart of campus at EPFL (École Polytechnique Fédérale de Lausanne).
+We are very happy to announce that [Scala Days](https://scaladays.org/) will be taking place in Scala's sunny hometown of Lausanne, Switzerland, 19&ndash;21 August 2025.
+The conference is organised by the Scala Center at the SwissTech Convention Center, in the heart of campus at EPFL (École Polytechnique Fédérale de Lausanne).
 
 ## Co-located events
 
@@ -42,4 +42,4 @@ To get early updates and special offers, please [sign up for the mailing list](h
 
 Follow us and share on [Mastodon](https://mastodon.social/@scaladays), [Bluesky](https://bsky.app/profile/scaladays.org), [LinkedIn](https://www.linkedin.com/company/scala-center) and [Twitter/X](https://x.com/scaladays).
 
-Join the `#scala-days` channel on [the Scala Discord](https://discord.com/invite/scala) to chat with fellow enthusiasts
+Join the `#scala-days` channel on [the Scala Discord](https://discord.com/invite/scala) to chat with fellow attendees.
