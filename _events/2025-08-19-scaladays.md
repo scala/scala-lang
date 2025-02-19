@@ -1,7 +1,7 @@
 ---
 category: event
 title: Scala Days
-logo: /resources/img/scaladays-15.png
+logo: /resources/img/scaladays-25.png
 location: Lausanne, Switzerland
 description: "Scala Days"
 start: 19 August 2025
