@@ -13,11 +13,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0.5'
+          ruby-version: '3.2.6'
           bundler-cache: true
       - name: Build documents
         run: |
-          bundle update --bundler
           bundle exec jekyll build 2> error.log
           cat >&2 error.log
           ( ! grep -qie Error -e Warn error.log )
@@ -26,8 +25,8 @@ jobs:
       - name: Proofing (local links only)
         if: github.event_name == 'pull_request'
         run: |
-          bundle exec htmlproofer ./_site/ --enforce-https=false --disable-external=true --only-4xx --ignore-empty-alt --allow-hash-href
+          bundle exec htmlproofer ./_site/ --no-enforce-https --disable-external --only-4xx --ignore-empty-alt --allow-hash-href
       - name: Proofing (all links)
         if: github.event_name != 'pull_request'
         run: |
-          bundle exec htmlproofer ./_site/ --enforce-https=false --only-4xx --ignore-status-codes "400,401,403,429" --ignore-empty-alt --allow-hash-href --ignore-urls "/https://github.com/scala/,/trends.google.com/,/pgp.mit.edu/,/www.oracle.com/,/scalafiddle.io/" --typhoeus='{"headers":{"Accept-Encoding":"gzip, deflate", "Accept":"application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5", "User-Agent":"Mozilla/5.0 (compatible; HTML Proofer/#{HTMLProofer::VERSION}; +https://github.com/gjtorikian/html-proofer)"}, "followlocation":"true", "connecttimeout":"10", "timeout":"30"}'
+          bundle exec htmlproofer ./_site/ --no-enforce-https --only-4xx --ignore-status-codes "400,401,403,429" --ignore-empty-alt --allow-hash-href --ignore-urls "/https://github.com/scala/,/trends.google.com/,/pgp.mit.edu/,/www.oracle.com/,/scalafiddle.io/" --typhoeus='{"headers":{"Accept-Encoding":"gzip, deflate", "Accept":"application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5", "User-Agent":"Mozilla/5.0 (compatible; HTML Proofer/#{HTMLProofer::VERSION}; +https://github.com/gjtorikian/html-proofer)"}, "followlocation":"true", "connecttimeout":"10", "timeout":"30"}'
