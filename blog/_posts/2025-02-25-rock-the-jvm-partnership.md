@@ -12,10 +12,10 @@ This initiative allows learners to not only improve their Scala skills but also 
 
 Read on for details and sponsored links to the Scala courses.
 
-## About Daniel Ciorcîrlan and Rock the JVM
+## About Daniel Ciocîrlan and Rock the JVM
 
 Daniel Ciocîrlan is a seasoned Scala developer, educator, and the founder of Rock the JVM.
-With over 500 hours of video tutorials and courses, he has helped more than 100,000 developers worldwide. He has also conducted in-person training sessions for major companies such as Adobe, Apple, Google and Microsoft.
+With over 500 hours of video tutorials and courses, he has helped more than 100,000 developers worldwide. He has also conducted in-person training sessions for major companies such as Adobe, Apple and Microsoft.
 For his dedication in teaching Scala and speaking at Scala conferences and meetups, he has been recognized as a [Scala Ambassador](https://www.scala-lang.org/ambassadors/).
 
 Rock the JVM is a learning platform focused on Scala, functional programming, and related technologies.
