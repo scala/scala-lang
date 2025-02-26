@@ -117,21 +117,45 @@ See our [events page](/events/).
 
 ### Meetups
 
-Some local Scala user groups are listed on
+The [Scalendar](https://scalac.io/blog/) monthly newsletter lists upcoming events.
+
+Scala user groups may be listed on
 [Meetup](https://www.meetup.com/topics/scala/).
 
- - [London Scala User Group](https://www.meetup.com/london-scala/)
- - [Warsaw Scala Enthusiasts](https://www.meetup.com/ScalaWAW/)
- - [Kraków Scala User Group](https://www.meetup.com/Krakow-Scala-User-Group/)
- - [Wrocław Scala User Group](https://www.meetup.com/wroclaw-scala-user-group/)
- - [Bay Area Scala](https://lu.ma/scala)
- - [SF Scala](http://www.meetup.com/SF-Scala/)
- - [Scala Bay](https://www.meetup.com/scala-bay/)
- - [Atlanta Scala](https://www.meetup.com/atlanta-scala)
- - [Dallas Scala Enthusiasts](https://www.meetup.com/dallas-scala-enthusiasts)
- - [Functional World](https://www.meetup.com/functionalworld)
+We update the following lists of meetups from time to time.  Pull
+requests with updates are also welcome. (Old meetups are removed
+when they haven't had a Scala event in the last year.)
 
-The [Scalendar](https://scalac.io/blog/) newsletter has a monthly issue for upcoming events.
+#### Europe
+
+ - [Amsterdam](https://www.meetup.com/amsterdam-scala/)
+ - [Berlin Brandenburg](https://www.meetup.com/scala-berlin-brandenburg/)
+ - [Budapest](https://www.meetup.com/budapest-scala/)
+ - [Gdansk](https://www.meetup.com/functionalworld)
+ - [Kraków](https://www.meetup.com/Krakow-Scala-User-Group/)
+ - [Lisbon](https://www.meetup.com/scala-portugal/)
+ - [London](https://www.meetup.com/london-scala/)
+ - [Madrid](https://www.meetup.com/scala-programming-madrid/)
+ - [Oslo](https://www.meetup.com/scalabin/)
+ - [Paris](https://www.meetup.com/paris-scala-user-group-psug/)
+ - [Porto](https://www.meetup.com/scala-porto/)
+ - [Stockholm](https://www.meetup.com/scala-stockholm/)
+ - [UK and Europe](https://www.meetup.com/scala-in-the-city/)
+ - [Warsaw](https://www.meetup.com/ScalaWAW/)
+ - [Wrocław](https://www.meetup.com/wroclaw-scala-user-group/)
+ - [Zürich](https://www.meetup.com/zurich-scala/)
+
+#### North America
+
+ - [Atlanta](https://www.meetup.com/atlanta-scala)
+ - [Dallas](https://www.meetup.com/dallas-scala-enthusiasts)
+ - [San Francisco](http://www.meetup.com/SF-Scala/)
+ - [SF Bay Area (Bay Area Scala)](https://lu.ma/scala)
+ - [SF Bay Area (Scala Bay)](https://www.meetup.com/scala-bay/)
+
+#### Asia
+
+ - [Taiwan](https://www.meetup.com/scala-taiwan-meetup/)
 
 ### ScalaBridge
 
