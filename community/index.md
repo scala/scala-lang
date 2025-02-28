@@ -242,13 +242,17 @@ news items and opinions. Ask your Scala friends who they follow.
 
 ## Learning resources
 
-- [Scala Exercises](http://scala-exercises.org/)
-- [Scala School](https://twitter.github.io/scala_school/)
-- [Scala Puzzlers](https://scalapuzzlers.com/)
-- [Scala Cookbook](http://www.scalacookbook.com/)
-- [Interactive Tour](https://scalatutorials.com/tour)
-- [Functional programming course/exercises](https://github.com/dehun/learn-fp)
-- [Best Scala Tutorials On YouTube](https://www.nbshare.io/blog/best-scala-tutorials-on-youtube/)
+Our [Online Courses page](https://docs.scala-lang.org/online-courses.html) lists courses
+offered by the Scala Center as well as paid courses from Rock the JVM.
+
+Our [Books page](https://docs.scala-lang.org/books.html) offers a small
+selection of Scala books (many others exist).
+
+There are too many other Scala learning resources out there for any
+list to be exhaustive, but here are a few:
+
+- [Scala Exercises](https://www.scala-exercises.org)
+- [Scala Cookbook](https://scalacookbook.com)
 
 ## Libraries and tools
 
