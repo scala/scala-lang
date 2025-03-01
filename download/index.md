@@ -5,6 +5,7 @@ redirect_from:
   - /install/
   - /download/scala2.html
   - /download/scala3.html
+  - /download/changelog.html
 
 advancedtutorials:
 - title: "Scala 3 documentation"
