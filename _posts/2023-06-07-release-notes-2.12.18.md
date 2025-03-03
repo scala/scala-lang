@@ -1,5 +1,5 @@
 ---
-category: announcement
+category: release
 permalink: /news/2.12.18/
 title: "Scala 2.12.18 is now available!"
 ---

@@ -1,14 +1,15 @@
 ---
 layout: blog-list
 title: Blog
-permalink: /blog/announcements/
-category: announcements
+permalink: /blog/releases/
+redirect_from: /blog/announcements/
+category: releases
 
 paginate:
   collection:   posts
   permalink:    /:num/
   title_suffix: " - :num"
-  category:     'announcement'
+  category:     'release'
   reversed:     false
-  per_page:     10
+  per_page:     20
 ---

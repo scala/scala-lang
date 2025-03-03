@@ -1,5 +1,5 @@
 ---
-category: announcement
+category: release
 title: "Scala 2.10.1-RC2 is now available!"
 ---
 We are pleased to announce the second release candidate of Scala 2.10.1!

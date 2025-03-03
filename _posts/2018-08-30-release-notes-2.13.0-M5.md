@@ -1,5 +1,5 @@
 ---
-category: announcement
+category: release
 permalink: /news/2.13.0-M5/
 title: "Scala 2.13.0-M5 is now available!"
 ---

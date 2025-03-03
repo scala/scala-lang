@@ -1,5 +1,5 @@
 ---
-category: announcement
+category: release
 permalink: /news/security-update-nov17.html
 title: "Security update: 2.12.4, 2.11.12, 2.10.7 (CVE-2017-15288)"
 ---

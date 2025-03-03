@@ -1,6 +1,7 @@
 ---
-category: announcement
-permalink: /news/post-mortem-3.6.0.html
+category: blog
+permalink: /blog/post-mortem-3.6.0.html
+redirect_from: /news/post-mortem-3.6.0.html
 title: "Postmortem of Scala 3.6.0"
 by: Scala Core Team
 ---
