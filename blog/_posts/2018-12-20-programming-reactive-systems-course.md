@@ -1,9 +1,10 @@
 ---
 layout: inner-page-no-masthead
-post-type: announcement
 title: "New Course: “Programming Reactive Systems”"
 by: Julien Richard-Foy
 includeTOC: false
+permalink: /blog/2018/12/20/programming-reactive-systems-course.html
+redirect_from: /news/2018/12/20/programming-reactive-systems-course.html
 ---
 
 We are excited to announce the release of a new MOOC:
