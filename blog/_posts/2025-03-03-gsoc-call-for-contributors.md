@@ -6,12 +6,12 @@ title: "GSOC 2025: Call for contributors"
 ---
 
 We are thrilled to announce that the Scala Center organization has been accepted for [Google Summer of Code 2025](https://summerofcode.withgoogle.com/)!
-This marks the 15th year that Scala is a part of this awesome program, empowering beginner contributors to dive into the world of Scala open source projects.
+This marks the 15th year that Scala is a part of this awesome program, empowering beginning contributors to dive into the world of Scala open source projects.
 
-Google Summer of Code (GSoC) is an annual program by Google that encourages beginner contributors to participate in open source software development.
+Google Summer of Code (GSoC) is an annual program by Google that encourages beginning contributors to participate in open source software development.
 Through GSoC, contributors receive mentorship from experienced maintainers while earning a stipend for their work on open source projects during the summer.
 
-This year, we are offering a diverse range of project ideas across the Scala ecosystem, spanning various domains including web development, graphics, build tooling, GPU programming, and more.
+This year, we are offering a diverse range of project ideas across the Scala ecosystem, spanning domains including web development, graphics, build tooling, GPU programming, and more.
 Explore our [list of projects](https://github.com/scalacenter/GoogleSummerOfCode) to discover more exciting ideas.
 
 We encourage new Scala programmers with a passion for open source to apply!
@@ -40,7 +40,7 @@ We look forward to welcoming you to the Scala community and helping you embark o
 
 ## Recap from 2024
 
-The 2024 GSoC has been a remarkable edition for Scala, as we welcomed 10 new Scala contributors:
+The 2024 GSoC was a remarkable edition for Scala, as we welcomed 10 new Scala contributors:
 
 - **A S** – [Scaladoc in proto search](https://summerofcode.withgoogle.com/programs/2024/projects/jSLG7125)
 - **Ayush Koli** – [Scaladex new Artifact Page](https://summerofcode.withgoogle.com/programs/2024/projects/AMrkEU3Z)
