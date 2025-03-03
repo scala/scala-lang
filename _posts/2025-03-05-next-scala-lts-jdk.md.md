@@ -1,5 +1,5 @@
 ---
-category: announcement
+category: blog
 permalink: /news/next-scala-lts-jdk.html
 title: "JDK 17 will be the next minimum version required by Scala 3"
 by: Tomasz Godzik, VirtusLab & Scala Core Team
