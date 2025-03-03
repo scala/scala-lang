@@ -23,8 +23,8 @@ This change only concerns future minor versions of Scala 3. In particular, the
 Scala 3.3 LTS line is unaffected by this change. Scala 3.3.x releases will
 continue for at least a year after the next LTS line begins
 
-There are also no plans to change Scala 2’s JDK support and it will continue
-being built using JDK 8.
+There are no plans to change Scala 2’s JDK support.  It will continue
+being built using JDK 8, as before.
 
 The open discussion that led to this decision can be found at the
 [Scala contributors forum](https://contributors.scala-lang.org/t/next-scala-3-lts-version-will-increase-minimum-required-jdk-version).
