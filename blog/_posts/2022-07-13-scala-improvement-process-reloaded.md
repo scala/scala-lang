@@ -74,4 +74,4 @@ In short, we overhauled the process to make it more sustainable. This work was n
 
 ## Conclusion
 
-We aim to create the best possible structure to support both authors and committee members, in order for the process to run smoothly and committee members to regularly make decisions. We will continue to adjust the process itself, as we continue to learn along the way. Please let us know if you have any suggestions by writing to [scala.improvement@epfl.ch](mailto:scala.improvement@epfl.ch).
+We aim to create the best possible structure to support both authors and committee members, in order for the process to run smoothly and committee members to regularly make decisions. We will continue to adjust the process itself, as we continue to learn along the way. Please let us know if you have any suggestions by writing to [scala.center@epfl.ch](mailto:scala.center@epfl.ch).
