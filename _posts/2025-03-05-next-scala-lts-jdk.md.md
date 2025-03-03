@@ -8,7 +8,7 @@ by: Tomasz Godzik, VirtusLab & Scala Core Team
 We recently asked for community input about changing the JDK version used by the
 Scala 3 compiler. We wanted to thank everyone for their input and announce the
 decision to switch to JDK 17 as the new minimum, starting with Scala 3.8 minor
-and the next LTS which will mostly likely be Scala 3.9.
+and the subsequent new LTS which will mostly likely be Scala 3.9.
 
 The discussion didn't uncover any compelling reason not to leave JDK 11 behind.
 11 is now nearly as antiquated as 8, and moving from 11 to 17 is not normally a
