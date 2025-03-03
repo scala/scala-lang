@@ -11,7 +11,7 @@ decision to switch to JDK 17 as the new minimum, starting with Scala 3.8 minor
 and the subsequent new LTS which will mostly likely be Scala 3.9.
 
 The discussion didn't uncover any compelling reason not to leave JDK 11 behind.
-11 is now nearly as antiquated as 8, and moving from 11 to 17 is not normally a
+11 is now nearly as antiquated as 8, and moving from 11 to 17 is not normally considered a
 difficult upgrade for users. 17 offers useful APIs and VM features. In the JVM
 world, requiring 17+ is already a mainstream position and is becoming more so
 with every passing month. Also, we increase Scala's minimum so rarely, we feel
