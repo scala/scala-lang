@@ -1,5 +1,5 @@
 ---
-category: announcement
+category: release
 permalink: /news/3.3.5/
 title: "Scala 3.3.5 LTS is now available!"
 ---

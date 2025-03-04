@@ -1,6 +1,6 @@
 ---
 
-category: announcement
+category: release
 title: "Scala 2.10.4-RC1 is now available!"
 ---
 We are very happy to announce the first release candidate of Scala 2.10.4!

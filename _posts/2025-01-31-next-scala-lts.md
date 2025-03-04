@@ -1,6 +1,7 @@
 ---
-category: announcement
-permalink: /news/next-scala-lts.html
+category: blog
+permalink: /blog/next-scala-lts.html
+redirect_from: /news/next-scala-lts.html
 title: "Next Scala 3 LTS series will increase minimum required JDK version"
 by: Tomasz Godzik, VirtusLab & Scala Core Team
 ---

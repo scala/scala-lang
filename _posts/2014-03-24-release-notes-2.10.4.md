@@ -1,6 +1,6 @@
 ---
 
-category: announcement
+category: release
 title: "Scala 2.10.4 is now available!"
 permalink: /news/2.10.4/
 ---

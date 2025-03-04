@@ -1,6 +1,7 @@
 ---
-category: announcement
-permalink: /news/license-change.html
+category: blog
+permalink: /blog/license-change.html
+redirect_from: /news/license-change.html
 title: "Intent to adopt the Apache License 2.0 for Scala"
 by: Jorge Vicente Cantero and Adriaan Moors
 ---

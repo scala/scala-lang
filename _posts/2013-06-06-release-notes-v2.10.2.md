@@ -1,6 +1,6 @@
 ---
 
-category: announcement
+category: release
 title: "Scala 2.10.2 is now available!"
 ---
 

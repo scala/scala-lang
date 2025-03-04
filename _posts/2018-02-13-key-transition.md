@@ -1,6 +1,7 @@
 ---
-category: announcement
-permalink: /news/key-transition-2018.html
+category: blog
+permalink: /blog/key-transition-2018.html
+redirect_from: /news/key-transition-2018.html
 title: "New key for signing Scala releases"
 ---
 

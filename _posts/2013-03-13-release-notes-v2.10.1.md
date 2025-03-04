@@ -1,6 +1,6 @@
 ---
 
-category: announcement
+category: release
 title: "Scala 2.10.1 is now available!"
 ---
 We are very happy to announce the final release of Scala 2.10.1!

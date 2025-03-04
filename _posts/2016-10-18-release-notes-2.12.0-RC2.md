@@ -1,6 +1,6 @@
 ---
 
-category: announcement
+category: release
 permalink: /news/2.12.0-RC2/
 title: "Scala 2.12.0-RC2 is now available!"
 ---

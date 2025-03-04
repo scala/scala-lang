@@ -1,8 +1,9 @@
 ---
 
-category: announcement
+category: blog
 title: "2016 Scala Release Schedule update"
-permalink: /news/2016-schedule.html
+permalink: /blog/2016-schedule.html
+redirect_from: /news/2016-schedule.html
 ---
 
 With 2016 rapidly approaching, it's time for an update on our plans for Scala next year!

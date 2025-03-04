@@ -1,9 +1,10 @@
 ---
 layout: inner-page-no-masthead
-post-type: announcement
 title: Our MOOCs Now Support The EdX Platform
 by: Julien Richard-Foy
 includeTOC: false
+permalink: /blog/2018/02/27/moocs-edx-support.html
+redirect_from: /news/2018/02/27/moocs-edx-support.html
 ---
 
 > **Update**: After a couple of years experimenting with Open edX, we decided
