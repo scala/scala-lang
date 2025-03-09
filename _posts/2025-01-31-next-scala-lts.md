@@ -6,10 +6,15 @@ title: "Next Scala 3 LTS series will increase minimum required JDK version"
 by: Tomasz Godzik, VirtusLab & Scala Core Team
 ---
 
-**TL;DR**
+## Summary
 
 The Scala 3 Next minors in 2025 Q4 and the next LTS will drop JDK 8 support. We
 are seeking feedback on whether the new minimum JDK should be 11 or 17.
+
+**Update (March 2025)**
+
+This blog post is now superseded by [a sequel](https://www.scala-lang.org/news/next-scala-lts-jdk.html)
+which states that "JDK 17 will be the next minimum version required by Scala 3".
 
 ## Immediate motivation
 
