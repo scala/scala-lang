@@ -8,12 +8,12 @@ includeTOC: true
 ## Who's behind Scala?
 
 Scala was created by [Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/)
-at [EPFL](https://epfl.ch).
+at [EPFL](https://www.epfl.ch).
 
 The Scala language and associated websites are cooperative projects of the following
 four groups:
 
-* the [Scala Center](https://scala.epfl.ch) at [EPFL](https://epfl.ch)
+* the [Scala Center](https://scala.epfl.ch) at [EPFL](https://www.epfl.ch)
 * the Scala 3 team in Martin's research group [LAMP](https://lamp.epfl.ch) (also at EPFL)
 * the Scala team at [Akka](https://akka.io)
 * the Scala team at [VirtusLab](https://virtuslab.com)
