@@ -26,7 +26,7 @@ But other languages are also improving, and so Scala must continue to innovate, 
 There are of course ongoing issues, especially around IDE support and the learnability of the ecosystem, and there will always be concerns about tooling, compatibility, and migration cost as a language evolves.
 But Scala has no choice but to move forward if it is to maintain its appeal and relevance in the years to come.
 
-# Where Scala Stands Today
+# Where Scala stands today
 
 Although the hype has died down, popularity-wise Scala is about where it has always been: not quite in the mainstream, but with far greater adoption than more niche languages.
 For example, the RedMonk Language Rankings had Scala in [14th place in 2014](https://redmonk.com/sogrady/2014/06/13/language-rankings-6-14/) and [still in 14th place 10 years later in 2024](https://redmonk.com/sogrady/2024/09/12/language-rankings-6-24/).
@@ -44,11 +44,11 @@ Heavy use of symbolic operators has thankfully fallen out of style.
 Scala has always been a language on the leading edge, proving the viability of language features like lambdas, records, and pattern matching that were adopted 10–15 years later by Java, Python, and other mainstream languages.
 It remains to be seen which current Scala features the mainstream languages will adopt 10-15 years from now.
 
-# Where is Scala Going?
+# Where is Scala going?
 
 In this section, we will discuss some areas where the core Scala developers will focus their efforts.
 
-## Safety and Convenience: Pick Two
+## Safety and convenience: pick two
 
 Scala has always been a hybrid language.
 The fusion of object-oriented and functional styles was often talked about.
@@ -98,7 +98,7 @@ For example, Scala has cycled through three collections libraries to get to wher
 What long-standing annoyances can we fix today that we will be grateful to have fixed 5–10 years down the road?
 What features and conventions can we adopt from other languages, rather than re-inventing the wheel in our own idiosyncratic manner?
 
-## An Easier Language for Newcomers
+## An easier language for newcomers
 
 We believe Scala can be made easier for newcomers to pick up.
 All advanced Scala users were newcomers at some point.
@@ -123,7 +123,7 @@ They will be smart, but they won’t be experts pushing the limits of the Scala 
 They will know Java or Python or JavaScript because that’s what they learned in school.
 That is who we need to make sure has an easy on-ramp to the Scala language.
 
-# Considered Alternatives
+# Considered alternatives
 
 There are always differing opinions about where Scala should go.
 We’ll discuss two ideas that repeatedly come up around the direction of the language.
@@ -173,7 +173,7 @@ Scala cannot compete with mainstream languages on stability and polish alone, so
 Scala thus needs a steady stream of improvements to sustain it, to give people and projects a reason to pick the language.
 We might get things wrong — there is no guaranteed path to success — but a feature freeze is a guaranteed path to stagnation and failure.
 
-# Open Problems in the Scala Ecosystem
+# Open problems in the Scala ecosystem
 
 The Scala ecosystem is not without its issues.
 Here we will briefly cover what we think are the biggest challenges that Scala faces today, and what we have done or will do about them going forward.
@@ -211,7 +211,7 @@ The Scala 3 compiler developers already heavily use both IntelliJ and Metals, an
 We will continue to report issues as they are found, and we will work with the maintainers of both IntelliJ and Metals to improve the integration between the compiler and the IDEs.
 But we also need people from the community to take an active role in reporting problems so the IDE maintainers can investigate and fix them.
 
-## Build Tooling
+## Build tooling
 
 The complexity of the build tool sbt has been a long-standing problem in the Scala community for the past decade or more.
 However, we think there is light at the end of the tunnel:
@@ -234,7 +234,7 @@ However, we think there is light at the end of the tunnel:
 
 Overall we expect this problem will sort itself out going forward: both by sbt itself improving over time, and by projects choosing other tools that provide great alternatives.
 
-## Ecosystem Learnability
+## Ecosystem learnability
 
 The third biggest issue we see in the Scala language is the learnability of the ecosystem.
 
