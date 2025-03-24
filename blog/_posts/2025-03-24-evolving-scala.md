@@ -63,7 +63,7 @@ All modern languages provide generics, type inference, lambdas, records, pattern
 To continue to attract users, Scala must continue to innovate in both directions:
 
 1. **Increasing safety** without compromising convenience: features like [capture checking](https://docs.scala-lang.org/scala3/reference/experimental/cc.html), [explicit nulls](https://docs.scala-lang.org/scala3/reference/experimental/explicit-nulls.html), [safe initialization](https://docs.scala-lang.org/scala3/reference/other-new-features/safe-initialization.html), [multiversal equality](https://docs.scala-lang.org/scala3/book/ca-multiversal-equality.html).
-2. **Increasing convenience** without compromising safety: features like [enums](https://docs.scala-lang.org/scala3/reference/enums/enums.html), [optional braces](https://docs.scala-lang.org/scala3/reference/other-new-features/indentation.html), [named tuples](https://dotty.epfl.ch/docs/reference/experimental/named-tuples.html).
+2. **Increasing convenience** without compromising safety: features like [enums](https://docs.scala-lang.org/scala3/reference/enums/enums.html), [optional braces](https://docs.scala-lang.org/scala3/reference/other-new-features/indentation.html), [named tuples](https://docs.scala-lang.org/sips/named-tuples.html).
    A discussion about [aggregate data literals](https://contributors.scala-lang.org/t/pre-sip-a-syntax-for-aggregate-literals/6697) has sparked a lot of interest, although it is still too early to see what will come out of it.
 
 The Scala ecosystem is broad and diverse, but we think these twin goals are the common thread.
