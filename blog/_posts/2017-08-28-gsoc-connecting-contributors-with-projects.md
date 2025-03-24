@@ -56,7 +56,7 @@ The code for Contributing Info was committed in 2 pull requests, 1 for the [back
 ### Challenge
 One interesting challenge I ran into was filtering a project's issues based on a search term. For example, say a user is searching for all issues related to documentation so they enter "docs" as a search term in the Contributing Search page. A project called akka-http has some beginner-friendly issues, one of which is related to documentation with the title "#22874 - Add examples to Sink.actorRefWithAck and Source.queue docs". Since this is the only issue for akka-http that has "docs" in its title, it should be the only issue that shows up for akka-http in the search results.
 
-All the projects in Scaladex are stored in an [Elasticsearch index](https://www.elastic.co/blog/what-is-an-elasticsearch-index) which is like a database in a relational database. Each project stored in Elasticsearch has the following fields:
+All the projects in Scaladex are stored in an [Elasticsearch index](https://web.archive.org/web/20250308184311/https://www.elastic.co/blog/what-is-an-elasticsearch-index) which is like a database in a relational database. Each project stored in Elasticsearch has the following fields:
 ```
 name: Text
 description: Text
