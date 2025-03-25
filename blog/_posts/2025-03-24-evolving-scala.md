@@ -36,7 +36,7 @@ Although individuals in the community come and go, Scala as a whole seems to be 
 
 Technically, Scala is on stronger foundations than it was 10 years ago.
 The ecosystem has matured and the various Reactive or Pure-FP styles have found their audiences.
-Alternative styles like the [Scala Toolkit](https://docs.scala-lang.org/toolkit/introduction.html) and the [com.lihaoyi](https://github.com/com-lihaoyi) are now available.
+Alternative styles like the [Scala Toolkit](https://docs.scala-lang.org/toolkit/introduction.html) and the [com.lihaoyi](https://github.com/com-lihaoyi) platform are now available.
 New build tools like [Scala-CLI](https://scala-cli.virtuslab.org/) and [Mill](https://mill-build.org) have emerged, and developer tools like [Scalafmt](https://github.com/scalameta/scalafmt) and [Scalafix](https://github.com/scalacenter/scalafix) have become widely used.
 IDEs remain a pain point, but we expect them to improve over the course of 2025.
 Heavy use of symbolic operators has thankfully fallen out of style.
