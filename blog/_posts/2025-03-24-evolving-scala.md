@@ -12,7 +12,7 @@ Should the language change at all?
 This article discusses how **Scala must keep evolving**, why that evolution is necessary, and what directions we expect that evolution to take.
 We hope that this will cover many of the frequently asked questions on the direction of the Scala language, and help the community understand where the language will go in the months and years to come.
 
-# Summary
+## Summary
 
 Although Scala is no longer riding the wave of hype it had in the mid-2010s, by most surveys the language maintains its position just outside the list of mainstream languages.
 From a technical perspective, the core language and ecosystem have improved greatly over the past decade.
@@ -26,7 +26,7 @@ But other languages are also improving, and so Scala must continue to innovate, 
 There are of course ongoing issues, especially around IDE support and the learnability of the ecosystem, and there will always be concerns about tooling, compatibility, and migration cost as a language evolves.
 But Scala has no choice but to move forward if it is to maintain its appeal and relevance in the years to come.
 
-# Where Scala stands today
+## Where Scala stands today
 
 Although the hype has died down, popularity-wise Scala is about where it has always been: not quite in the mainstream, but with far greater adoption than more niche languages.
 For example, the RedMonk Language Rankings had Scala in [14th place in 2014](https://redmonk.com/sogrady/2014/06/13/language-rankings-6-14/) and [still in 14th place 10 years later in 2024](https://redmonk.com/sogrady/2024/09/12/language-rankings-6-24/).
@@ -44,11 +44,11 @@ Heavy use of symbolic operators has thankfully fallen out of style.
 Scala has always been a language on the leading edge, proving the viability of language features like lambdas, records, and pattern matching that were adopted 10–15 years later by Java, Python, and other mainstream languages.
 It remains to be seen which current Scala features the mainstream languages will adopt 10-15 years from now.
 
-# Where is Scala going?
+## Where is Scala going?
 
 In this section, we will discuss some areas where the core Scala developers will focus their efforts.
 
-## Safety and convenience: pick two
+### Safety and convenience: pick two
 
 Scala has always been a hybrid language.
 The fusion of object-oriented and functional styles was often talked about.
@@ -76,7 +76,7 @@ Going forward, Scala must continue to pursue these twin goals of safety and conv
 Tomorrow’s popular frameworks may be different from those of today, which are different from those of years past.
 But developers have wanted safety and convenience for the past several decades, and we expect it to continue being in demand in the years to come.
 
-## Sanding off rough edges
+### Sanding off rough edges
 
 Scala is no longer a new language.
 A lot of things seemed like good ideas two decades ago, but not all such decisions panned out.
@@ -98,7 +98,7 @@ For example, Scala has cycled through three collections libraries to get to wher
 What long-standing annoyances can we fix today that we will be grateful to have fixed 5–10 years down the road?
 What features and conventions can we adopt from other languages, rather than re-inventing the wheel in our own idiosyncratic manner?
 
-## An easier language for newcomers
+### An easier language for newcomers
 
 We believe Scala can be made easier for newcomers to pick up.
 All advanced Scala users were newcomers at some point.
@@ -123,12 +123,12 @@ They will be smart, but they won’t be experts pushing the limits of the Scala 
 They will know Java or Python or JavaScript because that’s what they learned in school.
 That is who we need to make sure has an easy on-ramp to the Scala language.
 
-# Considered alternatives
+## Considered alternatives
 
 There are always differing opinions about where Scala should go.
 We’ll discuss two ideas that repeatedly come up around the direction of the language.
 
-## Why not go all in on Framework X?
+### Why not go all in on Framework X?
 
 One common request from the community is to go “all in” on some framework or toolchain in the Scala community.
 For example:
@@ -151,7 +151,7 @@ However, there are a few issues with this approach when analyzed more deeply:
 As such, Scala has to remain general by building features that any framework or library can benefit from.
 We encourage framework enthusiasts to propose improvements to the Scala language: although not every specific idea may be accepted, the feedback drives language changes that benefit all frameworks.
 
-## Why not freeze all feature development?
+### Why not freeze all feature development?
 
 Another common request is to “stop implementing features”.
 This comes up regularly in language discussions from people who are dissatisfied: with tooling support, the job market, or other things.
@@ -173,12 +173,12 @@ Scala cannot compete with mainstream languages on stability and polish alone, so
 Scala thus needs a steady stream of improvements to sustain it, to give people and projects a reason to pick the language.
 We might get things wrong — there is no guaranteed path to success — but a feature freeze is a guaranteed path to stagnation and failure.
 
-# Open problems in the Scala ecosystem
+## Open problems in the Scala ecosystem
 
 The Scala ecosystem is not without its issues.
 Here we will briefly cover what we think are the biggest challenges that Scala faces today, and what we have done or will do about them going forward.
 
-## Tooling: IDEs
+### Tooling: IDEs
 
 “Tooling” was the biggest area for improvement highlighted in the last [VirtusLab Scala Survey](https://scalasurvey2023.virtuslab.com/).
 This primarily means IDEs (IntelliJ and VSCode) and build tooling (such as sbt), which are the tools that everyone writing Scala must also interact with.
@@ -186,7 +186,7 @@ This primarily means IDEs (IntelliJ and VSCode) and build tooling (such as sbt),
 The two primary IDEs used in the Scala community are IntelliJ and VSCode.
 The aforementioned survey has ~80% of respondents using IntelliJ and ~50% using VSCode, with some using both.
 
-### IntelliJ
+#### IntelliJ
 
 IntelliJ support for Scala 3 still has some catching up to do with the quality of support it has traditionally had for Scala 2.
 Nevertheless, there is steady progress, and the recent improvements show an accelerated pace.
@@ -200,7 +200,7 @@ Nevertheless, there is steady progress, and the recent improvements show an acce
 We acknowledge that there is still work to do.
 The IntelliJ team is working hard on bringing the best support for Scala 3, and you can expect more improvements in the following months.
 
-### Metals - the Scala Language Server
+#### Metals - the Scala Language Server
 
 Metals is most often used with VSCode, but also supports other editors.
 Metals has different challenges than IntelliJ: it has always used the actual Scala compiler for its code intelligence, and so it is always in sync with the actual language.
@@ -211,7 +211,7 @@ The Scala 3 compiler developers already heavily use both IntelliJ and Metals, an
 We will continue to report issues as they are found, and we will work with the maintainers of both IntelliJ and Metals to improve the integration between the compiler and the IDEs.
 But we also need people from the community to take an active role in reporting problems so the IDE maintainers can investigate and fix them.
 
-## Build tooling
+### Build tooling
 
 The complexity of the build tool sbt has been a long-standing problem in the Scala community for the past decade or more.
 However, we think there is light at the end of the tunnel:
@@ -234,7 +234,7 @@ However, we think there is light at the end of the tunnel:
 
 Overall we expect this problem will sort itself out going forward: both by sbt itself improving over time, and by projects choosing other tools that provide great alternatives.
 
-## Ecosystem learnability
+### Ecosystem learnability
 
 The third biggest issue we see in the Scala language is the learnability of the ecosystem.
 
@@ -257,17 +257,17 @@ But here too we see reasons for optimism:
 
 This is an area where we have been slowly making progress, and we hope this “newcomer friendly” Scala style will grow over time: not at the expense of the more advanced frameworks, but in tandem with them as the increased number of newcomers leads to more people picking up the more sophisticated frameworks if and when the need arises.
 
-# How you can help
+## How you can help
 
 Scala is a community effort; there is no huge corporate sponsor driving Scala development like there is in other languages.
 We thus need help from the community to help drive the language forward.
 This help can come in a variety of ways.
 
-## Financially
+### Financially
 
 If you want to support Scala financially, there are two main groups you can support:
 
-### The Scala Center
+#### The Scala Center
 
 The Scala Center supports two things:
 
@@ -283,7 +283,7 @@ You can donate to the Scala center in two ways:
 Donate to the Scala Center if you want to support the core Scala language and community work.
 Much of their work is not glamorous, but it plays a key role in helping ensure the ongoing health of the Scala ecosystem.
 
-### VirtusLab
+#### VirtusLab
 
 VirtusLab does the core development on much Scala *tooling*:
 
@@ -294,7 +294,7 @@ VirtusLab does the core development on much Scala *tooling*:
 
 If you are hitting issues with Metals or Scala-CLI and would like to help fund fixes or improvements, you should reach out to VirtusLab at [scala@virtuslab.com](mailto:scala@virtuslab.com).
 
-## Code
+### Code
 
 Most of the Scala ecosystem is open source.
 This means you can directly dig into the code and make the fixes or improvements you yourself want:
@@ -308,7 +308,7 @@ Contributing fixes and improvements to tooling and infrastructure is not easy, b
 Most of the Scala toolchain is open source and has received drive-by contributions many times in the past by individuals and corporations who just needed something fixed.
 Submitting pull requests to these projects is no different from the kind of work any professional software engineer already does every day, and could help improve your own experience using Scala on a regular basis.
 
-## Language Design
+### Language Design
 
 The [Scala Improvement Process](https://docs.scala-lang.org/sips/) is not limited to the core Scala contributors.
 Anyone can propose one, e.g. [SIP-42 Binary Integer Literals](https://github.com/scala/improvement-proposals/pull/40), [SIP-61 @unroll default arguments for binary compatability](https://github.com/scala/improvement-proposals/pull/78), [SIP-67 Improved strict equality](https://github.com/scala/improvement-proposals/pull/97).
@@ -322,7 +322,7 @@ But we need more contributors here proposing changes, rather than it being limit
 
 If you have ideas to propose but need help with the implementation and have money to pay for it, please contact [scala.center@epfl.ch](mailto:scala.center@epfl.ch) and we can help find the expertise to contract.
 
-# Conclusion
+## Conclusion
 
 Language development is an indirect process.
 The core Scala team cannot build the next big Scala success story themselves, nor will it happen overnight.
