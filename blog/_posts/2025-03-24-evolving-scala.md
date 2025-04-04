@@ -301,7 +301,7 @@ This means you can directly dig into the code and make the fixes or improvements
 
 * You can fix bugs in [Scala3](https://github.com/scala/scala3), [IntelliJ](https://github.com/JetBrains/intellij-scala), and [Metals](https://github.com/scalameta/metals) yourself.
   Although the codebases are large, it’s not unheard of that someone can dive in and make the fixes necessary for their own use case
-* A [Compiler Spree](https://docs.scala-lang.org/contribute/#so-you-want-to-improve-the-scala-3-compiler) and a Tooling Spree are run every three weeks.
+* A [Compiler Spree](https://docs.scala-lang.org/contribute/#so-you-want-to-improve-the-scala-3-compiler) and a [Tooling Spree](https://scalameta.org/scala-tooling-spree/) are run every three weeks.
   These are remote coding sessions where you can collaborate with core Scala language and tooling contributors on bite-sized bugs and acquire the skills and knowledge to tackle more ambitious issues.
 
 Contributing fixes and improvements to tooling and infrastructure is not easy, but neither is it impossible.
