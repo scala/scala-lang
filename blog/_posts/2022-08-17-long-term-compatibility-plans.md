@@ -30,7 +30,11 @@ Scala 3 guarantees backward compatibility between all releases and forward compa
 
 ## What version of Scala should I use?
 
-So, we know what output compatibility is and what Scala 3 guarantees. What does it mean in practice? What version of the compiler should I choose for my project? The compiler team believes that the good answer for this question is always *the newest one*.
+So, we know what output compatibility is and what Scala 3 guarantees. What does it mean in practice? What version of the compiler should I choose for my project?
+
+The simple answer is:
+* The **Scala Next** line should be used be used by most users, as it contains the latest features, bug fixes and improvements.
+* The **Scala LTS** line is advised to be used for publishing libraries. (Some especially conservative users might also choose it over Scala Next.)
 
 We believe that you should treat the compiler as one of your dependencies. If you are fine with updating the versions of your library dependencies, there should be no reason not to update the compiler version. In most cases, you wouldn't even notice that the Scala version has changed. Meanwhile, you can get better compilation performance, improved error messages, and most importantly, you may be able to use newly stabilized features of the language and of the standard library.
 
