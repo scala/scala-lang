@@ -76,14 +76,31 @@ Scala code runner version {{currentScalaRelease}} -- Copyright 2002-2022, LAMP/E
           </div>
         </div>
         
-	<div id="version-choice">
+        <div id="version-choice">
+
+          {% for release in site.data.scala-releases %}
+            {% assign version_slice = release.version | slice: 0, 2 %}
+            {% if release.category == 'current_version' %}
+              {% if version_slice == '3.' %}
+                {% unless release.title contains "LTS" %}
+                  {% assign scala_next_release = release %}
+                {% endunless %}
+                {% if release.title contains "LTS" %}
+                  {% assign scala_lts_release = release %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+
           <h2>Which version of Scala should I choose?</h2>
           <p>There are 2 distribution lines of Scala 3:</p>
-          <ul>
-            <li><strong>Scala Next</strong> - The <strong>default</strong> to be used by most users, containing the latest features, bug fixes and improvements.</li>
-            <li><strong>Scala LTS</strong> - Advised to be used for publishing <strong>libraries</strong>. (Some especially conservative users might also choose it over Scala Next.)</li>
+          <ul style="list-style-type: disc; padding: 10px;">
+            <li><strong>Scala Next</strong> currently {{ scala_next_release.version }} - The <strong>default</strong> to be used by most users, containing the latest features, bug fixes and improvements.</li>
+            <li><strong>Scala LTS</strong> currently {{ scala_lts_release.version }} - Advised to be used for publishing <strong>libraries</strong>.</li>
           </ul>
         </div>
+        
         
 	<h2>Other ways to install Scala</h2>
         <div class="wrap">
