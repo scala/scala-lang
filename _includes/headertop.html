@@ -57,3 +57,7 @@
 
     <!-- Atom feeds -->
     <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ site.baseurl }}/feed/index.xml" />
+
+    {% if page.canonical %}
+    <link rel="canonical" href="{{ page.canonical | absolute_url }}" />
+    {% endif %} 
