@@ -67,7 +67,7 @@ To continue to attract users, Scala must continue to innovate in both directions
    A discussion about [aggregate data literals](https://contributors.scala-lang.org/t/pre-sip-a-syntax-for-aggregate-literals/6697) has sparked a lot of interest, although it is still too early to see what will come out of it.
 
 The Scala ecosystem is broad and diverse, but we think these twin goals are the common thread.
-Whether you are building a backend service using [Akka](https://akka.io/) actors on the JVM, web UIs in the browser via [Scala.js](http://Scala.js), or custom silicon chips via [Chisel](https://www.chisel-lang.org/), Scala’s safety and convenience is why people choose the language.
+Whether you are building a backend service using [Akka](https://akka.io/) actors on the JVM, web UIs in the browser via [Scala.js](https://www.scala-js.org/), or custom silicon chips via [Chisel](https://www.chisel-lang.org/), Scala’s safety and convenience is why people choose the language.
 
 Other languages are also pursuing these goals, but we believe that Scala delivers better than most: its type system, pattern matching, collections library, multiple-inheritance system, etc. are all best-in-class even if other languages have their own offerings.
 So it is possible to simply execute and combine features better than others do, with a design that unifies these features in a clean and principled way instead of grafting them on ad-hoc.
