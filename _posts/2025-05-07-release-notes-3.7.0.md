@@ -72,10 +72,10 @@ Named tuples are a convenient lightweight way to return multiple results from a 
   .foreach(println)
   
   val measurements = List[(location: String, value: Double)](
- ("Lousanne",  8.05),
- ("London",      21),
- ("Rome",      37.0),
- )
+    ("Lousanne",  8.05),
+    ("London",      21),
+    ("Rome",      37.0),
+  )
   val average = measurements.map(_.value).sum / measurments.size
 ```
 
