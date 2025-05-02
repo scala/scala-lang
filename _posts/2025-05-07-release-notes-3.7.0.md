@@ -230,21 +230,21 @@ Starting with Scala 3.7 the expression compiler has been migrated to the main [s
 
 ### Presentation Compiler: Show inferred type on holes in hover [#21423](https://github.com/scala/scala3/pull/21423)
 
-The presentation compiler is a specialized instance of the Scala compiler that runs interactively in IDEs or LSPs, providing immediate feedback about code correctness, type checking, symbol resolution, autocompletion, error highlighting, and other editing support functionalities.
-Some of the latest improvements to the presentation compiler focus on the ability to infer more information about expected types of expressions provided by the users. As the results presented compiler can now show the users the expected type of expression when hovering over holes.
+The presentation compiler is a specialized instance of the Scala compiler that runs interactively and can be used by IDEs or language servers such as Metals. It provides immediate feedback about code correctness, type checking, symbol resolution, autocompletion, error highlighting, and other editing support functionalities.
+Some of the latest improvements to the presentation compiler focus on the ability to infer more information about expected types of expressions provided by the users. As a result, presentation compiler can now show the users the expected type of expression when hovering over so called `type holes`.
 
 ```scala
 def someMethod(count: Int, label: String): Unit = ???
 someMethod(???, ???)
 ```
 
-Given the code snippet above hovering on the first placeholder would now provide information for Metals that `Int` is required, similarlly hovering on second `???` placehold would result in hint about missing argument of `String` type.
+Given the code snippet above hovering on the first placeholder would now provide information for Metals that `Int` is required, similarly hovering on second `???` placeholder would result in hint about missing argument of `String` type.
 
 ### Quotes API changes
 
-Scala 3.7 introduces changes to the experimental subset of Quotes API. One notable addition is the `apply` methods to import selectors ([#22457](https://github.com/scala/scala3/pull/22457)), simplifying the construction of import statements within macros. This feature streamlines the generation of import trees, making macro code more concise and readable.​
+Scala 3.7 introduces changes to the experimental subset of Quotes API. One notable addition is the `apply` methods to import selectors ([#22457](https://github.com/scala/scala3/pull/22457)), allowing to dynamically construct import statements within macros. This feature can be especially useful when summoning implicit instances in the generated code, as it allows to add additional instances to the search​.
 
-Another advancement is the experimental `summonIgnoring` method ([#22417](https://github.com/scala/scala3/pull/22417)). It allows developers to summon implicit instances while excluding specific instances of givens from the search. It's particularly useful in complex derivation scenarios where certain implicit should be disregarded to prevent conflicts or unintended resolutions.​ It might be used to provide a custom implementation of macro only in cases where a user-defined variant of implicit is defined.
+Another advancement is the experimental `summonIgnoring` method ([#22417](https://github.com/scala/scala3/pull/22417)). It allows developers to summon implicit instances while excluding specific instances of givens from the search. It's particularly useful in complex derivation scenarios where certain implicit should be disregarded to prevent conflicts or unintended resolutions.​ It might be used to provide a custom implementation of macro only in cases where a user-defined variant of implicit is available, while avoiding recursively re-calling the macro method.
 
 ```scala
 //> using options -experimental
@@ -282,7 +282,7 @@ object Show {
 }
 ```
 
-Furthermore, the `Quotes.newClass` method has been extended to support class parameters, flags, privateWithin, and annotations ([#21880](https://github.com/scala/scala3/pull/21880)). This enhancement enables the dynamic creation of classes with constructors, access modifiers, and annotations, providing greater control over generated code structures.
+Furthermore, the experimental `Symbol.newClass` method has been extended to support class parameters, flags, privateWithin, and annotations ([#21880](https://github.com/scala/scala3/pull/21880)). This enhancement enables the dynamic creation of classes with constructors, access modifiers, and annotations, providing greater control over generated code structures. With those changes included, we are planning to stabilize this method (and `ClassDef.apply`) soon.
 
 ### Improvements to `-Wunused` and `-Wconf` [#20894](https://github.com/scala/scala3/pull/20894)
 
