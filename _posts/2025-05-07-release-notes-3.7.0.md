@@ -333,6 +333,7 @@ def givenBased(using Config) = ???
 ```
 
 Scala 3.7 provides an automated migration path for existing codebases through the compiler flags -rewrite -source:3.7-migration, which automatically inserts the recommended `using` keywords, streamlining the transition to the new syntax.
+Users of Scala 2 can introduce the `using` syntax at callsite into their codebase as well. The implicit based example above would successfully compile when using at least Scala 2.12.17 or Scala 2.13.9 without any additional flags.
 
 ### Scala 3 unblocked on Android [#22632](https://github.com/scala/scala3/pull/22632)
 
