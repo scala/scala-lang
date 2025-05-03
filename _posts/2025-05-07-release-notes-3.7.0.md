@@ -13,11 +13,13 @@ We're excited to announce the release of Scala 3.7.0 — a significant minor rel
 
 ## Stabilised SIPs
 
+The [Scala Improvement Process (SIP)](https://docs.scala-lang.org/sips/) is how language changes and additions are made.
+
 ### [SIP-52: Binary APIs](https://docs.scala-lang.org/sips/binary-api.html)
 
-Scala 3.7.0 stabilizes the @publicInBinary annotation, introduced experimentally in Scala 3.4. This annotation ensures binary compatibility when inline methods access non-public members and prevent generation of redundant accessors required by inlining mechanism.
+For library maintainers, Scala 3.7.0 stabilizes the `@publicInBinary` annotation, introduced experimentally in Scala 3.4. This annotation ensures binary compatibility when inline methods access non-public members and prevent generation of redundant accessors required by inlining mechanism.
 
-Inline methods are always inlined at their call sites. If they refer to members not visible outside their defining scope, the compiler generates accessor methods. The accessors are not subject to binary compatibility, these might be emitted differently by newer versions of compiler or eventually removed.
+Inline methods are always inlined at their call sites. If they refer to members not visible outside their defining scope, the compiler generates accessor methods. The accessors are not subject to binary compatibility; they might be emitted differently by newer versions of compiler or eventually removed.
 The `@publicInBinary` annotation addresses this by emitting those members as public in bytecode, while maintaining restricted source-level visibility.
  This allows the compiler to refer to the original non-private member without the need to create additional accessors.
 
@@ -65,7 +67,6 @@ Named tuples are a convenient lightweight way to return multiple results from a 
   List(
     (x = 1, y = 0),
     (x = 2, y = 3),
-    (    3,     0),
   ).partitionBy:
     case (x = x, y = 0) => x < 5
   .matching.map(_.x)
@@ -79,20 +80,16 @@ Named tuples are a convenient lightweight way to return multiple results from a 
   val average = measurements.map(_.value).sum / measurments.size
 ```
 
-What's more, this feature also enhances other existing features - it is now possible to match on subset of case class fields by referring to its fields by name. By doing so you no longer need to specify a long list of wildcard selectors for each field of a large case class.
+What's more, this feature also enhances existing features. For example, it is now possible to match on a subset of case class fields by name. By doing so you no longer need to specify a long list of wildcard selectors for each field of a large case class.
 
 ```scala
 @main def selectiveClassExtractors = 
-  type Timestamp = Long
-  type OrderId = String
-  type ItemId = Long
-
   case class Order(
-    id: OrderId,
-    createdAt: Timestamp,
-    shippedAt: Option[Timestamp] = None,
-    deliveredAt: Option[Timestamp] = None,
-    itemIds: List[ItemId] = Nil
+    id: String,
+    createdAt: OffsetDateTime,
+    shippedAt: Option[OffsetDateTime] = None,
+    deliveredAt: Option[OffsetDateTime] = None,
+    itemIds: List[String] = Nil
   )
   
   val orders = List.empty[Order]
@@ -101,7 +98,7 @@ What's more, this feature also enhances other existing features - it is now poss
     case Order(id = orderId, itemIds = items) if items.size > 5 => orderId
 ```
 
-Last, but not least, named tuples are opening a new paradigm of metaprogramming by letting you compute structural types without the need for macros!
+Last, but not least, named tuples are opening a new technique in metaprogramming by letting you compute structural types without the need for macros!
 The `Selectable` trait now has a `Fields` type member that can be instantiated to a named tuple.
 
 ```scala
@@ -118,23 +115,21 @@ case class Release(version: String, issues: List[String])
   assert(query.issues.isEmpty)
 ```
 
-## Preview SIPs
+## Preview features
 
-### Preview features
+Scala 3.7 introduces the concept of `preview` features — fully implemented and SIP-approved, but potentially subject to small refinements before becoming stable.
+New Scala language features or standard library APIs are initially introduced as experimental, but once they become fully implemented and accepted by the [SIP](https://docs.scala-lang.org/sips/) these can become a "preview" feature.
 
-Scala 3.7 introduces the concept of `preview` features — fully implemented and SIP-approved, but potentially subject to small refinements.
-New Scala language features or standard library APIs are initially introduced as experimental, but once they become fully implemented and accepted by the [SIP](https://docs.scala-lang.org/sips/) these can become a `preview` feature.
+Preview language features and APIs are guaranteed to be standardized in some future Scala minor release, but allow the compiler team to introduce small, possibly binary incompatible, changes based on community feedback.
+These can be used by early adopters who can accept the possibility of binary compatibility breakage. For instance, preview features could be used in an application or internal tool. On the other hand, preview features are discouraged in publicly available libraries.
 
-Preview language features and APIs are guaranteed to be standardized in some next Scala minor release, but allow the compiler team to introduce small, possibly binary incompatible, changes based on the community feedback.
-These can be used by early adopters who can accept the possibility of binary compatibility breakage. For instance, preview features could be used in some internal tool or application. On the other hand, preview features are discouraged in publicly available libraries.
-
-All preview features can be enabled using `-preview` flag passed to the compiler. More information about preview features can be found in [preview definitions guide](https://docs.scala-lang.org/scala3/reference/preview/overview.html)
+All preview features can be enabled together using the new `-preview` compiler option. More information about preview features can be found in [preview definitions guide](https://docs.scala-lang.org/scala3/reference/preview/overview.html)
 
 ### [SIP-62: For comprehension improvements](https://docs.scala-lang.org/sips/better-fors.html)
 
-The first introduced preview feature is [SIP-62 - `Better Fors`](https://docs.scala-lang.org/sips/better-fors.html) originally introduced in Scala 3.6 as an experimental.
-A major user-facing improvement introduced by this SIP is the ability to start a for-comprehension block with aliases.
-It also introduces changes to how your code is desugared by the compiler, leading to a more optimized code by removing some redundant calls.
+The first preview feature is [SIP-62 - `Better Fors`](https://docs.scala-lang.org/sips/better-fors.html), originally added to Scala 3.6 as experimental.
+A major user-facing improvement introduced by this SIP is the ability to start a for-comprehension block with assignment (for example, `a = 1`).
+It also introduces changes to how some `for` comprehensions are desugared by the compiler, avoiding redundant calls, for better code.
 
 ```scala
 //> using options -preview
@@ -143,19 +138,38 @@ It also introduces changes to how your code is desugared by the compiler, leadin
   for
     a = 1
     b <- Some(2)
-    c <- Option.when(a < 5)(10)
-  yield b * c
+    c = a * b
+  yield c
+```
+
+The code above previously required `a` to be defined outside the for-comprehension block. Additionally, it was introducing redundant allocations and method calls to correctly handle possible `if` guards. In result it would have desugared to following code:
+
+```Scala 
+  Some(2)
+  .map { b => 
+    val c = a * b
+    (b, c)
+  }.map { case (b, c) => c }
+```
+
+With SIP-52 the same snippet would be desugared to simpler and more efficent code:
+
+```Scala
+  Some(2).map { b =>
+    val c = a * b
+    c
+  }
 ```
 
 We encourage users to try out this feature which is likely going to be stabilised in Scala 3.8.
 
-## New experimental SIPs
+## New experimental features
 
 ### [SIP-61: Unroll Default Arguments for Binary Compatibility](https://docs.scala-lang.org/sips/unroll-default-arguments.html)
 
-Scala case classes were for a long time avoided when defining a public API since each change to the list of their fields affected their binary compatibility. This was typically observed whenever a new field was added to the case class primary constructor, even if it was defined with a default value to resolve source compatibility problems. Even though binary compatibility issues were typically detected when using [MiMa](https://github.com/lightbend/mima), you were still required to manually create shim methods to match the old signatures of the methods.
+Some library maintainers have long avoided case classes in public APIs, since any change to their fields affected binary compatibility. This was typically observed whenever a new field was added to the case class primary constructor, even if it was defined with a default value to resolve source compatibility problems. Though such binary incompatibilities were detected by [MiMa](https://github.com/lightbend/mima), avoiding them required manually creating shim methods to match the old signatures.
 
-The `@unroll` annotation is going to eliminate this long-standing issue. This annotation lets you add additional parameters to method `def`s, `class` constructors, or `case class`es, without breaking binary compatibility. `@unroll` works by generating “unrolled” or “telescoping” forwarders, ensuring your code will maintain binary compatibility as new default parameters and fields are added over time.
+The `@unroll` annotation will eliminate this long-standing issue. This annotation lets you add additional parameters to method `def`s, `class` constructors, or `case class`es, without breaking binary compatibility. `@unroll` works by generating unrolled or “telescoping” forwarders, ensuring your code will remain binary compatible as new default parameters and fields are added over time.
 
 ```scala
 //> using scala 3.7
@@ -189,9 +203,9 @@ More details can be found in [`@unroll` reference](https://docs.scala-lang.org/s
 
 ### [SIP-68: Reference-able Package Objects](https://github.com/scala/improvement-proposals/pull/100)
 
-One limitation with `package object`s is that we cannot currently assign them to values directly even though it is possible for normal `object`s. The workaround is to use a special ".`package`" accessor, but this is ugly and non-obvious. Or one could use a normal `object`, which is not always possible.
+One limitation with `package object`s is that we cannot directly refer to them as values, even though that is possible for normal `object`s. Such references can already be made with a special ".`package`" accessor, but this is ugly and non-obvious. Or one could use a normal `object`, which is not always possible.
 
-SIP-68: Reference-able Package Object drops this limitation, by automatically referring to package object value whenever it's assigned to a variable.
+The SIP drops this limitation, allowing such direct references.
 
 ```scala
 //> using scala 3.7
@@ -206,31 +220,31 @@ package object releases:
 @main def referencablePkgObject = 
   val versions = my.pkg.releases
   val oldStyle = my.pkg.releases.`package`
-  println(versions.`3.7`)
+  println(versions eq oldStyle) // prints true
 ```
 
-For more details visit the [reference page](https://docs.scala-lang.org/scala3/reference/experimental/package-object-values.html) of this feature.
+For more details visit the [reference page](https://docs.scala-lang.org/scala3/reference/experimental/package-object-values.html) for this feature.
 
 ## Other notable changes
 
 ### New scheme for given prioritization
 
-In the [Scala 3.5.0 release notes](https://scala-lang.org/blog/2024/08/22/scala-3.5.0-released.html) we've announced upcoming changes to givens, due to their peculiar problem with prioritization. Under the old rules, the compiler always tried to select the instance with the most specific subtype of the requested type. Under the new rules, it would change to always selecting the instance with the most general subtype that satisfies the context-bound.
-Starting from Scala 3.7 compiled would use the new behaviour by default.
+In the [Scala 3.5.0 release notes](https://scala-lang.org/blog/2024/08/22/scala-3.5.0-released.html) we announced upcoming changes to givens, to improve their prioritization. Under the old rules, the compiler always tried to select the instance with the most specific subtype of the requested type. Under the new rules, it always selects the instance with the most general subtype that satisfies the context bound.
+Starting with Scala 3.7, the compiler uses the new behavior by default.
 Running the compiler with `-source:3.5` will allow you to temporarily keep using the old rules.
 Under `-source:3.7-migration`, code whose behaviour differs between new and old rules (ambiguity on new, passing on old, or vice versa) will emit warnings, but the new rules will still be applied.
 
-For the detailed motivation of changes with examples of code that will be easier to write and understand, see our recent blog post - [Upcoming Changes to Givens in Scala 3.7]({{ site.baseurl }}/2024/08/19/given-priority-change-3.7.html).
+For detailed motivation of the changes, with examples of code that will be easier to write and understand, see our 2024 blog post - [Upcoming Changes to Givens in Scala 3.7]({{ site.baseurl }}/2024/08/19/given-priority-change-3.7.html).
 
 ### Expression Compiler is now part of Scala 3 compiler [#22597](https://github.com/scala/scala3/pull/22597)
 
 The expression compiler powers the debug console in Metals and the IntelliJ Scala plugin, enabling the evaluation of arbitrary Scala expressions at runtime (even macros). The expression compiler produces class files that can be loaded by tooling to compute the evaluation output.
 Previously expression compiler was developed independently from the Scala compiler inside [scalacenter/scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) repository and was cross-published for every Scala release.
-Starting with Scala 3.7 the expression compiler has been migrated to the main [scala/scala3](https://github.com/scala/scala3) repository and become an integral part of Scala toolchain. This change would allow users to use expression compiler with nightly versions of the compiler as well and it would ease the maintenance and releasing process for the compiler team.
+Starting with Scala 3.7 the expression compiler has been migrated to the main [scala/scala3](https://github.com/scala/scala3) repository and become an integral part of Scala toolchain. This change allows users to use the expression compiler with nightly versions of the compiler as well, easing the maintenance and release process for the compiler team.
 
 ### Presentation Compiler: Show inferred type on holes in hover [#21423](https://github.com/scala/scala3/pull/21423)
 
-The presentation compiler is a specialized instance of the Scala compiler that runs interactively and can be used by IDEs or language servers such as Metals. It provides immediate feedback about code correctness, type checking, symbol resolution, autocompletion, error highlighting, and other editing support functionalities.
+The presentation compiler is a special mode of the Scala compiler that runs interactively and is used by IDEs and language servers such as Metals. It provides immediate feedback about code correctness, type checking, symbol resolution, autocompletion, error highlighting, and other editing support functionalities.
 Some of the latest improvements to the presentation compiler focus on the ability to infer more information about expected types of expressions provided by the users. As a result, presentation compiler can now show the users the expected type of expression when hovering over so called `type holes`.
 
 ```scala
@@ -238,7 +252,7 @@ def someMethod(count: Int, label: String): Unit = ???
 someMethod(???, ???)
 ```
 
-Given the code snippet above hovering on the first placeholder would now provide information for Metals that `Int` is required, similarly hovering on second `???` placeholder would result in hint about missing argument of `String` type.
+Given the code snippet above, hovering on either placeholder will hint about the expected type (`Int` and `String`, respectively).
 
 ### Quotes API changes
 
@@ -300,7 +314,7 @@ These improvements collectively provide developers with more precise and configu
 
 ### Implicit parameters now warn at call site without `using` keyword [#22441](https://github.com/scala/scala3/pull/22441)
 
-As part of Scala's ongoing migration from the older implicit syntax to the newer, clearer given and using syntax, Scala 3.7 introduces a change regarding method calls involving implicit parameters. Now, explicitly providing arguments to methods defined with implicit parameters without the `using` keyword emits a compiler warning at the call site. This adjustment reduces ambiguity inherent in Scala 2 syntax, where it was unclear whether an explicitly provided argument was intended for an implicit parameter or for the apply method of the resulting object.
+As part of Scala's ongoing migration from `implicit` to the newer, clearer `given` and `using`, Scala 3.7 introduces a change regarding method calls involving implicit parameters. Now, explicitly providing arguments to methods defined with `implicit` warns if the call site doesn't say `using`. This adjustment reduces ambiguity inherent in Scala 2 syntax, where it was unclear whether an explicitly provided argument was intended for an implicit parameter or for the apply method of the resulting object.
 
 ```scala
 trait Config
@@ -322,13 +336,13 @@ Scala 3.7 provides an automated migration path for existing codebases through th
 
 ### Scala 3 unblocked on Android [#22632](https://github.com/scala/scala3/pull/22632)
 
-Scala 3.7 brings a crucial fix that enhances its compatibility with the Android platform. Previously, developers faced issues when compiling Scala 3 code for Android due to the Android Runtime (ART) enforcing stricter type constraints on lambda expressions compared to the standard Java Virtual Machine (JVM). Specifically, ART requires that the return type of a Single Abstract Method (SAM) interface be a primitive type or explicitly boxed, a condition not mandated by the JVM.​
+Scala 3.7 brings a crucial fix that enhances its compatibility with the Android platform. Previously, developers faced issues when compiling Scala 3 code for Android due to the Android Runtime (ART) enforcing stricter type constraints on lambdas than the standard Java Virtual Machine (JVM). Specifically, ART requires that the return type of a Single Abstract Method (SAM) interface be a primitive type or explicitly boxed, a condition not mandated by the JVM.​
 
 The update addresses this by modifying the Scala compiler to box the return type of native instantiated methods when the SAM's return type isn't primitive. This change ensures that lambda expressions conform to ART's expectations, preventing runtime errors on Android devices. By aligning the compiler's behaviour with ART's requirements, the Scala 3 development for the Android platform should be unblocked, although it might require recompiling existing libraries using Scala 3.7 or the upcoming Scala 3.3 LTS version containing a backported fix.
 
-### Minimal support for dependent case classes [#21698](https://github.com/scala/scala3/pull/21698)
+### Support for dependent case classes [#21698](https://github.com/scala/scala3/pull/21698)
 
-Starting with Scala 3.7, developers can now define case classes with dependent fields, marking a notable improvement in expressiveness and type safety. This allows fields within a case class to depend on other constructor parameters via path-dependent types. One use case is encoding a configuration system where each setting has a distinct value type determined by the setting itself.
+Case classes may now have dependent fields, improving expressiveness and type safety. This allows fields within a case class to depend on other constructor parameters via path-dependent types. One use case is encoding a configuration system where each setting has a distinct value type determined by the setting itself.
 
 ```scala
 case class ConfigEntry(option: Setting, default: option.Value):
@@ -360,7 +374,7 @@ This enhancement simplifies type-safe heterogeneous collections and makes it eas
 
 #### Scala 2 Standard Library
 
-Scala 3 now defaults to the [Scala 2.13.16](https://github.com/scala/scala/releases/tag/v2.13.16) Standard Library. Be mindful of breaking changes and deprecations introduced since 2.13.15:
+Scala 3 now uses the [Scala 2.13.16](https://github.com/scala/scala/releases/tag/v2.13.16) standard library. Be mindful of these breaking changes and deprecations since 2.13.15:
 
 * On the empty string, `.tail` and `.init` now throw (instead of returning the empty string) [#10851](https://github.com/scala/scala/pull/10851)
 * Do not use `rangeHash` when `rangeDiff` is 0 [#10912](https://github.com/scala/scala/pull/10912)
@@ -383,8 +397,8 @@ Please refer to Scala.js changelogs for more details:
 
 #### Scala CLI
 
-Scala runner has been updated and uses now Scala CLI 1.7.1.
-The new Scala runner uses `scalafmt` binaries built using Scala Native for `fmt` subcommand, this change can improve the performance of formatting Scala sources. It also includes experimental support for running `scalafix` rules using `scala fix` subcommand.
+The Scala runner has been updated to Scala CLI 1.7.1.
+The new Scala runner uses `scalafmt` binaries built using Scala Native for `fmt` subcommand. This change can improve the performance of formatting Scala sources. It also includes experimental support for running `scalafix` rules using `scala fix` subcommand.
 
 Please refer to Scala CLI changelogs for more details:
 
@@ -395,9 +409,9 @@ Please refer to Scala CLI changelogs for more details:
 
 # What’s next?
 
-With the final release of Scala 3.7.0, the first patch version—Scala 3.7.0-RC1—has already been made available. This release includes additional fixes and improvements introduced after the branch cutoff.
+With the final release of Scala 3.7.0, the first patch version—Scala 3.7.1-RC1—has already been made available. This release includes additional fixes and improvements introduced after the branch cutoff.
 
-Looking ahead, you can expect two more patch releases before Scala 3.8, which is scheduled for release in September this year. The goal for Scala 3.8 is to be the last minor version before the next Long-Term Support (LTS) release, Scala 3.9, which is planned for early next year.
+Looking ahead, you can expect at least two more patch releases before Scala 3.8, which is scheduled for September 2025. The goal for Scala 3.8 is to be the last minor version before the next Long-Term Support (LTS) release, Scala 3.9, which is planned for early 2026.
 
 The Scala compiler team aims to finalize all major changes in 3.8, followed by a soft feature freeze and a stabilization period. This ensures a smooth transition for users and maximizes the stability of the compiler and tooling ecosystem ahead of the LTS release.
 
