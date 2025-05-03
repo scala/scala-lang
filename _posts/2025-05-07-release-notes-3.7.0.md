@@ -383,12 +383,8 @@ Scala 3 now uses the [Scala 2.13.16](https://github.com/scala/scala/releases/tag
 
 #### Scala.js
 
-Scala.js has been updated from version 1.16.0 to 1.19.0. Libraries published using Scala 3.7 must use Scala.js 1.19.0 or later. Key improvements include:
-
-* Native support for JavaScript `async/await`, through `js.async { ... }` and `js.await(...)`
-* Small code size improvements for the JavaScript target when using SAM lambdas.
-* For Wasm only: support for the JavaScript Promise Integration feature (JSPI).
-
+Scala.js has been updated from version 1.16.0 to 1.19.0.
+Libraries published using Scala 3.7 must use Scala.js 1.19.0 or later.
 Please refer to Scala.js changelogs for more details:
 
 * [Scala.js 1.17.0](https://www.scala-js.org/news/2024/09/28/announcing-scalajs-1.17.0)
