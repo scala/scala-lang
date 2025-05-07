@@ -237,13 +237,13 @@ Under `-source:3.7-migration`, code whose behaviour differs between new and old 
 
 For detailed motivation of the changes, with examples of code that will be easier to write and understand, see our 2024 blog post - [Upcoming Changes to Givens in Scala 3.7]({{ site.baseurl }}/2024/08/19/given-priority-change-3.7.html).
 
-### Expression Compiler is now part of Scala 3 compiler [#22597](https://github.com/scala/scala3/pull/22597)
+### Expression Compiler is now part of Scala 3 compiler ([#22597](https://github.com/scala/scala3/pull/22597))
 
 The expression compiler powers the debug console in Metals and the IntelliJ Scala plugin, enabling the evaluation of arbitrary Scala expressions at runtime (even macros). The expression compiler produces class files that can be loaded by tooling to compute the evaluation output.
 Previously expression compiler was developed independently from the Scala compiler inside [scalacenter/scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) repository and was cross-published for every Scala release.
 Starting with Scala 3.7 the expression compiler has been migrated to the main [scala/scala3](https://github.com/scala/scala3) repository and become an integral part of Scala toolchain. This change allows users to use the expression compiler with nightly versions of the compiler as well, easing the maintenance and release process for the compiler team.
 
-### Presentation Compiler: Show inferred type on holes in hover [#21423](https://github.com/scala/scala3/pull/21423)
+### Presentation Compiler: Show inferred type on holes in hover ([#21423](https://github.com/scala/scala3/pull/21423))
 
 The presentation compiler is a special mode of the Scala compiler that runs interactively and is used by IDEs and language servers such as Metals. It provides immediate feedback about code correctness, type checking, symbol resolution, autocompletion, error highlighting, and other editing support functionalities.
 Some of the latest improvements to the presentation compiler focus on the ability to infer more information about expected types of expressions provided by the users. As a result, presentation compiler can now show the users the expected type of expression when hovering over so called `type holes`.
@@ -299,7 +299,7 @@ object Show {
 
 Furthermore, the experimental `Symbol.newClass` method has been extended to support class parameters, flags, privateWithin, and annotations ([#21880](https://github.com/scala/scala3/pull/21880)). This enhancement enables the dynamic creation of classes with constructors, access modifiers, and annotations, providing greater control over generated code structures. With those changes included, we are planning to stabilize this method (and `ClassDef.apply`) soon.
 
-### Improvements to `-Wunused` and `-Wconf` [#20894](https://github.com/scala/scala3/pull/20894)
+### Improvements to `-Wunused` and `-Wconf` ([#20894](https://github.com/scala/scala3/pull/20894))
 
 Scala 3.7 introduces a significant enhancement to its linting mechanism by revamping the `CheckUnused` compiler phase. Previously, developers encountered false-positive warnings when importing givens, particularly when they were defined in shared traits across multiple objects. This issue often led to unnecessary code restructuring or the disabling of linting checks.​
 
@@ -313,7 +313,7 @@ Changes also enhance the `-Wconf` option to allow origin-based filtering `-Wconf
 
 These improvements collectively provide developers with more precise and configurable linting tools, enhancing code quality and maintainability.​
 
-### Implicit parameters now warn at call site without `using` keyword [#22441](https://github.com/scala/scala3/pull/22441)
+### Implicit parameters now warn at call site without `using` keyword ([#22441](https://github.com/scala/scala3/pull/22441))
 
 As part of Scala's ongoing migration from `implicit` to the newer, clearer `given` and `using`, Scala 3.7 introduces a change regarding method calls involving implicit parameters. Now, explicitly providing arguments to methods defined with `implicit` warns if the call site doesn't say `using`. This adjustment reduces ambiguity inherent in Scala 2 syntax, where it was unclear whether an explicitly provided argument was intended for an implicit parameter or for the apply method of the resulting object.
 
@@ -336,13 +336,13 @@ def givenBased(using Config) = ???
 Scala 3.7 provides an automated migration path for existing codebases through the compiler flags -rewrite -source:3.7-migration, which automatically inserts the recommended `using` keywords, streamlining the transition to the new syntax.
 Users of Scala 2 can introduce the `using` syntax at callsite into their codebase as well. The implicit based example above would successfully compile when using at least Scala 2.12.17 or Scala 2.13.9 without any additional flags.
 
-### Scala 3 unblocked on Android [#22632](https://github.com/scala/scala3/pull/22632)
+### Scala 3 unblocked on Android ([#22632](https://github.com/scala/scala3/pull/22632))
 
 Scala 3.7 brings a crucial fix that enhances its compatibility with the Android platform. Previously, developers faced issues when compiling Scala 3 code for Android due to the Android Runtime (ART) enforcing stricter type constraints on lambdas than the standard Java Virtual Machine (JVM). Specifically, ART requires that the return type of a Single Abstract Method (SAM) interface be a primitive type or explicitly boxed, a condition not mandated by the JVM.​
 
 The update addresses this by modifying the Scala compiler to box the return type of native instantiated methods when the SAM's return type isn't primitive. This change ensures that lambda expressions conform to ART's expectations, preventing runtime errors on Android devices. By aligning the compiler's behaviour with ART's requirements, the Scala 3 development for the Android platform should be unblocked, although it might require recompiling existing libraries using Scala 3.7 or the upcoming Scala 3.3 LTS version containing a backported fix.
 
-### Support for dependent case classes [#21698](https://github.com/scala/scala3/pull/21698)
+### Support for dependent case classes ([#21698](https://github.com/scala/scala3/pull/21698))
 
 Case classes may now have dependent fields, improving expressiveness and type safety. This allows fields within a case class to depend on other constructor parameters via path-dependent types. One use case is encoding a configuration system where each setting has a distinct value type determined by the setting itself.
 
@@ -372,6 +372,54 @@ class IntSetting(name: String) extends Setting(name):
 
 This enhancement simplifies type-safe heterogeneous collections and makes it easier to express advanced design patterns previously requiring workarounds or more verbose type definitions.
 
+Be aware of some pattern matching limitations for dependent case classes - the types of the extracted components are currently approximated to their non-dependent upper-bound:  
+
+```scala  
+trait A:  
+  type B <: AnyRef  
+
+case class CC(a: A, b: a.B)  
+object Test:  
+  def foo(cc: CC) = cc match  
+    case CC(a, b) =>  
+      // `a` has type `A`  
+      // `b` has type `AnyRef` instead of the more precise `a.B`  
+```  
+
+### REPL: bring dependencies in with `:jar` ([#22343](https://github.com/scala/scala3/pull/22343))
+
+It is now possible to bring new dependencies to an already running REPL session with the `:jar` command. It is effectively the equivalent of Scala 2’s `:require`.  
+
+For example, for a given simple example:  
+
+```scala
+// example.scala
+object Message:
+  val hello = "Hello"
+```
+
+After packaging it into a JAR:  
+
+```bash  
+scala package example.scala --power --library  
+# Compiling project (Scala 3.7.0, JVM (24))  
+# Compiled project (Scala 3.7.0, JVM (24))  
+# Wrote example.jar  
+```
+
+It's possible to bring it into a running REPL session like this:
+
+```scala  
+Welcome to Scala 3.7.0(23.0.1, Java OpenJDK 64-Bit Server VM).  
+Type in expressions for evaluation. Or try :help.  
+
+scala> :jar example.jar  
+Added 'example.jar' to classpath.  
+
+scala> Message.hello  
+val res0: String = Hello  
+```
+
 ### Dependency updates
 
 #### Scala 2 Standard Library
@@ -396,7 +444,11 @@ Please refer to Scala.js changelogs for more details:
 #### Scala CLI
 
 The Scala runner has been updated to Scala CLI 1.7.1.
-The new Scala runner uses `scalafmt` binaries built using Scala Native for `fmt` subcommand. This change can improve the performance of formatting Scala sources. It also includes experimental support for running `scalafix` rules using `scala fix` subcommand.
+
+Notable changes include:
+
+* The `fmt` sub-command now uses `scalafmt` binaries built with Scala Native. This change can improve the performance of formatting Scala sources.
+* (⚡️ experimental) Support for running `scalafix` rules has been added to the `fix` sub-command.
 
 Please refer to Scala CLI changelogs for more details:
 
@@ -407,7 +459,7 @@ Please refer to Scala CLI changelogs for more details:
 
 # What’s next?
 
-With the final release of Scala 3.7.0, the first patch version—Scala 3.7.1-RC1—has already been made available. This release includes additional fixes and improvements introduced after the branch cutoff.
+With the final release of Scala 3.7.0, the first patch version [3.7.1-RC1](https://github.com/scala/scala3/releases/tag/3.7.1-RC1) has already been made available. This release includes additional fixes and improvements introduced after the branch cutoff.
 
 Looking ahead, you can expect at least two more patch releases before Scala 3.8, which is scheduled for September 2025. The goal for Scala 3.8 is to be the last minor version before the next Long-Term Support (LTS) release, Scala 3.9, which is planned for early 2026.
 
