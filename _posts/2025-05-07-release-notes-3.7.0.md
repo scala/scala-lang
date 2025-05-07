@@ -80,7 +80,7 @@ case class Release(version: String, issues: List[String])
 
 ### [SIP-52: Binary APIs](https://docs.scala-lang.org/sips/binary-api.html)
 
-For library maintainers, Scala 3.7.0 stabilizes the `@publicInBinary` annotation, introduced experimentally in Scala 3.4. This annotation ensures binary compatibility when inline methods access non-public members and prevent generation of redundant accessors required by inlining mechanism.
+For library maintainers, Scala 3.7.0 stabilizes the `@publicInBinary` annotation, introduced experimentally in Scala 3.4. This annotation ensures binary compatibility when inline methods access non-public members and prevents generation of redundant accessors required by inlining mechanism.
 
 Inline methods are always inlined at their call sites. If they refer to members not visible outside their defining scope, the compiler generates accessor methods. The accessors are not subject to binary compatibility; they might be emitted differently by newer versions of compiler or eventually removed.
 The `@publicInBinary` annotation addresses this by emitting those members as public in bytecode, while maintaining restricted source-level visibility.
@@ -271,7 +271,7 @@ trait Show[T]:
   def show(): Unit
 
 object Show {
-  implicit transparent inline def auto[T]: Show[T] = ${ autoImpl[T] }
+  transparent inline given auto[T]: Show[T] = ${ autoImpl[T] }
 
   private def autoImpl[T: Type](using Quotes): Expr[Show[T]] =
     import quotes.reflect.*
