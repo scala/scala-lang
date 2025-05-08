@@ -40,7 +40,7 @@ Named tuples are a convenient lightweight way to return multiple results from a 
     ("London",      21),
     ("Rome",      37.0),
   )
-  val average = measurements.map(_.value).sum / measurments.size
+  val average = measurements.map(_.value).sum / measurements.size
 ```
 
 What's more, this feature also enhances existing features. For example, it is now possible to match on a subset of case class fields by name. By doing so you no longer need to specify a long list of wildcard selectors for each field of a large case class.
