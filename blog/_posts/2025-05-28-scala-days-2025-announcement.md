@@ -24,7 +24,7 @@ Beyond the program, being a part of Scala Days means being in great company. Itâ
 
 **Want to make your daily coding smoother**? Developer experience track (stage 3) offers an in-depth overview of the tooling innovation, language features and programming tips-and-tricks. Hear from your Scala peers all about the real-world techniques and insights or from tooling developers on how to help enhance your favorite tools and much more. This track is ideal for anyone who wants to get more done in less time, or for those simply curious about what's new and cool :)
 
-**Having fun with Scala at work and beyond**? Join the Creative and Mix track (stage 4) to explore further industry case studies, tooling talks, and let yourself be surprised by all the ways Scala can be fun beside coding for work.
+**Having fun with Scala at work and beyond**? Join the Creative and Mix track (stage 4) to explore further industry case studies, tooling talks, and let yourself be surprised by all the ways Scala can be fun besides coding for work.
 
 ## Beyond the program
 
