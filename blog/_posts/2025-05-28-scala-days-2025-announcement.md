@@ -13,6 +13,7 @@ Beyond the program, being a part of Scala Days means being in great company. Itâ
 > **Quick note:**
 > 1. Thereâ€™s a small window to buy your tickets at the Early Bird price while the program is announced. Standard price starts on 30th May.
 > 2. The program is still subject to minor adjustment, due to speaker slot movements, ongoing confirmations, and alike.
+> 3. If you have noticed any bugs, typos, other inconsistencies at the scaladays.org website, please report them to info@scaladays.org, or open a PR to the [website repo](https://github.com/scaladays/scaladays.org).
 
 ## About the program
 
