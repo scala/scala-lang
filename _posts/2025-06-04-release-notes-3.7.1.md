@@ -5,7 +5,7 @@ title: "Scala 3.7.1 is now available!"
 ---
 Scala 3.7.1 is now available!
 
-The first patch release of Scala 3.7 series introduces multiple bug-fixes, reduces ammount of false-positive in linters and adds support new version of the JDK.
+The first patch release of Scala 3.7 series introduces multiple bug-fixes, reduces the amount of false-positives in linters and adds support for a new version of the JDK.
 
 # Highlights of the release
 
