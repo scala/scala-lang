@@ -124,7 +124,7 @@ You can also use the Scala CLI GitHub action to set that automatically:
 The Scala Center is the Scala language foundation coordinating Scala governance, community, education, and open source development.
 The Center contributes to the core language and to open source Scala tooling and libraries, and it delivers high-quality education materials.
 It fosters conversations in the community and coordinates with various parties to unblock and improve the Scala ecosystem.
-Joining the Center'’'s Advisory Board is an effective way to participate in Scala governance and have your voice heard, as well as supporting the Center to achieve its goals.
+Joining the Center's Advisory Board is an effective way to participate in Scala governance and have your voice heard, as well as supporting the Center to achieve its goals.
 
 For more information:
 
