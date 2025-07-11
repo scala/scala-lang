@@ -1,15 +1,25 @@
 <div class="scala-days-sponsors-bar">
+  <!-- Static Platinum Sponsors Row -->
+  <div class="sponsors-static-row">
+    {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+      {% if sponsor.type == 'Platinum' %}
+        <a href="{{ sponsor.url }}" class="sponsor-logo-link-platinum" target="_blank" rel="noopener">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo-platinum" />
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <!-- Scrolling Track for Non-Platinum Sponsors -->
   <div class="sponsors-carousel">
-    <div class="sponsors-track">
+    <div class="sponsors-track" id="sponsors-track">
+      {% for i in (1..10) %}
       {% for sponsor in site.data.scala-days-sponsors.sponsors %}
-        <a href="{{ sponsor.url }}" class="sponsor-logo-link" target="_blank" rel="noopener">
-          <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo" />
-        </a>
+        {% unless sponsor.type == 'Platinum' %}
+          <a href="{{ sponsor.url }}" class="sponsor-logo-link" target="_blank" rel="noopener">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo" />
+          </a>
+        {% endunless %}
       {% endfor %}
-      {% for sponsor in site.data.scala-days-sponsors.sponsors %}
-        <a href="{{ sponsor.url }}" class="sponsor-logo-link" target="_blank" rel="noopener">
-          <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo" />
-        </a>
       {% endfor %}
     </div>
   </div>
