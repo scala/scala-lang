@@ -1,0 +1,115 @@
+// COUNT DOWN FOR SCALA DAYS 2025
+//------------------------------------------------
+//------------------------------------------------
+
+#countdown-clock-2025 {
+  width: 100%;
+  min-height: 120px;
+  background: #1793b1 url("/resources/img/scala-logo-large.svg") no-repeat center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2em auto;
+  overflow: hidden;
+}
+
+.countdown-content {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2em 1.5em 1.2em 1.5em;
+}
+
+.countdown-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 0;
+  z-index: 2;
+}
+
+.countdown-register-btn {
+  display: inline-block;
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.4em 1.5em;
+  border-radius: 2px;
+  margin-bottom: 0.7em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.countdown-register-btn:hover {
+  background: #fff;
+  color: #c32d1c;
+}
+
+.countdown-heading {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.countdown-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 0;
+  z-index: 2;
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 1.5em;
+}
+
+.countdown-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.countdown-label {
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 0.1em;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 900px) {
+  .countdown-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0.5em;
+  }
+  .countdown-left, .countdown-right {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .countdown-timer {
+    gap: 0.7em;
+  }
+  .countdown-heading {
+    font-size: 1em;
+  }
+  .countdown-value {
+    font-size: 1.3em;
+  }
+}

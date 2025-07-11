@@ -41,6 +41,8 @@
           </ul>
         </nav>
       </div>
+      {% include scala-days-countdown.html %}
+      {% include scala-days-announcement.html %}
       <div class="wrap flex-row-align-end">
         <!-- Inner Text -->
         <div class="col-lg-6">
@@ -53,7 +55,7 @@
               {% if release.category == 'current_version' %}
                 {% if version_slice == '3.' %}
                   {% unless release.title contains "LTS" %}
-                    {% assign scala_next_release = release %}
+                  {% assign scala_next_release = release %}
                   {% endunless %}
                   {% if release.title contains "LTS" %}
                     {% assign scala_lts_release = release %}
@@ -86,6 +88,7 @@
         </div>
       </div>
     </div>
+
     <!-- Scala Main Resources -->
     <div class="scala-main-resources">
       <div class="wrap">
