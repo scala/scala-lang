@@ -1,0 +1,40 @@
+# Sponsors Data
+# ----------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------
+
+sponsorship-types:
+  - title: Platinum
+    icon: img/assets/icon-platinum.svg
+  - title: Gold
+    icon: img/assets/icon-gold.svg
+
+sponsors:
+  - title: VirtusLab
+    type: Platinum
+    logo: /resources/img/scala-days-sponsors/virtuslab.png
+    url: https://virtuslab.com
+
+  - title: Signify Technology
+    type: Platinum
+    logo: /resources/img/scala-days-sponsors/signify.png
+    url: https://signify.com
+
+  - title: Gradle
+    type: Gold
+    logo: /resources/img/scala-days-sponsors/gradle.png
+    url: https://gradle.org
+
+  - title: JetBrains
+    type: Gold
+    logo: /resources/img/scala-days-sponsors/jetbrains.svg
+    url: https://jetbrains.com
+
+  - title: Scalac
+    type: Gold
+    logo: /resources/img/scala-days-sponsors/scalac.svg
+    url: https://scalac.io
+
+  - title: Xebia
+    type: Gold
+    logo: /resources/img/scala-days-sponsors/xebia.svg
+    url: https://xebia.com

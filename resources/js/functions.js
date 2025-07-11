@@ -1,6 +1,3 @@
----
----
-
 // Sliding Panel
 $(document).ready(function() {
     $('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function(e) {
@@ -628,4 +625,23 @@ $(document).ready(function() {
       countdownCalc(deadline2025, '2025');
     }, 60000);
   }
+});
+
+// Seamless infinite scroll for Scala Days sponsors bar (no memory leak, no visible jump)
+document.addEventListener("DOMContentLoaded", function() {
+  var track = document.getElementById('sponsors-track');
+  if (!track) return;
+
+  // Get the width of one set of logos (half the track)
+  var totalWidth = track.scrollWidth / 2;
+  var pos = 0;
+  function animateSponsorsBar() {
+    pos -= 1; // px per frame, adjust for speed
+    if (Math.abs(pos) >= totalWidth) {
+      pos = 0;
+    }
+    track.style.transform = 'translateX(' + pos + 'px)';
+    requestAnimationFrame(animateSponsorsBar);
+  }
+  animateSponsorsBar();
 });

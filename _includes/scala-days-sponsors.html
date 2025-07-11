@@ -1,0 +1,16 @@
+<div class="scala-days-sponsors-bar">
+  <div class="sponsors-carousel">
+    <div class="sponsors-track">
+      {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+        <a href="{{ sponsor.url }}" class="sponsor-logo-link" target="_blank" rel="noopener">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo" />
+        </a>
+      {% endfor %}
+      {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+        <a href="{{ sponsor.url }}" class="sponsor-logo-link" target="_blank" rel="noopener">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo" />
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
