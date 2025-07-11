@@ -76,6 +76,14 @@
   transition: opacity 0.2s;
 }
 
+.sponsors-brought-to-you-by {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
 @keyframes sponsors-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
