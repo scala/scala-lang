@@ -1,0 +1,102 @@
+// SCALA DAYS 2025 SPONSORS
+//------------------------------------------------
+//------------------------------------------------
+
+.scala-days-sponsors-bar {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(30, 40, 50, 0.2);
+  padding: 1em 0;
+  position: relative;
+}
+
+.sponsors-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.sponsors-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  width: max-content;
+  animation: sponsors-scroll 120s linear infinite;
+  will-change: transform;
+}
+
+.sponsor-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 48px;
+  margin: 0 1em;
+  flex: 0 0 auto;
+}
+
+.sponsor-logo {
+  max-height: 40px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: opacity 0.2s;
+  display: block;
+  margin: 0 auto;
+}
+.sponsor-logo-link:hover .sponsor-logo {
+  opacity: 1;
+}
+
+.sponsors-static-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 3em;
+  margin-bottom: 1em;
+}
+
+.sponsor-logo-link-platinum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-logo-platinum {
+  max-height: 80px !important;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: opacity 0.2s;
+}
+
+.sponsors-brought-to-you-by {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+@keyframes sponsors-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 700px) {
+  .sponsor-logo-link {
+    width: 80px;
+    height: 28px;
+    margin: 0 0.5em;
+  }
+  .sponsor-logo {
+    max-height: 24px;
+    max-width: 60px;
+  }
+}
