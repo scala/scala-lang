@@ -1,0 +1,31 @@
+<div class="scala-days-sponsors-bar">
+  <!-- Brought to you by -->
+  <div class="sponsors-brought-to-you-by">
+    Scala Days 2025 is brought to you by:
+  </div>
+
+  <!-- Static Platinum Sponsors Row -->
+  <div class="sponsors-static-row">
+    {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+      {% if sponsor.type == 'Platinum' %}
+        <a href="{{ sponsor.url }}" class="sponsor-logo-link-platinum" target="_blank" rel="noopener">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo-platinum" />
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <!-- Scrolling Track for Non-Platinum Sponsors -->
+  <div class="sponsors-carousel">
+    <div class="sponsors-track" id="sponsors-track">
+      {% for i in (1..10) %}
+      {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+        {% unless sponsor.type == 'Platinum' %}
+          <a href="{{ sponsor.url }}" class="sponsor-logo-link" target="_blank" rel="noopener">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo" />
+          </a>
+        {% endunless %}
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
