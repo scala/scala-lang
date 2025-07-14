@@ -1,3 +1,6 @@
+---
+---
+
 // Sliding Panel
 $(document).ready(function() {
     $('.navigation-panel-button,.navigation-fade-screen,.navigation-panel-close').on('click touchstart', function(e) {
@@ -591,57 +594,4 @@ $(document).ready(function() {
                 trainingPageItemList.append(content);
             });
     }
-});
-
-// Scala Days 2025 Countdown
-$(document).ready(function() {
-  function countdownCalc(deadline, cityName) {
-    var now = new Date().getTime();
-    var t = deadline - now;
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    var dayEl = document.getElementById(cityName + '-day');
-    var hourEl = document.getElementById(cityName + '-hour');
-    var minEl = document.getElementById(cityName + '-minute');
-    if (dayEl && hourEl && minEl) {
-      dayEl.innerHTML = days;
-      hourEl.innerHTML = hours;
-      minEl.innerHTML = minutes;
-    }
-    if (t < 0) {
-      clearInterval(window.scalaDaysCountdownInterval);
-      var clock = document.getElementById('countdown-clock-' + cityName);
-      if (clock) clock.innerHTML = 'Ready!';
-      if (dayEl) dayEl.innerHTML = '0';
-      if (hourEl) hourEl.innerHTML = '0';
-      if (minEl) minEl.innerHTML = '0';
-    }
-  }
-  var deadline2025 = new Date('Aug 19, 2025 09:00:00').getTime();
-  if (document.getElementById('countdown-clock-2025')) {
-    countdownCalc(deadline2025, '2025');
-    window.scalaDaysCountdownInterval = setInterval(function() {
-      countdownCalc(deadline2025, '2025');
-    }, 60000);
-  }
-});
-
-// Seamless infinite scroll for Scala Days sponsors bar (no memory leak, no visible jump)
-document.addEventListener("DOMContentLoaded", function() {
-  var track = document.getElementById('sponsors-track');
-  if (!track) return;
-
-  // Get the width of one set of logos (half the track)
-  var totalWidth = track.scrollWidth / 2;
-  var pos = 0;
-  function animateSponsorsBar() {
-    pos -= 1; // px per frame, adjust for speed
-    if (Math.abs(pos) >= totalWidth) {
-      pos = 0;
-    }
-    track.style.transform = 'translateX(' + pos + 'px)';
-    requestAnimationFrame(animateSponsorsBar);
-  }
-  animateSponsorsBar();
 });
