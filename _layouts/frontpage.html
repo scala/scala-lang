@@ -16,8 +16,6 @@
         </p>
         <span class="hide"><i class="fa fa-close"></i></span>
       </div>
-      {% include scala-days-countdown.html %}
-      {% include scala-days-sponsors.html %}
       <div class="wrap">
         <!-- Navigation -->
         <nav class="navigation" role="menu">
@@ -52,7 +50,7 @@
               {% if release.category == 'current_version' %}
                 {% if version_slice == '3.' %}
                   {% unless release.title contains "LTS" %}
-                  {% assign scala_next_release = release %}
+                    {% assign scala_next_release = release %}
                   {% endunless %}
                   {% if release.title contains "LTS" %}
                     {% assign scala_lts_release = release %}
@@ -85,7 +83,6 @@
         </div>
       </div>
     </div>
-
     <!-- Scala Main Resources -->
     <div class="scala-main-resources">
       <div class="wrap">
