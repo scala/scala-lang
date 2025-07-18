@@ -46,7 +46,7 @@
     {% else %}
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/highlightjs.css" type="text/css" />
     {% endif %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/style.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}" type="text/css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/vendor/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/vendor/monokai.css" type="text/css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/monospace.css" type="text/css" />
@@ -60,4 +60,4 @@
 
     {% if page.canonical %}
     <link rel="canonical" href="{{ page.canonical | absolute_url }}" />
-    {% endif %} 
+    {% endif %}
