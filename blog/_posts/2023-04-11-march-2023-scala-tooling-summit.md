@@ -332,9 +332,8 @@ and comments about how it works, and questions about why it works a certain way.
 Some of the answers to these questions has led scala-cli to fork Bloop resulting
 in 2 bloop servers often running on a user’s machine if they are a Metals user.
 In order to combat this and provide a smoother Bloop experience for all users,
-we discussed what would need to happen in order to merge the fork of Bloop back
-inline. You can follow a thread on this effort
-[here](https://github.com/VirtusLab/scala-cli/issues/1971).
+[we discussed what would need to happen in order to merge the fork of Bloop back
+inline](https://github.com/VirtusLab/scala-cli/issues/1971).
 
 ## What comes next?
 
