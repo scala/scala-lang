@@ -163,7 +163,7 @@ a better integration with sbt and more additions to the standard library.
 The first releases of Scala Native use Boehm GC. A new and improved garbage
 collector has been under development by [@LukasKellenberger][@LukasKellenberger]
 and will be presented at [Scala Days during Denys' talk][denys-talk]. Stay
-tuned for more more details to come soon!
+tuned; more details to come soon!
 
 The pull request introducing the new garbage collector can be found in
 [#726][#726].
