@@ -246,9 +246,8 @@ Both Metals and IntelliJ users have multiple ways to import projects. This could
 be simply choosing your build server in Metals, or choosing to use BSP at all in
 IntelliJ. There are ongoing discussions and work going on in both of these tools
 to make the getting started experience on a project more seamless no matter the
-tool or project. For example you can see the discussion choosing a default build
-server for metals
-[here](https://github.com/scalameta/metals/discussions/4505#discussioncomment-4571546).
+tool or project. For example you can see the [discussion choosing a default build
+server for metals](https://github.com/scalameta/metals/discussions/4505#discussioncomment-4571546).
 
 ### Porting Scalameta to Scala 3
 
