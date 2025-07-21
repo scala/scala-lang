@@ -101,7 +101,7 @@ As the process was new for all of the members and less time was available for
 preparing proposals, we made the concession to allow proposals to be presented
 *at* the meeting (without prior submission), but in future, we will require
 that proposals be submitted to the repository at least a week before the
-meeting to give all the members an opportunity to consider them before meeting.
+meeting to give all members an opportunity to consider them before meeting.
 
 During the first meeting, we also elected Seth Tisue as the secretary, and his
 minutes ~~will be published in the next few days~~ have been published
