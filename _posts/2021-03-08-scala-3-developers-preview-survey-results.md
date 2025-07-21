@@ -104,7 +104,7 @@ with 28.2% Neutral responses being the smallest proportion of answered responses
 
 #### Potential issues with the poll
 In hindsight, we should have requested feedback directly about generic tuples in Scala 3. 
-Otherwise, their excitement can not be judged separately from the utility they bring 
+Otherwise, their excitement cannot be judged separately from the utility they bring 
 to features such as Typeclass Derivation, Match Types, and Inline.
 
 #### Comments From Participants

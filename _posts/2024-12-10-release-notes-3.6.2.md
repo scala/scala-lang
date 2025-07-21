@@ -142,7 +142,7 @@ It also introduces changes to how your code is desugared by the compiler, leadin
 
 ## Experimental SIP-57 - Replace non-sensical `@unchecked` annotations
 
-One of the new, experimental, features is the implementation of [SIP-57](https://docs.scala-lang.org/sips/replace-nonsensical-unchecked-annotation.html) introducing a `runtimeChecked` extension method replacing some usages of `@unchecked` annotation using a more convenient syntax. A common use case for `runtimeChecked` is to assert that a pattern will always match, either for convenience or because there is a known invariant that the types can not express.
+One of the new, experimental, features is the implementation of [SIP-57](https://docs.scala-lang.org/sips/replace-nonsensical-unchecked-annotation.html) introducing a `runtimeChecked` extension method replacing some usages of `@unchecked` annotation using a more convenient syntax. A common use case for `runtimeChecked` is to assert that a pattern will always match, either for convenience or because there is a known invariant that the types cannot express.
 
 Some typical use cases might be looking up an expected entry in a dynamically loaded dictionary-like structure:
 

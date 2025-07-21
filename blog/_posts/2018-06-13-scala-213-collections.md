@@ -68,7 +68,7 @@ confusion to the users. Especially when you look at the
 
 ![wtf](/resources/img/blog/scaladoc-treemap-map.png)
 
-This type signature makes no sense: the result type can not be `TreeMap[B]` since
+This type signature makes no sense: the result type cannot be `TreeMap[B]` since
 `TreeMap` takes *two* type parameters (the type of keys and the type
 of values). Also, the function `f` actually takes a *key-value pair* as parameter,
 not just a key (as incorrectly indicated by the type `A`).

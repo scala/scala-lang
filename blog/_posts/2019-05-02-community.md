@@ -9,7 +9,7 @@ The Scala language is a big tent. It supports object-oriented and
 functional code working together. The point of Scala was always to
 show that these paradigms can be combined in a compact set of unified
 language features. But while the language design stresses unification,
-the same can not (yet?)  be said about the community of Scala
+the same cannot (yet?) be said about the community of Scala
 programmers.
 
 In fact, Scala is used in many different ways. There are the people who
