@@ -58,7 +58,7 @@ Currently, we are in the process of selecting and onboarding the first group of 
 
 * [Scala Ambassadors page](https://scala-lang.org/ambassadors)
 
-At the moment the list is short, but we aim to make it much longer in the coming weeks and months.
+At the moment, the list is short, but we aim to make it much longer in the coming weeks and months.
 
 Stay tuned for more information about the Scala Ambassadors initiative and the Ambassadors themselves! This is only our first blog post on the subject.
 
