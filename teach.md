@@ -195,7 +195,7 @@ kids do their coding in Scala within the app.
 
 Kojo is in the coding curriculum in one state in India.
 
-You can check out examples of Kojo creations [here](https://codex.kogics.net).
+You can check out examples of Kojo creations at [The Kojo Code Exchange](https://codex.kogics.net).
 
 ### Scala Bridge
 
