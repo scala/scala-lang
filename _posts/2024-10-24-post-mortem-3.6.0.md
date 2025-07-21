@@ -113,7 +113,7 @@ of multiple factors:
   will be implemented as an improvement. The change was added in
   [scala3\#21011](https://github.com/scala/scala3/pull/21011).
 - The change introducing the issue was merged on the 11th of July. Now, three
-  months later, at the time of the release the side effects were not properly
+  months later, at the time of the release, the side effects were not properly
   considered as in the meantime there was a change in staff coupled with
   insufficient documentation.
 - We experienced unrelated downtime on the side of our infrastructure, which
