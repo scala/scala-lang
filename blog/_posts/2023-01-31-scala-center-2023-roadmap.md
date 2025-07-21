@@ -132,8 +132,8 @@ more about the Compiler Academy in [this blog article]({% link blog/_posts/2022-
 absence of incompatibilities between library dependencies is the cornerstone of a seamless Scala ecosystem. We have
 implemented a prototype of a new tool to detect incompatibilities between two versions of a program (like
 [MiMa](https://github.com/lightbend/mima), but based on the TASTy representation of programs instead of JVM bytecode).
-We explained [here](https://github.com/scalacenter/tasty-mima#motivation) why we need this tool in addition to the
-classic MiMa.
+We [explained why we need this tool in addition to the
+classic MiMa](https://github.com/scalacenter/tasty-mima#motivation).
 Our work is based on [TASTy Query](https://github.com/scalacenter/tasty-query), which will be the basis of tools to
 perform static analysis of Scala programs (it is already used by the Metals debugger).
 
