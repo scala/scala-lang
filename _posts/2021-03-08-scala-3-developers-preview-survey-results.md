@@ -42,10 +42,9 @@ Conclusions are open to interpretation, which is why we offer full
 access to our methodology and data, so feel free to make your own and share it with us.
 
 ## 1 - About the Survey
-The survey had a simple design:
+The [survey](https://docs.google.com/forms/d/e/1FAIpQLSflVmTu9lhrtnSTh2tKAjUGrt3WvEgwlDqZg66O3EVSXd1aJg/viewform) had a simple design:
 - A total of 4 questions and a free field at the end
 - Each question contained a “closed” and an “open” part
-  Please check what it looks like [here](https://docs.google.com/forms/d/e/1FAIpQLSflVmTu9lhrtnSTh2tKAjUGrt3WvEgwlDqZg66O3EVSXd1aJg/viewform).
 
 The survey questions focused on Scala 3 features, tooling, migration, and communication.
 We chose this format for several reasons:
