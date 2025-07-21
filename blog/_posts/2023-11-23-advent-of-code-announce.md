@@ -6,7 +6,7 @@ title: "Join us for the Advent of Code 2023"
 ---
 
 ### Summary
-We are happy to announce that for the third year in a row, we are supporting the Scala Community's participation in the annual [Advent of Code](https://adventofcode.com/) challenge for 2023! _(Look [here](https://scala-lang.org/blog/2023/01/06/advent-of-code-recap.html) for a recap of 2022's edition)._
+We are happy to announce that for the third year in a row, we are supporting the Scala Community's participation in the annual [Advent of Code](https://adventofcode.com/) challenge for 2023! _(See [Advent of Code 2022](https://scala-lang.org/blog/2023/01/06/advent-of-code-recap.html) for a recap of 2022's edition)._
 
 > Advent of Code, organised by [Eric Wastl](http://was.tl/) is a yearly event consisting of a series of small programming puzzles. The puzzles are released daily from December 1st to December 25th. The goal is to improve your understanding of your programming language of choice by solving as many puzzles as possible.
 
