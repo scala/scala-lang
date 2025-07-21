@@ -41,7 +41,7 @@ Around 50 Scala library contributors, authors, and maintainers gathered and disc
 
 No specific program was proposed. Instead, topics and groups were formed on the spot: anyone could propose a topic and interested participants would join for discussion.
 
-Significant result: Scala Improvement Process took place during the Contributors Summit, and public was for the first time present during the meeting in person. In this particular meeting the SIP committee agreed on approaching Scala 3 changes, dividing worklad in batches as well as giving a month per batch to collect community's input. For more on this, please read the [SIP minutes](https://docs.scala-lang.org/sips/minutes/2018-05-18-sip-minutes.html).
+Significant result: Scala Improvement Process took place during the Contributors Summit, and public was for the first time present during the meeting in person. In this particular meeting the SIP committee agreed on approaching Scala 3 changes, dividing worklad into batches as well as giving a month per batch to collect community's input. For more on this, please read the [SIP minutes](https://docs.scala-lang.org/sips/minutes/2018-05-18-sip-minutes.html).
 
 Otherwise in this edition, even though some were taking notes, not all were collected, therefore will not be published here. (If you have notes, please share them with us scala.center@epfl.ch)
 
