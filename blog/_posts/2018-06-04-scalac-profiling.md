@@ -787,7 +787,7 @@ options of the bloop configuration file.
 This is a good moment to try to minimize the problem. `-Xlog-implicits` will
 log a lot of failed searches and we want to be able to see through the noise.
 I did minimise the issue
-[here](https://github.com/scalacenter/scalac-profiling/pull/23/commits/dbcb8d480e9b402899d21620055bc555b2841382).
+with [Add reproduced version of case-app inefficiency](https://github.com/scalacenter/scalac-profiling/pull/23/commits/dbcb8d480e9b402899d21620055bc555b2841382).
 Doing `implicitly[Parser[CliOptions]]` also reproduces it.
 
 Among all the logs, this is the one that attracts my attention the most.
