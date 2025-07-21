@@ -124,7 +124,7 @@
 					},
 					
                     /*
-                     * Function to parse the text of a tweet and and add links to links, hashtags, and usernames
+                     * Function to parse the text of a tweet and add links to links, hashtags, and usernames
                      */
 					parseText: function (text) {
                         // Links
