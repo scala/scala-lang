@@ -30,6 +30,5 @@ We look forward to collaborating with Zainab as we continue to shape the future 
 As part of the board, the community is invited to submit proposals through the Community Representatives.
 Check out the [proposal template](https://github.com/scalacenter/advisoryboard/blob/master/templates/proposal.md) or [previous proposals](https://github.com/scalacenter/advisoryboard/tree/master/proposals).
 
-**Reminder:** all the Scala Center quarterly reports and board meeting notes are public.
-You can find them [here](https://scala.epfl.ch/records.html).
+**Reminder:** all the [Scala Center quarterly reports and board meeting notes](https://scala.epfl.ch/records.html) are public.
 You can also find the current Scala Center roadmap in this [blog post](https://www.scala-lang.org/blog/2024/02/06/scala-center-2024-roadmap.html).
