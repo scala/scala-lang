@@ -20,7 +20,7 @@ discussed.
 
 The SIP committee went through five SIPs in the queue. Two new SIPs received a
 number, meaning they passed the first phase of acceptance – that is, the change
-to Scala is accepted in theory, so long as the the committee's design and
+to Scala is accepted in theory, so long as the committee's design and
 implementation concerns can be adequately addressed in subsequent discussions on
 the SIP. The two SIPs which received numbers (first-round accepted) include:
 
