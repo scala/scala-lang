@@ -246,7 +246,7 @@ Starting with Scala 3.7 the expression compiler has been migrated to the main [s
 ### Presentation Compiler: Show inferred type on holes in hover ([#21423](https://github.com/scala/scala3/pull/21423))
 
 The presentation compiler is a special mode of the Scala compiler that runs interactively and is used by IDEs and language servers such as Metals. It provides immediate feedback about code correctness, type checking, symbol resolution, autocompletion, error highlighting, and other editing support functionalities.
-Some of the latest improvements to the presentation compiler focus on the ability to infer more information about expected types of expressions provided by the users. As a result, presentation compiler can now show the users the expected type of expression when hovering over so called `type holes`.
+Some of the latest improvements to the presentation compiler focus on the ability to infer more information about expected types of expressions provided by the users. As a result, presentation compiler can now show users the expected type of expression when hovering over so called `type holes`.
 
 ```scala
 def someMethod(count: Int, label: String): Unit = ???
