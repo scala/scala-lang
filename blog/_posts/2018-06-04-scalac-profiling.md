@@ -948,7 +948,7 @@ And inspect the generated code by the macro expansion by using
 logs). That extra inspection gave me some hints.
 
 The issue seems to be in the refinement of `HListParser`. In the previous log the last type parameter of `HListParser.Aux` (the refinement type) was `HD`, an abstract type used
-[here](https://github.com/alexarchambault/case-app/blob/v1.2.0/core/shared/src/main/scala/caseapp/core/HListParser.scala#L131-L159),
+in [`hconsRecursive`](https://github.com/alexarchambault/case-app/blob/v1.2.0/core/shared/src/main/scala/caseapp/core/HListParser.scala#L131-L159),
 and the returned refinement type from the macro was `Option[String] ::
 this.P`.
 
