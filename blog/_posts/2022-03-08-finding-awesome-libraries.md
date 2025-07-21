@@ -41,7 +41,7 @@ How can we help experienced Scala programmers find new libraries that solve thei
 
 Open source software, similarly to commercial ones, will not thrive unless it reaches new users, sponsors and contributors.
 Aware of this issue, open source communities started to compile “awesome” lists of open source projects organized by topics.
-Some examples are [vinta/awesome-python](https://github.com/vinta/awesome-python), [akullp/awesome-java](https://github.com/akullpp/awesome-java), [veggiemonk/awesome-docker](https://github.com/veggiemonk/awesome-docker) and many many more (see [bayandin/awesome-awesomeness](http://bayandin/awesome-awesomeness)).
+Some examples are [vinta/awesome-python](https://github.com/vinta/awesome-python), [akullp/awesome-java](https://github.com/akullpp/awesome-java), [veggiemonk/awesome-docker](https://github.com/veggiemonk/awesome-docker) and many, many, more (see [bayandin/awesome-awesomeness](http://bayandin/awesome-awesomeness)).
 
 The high number of stars of these GitHub repositories show how popular they are in the world of open source software.
 
