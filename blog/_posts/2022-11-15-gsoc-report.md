@@ -22,7 +22,7 @@ Mikail Khan, mentored by Noel Welsh, developed a domain-specific language for de
 
 The project will be especially interesting for Scala educators. For experienced and novice programmers alike, it's important to quickly get feedback on what your code is doing – this is how we learn. Even more so it is important for people who have just started their journey in programming. Having a visual feedback you can play with is a great feature that can be used to teach Scala to newcomers.
 
-The final report for this project is available [here](https://static.mikail-khan.com/gsoc-report/).
+See the [final report for this project](https://static.mikail-khan.com/gsoc-report/) for more information.
 
 ## Towards Scala 3 support for Scalafix `ExplicitResultTypes`: cross-compiling to Scala 3
 Scalafix is a linting and rewriting tool for Scala codebases. `ExplicitResultTypes` is one of the built-in rules, which inserts type annotations for inferred public members.
