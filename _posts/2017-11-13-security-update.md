@@ -12,7 +12,7 @@ We recommend upgrading to the latest versions of Scala ([Scala 2.12.4](https://g
 <!-- break -->
 
 The compile daemon is started explicitly by the `fsc` command, or implicitly by executing
-a Scala source file as a script (e.g `scala MyScript.scala`). The Scala REPL, started by `scala` is not affected as it does not use the compilation daemon, nor is running a pre-compiled class using the `scala` command.
+a Scala source file as a script (e.g `scala MyScript.scala`). The Scala REPL, started by `scala` is not affected as it neither uses the compilation daemon nor runs a pre-compiled classes using the `scala` command.
 
 
 # Impact
