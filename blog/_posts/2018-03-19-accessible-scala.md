@@ -79,7 +79,7 @@ partially-sighted users, which is by no means a "solved problem", and offers
 much room for improvement.
 
 
-Most of the work the Scala Center does contributes small differences to the
+Most of the work that the Scala Center does contributes small differences to the
 lives of many developers in the Scala community. This proposal is different in
 that it provides a potentially enormous difference to the experience of
 programming in Scala to a small number of users.

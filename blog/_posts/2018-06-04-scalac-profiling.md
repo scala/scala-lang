@@ -826,7 +826,7 @@ and
 [`materializeCoproduct`](Xhttps://github.com/milessabin/shapeless/blob/a42cd4c1c99e4a7be36e0239d3ee944a6355e321/core/src/main/scala/shapeless/generic.scala#L232-L245).
 
 The problem of incorrect instantiated type arguments we saw before seems
-specific to the way the compiler carries out the implicit search. Fixing it
+specific to the way that the compiler carries out the implicit search. Fixing it
 requires most likely changes to the implicit search algorithm, as [a similar
 Scala compiler issue](https://github.com/scala/bug/issues/10528) did. I tried porting
 these changes to 2.12.x and use `-Xsource:2.13` but the failed macro

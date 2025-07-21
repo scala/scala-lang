@@ -15,7 +15,7 @@ The community build is used to test changes to the Scala compiler,
 enabling Scala the language and Scala the ecosystem of libraries to
 evolve in tandem with each other.
 
-This post highlights the progress the community build has made in the
+This post highlights the progress that the community build has made in the
 last year.
 
 ## Overall growth

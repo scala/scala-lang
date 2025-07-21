@@ -269,7 +269,7 @@ a discussion needs to happen around that
 
 Also, should this go into the Scala namespace?
 
-[@SethTisue](https://github.com/SethTisue) points out that part the reason the reaction of this was hard to gauge was it wasn't clear if people realized this wasn't for core (it's not).
+[@SethTisue](https://github.com/SethTisue) points out that part the reason that the reaction of this was hard to gauge was it wasn't clear if people realized this wasn't for core (it's not).
 
 [@heathermiller](https://github.com/heathermiller) even we are confused about what is and isn't core
 
