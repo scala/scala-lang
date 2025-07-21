@@ -83,8 +83,8 @@ default implementations of transformation operations to make them non strict.
 Now it seems that the situation is just reversed: the default implementations work well
 with non strict collections, but we have to override them in strict collections.
 
-So, is the new design worth it? To answer this question I will quote a comment posted
-by Stefan Zeiger [here](https://www.reddit.com/r/scala/comments/7g52cy/let_them_be_lazy/dqixt8d/):
+So, is the new design worth it? To answer this question I will quote a [comment posted
+by Stefan Zeiger](https://www.reddit.com/r/scala/comments/7g52cy/let_them_be_lazy/dqixt8d/):
 
 > The lazy-by-default approach is mostly beneficial when you're implementing lazy
 > collections because you don't have to override pretty much everything or get
