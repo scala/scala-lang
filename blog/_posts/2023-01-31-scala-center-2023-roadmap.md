@@ -254,6 +254,6 @@ outcome of our work in 2022, and our main goals for 2023.
 Thanks to your support, and with the help of all the [people behind Scala](https://www.scala-lang.org/community/#whos-behind-scala),
 we came this far! Help us go even further by [supporting the Scala Center](https://scala.epfl.ch/faqs.html).
 
-You can find our detailed roadmap for the current quarter [here](https://scala.epfl.ch/projects.html),
+See our [detailed roadmap for the current quarter](https://scala.epfl.ch/projects.html),
 and track our progress by looking at our [quarterly reports](https://scala.epfl.ch/records.html), or by browsing the
 [Scala Center Updates](https://contributors.scala-lang.org/c/scala-center/25) category of the Scala Contributors forum.
