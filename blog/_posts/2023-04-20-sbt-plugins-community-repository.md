@@ -17,7 +17,7 @@ On the 7th of April 2023, many projects of the Scala ecosystem could not resolve
 sbt plugins from the community repository `repo.scala-sbt.org` anymore (examples
 [sbt/sbt-dynver#239](https://github.com/sbt/sbt-dynver/issues/239#issuecomment-1499791434),
 [playframework/playframework#11675](https://github.com/playframework/playframework/issues/11675#issuecomment-1499869916),
-[here](https://github.com/sbt/sbt/issues/7204), and
+[sbt/sbt#7204](https://github.com/sbt/sbt/issues/7204), and
 [here](https://github.com/spray/sbt-revolver/issues/112)).
 
 ## Retrospective
