@@ -157,7 +157,7 @@ trait SortedIterableOps[A, CC[_]] {
 }
 ~~~
 
-However, as mentioned in the previous section, we need to also abstract over the kind of the
+However, as mentioned in the previous section, we also need to abstract over the kind of the
 type constructor of the concrete collections. Consequently we have in total four branches:
 
 kind        | not sorted  | sorted
