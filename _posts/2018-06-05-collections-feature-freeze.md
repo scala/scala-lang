@@ -24,4 +24,4 @@ Note that [binary compatibility](https://docs.scala-lang.org/overviews/core/bina
 
 ## Ecosystem update
 
-Adoption of Scala 2.13.0-M4 so far has been slower than for most milestones because the number of source incompatibilities is higher than usual. We hope that an early feature freeze and further compatibility improvements will make it easier for core projects to upgrade to M5 (whether they are already on M4 or not) in order to bootstrap the Scala ecosystem in preparation for the 2.13.0 release.
+Adoption of Scala 2.13.0-M4 so far has been slower than for most milestones because the number of source incompatibilities is greater than usual. We hope that an early feature freeze and further compatibility improvements will make it easier for core projects to upgrade to M5 (whether they are already on M4 or not) in order to bootstrap the Scala ecosystem in preparation for the 2.13.0 release.

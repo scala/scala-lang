@@ -62,7 +62,7 @@ programming languages**. On average, C and Rust programs are the most energy
 efficient. Java programs consume about 2 times more energy than C programs. 
 JavaScript/TypeScript programs consume between 4 to 20 times more energy 
 than C programs. Finally, Python programs are black sheeps, with an energy
-consumption 75 times higher than C programs.
+consumption 75 times greater than C programs.
 
 Where does Scala stand in this picture? Unfortunately, Scala was not 
 included in this study.
@@ -234,7 +234,7 @@ within high-level programming languages.
 Also, we see that in Scala, two implementations of the same benchmark can 
 easily show different performances, depending on your code style. For 
 instance, the energy consumption of the `k-nucleotide` benchmark was between 
-2 to 13 times higher than the C implementation. The differences between both 
+2 to 13 times greater than the C implementation. The differences between both 
 versions are mainly the usage of immutable Scala collections and `for` loops in 
 the idiomatic version, as opposed to `Array`s and `while` loops in the 
 optimized version (this observation is consistent with the results of 
