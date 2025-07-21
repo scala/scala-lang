@@ -161,8 +161,7 @@ library, we will:
 
 - **Make the compiler error messages clearer and more actionable.** The compiler should help developers write correct code
   instead of “just complaining” about incorrect code. The compiler should also guide you to write maintainable code (ie,
-  it should provide linting features). You can find a list of related issues
-  [here](https://github.com/scala/scala3/issues?q=is%3Aopen+is%3Aissue+label%3Aarea%3Areporting).
+  it should provide linting features). You can find a [list of related issues](https://github.com/scala/scala3/issues?q=is%3Aopen+is%3Aissue+label%3Aarea%3Areporting).
 - **Bring the compiler’s suggestions into the IDEs.** Instead of emitting only text output, the compiler
   will produce structured output that IDEs (Metals and IntelliJ) will be able to read to automatically provide “quick
   fixes” to the users. This should reduce the implementation (and maintenance) costs on the IDE side.
