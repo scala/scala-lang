@@ -106,7 +106,7 @@ You are kindly invited to contribute!
 
 Please file any bugs you encounter on [our issue tracker](https://issues.scala-lang.org).
 If you're unsure whether something is a bug, please contact the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list.
-Before creating a new issue, search search the issue tracker to see if your bug has already been reported.
+Before creating a new issue, search the issue tracker to see if your bug has already been reported.
 
 
 ### Scala IDE for Eclipse
