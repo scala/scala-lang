@@ -34,8 +34,7 @@ The following collection types are implemented:
 Also, most of the operations of the current `Traversable`, `Iterable`, `Seq`
 and `Set` collection types are implemented in the strawman.
 
-For reference, a detailed list of the current implementation status is available
-[here](https://github.com/scala/collection-strawman#implemented-collection-types).
+This work was merged into [scala/scala](https://github.com/scala/scala) and released as part of Scala 2.13.0-M4.
 
 To experiment with this milestone, just add the following dependency:
 
