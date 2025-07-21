@@ -88,8 +88,8 @@ Mentors: Anatolii Kmetiuk, Alexandre Archambault
 ScalaPy is a library that enables Scala programs to use Python libraries. This
 project focuses on improving developer experience by simplifying the setup
 process, providing autocomplete functionalities in Almond and Ammonite,
-enriching the documentation and object displays.  You can read more
-[here](https://gist.github.com/kiendang/e6c2fc41448fabba6f1e6ae34cf65c49)
+enriching the documentation and object displays. See 
+[Improving ScalaPy developer experience and integration with Ammonite and Almond](https://gist.github.com/kiendang/e6c2fc41448fabba6f1e6ae34cf65c49) for more information.
 
 > This work kick-started a better integration of the ScalaPy library in Scala
 > notebooks, making it easier to use Python libraries from there, and helping the
