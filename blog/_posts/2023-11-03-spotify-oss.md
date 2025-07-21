@@ -92,7 +92,7 @@ Spotify's effective engagement with the Scala ecosystem and open source communit
 
 We encourage you to contribute to the growing Scala ecosystem and share your unique insights. Embrace the open source philosophy, learn from the journeys of others, and start making your own impact today. Remember, every positive contribution, no matter how small, is a step forward in this collaborative journey. Let's shape the future of Scala together!
 
-Share your contribution story [here](https://airtable.com/shr5mUxTqQs1zZ228)!
+Share your contribution story in the [Scala Open Source Sustainability Interview](https://airtable.com/shr5mUxTqQs1zZ228)!
 
 ## Related Content and Further Reading
 
