@@ -394,8 +394,8 @@ directory of the cloned bloop repository.
 The first two flags set up the compiler plugin.
 
 The flag `-P:scalac-profiling:no-profiledb` disables the generation of
-`profiledb`s and `-P:scalac-profiling:sourceroot` tells the plugin the base
-directory of the project. The profiledb is only required when we process the
+`profiledb`s and `-P:scalac-profiling:sourceroot` gives the base directory of
+the project to the plugin. The profiledb is only required when we process the
 data with other tools, so by disabling it we keep the overhead of the plugin
 to the bare minimum.
 
