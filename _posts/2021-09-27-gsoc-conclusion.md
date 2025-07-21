@@ -53,8 +53,8 @@ Mentors:  Julien Richard-Foy, Aleksander Boruch-Gruszecki
 Shapeless is a crucial dependency of many popular Scala libraries. This project
 explores how the Scala 2 version of the library could be cross-built for Scala 3
 by porting some parts to Scala 3. It aims at helping library maintainers to
-adopt Scala 3 faster.  You can read more
-[here](https://github.com/milessabin/shapeless/pull/1200)
+adopt Scala 3 faster.  See the
+[Scala 3 port pull request](https://github.com/milessabin/shapeless/pull/1200) for more information.
 
 > Congratulations for your work on Shapeless, especially for being so autonomous
 > in this project!
