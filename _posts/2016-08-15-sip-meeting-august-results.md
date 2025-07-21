@@ -21,8 +21,7 @@ The rejected proposals were:
     in if's, for and while loops, moving Scala's syntax away from Java
     and C-like languages. Whereas such changes may be arguably more
     beautiful, the Committee agreed that would give more problems
-    than benefits. Seth Tisue, the appointed reviewer, fully explains
-    the Committee's reaction [here](https://github.com/scala/scala.github.com/issues/555).
+    than benefits. The appointed reviewer, [Seth Tisue, fully explains the Committee's reaction](https://github.com/scala/scala.github.com/issues/555).
 -   [SIP-16: Self-cleaning macros](https://github.com/scala/improvement-proposals/pull/15).
     Originally proposed in 2012. Macros add a whole new dimension to the
     Scala language. Their experimental implementation was adopted by a
