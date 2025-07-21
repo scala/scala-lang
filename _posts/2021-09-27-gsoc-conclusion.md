@@ -70,8 +70,8 @@ Mentors: Shadaj Laddad, Anatolii Kmetiuk
 ScalaPy is a library that enables Scala programs to use Python libraries. This
 project brings support for Scala 3 to the library to enable users to leverage
 all the new cool features that the new language versions ships while relying on
-powerful and well known Python libraries.  You can read more
-[here](https://gist.github.com/jlareck/7268918d28b0c6a0efebeafa11011e3c)
+powerful and well known Python libraries.  See
+[Google Summer of Code 2021: Implement support for ScalaPy in Scala 3](https://gist.github.com/jlareck/7268918d28b0c6a0efebeafa11011e3c) for more information.
 
 > Mykola's contributions bringing support for Scala 3 are really impressive and
 > will enable many new research and production use cases in the future!
