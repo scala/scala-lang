@@ -192,8 +192,7 @@ index provided to `apply` is strictly inferior to the size of the tuple.
 How is this possible?
 
 The core new feature that allows such a flexible implementation of tuples are
-**match types**.  I invite you to read more about them
-[here](http://dotty.epfl.ch/docs/reference/new-types/match-types.html).
+**[match types](http://dotty.epfl.ch/docs/reference/new-types/match-types.html)**.
 
 Let's see how we can implement the `++` operator using this powerful construct.
 We will call our naive version `concat`.
