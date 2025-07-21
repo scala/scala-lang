@@ -50,7 +50,7 @@ def map[B, That](f: Char => B)(implicit bf: CanBuildFrom[String, B, That]): That
 
 When the implicit `CanBuildFrom` parameter is resolved it fixes the return type `That`.
 The resolution is driven by the actual `B` type: if `B` is `Char` then `That` is fixed
-to `String`, otherwise it is `immutable.IndexedSeq`.
+to `String`; otherwise, it is `immutable.IndexedSeq`.
 
 The drawback of this solution is that the type signature of the `map` method looks cryptic.
 
