@@ -113,8 +113,7 @@ operations execution compared to the old `Vector`, for various number of element
 The blue line shows the old `Vector`,
 the red line shows the new `Vector` if it used only view based
 implementations, and the yellow line shows the actual new `Vector`
-(with strict optimized implementations). Benchmark source code and numbers can be found
-[here](https://gist.github.com/julienrf/f1cb2b062cd9783a35e2f35778959c76).
+(with strict optimized implementations). See [Benchmark source code and numbers](https://gist.github.com/julienrf/f1cb2b062cd9783a35e2f35778959c76).
 
 Since operation implementations end up being the same, why do we get better performance
 at all? Well, these numbers are specific to `Vector` and the tested operations, they
