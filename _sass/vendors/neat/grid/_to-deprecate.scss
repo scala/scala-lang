@@ -85,7 +85,7 @@
 /// @example scss - Usage
 ///   .element {
 ///     @include row(table, RTL);
-///     // Context changed to table table and right-to-left
+///     // Context changed to table and right-to-left
 ///   }
 ///
 ///   @include reset-all;
