@@ -321,8 +321,8 @@ implementations. During this topic
 [coursier/publish](https://github.com/coursier/publish) was mentioned as a
 possible library that could be utilized across the ecosystem. There were
 multiple questions that would need to be answered first about the reality of
-this possibility that are being tracked
-[here](https://github.com/coursier/publish/issues/14).
+this possibility that are being tracked in
+[Discussing usage in other tools](https://github.com/coursier/publish/issues/14).
 
 ### Merge Bloop mainline and scala-cli’s fork of Bloop
 
