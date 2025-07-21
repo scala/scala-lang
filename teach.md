@@ -170,8 +170,8 @@ following map:
 
 {% include teachers-map.html %}
 
-Want to add yourself to the map? Add your name
-[here](https://github.com/scala/scala-lang/edit/main/_data/teachers.yml).
+Want to add yourself to the map? Add your name to 
+[teachers.yml](https://github.com/scala/scala-lang/edit/main/_data/teachers.yml).
 
 ### Teachers Community
 
