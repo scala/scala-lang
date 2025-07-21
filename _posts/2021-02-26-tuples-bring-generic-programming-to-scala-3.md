@@ -311,8 +311,7 @@ def concat[L <: Tup, R <: Tup](left: L, right: R): Concat[L, R] =
 ```
 
 We use here a combination of match types and a form of dependent types called
-*dependent match types* (docs
-[here](http://dotty.epfl.ch/docs/reference/new-types/match-types.html) and
+[dependent match types](http://dotty.epfl.ch/docs/reference/new-types/match-types.html) and
 [here](http://dotty.epfl.ch/docs/reference/new-types/dependent-function-types.html)).
 There are some quirks to it as you might have noticed: using lower case types
 means using type variables and we cannot use pattern matching on the object. I
