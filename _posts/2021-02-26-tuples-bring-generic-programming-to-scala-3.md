@@ -149,8 +149,7 @@ tupleToCsv(("Bob", 42, false)) // List("Bob", "42", "false")
 
 Scala 3 introduces the `Mirror` type class,
 which provides type-level information about the components and labels of types.
-For typical case classes, `Mirror` instances are generated automatically by the compiler
-(see [here](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror-1) for more details).
+For typical case classes, [`Mirror` instances](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror) are generated automatically by the compiler.
 
 That's why we can obtain a tuple from a case class using:
 ```scala
