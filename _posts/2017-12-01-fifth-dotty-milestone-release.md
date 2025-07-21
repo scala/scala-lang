@@ -130,7 +130,7 @@ Using sbt 0.13.13 or newer, do:
 sbt new lampepfl/dotty.g8
 ```
 
-This will setup a new sbt project with Dotty as compiler. For more details on
+This will set up a new sbt project with Dotty as compiler. For more details on
 using Dotty with sbt, see the
 [example project](https://github.com/lampepfl/dotty-example-project).
 
