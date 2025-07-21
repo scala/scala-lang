@@ -34,8 +34,8 @@ scalafix and Metals. However, the SemanticDB extractor for Scala3 was a work in
 progress, and some features in devtools were unavailable for Scala3. This
 project focuses on enriching SemanticDB with additional information from the
 Scala3 compiler in order to improve the developer experience of Scala 3
-developers You can read more
-[here](https://github.com/tanishiking/gsoc-2021/blob/main/README.md)
+developers. See the
+[GSoC 2021 Final Report: Add synthetics and symbol information for semanticdb in Scala 3](https://github.com/tanishiking/gsoc-2021/blob/main/README.md) for more information.
 
 
 > Rikito's work enables a huge amount of features in tools used for working with
