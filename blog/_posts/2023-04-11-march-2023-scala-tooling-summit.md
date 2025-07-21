@@ -270,9 +270,8 @@ new upcoming BSP plugin for IntelliJ this may offer a better level of support
 for using Mill or sbt server for multi-language projects. On the Metals side,
 this is made even more trickier as LSP isn’t traditionally used for mixed
 multi-language projects. There will be some more research on seeing if it’s
-possible to better integrate with the Java language servers. There is an ongoing
-thread about this that can be followed
-[here](https://github.com/scalameta/metals-feature-requests/issues/5).
+possible to better integrate with the Java language servers. There is an [ongoing
+thread about this](https://github.com/scalameta/metals-feature-requests/issues/5).
 
 ### Tasty Query and its use-cases
 
