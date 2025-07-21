@@ -1059,7 +1059,7 @@ happening in every branch, so let's have a look at the data emitted by
 The "Macro expansions by type" and "Implicit searches by type" tells us
 how many repeated macros and implicit searches we have per type.
 
-For example, let's look at the most important entries from from the "Implicit
+For example, let's look at the most important entries from the "Implicit
 searches by type" section.
 
 ```
