@@ -113,8 +113,7 @@ events.** In April 2022, for the first time in 2.5 years, events could finally t
 many Scala User Groups to restart their regular Scala Meetups. We gave talks and organized [Open-Source Sprees](https://github.com/scalacenter/sprees)
 at local events in Europe. We were also involved in the online conference ScalaCon: we were in charge of the program and
 the program committee, and we presented several talks including a keynote [Towards a Healthy & Resilient Scala Community](https://youtu.be/svWnwU5PXxE)
-where we presented our strategy for the governance of Scala. The talk videos of the whole conference are available online
-[here](https://www.youtube.com/playlist?list=PL3t6y1EktOPhflaXB28Kw7kwRb30K0W-P).
+where we presented our strategy for the governance of Scala. The [talk videos of the whole conference](https://www.youtube.com/playlist?list=PL3t6y1EktOPhflaXB28Kw7kwRb30K0W-P) are available online.
 
 **We published videos about Scala 3.** [Let’s Talk About Scala 3](https://www.youtube.com/playlist?list=PLTx-VKTe8yLxYQfX_eGHCxaTuWvvG28Ml)
 is a series of videos where we share interesting, useful, and cool things related to Scala 3. We published 4 new
