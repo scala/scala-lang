@@ -6,7 +6,7 @@ title: "Implementing Scala.js Support for Scala 3"
 ---
 
 These days, the JS platform has become an integral part of the language.
-Yet, until last August, support for Scala.js in Scala 3 was close to non-existent.
+Yet, until last August, support for Scala.js in Scala 3 was close to nonexistent.
 A first preview was shipped in Dotty 0.27.0-RC1, with support for the portable subset of Scala and native JS types.
 Since then, support for non-native JS types was added and will ship as part of Scala 3.0.0-M1.
 The only missing feature left is JS exports, which we will implement by the next milestone.
