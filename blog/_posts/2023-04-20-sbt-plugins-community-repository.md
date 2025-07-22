@@ -25,7 +25,7 @@ sbt plugins from the community repository `repo.scala-sbt.org` anymore (examples
 To understand what happened, here is some background information. sbt plugins are packaged
 as modules published to Ivy or Maven repositories. Historically, sbt plugins used to be
 published primarily to the sbt community repository hosted on Bintray. However, in 2021,
-JFrog [sunsetted the Bintray
+JFrog [sunset the Bintray
 service](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/).
 Since then, JFrog has provided the Scala Center a cloud-hosted Artifactory instance for free.
 As explained in the [release notes of sbt
