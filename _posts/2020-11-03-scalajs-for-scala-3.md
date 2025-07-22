@@ -95,7 +95,7 @@ TASTy has a very different level of abstraction than the Scala.js IR.
 
 During the compilation pipeline, the compiler first type-checks and elaborates Scala source code into a TASTy-level representation (even in Scala 2, although it is not TASTy itself).
 Then, a few dozens of phases successively transform that representation to eliminate Scala features and erase the type system.
-It is only at the end of that process that Scala/JVM produces `.class` files while Scala.js procudes `.sjsir` files.
+It is only at the end of that process that Scala/JVM produces `.class` files while Scala.js produces `.sjsir` files.
 
 We *can* compile from TASTy to JavaScript, but that does not take away the fact that we have to perform all those phases again.
 There is no shortcut.
