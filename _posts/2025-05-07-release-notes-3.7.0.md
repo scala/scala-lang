@@ -22,7 +22,7 @@ Named Tuples, introduced as experimental in Scala 3.5, are now a stable feature.
 Named tuples are a convenient lightweight way to return multiple results from a function or to model the data using tuples while allowing you to use meaningful names for its fields.
 
 ```scala
-@main def meaningfullReturnTypes =
+@main def meaningfulReturnTypes =
   extension [T](seq: Seq[T])
     inline def partitionBy(predicate: PartialFunction[T, Boolean]): (matching: Seq[T], unmatched: Seq[T]) =
       seq.partition(predicate.unapply(_).getOrElse(false))
