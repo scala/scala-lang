@@ -35,7 +35,7 @@ Scala 3 allows you to define an *extension method*.
 Assume that you are working with `List[Try[String]]` and that you often need to retrieve
 the elements for which the computation succeeded.
 
-Then you can extend this type to have a `collectSucceded` method:
+Then you can extend this type to have a `collectSucceeded` method:
 
 ```scala
 // ListTryOps.scala
