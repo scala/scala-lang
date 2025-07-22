@@ -16,7 +16,7 @@ description: "Feedback is wanted on confusing or unhelpful error messages"
 From [suggesting to import missing extension methods](https://docs.scala-lang.org/scala3/book/ca-extension-methods.html#import-extension-method) and more, Scala 3 tries to improve the ways that warnings and errors are reported to the user.
 The idea being that when the user engages with reported problems, it should feel like having a conversation with a helpful tutor. By helping users to get back on track, we can make Scala easier to learn, friendlier to newcomers, and also keep experienced users more productive.
 
-We know there is much more that can be done to continually improve the situation. As well as working to [expose diagnostics programatically](https://github.com/scala/scala3/issues/14904), we are starting a new campaign to seek out confusing, annoying or unhelpful error/warning messages.
+We know there is much more that can be done to continually improve the situation. As well as working to [expose diagnostics programmatically](https://github.com/scala/scala3/issues/14904), we are starting a new campaign to seek out confusing, annoying or unhelpful error/warning messages.
 
 As compiler authors, we do try to provide good messages, but it is possible for there to be shortcomings.
 For example, the message may correctly report a problem, but not provide enough information to actually help the user.
