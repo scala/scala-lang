@@ -347,7 +347,7 @@ Issue(s) | Commit | Message
 [SI-6288](https://issues.scala-lang.org/browse/SI-6288) | [286dced](https://github.com/scala/scala/commit/286dced) | <notextile>SI-6288 Remedy ill-positioned extractor binding.</notextile>
 [SI-6288](https://issues.scala-lang.org/browse/SI-6288) | [f69b846](https://github.com/scala/scala/commit/f69b846) | <notextile>SI-6288 Fix positioning of label jumps</notextile>
 [SI-6288](https://issues.scala-lang.org/browse/SI-6288) | [79a43d7](https://github.com/scala/scala/commit/79a43d7) | <notextile>SI-6288 Position argument of unapply</notextile>
-[SI-6758](https://issues.scala-lang.org/browse/SI-6758) | [089173d](https://github.com/scala/scala/commit/089173d) | <notextile>Fixes SI-6758: force LazyAnnnotationInfo for DefDef and TypeDef</notextile>
+[SI-6758](https://issues.scala-lang.org/browse/SI-6758) | [089173d](https://github.com/scala/scala/commit/089173d) | <notextile>Fixes SI-6758: force LazyAnnotationInfo for DefDef and TypeDef</notextile>
 [SI-6555](https://issues.scala-lang.org/browse/SI-6555) | [818a2e6](https://github.com/scala/scala/commit/818a2e6) | <notextile>SI-6555 Better parameter name retention</notextile>
 [SI-5841](https://issues.scala-lang.org/browse/SI-5841) | [286abfc](https://github.com/scala/scala/commit/286abfc) | <notextile>SI-5841 reification of renamed imports</notextile>
 [SI-5877](https://issues.scala-lang.org/browse/SI-5877) | [0b1ae9c](https://github.com/scala/scala/commit/0b1ae9c) | <notextile>SI-5877 Tweak the check for package object owner.</notextile>
@@ -677,7 +677,7 @@ sha | Title
 [dfa4e23](https://github.com/scala/scala/commit/dfa4e23) | <notextile>simplifies checkBounds</notextile>
 [a0cd0f8](https://github.com/scala/scala/commit/a0cd0f81be) | <notextile>prevents spurious kind bound errors</notextile>
 [24455e2](https://github.com/scala/scala/commit/24455e2) | <notextile>Recurse into instantiations when stripping type vars.</notextile>
-[089173d](https://github.com/scala/scala/commit/089173d) | <notextile>Fixes SI-6758: force LazyAnnnotationInfo for DefDef and TypeDef</notextile>
+[089173d](https://github.com/scala/scala/commit/089173d) | <notextile>Fixes SI-6758: force LazyAnnotationInfo for DefDef and TypeDef</notextile>
 [e5e6d67](https://github.com/scala/scala/commit/e5e6d67) | <notextile>Extract base scaladoc functionality for the IDE.</notextile>
 [69f4e93](https://github.com/scala/scala/commit/69f4e93) | <notextile>DRYer crash reports.</notextile>
 [818a2e6](https://github.com/scala/scala/commit/818a2e6) | <notextile>SI-6555 Better parameter name retention</notextile>
