@@ -13,7 +13,7 @@ discourse: true
 Since the writing of this post, we have made a lot of progress in narrowing down the performance
 issue described. The most important new insights:
 
-- Jason has written a JMH-based test harness for measuring cold and hot perfromance of the Scala
+- Jason has written a JMH-based test harness for measuring cold and hot performance of the Scala
   compiler ([scala/compiler-benchmark](https://github.com/scala/compiler-benchmark)). He used this
   to show that the performance difference discussed in this post only affects cold performance,
   i.e., startup time.
