@@ -283,7 +283,6 @@ Staying current:
 - [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
 - [Scala Native](https://www.scala-native.org) compiles Scala code to LLVM for
   native execution
-- [Scala on Android](https://scala-android.org) community site
 
 The [Scala Discord](https://discord.com/invite/scala) has #scala-js, #scala-native, and #scala-android channels.
 
