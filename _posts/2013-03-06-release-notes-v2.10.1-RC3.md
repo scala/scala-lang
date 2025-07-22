@@ -363,7 +363,7 @@ Issue(s) | Commit | Message
 [SI-5789](https://issues.scala-lang.org/browse/SI-5789) | [850128d](https://github.com/scala/scala/commit/850128d) | <notextile>SI-5789 Checks in the right version of the test</notextile>
 [SI-6782](https://issues.scala-lang.org/browse/SI-6782), [SI-5789](https://issues.scala-lang.org/browse/SI-5789) | [d699122](https://github.com/scala/scala/commit/d699122) | <notextile>SI-5789 Removes assertion about implclass flag in Mixin.scala</notextile>
 [SI-5894](https://issues.scala-lang.org/browse/SI-5894) | [a23cc20](https://github.com/scala/scala/commit/a23cc20) | <notextile>SI-5894 Don't emit static forwarders for macros.</notextile>
-[SI-5894](https://issues.scala-lang.org/browse/SI-5894) | [b828e32](https://github.com/scala/scala/commit/b828e32) | <notextile>Remove some low-hanging duplication beween GenJVM / GenASM.</notextile>
+[SI-5894](https://issues.scala-lang.org/browse/SI-5894) | [b828e32](https://github.com/scala/scala/commit/b828e32) | <notextile>Remove some low-hanging duplication between GenJVM / GenASM.</notextile>
 [SI-1672](https://issues.scala-lang.org/browse/SI-1672) | [31a0aa7](https://github.com/scala/scala/commit/31a0aa7) | <notextile>SI-1672 Catches are in tail position without finally.</notextile>
 [SI-6535](https://issues.scala-lang.org/browse/SI-6535) | [8a1f85d](https://github.com/scala/scala/commit/8a1f85d) | <notextile>SI-6535 Step back from the precipice of a cycle</notextile>
 [SI-6549](https://issues.scala-lang.org/browse/SI-6549) | [90c87fc](https://github.com/scala/scala/commit/90c87fc) | <notextile>SI-6549 Improve escaping in REPL codegen.</notextile>
@@ -697,7 +697,7 @@ sha | Title
 [850128d](https://github.com/scala/scala/commit/850128d) | <notextile>SI-5789 Checks in the right version of the test</notextile>
 [d699122](https://github.com/scala/scala/commit/d699122) | <notextile>SI-5789 Removes assertion about implclass flag in Mixin.scala</notextile>
 [a23cc20](https://github.com/scala/scala/commit/a23cc20) | <notextile>SI-5894 Don't emit static forwarders for macros.</notextile>
-[b828e32](https://github.com/scala/scala/commit/b828e32) | <notextile>Remove some low-hanging duplication beween GenJVM / GenASM.</notextile>
+[b828e32](https://github.com/scala/scala/commit/b828e32) | <notextile>Remove some low-hanging duplication between GenJVM / GenASM.</notextile>
 [8434922](https://github.com/scala/scala/commit/8434922) | <notextile>Additional test cases for tail calls in catches.</notextile>
 [31a0aa7](https://github.com/scala/scala/commit/31a0aa7) | <notextile>SI-1672 Catches are in tail position without finally.</notextile>
 [e4d1d93](https://github.com/scala/scala/commit/e4d1d93) | <notextile>Warn when generated classfiles differ only in case.</notextile>
