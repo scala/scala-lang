@@ -216,8 +216,7 @@ compiler options. However we received 7 requests for the `-Xlint` options,
 
 ### Communication
 ![Communication result survey](/resources/img/blog/scala-3-developers-preview-survey-results/communication-survey.svg)
-We asked participants the question “How frequently do you use the following c
-ommunication channels to stay up-to-date on the latest changes in Scala?”, 
+We asked participants the question “How frequently do you use the following communication channels to stay up-to-date on the latest changes in Scala?”, 
 the results of which are displayed in the above chart. It is sorted in descending 
 order based on the total counts for the Very Often and Often responses.
 
