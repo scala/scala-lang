@@ -171,7 +171,7 @@ writeup on Stack Overflow].)
 Jason Zaugg describes his initial JDK 7 implementation in [PR 4139]
 and shows how the resulting bytecode looks.
 
-See also these well-documented followups: [PR 5594] for JDK 9,
+See also these well-documented follow ups: [PR 5594] for JDK 9,
 [PR 9530] for JDK 11, and [PR 9930] for JDK 17.
 
 [PR 4139]: https://github.com/scala/scala/pull/4139
