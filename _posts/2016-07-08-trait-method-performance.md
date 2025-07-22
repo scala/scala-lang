@@ -52,7 +52,7 @@ interface classfile. In short, we have the following bytecode formats for concre
   extending a trait get a virtual method that implements the abstract method in the interface and
   forwards to the static implementation method.
 - 2.12.0-M4: trait method bodies are in (non-static) interface default methods, subclasses get an
-  virtual method (overridding the default method) that forwards to that default method using
+  virtual method (overriding the default method) that forwards to that default method using
   `invokespecial` (a `super` call).
 - [33e7106](https://github.com/scala/scala/commit/33e7106): in most cases, no more forwarders are
   generated in subclasses as they are not needed: the JVM will resolve the correct method.
