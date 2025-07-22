@@ -20,7 +20,7 @@ We apologize to the Scala users for any inconvenience it might have caused.
 
 # What’s new in Scala 3.6?
 
-Besides multiple bugfixes, this release stabilises multiple experimental features introduced to the Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
+Besides multiple bugfixes, this release stabilises multiple experimental features introduced to the Scala language after careful review and acceptance by the [Scala Improvement Proposal's Committee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
 
 ## SIP-47 - Clause Interleaving
 
