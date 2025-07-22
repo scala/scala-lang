@@ -132,7 +132,7 @@ We asked respondents “*Which types of resources did you use to learn Scala?*�
 We see that **78.1%** of respondents chose “books”; **77.5%** chose the [official documentation](https://docs.scala-lang.org); **77.21%** chose “online courses”; **8.43%** chose “university courses”; **3.72%** chose “bootcamps”.
 
 **16.7%** of respondents chose “other” which is significantly more compared to the rest of the  questions in the survey with the same field. Here’s what came up, in no particular order:
-Work experience, hackathons, local user groups, youtube tutorials, internal company training, blogs, Stackoverflow, and more.
+Work experience, hackathons, local user groups, YouTube tutorials, internal company training, blogs, Stackoverflow, and more.
 
 Going forward it would be useful to reinclude some of the “other” options in the main questions, and further determine which books/docs/courses were useful.
 
