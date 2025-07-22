@@ -2,6 +2,7 @@
 category: release
 permalink: /news/3.7.1/
 title: "Scala 3.7.1 is now available!"
+by: Wojciech Mazur, VirtusLab
 ---
 Scala 3.7.1 is now available!
 

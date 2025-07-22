@@ -2,6 +2,7 @@
 category: release
 permalink: /news/3.3.6/
 title: "Scala 3.3.6 LTS is now available!"
+by: Tomasz Godzik, VirtusLab
 ---
 Scala 3.3.6 LTS is now available!
 
