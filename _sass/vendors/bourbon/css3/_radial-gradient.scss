@@ -19,7 +19,7 @@
   // Strip deprecated cover/contain for spec
   $shape-size-spec: _shape-size-stripper($shape-size);
 
-  // Set $g1 as the default fallback color
+  // Set $g1 as the fallback color
   $first-color: nth($full, 1);
   $fallback-color: nth($first-color, 1);
 
