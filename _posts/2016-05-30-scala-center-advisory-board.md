@@ -11,7 +11,7 @@ Scala Center and how it influences the Scala community and ecosystem.
 
 It was never intentional, but it's become a bit of a joke at EPFL that the
 "Scala Center Advisory Board" was born with an unfortunate acronym! So, when I
-chaired our inaugral meeting in New York two weeks ago, one of the first points
+chaired our inaugural meeting in New York two weeks ago, one of the first points
 I made to the attendees was that we have to exceed our acronym and earn the
 community's trust and respect, ensuring we provide a worthwhile and beneficial
 service to all users of Scala.
