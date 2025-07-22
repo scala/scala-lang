@@ -426,7 +426,7 @@ they would look like in Scala 3. While the final result is almost the same, code
 explicit and readable so that you can focus on solving your business problems rather than on
 syntax.
 
-This is part of a larger set of usability and ergonomy improvements for Scala 3 that we believe
+This is part of a larger set of usability and ergonomic improvements for Scala 3 that we believe
 will make the language easier and more fun to use and we are very excited to see what the
 community will create with them.
 
