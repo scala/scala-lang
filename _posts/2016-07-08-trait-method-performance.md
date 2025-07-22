@@ -63,7 +63,7 @@ interface classfile. In short, we have the following bytecode formats for concre
 
 ## Performance measurements
 
-Scala is unfortunately still lacking a proper infrastructure for montioring performance of the
+Scala is unfortunately still lacking a proper infrastructure for monitoring performance of the
 compiler and the bytecode it generates. Improving this situation will be one of the main tasks once
 Scala 2.12.0 out the door. But for now we are left with measuring performance and identifying
 regressions by hand.
