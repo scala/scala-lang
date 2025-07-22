@@ -740,7 +740,7 @@ sha | Title
 [74ca558](https://github.com/scala/scala/commit/74ca558) | <notextile>SI-6551: don't insert apply call in polymorphic expression.</notextile>
 [c656920](https://github.com/scala/scala/commit/c656920) | <notextile>SI-6663: don't ignore type parameter on selectDynamic invocation</notextile>
 [af8b45f](https://github.com/scala/scala/commit/af8b45f) | <notextile>Scaladoc update for collection.mutable.MultiMap</notextile>
-[db0bf8f](https://github.com/scala/scala/commit/db0bf8f) | <notextile>Restore the opimization apparently lost after merge.</notextile>
+[db0bf8f](https://github.com/scala/scala/commit/db0bf8f) | <notextile>Restore the optimization apparently lost after merge.</notextile>
 [1f0e488](https://github.com/scala/scala/commit/1f0e488) | <notextile>Fixes SI-6150 - backport to 2.10.x branch.</notextile>
 [65778d7](https://github.com/scala/scala/commit/65778d7) | <notextile>SI-5330, SI-6014 deal with existential self-type</notextile>
 [f8647ee](https://github.com/scala/scala/commit/f8647ee) | <notextile>show developer guidelines on opening pull request</notextile>
