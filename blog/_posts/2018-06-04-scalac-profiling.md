@@ -704,7 +704,7 @@ shapeless.Strict[caseapp.core.Parser[bloop.cli.Commands.Run]] (id 12121) (expand
 On every stack trace, you have also the information about the timing. The
 unit of time is microseconds. So one million μs is one second. We use
 microseconds because flamegraphs cannot display decimal values and we want
-to lose as litle time precision as possible.
+to lose as little time precision as possible.
 
 Beware that an implicit search may not appear in the flamegraph even if it's
 performed by `scalac`. There could be implicit searches that are so fast to
