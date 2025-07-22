@@ -79,7 +79,7 @@ With all that said, our approach to analyse the results is as follows:
 - Presenting the quantifiable data
 - Categorizing comments to provide further insight into the topics discussed; 
   the purpose of the comment, such as: ‘advice’, ‘concern’, ‘request’; 
-  overall tone: either positive or negative; to prioritise what needs addressing/fixing 
+  overall tone: either positive or negative; to prioritize what needs addressing/fixing 
   before RC1 or at later time, e.g. ‘critical’ or ‘good to have’.
 - Cross-referencing comments with other sources on the same topic.
 - Finally, creating a list of important topics that need to be addressed.

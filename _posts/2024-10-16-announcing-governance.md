@@ -34,7 +34,7 @@ If you are wondering how these matters impact your daily life as a Scala program
 
 ### Product-driven decision making process
 
-One of the most significant updates was the paradigm shift from treating Scala 3 as an open-source project to approaching it as an open-source product. Scala 3 is developed with predictable release cycles, issue reports are consistently prioritised and added to a milestone, and the roadmap for new features and improvements is well-defined. This focus on product success is fully reflected in the governance model and structure, led by the Product Manager, Piotr Chabelski from the Scala team at VirtusLab. This approach was inspired by the Scala 2 era and its ongoing success.
+One of the most significant updates was the paradigm shift from treating Scala 3 as an open-source project to approaching it as an open-source product. Scala 3 is developed with predictable release cycles, issue reports are consistently prioritized and added to a milestone, and the roadmap for new features and improvements is well-defined. This focus on product success is fully reflected in the governance model and structure, led by the Product Manager, Piotr Chabelski from the Scala team at VirtusLab. This approach was inspired by the Scala 2 era and its ongoing success.
 
 ### Well defined Scala distributions
 
