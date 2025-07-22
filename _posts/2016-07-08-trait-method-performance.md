@@ -397,7 +397,7 @@ The benchmark basically measures the following loop:
     int r = 0;
     for (int x = 0; x < N; x++) {
       c.v = x;
-      r += c.v // field acces either through a default or a virtual method
+      r += c.v // field access either through a default or a virtual method
     }
 
 Comparing the assembly code of the loop when using the default method or the virtual method, Paolo
