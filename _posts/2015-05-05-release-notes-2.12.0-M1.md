@@ -135,7 +135,7 @@ Note that milestone releases and release candidates are **not** binary compatibl
 
 When two versions of Scala are binary compatible, it is safe to compile your project on one Scala version and link against another Scala version at run time.
 Safe run-time linkage (only!) means that the JVM does not throw a (subclass of) [`LinkageError`](https://docs.oracle.com/javase/7/docs/api/java/lang/LinkageError.html) when executing your program in the mixed scenario, assuming that none arise when compiling and running on the same version of Scala.
-Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatibile.
+Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatible.
 In other words, separate compilation on different binary compatible versions does not introduce problems compared to compiling and running everything on the same version of Scala.
 
 We check binary compatibility automatically with [MiMa](https://github.com/typesafehub/migration-manager).
