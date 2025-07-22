@@ -153,7 +153,7 @@ The code above previously required `a` to be defined outside the for-comprehensi
   }.map { case (b, c) => c }
 ```
 
-With SIP-52 the same snippet would be desugared to simpler and more efficent code:
+With SIP-52 the same snippet would be desugared to simpler and more efficient code:
 
 ```Scala
   Some(2).map { b =>
