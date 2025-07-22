@@ -33,7 +33,7 @@ The following changes are planned for Scala 2.12:
   The design notes for this feature are available in [this gist](https://gist.github.com/retronym/0178c212e4bacffed568).
 * Lambda syntax for SAM types.
   Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
-  This feature is already avalable in Scala 2.11 using the `-Xexperimental` compiler option.
+  This feature is already available in Scala 2.11 using the `-Xexperimental` compiler option.
   It improves the experience of using libraries written for Java 8 in Scala.
 * New backend and optimizer.
   The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
