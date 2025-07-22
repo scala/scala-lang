@@ -317,7 +317,7 @@
                                                 //    });
                                                 //}
 
-                                                // Increment the tweets diplayed
+                                                // Increment the tweets displayed
                                                 tweetsDisplayed++;
 
                                                 // Increase page number and wrap tweets if pagination is enabled and we're finishing a page:
