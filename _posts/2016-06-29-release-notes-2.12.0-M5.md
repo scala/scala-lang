@@ -31,7 +31,7 @@ the issue, but we are still investigating the details. The 2.12 release notes wi
 impact of changes to traits on binary compatibility.
 
 In total, we merged [96 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M5), of which [9 are by new contributors](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged%20milestone%3A2.12.0-M5%20label%3Awelcome) -- welcome!
-This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M5%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
+This milestone resolves [49 Jira tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M5%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
 
 As usual for milestones, 2.12.0-M5 is not binary compatible with any other Scala release, including other 2.12 milestones. Scala 2.12 requires a Java 8 runtime.
 
