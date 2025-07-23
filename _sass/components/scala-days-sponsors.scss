@@ -1,8 +1,8 @@
-// SCALA DAYS 2025 SPONSORS
+// SCALA DAYS 2025 scaladays-orgs
 //------------------------------------------------
 //------------------------------------------------
 
-.scala-days-sponsors-bar {
+.scala-days-orgs-bar {
   width: 100%;
   overflow: hidden;
   background: rgba(30, 40, 50, 0.2);
@@ -10,29 +10,25 @@
   position: relative;
 }
 
-.sponsors-carousel {
+.scaladays-orgs-carousel {
   width: 100%;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
   margin-top: 2em;
-
-  &.scaladays-org-logo-platinum {
-
-  }
 }
 
-.sponsors-track {
+.scaladays-orgs-track {
   display: flex;
   flex-direction: row;
   align-items: center;
   white-space: nowrap;
   width: max-content;
-  animation: sponsors-scroll 180s linear infinite;
+  animation: scaladays-orgs-scroll 180s linear infinite;
   will-change: transform;
 }
 
-.sponsor-logo-link {
+.scaladays-org-logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +38,7 @@
   flex: 0 0 auto;
 }
 
-.sponsor-logo {
+.scaladays-org-logo {
   max-height: 40px;
   max-width: 120px;
   width: auto;
@@ -53,11 +49,11 @@
   display: block;
   margin: 0 auto;
 }
-.sponsor-logo-link:hover .sponsor-logo {
+.scaladays-org-logo-link:hover .scaladays-org-logo {
   opacity: 1;
 }
 
-.sponsors-static-row {
+.scaladays-orgs-static-row {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,7 +67,7 @@
   padding: 0 1em;
 }
 
-.platinum-sponsors {
+.platinum-scaladays-orgs {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -80,7 +76,7 @@
   height: 80px;
 }
 
-.gold-sponsors {
+.gold-scaladays-orgs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -91,14 +87,14 @@
   max-width: 600px;
 }
 
-.sponsor-logo-link-platinum {
+.scaladays-org-logo-link-platinum {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80px;
 }
 
-.sponsor-logo-static-row {
+.scaladays-org-logo-static-row {
   max-height: 80px !important;
   height: 80px;
   width: auto;
@@ -107,7 +103,7 @@
   transition: opacity 0.2s;
 }
 
-.gold-sponsors-flex {
+.gold-scaladays-orgs-flex {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -118,7 +114,7 @@
   width: 100%;
 }
 
-.sponsor-logo-link-gold {
+.scaladays-org-logo-link-gold {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +123,7 @@
   width: 100%;
 }
 
-.sponsor-logo-gold-row {
+.scaladays-org-logo-gold-row {
   max-height: 25px !important;
   height: 25px;
   width: auto;
@@ -136,7 +132,7 @@
   transition: opacity 0.2s;
 }
 
-.sponsors-brought-to-you-by {
+.scaladays-orgs-brought-to-you-by {
   font-size: 1.2em;
   font-weight: 600;
   color: #fff;
@@ -144,37 +140,37 @@
   text-align: center;
 }
 
-@keyframes sponsors-scroll {
+@keyframes scaladays-orgs-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 @media (max-width: 700px) {
-  .sponsors-static-row {
+  .scaladays-orgs-static-row {
     flex-direction: column;
     gap: 1em;
   }
-  .platinum-sponsors {
+  .platinum-scaladays-orgs {
     justify-content: center;
     gap: 1.5em;
     height: auto;
   }
-  .gold-sponsors-flex {
+  .gold-scaladays-orgs-flex {
     display: none;
   }
-  .sponsor-logo-link {
+  .scaladays-org-logo-link {
     width: 80px;
     height: 28px;
     margin: 0 0.5em;
   }
-  .sponsor-logo {
+  .scaladays-org-logo {
     max-height: 24px;
     max-width: 60px;
   }
 }
 
 @media (max-width: 1000px) and (min-width: 701px) {
-  .gold-sponsors {
+  .gold-scaladays-orgs {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 1em;
@@ -186,15 +182,15 @@
 }
 
 @media (max-width: 900px) and (min-width: 701px) {
-  .sponsors-static-row {
+  .scaladays-orgs-static-row {
     gap: 1.5em;
   }
 
-  .platinum-sponsors {
+  .platinum-scaladays-orgs {
     gap: 1.5em;
   }
 
-  .gold-sponsors {
+  .gold-scaladays-orgs {
     gap: 0.8em;
   }
 }
