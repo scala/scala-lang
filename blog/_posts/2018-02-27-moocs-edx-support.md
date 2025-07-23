@@ -8,8 +8,7 @@ redirect_from: /news/2018/02/27/moocs-edx-support.html
 ---
 
 > **Update**: After a couple of years experimenting with Open edX, we decided
-> to shut down these course instances. You can find an up-to-date list of
-> online courses [here](https://docs.scala-lang.org/online-courses.html).
+> to shut down these course instances. You can find an [up-to-date list of online courses](https://docs.scala-lang.org/online-courses.html).
 
 We are thrilled to announce that our 4 main MOOCs are now also available
 on an [Open edX instance managed at EPFL](https://courseware.epfl.ch).

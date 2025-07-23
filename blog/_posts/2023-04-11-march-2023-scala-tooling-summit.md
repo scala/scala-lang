@@ -246,9 +246,8 @@ Both Metals and IntelliJ users have multiple ways to import projects. This could
 be simply choosing your build server in Metals, or choosing to use BSP at all in
 IntelliJ. There are ongoing discussions and work going on in both of these tools
 to make the getting started experience on a project more seamless no matter the
-tool or project. For example you can see the discussion choosing a default build
-server for metals
-[here](https://github.com/scalameta/metals/discussions/4505#discussioncomment-4571546).
+tool or project. For example you can see the [discussion choosing a default build
+server for metals](https://github.com/scalameta/metals/discussions/4505#discussioncomment-4571546).
 
 ### Porting Scalameta to Scala 3
 
@@ -271,9 +270,8 @@ new upcoming BSP plugin for IntelliJ this may offer a better level of support
 for using Mill or sbt server for multi-language projects. On the Metals side,
 this is made even more trickier as LSP isn’t traditionally used for mixed
 multi-language projects. There will be some more research on seeing if it’s
-possible to better integrate with the Java language servers. There is an ongoing
-thread about this that can be followed
-[here](https://github.com/scalameta/metals-feature-requests/issues/5).
+possible to better integrate with the Java language servers. There is an [ongoing
+thread about this](https://github.com/scalameta/metals-feature-requests/issues/5).
 
 ### Tasty Query and its use-cases
 
@@ -323,8 +321,8 @@ implementations. During this topic
 [coursier/publish](https://github.com/coursier/publish) was mentioned as a
 possible library that could be utilized across the ecosystem. There were
 multiple questions that would need to be answered first about the reality of
-this possibility that are being tracked
-[here](https://github.com/coursier/publish/issues/14).
+this possibility that are being tracked in
+[Discussing usage in other tools](https://github.com/coursier/publish/issues/14).
 
 ### Merge Bloop mainline and scala-cli’s fork of Bloop
 
@@ -334,9 +332,8 @@ and comments about how it works, and questions about why it works a certain way.
 Some of the answers to these questions has led scala-cli to fork Bloop resulting
 in 2 bloop servers often running on a user’s machine if they are a Metals user.
 In order to combat this and provide a smoother Bloop experience for all users,
-we discussed what would need to happen in order to merge the fork of Bloop back
-inline. You can follow a thread on this effort
-[here](https://github.com/VirtusLab/scala-cli/issues/1971).
+[we discussed what would need to happen in order to merge the fork of Bloop back
+inline](https://github.com/VirtusLab/scala-cli/issues/1971).
 
 ## What comes next?
 

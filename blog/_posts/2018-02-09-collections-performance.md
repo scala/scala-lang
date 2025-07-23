@@ -83,8 +83,8 @@ default implementations of transformation operations to make them non strict.
 Now it seems that the situation is just reversed: the default implementations work well
 with non strict collections, but we have to override them in strict collections.
 
-So, is the new design worth it? To answer this question I will quote a comment posted
-by Stefan Zeiger [here](https://www.reddit.com/r/scala/comments/7g52cy/let_them_be_lazy/dqixt8d/):
+So, is the new design worth it? To answer this question I will quote a [comment posted
+by Stefan Zeiger](https://www.reddit.com/r/scala/comments/7g52cy/let_them_be_lazy/dqixt8d/):
 
 > The lazy-by-default approach is mostly beneficial when you're implementing lazy
 > collections because you don't have to override pretty much everything or get
@@ -113,8 +113,7 @@ operations execution compared to the old `Vector`, for various number of element
 The blue line shows the old `Vector`,
 the red line shows the new `Vector` if it used only view based
 implementations, and the yellow line shows the actual new `Vector`
-(with strict optimized implementations). Benchmark source code and numbers can be found
-[here](https://gist.github.com/julienrf/f1cb2b062cd9783a35e2f35778959c76).
+(with strict optimized implementations). See [Benchmark source code and numbers](https://gist.github.com/julienrf/f1cb2b062cd9783a35e2f35778959c76).
 
 Since operation implementations end up being the same, why do we get better performance
 at all? Well, these numbers are specific to `Vector` and the tested operations, they

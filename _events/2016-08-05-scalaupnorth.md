@@ -6,5 +6,5 @@ location: Montreal, QC, Canada
 description: ""
 start: 5 August 2016
 end: 6 August 2016
-link-out: http://scalaupnorth.com/2016.html
+link-out: https://web.archive.org/web/20170626002559/http://scalaupnorth.com/2016.html
 ---

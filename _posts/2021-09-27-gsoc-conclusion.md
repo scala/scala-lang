@@ -34,8 +34,8 @@ scalafix and Metals. However, the SemanticDB extractor for Scala3 was a work in
 progress, and some features in devtools were unavailable for Scala3. This
 project focuses on enriching SemanticDB with additional information from the
 Scala3 compiler in order to improve the developer experience of Scala 3
-developers You can read more
-[here](https://github.com/tanishiking/gsoc-2021/blob/main/README.md)
+developers. See the
+[GSoC 2021 Final Report: Add synthetics and symbol information for semanticdb in Scala 3](https://github.com/tanishiking/gsoc-2021/blob/main/README.md) for more information.
 
 
 > Rikito's work enables a huge amount of features in tools used for working with
@@ -53,8 +53,8 @@ Mentors:  Julien Richard-Foy, Aleksander Boruch-Gruszecki
 Shapeless is a crucial dependency of many popular Scala libraries. This project
 explores how the Scala 2 version of the library could be cross-built for Scala 3
 by porting some parts to Scala 3. It aims at helping library maintainers to
-adopt Scala 3 faster.  You can read more
-[here](https://github.com/milessabin/shapeless/pull/1200)
+adopt Scala 3 faster.  See the
+[Scala 3 port pull request](https://github.com/milessabin/shapeless/pull/1200) for more information.
 
 > Congratulations for your work on Shapeless, especially for being so autonomous
 > in this project!
@@ -70,8 +70,8 @@ Mentors: Shadaj Laddad, Anatolii Kmetiuk
 ScalaPy is a library that enables Scala programs to use Python libraries. This
 project brings support for Scala 3 to the library to enable users to leverage
 all the new cool features that the new language versions ships while relying on
-powerful and well known Python libraries.  You can read more
-[here](https://gist.github.com/jlareck/7268918d28b0c6a0efebeafa11011e3c)
+powerful and well known Python libraries.  See
+[Google Summer of Code 2021: Implement support for ScalaPy in Scala 3](https://gist.github.com/jlareck/7268918d28b0c6a0efebeafa11011e3c) for more information.
 
 > Mykola's contributions bringing support for Scala 3 are really impressive and
 > will enable many new research and production use cases in the future!
@@ -88,8 +88,8 @@ Mentors: Anatolii Kmetiuk, Alexandre Archambault
 ScalaPy is a library that enables Scala programs to use Python libraries. This
 project focuses on improving developer experience by simplifying the setup
 process, providing autocomplete functionalities in Almond and Ammonite,
-enriching the documentation and object displays.  You can read more
-[here](https://gist.github.com/kiendang/e6c2fc41448fabba6f1e6ae34cf65c49)
+enriching the documentation and object displays. See 
+[Improving ScalaPy developer experience and integration with Ammonite and Almond](https://gist.github.com/kiendang/e6c2fc41448fabba6f1e6ae34cf65c49) for more information.
 
 > This work kick-started a better integration of the ScalaPy library in Scala
 > notebooks, making it easier to use Python libraries from there, and helping the

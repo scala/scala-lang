@@ -107,7 +107,7 @@ that our regression suite includes your library."
 
 ## Credits
 
-I (Seth Tisue) am the primary maintainer of the Scala community build,
+I ([Seth Tisue](https://github.com/SethTisue)) am the primary maintainer of the Scala community build,
 as a member of the Scala team at Lightbend.  Toni Cunei, from the
 tooling team at Lightbend, is the primary author of
 [dbuild](https://github.com/lightbend/dbuild), the meta-build tool

@@ -113,8 +113,7 @@ events.** In April 2022, for the first time in 2.5 years, events could finally t
 many Scala User Groups to restart their regular Scala Meetups. We gave talks and organized [Open-Source Sprees](https://github.com/scalacenter/sprees)
 at local events in Europe. We were also involved in the online conference ScalaCon: we were in charge of the program and
 the program committee, and we presented several talks including a keynote [Towards a Healthy & Resilient Scala Community](https://youtu.be/svWnwU5PXxE)
-where we presented our strategy for the governance of Scala. The talk videos of the whole conference are available online
-[here](https://www.youtube.com/playlist?list=PL3t6y1EktOPhflaXB28Kw7kwRb30K0W-P).
+where we presented our strategy for the governance of Scala. The [talk videos of the whole conference](https://www.youtube.com/playlist?list=PL3t6y1EktOPhflaXB28Kw7kwRb30K0W-P) are available online.
 
 **We published videos about Scala 3.** [Let’s Talk About Scala 3](https://www.youtube.com/playlist?list=PLTx-VKTe8yLxYQfX_eGHCxaTuWvvG28Ml)
 is a series of videos where we share interesting, useful, and cool things related to Scala 3. We published 4 new
@@ -133,8 +132,8 @@ more about the Compiler Academy in [this blog article]({% link blog/_posts/2022-
 absence of incompatibilities between library dependencies is the cornerstone of a seamless Scala ecosystem. We have
 implemented a prototype of a new tool to detect incompatibilities between two versions of a program (like
 [MiMa](https://github.com/lightbend/mima), but based on the TASTy representation of programs instead of JVM bytecode).
-We explained [here](https://github.com/scalacenter/tasty-mima#motivation) why we need this tool in addition to the
-classic MiMa.
+We [explained why we need this tool in addition to the
+classic MiMa](https://github.com/scalacenter/tasty-mima#motivation).
 Our work is based on [TASTy Query](https://github.com/scalacenter/tasty-query), which will be the basis of tools to
 perform static analysis of Scala programs (it is already used by the Metals debugger).
 
@@ -162,8 +161,7 @@ library, we will:
 
 - **Make the compiler error messages clearer and more actionable.** The compiler should help developers write correct code
   instead of “just complaining” about incorrect code. The compiler should also guide you to write maintainable code (ie,
-  it should provide linting features). You can find a list of related issues
-  [here](https://github.com/scala/scala3/issues?q=is%3Aopen+is%3Aissue+label%3Aarea%3Areporting).
+  it should provide linting features). You can find a [list of related issues](https://github.com/scala/scala3/issues?q=is%3Aopen+is%3Aissue+label%3Aarea%3Areporting).
 - **Bring the compiler’s suggestions into the IDEs.** Instead of emitting only text output, the compiler
   will produce structured output that IDEs (Metals and IntelliJ) will be able to read to automatically provide “quick
   fixes” to the users. This should reduce the implementation (and maintenance) costs on the IDE side.
@@ -256,6 +254,6 @@ outcome of our work in 2022, and our main goals for 2023.
 Thanks to your support, and with the help of all the [people behind Scala](https://www.scala-lang.org/community/#whos-behind-scala),
 we came this far! Help us go even further by [supporting the Scala Center](https://scala.epfl.ch/faqs.html).
 
-You can find our detailed roadmap for the current quarter [here](https://scala.epfl.ch/projects.html),
+See our [detailed roadmap for the current quarter](https://scala.epfl.ch/projects.html),
 and track our progress by looking at our [quarterly reports](https://scala.epfl.ch/records.html), or by browsing the
 [Scala Center Updates](https://contributors.scala-lang.org/c/scala-center/25) category of the Scala Contributors forum.

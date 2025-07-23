@@ -14,4 +14,4 @@ paginate:
 
 <h2>Looking for Past Events?</h2>
 
-Past events can be found <a href="/pastevents/">here</a>.
+See <a href="/pastevents/">Past events</a>.

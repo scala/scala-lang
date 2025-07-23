@@ -149,8 +149,7 @@ tupleToCsv(("Bob", 42, false)) // List("Bob", "42", "false")
 
 Scala 3 introduces the `Mirror` type class,
 which provides type-level information about the components and labels of types.
-For typical case classes, `Mirror` instances are generated automatically by the compiler
-(see [here](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror-1) for more details).
+For typical case classes, [`Mirror` instances](https://docs.scala-lang.org/scala3/reference/contextual/derivation.html#mirror) are generated automatically by the compiler.
 
 That's why we can obtain a tuple from a case class using:
 ```scala
@@ -193,8 +192,7 @@ index provided to `apply` is strictly inferior to the size of the tuple.
 How is this possible?
 
 The core new feature that allows such a flexible implementation of tuples are
-**match types**.  I invite you to read more about them
-[here](http://dotty.epfl.ch/docs/reference/new-types/match-types.html).
+**[match types](http://dotty.epfl.ch/docs/reference/new-types/match-types.html)**.
 
 Let's see how we can implement the `++` operator using this powerful construct.
 We will call our naive version `concat`.
@@ -313,9 +311,8 @@ def concat[L <: Tup, R <: Tup](left: L, right: R): Concat[L, R] =
 ```
 
 We use here a combination of match types and a form of dependent types called
-*dependent match types* (docs
-[here](http://dotty.epfl.ch/docs/reference/new-types/match-types.html) and
-[here](http://dotty.epfl.ch/docs/reference/new-types/dependent-function-types.html)).
+[dependent match types](http://dotty.epfl.ch/docs/reference/new-types/match-types.html) and
+[dependent function types](http://dotty.epfl.ch/docs/reference/new-types/dependent-function-types.html)).
 There are some quirks to it as you might have noticed: using lower case types
 means using type variables and we cannot use pattern matching on the object. I
 think however that this implementation is extremely concise and readable.

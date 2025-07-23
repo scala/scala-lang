@@ -25,7 +25,7 @@ These are some of the steps we are taking, and we hope to inspire you to take ac
 * Support your friends and colleagues in the neighbouring countries, who are welcoming the people escaping the conflict areas.
 * Inform people around you about the unfolding crisis. Many, especially in the countries far from the affected areas, may not realise the extent of what's happening. Informing them is crucial to rally support. Share information responsibly -- check your sources.
 * Help financially, for example [donate to the Ukrainian Red Cross](https://donate.redcrossredcrescent.org/ua/donate/).
-* More ways to help are listed [here](https://www.standwithukraine.app/) or [here](https://www.globalcitizen.org/en/content/ways-to-help-ukraine-conflict/).
+* More ways to help are listed in [#StandWithUkraine](https://www.standwithukraine.app/) or [GlobalCitizen: Meaningful Ways You Can Help Ukraine](https://www.globalcitizen.org/en/content/ways-to-help-ukraine-conflict/).
 * Find out ways you can help that are specific to your country of residence.
 
 We are sincerely grateful to everyone who has taken action so far.

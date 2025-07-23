@@ -787,7 +787,7 @@ options of the bloop configuration file.
 This is a good moment to try to minimize the problem. `-Xlog-implicits` will
 log a lot of failed searches and we want to be able to see through the noise.
 I did minimise the issue
-[here](https://github.com/scalacenter/scalac-profiling/pull/23/commits/dbcb8d480e9b402899d21620055bc555b2841382).
+with [Add reproduced version of case-app inefficiency](https://github.com/scalacenter/scalac-profiling/pull/23/commits/dbcb8d480e9b402899d21620055bc555b2841382).
 Doing `implicitly[Parser[CliOptions]]` also reproduces it.
 
 Among all the logs, this is the one that attracts my attention the most.
@@ -948,7 +948,7 @@ And inspect the generated code by the macro expansion by using
 logs). That extra inspection gave me some hints.
 
 The issue seems to be in the refinement of `HListParser`. In the previous log the last type parameter of `HListParser.Aux` (the refinement type) was `HD`, an abstract type used
-[here](https://github.com/alexarchambault/case-app/blob/v1.2.0/core/shared/src/main/scala/caseapp/core/HListParser.scala#L131-L159),
+in [`hconsRecursive`](https://github.com/alexarchambault/case-app/blob/v1.2.0/core/shared/src/main/scala/caseapp/core/HListParser.scala#L131-L159),
 and the returned refinement type from the macro was `Option[String] ::
 this.P`.
 

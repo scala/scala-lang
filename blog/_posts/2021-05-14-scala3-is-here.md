@@ -19,7 +19,7 @@ One thing has changed completely in Scala 3 compared to Scala 2: it is macros. Y
 
 If you are a seasoned user of Scala 2, chances are you have some projects you'd like to port from Scala 2 to Scala 3. You may find the [Migration guide](https://docs.scala-lang.org/scala3/guides/migration/compatibility-intro.html#) helpful. It outlines the compatibility story between Scala 2 and Scala 3: source compatibility, binary compatibility, changed and dropped features, metaprogramming.
 
-And if you need any help in your Scala journey, you can find various resources to talk to fellow Scala users [here](https://www.scala-lang.org/community/).
+And if you need any help in your Scala journey, there are [various resources to talk to fellow Scala users](https://www.scala-lang.org/community/).
 
 ## Ecosystem
 

@@ -22,14 +22,14 @@ Mikail Khan, mentored by Noel Welsh, developed a domain-specific language for de
 
 The project will be especially interesting for Scala educators. For experienced and novice programmers alike, it's important to quickly get feedback on what your code is doing – this is how we learn. Even more so it is important for people who have just started their journey in programming. Having a visual feedback you can play with is a great feature that can be used to teach Scala to newcomers.
 
-The final report for this project is available [here](https://static.mikail-khan.com/gsoc-report/).
+See the [final report for this project](https://static.mikail-khan.com/gsoc-report/) for more information.
 
 ## Towards Scala 3 support for Scalafix `ExplicitResultTypes`: cross-compiling to Scala 3
 Scalafix is a linting and rewriting tool for Scala codebases. `ExplicitResultTypes` is one of the built-in rules, which inserts type annotations for inferred public members.
 
 Unlike most rules that only rely on the Scalafix & SemanticDB APIs, `ExplicitResultTypes` also depends on the Scala presentation compiler, requiring users to run Scalafix with the Scala binary version targeted by the source files they want to annotate. As Scalafix is currently only cross-compiled to Scala 2.11, 2.12 and 2.13, it is not trivial to interact with the Scala 3 compiler and thus `ExplicitResultTypes` cannot run on Scala 3 source files at the moment.
 
-Razvan Vacaru, mentored by Brice Jaglin and Meriam Lachkar made a significant progress towards the goal of supporting Scala 3 in `ExplicitResultTypes` by cross-compiling all Scalafix modules to Scala 3. You can find a detailed report [here](https://github.com/rvacaru/GsoC-2022-Scalafix).
+Razvan Vacaru, mentored by Brice Jaglin and Meriam Lachkar made a significant progress towards the goal of supporting Scala 3 in `ExplicitResultTypes` by cross-compiling all Scalafix modules to Scala 3. For a more detailed report, see [GSoC 2022 - Scalafix Final Submission](https://github.com/rvacaru/GsoC-2022-Scalafix).
 
 ## Semantic Highlighting in Metals
 Semantic Highlighting is a part of the default LSP (Language Server Protocol – what connects Metals to your favorite code editor to bring all nice developer experience to you) spec, but it is not yet supported by Metals. This would allow the highlighting of tokens (keywords etc.) based on semantic information about the code. This is especially useful with things like soft keywords in Scala 3, but not only.

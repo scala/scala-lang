@@ -6,5 +6,5 @@ location: Toronto, ON, Canada
 description: ""
 start: 25 September 2015
 end: 26 September 2015
-link-out: http://scalaupnorth.com/2015.html
+link-out: https://web.archive.org/web/20160503224847/http://scalaupnorth.com/2015.html
 ---
