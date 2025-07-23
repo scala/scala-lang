@@ -57,12 +57,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  gap: 2em;
+  gap: 4em;
   margin-bottom: 1em;
   padding: 0 1em;
 }
@@ -169,15 +169,17 @@
   }
 }
 
+@media (min-width: 701px) {
+  .scaladays-org-logo-gold-carousel {
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) and (min-width: 701px) {
   .gold-scaladays-orgs {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 1em;
-  }
-
-  .scaladays-org-logo-gold-carousel {
-    display: none;
   }
 }
 
