@@ -50,7 +50,7 @@ def map[B, That](f: Char => B)(implicit bf: CanBuildFrom[String, B, That]): That
 
 When the implicit `CanBuildFrom` parameter is resolved it fixes the return type `That`.
 The resolution is driven by the actual `B` type: if `B` is `Char` then `That` is fixed
-to `String`, otherwise it is `immutable.IndexedSeq`.
+to `String`; otherwise, it is `immutable.IndexedSeq`.
 
 The drawback of this solution is that the type signature of the `map` method looks cryptic.
 
@@ -157,7 +157,7 @@ trait SortedIterableOps[A, CC[_]] {
 }
 ~~~
 
-However, as mentioned in the previous section, we need to also abstract over the kind of the
+However, as mentioned in the previous section, we also need to abstract over the kind of the
 type constructor of the concrete collections. Consequently we have in total four branches:
 
 kind        | not sorted  | sorted

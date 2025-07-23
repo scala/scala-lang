@@ -16,7 +16,7 @@ from January 2018, still applies.
 A year ago, we [updated
 you](https://www.scala-lang.org/2019/01/18/community-build.html) on
 improvements made up through January 2019.  The post you are reading
-highlights the progress the community build has made since then.
+highlights the progress that the community build has made since then.
 
 In short, we believe **the Scala 2 community build is now essentially
 complete**. Still, we will continue to run and maintain it throughout

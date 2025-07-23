@@ -6,7 +6,7 @@
             <li><h3>{{item.title}}</h3></li>
             {% for link in item.links %}
               {% if link.title == "Mastodon" %}
-                 <!-- special case Manstodon to validate with rel="me" -->
+                 <!-- special case Mastodon to validate with rel="me" -->
                 <li><a rel="me" href="{{link.url}}">{{link.title}}</a></li>
               {% else %}
                 <li><a href="{{link.url}}">{{link.title}}</a></li>

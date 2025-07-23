@@ -37,7 +37,7 @@
 					user_name:		'scala_lang', // Set your username
 					include_retweets: true, // Set to true or false if you want to include retweets
 					exclude_replies: false, // Set to true or false if you want to exclude replies
-					rate:           5000, // Rate in ms to refresh the tweets. Any higher than 5000 for search/tweets will get you rate limited
+					rate:           5000, // Rate in ms to refresh the tweets. Any rate greater than 5000 for search/tweets will get you rate limited
 					limit:          5, // Number of tweets to display at a time
 					autoRefresh:    true, // CURRENTLY REQUIRED. Auto-refresh the tweets
 					animateOut:     false, // NOT YET SUPPORTED. Animate out old tweets.
@@ -124,7 +124,7 @@
 					},
 					
                     /*
-                     * Function to parse the text of a tweet and and add links to links, hashtags, and usernames
+                     * Function to parse the text of a tweet and add links to links, hashtags, and usernames
                      */
 					parseText: function (text) {
                         // Links
@@ -317,7 +317,7 @@
                                                 //    });
                                                 //}
 
-                                                // Increment the tweets diplayed
+                                                // Increment the tweets displayed
                                                 tweetsDisplayed++;
 
                                                 // Increase page number and wrap tweets if pagination is enabled and we're finishing a page:

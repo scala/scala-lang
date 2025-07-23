@@ -21,7 +21,7 @@ this problem.
 
 Spores provide a way to control what a closures captures, and thus
 hopes to make it easier to operate with them in concurrent and distributed
-enviornments. The key idea is to capture more type information than a standard
+environments. The key idea is to capture more type information than a standard
 closure, and to use this type information to have more fine-grained control over
 the closures's environment.
 
@@ -49,7 +49,7 @@ spores use type information to figure out whether or not something can be
 serialized at compile time, how can this work with Java Serialization?
 
 To achieve this, previously, spores required Scala Pickling to transitively
-check the entire enviornment was able to be serialized, statically, at
+check the entire environment was able to be serialized, statically, at
 compile-time. However, we now wish to perform this check instead for Java
 Serialization, as Java Serialization is most often used by developers.
 

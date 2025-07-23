@@ -302,8 +302,8 @@ type Concat[L <: Tup, R <: Tup] <: Tup = L match
 You can see that the implementation closely follows the one above for the
 method. The syntax can be read in the following way: the `Concat` type is a
 subtype of `Tup` and is obtained by combining types `L` and `R` which are both
-subtypes of `Tup`.  To use it we need to massage a bit the method
-implementation and to change its return type:
+subtypes of `Tup`.  To use it we need to massage the method implementation a
+bit and to change its return type:
 
 ```scala
 def concat[L <: Tup, R <: Tup](left: L, right: R): Concat[L, R] =

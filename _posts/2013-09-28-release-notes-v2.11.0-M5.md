@@ -21,7 +21,7 @@ Scala was released with slightly modified variant of 3-clause BSD license. The f
 We've clarified the situation but switching to standard wording of 3-clause BSD license. The intent and meaning of the license hasn't change because previous version was just reworded version of 3-clause BSD license.
 
 ## Known issues
-Scala compiler artifact (due to scaladoc) depends on previous version (2.11.0-M4) of `scala-xml` and `scala-parser-combinators` modules. If you depend on `scala-compiler` (e.g. your are a macro writer) then you need to use extra care when upgrading to M5. See [scala-partest#3](https://github.com/scala/scala-partest/pull/3) which discusses the problem in depth and offers a work-around for sbt-based builds.
+Scala compiler artifact (due to scaladoc) depends on previous version (2.11.0-M4) of `scala-xml` and `scala-parser-combinators` modules. If you depend on `scala-compiler` (e.g. your are a macro writer) then you need to use extra care when upgrading to M5. See [scala-partest#3](https://github.com/scala/scala-partest/pull/3) which discusses the problem in depth and offers a workaround for sbt-based builds.
 
 ## Regressions
 We'd [love to hear](https://issues.scala-lang.org/) about any regressions since 2.10.3 or 2.11.0-M4. Before doing so, please search for existing bugs and/or consult with the [scala-user](https://groups.google.com/forum/#!forum/scala-user) mailing list to be sure it is a genuine problem.

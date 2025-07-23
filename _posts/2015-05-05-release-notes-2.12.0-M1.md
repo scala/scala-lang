@@ -33,7 +33,7 @@ The following changes are planned for Scala 2.12:
   The design notes for this feature are available in [this gist](https://gist.github.com/retronym/0178c212e4bacffed568).
 * Lambda syntax for SAM types.
   Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
-  This feature is already avalable in Scala 2.11 using the `-Xexperimental` compiler option.
+  This feature is already available in Scala 2.11 using the `-Xexperimental` compiler option.
   It improves the experience of using libraries written for Java 8 in Scala.
 * New backend and optimizer.
   The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
@@ -84,7 +84,7 @@ The following modules have been removed from the Scala 2.12 distribution:
 
 * The Scala actors library is no longer released with Scala 2.12.
   We recommend that you use the [Akka actors library](https://akka.io/) instead.
-* The Scala distribution archives and the `scala-library-all` maven dependency no longer inlcude Akka actors.
+* The Scala distribution archives and the `scala-library-all` maven dependency no longer include Akka actors.
   To use the Akka actors library, add it to your project as a dependency.
 * The continuations plugin is no longer shipped with the Scala 2.12 distribution.
 
@@ -106,7 +106,7 @@ You are kindly invited to contribute!
 
 Please file any bugs you encounter on [our issue tracker](https://issues.scala-lang.org).
 If you're unsure whether something is a bug, please contact the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list.
-Before creating a new issue, search search the issue tracker to see if your bug has already been reported.
+Before creating a new issue, search the issue tracker to see if your bug has already been reported.
 
 
 ### Scala IDE for Eclipse
@@ -135,7 +135,7 @@ Note that milestone releases and release candidates are **not** binary compatibl
 
 When two versions of Scala are binary compatible, it is safe to compile your project on one Scala version and link against another Scala version at run time.
 Safe run-time linkage (only!) means that the JVM does not throw a (subclass of) [`LinkageError`](https://docs.oracle.com/javase/7/docs/api/java/lang/LinkageError.html) when executing your program in the mixed scenario, assuming that none arise when compiling and running on the same version of Scala.
-Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatibile.
+Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatible.
 In other words, separate compilation on different binary compatible versions does not introduce problems compared to compiling and running everything on the same version of Scala.
 
 We check binary compatibility automatically with [MiMa](https://github.com/typesafehub/migration-manager).

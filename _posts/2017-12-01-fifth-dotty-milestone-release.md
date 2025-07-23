@@ -45,7 +45,7 @@ This query would now be classified as ambiguous. This makes sense, after all
 there are two possible solutions, `b(a1)` and `b(a2)`, neither of which is better
 than the other and both of which are better than the third solution, `c`.
 By contrast, Scala 2 would have rejected the search for `A` as
-ambiguous, and subsequently have classified the query `b(implictly[A])` as a normal fail,
+ambiguous, and subsequently have classified the query `b(implicitly[A])` as a normal fail,
 which means that the alternative `c` would be chosen as solution!
 
 Scala 2's somewhat puzzling behavior with respect to ambiguity has been exploited to implement
@@ -130,7 +130,7 @@ Using sbt 0.13.13 or newer, do:
 sbt new lampepfl/dotty.g8
 ```
 
-This will setup a new sbt project with Dotty as compiler. For more details on
+This will set up a new sbt project with Dotty as compiler. For more details on
 using Dotty with sbt, see the
 [example project](https://github.com/lampepfl/dotty-example-project).
 

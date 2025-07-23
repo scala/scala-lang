@@ -25,7 +25,7 @@ The [RC1 release notes](https://scala-lang.org/news/2.12.0-RC1) have a list of i
 
 
 In total, we merged [29 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-RC2).
-This milestone resolves [6 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-RC2%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) and [9 scala-dev issues](https://github.com/scala/scala-dev/milestone/9?closed=1).
+This milestone resolves [6 Jira tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-RC2%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) and [9 scala-dev issues](https://github.com/scala/scala-dev/milestone/9?closed=1).
 
 As usual for Scala pre-releases, 2.12.0-RC2 is not guaranteed to be binary compatible with any other Scala version, including any 2.12 milestones and release candidates.
 

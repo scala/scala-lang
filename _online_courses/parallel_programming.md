@@ -17,4 +17,4 @@ Learning Outcomes. By the end of this course you will be able to:
 - competently microbenchmark parallel code,
 - write programs that effectively use parallel collections to achieve performance
 
-Recommended background: You should have at least one year programming experience. Proficiency with Java or C# is ideal, but experience with other languages such as C/C++, Python, Javascript or Ruby is also sufficient. You should have some familiarity using the command line. This course is intended to be taken after Functional Program Design in Scala: https://www.coursera.org/learn/scala-functional-program-design.
+Recommended background: You should have at least one year programming experience. Proficiency with Java or C# is ideal, but experience with other languages such as C/C++, Python, JavaScript or Ruby is also sufficient. You should have some familiarity using the command line. This course is intended to be taken after Functional Program Design in Scala: https://www.coursera.org/learn/scala-functional-program-design.

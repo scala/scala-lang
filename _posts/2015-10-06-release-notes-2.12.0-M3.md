@@ -67,7 +67,7 @@ This feature was also available in Scala 2.11, also via `-Xexperimental`.
 
 #### New tab-completion in the Scala REPL
 
-The implementation of tab-completion in the Scala REPL has been rewritten and now uses the same infrastruture as for example the Scala IDE or Ensime. Note that this feature will also be available in 2.11.8.
+The implementation of tab-completion in the Scala REPL has been rewritten and now uses the same infrastructure as for example the Scala IDE or Ensime. Note that this feature will also be available in 2.11.8.
 
 There are a number of improvements:
 * Reliable completion, also in partial expressions and syntactically incorrect programs: try `class C { def f(l: List[Int]) = l.<TAB>`

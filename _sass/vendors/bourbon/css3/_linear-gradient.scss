@@ -24,7 +24,7 @@
 
   $full: $g1, $g2, $g3, $g4, $g5, $g6, $g7, $g8, $g9, $g10;
 
-  // Set $g1 as the default fallback color
+  // Set $g1 as the fallback color
   $fallback-color: nth($g1, 1);
 
   // If $fallback is a color use that color as the fallback color

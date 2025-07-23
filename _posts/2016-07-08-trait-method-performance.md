@@ -13,7 +13,7 @@ discourse: true
 Since the writing of this post, we have made a lot of progress in narrowing down the performance
 issue described. The most important new insights:
 
-- Jason has written a JMH-based test harness for measuring cold and hot perfromance of the Scala
+- Jason has written a JMH-based test harness for measuring cold and hot performance of the Scala
   compiler ([scala/compiler-benchmark](https://github.com/scala/compiler-benchmark)). He used this
   to show that the performance difference discussed in this post only affects cold performance,
   i.e., startup time.
@@ -52,7 +52,7 @@ interface classfile. In short, we have the following bytecode formats for concre
   extending a trait get a virtual method that implements the abstract method in the interface and
   forwards to the static implementation method.
 - 2.12.0-M4: trait method bodies are in (non-static) interface default methods, subclasses get an
-  virtual method (overridding the default method) that forwards to that default method using
+  virtual method (overriding the default method) that forwards to that default method using
   `invokespecial` (a `super` call).
 - [33e7106](https://github.com/scala/scala/commit/33e7106): in most cases, no more forwarders are
   generated in subclasses as they are not needed: the JVM will resolve the correct method.
@@ -63,7 +63,7 @@ interface classfile. In short, we have the following bytecode formats for concre
 
 ## Performance measurements
 
-Scala is unfortunately still lacking a proper infrastructure for montioring performance of the
+Scala is unfortunately still lacking a proper infrastructure for monitoring performance of the
 compiler and the bytecode it generates. Improving this situation will be one of the main tasks once
 Scala 2.12.0 out the door. But for now we are left with measuring performance and identifying
 regressions by hand.
@@ -397,7 +397,7 @@ The benchmark basically measures the following loop:
     int r = 0;
     for (int x = 0; x < N; x++) {
       c.v = x;
-      r += c.v // field acces either through a default or a virtual method
+      r += c.v // field access either through a default or a virtual method
     }
 
 Comparing the assembly code of the loop when using the default method or the virtual method, Paolo
@@ -469,7 +469,7 @@ This code does the following:
 - The loop counter is increased by the constant `0x10` (decimal 16), corresponding to the 16
   unfolded iterations.
 - The loop counter is compared against `0x3d9` (decimal 985): if it is smaller, another round of
-  the unfolded loop can be executed (the loop ends at 1000). Otherwise execution continues in
+  the unfolded loop can be executed (the loop ends at 1000). Otherwise, execution continues in
   a different location that performs single loop iterations.
 
 The interesting observation here is that the field `c.v` is only written once per 16 iterations.

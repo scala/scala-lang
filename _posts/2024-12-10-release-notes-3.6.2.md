@@ -20,7 +20,7 @@ We apologize to the Scala users for any inconvenience it might have caused.
 
 # What’s new in Scala 3.6?
 
-Besides multiple bugfixes, this release stabilises multiple experimental features introduced to the Scala language after careful review and acceptance by the [Scala Improvement Proposal's Commitee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
+Besides multiple bugfixes, this release stabilises multiple experimental features introduced to the Scala language after careful review and acceptance by the [Scala Improvement Proposal's Committee](https://docs.scala-lang.org/sips/). Many of these changes can have a significant impact on the Scala syntax and are introducing new possibilities in writing concise, typesafe as well as easier, and easier to maintain code.
 
 ## SIP-47 - Clause Interleaving
 
@@ -142,7 +142,7 @@ It also introduces changes to how your code is desugared by the compiler, leadin
 
 ## Experimental SIP-57 - Replace non-sensical `@unchecked` annotations
 
-One of the new, experimental, features is the implementation of [SIP-57](https://docs.scala-lang.org/sips/replace-nonsensical-unchecked-annotation.html) introducing a `runtimeChecked` extension method replacing some usages of `@unchecked` annotation using a more convenient syntax. A common use case for `runtimeChecked` is to assert that a pattern will always match, either for convenience or because there is a known invariant that the types can not express.
+One of the new, experimental, features is the implementation of [SIP-57](https://docs.scala-lang.org/sips/replace-nonsensical-unchecked-annotation.html) introducing a `runtimeChecked` extension method replacing some usages of `@unchecked` annotation using a more convenient syntax. A common use case for `runtimeChecked` is to assert that a pattern will always match, either for convenience or because there is a known invariant that the types cannot express.
 
 Some typical use cases might be looking up an expected entry in a dynamically loaded dictionary-like structure:
 

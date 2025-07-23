@@ -227,7 +227,7 @@ However, we think there is light at the end of the tunnel:
    [Bleep](https://github.com/oyvindberg/bleep), while still young, offers a different take in the build tool space that also shows a lot of promise.
 3. **sbt itself has improved greatly over time**.
    The last few years have seen improvements like the [Unified Slash Syntax](https://github.com/sbt/sbt/pull/3434), [sbt Project-Matrix](https://github.com/sbt/sbt-projectmatrix), and the upcoming [sbt 2.0](https://www.scala-sbt.org/2.x/docs/en/changes/sbt-2.0-change-summary.html) release is bringing [build queries](https://eed3si9n.com/sudori-part6/), [remote caching](https://eed3si9n.com/sbt-remote-cache/), and other improvements.
-   While still not perfect, the experience using sbt in 2025 is greatly improved from the experience a decade ago.
+   While still not perfect, the experience using sbt in 2025 is greatly improved from the experience of a decade ago.
 4. [**Maven**](https://github.com/davidB/scala-maven-plugin) and [**Gradle**](https://docs.gradle.org/current/userguide/scala_plugin.html) can also be used.
    These build tools have long been popular and familiar in Java shops.
    While not as popular in the open source community, we see them being used in many commercial Scala codebases.

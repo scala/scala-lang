@@ -138,7 +138,7 @@ principled macro system based on quotes and splices. This looks not very difficu
 need to define a pair of mappings between high level trees of type
 `scala.quoted.Expr[T]` and lower-level Tasty trees of type
 `tasty.Term`. Mapping a high-level tree to a low-level one simply
-means exposing its structure. Mapping a a low-level tree to a
+means exposing its structure. Mapping a low-level tree to a
 high-level tree of type `scala.quoted.Expr[T]` means checking that the
 low-level tree has indeed the given type `T`. That should be all.
 

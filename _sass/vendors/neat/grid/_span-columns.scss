@@ -5,7 +5,7 @@
 /// @param {List} $span
 ///   A list containing `$columns`, the unitless number of columns the element spans (required), and `$container-columns`, the number of columns the parent element spans (optional).
 ///
-///   If only one value is passed, it is assumed that it's `$columns` and that that `$container-columns` is equal to `$grid-columns`, the total number of columns in the grid.
+///   If only one value is passed, it is assumed that it's `$columns` and that `$container-columns` is equal to `$grid-columns`, the total number of columns in the grid.
 ///
 ///   The values can be separated with any string such as `of`, `/`, etc.
 ///

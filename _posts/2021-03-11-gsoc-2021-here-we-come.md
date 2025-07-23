@@ -32,7 +32,7 @@ These are especially exciting times: Scala 3-RC1 has been released mid-February
 enjoy the fresh new approach!
 
 
-If you are an eligible student and are interested in participing in Scala's
+If you are an eligible student and are interested in participating in Scala's
 Google Summer of Code 2021, you can begin discussing project ideas with our
 mentors.  Then you have from March 29 to April 13 to submit your draft
 proposals through [the program website](https://summerofcode.withgoogle.com/organizations/5449337515016192/).

@@ -78,7 +78,7 @@ powerful and well known Python libraries.  You can read more
 
 cit. Shadaj
 
-A special thanks goes to **Zhendong Ang** who co-menthored Mykola and
+A special thanks goes to **Zhendong Ang** who co-mentored Mykola and
 collaborated on the project for his semester project at EPFL.
 
 ### A Python - Scala integrated environment with Almond, Ammonite and ScalaPy

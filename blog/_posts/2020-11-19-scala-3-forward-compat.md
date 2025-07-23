@@ -33,7 +33,7 @@ to build and run.
 and use it from Scala 2 to validate data structures in the `shared` module.
 
 A reader applying the steps in the tutorial to their own project should note that not
-all features of Scala 3 are forward compatibile with Scala 2, such as `inline` methods.
+all features of Scala 3 are forward compatible with Scala 2, such as `inline` methods.
 Consequently, we recommend that the user limits their usage of Scala 3 exclusive
 features when migrating incrementally. More information is provided in the
 [forward compatibility](#forward-compatibility) section.

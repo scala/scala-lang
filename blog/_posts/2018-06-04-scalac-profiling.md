@@ -394,8 +394,8 @@ directory of the cloned bloop repository.
 The first two flags set up the compiler plugin.
 
 The flag `-P:scalac-profiling:no-profiledb` disables the generation of
-`profiledb`s and `-P:scalac-profiling:sourceroot` tells the plugin the base
-directory of the project. The profiledb is only required when we process the
+`profiledb`s and `-P:scalac-profiling:sourceroot` gives the base directory of
+the project to the plugin. The profiledb is only required when we process the
 data with other tools, so by disabling it we keep the overhead of the plugin
 to the bare minimum.
 
@@ -704,7 +704,7 @@ shapeless.Strict[caseapp.core.Parser[bloop.cli.Commands.Run]] (id 12121) (expand
 On every stack trace, you have also the information about the timing. The
 unit of time is microseconds. So one million μs is one second. We use
 microseconds because flamegraphs cannot display decimal values and we want
-to lose as litle time precision as possible.
+to lose as little time precision as possible.
 
 Beware that an implicit search may not appear in the flamegraph even if it's
 performed by `scalac`. There could be implicit searches that are so fast to
@@ -826,7 +826,7 @@ and
 [`materializeCoproduct`](Xhttps://github.com/milessabin/shapeless/blob/a42cd4c1c99e4a7be36e0239d3ee944a6355e321/core/src/main/scala/shapeless/generic.scala#L232-L245).
 
 The problem of incorrect instantiated type arguments we saw before seems
-specific to the way the compiler carries out the implicit search. Fixing it
+specific to the way that the compiler carries out the implicit search. Fixing it
 requires most likely changes to the implicit search algorithm, as [a similar
 Scala compiler issue](https://github.com/scala/bug/issues/10528) did. I tried porting
 these changes to 2.12.x and use `-Xsource:2.13` but the failed macro
@@ -1059,7 +1059,7 @@ happening in every branch, so let's have a look at the data emitted by
 The "Macro expansions by type" and "Implicit searches by type" tells us
 how many repeated macros and implicit searches we have per type.
 
-For example, let's look at the most important entries from from the "Implicit
+For example, let's look at the most important entries from the "Implicit
 searches by type" section.
 
 ```

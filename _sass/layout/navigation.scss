@@ -8,13 +8,13 @@
     @include flex-direction(row);
     @include align-items(center);
     @include justify-content(space-between);
-    .navigation-bdand {
+    .navigation-band {
       img {
         width: 104px;
         height: 43px;
       }
     }
-    .navigation-bdand-vfill-lg {
+    .navigation-band-vfill-lg {
         height: 49px;
     }
     .navigation-panel-button {

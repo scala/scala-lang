@@ -46,7 +46,7 @@ def fetch2 = fetchWeather(server2) // expensive Network IO
   </div>
   <div class="scala-code">
       <div class="code-element dark">
-          <div class="bar-code"><span>Compute accross distributed nodes with Akka actors</span></div>
+          <div class="bar-code"><span>Compute across distributed nodes with Akka actors</span></div>
           <pre><code class="language-scala">def Device(lastTemp: Option[Double]): Behavior[Message] =
   Behaviors.receiveMessage:
     case RecordTemperature(id, value, replyTo) =>

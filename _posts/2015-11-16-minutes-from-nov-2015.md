@@ -184,7 +184,7 @@ Link to issue and document: [https://github.com/scala/slip/issues/31](https://gi
 The document proposes a solution similar to Haskell:
 
 - a "core": which consists only what the compiler needs and not more ([@odersky](https://github.com/odersky) thinks for Scala this should be explained slightly)
-- a "platform": can vary and be much bigger. The platform would be maintained by a different set of people from the core (and have it's own committee), it would be handled by the people who contribute modules to the platform
+- a "platform": can vary and be much bigger. The platform would be maintained by a different set of people from the core (and have its own committee), it would be handled by the people who contribute modules to the platform
 
 [@odersky](https://github.com/odersky) thinks this would be a good model for us as well - the SLIP/SIP committee would look after the core and language, leave the platform to those who work on the platform. The SLIP committee would probably need to jumpstart the platform process in the beginning, but would like to hand over it's running to the community as soon as possible
 
@@ -225,7 +225,7 @@ Conversation over the proposal:
 
 Splitting out core:
 
-- [@odersky](https://github.com/odersky) thinks we should appeal to the community to help, since even Typesafe can't do all of this on it's own
+- [@odersky](https://github.com/odersky) thinks we should appeal to the community to help, since even Typesafe can't do all of this on its own
 - [@SethTisue](https://github.com/SethTisue) splitting the library up was already on Typesafe's plate for Scala 2.13. Could use help from the community, since disentangling the compiler from everything else involves a lot of work
 - [@dickwall](https://github.com/dickwall) thinks this should be tracked through the SIP/SLIP site - SIP/SLIPs are much more than adding new things to the language
 
@@ -269,7 +269,7 @@ a discussion needs to happen around that
 
 Also, should this go into the Scala namespace?
 
-[@SethTisue](https://github.com/SethTisue) points out that part the reason the reaction of this was hard to gauge was it wasn't clear if people realized this wasn't for core (it's not).
+[@SethTisue](https://github.com/SethTisue) points out that part the reason that the reaction of this was hard to gauge was it wasn't clear if people realized this wasn't for core (it's not).
 
 [@heathermiller](https://github.com/heathermiller) even we are confused about what is and isn't core
 

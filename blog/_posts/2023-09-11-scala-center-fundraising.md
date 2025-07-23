@@ -25,4 +25,4 @@ Inspired to join forces for a sustainable Scala open source ecosystem? [Get in t
 
 And if you're not a company but an individual Scala programmer, you can still contribute to the Scala Center by becoming a [supporter](https://scala.epfl.ch/records/first-five-years/support)!
 
-To learn more about our activities, we invite you to check out our [Five Year Report](https://scala.epfl.ch/records/first-five-years/), [team](https://scala.epfl.ch/team.html) behind the the work, and the [2023 Roadmap](https://www.scala-lang.org/blog/2023/01/31/scala-center-2023-roadmap.html).
+To learn more about our activities, we invite you to check out our [Five Year Report](https://scala.epfl.ch/records/first-five-years/), [team](https://scala.epfl.ch/team.html) behind the work, and the [2023 Roadmap](https://www.scala-lang.org/blog/2023/01/31/scala-center-2023-roadmap.html).

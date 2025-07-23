@@ -207,7 +207,7 @@ Issue(s) | Commit | Message
 [SI-6138](https://issues.scala-lang.org/browse/SI-6138) | [b941551](https://github.com/scala/scala/commit/b941551) | <notextile>SI-6138 Centralize and refine detection of `getClass` calls</notextile>
 [SI-7236](https://issues.scala-lang.org/browse/SI-7236), [SI-7237](https://issues.scala-lang.org/browse/SI-7237), [SI-7391](https://issues.scala-lang.org/browse/SI-7391) | [f92ef91](https://github.com/scala/scala/commit/f92ef91) | <notextile>SI-7391 Always use ForkJoin in Scala actors on ... ... Java 6 and above (except </notextile>
 [SI-7473](https://issues.scala-lang.org/browse/SI-7473) | [5b54681](https://github.com/scala/scala/commit/5b54681) | <notextile>SI-7473 Bad for expr crashes postfix</notextile>
-[SI-7421](https://issues.scala-lang.org/browse/SI-7421) | [e18e48d](https://github.com/scala/scala/commit/e18e48d) | <notextile>SI-7421 remove unneeded extra-attachement in maven deploy</notextile>
+[SI-7421](https://issues.scala-lang.org/browse/SI-7421) | [e18e48d](https://github.com/scala/scala/commit/e18e48d) | <notextile>SI-7421 remove unneeded extra-attachment in maven deploy</notextile>
 [SI-7497](https://issues.scala-lang.org/browse/SI-7497) | [d38e8ae](https://github.com/scala/scala/commit/d38e8ae) | <notextile>SI-7497 Fix scala.util.Properties.isMac</notextile>
 
 
@@ -296,7 +296,7 @@ sha | Title
 [f92ef91](https://github.com/scala/scala/commit/f92ef91) | <notextile>SI-7391 Always use ForkJoin in Scala actors on ... ... Java 6 and above (except </notextile>
 [5b54681](https://github.com/scala/scala/commit/5b54681) | <notextile>SI-7473 Bad for expr crashes postfix</notextile>
 [bae4196](https://github.com/scala/scala/commit/bae4196) | <notextile>A test case for a recent LUB progression.</notextile>
-[e18e48d](https://github.com/scala/scala/commit/e18e48d) | <notextile>SI-7421 remove unneeded extra-attachement in maven deploy</notextile>
+[e18e48d](https://github.com/scala/scala/commit/e18e48d) | <notextile>SI-7421 remove unneeded extra-attachment in maven deploy</notextile>
 [d38e8ae](https://github.com/scala/scala/commit/d38e8ae) | <notextile>SI-7497 Fix scala.util.Properties.isMac</notextile>
 [b89dc03](https://github.com/scala/scala/commit/b89dc03) | <notextile>Increase build.number to 2.10.3</notextile>
 [658d90a](https://github.com/scala/scala/commit/658d90a) | <notextile>c.typeCheck(silent = true) now suppresses ambiguous errors</notextile>

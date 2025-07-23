@@ -15,7 +15,7 @@ Coursera!
 The [Big Data Analysis with Scala and
 Spark](https://www.coursera.org/learn/scala-spark-big-data) course is 4 weeks
 long, and aims to teach those coming from Scala the basics of distributed
-computation using Apache Spark. It's more than whirlwhind tour of Spark's basic
+computation using Apache Spark. It's more than whirlwind tour of Spark's basic
 APIs – this course aims to teach you fundamentally what is going on when you're
 doing a distributed job, and it goes all the way from the basics of RDDs to
 intermediate/advanced topics such as tweaking for data locality or writing your

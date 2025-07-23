@@ -27,7 +27,7 @@ The most notable changes since M5 are:
     sbt instead of Ant (affects only contributors, not users)
 
 In total, we merged [82 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-RC1), of which [6 are by new contributors](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged%20milestone%3A2.12.0-RC1%20label%3Awelcome) -- welcome!
-This milestone resolves [25 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-RC1%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
+This milestone resolves [25 Jira tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-RC1%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
 
 As usual for Scala pre-releases, 2.12.0-RC1 is not binary compatible with any other Scala version, including any 2.12 milestones.
 
@@ -153,7 +153,7 @@ As of [#4971](https://github.com/scala/scala/pull/4971), we treat Single Abstrac
     (new C[Int]) sort ((a: Int, b: Int) => a - b)  // ok
 
 The first attempt fails because the type checker cannot infer the types for `_ - _`'s arguments anymore.
-Type inference in this scenario only works when we can narrow the overloads down to one before type checking the arguments the methods are applied to. When a function is passed as an argument to an overloaded method, we do this by considering the "shape" of the function (essentially, its arity). Now that `Comparator[?]` and `(?, ?) => ?` are both considered functions of arity two, our clever scheme breaks down and the programmer must either select an overload (second application) or make the argument types explicit (last application, which resolves to the `Function2` overload).
+Type inference in this scenario only works when we can narrow the overloads down to one before type checking the arguments to which methods are applied. When a function is passed as an argument to an overloaded method, we do this by considering the "shape" of the function (essentially, its arity). Now that `Comparator[?]` and `(?, ?) => ?` are both considered functions of arity two, our clever scheme breaks down and the programmer must either select an overload (second application) or make the argument types explicit (last application, which resolves to the `Function2` overload).
 
 Finally, implicit conversion of SAM types to Function types won't kick in anymore, since the compiler does this conversion itself first:
 

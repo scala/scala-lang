@@ -146,7 +146,7 @@ Test.scala:4: error: method → in class ArrowAssoc is deprecated [...]
 
 Note that the `-Wconf:...` compiler argument is between quotes (`'`) in the command line, which prevents the shell from interpreting characters like `&` or `*`.
 
-For some of the filters the syntax is not trivial, so we look at them in more detail.
+The syntax is not trivial for some of the filters so we look at them in more detail.
 
 * **Message category**: Every message has a category that is displayed in verbose mode (`-Wconf:any:wv`). The `-Wconf:help` option displays the full list of available categories. For example, every `-Xlint` warning has its own category (`lint-infer-any`), the super-category `lint` matches all lint warnings.
 * **Source file**: By default, the source file filter is a regex that must match the file path relative to any path segment. For example, `b/.*Test.scala` matches `/a/b/XTest.scala` but not `/ab/Test.scala`. If the `-rootdir` compiler option is specified, the regex must match the file path relative to that root directory.

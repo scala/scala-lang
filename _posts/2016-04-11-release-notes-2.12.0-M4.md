@@ -10,7 +10,7 @@ Scala 2.12 is all about making optimal use of Java 8's new features. Traits ([#5
 
 For more details about what's new in this milestone, including some breaking changes, please take a look at [these 14 noteworthy PRs](https://github.com/scala/scala/pulls?q=is%3Apr+label%3Arelease-notes+milestone%3A2.12.0-M4+is%3Amerged).
 
-In total, we merged [135 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M4), of which [16 are by new contributors](https://github.com/scala/scala/pulls?q=is%3Apr+milestone%3A2.12.0-M4+label%3Awelcome) -- welcome! This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M4%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
+In total, we merged [135 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M4), of which [16 are by new contributors](https://github.com/scala/scala/pulls?q=is%3Apr+milestone%3A2.12.0-M4+label%3Awelcome) -- welcome! This milestone resolves [49 Jira tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M4%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
 
 We'd especially like to thank Felix Mulder for his [excellent work on the new Scaladoc interface](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4)! Check it out!
 
@@ -73,7 +73,7 @@ As of [#4971](https://github.com/scala/scala/pull/4971), we treat Single Abstrac
     (new C[Int]) sort ((a: Int, b: Int) => a - b)  // ok
 
 The first attempt fails because the type checker cannot infer the types for `_ - _`'s arguments anymore.
-Type inference in this scenario only works when we can narrow the overloads down to one before type checking the arguments the methods are applied to. When a function is passed as an argument to an overloaded method, we do this by considering the "shape" of the function (essentially, its arity). Now that `Comparator[?]` and `(?, ?) => ?` are both considered functions of arity two, our clever scheme breaks down and the programmer must either select an overload (second application) or make the argument types explicit (last application, which resolves to the `Function2` overload).
+Type inference in this scenario only works when we can narrow the overloads down to one before type checking the arguments to which methods are applied. When a function is passed as an argument to an overloaded method, we do this by considering the "shape" of the function (essentially, its arity). Now that `Comparator[?]` and `(?, ?) => ?` are both considered functions of arity two, our clever scheme breaks down and the programmer must either select an overload (second application) or make the argument types explicit (last application, which resolves to the `Function2` overload).
 
 Finally, implicit conversion of SAM types to Function types won't kick in anymore, since the compiler does this conversion itself first:
 

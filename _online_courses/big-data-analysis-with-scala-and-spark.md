@@ -17,4 +17,4 @@ Learning Outcomes. By the end of this course you will be able to:
 - express algorithms for data analysis in a functional style,
 - recognize how to avoid shuffles and recomputation in Spark,
 
-Recommended background: You should have at least one year programming experience. Proficiency with Java or C# is ideal, but experience with other languages such as C/C++, Python, Javascript or Ruby is also sufficient. You should have some familiarity using the command line. This course is intended to be taken after Parallel Programming: https://www.coursera.org/learn/parprog1.
+Recommended background: You should have at least one year programming experience. Proficiency with Java or C# is ideal, but experience with other languages such as C/C++, Python, JavaScript or Ruby is also sufficient. You should have some familiarity using the command line. This course is intended to be taken after Parallel Programming: https://www.coursera.org/learn/parprog1.
