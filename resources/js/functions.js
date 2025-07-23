@@ -627,21 +627,21 @@ $(document).ready(function() {
   }
 });
 
-// Seamless infinite scroll for Scala Days sponsors bar (no memory leak, no visible jump)
+// Seamless infinite scroll for Scala Days scaladays-orgs bar (no memory leak, no visible jump)
 document.addEventListener("DOMContentLoaded", function() {
-  var track = document.getElementById('sponsors-track');
+  var track = document.getElementById('scaladays-orgs-track');
   if (!track) return;
 
   // Get the width of one set of logos (half the track)
   var totalWidth = track.scrollWidth / 2;
   var pos = 0;
-  function animateSponsorsBar() {
+  function animateScaladaysOrgsBar() {
     pos -= 1; // px per frame, adjust for speed
     if (Math.abs(pos) >= totalWidth) {
       pos = 0;
     }
     track.style.transform = 'translateX(' + pos + 'px)';
-    requestAnimationFrame(animateSponsorsBar);
+    requestAnimationFrame(animateScaladaysOrgsBar);
   }
-  animateSponsorsBar();
+  animateScaladaysOrgsBar();
 });

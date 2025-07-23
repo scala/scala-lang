@@ -1,8 +1,8 @@
-// SCALA DAYS 2025 SPONSORS
+// SCALA DAYS 2025 scaladays-orgs
 //------------------------------------------------
 //------------------------------------------------
 
-.scala-days-sponsors-bar {
+.scala-days-orgs-bar {
   width: 100%;
   overflow: hidden;
   background: rgba(30, 40, 50, 0.2);
@@ -10,24 +10,25 @@
   position: relative;
 }
 
-.sponsors-carousel {
+.scaladays-orgs-carousel {
   width: 100%;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
+  margin-top: 2em;
 }
 
-.sponsors-track {
+.scaladays-orgs-track {
   display: flex;
   flex-direction: row;
   align-items: center;
   white-space: nowrap;
   width: max-content;
-  animation: sponsors-scroll 120s linear infinite;
+  animation: scaladays-orgs-scroll 180s linear infinite;
   will-change: transform;
 }
 
-.sponsor-logo-link {
+.scaladays-org-logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +38,7 @@
   flex: 0 0 auto;
 }
 
-.sponsor-logo {
+.scaladays-org-logo {
   max-height: 40px;
   max-width: 120px;
   width: auto;
@@ -48,35 +49,90 @@
   display: block;
   margin: 0 auto;
 }
-.sponsor-logo-link:hover .sponsor-logo {
+.scaladays-org-logo-link:hover .scaladays-org-logo {
   opacity: 1;
 }
 
-.sponsors-static-row {
+.scaladays-orgs-static-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  width: max-content;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  gap: 3em;
+  gap: 4em;
   margin-bottom: 1em;
+  padding: 0 1em;
 }
 
-.sponsor-logo-link-platinum {
+.platinum-scaladays-orgs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+  flex-shrink: 0;
+  height: 80px;
+}
+
+.gold-scaladays-orgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5em;
+  align-items: center;
+  justify-items: center;
+  flex-grow: 1;
+  max-width: 600px;
+}
+
+.scaladays-org-logo-link-platinum {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80px;
 }
 
-.sponsor-logo-platinum {
+.scaladays-org-logo-static-row {
   max-height: 80px !important;
+  height: 80px;
+  width: auto;
   filter: brightness(0) invert(1);
   opacity: 0.92;
   transition: opacity 0.2s;
 }
 
-.sponsors-brought-to-you-by {
+.gold-scaladays-orgs-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em 2em;
+  // height: 80px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.scaladays-org-logo-link-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  flex: 0 1 calc(33.333% - 2em);
+  width: 100%;
+}
+
+.scaladays-org-logo-gold-row {
+  max-height: 25px !important;
+  height: 25px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: opacity 0.2s;
+}
+
+.scaladays-orgs-brought-to-you-by {
   font-size: 1.2em;
   font-weight: 600;
   color: #fff;
@@ -84,19 +140,59 @@
   text-align: center;
 }
 
-@keyframes sponsors-scroll {
+@keyframes scaladays-orgs-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 @media (max-width: 700px) {
-  .sponsor-logo-link {
+  .scaladays-orgs-static-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .platinum-scaladays-orgs {
+    justify-content: center;
+    gap: 1.5em;
+    height: auto;
+  }
+  .gold-scaladays-orgs-flex {
+    display: none;
+  }
+  .scaladays-org-logo-link {
     width: 80px;
     height: 28px;
     margin: 0 0.5em;
   }
-  .sponsor-logo {
+  .scaladays-org-logo {
     max-height: 24px;
     max-width: 60px;
+  }
+}
+
+@media (min-width: 701px) {
+  .scaladays-org-logo-gold-carousel {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 701px) {
+  .gold-scaladays-orgs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .scaladays-orgs-static-row {
+    gap: 1.5em;
+  }
+
+  .platinum-scaladays-orgs {
+    gap: 1.5em;
+  }
+
+  .gold-scaladays-orgs {
+    gap: 0.8em;
   }
 }

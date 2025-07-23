@@ -5,8 +5,16 @@
 sponsorship-types:
   - title: Platinum
     icon: img/assets/icon-platinum.svg
+    css-class: scaladays-org-logo-platinum
   - title: Gold
     icon: img/assets/icon-gold.svg
+    css-class: scaladays-org-logo-gold
+  - title: Silver
+    icon: img/assets/icon-silver.svg
+    css-class: scaladays-org-logo-silver
+  - title: Bronze
+    icon: img/assets/icon-bronze.svg
+    css-class: scaladays-org-logo-bronze
 
 sponsors:
   - title: VirtusLab
@@ -43,3 +51,68 @@ sponsors:
     type: Gold
     logo: /resources/img/scala-days-sponsors/writer.svg
     url: https://writer.com
+
+  - title: Kpler
+    type: Silver
+    logo: /resources/img/scala-days-sponsors/kpler.png
+    url: https://www.kpler.com/
+
+  - title: Scala Teams
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/scalateams.png
+    url: https://scalateams.com/
+
+  - title: Mastercard
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/mc_symbol.svg
+    url: https://www.mastercard.com/
+
+  - title: MOIA
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/MOIA-logo-black.png
+    url: https://www.moia.io/en
+
+  - title: Les Toises
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/les-toises.png
+    url: https://www.lestoises.ch/
+
+  - title: Rock the JVM
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/rock-the-jvm.png
+    url: https://rockthejvm.com/
+
+  - title: Ngrok
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/ngrok-coral.svg
+    url: https://ngrok.com/
+
+  - title: Youmoni
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/youmoni.svg
+    url: https://youmoni.com/
+
+  - title: DFiant
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/DFiant-LightBG.png
+    url: https://dfiant.works/
+
+  - title: Snowplow Analytics Ltd
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/snowplow-logo.svg
+    url: https://snowplow.io/
+
+  - title: SoftwareMill
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/softwaremill-logo.png
+    url: https://softwaremill.com/
+
+  - title: Tiko
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/tiko.png
+    url: https://tiko.org/
+
+  - title: Recorded Future
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/recorded-future.png
+    url: https://www.recordedfuture.com/
