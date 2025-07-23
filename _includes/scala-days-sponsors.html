@@ -23,8 +23,8 @@
       {% for sponsor in site.data.scala-days-sponsors.sponsors %}
         {% assign sponsor_type = site.data.scala-days-sponsors.sponsorship-types | where: "title", sponsor.type | first %}
         {% if sponsor.type == 'Gold' %}
-          <a href="{{ sponsor.url }}" class="sponsor-logo-link-gold" target="_blank" rel="noopener">
-            <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo-gold-row {{ sponsor_type.css-class }}" />
+          <a href="{{ sponsor.url }}" class="sponsor-logo-link-gold {{ sponsor_type.css-class }}" target="_blank" rel="noopener">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo-gold-row" />
           </a>
         {% endif %}
       {% endfor %}

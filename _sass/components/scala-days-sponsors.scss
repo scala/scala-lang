@@ -28,7 +28,7 @@
   align-items: center;
   white-space: nowrap;
   width: max-content;
-  animation: sponsors-scroll 120s linear infinite;
+  animation: sponsors-scroll 180s linear infinite;
   will-change: transform;
 }
 
@@ -113,8 +113,8 @@
   align-items: flex-start;
   justify-content: center;
   gap: 1em 2em;
-  height: 80px;
-  max-width: 500px;
+  // height: 80px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -122,15 +122,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 25px;
   flex: 0 1 calc(33.333% - 2em);
-  max-width: 160px;
   width: 100%;
 }
 
 .sponsor-logo-gold-row {
-  max-height: 40px !important;
-  height: 40px;
+  max-height: 25px !important;
+  height: 25px;
   width: auto;
   filter: brightness(0) invert(1);
   opacity: 0.92;
