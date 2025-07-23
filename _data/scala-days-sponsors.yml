@@ -106,3 +106,13 @@ sponsors:
     type: Bronze
     logo: /resources/img/scala-days-sponsors/softwaremill-logo.png
     url: https://softwaremill.com/
+
+  - title: Tiko
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/tiko.png
+    url: https://tiko.org/
+
+  - title: Recorded Future
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/recorded-future.png
+    url: https://www.recordedfuture.com/
