@@ -15,6 +15,11 @@
   overflow: hidden;
   position: relative;
   white-space: nowrap;
+  margin-top: 2em;
+
+  &.scaladays-org-logo-platinum {
+
+  }
 }
 
 .sponsors-track {
@@ -55,22 +60,78 @@
 .sponsors-static-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  width: max-content;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  gap: 3em;
+  gap: 2em;
   margin-bottom: 1em;
+  padding: 0 1em;
+}
+
+.platinum-sponsors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+  flex-shrink: 0;
+  height: 80px;
+}
+
+.gold-sponsors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5em;
+  align-items: center;
+  justify-items: center;
+  flex-grow: 1;
+  max-width: 600px;
 }
 
 .sponsor-logo-link-platinum {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80px;
 }
 
-.sponsor-logo-platinum {
+.sponsor-logo-static-row {
   max-height: 80px !important;
+  height: 80px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: opacity 0.2s;
+}
+
+.gold-sponsors-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1em 2em;
+  height: 80px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.sponsor-logo-link-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  flex: 0 1 calc(33.333% - 2em);
+  max-width: 160px;
+  width: 100%;
+}
+
+.sponsor-logo-gold-row {
+  max-height: 40px !important;
+  height: 40px;
+  width: auto;
   filter: brightness(0) invert(1);
   opacity: 0.92;
   transition: opacity 0.2s;
@@ -90,6 +151,18 @@
 }
 
 @media (max-width: 700px) {
+  .sponsors-static-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .platinum-sponsors {
+    justify-content: center;
+    gap: 1.5em;
+    height: auto;
+  }
+  .gold-sponsors-flex {
+    display: none;
+  }
   .sponsor-logo-link {
     width: 80px;
     height: 28px;
@@ -98,5 +171,31 @@
   .sponsor-logo {
     max-height: 24px;
     max-width: 60px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 701px) {
+  .gold-sponsors {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .scaladays-org-logo-gold-carousel {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .sponsors-static-row {
+    gap: 1.5em;
+  }
+
+  .platinum-sponsors {
+    gap: 1.5em;
+  }
+
+  .gold-sponsors {
+    gap: 0.8em;
   }
 }

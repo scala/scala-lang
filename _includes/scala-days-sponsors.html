@@ -4,23 +4,41 @@
     Scala Days 2025 is brought to you by:
   </div>
 
-  <!-- Static Platinum Sponsors Row -->
+  <!-- Static Platinum and Gold Sponsors Row -->
   <div class="sponsors-static-row">
-    {% for sponsor in site.data.scala-days-sponsors.sponsors %}
-      {% if sponsor.type == 'Platinum' %}
-        <a href="{{ sponsor.url }}" class="sponsor-logo-link-platinum" target="_blank" rel="noopener">
-          <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo-platinum" />
-        </a>
-      {% endif %}
-    {% endfor %}
+    <!-- Platinum Sponsors (Left Side) -->
+    <div class="platinum-sponsors">
+      {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+        {% assign sponsor_type = site.data.scala-days-sponsors.sponsorship-types | where: "title", sponsor.type | first %}
+        {% if sponsor.type == 'Platinum' %}
+          <a href="{{ sponsor.url }}" class="sponsor-logo-link-platinum" target="_blank" rel="noopener">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo-static-row {{ sponsor_type.css-class }}" />
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Gold Sponsors (Right Side, Flex Layout) -->
+    <div class="gold-sponsors-flex">
+      {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+        {% assign sponsor_type = site.data.scala-days-sponsors.sponsorship-types | where: "title", sponsor.type | first %}
+        {% if sponsor.type == 'Gold' %}
+          <a href="{{ sponsor.url }}" class="sponsor-logo-link-gold" target="_blank" rel="noopener">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo-gold-row {{ sponsor_type.css-class }}" />
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
+
   <!-- Scrolling Track for Non-Platinum Sponsors -->
   <div class="sponsors-carousel">
     <div class="sponsors-track" id="sponsors-track">
       {% for i in (1..10) %}
       {% for sponsor in site.data.scala-days-sponsors.sponsors %}
+        {% assign sponsor_type = site.data.scala-days-sponsors.sponsorship-types | where: "title", sponsor.type | first %}
         {% unless sponsor.type == 'Platinum' %}
-          <a href="{{ sponsor.url }}" class="sponsor-logo-link" target="_blank" rel="noopener">
+          <a href="{{ sponsor.url }}" class="sponsor-logo-link {{ sponsor_type.css-class }}-carousel" target="_blank" rel="noopener">
             <img src="{{ sponsor.logo }}" alt="{{ sponsor.title }}" class="sponsor-logo" />
           </a>
         {% endunless %}
