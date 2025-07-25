@@ -116,3 +116,8 @@ sponsors:
     type: Bronze
     logo: /resources/img/scala-days-sponsors/recorded-future.png
     url: https://www.recordedfuture.com/
+
+  - title: Swissborg
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/swissborg.svg
+    url: https://swissborg.com/
