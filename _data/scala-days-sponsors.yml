@@ -60,7 +60,7 @@ sponsors:
   - title: Scala Teams
     type: Bronze
     logo: /resources/img/scala-days-sponsors/scalateams.png
-    url: https://scalateams.com/
+    url: https://www.scalateams.com/scala-days-2025
 
   - title: Mastercard
     type: Bronze
@@ -116,3 +116,23 @@ sponsors:
     type: Bronze
     logo: /resources/img/scala-days-sponsors/recorded-future.png
     url: https://www.recordedfuture.com/
+
+  - title: Deltek
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/deltek.png
+    url: https://www.deltek.com/
+
+  - title: HES-SO Valais-Wallis
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/hesso.png
+    url: https://www.hevs.ch/en/applied-research/research-institute-informatics/
+
+  - title: Artima
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/artima.png
+    url: https://www.artima.com/
+
+  - title: NuMind
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/numind.png
+    url: https://numind.ai/
