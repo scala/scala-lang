@@ -126,3 +126,13 @@ sponsors:
     type: Bronze
     logo: /resources/img/scala-days-sponsors/hesso.png
     url: https://www.hevs.ch/en/applied-research/research-institute-informatics/
+
+  - title: Artima
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/artima.png
+    url: https://www.artima.com/
+
+  - title: NuMind
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/numind.png
+    url: https://numind.ai/
