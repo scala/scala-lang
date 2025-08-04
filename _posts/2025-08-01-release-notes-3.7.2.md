@@ -14,7 +14,7 @@ Scala 3.7.2 is now available!
   - Experimental publish support for the Sonatype Central Portal
 
 - Add an `-Yimplicit-to-given` flag for rewrites to easily test changes in the ecosystem [#22580](https://github.com/scala/scala3/pull/22580)<br>
-This experimental flag allows to treat usages of `implicit` as `given` without modifing your existing sources. It aims to help with testing out on how migration to new syntax and its resolution rules would effect your code base.
+This experimental flag when used in conjunction with `--rewrite` allows to migrate most of `implicit` definitions as `given`. It aims to ease with migration to new syntax, or testing how it would affect your code base.
 
 - Implement applied constructor types [#22543](https://github.com/scala/scala3/pull/22543)<br>
 It introduces new syntax allowing for easier definition of `tracked` parameters under `-language:experimental.modularity`
