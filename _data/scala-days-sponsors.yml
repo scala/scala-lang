@@ -146,3 +146,8 @@ sponsors:
     type: Bronze
     logo: /resources/img/scala-days-sponsors/siriusxm.png
     url: https://www.siriusxm.com/
+
+  - title: Netflix
+    type: Bronze
+    logo: /resources/img/scala-days-sponsors/netflix.png
+    url: https://about.netflix.com/
