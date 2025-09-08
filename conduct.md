@@ -95,7 +95,7 @@ listed above,
   choose who you are talking to:
   * Seth Tisue, Scala Core Team ([seth@tisue.net](mailto:seth@tisue.net))
   * Lukas Rytz, Akka ([lukas.rytz@akka.io](mailto:lukas.rytz@akka.io))
-  * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
+  * Sébastien Doeraene, EPFL ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
   * Tomasz Godzik, VirtusLab ([tgodzik@virtuslab.com](mailto:tgodzik@virtuslab.com))
 
 ### Examples of unacceptable behavior
