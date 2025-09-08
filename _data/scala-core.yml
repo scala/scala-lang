@@ -35,13 +35,13 @@
   org: VirtusLab
 
 - name: Sébastien Doeraene
-  description: Scala Center Representative, Spec Supervisor
+  description: Scala.js Representative, Spec Supervisor
   image: /scala-core/sjrd.png
   city: Lausanne, Switzerland
   discord: sjrd
   github: sjrd
   twitter: sjrdoeraene
-  org: Scala Center
+  org: EPFL
 
 - name: Lukas Rytz
   description: Akka Representative
@@ -53,7 +53,7 @@
   org: Akka
 
 - name: Tomasz Godzik
-  description: VirtusLab Representative, Coordinator 
+  description: VirtusLab Representative, Coordinator
   image: /scala-core/tgodzik.jpg
   city: Kraków, Poland
   discord: tgodzik
@@ -64,7 +64,7 @@
   org: VirtusLab
 
 - name: Wojciech Mazur
-  description: Scala Native Representative, Release Officer, Community Build Maintainer 
+  description: Scala Native Representative, Release Officer, Community Build Maintainer
   image: /scala-core/wojciech-mazur.jpg
   city: Kraków, Poland
   discord: wmazur
