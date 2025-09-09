@@ -8,7 +8,7 @@ Scala 3.7.3 is now available!
 
 ## Highlights of the release
 
-### Warn when an explicit `using` argument clouse with defaults shadows `given` in the scope [#23559](https://github.com/scala/scala3/pull/23559)
+### Warn when an explicit `using` argument clause with defaults shadows `given` in the scope [#23559](https://github.com/scala/scala3/pull/23559)
 
 If a call supplies any `using` argument explicitly, `given` search is not performed for the remaining params in that clause. If a remaining param has a default, that default is used, even if a compatible `given` is in scope. This behaviour could have been confusing for users and lead to unexpected problems at runtime. 
 The compiler now reports a warning when default argument would be used instead of given defined in the scope.
