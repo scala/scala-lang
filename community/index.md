@@ -149,6 +149,7 @@ when they haven't had a Scala event in the last year.)
 #### North America
 
  - [Atlanta](https://www.meetup.com/atlanta-scala)
+ - [Boston](https://www.meetup.com/boston-area-scala-enthusiasts/)
  - [Dallas](https://www.meetup.com/dallas-scala-enthusiasts)
  - [San Francisco](http://www.meetup.com/SF-Scala/)
  - [SF Bay Area (Bay Area Scala)](https://lu.ma/scala)
