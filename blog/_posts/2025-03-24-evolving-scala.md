@@ -82,7 +82,7 @@ Scala is no longer a new language.
 A lot of things seemed like good ideas two decades ago, but not all such decisions panned out.
 Although long-time Scala developers may have gotten used to these idiosyncrasies, Scala-the-language needs to continually polish off such rough edges:
 
-1. Some features like [scala-actors](https://docs.scala-lang.org/overviews/core/actors.html), [scala-parser-combinators](https://github.com/scala/scala-parser-combinators), or [scala-xml](https://github.com/scala/scala-xml) have since been removed.
+1. Some features like [scala-actors](https://web.archive.org/web/20150209012332/https://docs.scala-lang.org/overviews/core/actors.html), [scala-parser-combinators](https://github.com/scala/scala-parser-combinators), or [scala-xml](https://github.com/scala/scala-xml) have since been removed.
    They are now in separate libraries, which you may use or not use as you desire, but are no longer a core part of the language or standard library.
    Other such cleanups include the [Scala 2.13 collections overhaul](https://www.scala-lang.org/blog/2018/06/13/scala-213-collections.html).
 2. More issues are being dealt with as we speak: `@unroll` to avoid binary-compatibility issues with default parameters and `case class`es is experimental ([SIP-61](https://github.com/scala/improvement-proposals/pull/78)), and `for`-comprehension improvements is in preview ([SIP-62](https://github.com/scala/improvement-proposals/pull/79)), and should help both resolve long-standing issues in using these Scala language features to their fullest.
