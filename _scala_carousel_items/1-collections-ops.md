@@ -1,6 +1,6 @@
 ---
 optionId: collections-ops
-scastieLink: 'https://scastie.scala-lang.org/S0bkCiXkQiuOMXnlhWn46g'
+scastieLink: 'https://scastie.scala-lang.org/LYDsuRiKQsK94eXMY5K9qw'
 codeTitle: 'Functional programming with immutable collections'
 description: "High-level operations avoid the need for complex and error-prone loops."
 ---
