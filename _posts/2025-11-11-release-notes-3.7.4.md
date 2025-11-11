@@ -8,7 +8,7 @@ Scala 3.7.4 is now available!
 
 ## Notable changes
 
-- Make coverage more similar to the one in Scala 2 [#23722](https://github.com/scala/scala3/pull/23722)
+- Align coverage support with Scala 2, fixing multiple issues [#23722](https://github.com/scala/scala3/pull/23722)
 
 - Deprecate `scala_legacy` /`MainGenericRunner`/`scalac -run`/`scalac -repl` for removal [#24267](https://github.com/scala/scala3/pull/24267). 
   These were deprecated since 3.5.0 and would be removed in 3.8.0.
