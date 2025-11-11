@@ -1,11 +1,11 @@
 - category: current_version
   title: Current 3.7.x release
-  version: 3.7.3
+  version: 3.7.4
   release_date: September 9, 2025
 - category: current_version
   title: Current 3.3.x LTS release
-  version: 3.3.6
-  release_date: May 8, 2025
+  version: 3.3.7
+  release_date: October 13, 2025
 - category: current_version
   title: Current 2.13.x release
   version: 2.13.17
