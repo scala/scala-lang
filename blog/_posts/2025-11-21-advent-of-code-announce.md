@@ -15,7 +15,7 @@ We hope you will join us!
 
 [**Advent of Code**](https://adventofcode.com), created by [Eric Wastl](http://was.tl/), is an annual event consisting of a series of Christmas-themed programming puzzles. The puzzles are released daily from December 1st through December 12th. The puzzles start easy and get harder as they go.
 
-The goal for participants is of course pure enjoyment. But also, you can sharpen your coding skills and improve your knowledge of your programming language of choice (which is Scala, of course).
+The goal for participants is pure enjoyment. But also, you can sharpen your coding skills and improve your knowledge of your programming language of choice (which is Scala, of course).
 
 Note that the event is now 12 days long, not 25 days like previous years.
 
