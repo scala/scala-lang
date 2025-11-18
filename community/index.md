@@ -84,7 +84,7 @@ Scala-oriented Discord servers operated by the community include:
   Scala code from Smithy files.
 - **[indigo](https://discord.gg/b5CD47g)**: the Indigo, Scala 2D game engine
   based on functional programming
-- **[Scala Space](https://discord.gg/vcHsmEQx)**: Discord server for VirtusLab's
+- **[Scala Space](https://discord.gg/5qhe6Nf8tk)**: Discord server for VirtusLab's
   and Software Mill's open source projects
 - **[Business4s](https://bit.ly/business4s-discord)**: Scala community focused
   on product development and business
