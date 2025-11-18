@@ -49,6 +49,8 @@ At the [Scala Center](https://scala.epfl.ch), we love writing code in Scala, and
 
 Another key priority is to improve the _onboarding experience for newcomers_. Part of that experience comes from the first impressions someone has reading Scala code. We hope that by reading the articles on [our solutions website](https://scalacenter.github.io/scala-advent-of-code/), newcomers can see that Scala is an elegant language for solving problems.
 
+Please urge your employer to [support the Scala Center](https://scala.epfl.ch/donate.html).
+
 ## Conclusion
 
 We thank [@spamegg1](https://github.com/spamegg1) for co-organizing.
