@@ -1,7 +1,7 @@
 ---
 layout: blog-detail
 post-type: blog
-by: Seth Tisue, Scala Core Team; Jamie Thompson, Scala Center
+by: Seth Tisue, Scala Core Team; Jamie Thompson
 title: "Join us for the Advent of Code 2025"
 ---
 
