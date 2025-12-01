@@ -62,7 +62,7 @@ Your support keeps Scala Days thriving and the Scala community growing.
 
 ### 🌟 Platinum Sponsors
 
-[**VirtusLab**](https://virtuslab.com/){:target="_blank" :rel="noopener"} – *The company behind Scala.* VirtusLab showcased its long-standing commitment to the Scala ecosystem — from contributing to the language itself to developing key tools like Metals. Their focus on developer productivity, IDE and Bazel expertise, and LLM-assisted workflows reflects their 15+ years of leadership in Scala innovation.
+[**VirtusLab**](https://virtuslab.com/){:target="_blank" :rel="noopener"} – *The company behind Scala.* VirtusLab showcased its long-standing commitment to the Scala ecosystem — from contributing to the language itself and developing key tools like Scala CLI and Metals, to building popular Scala OSS libraries. Their focus on developer productivity, IDE and Bazel expertise, and LLM-assisted workflows, combined with the efficient delivery of high-quality software solutions for numerous partners, reflects their 15+ years of leadership in Scala innovation.
 
 [**Signify Technology**](https://www.signifytechnology.com/){:target="_blank" :rel="noopener"} – *Building a diverse future, one placement at a time.* As a global Scala recruitment specialist, Signify connects top-tier engineering talent with forward-thinking companies. With offices in LA, Austin, and London, they continue to champion diversity and inclusion in tech hiring worldwide.
 
