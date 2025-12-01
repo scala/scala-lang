@@ -70,7 +70,7 @@ Your support keeps Scala Days thriving and the Scala community growing.
 
 [**Gradle**](https://gradle.com/){:target="_blank" :rel="noopener"} – *Accelerate every Scala build.* Gradle’s **Develocity** platform now integrates with sbt to help teams observe, optimize, and speed up their builds — empowering faster feedback cycles and better developer experience.
 
-[**JetBrains**](https://jetbrains.com/){:target="_blank" :rel="noopener"} – *Coding smarter with AI.* Back at Scala Days with their signature energy, JetBrains invited attendees to explore new IntelliJ IDEA Scala Plugin features and all things developer productivity and AI-powered tooling.
+[**JetBrains**](https://jetbrains.com/){:target="_blank" :rel="noopener"} – *Easier and smarter software development.* JetBrains has supported the Scala community for many years. This time, the IntelliJ Scala Plugin team came to Scala Days to present the AI-powered tooling JetBrains offers for developers, along with both new capabilities and long-standing hidden gems of IntelliJ IDEA and the Scala Plugin. Together, these tools help developers boost their productivity and make everyday Scala development more enjoyable.
 
 [**Scalac**](https://scalac.io/){:target="_blank" :rel="noopener"} – *Your Scala & AI engineering partner.* With 11 years of expertise and over 130 delivered projects, Scalac continues to champion open source, community growth, and global partnerships. They invite you to explore the latest trends shaping Scala’s future, check out their [State of Scala Report](https://scalac.io/state-of-scala-2025/)—a comprehensive look at the ecosystem’s direction, challenges, and opportunities ahead.
 
