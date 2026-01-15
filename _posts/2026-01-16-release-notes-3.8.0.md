@@ -226,14 +226,13 @@ def oldSyntax(xs: Option[Int]) =
 
 ### Match expressions with sub-cases [#23786](https://github.com/scala/scala3/pull/23786)
 
-This change adds an experimental extension to pattern matching: a `case` in a `match` can be followed by a **nested “sub-match”** introduced by the `if` keyword.
-It’s a small syntactic feature, but it improves readability in cases where you want to:
+This change adds an experimental extension to pattern matching: a `case` in a `match` can be followed by a **nested "sub-match"** introduced by the `if` keyword.
+This feature enables you to:
 
-* first match an “outer shape” (e.g., `Some(x)`), and then
-* immediately refine the result by matching on a field derived from the outer bindings (e.g., `x.version`),
-* without introducing an extra level of indentation or a `case ... => expr match ...` block.
+* first match an "outer shape" (e.g., `Some(x)`), and then
+* immediately refine the result by matching on a field derived from the outer bindings (e.g., `x.version`).
 
-If the nested pattern does not match, we still proceed to next enclosing `case`. This is fundamentally different than putting the sub-case within another level of nesting.
+Crucially, if the nested pattern does not match, we still proceed to the next enclosing `case`. This is fundamentally different than putting the sub-case within another level of nesting—in a traditional nested `match`, a failed inner case would not cause the outer match to try subsequent cases.
 
 ```scala
 import scala.language.experimental.subCases
@@ -273,9 +272,9 @@ final class audited extends StaticAnnotation
 final class audited extends StaticAnnotation
 ```
 
-* **LTS/Next series indicators** [#24709](https://github.com/scala/scala3/pull/24709) - Starting with Scala 3.3 all artifacts are published with special attribute in the pom.xml indicating if given version of part of the LTS or Next series. This information can be used by tooling to adjust its behaviour. Starting with 3.8.0 and upcoming 3.3.8 versions, the name of this attribute has changed from `scala.versionLine` to `info.scala.versionLine`. The change was required due to a negative interaction with build tools assuming attributes starting with `scala` are reserved.
-* **Nightly builds in a new repository** - Scala 3 nightly builds, for both Scala Next and Scala 3.3 LTS series are now published to new repository: [https://repo.scala-lang.org/](https://repo.scala-lang.org/). You can read more about this change in a [dedicated blogpost](https://www.scala-lang.org/news/new-scala-nightlies-repo.html).
-* **JDK 26 support** - Scala can now emit and consume JDK 26 bytecode. As mentioned [earlier](#jdk17is-now-required) internal implementation of the lazy vals has been adjusted to replace deprecated `sun.misc.Unsafe` with `VarHandles`, which starting with JDK 24 started to emit runtime warnings and is going to throw an exception in JDK 26. This change makes the new published code compatible with JDK 26, but mentioned problems might still be activated by previously published libraries or their transitive dependencies. We're working on creating tools to modify existing lazy-vals related code to make them future-proof and ease the migration to the upcoming JDK versions. For more details see the technical discussion in [latest Jakub Kozłowski's podcast with Łukasz Biały](https://www.youtube.com/watch?v=K_omndY1ifI) - VirtusLab's Scala Advocate, who prototyped this idea.
+* **LTS/Next series indicators** [#24709](https://github.com/scala/scala3/pull/24709) - Starting with Scala 3.3, all artifacts are published with a special attribute in the pom.xml. This attribute indicates whether a given version is part of the LTS or Next series. Tooling can use this information to adjust its behaviour. Starting with 3.8.0 and the upcoming 3.3.8 LTS, the attribute name has changed from `scala.versionLine` to `info.scala.versionLine`. The change was required due to a negative interaction with build tools that assume attributes starting with `scala` are reserved.
+* **Nightly builds in a new repository** - Scala 3 nightly builds for both Scala Next and Scala 3.3 LTS series are now published to a new repository: [https://repo.scala-lang.org/](https://repo.scala-lang.org/). You can read more about this change in a [dedicated blogpost](https://www.scala-lang.org/news/new-scala-nightlies-repo.html).
+* **JDK 26 support** - Scala can now emit and consume JDK 26 bytecode. As mentioned [earlier](#jdk17is-now-required), the internal implementation of lazy vals has been adjusted to replace the deprecated `sun.misc.Unsafe` with `VarHandles`. Starting with JDK 24, `sun.misc.Unsafe` emits runtime warnings. In JDK 26, it will throw an exception. This change makes newly published code compatible with JDK 26. However, these problems might still be triggered by previously published libraries or their transitive dependencies. We are working on tools to modify existing lazy-vals-related code to make them future-proof and ease migration to upcoming JDK versions. For more details, see the technical discussion in [Jakub Kozłowski's latest podcast with Łukasz Biały](https://www.youtube.com/watch?v=K_omndY1ifI), VirtusLab's Scala Advocate who prototyped this idea.
 
 ## Tooling support
 
