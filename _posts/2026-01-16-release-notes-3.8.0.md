@@ -31,7 +31,7 @@ Compilation using Scala 3 allows to benefit from two Scala 3 optional, experimen
 
 2. **Capture checking** - The library code has been adjusted to interact properly with the experimental capture‑checking system. When you enable capture checking in your project (`-language:experimental.captureChecking`) the type checker tracks references to capabilities and ensures you do not capture local resources in closures.
 
-> **Note:** Both null‑safety and capture‑checking annotations remain experimental, opt‑in features. Your existing code will behave exactly as before unless you enable the appropriate language flag. The goal is to provide a smooth migration path towards safer Scala in the next LTS release.
+> **Note:** Both null‑safety and capture‑checking annotations remain experimental, opt‑in features. Your existing code will behave exactly as before unless you enable the appropriate language flag. The goal is to provide a smooth migration path towards safer Scala in the future.
 
 > **Source Incompatibility:** Context bounds in standard library classes such as `scala.reflect.ClassTag` used in `Array.empty[T]` method, are now desugared to `given` instead of `implicit`. This change requires `using` modifiers when supplying explicit parameters. This changed behaviour was active since Scala 3.6, but was inactive while Scala Standard Library was compiled using Scala 2.13.
 
