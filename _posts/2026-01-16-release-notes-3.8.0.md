@@ -7,7 +7,7 @@ by: Wojciech Mazur, VirtusLab
 
 ![Scala 3.8]({{ site.baseurl }}/resources/img/scala-3.8-launch.png)
 
-We're pleased to announce the release of Scala 3.8.0 — a milestone release that modernizes the Scala ecosystem and paves the way for Scala 3.9 LTS. This release introduces a standard library compiled by Scala 3 itself, stabilizes highly-anticipated features like **Better Fors** (SIP-62) and **`runtimeChecked`** (SIP-57), and introduces experimental features including **flexible varargs** and **strict equality pattern matching**.
+We're pleased to announce the release of Scala 3.8.0 — a significant release that modernizes the Scala ecosystem and paves the way for Scala 3.9 LTS. This release introduces a standard library compiled by Scala 3 itself, stabilizes highly-anticipated features like **Better Fors** (SIP-62) and **`runtimeChecked`** (SIP-57), and introduces experimental features including **flexible varargs** and **strict equality pattern matching**.
 
 # What's new in Scala 3.8?
 
