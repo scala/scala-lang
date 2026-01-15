@@ -26,7 +26,7 @@ For library authors who need to keep compatibility with at least some older JVM 
 
 The Scala standard library has historically been compiled using Scala 2.13 and used by Scala 3 as-is, thanks to binary compatibility. In 3.8.0 the library is now compiled with Scala 3. The change itself has been verified to be binary compatible and should not cause problems when migrating to Scala 3.8.
 
-> **Source Incompatibility:** Context bounds in standard library classes such as `scala.reflect.ClassTag` used in `Array.empty[T]` method, are now desugared to `given` instead of `implicit`. This change requires `using` modifiers when supplying explicit parameters. This changed behaviour was active since Scala 3.6, but was inactive while Scala Standard Library was compiled using Scala 2.13.
+> **Source Incompatibility:** Context bounds in standard library classes such as `scala.reflect.ClassTag` used in `Array.empty[T]` method, are now desugared to `given` instead of `implicit`. This change requires `using` modifiers when supplying explicit parameters.
 
 ```scala
 object Array:
@@ -54,8 +54,6 @@ Starting with **Scala 3.8** REPL rendering is now powered by [com-lihaoyi/fansi]
 
 ![Scala 3.8 REPL example]({{ site.baseurl }}/resources/img/scala-3.8-launch_repl_3.8.png)
 
-You can expect more improvements to the REPL in the next versions of the compiler, including built-in dependency management and improved formatting of exception messages! Some of these are already available in 3.8.1-RC1.
-
 ## Stabilised language features
 
 ### [SIP-62: For comprehension improvements](https://docs.scala-lang.org/sips/62.html)
@@ -76,7 +74,7 @@ yield size * 2
 
 ### [SIP-57: Replace non-sensical `@unchecked` annotations](https://docs.scala-lang.org/sips/57.html)
 
-The `runtimeChecked` extension is now a **standard feature**. It enables you to opt-out of certain static checks and defer them to runtime without resorting to the older, syntactically awkward `: @unchecked` type ascription.
+`runtimeChecked` is now a **standard feature**. It enables you to opt-out of certain static checks and defer them to runtime without resorting to the older, syntactically awkward `: @unchecked` type ascription.
 
 Consider the following example that tries to load an optional config value and match it against known values.
 
