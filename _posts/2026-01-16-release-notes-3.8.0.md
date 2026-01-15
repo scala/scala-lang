@@ -25,13 +25,6 @@ For library authors who need to keep compatibility with at least some older JVM 
 ### Compiled with Scala 3
 
 The Scala standard library has historically been compiled using Scala 2.13 and used by Scala 3 as-is, thanks to binary compatibility. In 3.8.0 the library is now compiled with Scala 3. The change itself has been verified to be binary compatible and should not cause problems when migrating to Scala 3.8.
-Compilation using Scala 3 allows to benefit from two Scala 3 optional, experimental features which we hope to stabilize in some future release:
-
-1. **Null‑safety** - When compiled with the `-Yexplicit-nulls` flag, all reference types in the library become non‑nullable unless they are annotated with `| Null`. Although the default remains unchanged, library maintainers have annotated many APIs with explicit null‑return types. When you enable explicit nulls in your project the type checker will warn if you forget to handle a possible `Null`.
-
-2. **Capture checking** - The library code has been adjusted to interact properly with the experimental capture‑checking system. When you enable capture checking in your project (`-language:experimental.captureChecking`) the type checker tracks references to capabilities and ensures you do not capture local resources in closures.
-
-> **Note:** Both null‑safety and capture‑checking annotations remain experimental, opt‑in features. Your existing code will behave exactly as before unless you enable the appropriate language flag. The goal is to provide a smooth migration path towards safer Scala in the future.
 
 > **Source Incompatibility:** Context bounds in standard library classes such as `scala.reflect.ClassTag` used in `Array.empty[T]` method, are now desugared to `given` instead of `implicit`. This change requires `using` modifiers when supplying explicit parameters. This changed behaviour was active since Scala 3.6, but was inactive while Scala Standard Library was compiled using Scala 2.13.
 
@@ -47,14 +40,6 @@ val recommended = Array.empty[Int]
 Most such errors can be automatically fixed by the compiler when using **Scala 3.7.4** with `-source:3.7-migration -rewrite` options, before upgrading to **Scala 3.8**.
 
 Looking ahead to Scala's future, compiling the standard library with Scala 3 itself paves the way for Scala 3 to eventually have its own standard library, free from the constraints of compatibility with Scala 2. However, this process will not actually begin until Scala 3.10.
-
-### Pure functions and capture checking
-
-The `scala.caps.Pure` capability is used by the capture checker to model pure functions.
-Experimental separation checking is new in Scala 3.8 and ensures that closures do not capture resources, providing stronger guarantees about side‑effect isolation.
-To experiment with capture checking, import `scala.language.experimental.captureChecking` and annotate your functions with the appropriate capabilities. Adding these annotations does not require enabling experimental features and it will not affect users who are not using capture checking.
-
-> **Note:** Only core traits related to capture checking and defined in the Scala Standard Library have been stabilized, as these have been proven to be stable. The capture checking itself is still an experimental feature.
 
 ## REPL becomes a separate artifact
 
@@ -151,6 +136,26 @@ It requires compilation with `-preview` compiler flag and can be activated using
 If you previously used experimental annotation-based preview implementation be aware of source incompatibilites when upgrading to Scala 3.8.
 
 More information about `into` modifiers can be found in [the dedicated reference](https://docs.scala-lang.org/scala3/reference/preview/into.html).
+
+## Experimental features changes
+
+### Future-proof Standard Library
+
+With the standard library now compiled using Scala 3, it has been enhanced to better support two highly experimental language features. These features remain far from stabilization and should not be relied upon in production code.
+
+**Explicit nulls** - When you enable explicit nulls in your project (`-Yexplicit-nulls`), all reference types become non-nullable unless annotated with `| Null`. Library maintainers have annotated many standard library APIs with explicit null-return types, so the type checker will now warn if you forget to handle a possible `Null`.
+
+**Capture checking** - The library code has been adjusted to interact properly with the experimental capture-checking system. When you enable capture checking (`-language:experimental.captureChecking`) the type checker tracks references to capabilities and ensures you do not capture local resources in closures.
+
+> **Note:** Both null-safety and capture-checking annotations remain experimental, opt-in features. Your existing code will behave exactly as before unless you enable the appropriate language flag.
+
+### Pure functions and capture checking
+
+The `scala.caps.Pure` capability is used by the capture checker to model pure functions.
+Experimental separation checking is new in Scala 3.8 and ensures that closures do not capture resources, providing stronger guarantees about side-effect isolation.
+To experiment with capture checking, import `scala.language.experimental.captureChecking` and annotate your functions with the appropriate capabilities. Adding these annotations does not require enabling experimental features and it will not affect users who are not using capture checking.
+
+> **Note:** Only core traits related to capture checking and defined in the Scala Standard Library have been stabilized, as these have been proven to be stable. The capture checking itself is still an experimental feature.
 
 ## New experimental features
 
