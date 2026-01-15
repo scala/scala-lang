@@ -7,7 +7,7 @@ by: Wojciech Mazur, VirtusLab
 
 ![Scala 3.8]({{ site.baseurl }}/resources/img/scala-3.8-launch.png)
 
-We're thrilled to announce the release of Scala 3.8.0 — a milestone release that modernizes the Scala ecosystem and paves the way for Scala 3.9 LTS. This release brings the standard library into the Scala 3 era with native compilation, stabilizes highly-anticipated features like **Better Fors** (SIP-62) and **`runtimeChecked`** (SIP-57), and introduces groundbreaking experimental capabilities including **flexible varargs** and **strict equality pattern matching**.
+We're pleased to announce the release of Scala 3.8.0 — a milestone release that modernizes the Scala ecosystem and paves the way for Scala 3.9 LTS. This release introduces a standard library compiled by Scala 3 itself, stabilizes highly-anticipated features like **Better Fors** (SIP-62) and **`runtimeChecked`** (SIP-57), and introduces experimental features including **flexible varargs** and **strict equality pattern matching**.
 
 # What's new in Scala 3.8?
 
@@ -15,25 +15,25 @@ We're thrilled to announce the release of Scala 3.8.0 — a milestone release th
 
 > **Important:** This release requires **JDK 17 or later** for compilation and execution. If your project runs on an older JDK, you must upgrade before migrating to **Scala 3.8**.
 
-The plans for this change were [announced in early 2025](https://www.scala-lang.org/news/next-scala-lts-jdk.html) by the Scala team and are required to support future JDK 26+ which restricts access to `sun.misc.Unsafe` functionalities used by lazy-vals implementation. For most end users this might be just a small adjustment, but this change needs to be considered by the library authors and correctly communicated with its users. If your project still runs on an older JDK, you must first upgrade newer version of JDK before upgrading to Scala 3.8. Upgrading earlier will allow you to benefit from new language features and improved performance on the modern JVM.
+The plans for this change were [announced in early 2025](https://www.scala-lang.org/news/next-scala-lts-jdk.html) by the Scala team and are required to support future JDK 26+, which restricts access to `sun.misc.Unsafe` functionalities used by our existing lazy-vals implementation. For most end users this might be just a small adjustment, but this change needs to be considered by the library authors and communicated to their users. If your project still runs on an older JDK, you must first upgrade to at least 17 before upgrading to Scala 3.8. Upgrading earlier will allow you to benefit from new language features and improved performance on the modern JVM.
 
-The long‑term support version Scala 3.3 will continue to produce JDK 8 compatible bytecode, but all future feature releases (including the 3.9 LTS) will target JDK 17.
-For library authors who need to keep compatibility with older JVM versions we recommend using upcoming Scala 3.3.8 LTS when it's released in the next months. That version will provide `-Yfuture-lazy-vals` flag which activates new implementation of Lazy Vals, yet, it still requires upgrade to at least JDK 9.
+The LTS (long‑term support) version Scala 3.3 will continue to produce JDK 8 compatible bytecode, but all future Scala releases (including the 3.9 LTS) will require JDK 17 or higher.
+For library authors who need to keep compatibility with at least some older JVM versions, we recommend using upcoming Scala 3.3.8 LTS when it's released in the next months. That version will provide a `-Yfuture-lazy-vals` flag which activates new implementation of lazy vals, which still requires upgrading to at least JDK 9.
 
 ## Standard Library changes
 
 ### Compiled with Scala 3
 
-The Scala standard library has historically been compiled using Scala 2.13 and included in Scala 3 via binary compatibility. In 3.8.0 the library is now compiled with Scala 3. The change itself is ensured to be binary compatible and should not cause problems when migrating to Scala 3.8.
-Compilation using Scala 3 allows to benefit from two Scala 3 optional features:
+The Scala standard library has historically been compiled using Scala 2.13 and used by Scala 3 as-is, thanks to binary compatibility. In 3.8.0 the library is now compiled with Scala 3. The change itself has been verified to be binary compatible and should not cause problems when migrating to Scala 3.8.
+Compilation using Scala 3 allows to benefit from two Scala 3 optional, experimental features which we hope to stabilize in some future release:
 
 1. **Null‑safety** - When compiled with the `-Yexplicit-nulls` flag, all reference types in the library become non‑nullable unless they are annotated with `| Null`. Although the default remains unchanged, library maintainers have annotated many APIs with explicit null‑return types. When you enable explicit nulls in your project the type checker will warn if you forget to handle a possible `Null`.
 
 2. **Capture checking** - The library code has been adjusted to interact properly with the experimental capture‑checking system. When you enable capture checking in your project (`-language:experimental.captureChecking`) the type checker tracks references to capabilities and ensures you do not capture local resources in closures.
 
-> **Note:** Both null‑safety and capture‑checking annotations remain opt‑in features. Your existing code will behave exactly as before unless you enable the appropriate language flag. The goal is to provide a smooth migration path towards safer Scala in the next LTS release.
+> **Note:** Both null‑safety and capture‑checking annotations remain experimental, opt‑in features. Your existing code will behave exactly as before unless you enable the appropriate language flag. The goal is to provide a smooth migration path towards safer Scala in the next LTS release.
 
-> **Source Incompatibility:** Context bounds are now desugared to `given` instead of `implicit`. This change requires `using` modifiers when supplying explicit parameters.
+> **Source Incompatibility:** Context bounds in standard library classes such as `scala.reflect.ClassTag` used in `Array.empty[T]` method, are now desugared to `given` instead of `implicit`. This change requires `using` modifiers when supplying explicit parameters. This changed behaviour was active since Scala 3.6, but was inactive while Scala Standard Library was compiled using Scala 2.13.
 
 ```scala
 object Array:
@@ -44,13 +44,15 @@ val works = Array.empty(using reflect.ClassTag.Int)
 val recommended = Array.empty[Int]
 ```
 
-Most of these errors can be automatically fixed by compiler when using **Scala 3.7.4** with `-source:3.7-migration -rewrite` options, before upgrading to **Scala 3.8**.
+Most such errors can be automatically fixed by the compiler when using **Scala 3.7.4** with `-source:3.7-migration -rewrite` options, before upgrading to **Scala 3.8**.
+
+Looking ahead to Scala's future, compiling the standard library with Scala 3 itself paves the way for Scala 3 to eventually have its own standard library, free from the constraints of compatibility with Scala 2. However, this process will not actually begin until Scala 3.10.
 
 ### Pure functions and capture checking
 
-The `scala.caps.Pure` capability is no longer experimental and is used by the capture checker to model pure functions.
-Experimental separation checking ensures that closures do not capture resources, providing stronger guarantees about side‑effect isolation.
-To experiment with capture checking, import `scala.language.experimental.captureChecking` and annotate your functions with the appropriate capabilities.
+The `scala.caps.Pure` capability is used by the capture checker to model pure functions.
+Experimental separation checking is new in Scala 3.8 and ensures that closures do not capture resources, providing stronger guarantees about side‑effect isolation.
+To experiment with capture checking, import `scala.language.experimental.captureChecking` and annotate your functions with the appropriate capabilities. Adding these annotations does not require enabling experimental features and it will not affect users who are not using capture checking.
 
 > **Note:** Only core traits related to capture checking and defined in the Scala Standard Library have been stabilized, as these have been proven to be stable. The capture checking itself is still an experimental feature.
 
@@ -82,7 +84,7 @@ yield size * 2
 
 ### [SIP-57: Replace non-sensical `@unchecked` annotations](https://docs.scala-lang.org/sips/57.html)
 
-The `runtimeChecked` extension is now a **standard feature**. It enables you to opt-out of certain static checks and defer them to runtime without resorting to the older `: @unchecked` type ascription.
+The `runtimeChecked` extension is now a **standard feature**. It enables you to opt-out of certain static checks and defer them to runtime without resorting to the older, syntactically awkward `: @unchecked` type ascription.
 
 Consider the following example that tries to load an optional config value and match it against known values.
 
@@ -96,8 +98,8 @@ portFromConfig("https") match
     // warning: match may not be exhaustive.
 ```
 
-Compiler detects and warns that in some cases your program might fail at runtime with exception. The previous `: @unchecked` annotation could have been used to suppress these warnings, but its syntax made it difficult to apply.
-The new `runtimeChecked` clearly marks that given operation might fail, focusing your attention during code reviews. What's more, it's perfect for use in chained calls!
+The compiler detects and warns that in some cases your program throw an exception at runtime. The previous `: @unchecked` annotation could have been used to suppress these warnings, but its syntax made it difficult to apply.
+The new `runtimeChecked` clearly marks that given operation might fail, similar to `.head` or `.get`. What's more, it's perfect for use in chained calls!
 
 ```scala
 def portFromConfig(name: String): Option[Int] = ???
@@ -115,12 +117,14 @@ val otherPort = portFromConfig("https")
 
 ## New preview features
 
+Preview features are only enabled if the `-preview` flag is used. Features that have reached the preview stage are always eventually stabilized, but may change incompatibly before that time.
+
 ### [SIP-71: Allow fully implicit conversions in Scala 3 with `into`](https://docs.scala-lang.org/sips/71.html)
 
 Scala 3 normally requires `import scala.language.implicitConversions` anywhere you *use* `scala.Conversion` instances implicitly.
-The new `into` feature provides two opt-in ways to allow implicit conversions **without** that import:
+The new `into` keyword provides two opt-in ways to allow implicit conversions **without** that import:
 
-* **`into[T]` as a type constructor**: marks specific parameter (or expected) types as “conversion allowed”, giving fine-grained control (only where you wrap with `into[...]`)
+* **`into[T]` as a type constructor**: marks specific parameter types as "conversion allowed", giving fine-grained control (only where you wrap with `into[...]`)
 * **`into` as a soft modifier**: declares a trait, class, or opaque type alias as an `into` target (e.g., `into trait Modifier`), so conversions to that type are allowed everywhere without rewriting lots of signatures
 
 ```scala
@@ -142,7 +146,7 @@ val ys = Array(3, 4)
 val out = concat(xs, ys)   // `ys` is implicitly converted because expected type is `into[IterableOnce[Int]]`
 ```
 
-`into` is currently a **preview feature** and is planned to be stabilised in the minor version.
+`into` is currently a **preview feature** and is planned to be stabilised in the next minor version.
 It requires compilation with `-preview` compiler flag and can be activated using `import scala.language.experimental.into`.
 If you previously used experimental annotation-based preview implementation be aware of source incompatibilites when upgrading to Scala 3.8.
 
@@ -150,7 +154,7 @@ More information about `into` modifiers can be found in [the dedicated reference
 
 ## New experimental features
 
-> The following features are provisional and subject to change. Do not rely on them in production code yet.
+> The following features are provisional and subject to change or outright removal. Do not rely on them in production code yet.
 
 Several experimental SIPs land in Scala 3.8. You can try them by importing the corresponding experimental language imports or using matching experimental flags to the compiler.
 
@@ -229,6 +233,8 @@ It’s a small syntactic feature, but it improves readability in cases where you
 * immediately refine the result by matching on a field derived from the outer bindings (e.g., `x.version`),
 * without introducing an extra level of indentation or a `case ... => expr match ...` block.
 
+If the nested pattern does not match, we still proceed to next enclosing `case`. This is fundamentally different than putting the sub-case within another level of nesting.
+
 ```scala
 import scala.language.experimental.subCases
 
@@ -252,7 +258,7 @@ def versionLabel(d: Option[Document]): String =
 * Sub-matches do not have to be exhaustive. If none of the sub-cases match, the whole `case ... if <submatch>` is treated as not matched, and the outer match continues with the next case.
 * Sub-matches can be nested (sub-sub-matches), and you can interleave additional boolean guards between them when needed.
 
-This experimental feature has not yet entered the SIP, but we'd like to hear your feedback about this proposal.
+This experimental feature has not yet been considered by the SIP committee, but we'd like to hear your feedback about this proposal.
 
 ## Other notable changes
 
@@ -267,7 +273,7 @@ final class audited extends StaticAnnotation
 final class audited extends StaticAnnotation
 ```
 
-* **LTS/Next series indicators** [#24709](https://github.com/scala/scala3/pull/24709) - Starting with Scala 3.3 all artifacts are published with special attribute in the pom.xml indicating if given version of part of the LTS or Next series. This information could have been used by tooling to adjust its behaviour. Starting with 3.8.0 and upcoming 3.3.8 version name of this attribute has changed from `scala.versionLine` to `info.scala.versionLine`. The change was required due to a negative interaction with build tools assuming attributes starting with `scala` are reserved.
+* **LTS/Next series indicators** [#24709](https://github.com/scala/scala3/pull/24709) - Starting with Scala 3.3 all artifacts are published with special attribute in the pom.xml indicating if given version of part of the LTS or Next series. This information can be used by tooling to adjust its behaviour. Starting with 3.8.0 and upcoming 3.3.8 versions, the name of this attribute has changed from `scala.versionLine` to `info.scala.versionLine`. The change was required due to a negative interaction with build tools assuming attributes starting with `scala` are reserved.
 * **Nightly builds in a new repository** - Scala 3 nightly builds, for both Scala Next and Scala 3.3 LTS series are now published to new repository: [https://repo.scala-lang.org/](https://repo.scala-lang.org/). You can read more about this change in a [dedicated blogpost](https://www.scala-lang.org/news/new-scala-nightlies-repo.html).
 * **JDK 26 support** - Scala can now emit and consume JDK 26 bytecode. As mentioned [earlier](#jdk17is-now-required) internal implementation of the lazy vals has been adjusted to replace deprecated `sun.misc.Unsafe` with `VarHandles`, which starting with JDK 24 started to emit runtime warnings and is going to throw an exception in JDK 26. This change makes the new published code compatible with JDK 26, but mentioned problems might still be activated by previously published libraries or their transitive dependencies. We're working on creating tools to modify existing lazy-vals related code to make them future-proof and ease the migration to the upcoming JDK versions. For more details see the technical discussion in [latest Jakub Kozłowski's podcast with Łukasz Biały](https://www.youtube.com/watch?v=K_omndY1ifI) - VirtusLab's Scala Advocate, who prototyped this idea.
 
@@ -297,8 +303,8 @@ Scala 3.8 changes how parts of the standard library and the REPL are published, 
 
 ## What's next?
 
-The compiler codebase itself has switched into a feature freeze mode in preparation for Scala 3.9 LTS - no new language features would be accepted (development and improvement of existing features is still allowed however). It allows us to focus on fixing existing bugs in both tooling and compiler to ensure a smooth transition into the Scala 3.9 LTS. The freeze would be lifted with the start of the Scala 3.10 development cycle.
+The language is now in feature freeze mode in preparation for Scala 3.9 LTS. No new language features will be accepted for 3.9. Development and improvement of existing features is still allowed. This allows us to focus on fixing existing bugs in both tooling and compiler to ensure a smooth transition into the Scala 3.9 LTS era. The freeze will be lifted with the start of the Scala 3.10 development cycle.
 
-Effectively, **Scala 3.9 LTS would contain the same feature set as Scala 3.8** (we reserve the right to promote preview features into stable ones, but no new experimental or preview features would be introduced). As a result, any codebase using Scala 3.8 should not require any additional changes to use Scala 3.9 LTS.
+Effectively, **Scala 3.9 LTS would contain the same feature set as Scala 3.8**. We may promote preview features to stable, but no new experimental or preview features will be introduced. As a result, any codebase using Scala 3.8 should not require any additional changes to use Scala 3.9 LTS.
 
 **Scala 3.8.1-RC1** is already available and its stable version is expected to be released in the second half of February 2026.
