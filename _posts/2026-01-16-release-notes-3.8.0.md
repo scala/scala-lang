@@ -47,7 +47,14 @@ Looking ahead to Scala's future, compiling the standard library with Scala 3 its
 
 This makes it easier to embed the REPL in tools, reduces the size of the core compiler distribution, and allows for easier integration with external dependencies.
 
+The previous REPL printer was not dealing well with long expressions or literals, making the output difficult to read.
+![Scala 3.7 REPL example]({{ site.baseurl }}/resources/img/scala-3.8-launch_repl_3.7.png) 
+
 Starting with **Scala 3.8** REPL rendering is now powered by [com-lihaoyi/fansi](https://index.scala-lang.org/com-lihaoyi/fansi) and [com-lihaoyi/pprint](https://index.scala-lang.org/com-lihaoyi/pprint). This change allows us to provide better user experience, and present results in cleaner, formatted output.
+
+![Scala 3.8 REPL example]({{ site.baseurl }}/resources/img/scala-3.8-launch_repl_3.8.png)
+
+You can expect more improvements to the REPL in the next versions of the compiler, including built-in dependency management and improved formatting of exception messages! Some of these are already available in 3.8.1-RC1.
 
 ## Stabilised language features
 
