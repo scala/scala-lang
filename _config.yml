@@ -5,6 +5,8 @@ scalaversion: "2.13.18"
 url: https://www.scala-lang.org
 baseurl: ""
 markdown: kramdown
+kramdown:
+  input: GFM
 highlighter:
 
 exclude:
