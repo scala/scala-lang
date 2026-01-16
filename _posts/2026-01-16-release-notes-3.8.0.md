@@ -304,8 +304,7 @@ Scala 3.8 changes how parts of the standard library and the REPL are published, 
 
 ### IDEs and developer tools
 
-* **IntelliJ IDEA**
-  * **Scala Plugin 2025.3** adds Scala 3.8 support. Read more in the [announcement and latest features overview](https://blog.jetbrains.com/scala/2025/12/08/scala-plugin-2025-3-is-out/)
+* **IntelliJ IDEA**: Recommended [Scala Plugin 2025.3](https://blog.jetbrains.com/scala/2025/12/08/scala-plugin-2025-3-is-out/). The JetBrains team has also prepared a blog post showcasing [IntelliJ support for Scala 3.8](https://blog.jetbrains.com/scala/2026/01/15/scala-38-support-in-the-scala-plugin/).
 * **Metals**: Recommended: [Metals 1.6.4](https://scalameta.org/metals/blog/2025/11/25/osmium)
 * **scalafmt**: Minimum [scalafmt 3.10.1](https://github.com/scalameta/scalafmt/releases/tag/v3.10.1)
 * **Scalameta**: Minimum: [scalameta 4.14.1](https://github.com/scalameta/scalameta/releases/tag/v4.14.1) (used by Metals, scalafmt, scalafix, and more)
