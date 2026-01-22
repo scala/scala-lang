@@ -9,7 +9,7 @@ by: Wojciech Mazur, VirtusLab
 
 We're pleased to announce the release of Scala 3.8 — a significant release that modernizes the Scala ecosystem and paves the way for Scala 3.9 LTS. This release introduces a standard library compiled by Scala 3 itself, stabilizes highly-anticipated features like **Better Fors** (SIP-62) and **`runtimeChecked`** (SIP-57), and introduces experimental features including **flexible varargs** and **strict equality pattern matching**.
 
-> A runtime regression was detected after publishing the Scala 3.8.0 artifacts. Please **use Scala 3.8.1** instead. <br>
+> A runtime regression was detected after publishing Scala 3.8.0 artifacts. Please **use Scala 3.8.1** instead. <br>
 > <br>
 > The issue could lead to JVM linkage errors at runtime. It may have affected Scala 3 users who execute Scala 2.13 libraries, as well as certain uses of specialized members in the Scala standard library.
 > Any library published with Scala 3.8.0 is expected to remain binary compatible. Artifacts built with Scala 3.8.0 are safe to use and should stay binary compatible with subsequent Scala 3 releases. <br>
