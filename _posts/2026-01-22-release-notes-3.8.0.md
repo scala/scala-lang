@@ -322,4 +322,4 @@ The language is now in feature freeze mode in preparation for Scala 3.9 LTS. No 
 
 Effectively, **Scala 3.9 LTS would contain the same feature set as Scala 3.8**. We may promote preview features to stable, but no new experimental or preview features will be introduced. As a result, any codebase using Scala 3.8 should not require any additional changes to use Scala 3.9 LTS.
 
-**Scala 3.8.1-RC1** is already available and its stable version is expected to be released in the second half of February 2026.
+**Scala 3.8.2-RC1** is already available and its stable version is expected to be released in the second half of February 2026.
