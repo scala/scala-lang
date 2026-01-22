@@ -1,13 +1,20 @@
 ---
 category: release
 permalink: /news/3.8.0/
-title: "Scala 3.8.0 released!"
+title: "Scala 3.8 released!"
 by: Wojciech Mazur, VirtusLab
 ---
 
 ![Scala 3.8]({{ site.baseurl }}/resources/img/scala-3.8-launch.png)
 
-We're pleased to announce the release of Scala 3.8.0 — a significant release that modernizes the Scala ecosystem and paves the way for Scala 3.9 LTS. This release introduces a standard library compiled by Scala 3 itself, stabilizes highly-anticipated features like **Better Fors** (SIP-62) and **`runtimeChecked`** (SIP-57), and introduces experimental features including **flexible varargs** and **strict equality pattern matching**.
+We're pleased to announce the release of Scala 3.8 — a significant release that modernizes the Scala ecosystem and paves the way for Scala 3.9 LTS. This release introduces a standard library compiled by Scala 3 itself, stabilizes highly-anticipated features like **Better Fors** (SIP-62) and **`runtimeChecked`** (SIP-57), and introduces experimental features including **flexible varargs** and **strict equality pattern matching**.
+
+> A runtime regression was detected after publishing the Scala 3.8.0 artifacts. Please **use Scala 3.8.1** instead. <br>
+> <br>
+> The issue could lead to JVM linkage errors at runtime. It may have affected Scala 3 users who execute Scala 2.13 libraries, as well as certain uses of specialized members in the Scala standard library.
+> Any library published with Scala 3.8.0 is expected to remain binary compatible. Artifacts built with Scala 3.8.0 are safe to use and should stay binary compatible with subsequent Scala 3 releases. <br>
+> <br>
+> A more detailed postmortem will follow shortly after the Scala 3.8 release announcement.
 
 # What's new in Scala 3.8?
 
@@ -24,7 +31,7 @@ For library authors who need to keep compatibility with at least some older JVM 
 
 ### Compiled with Scala 3
 
-The Scala standard library has historically been compiled using Scala 2.13 and used by Scala 3 as-is, thanks to binary compatibility. In 3.8.0 the library is now compiled with Scala 3. The change itself has been verified to be binary compatible and should not cause problems when migrating to Scala 3.8.
+The Scala standard library has historically been compiled using Scala 2.13 and used by Scala 3 as-is, thanks to binary compatibility. In Scala 3.8 the library is now compiled with Scala 3. The change itself has been verified to be binary compatible and should not cause problems when migrating to Scala 3.8.
 
 > **Source Incompatibility:** Context bounds in standard library classes such as `scala.reflect.ClassTag` used in `Array.empty[T]` method, are now desugared to `given` instead of `implicit`. This change requires `using` modifiers when supplying explicit parameters.
 
@@ -43,12 +50,12 @@ Looking ahead to Scala's future, compiling the standard library with Scala 3 its
 
 ## REPL becomes a separate artifact
 
-> **Breaking Change:** Starting with 3.8.0, the REPL is distributed as a separate artifact. Projects and tools that depend on the REPL must add an explicit dependency on [scala3-repl](https://index.scala-lang.org/scala/scala3/artifacts/scala3-repl/3.8.0).
+> **Breaking Change:** Starting with Scala 3.8, the REPL is distributed as a separate artifact. Projects and tools that depend on the REPL must add an explicit dependency on [scala3-repl](https://index.scala-lang.org/scala/scala3/artifacts/scala3-repl/3.8.1).
 
 This makes it easier to embed the REPL in tools, reduces the size of the core compiler distribution, and allows for easier integration with external dependencies.
 
 The previous REPL printer was not dealing well with long expressions or literals, making the output difficult to read.
-![Scala 3.7 REPL example]({{ site.baseurl }}/resources/img/scala-3.8-launch_repl_3.7.png) 
+![Scala 3.7 REPL example]({{ site.baseurl }}/resources/img/scala-3.8-launch_repl_3.7.png)
 
 Starting with **Scala 3.8** REPL rendering is now powered by [com-lihaoyi/fansi](https://index.scala-lang.org/com-lihaoyi/fansi) and [com-lihaoyi/pprint](https://index.scala-lang.org/com-lihaoyi/pprint). This change allows us to provide better user experience, and present results in cleaner, formatted output.
 
@@ -282,7 +289,7 @@ final class audited extends StaticAnnotation
 final class audited extends StaticAnnotation
 ```
 
-* **LTS/Next series indicators** [#24709](https://github.com/scala/scala3/pull/24709) - Starting with Scala 3.3, all artifacts are published with a special attribute in the pom.xml. This attribute indicates whether a given version is part of the LTS or Next series. Tooling can use this information to adjust its behaviour. Starting with 3.8.0 and the upcoming 3.3.8 LTS, the attribute name has changed from `scala.versionLine` to `info.scala.versionLine`. The change was required due to a negative interaction with build tools that assume attributes starting with `scala` are reserved.
+* **LTS/Next series indicators** [#24709](https://github.com/scala/scala3/pull/24709) - Starting with Scala 3.3, all artifacts are published with a special attribute in the pom.xml. This attribute indicates whether a given version is part of the LTS or Next series. Tooling can use this information to adjust its behaviour. Starting with Scala 3.8 and the upcoming 3.3.8 LTS, the attribute name has changed from `scala.versionLine` to `info.scala.versionLine`. The change was required due to a negative interaction with build tools that assume attributes starting with `scala` are reserved.
 * **Nightly builds in a new repository** - Scala 3 nightly builds for both Scala Next and Scala 3.3 LTS series are now published to a new repository: [https://repo.scala-lang.org/](https://repo.scala-lang.org/). You can read more about this change in a [dedicated blogpost](https://www.scala-lang.org/news/new-scala-nightlies-repo.html).
 * **JDK 26 support** - Scala can now emit and consume JDK 26 bytecode. As mentioned [earlier](#jdk17is-now-required), the internal implementation of lazy vals has been adjusted to replace the deprecated `sun.misc.Unsafe` with `VarHandles`. Starting with JDK 24, `sun.misc.Unsafe` emits runtime warnings. In JDK 26, it will throw an exception. This change makes newly published code compatible with JDK 26. However, these problems might still be triggered by previously published libraries or their transitive dependencies. We are working on tools to modify existing lazy-vals-related code to make them future-proof and ease migration to upcoming JDK versions. For more details, see the technical discussion in [Jakub Kozłowski's latest podcast with Łukasz Biały](https://www.youtube.com/watch?v=K_omndY1ifI), VirtusLab's Scala Advocate who prototyped this idea.
 
