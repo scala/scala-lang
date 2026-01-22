@@ -1,6 +1,6 @@
 ---
 category: release
-permalink: /news/3.8.0/
+permalink: /news/3.8/
 title: "Scala 3.8 released!"
 by: Wojciech Mazur, VirtusLab
 ---
