@@ -5,8 +5,6 @@ by: Darja Jovanovic, Scala Center
 title: "The Sovereign Tech Fund invests in Scala"
 ---
 
-# **The Sovereign Tech Fund invests in Scala**
-
 We’re truly excited to share that [Scala has received an investment from the Sovereign Tech Fund](https://www.sovereign.tech/tech/scala) to strengthen Scala’s long-term security, maintenance, and developer experience.
 
 The work is coordinated by the [Scala Center](https://scala.epfl.ch/) and runs for two years, with a total investment of €377,300.
