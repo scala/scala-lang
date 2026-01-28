@@ -7,10 +7,10 @@ title: Scala Standard Library Process
 
 # Contributing to Scala Standard Library
 
-Starting from Scala 3.8, the Scala standard library is again available for
+Starting with Scala 3.8, the Scala standard library is again available for
 contributions. This however means that the main place for contributing is the
-Scala 3 repository. Scala 2.13 might benefit from some improvements, but the to
-get access to fully to new functionality, you need to migrate to Scala 3.
+Scala 3 repository. Scala 2.13 might benefit from some improvements, but to
+get full access to the new functionality, you need to migrate to Scala 3.
 
 # The Process
 
