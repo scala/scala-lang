@@ -13,7 +13,7 @@
   org: VirtusLab
 
 - name: Tomasz Godzik
-  description: VirtusLab Compiler Team Leader, Specialised Engineer (IDE)
+  description: VirtusLab Compiler Team Leader, Specialised Engineer (IDE), Release Officer (LTS)
   github: tgodzik
   org: VirtusLab
 
@@ -23,24 +23,9 @@
   github: bracevac
   org: EPFL
 
-- name: Dale Wijnand
-  description: Compiler Engineer, Specialised Engineer (Matching)
-  github: dwijnand
-  org: Akka
-
 - name: Matt Bovel
   description: Compiler Engineer
   github: mbovel
-  org: EPFL
-
-- name: Eugene Flesselle
-  description: Compiler Engineer
-  github: EugeneFlesselle
-  org: EPFL
-
-- name: Hamza Remmal
-  description: Compiler Engineer, Infrastructure Maintainer
-  github: hamzaremmal
   org: EPFL
 
 - name: Yichen Xu
@@ -58,9 +43,9 @@
   github: aherlihy
   org: EPFL
 
-- name: Kacper Korban
+- name: Solal Pirelli
   description: Compiler Engineer
-  github: KacperFKorban
+  github: SolalPirelli
   org: EPFL
 
 - name: Guillaume Martres
@@ -73,16 +58,6 @@
   github: sjrd
   org: EPFL
 
-- name: Jędrzej Rochala
-  description: Tooling Engineer, Specialised Engineer (Pres. Compiler)
-  github: rochala
-  org: VirtusLab
-
-- name: Katarzyna Marek
-  description: Tooling Engineer, Specialised Engineer (IDE)
-  github: kasiaMarek
-  org: VirtusLab
-
 - name: Jan Chyb
   description: Compiler Engineer, Specialised Engineer (Macros)
   github: jchyb
@@ -93,9 +68,14 @@
   github: Florian3k
   org: VirtusLab
 
-- name: Michał Pałka
-  description: Release Officer (LTS)
-  github: prolativ
+- name: Patryk Zieliński
+  description: Compiler Engineer
+  github: zielinsky
+  org: VirtusLab
+
+- name: Jakub Warchoł
+  description: Compiler Engineer
+  github: warcholjakub
   org: VirtusLab
 
 - name: Wojciech Mazur
@@ -104,16 +84,11 @@
   org: VirtusLab
 
 - name: Rikito Taniguchi
-  description: Scala Native Engineer
+  description: Compiler Engineer
   github: tanishiking
   org: VirtusLab
 
-- name: Dimi Racordon
-  description: Scala Native Engineer
-  github: kyouko-taiga
-  org: EPFL
-
 - name: Nguyen Pham
-  description: Scala Native Engineer
+  description: Compiler Engineer
   github: natsukagami
   org: EPFL
