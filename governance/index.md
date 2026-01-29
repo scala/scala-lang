@@ -57,7 +57,7 @@ For more information:
 
 ## Contributing to the Scala Standard Library
 
-The Scala standard library is hosted in the [scala/scala3](https://github.com/scala/scala3) repository. Any changes that influence the standard library API should follow [this process](https://github.com/scala/scala3/blob/main/docs/_docs/contributing/procedures/contributing-to-stdlib.md). If the changes are only internal, the process is the standard pull request one.
+The Scala 3 standard library is hosted in the [scala/scala3](https://github.com/scala/scala3) repository. Any changes that influence the standard library API should follow [this process](https://github.com/scala/scala3/blob/main/docs/_docs/contributing/procedures/contributing-to-stdlib.md). If the changes are only internal, the process is the standard pull request one.
 
 The person responsible for coordinating the process is the Scala Core Coordinator. Current Coordinator can be found on the [Scala Core Team page](https://www.scala-lang.org/scala-core/).
 

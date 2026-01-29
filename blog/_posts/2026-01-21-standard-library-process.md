@@ -7,14 +7,17 @@ title: Scala Standard Library Process
 
 # Contributing to Scala Standard Library
 
-Starting with Scala 3.8, the Scala standard library is again available for
-contributions. This however means that the main place for contributing is the
-Scala 3 repository. Scala 2.13 might benefit from some improvements, but to
-get full access to the new functionality, you need to migrate to Scala 3.
+After a long freeze, the Scala 3 standard library is again open to
+contributions. The main place for contributing is now the
+Scala 3 repository.
+
+Certain specific improvements might be eligible for backporting to Scala 2,
+but this will be the exception rather than the norm. To
+access most new functionality, you need to migrate to Scala 3.
 
 # The Process
 
-The Scala standard library is hosted in the
+The Scala 3 standard library is hosted in the
 [scala/scala3](https://github.com/scala/scala3) repository. Any changes that
 influence the standard library API should follow [this process](https://github.com/scala/scala3/blob/main/docs/_docs/contributing/procedures/contributing-to-stdlib.md). If the changes are only internal, the process is 
 the standard pull request one.
