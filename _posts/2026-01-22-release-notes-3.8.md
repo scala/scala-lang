@@ -24,8 +24,8 @@ We're pleased to announce the release of Scala 3.8 — a significant release tha
 
 > The following regressions still present in 3.8.1 will be addressed in a forthcoming 3.8.2 hotfix release:
 >
-> * Some `for` comprehensions have incorrect behavior at runtime (https://github.com/scala/scala3/issues/24673)
-> * Certain code involving calls to certain parts of the Java standard library fail to compile (https://github.com/scala/scala3/issues/25133)
+> * Some `for` comprehensions have incorrect behavior at runtime ([bug 24673](https://github.com/scala/scala3/issues/24673))
+> * Certain code involving calls to certain parts of the Java standard library fail to compile ([bug 25133](https://github.com/scala/scala3/issues/25133))
 >
 > Cautious users may wish to wait for 3.8.2.
 
