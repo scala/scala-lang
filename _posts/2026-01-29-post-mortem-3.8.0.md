@@ -8,21 +8,21 @@ by: Scala Core Team
 
 
 Incident Date: _January 13th, 2026_  
-Nature of the incident: _Scala 3.8.0 artifacts were released with inline references to private fields which 
-were not reachable_
+Nature of the incident: _The Scala 3.8.0 artifacts contain invalid references to private fields_
 
 ## The TL;DR
-Scala 3.8.0 artifacts were released with inline references to private fields in its standard library which 
-were not reachable. The bug, while severe, would only affect a very limited set of users. 
+The Scala 3.8.0 artifacts were released with invalid references to private fields in its standard library.
+The bug, while severe, only affects a very limited group of users.
 A hotfix was implemented and included in a subsequent 3.8.1 release. 
 Both releases were then announced simultaneously 
 (link to the announcement can be found [here](https://scala-lang.org/news/3.8/)).
 
 ## Recommendations
 - Upgrade directly to Scala 3.8.1, or 3.8.2 once it becomes available. 
-- Scala 3.8.0 is discouraged from being used because of the issue described in this document, 
-  but has not been cancelled.
-- The impact of the incident is limited and should not be visible to most users.
+- Scala 3.8.0 is discouraged from being used because of the issue described in this document.
+- The issue is not flagged by the compiler, it manifests in a NoSuchFieldError thrown at runtime. 
+  We believe the exposure is very limited, and it's unlikely for users to be affected.
+  Libraries compiled and published with Scala 3.8.0 are not corrupted and can be used safely.
 
 ## Timeline
 
@@ -37,9 +37,10 @@ A hotfix was proposed on Monday, 19th of January
 under [scala/scala3#25008](https://github.com/scala/scala3/pull/25008) and then merged on the next day, 
 Tuesday, 20th of January.
 
-It was decided by [Scala Core Team](https://www.scala-lang.org/scala-core/) that while the bug could be severe, 
-it would affect a very limited number of users, and so, Scala 3.8.0 would not have to be cancelled altogether. 
-Instead, Scala 3.8.0 and 3.8.1 (containing the hotfix) were announced simultaneously on Thursday, 22th of January 2026 
+The [Scala Core Team](https://www.scala-lang.org/scala-core/) decided not to cancel Scala 3.8.0.
+While the bug is severe, it would affect a very limited number of users. Moreover, libraries successfully compiled 
+and published with 3.8.0 are not corrupted and can safely be used in the ecosystem.
+Scala 3.8.0 and 3.8.1 (containing the hotfix) were announced simultaneously on Thursday, 22th of January 2026 
 (link to the announcement can be found [here](https://scala-lang.org/news/3.8/)), 
 with advice for users to upgrade directly to 3.8.1.
 
@@ -178,9 +179,10 @@ The issue was introduced due to a number of factors:
   (via the `@specialized` annotation or otherwise) never being implemented in Scala 3. 
   While it was discussed in the past, it was decided the old approach was in need of a redesign 
   and the necessary work was large in scope. As a result, it was delayed until an unspecified future.
-- While porting the standard library, the unit tests were not ported. While it is disputable whether the actual incident 
-  would be detected if they were, it remains a fact that there were no tests to catch this problem. 
-  This is an omission that has been amended since, but should have been done before Scala 3.8.0 artifacts were released.
+- While porting the standard library, its JUnit tests were not ported at the same time.
+  We have since shown that the JUnit tests would not have caught this particular incident.
+  Nevertheless, it was a risky bet, and we have now successfully run all the JUnit tests on the new library.
+  (It is also worth pointing out that JUnit tests constitute a very small part of the unit tests applicable to the library.)
 - Despite an exceptionally long RC period, the issue was not discovered earlier. 
   3.8.0-RC1 was released as early as the 14th of November 2025. It took almost 2 months 
   to discover the problem in user code. This is perhaps a reasonable argument for the problem being rather niche.
@@ -206,7 +208,7 @@ of lacking thereof will be revisited in the future.
 ## Further reading
 
 - [Scala 3.8 announcement](https://scala-lang.org/news/3.8/)
-- [earliest report of ther incident at scalacenter/sbt-missinglink\#54](https://github.com/scalacenter/sbt-missinglink/issues/54)
+- [earliest report of the incident at scalacenter/sbt-missinglink\#54](https://github.com/scalacenter/sbt-missinglink/issues/54)
 - [the main ticket tracking this incident at scala/scala3#24994](https://github.com/scala/scala3/issues/24994)
 - [hotfix pull request at scala/scala3#25008](https://github.com/scala/scala3/pull/25008)
 - [JVM Bytecode Optimizer](https://docs.scala-lang.org/overviews/compiler-options/optimizer.html)
