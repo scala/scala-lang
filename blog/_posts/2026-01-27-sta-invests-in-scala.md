@@ -64,3 +64,11 @@ We’ll share updates as work progresses, including milestones, delivered improv
 Scala is critical digital infrastructure, so keeping it healthy is a shared responsibility. If you’re using Scala in production, maintaining libraries, or contributing to tooling and documentation, your feedback and involvement help keep Scala strong.
 
 In addition to occasional blog posts such as this one, we’ll also post more detailed updates, progress reports, and calls for feedback on our Discourse-based contributors forum at [**contributors.scala-lang.org**](http://contributors.scala-lang.org). Please follow the relevant threads to stay informed.
+
+## **Forum threads**
+
+* [Standard Library: Now open for improvements and suggestions](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337/106)
+* [Scala documentation, web sites: What should be improved?](https://contributors.scala-lang.org/t/scala-documentation-web-sites-what-should-be-improved/7354/21)
+* [Extending Scala with modern concurrency primitives](https://contributors.scala-lang.org/t/extending-scala-with-modern-concurrency-primitives/7350)
+* [Sbt 2 production-ready roadmap](https://contributors.scala-lang.org/t/sbt-2-production-ready-roadmap/7351)
+* [Scoverage hardening](https://contributors.scala-lang.org/t/scoverage-hardening/7352)
