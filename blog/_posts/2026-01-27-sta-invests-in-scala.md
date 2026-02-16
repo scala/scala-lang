@@ -67,8 +67,8 @@ In addition to occasional blog posts such as this one, we’ll also post more de
 
 ## **Forum threads**
 
-* [Standard Library: Now open for improvements and suggestions](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337/106)
-* [Scala documentation, web sites: What should be improved?](https://contributors.scala-lang.org/t/scala-documentation-web-sites-what-should-be-improved/7354/21)
+* [Standard Library: Now open for improvements and suggestions](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337)
+* [Scala documentation, web sites: What should be improved?](https://contributors.scala-lang.org/t/scala-documentation-web-sites-what-should-be-improved/7354)
 * [Extending Scala with modern concurrency primitives](https://contributors.scala-lang.org/t/extending-scala-with-modern-concurrency-primitives/7350)
 * [Sbt 2 production-ready roadmap](https://contributors.scala-lang.org/t/sbt-2-production-ready-roadmap/7351)
 * [Scoverage hardening](https://contributors.scala-lang.org/t/scoverage-hardening/7352)
