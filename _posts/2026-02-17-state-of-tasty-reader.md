@@ -86,7 +86,7 @@ The table below starts at Scala 2.13.6 and covers stable, non-experimental TASTy
 | 2.13.16 | 3.6 |
 | 2.13.17 | 3.7 |
 
-Intermediate Scala 2.13 releases between these milestones follow the most recent support level above.
+Each Scala 2.13 release can consume artifacts from all Scala 3 versions up to and including the one listed in its row. For example, Scala 2.13.17 can consume artifacts published with Scala 3.0 through 3.7, but not forward-incompatible 3.8 or later. Intermediate Scala 2.13 releases between these milestones follow the most recent support level above.
 
 ## Recommendations
 
@@ -102,8 +102,8 @@ We recommend cross-compilation of libraries for Scala 2.13 and Scala 3 so that e
 
 However, if that's not possible we recommend for library authors:
 1. Publish Scala 3 artifacts on **Scala 3.3 LTS** for that compatibility path.
-2. Treat this as the safest line for the transition period, expected to remain viable until the 3.9 LTS series begins (roughly Q2 2027).
-3. Do not use Scala 3.7 as the default compatibility target, since 3.7 is not expected to receive further releases.
+2. Scala 3.3 LTS will remain actively supported until at least Q2 2027 (at least one year after Scala 3.9 LTS is released), making it the safest choice for the transition period.
+3. Prefer publishing library using Scala 3.3 LTS - Scala 3.7 is not expected to receive further releases. Use Scala 3 Next series only if access to their features features is necessary.
 4. Plan and communicate potential dropping of Scala 2.13 support with the users, before migrating to Scala 3.9 LTS.
 
 ## Summary
