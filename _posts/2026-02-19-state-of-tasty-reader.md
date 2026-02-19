@@ -5,10 +5,10 @@ title: "State of the TASTy reader and Scala 2.13 <-> Scala 3 compatibility"
 by: Wojciech Mazur, VirtusLab
 ---
 
-With the release of [Scala 3.8](https://scala-lang.org/news/3.8/), Scala 2.13 and Scala 3 interoperability is no longer symmetric.
+With the release of [Scala 3.8](https://scala-lang.org/news/3.8/), Scala 2.13 and Scala 3 interoperability is no longer bidirectional.
 Every Scala 3 version still supports — and will continue to support - consuming Scala 2.13 artifacts.
-The Scala 2.13 TASTy reader (`-Ytasty-reader`) remains useful for migrations and consuming Scala 3 artifacts, but it would not be able to consume Scala 3.8 and later artifacts. 
-Scala 3.7 is the latest minor version whose artifacts can be consumed from Scala 2.
+The Scala 2.13 TASTy reader (`-Ytasty-reader`) remains useful for migrations and consuming Scala 3 artifacts, but it will never be able to consume Scala 3.8 and later artifacts. 
+Scala 3.7 is the last minor version whose artifacts will remain consumable from Scala 2.
 
 This post summarizes the current state, the compatibility boundaries, and the recommended publishing strategy for teams that still need Scala 2.13 to consume Scala 3 libraries.
 
@@ -16,10 +16,10 @@ This post summarizes the current state, the compatibility boundaries, and the re
 
 [TASTy](https://docs.scala-lang.org/scala3/guides/tasty-overview.html) (Typed Abstract Syntax Trees) is the high-level interchange format used by Scala 3.
 Every Scala 3 compilation produces `.tasty` files alongside `.class` files.
-While `.class` files lose type information due to JVM type erasure (e.g. `List[Int]` becomes `List[Object]`), TASTy files preserve the complete type information — generic types, union types, intersection types, and more.
+While `.class` files lose type information due to JVM type erasure (e.g. `List[String]` becomes `List[Object]`), TASTy files preserve the complete type information — generic types, union types, intersection types, and more.
 
 The **TASTy reader** is a feature built into the Scala 2.13 compiler, enabled with the `-Ytasty-reader` flag.
-It allows a Scala 2.13 project to depend on libraries published **only** for Scala 3, by reading their `.tasty` files to reconstruct the precise type signatures that `.class` files alone cannot convey.
+It allows a Scala 2.13 project to depend on libraries only published for Scala 3, by reading their `.tasty` files to reconstruct the precise type signatures that `.class` files alone cannot convey.
 
 The TASTy reader was designed as a **migration aid** — not a permanent compatibility layer.
 It addressed a critical chicken-and-egg problem during the Scala 3 ecosystem bootstrap: library authors wanted to publish for Scala 3 but couldn't abandon Scala 2.13 users, while application developers on Scala 2.13 couldn't migrate until their dependencies were available.
@@ -66,10 +66,10 @@ The result is the well-known sbt update error: `Error downloading org.scala-lang
 
 ## Hard compatibility guarantee
 
-**Scala 3 consuming Scala 2.13 artifacts will always be supported.**
+**Scala 3 consuming Scala 2.13 artifacts will remain supported for the foreseeable future.**
 
 That direction of compatibility is a hard requirement and remains part of the Scala 3 migration model.
-The broken direction is specifically Scala 2.13 consuming Scala 3.8+ artifacts through the TASTy reader.
+The no-longer-supported direction is specifically Scala 2.13 consuming Scala 3.8+ artifacts through the TASTy reader.
 
 ## Stable TASTy reader compatibility (Scala 2.13.6+)
 
