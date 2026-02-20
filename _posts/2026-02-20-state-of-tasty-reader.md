@@ -1,13 +1,15 @@
 ---
 category: blog
 permalink: /blog/state-of-tasty-reader.html
-title: "State of the TASTy reader and Scala 2.13 <-> Scala 3 compatibility"
+title: "State of the TASTy reader and Scala 2.13 ↔ Scala 3 compatibility"
 by: Wojciech Mazur, VirtusLab
 ---
 
 With the release of [Scala 3.8](https://scala-lang.org/news/3.8/), Scala 2.13 and Scala 3 interoperability is no longer bidirectional.
-Every Scala 3 version still supports — and will continue to support - consuming Scala 2.13 artifacts.
-The Scala 2.13 TASTy reader (`-Ytasty-reader`) remains useful for migrations and consuming Scala 3 artifacts, but it will never be able to consume Scala 3.8 and later artifacts. 
+
+Every **Scala 3 version supports consuming Scala 2.13** artifacts. There are no reasons or plans to change that state.
+
+The **Scala 2.13 TASTy reader** (`-Ytasty-reader`) remains useful for migrations and consuming Scala 3 artifacts, but it **will never be able to consume Scala 3.8** and later artifacts. 
 Scala 3.7 is the last minor version whose artifacts will remain consumable from Scala 2.
 
 This post summarizes the current state, the compatibility boundaries, and the recommended publishing strategy for teams that still need Scala 2.13 to consume Scala 3 libraries.
