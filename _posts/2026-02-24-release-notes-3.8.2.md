@@ -27,9 +27,9 @@ val result: Iterable[(Int, Int)] =
 ```
 
 - **Before (3.7):** A synthetic tuple-producing `map` was inserted; that step could make `Map` select a generic `map` overload and become an `Iterable` (e.g. `List`)
-- **In 3.8:** That synthetic step is removed, so the conversion no longer happens and a different `map`/`flatMap` path can be selected. 
+- **In 3.8:** That synthetic step is removed, so the conversion no longer happens and a different `map`/`flatMap` path can be selected.
 
-The previous runtime behaviour can be achived by explicitly converting first `Map` to `Iterable` type or by compilation with `-source:3.7` settings.
+The previous runtime behaviour can be achieved by explicitly converting first `Map` to `Iterable` type or by compilation with `-source:3.7` settings.
 
 The new warning highlights code where this migration risk exists.
 
