@@ -22,7 +22,7 @@ It is also great news to see such high adoption (**40%**) of Scala 3. In May 202
 
 Most recently, we have even seen established community-lead projects, such as Lichess, adopt Scala 3. Which after a minor setback, is now smoothly running Scala 3 in production (see their [blog post](https://lichess.org/@/thibault/blog/lichess--scala-3/y1sbYzJX)).
 
-What else? The survey has given us a great overview of the libraries used in the ecosystem, and respondents' confidence in them (read the [**VirtusLab blog post**](https://virtuslab.com/blog/scala-survey-2022) for an analysis of this). Further, we invite you to try [Scaladex](https://index.scala-lang.org/awesome) to discover all the awesome Scala libraries that are available.
+What else? The survey has given us a great overview of the libraries used in the ecosystem, and respondents' confidence in them (read the [**VirtusLab blog post**](https://virtuslab.com/blog/scala/scala-survey-2022) for an analysis of this). Further, we invite you to try [Scaladex](https://index.scala-lang.org/awesome) to discover all the awesome Scala libraries that are available.
 
 We are also excited to see that **20.6%** of respondents are looking forward to further development in Scala Native, which we are actively developing - that will also address concerns such as memory usage (**25%** reported) and cloud services support (**9%** reported).
 
