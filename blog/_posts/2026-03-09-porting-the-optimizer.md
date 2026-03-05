@@ -64,7 +64,7 @@ The other key limitation of the optimizer is that you can only use it if you kno
 
 Thus, the optimizer targets _application_ code as well as the _standard library_, and is an opt-in compiler setting. You should not use it for _library_ code unless you carefully select what inlining is allowed, see below.
 
-## Using the optimizer
+## Using the optimizer
 
 _This section is for Scala 3.9+ only, not the currently released 3.8.x branch._
 
