@@ -14,11 +14,11 @@ def addOne(a: Array[Int]) = a.map(_ + 1)
 ```
 This is easy to read and maintain, in addition to being shorter to write.
 
-However, a high-level API like `map` is conceptually more complex: it's a function call that is passed another function, and the latter might need a closure to be allocated on the heap if it captures local values. Compiled naïvely, this is leads to more and more complex instructions than the equivalent low-level loop:
+However, a high-level API like `map` is conceptually more complex: it's a function call that is passed another function, and the latter might need a closure to be allocated on the heap if it captures local values. Compiled naïvely, this is leads to slower code than the equivalent low-level loop:
 ```scala
 def addOne(a: Array[Int]) =
-  var l = a.length
-  var r = new Array[Int](l)
+  val l = a.length
+  val r = new Array[Int](l)
   var i = 0
   while i < l do
     r(i) = a(i) + 1
@@ -27,6 +27,21 @@ def addOne(a: Array[Int]) =
 ```
 
 You don't want to write this loop, because its purpose is a lot less obvious and it is harder to maintain, but without compiler help, you might have to write it if that function is critical to your application's performance. (Why would adding one to an array be critical to your app's performance? Because you're reading a pedagogical blog post and thus suspending disbelief!)
+
+How can we get the best of both worlds? By having an _optimizer_ in the compiler that simplifies code and heuristically determines when it is beneficial to _inline_ code to enable further simplifications. Scala 2 has had such an optimizer for years now, and it's finally time to port it to Scala 3! Let's see why it works in a little more detail.
+
+If you've ever written a `map` function yourself, you may recognize the loop above as being fairly close to how such a function is implemented, though the actual implementation is a little more complex than you'd think because it needs to handle the JVM's erased generics:
+```scala
+def map[B](a: Array[A], f: A => B)(implicit ct: ClassTag[B]): Array[B] =
+  val len = a.length
+  val r = new Array[B](len)
+  var i = 0
+  (a: Any @unchecked) match
+    case a: Array[AnyRef]  => while (i < len) { r(i) = f(a(i).asInstanceOf[A]); i = i+1 }
+    case a: Array[Int]     => while (i < len) { r(i) = f(a(i).asInstanceOf[A]); i = i+1 }
+    /* ... 7 cases omitted for brevity ...  */
+  ys
+```
 
 
 ## Participation
