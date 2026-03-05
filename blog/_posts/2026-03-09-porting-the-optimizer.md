@@ -37,7 +37,7 @@ def map[B](a: Array[A], f: A => B)(implicit ct: ClassTag[B]): Array[B] =
     case a: Array[AnyRef]  => while (i < len) { r(i) = f(a(i).asInstanceOf[A]); i = i+1 }
     case a: Array[Int]     => while (i < len) { r(i) = f(a(i).asInstanceOf[A]); i = i+1 }
     /* ... 7 cases omitted for brevity ...  */
-  ys
+  r
 ```
 This method's complexity is necessary to handle every possible array you can throw at it. You could also implement it with less code by using reflection to handle any possible array, but that leads to an even slower runtime.
 But in our `addOne` case, we only need the `Array[Int]` part. Type-checking the array isn't needed, nor is casting `a(i)` inside the loop, and the whole `ClassTag` machinery could go away too.
