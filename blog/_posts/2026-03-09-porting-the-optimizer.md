@@ -1,14 +1,33 @@
 ---
 layout: blog-detail
 post-type: blog
-by: Anatolii Kmetiuk, Scala Center
-title: Migrating sbt plugins to sbt 2 with sbt2-compat plugin
-description: A case study of how sbt-assembly uses sbt2-compat to cross-build for sbt 1 and sbt 2, and a guide of how to use it for your own plugins.
+by: Solal Pirelli, EPFL
+title: Porting the Scala 2 optimizer to Scala 3
+description: Making your high-level maintainable code as fast as low-level harder-to-read code
 ---
 
-> This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [sbt 2 Stable Release and Maintenance](https://contributors.scala-lang.org/t/sbt-2-production-ready-roadmap/7351). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
+> This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [Maintenance of the Standard Library/Core Library Modules and APIs]([???](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337)). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
 
-TODO
+Scala's expressiveness allows you to write what you mean:
+```scala
+def addOne(a: Array[Int]) = a.map(_ + 1)
+```
+This is easy to read and maintain, in addition to being shorter to write.
+
+However, a high-level API like `map` is conceptually more complex: it's a function call that is passed another function, and the latter might need a closure to be allocated on the heap if it captures local values. Compiled naïvely, this is leads to more and more complex instructions than the equivalent low-level loop:
+```scala
+def addOne(a: Array[Int]) =
+  var l = a.length
+  var r = new Array[Int](l)
+  var i = 0
+  while i < l do
+    r(i) = a(i) + 1
+    i += 1
+  r
+```
+
+You don't want to write this loop, because its purpose is a lot less obvious and it is harder to maintain, but without compiler help, you might have to write it if that function is critical to your application's performance. (Why would adding one to an array be critical to your app's performance? Because you're reading a pedagogical blog post and thus suspending disbelief!)
+
 
 ## Participation
 
