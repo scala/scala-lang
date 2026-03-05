@@ -6,7 +6,7 @@ title: Porting the Scala 2 optimizer to Scala 3
 description: Making your high-level maintainable code as fast as low-level harder-to-read code
 ---
 
-> This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [Maintenance of the Standard Library/Core Library Modules and APIs]([???](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337)). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
+> This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [Maintenance of the Standard Library/Core Library Modules and APIs](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
 
 Scala's expressiveness allows you to write what you mean:
 ```scala
