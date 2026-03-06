@@ -12,7 +12,7 @@ Scala is a modern and concise language, meaning you can write code expressing _w
 You're the chef deciding what flavor your dish should have and what it should look like, and Scala provides the equivalent of cooks that know how warm the oven should be, how long each kind of protein needs to cook, and which order to combine the ingredients in.
 High-level code is easier to read and maintain, in addition to being shorter to write.
 
-Scala's expressiveness thus enables you to write what you mean:
+Scala's expressiveness enables you to write what you mean:
 ```scala
 def addOneMap(a: Array[Int]) = a.map(_ + 1)
 ```
@@ -63,7 +63,7 @@ When common functions get bigger, fewer of them fit in that cache, so execution 
 Furthermore, inlining is not always possible.
 A classic case is recursion: you cannot infinitely inline a function into itself.
 Some more tricky problems include the fact that you cannot inline a method that accesses a class's private fields outside of that class.
-(At least not on the JVM, ScalaJS does not have that problem.)
+(At least not on the JVM, Scala.js does not have that problem.)
 
 In this case, there is a heuristic modeling the fact that if a function call uses a function literal as argument, inlining it is probably worth it.
 There are other heuristics, such as one related to generic array operations in general, one that forces inlining of "forwarder" functions that merely call another function with minor changes to their arguments, and so on.
@@ -77,7 +77,7 @@ Heuristics mostly lead to better performance, but performance is such a complex 
 It's possible that enabling the optimizer on your specific codebase could regress some scenarios, which is why you should benchmark any performance-related change just as you would test any correctness-related change.
 You can override the heuristics with `@inline` and `@noinline` annotations, but these should be a last-resort solution that you re-evaluate frequently as the compiler and the JVM improve.
 
-The other key limitation of the optimizer is that you can only use it if you know your dependencies at runtime are the same as the ones you had at compile time.
+The other key limitation of the optimizer is that you can only use it if you know your dependencies at run-time are the same as the ones you had at compile time.
 For instance, if you compile against library `org.example` version `1.3.6`, and tomorrow the maintainers of `org.example` release version `1.3.7` that fixes a bug in a small function, this bugfix only has an effect on the already-deployed version of your code if it actually calls that function, not if the optimizer inlined the buggy version into your code.
 
 Thus, the optimizer targets _application_ code as well as the _standard library_, and is an opt-in compiler setting.
