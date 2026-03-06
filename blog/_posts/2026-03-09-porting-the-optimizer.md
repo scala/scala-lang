@@ -8,8 +8,11 @@ description: Making your high-level maintainable code as fast as low-level harde
 
 > This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [Maintenance of the Standard Library/Core Library Modules and APIs](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
 
+We are porting the _optimizer_ from the Scala 2 compiler to the Scala 3 compiler, improving the performance of Scala 3 applications without requiring developers to write more complex code. But what exactly is this optimizer and why is it necessary?
+
+_This work has not been merged to the main branch yet, so you will be able to try it out in Scala 3.9+, not the currently released 3.8.x branch._
+
 Scala is a modern and concise language, meaning you can write code expressing _what_ you want to do by composing primitives, rather than _how_ to do it step-by-step.
-You're the chef deciding what flavor your dish should have and what it should look like, and Scala provides the equivalent of cooks that know how warm the oven should be, how long each kind of protein needs to cook, and which order to combine the ingredients in.
 High-level code is easier to read and maintain, in addition to being shorter to write.
 
 Scala's expressiveness enables you to write what you mean:
@@ -17,7 +20,7 @@ Scala's expressiveness enables you to write what you mean:
 def addOneMap(a: Array[Int]) = a.map(_ + 1)
 ```
 However, from a CPU's point of view, a high-level API like `map` is conceptually more complex than the equivalent low-level code.
-It's a function call that is passed another function, and the latter might need a closure to be allocated on the heap if it captures local values.
+It's a function call that is passed another function, leading to a [megamorphic](https://shipilev.net/jvm/anatomy-quarks/16-megamorphic-virtual-calls/) call site, and the function argument might need a closure to be allocated on the heap if it captures local values.
 Compiled naïvely, the high-level call wouldn't be as fast as this equivalent low-level loop:
 ```scala
 def addOneLoop(a: Array[Int]) =
@@ -32,7 +35,7 @@ def addOneLoop(a: Array[Int]) =
 You don't want to write this loop, because its purpose is a lot less obvious and it is harder to maintain, but without compiler help, you might have to write it if that function is critical to your application's performance.
 (Why would adding one to an array be critical to your app's performance? Because you're reading a pedagogical blog post and thus suspending disbelief!)
 
-If you've ever written a `map` function yourself, you may recognize the loop above as being fairly close to how such a function is implemented, though the actual Scala implementation is a little more complex than you'd think because it needs to handle the JVM's erased generics:
+If you've ever written a `map` function yourself, you may recognize the loop above as being fairly close to how such a function is implemented, though the actual Scala implementation is a little more complex than you'd think because it needs to handle the mismatch between Scala's generic array type and the JVM's erased generics:
 ```scala
 def map[B](a: Array[A], f: A => B)(implicit ct: ClassTag[B]): Array[B] =
   val len = a.length
@@ -81,11 +84,10 @@ The other key limitation of the optimizer is that you can only use it if you kno
 For instance, if you compile against library `org.example` version `1.3.6`, and tomorrow the maintainers of `org.example` release version `1.3.7` that fixes a bug in a small function, this bugfix only has an effect on the already-deployed version of your code if it actually calls that function, not if the optimizer inlined the buggy version into your code.
 
 Thus, the optimizer targets _application_ code as well as the _standard library_, and is an opt-in compiler setting.
-You should not use it for _library_ code unless you carefully select what inlining is allowed, see below.
+You should only use it for _library_ code if you carefully select what inlining is allowed, as explained below.
+Typically this means only inlining code within your own library, or within dependencies you control.
 
 ## Using the optimizer
-
-_This section is for Scala 3.9+ only, not the currently released 3.8.x branch._
 
 Pass the flag `-opt` to the compiler to enable non-inlining optimizations, and `-opt-inline:...` arguments to enable inlining calls to specific packages.
 
