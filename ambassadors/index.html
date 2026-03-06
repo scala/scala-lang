@@ -55,7 +55,12 @@ includeTOC: false
       {% for ambassador in site.data.ambassadors %}
         <div class="ambassador-item">
             <img src="{{ambassador.image}}" alt="{{ambassador.name}}" class="ambassador-image" style="width: 100px; height: 100px; display: inline;">
-          <p class="ambassador-name"><b>{{ambassador.name}}</b></p>
+          <p class="ambassador-name">
+            <b>{{ambassador.name}}</b>
+            {% if ambassador.pronouns %}
+              <small>{{ambassador.pronouns}}</small>
+            {% endif %}
+          </p>
           <p class="ambassador-city">
             <i class="fa-solid fa-location-dot"></i> {{ambassador.city}}
             {% if ambassador.discord %}
@@ -76,6 +81,11 @@ includeTOC: false
             {% if ambassador.mastodon %}
               <a href="{{ambassador.mastodon}}" target="_blank">
                 <i class="fa-brands fa-mastodon"></i>
+              </a>
+            {% endif %}
+            {% if ambassador.bluesky %}
+              <a href="https://bsky.app/profile/{{ambassador.bluesky}}" target="_blank">
+                <i class="fa-brands fa-bluesky"></i>
               </a>
             {% endif %}
             {% if ambassador.github %}
