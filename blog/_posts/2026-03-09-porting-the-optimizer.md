@@ -49,7 +49,7 @@ But in our `addOne` case, we only need the `Array[Int]` part. Type-checking the 
 
 ## Optimizing for the best of both worlds
 
-How can we get the best of both worlds? By having an _optimizer_ in the compiler that simplifies code and heuristically determines when it is beneficial to _inline_ code to enable further simplifications. Scala 2 has had such an optimizer for years now, and it's finally time to port it to Scala 3! Let's see why it works in a little more detail.
+How can we get the best of both worlds? By having an _optimizer_ in the compiler that simplifies code and heuristically determines when it is beneficial to _inline_ code to enable further simplifications. Scala 2 has had such an optimizer for years now, [as documented here](https://docs.scala-lang.org/overviews/compiler-options/optimizer.html), and it's finally time to port it to Scala 3! Let's see why it works in a little more detail.
 
 The optimizer takes care of turning our single-line `addOneMap` example into our fast `addOneLoop` version. 
 The key technique to perform this is _inlining_: expanding the code of `map` into the function where it is called.
@@ -67,6 +67,9 @@ Some more tricky problems include the fact that you cannot inline a method that 
 
 In this case, there is a heuristic modeling the fact that if a function call uses a function literal as argument, inlining it is probably worth it.
 There are other heuristics, such as one related to generic array operations in general, one that forces inlining of "forwarder" functions that merely call another function with minor changes to their arguments, and so on.
+
+The JVM already has an optimizer, but it's designed to make Java code fast, and typical Java code does not look like typical Scala code, so there are some important optimization opportunities not covered by the JVM's optimizer.
+Furthermore, the Scala compiler can optimize code based on knowledge that is internal to the compiler and subject to change between versions, such as which Scala runtime functions are guaranteed to be pure or to always return non-null references.
 
 ## Limitations
 
