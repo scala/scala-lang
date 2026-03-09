@@ -20,7 +20,7 @@ Scala's expressiveness enables you to write what you mean:
 def addOneMap(a: Array[Int]) = a.map(_ + 1)
 ```
 However, from a CPU's point of view, a high-level API like `map` is conceptually more complex than the equivalent low-level code.
-It's a function call that is passed another function, leading to a [megamorphic](https://shipilev.net/jvm/anatomy-quarks/16-megamorphic-virtual-calls/) call site, and the function argument might need a closure to be allocated on the heap if it captures local values.
+It's a function call that is passed another function, leading to a "[megamorphic](https://shipilev.net/jvm/anatomy-quarks/16-megamorphic-virtual-calls/)" call site that is harder for the JVM to optimize, and the function argument might need a closure to be allocated on the heap if it captures local values.
 Compiled naïvely, the high-level call wouldn't be as fast as this equivalent low-level loop:
 ```scala
 def addOneLoop(a: Array[Int]) =
@@ -56,7 +56,7 @@ How can we get the best of both worlds? By having an _optimizer_ in the compiler
 
 The optimizer takes care of turning our single-line `addOneMap` example into our fast `addOneLoop` version. 
 The key technique to perform this is _inlining_: expanding the code of `map` into the function where it is called.
-This allows the optimizer to remove redundant branches and operations.
+This allows the optimizer to remove redundant branches and operations, such as removing the [boxing](https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html) of primitive types.
 The `match` is simplified to just one of its branches, the `asInstanceOf` and `ClassTag` disappear, and we end up with the fast version.
 
 Inlining is powerful but can also have big drawbacks.
@@ -71,8 +71,10 @@ Some more tricky problems include the fact that you cannot inline a method that 
 In this case, there is a heuristic modeling the fact that if a function call uses a function literal as argument, inlining it is probably worth it.
 There are other heuristics, such as one related to generic array operations in general, one that forces inlining of "forwarder" functions that merely call another function with minor changes to their arguments, and so on.
 
-The JVM already has an optimizer, but it's designed to make Java code fast, and typical Java code does not look like typical Scala code, so there are some important optimization opportunities not covered by the JVM's optimizer.
-Furthermore, the Scala compiler can optimize code based on knowledge that is internal to the compiler and subject to change between versions, such as which Scala runtime functions are guaranteed to be pure or to always return non-null references.
+The JVM already has an optimizer as part of Just-In-Time compilation, but it's designed to make Java code fast, and typical Java code does not look like typical Scala code, so there are some important optimization opportunities not covered by the JVM's optimizer.
+Furthermore, the Scala compiler can optimize code at compile-time based on knowledge that is internal to the compiler and subject to change between versions, such as which Scala runtime functions are guaranteed to be pure or to always return non-null references.
+
+Early results show that for individual methods such as the `addOne` example above, the optimizer successfully turns the high-level version into an exact equivalent of the low-level one, which translates to 10-30% gains in some microbenchmarks.
 
 ## Limitations
 
