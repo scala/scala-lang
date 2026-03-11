@@ -12,7 +12,7 @@ Code coverage is not optional for many organizations. As one of the QA metrics, 
 
 A crucial requirement for Scoverage's wide industry adoption is that Scoverage itself is reliable and well-tested. The tool is already tested via its own dedicated test suite - however, that is not enough. Most tricky bugs happen not in isolation but at intersections of language features. Therefore, Scoverage needs to be tested in interaction with all of the language features to be truly considered reliable. Furthermore, all future changes to the compiler should be tested in interaction with Scoverage to ensure the tool remains compatible with the compiler.
 
-To guarantee such a level of reliability, we have recently started a systematic rework of the testing strategy for Scoverage. This article reports on the progress we've made in January-February 2026 so far.
+To guarantee such a level of reliability, we have recently started a systematic rework of the testing strategy for Scoverage. This article reports on the progress we've made in 2026 so far.
 
 <!-- more -->
 
