@@ -14,8 +14,6 @@ A crucial requirement for Scoverage's wide industry adoption is that Scoverage i
 
 To guarantee such a level of reliability, we have recently started a systematic rework of the testing strategy for Scoverage. This article reports on the progress we've made in 2026 so far.
 
-<!-- more -->
-
 ## Enabling coverage on the compiler test suite
 
 The first step was mapping out the current failures of Scoverage in interaction with other language features. The strategy for that was to enable Scoverage on the existing compiler test suite. This means, in addition to the usual CI run of the tests that we do for each new PR, now we run the same tests again, but with Scoverage enabled.
