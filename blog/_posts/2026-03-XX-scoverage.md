@@ -16,7 +16,7 @@ To guarantee such a level of reliability, we have recently started a systematic 
 
 <!-- more -->
 
-## Enabling Coverage on the Compiler Test Suite
+## Enabling coverage on the compiler test suite
 
 The first step was mapping out the current failures of Scoverage in interaction with other language features. The strategy for that was to enable Scoverage on the existing compiler test suite. This means, in addition to the usual CI run of the tests that we do for each new PR, now we run the same tests again, but with Scoverage enabled.
 
@@ -32,7 +32,7 @@ As for the rest of the tests, they are now running with coverage instrumentation
 
 Details of this work are in [PR #25009](https://github.com/scala/scala3/pull/25009).
 
-## Addressing Breakages: Erased Values and the Purity Constraint
+## Addressing breakages: erased values and the purity constraint
 
 We have also taken the first steps to address discovered issues. A pattern that emerged is that failing tests were clustered around a few common root causes.
 
@@ -44,7 +44,7 @@ The fix is conceptually simple: the coverage instrumentation phase now checks wh
 
 Details in [PR #25298](https://github.com/scala/scala3/pull/25298).
 
-## Expanding the Testing Surface
+## Expanding the testing surface
 
 The Scala 3 compiler's test suite is extensive. The strategy has been to enable coverage testing incrementally: start with the core tests, exclude the currently failing ones so regressions are caught from day one, then gradually expand the testing surface and fix discovered issues.
 
