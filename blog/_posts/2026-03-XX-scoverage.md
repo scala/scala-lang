@@ -26,7 +26,7 @@ Under this mode, for each test we verify three things:
 - The coverage output file is produced
 - The coverage output file is valid and deserializable
 
-As a result, we have discovered **97 failing tests** when coverage instrumentation was switched on. Those tests are being addressed in the order of impact. They were disabled for the time being to allow the validation logic to be merged early, thus future-proofing Scoverage.
+As a result, we have discovered *97 failing tests* when coverage instrumentation was switched on. Those tests are being addressed in the order of impact. They were disabled for the time being to allow the validation logic to be merged early, thus future-proofing Scoverage.
 
 As for the rest of the tests, they are now running with coverage instrumentation for each PR, and passing them is a requirement for a PR to be merged to the compiler codebase. Furthermore, every newly added test to the compiler test suite is tested against Scoverage by default, thus preventing future PRs from unintentionally introducing Scoverage breakages.
 
@@ -40,7 +40,7 @@ One of the root causes behind a significant cluster of failures was the interact
 
 Coverage instrumentation works by injecting calls into the compiled code to record which expressions were executed. These calls introduce side effects. The erasure phase would then reject the result with an error.
 
-The fix is conceptually simple: the coverage instrumentation phase now checks whether a value is erased and, if so, skips it. **23 tests** that previously failed under coverage are now passing as a result of this fix, opening the door to using Scoverage together with capabilities.
+The fix is conceptually simple: the coverage instrumentation phase now checks whether a value is erased and, if so, skips it. *23 tests* that previously failed under coverage are now passing as a result of this fix, opening the door to using Scoverage together with capabilities.
 
 Details in [PR #25298](https://github.com/scala/scala3/pull/25298).
 
@@ -48,7 +48,7 @@ Details in [PR #25298](https://github.com/scala/scala3/pull/25298).
 
 The Scala 3 compiler's test suite is extensive. The strategy has been to enable coverage testing incrementally: start with the core tests, exclude the currently failing ones so regressions are caught from day one, then gradually expand the testing surface and fix discovered issues.
 
-The latest expansion of the testing surface was done after fixing the first cluster of issues. Coverage instrumentation is now also exercised on additional test suites such as `rewrites`, `warn`, `explicit-nulls/pos`, `explicit-nulls/warn`, and `init` test suites. As a part of this expansion, we have discovered **13 new breakages** that are being addressed in the same manner.
+The latest expansion of the testing surface was done after fixing the first cluster of issues. Coverage instrumentation is now also exercised on additional test suites such as `rewrites`, `warn`, `explicit-nulls/pos`, `explicit-nulls/warn`, and `init` test suites. As a part of this expansion, we have discovered *13 new breakages* that are being addressed in the same manner.
 
 Details in [PR #25385](https://github.com/scala/scala3/pull/25385).
 
