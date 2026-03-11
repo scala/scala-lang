@@ -34,7 +34,7 @@ Details of this work are in [PR #25009](https://github.com/scala/scala3/pull/250
 
 ## Addressing Breakages: Erased Values and the Purity Constraint
 
-We have also taken the first steps to address discovered issues. A pattern that emerged is that failing tests were clustered around one common root cause.
+We have also taken the first steps to address discovered issues. A pattern that emerged is that failing tests were clustered around a few common root causes.
 
 One of the root causes behind a significant cluster of failures was the interaction between coverage instrumentation and Scala 3's capability system. Capabilities in Scala 3 are represented as erased values - values that exist at compile time but are eliminated at runtime. Because they are erased, they must be pure: they cannot have side effects, and the compiler enforces this constraint, failing compilation if that is not the case.
 
