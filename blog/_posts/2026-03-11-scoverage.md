@@ -8,6 +8,12 @@ description: "We've enabled systematic coverage testing in the Scala 3 compiler'
 
 > This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [Scoverage hardening](https://contributors.scala-lang.org/t/scoverage-hardening/7352). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
 
+## Summary
+
+Code coverage is a key part of maintaining high-quality Scala projects. We've recently made progress on making Scoverage more robust for Scala 3, expanding the way we test it and discovering and fixing new issues.
+
+## Background
+
 Measuring how much of your Scala code is exercised by tests sounds simple until you try to do it yourself. That's where code coverage tools come in. Code coverage is not optional for many organizations. As one of the QA metrics, coverage helps ensure reliability of the solution which is especially important in regulated sectors. Scoverage is the standard coverage tool for Scala, built directly into the Scala 3 compiler as a dedicated phase.
 
 A crucial requirement for Scoverage's wide industry adoption is that Scoverage itself is reliable and well-tested. The tool is already tested via its own dedicated test suite - however, that is not enough. Most tricky bugs happen not in isolation but at intersections of language features. Therefore, Scoverage needs to be tested in interaction with all of the language features to be truly considered reliable. Furthermore, all future changes to the compiler should be tested in interaction with Scoverage to ensure the tool remains compatible with the compiler.
