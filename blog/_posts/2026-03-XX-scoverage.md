@@ -50,6 +50,10 @@ The latest expansion of the testing surface was done after fixing the first clus
 
 Details in [PR #25385](https://github.com/scala/scala3/pull/25385).
 
+## Conclusion
+
+To ensure the reliability of Scoverage in the industry, we are continuing to expand the testing surface of the tool and fix discovered issues. We will be sharing more updates as the work continues. If you are actively using Scoverage, your feedback is welcome! You can join the discussion on [contributors.scala-lang.org](https://contributors.scala-lang.org/t/scoverage-hardening/7352) or contribute Scoverage-related issues to the Scala 3 [issue tracker](https://github.com/scala/scala3/issues).
+
 ## Participation
 
 The Scala Center has been entrusted with coordinating the commissioned Scala work for the Sovereign Tech Fund. The Scala Center is an independent, not-for-profit center sponsored by [corporate members and individual backers like you](/blog/2023/09/11/scala-center-fundraising.html) to promote and facilitate Scala. If you would like to participate and/or see more of these types of efforts, please reach out to your manager to see if your company can donate engineering time or membership to the Scala Center.
