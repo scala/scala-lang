@@ -8,7 +8,7 @@ description: Making your high-level maintainable code as fast as low-level harde
 
 > This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [Maintenance of the Standard Library/Core Library Modules and APIs](https://contributors.scala-lang.org/t/standard-library-now-open-for-improvements-and-suggestions/7337). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
 
-We are porting the _optimizer_ from the Scala 2 compiler to the Scala 3 compiler, improving the performance of Scala 3 applications without requiring developers to write more complex code. But what exactly is this optimizer and why is it necessary?
+We are porting the _optimizer_ from the Scala 2 compiler to the Scala 3 compiler, improving the performance of Scala 3 applications without requiring developers to write more complex code. In early microbenchmarks of code written in a high-level functional style, we're seeing 10-30% faster execution. But what exactly is this optimizer and why is it necessary?
 
 _This work is available as of version [3.8.3-RC3](https://github.com/scala/scala3/releases/tag/3.8.3-RC3) of the Scala compiler._
 
