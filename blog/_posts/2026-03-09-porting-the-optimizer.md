@@ -10,7 +10,7 @@ description: Making your high-level maintainable code as fast as low-level harde
 
 We are porting the _optimizer_ from the Scala 2 compiler to the Scala 3 compiler, improving the performance of Scala 3 applications without requiring developers to write more complex code. But what exactly is this optimizer and why is it necessary?
 
-_This work has not been merged to the main branch yet, so you will be able to try it out in future versions, not the currently released 3.8.x branch._
+_This work is available as of version [3.8.3-RC3](https://github.com/scala/scala3/releases/tag/3.8.3-RC3) of the Scala compiler._
 
 Scala is a modern and concise language, meaning you can write code expressing _what_ you want to do by composing primitives, rather than _how_ to do it step-by-step.
 High-level code is easier to read and maintain, in addition to being shorter to write.
