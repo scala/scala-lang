@@ -89,7 +89,7 @@ listed above,
 
 * contact one of the moderators active on that channel if you can identify
   them, or
-* send an e-mail to [Scala-CoC@epfl.ch](mailto:Scala-CoC@epfl.ch), which
+* send an e-mail to [coc@scala-lang.org](mailto:coc@scala-lang.org), which
   forwards to general moderators at the Scala Center, or
 * send an e-mail to one of the following general moderators if you want to
   choose who you are talking to:
