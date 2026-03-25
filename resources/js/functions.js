@@ -593,7 +593,7 @@ $(document).ready(function() {
     }
 });
 
-// Scala Days 2025 Countdown
+// Scala Days countdown (IDs reuse legacy "2025" suffix; deadline is Scala Days 2026, Berlin)
 $(document).ready(function() {
   function countdownCalc(deadline, cityName) {
     var now = new Date().getTime();
@@ -618,11 +618,11 @@ $(document).ready(function() {
       if (minEl) minEl.innerHTML = '0';
     }
   }
-  var deadline2025 = new Date('Aug 19, 2025 09:00:00').getTime();
+  var scalaDaysDeadline = new Date('2026-10-12T09:00:00+02:00').getTime();
   if (document.getElementById('countdown-clock-2025')) {
-    countdownCalc(deadline2025, '2025');
+    countdownCalc(scalaDaysDeadline, '2025');
     window.scalaDaysCountdownInterval = setInterval(function() {
-      countdownCalc(deadline2025, '2025');
+      countdownCalc(scalaDaysDeadline, '2025');
     }, 60000);
   }
 });
