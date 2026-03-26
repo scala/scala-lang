@@ -52,6 +52,10 @@ Both measures follow established guidance from [OWASP](https://cheatsheetseries.
 
 The fix is available in sbt 1.12.8 and sbt 2.0.0-RC10. The full advisory is published as [GHSA-x4ff-q6h8-v7gw](https://github.com/sbt/sbt/security/advisories/GHSA-x4ff-q6h8-v7gw).
 
+## Workflow of Applying the Fix
+
+One interesting detail to mention is that GitHub provides a [way](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability) to report a vulnerability, work on the fix and submit a PR privately to prevent the vulnerability from being publically disclosed before the fix is ready. If you encounter a security vulnerability in a Scala project, you should do the same, reporting it to the maintainers via Security Advisory on GitHub.
+
 ## Appling the Fix
 
 Update your `project/build.properties` to sbt 1.12.8 or later, or sbt 2.0.0-RC10 if you are using sbt 2. If your build uses source dependencies, verify that the URIs point to repositories you trust. In general, treat build definitions and VCS dependencies (including their build and source code) with the same review standards as application code. A `build.sbt` runs arbitrary Scala at build time and deserves the same scrutiny as any other code in your repository.
