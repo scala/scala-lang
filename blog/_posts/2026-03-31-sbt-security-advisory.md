@@ -38,7 +38,7 @@ This is a classic [OS command injection](https://cwe.mitre.org/data/definitions/
 
 ## Severity
 
-The severity is moderate because exploitation requires an attacker to actively build a project containing a malicious dependency URI, then requires a user to proactively build that project on their local machine. As `sbt` is a build tool, building a project carries an inherent risk of arbitrary command execution. As with any untrusted software, before building a project, you should check the source code, including the build file definitions.
+The severity is moderate because exploitation requires an attacker to actively build a project containing a malicious dependency URI, then requires a user to proactively build that project on their local machine. As sbt is a build tool, building a project carries an inherent risk of arbitrary command execution. As with any untrusted software, before building a project, you should check the source code, including the build file definitions.
 
 That said, build definitions are often treated with less scrutiny than application code. So the main exploit here is the attention of the user towards the URLs in dependencies and their trust assumptions regarding the build definition.
 
