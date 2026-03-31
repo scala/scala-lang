@@ -38,6 +38,8 @@ Only the code between the markers is skipped by coverage instrumentation. The re
 
 Scala 3.8.3 introduces **safe mode**, a new experimental language subset that can be enabled with `import language.experimental.safe` or `-language:experimental.safe`. As described in the [safe mode reference](https://www.scala-lang.org/api/3.8.3/docs/experimental/capture-checking/safe.html), this is not just “stricter capture checking”: it is a capability-safe subset intended for agent-generated or otherwise untrusted code.
 
+The underlying model is also described in the research paper [Tracking Capabilities for Safer Agents](https://arxiv.org/abs/2603.00991), which proposes using Scala 3 with capture checking as a programming-language-based safety harness for AI agents.
+
 When safe mode is enabled, the compiler rejects unchecked casts and unchecked pattern matches, forbids escape hatches such as `caps.unsafe`, `@unchecked`, and runtime reflection, turns on capture checking with mutation tracking, and restricts access to global APIs unless they are known-safe or explicitly reviewed.
 
 That last point is what makes the feature practical. Safe code is meant to call a restricted set of APIs directly, while effectful or implementation-dependent behavior can still be exposed through wrappers marked `@assumeSafe`. The implementation in [#25307](https://github.com/scala/scala3/pull/25307) makes that boundary explicit: `@assumeSafe` declarations are themselves written outside safe mode, and safe code calls them from within the restricted subset.
