@@ -10,7 +10,7 @@ description: "During our ongoing work on sbt 2, we discovered and fixed a comman
 
 As part of our ongoing work on the sbt 2 release, we've been reviewing and hardening core parts of the sbt codebase. During that work, we discovered a command injection vulnerability in how sbt resolves source dependencies on Windows. The issue has been assigned [CVE-2026-32948](https://www.cve.org/CVERecord?id=CVE-2026-32948), rated Moderate (CVSS 6.7), and is now fixed. If you use sbt on Windows, update to **sbt 1.12.8** or **sbt 2.0.0-RC10** or later to apply the fix.
 
-## The Vulnerability
+## The vulnerability
 
 sbt has the [source dependencies](https://www.scala-sbt.org/1.x/docs/Multi-Project.html#Project+dependency) feature that lets you depend on a VCS repository in your build definition. For example, to depend on the `develop` branch of a project published to GitHub:
 
@@ -42,7 +42,7 @@ The severity is moderate because exploitation requires an attacker to actively b
 
 The threat model here is that a malicious attacker may try to inject commands disguised as a source dependency URL, and pass the code review because the behavior is unexpected.
 
-## The Fix
+## The fix
 
 The primary fix was to stop routing VCS commands through `cmd /c`. Git, Mercurial, and Subversion all ship as `.exe` binaries on Windows. When Java's `ProcessBuilder` invokes an `.exe` directly, arguments are passed as separate strings to the operating system - shell metacharacters are not interpreted. By removing the `cmd /c` wrapper, the injection vector disappears.
 
@@ -56,7 +56,7 @@ The fix is available in sbt 1.12.8 and sbt 2.0.0-RC10. The full advisory is publ
 
 One interesting detail to mention is that GitHub provides a [way](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability) to report a vulnerability, work on the fix and submit a PR privately to prevent the vulnerability from being publicly disclosed before the fix is ready. If you encounter a security vulnerability in a Scala project, you should do the same, reporting it to the maintainers via Security Advisory on GitHub.
 
-## Applying the Fix
+## Applying the fix
 
 Update your `project/build.properties` to sbt 1.12.8 or later, or sbt 2.0.0-RC10 if you are using sbt 2. If your build uses source dependencies, verify that the URIs point to repositories you trust. In general, treat build definitions and VCS dependencies (including their build and source code) with the same review standards as application code. A `build.sbt` runs arbitrary Scala at build time and deserves the same scrutiny as any other code in your repository.
 
