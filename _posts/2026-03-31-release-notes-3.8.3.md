@@ -85,7 +85,7 @@ In the example above, the safe code in `app.scala` can call `CheckedMailer.send`
 
 ### Scala 2 JVM optimizer ported to Scala 3 ([#25165](https://github.com/scala/scala3/pull/25165))
 
-Scala 3 now includes the port of the Scala 2 JVM backend optimizer. The optimizer is opt-in: compiler flag `-opt` enables local bytecode optimizations, while `-opt-inline:...` controls which classes and packages may be inlined across call sites. This brings Scala 3 to feature parity with the Scala 2 optimizer and opens the door to significant performance gains for JVM applications.
+Scala 3 now includes the port of the Scala 2 JVM backend optimizer. The optimizer is opt-in: compiler flag `-opt` enables local bytecode optimizations, while `-opt-inline:...` controls which classes and packages may be inlined across call sites. This brings Scala 3 to feature parity with the Scala 2 optimizer and opens the door to performance gains for JVM applications.
 
 Rather than enabling blanket inlining everywhere, it is usually better to start from explicit filters. The `-opt-inline` setting accepts a comma-separated list of patterns; `**` matches all classes, `a.**` matches a package and its subpackages, `<sources>` matches classes compiled in the current run, and a leading `!` excludes matches. The last matching pattern wins.
 
