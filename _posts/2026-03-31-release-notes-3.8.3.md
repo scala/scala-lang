@@ -42,9 +42,10 @@ When safe mode is enabled, the compiler rejects unchecked casts and unchecked pa
 
 That last point is what makes the feature practical. Safe code is meant to call a restricted set of APIs directly, while effectful or implementation-dependent behavior can still be exposed through wrappers marked `@assumeSafe`. The implementation in [#25307](https://github.com/scala/scala3/pull/25307) makes that boundary explicit: `@assumeSafe` declarations are themselves written outside safe mode, and safe code calls them from within the restricted subset.
 
-`app.scala`
 
 ```scala
+// app.scala
+
 //> using scala 3.8.3
 //> using file CheckedMailer.scala
 //> using options -experimental
@@ -58,9 +59,10 @@ import language.experimental.safe
   address.asInstanceOf[String] // error: rejected in safe mode
 ```
 
-`CheckedMailer.scala`
 
 ```scala
+// CheckedMailer.scala
+
 import scala.caps.assumeSafe
 
 @assumeSafe
