@@ -10,9 +10,9 @@ On February 24, 2026, we merged [scala/scala3#25326](https://github.com/scala/sc
 
 However, after a little over one month of observing the results, it is now clear that **the policy did not go far enough**.
 
-While it successfully reduced AI slop PRs, it did not reduce ammount of human made mistakes.
+While it successfully reduced AI slop PRs, it did not reduce the amount of human-made mistakes.
 
-We continue to spend too much time reviewing changes that were handwritten with complete confidence and only a passing relationship to the problem statement. The amount of bugs we are still finding in manually authored fixes remains too high. Some of these patches even display recognizably human symptoms: premature cleverness, attachment to local minima, "obvious" two-line fixes that merely move the crash elsewhere, and comments written by someone who very clearly understood the code five minutes earlier.
+We continue to spend too much time reviewing changes that were handwritten with complete confidence and only a passing relationship to the problem statement. The number of bugs we are still finding in manually authored fixes remains too high. Some of these patches even display recognizably human symptoms: premature cleverness, attachment to local minima, "obvious" two-line fixes that merely move the crash elsewhere, and comments written by someone who very clearly understood the code five minutes earlier.
 
 If we want rapid and stable development of Scala, we need to address the remaining source of avoidable variance in the process.
 
@@ -56,7 +56,7 @@ There are now two supported ways to contribute to the compiler.
 
 ### 1. Use the dedicated LLM skills
 
-Contributors who want to work directly on a fix should use the dedicated compiler skills documented in [https://github.com/scala/scala3/tree/main/.agents/skills/compiler-contribution](https://en.wikipedia.org/wiki/April_Fools%27_Day). All development, source code and documentation changes, and testing must now be performed using those dedicated SKILLs.
+Contributors who want to work directly on a fix should use the dedicated compiler skills documented in [https://github.com/scala/scala3/tree/main/.agents/skills/compiler-contribution](https://en.wikipedia.org/wiki/April_Fools%27_Day). All development, source code, and documentation changes, and testing must now be performed using those dedicated SKILLs.
 
 Pull requests should include the problem statement, the generated patch, the relevant prompt or prompt summary, and an explanation of every `@assumeSafe` boundary. As before, all code must be compiled and tested locally before the PR is marked ready for review.
 
@@ -71,11 +71,11 @@ That issue should contain:
 - the relevant compiler phase or subsystem, if known,
 - any semantic constraints or non-goals,
 - failing tests or a sketch of the desired test,
-- and ideally the prompt you would have used yourself.
+- and ideally, the prompt you would have used yourself.
 
 The compiler team, or a team-approved model operating under supervision, will then turn that specification into a patch.
 
-This path is especially encouraged when the problem is well understood but the contributor still has a strong preference for producing bugs manually.
+This path is especially encouraged when the problem is well understood, but the contributor still has a strong preference for producing bugs manually.
 
 ## Final notes
 
