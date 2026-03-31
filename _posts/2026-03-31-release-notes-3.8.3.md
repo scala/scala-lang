@@ -54,11 +54,13 @@ That last point is what makes the feature practical. Safe code is meant to call 
 
 import language.experimental.safe
 
-@main def PotentiallyUnsafeApp = 
+object PotentiallyUnsafeApp:
   val address = EmailAddress("team@scala-lang.org")
   CheckedMailer.send(address)  // ok
   println(address)             // error: rejected in safe mode
   address.asInstanceOf[String] // error: rejected in safe mode
+  address match
+    case EmailAddress(rawAddress) => ???  // error: rejected in safe mode
 ```
 
 
@@ -73,8 +75,10 @@ object CheckedMailer:
         scala.Console.out.println(s"Sending message to $to")
 
 opaque type EmailAddress <: String = String
-@assumeSafe object EmailAddress:
-    def apply(value: String): EmailAddress = value
+
+object EmailAddress:
+    @assumeSafe def apply(value: String): EmailAddress = value
+    def unapply(value: EmailAddress): Option[String] = Some(value)
 ```
 
 In the example above, the safe code in `app.scala` can call `CheckedMailer.send`, but the effectful operation is isolated behind an `@assumeSafe` boundary. By contrast, direct calls to `println`, unchecked `asInstanceOf` casts, or `scala.caps.unsafe` helpers are rejected in safe mode.
