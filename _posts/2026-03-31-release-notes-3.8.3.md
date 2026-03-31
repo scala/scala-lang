@@ -8,7 +8,7 @@ by: Wojciech Mazur, VirtusLab
 
 ## Release highlights
 
-### Local coverage exclusions with `// $COVERAGE-OFF$` and `// $COVERAGE-ON$` ([#24486](https://github.com/scala/scala3/pull/24486))
+### Local coverage exclusions with `// $COVERAGE-OFF$` blocks ([#24486](https://github.com/scala/scala3/pull/24486))
 
 Coverage-instrumented builds can now disable coverage for a selected region of code, instead of excluding a whole file or class. This is useful for generated code, intentionally defensive branches, or support code that would otherwise distort coverage results.
 
