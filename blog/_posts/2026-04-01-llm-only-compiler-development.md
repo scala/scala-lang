@@ -6,6 +6,8 @@ title: "A new policy for Scala 3 compiler development"
 description: "Following the success of our February 2026 LLM policy, we are further tightening the contribution process for the Scala 3 compiler."
 ---
 
+# Scala project goes AI-only, forbids human-written code!
+
 On February 24, 2026, we merged [scala/scala3#25326](https://github.com/scala/scala3/pull/25326), introducing a formal policy for the use of LLM-based tools in contributions to the Scala 3 compiler. That policy has already been effective. It reduced a whole class of low-effort AI-assisted pull requests, made contributors more explicit about how patches were produced, and gave reviewers a clearer basis for asking for local validation, tests, and prompt history when needed.
 
 However, after a little over one month of observing the results, it is now clear that **the policy did not go far enough**.
