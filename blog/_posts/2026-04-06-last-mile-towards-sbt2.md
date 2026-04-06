@@ -34,7 +34,7 @@ To share the progress thus far, we released the [sbt 2.0 ideas](https://eed3si9n
 
 Thanks to the community effort, we already have [60+ plugins](https://www.scala-sbt.org/2.x/docs/en/community-plugins.html) ported to sbt 2.x. This is amazing for a build tool that hasn't been released yet. Special thanks to Kenji Yoshida for pull requests, preparing and porting many plugins to sbt 2.
 
-Under the sbt2 workstream, Anatolii from Scala Center has created [the sbt2-compat plugin](/blog/2026/03/02/sbt2-compat.html), which absorbs the source-level differences between sbt 1.x and 2.x. This allows cross-building of a plugin and aids the migration process. Also under the STF workstream, Rikito Taniguchi from VirtusLab has created a pull request to [cross build Scala.JS plugin to sbt 2.x (scala-js#5314)](https://github.com/scala-js/scala-js/pull/5314).
+Under the sbt2 workstream, Anatolii from Scala Center has created [the sbt2-compat plugin](/blog/2026/03/02/sbt2-compat.html), which absorbs the source-level differences between sbt 1.x and 2.x. This allows cross-building of a plugin and aids the migration process. Also under the STA workstream, Rikito Taniguchi from VirtusLab has created a pull request to [cross build Scala.JS plugin to sbt 2.x (scala-js#5314)](https://github.com/scala-js/scala-js/pull/5314).
 
 Independently, Play (see [playframework#13319](https://github.com/playframework/playframework/issues/13319)) and Scala Native (see [scala-native#4768](https://github.com/scala-native/scala-native/pull/4768)) projects have been working towards sbt 2.x support as well.
 
