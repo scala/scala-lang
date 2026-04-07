@@ -18,12 +18,12 @@ We'll discuss the plan in this post. But let me catch you up on the status first
 
 sbt 2 is a new version of sbt. If you're familiar with sbt 1.x, hopefully the jump is not too far, but we have pushed sbt to the modern standard. The headline features are:
 
-1. sbt 2.x uses Scala 3.x for build definitions and plugins (Both sbt 1.x and 2.x are capable of building Scala 2.x and 3.x)
-2. Embraces a simpler build.sbt via common settings
-3. `test` changed to an incremental test
-4. Local and remote cache system that is Bazel-compatible
-5. Uses sbtn (native-image client) for shell
-6. Project matrix that can cross build subprojects in parallel
+- sbt 2.x uses Scala 3.x for build definitions and plugins (Both sbt 1.x and 2.x are capable of building Scala 2.x and 3.x)
+- Embraces a simpler build.sbt via common settings
+- `test` changed to an incremental test
+- Local and remote cache system that is Bazel-compatible
+- Uses sbtn (native-image client) for shell
+- Project matrix that can cross build subprojects in parallel
 
 <br>
 For more details, please check out the Scala Days 2025 talk [sbt 2.0: go big](https://www.youtube.com/watch?v=GM2ywMb4z7A) that I gave in August 2025.
@@ -46,7 +46,9 @@ Documentation has been reorganized and partly rewritten as [The book of sbt](htt
 
 ## Locking down to 2.0.x branch
 
-We have now created the `2.0.x` branch, so by default, all pull requests will target sbt 2.1. On March 26, we released [sbt 2.0.0-RC10](https://eed3si9n.com/sbt-2.0.0-RC10), kicking off the last mile process. This means that only the critical bug fixes will be backported to the `2.0.x` branch.
+- We have now created the `2.0.x` branch, so by default, all pull requests will target sbt 2.1. Only the critical bug fixes will be backported to the `2.0.x` branch.
+- On March 26, we released [sbt 2.0.0-RC10](https://eed3si9n.com/sbt-2.0.0-RC10), kicking off the last mile process.
+- On April 7, we relesed [sbt 2.0.0-RC11](https://eed3si9n.com/sbt-2.0.0-RC11).
 
 **Next steps**: Please try using [the lastest RC](https://github.com/sbt/sbt/releases) on your projects, and check out the newly updated documentation. If you find bugs or missing documentation, please let us know by creating [an issue on GitHub](https://github.com/sbt/sbt/issues).
 
