@@ -12,7 +12,7 @@ At conferences or on social media, the question we get most often is:
 
 > When is sbt 2 coming out?
 
-We'll discuss the plan in this post. But let me catch you up on the status first.
+We'll discuss the plan in this post. But let's go over the status first.
 
 ## What's new in sbt 2?
 
