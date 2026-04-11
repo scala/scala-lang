@@ -16,7 +16,7 @@ We'll discuss the plan in this post. But let's go over the status first.
 
 ## What's new in sbt 2?
 
-sbt 2 is a new version of sbt. If you're familiar with sbt 1.x, hopefully the jump is not too far, but we have pushed sbt to the modern standard. The headline features are:
+sbt 2 is a new major version of sbt. If you're familiar with sbt 1.x, hopefully the jump is not too far, but we have pushed sbt to a more modern standard. The headline features are:
 
 - sbt 2.x uses Scala 3.x for build definitions and plugins (Both sbt 1.x and 2.x are capable of building Scala 2.x and 3.x)
 - Embraces a simpler build.sbt via common settings
