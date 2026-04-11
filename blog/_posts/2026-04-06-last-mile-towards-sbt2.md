@@ -18,7 +18,7 @@ We'll discuss the plan in this post. But let's go over the status first.
 
 sbt 2 is a new major version of sbt. If you're familiar with sbt 1.x, hopefully the jump is not too far, but we have pushed sbt to a more modern standard. The headline features are:
 
-- sbt 2.x uses Scala 3.x for build definitions and plugins (Both sbt 1.x and 2.x are capable of building Scala 2.x and 3.x)
+- sbt 2.x uses Scala 3.x (rather than Scala 2.12) for build definitions and plugins (Both sbt 1.x and 2.x are capable of building Scala 2.x and 3.x)
 - Embraces a simpler build.sbt via common settings
 - `test` changed to an incremental test
 - Local and remote cache system that is Bazel-compatible
