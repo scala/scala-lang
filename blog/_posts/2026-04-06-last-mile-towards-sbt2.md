@@ -50,7 +50,7 @@ Documentation has been reorganized and partly rewritten as [The book of sbt](htt
 - On March 26, we released [sbt 2.0.0-RC10](https://eed3si9n.com/sbt-2.0.0-RC10), kicking off the last mile process.
 - On April 7, we released [sbt 2.0.0-RC11](https://eed3si9n.com/sbt-2.0.0-RC11).
 
-**Next steps**: Please try using [the lastest RC](https://github.com/sbt/sbt/releases) on your projects, and check out the newly updated documentation. If you find bugs or missing documentation, please let us know by creating [an issue on GitHub](https://github.com/sbt/sbt/issues).
+**Next steps**: Please try using [the latest RC](https://github.com/sbt/sbt/releases) on your projects, and check out the newly updated documentation. If you find bugs or missing documentation, please let us know by creating [an issue on GitHub](https://github.com/sbt/sbt/issues).
 
 We will likely release a few more release candidates, but if no critical bugs are found, we will graduate one of them to the final release. So when is sbt 2 coming out? Depending on the bugs we discover, I think it would be in the order of `n * 2` weeks, where `n` is 2, 3, 4...
 
