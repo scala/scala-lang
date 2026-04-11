@@ -48,7 +48,7 @@ Documentation has been reorganized and partly rewritten as [The book of sbt](htt
 
 - We have now created the `2.0.x` branch, so by default, all pull requests will target sbt 2.1. Only the critical bug fixes will be backported to the `2.0.x` branch.
 - On March 26, we released [sbt 2.0.0-RC10](https://eed3si9n.com/sbt-2.0.0-RC10), kicking off the last mile process.
-- On April 7, we relesed [sbt 2.0.0-RC11](https://eed3si9n.com/sbt-2.0.0-RC11).
+- On April 7, we released [sbt 2.0.0-RC11](https://eed3si9n.com/sbt-2.0.0-RC11).
 
 **Next steps**: Please try using [the lastest RC](https://github.com/sbt/sbt/releases) on your projects, and check out the newly updated documentation. If you find bugs or missing documentation, please let us know by creating [an issue on GitHub](https://github.com/sbt/sbt/issues).
 
