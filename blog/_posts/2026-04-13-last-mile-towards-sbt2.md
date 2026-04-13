@@ -42,7 +42,7 @@ Under the sbt 2 workstream, Anatolii from Scala Center has created [the sbt2-com
 | Play | `3.1.0-M9` | ⚠️ | Pending scripted tests. |
 | Scala.JS     | n/a |  n/a  | Pending [scala-js#5314](https://github.com/scala-js/scala-js/pull/5314) |
 
-Independently, Play and Scala Native projects have been working towards sbt 2.x support as well.
+Independently, the Play and Scala Native projects have been working towards sbt 2.x support as well.
 
 ## Tooling support and documentation
 
