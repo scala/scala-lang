@@ -3,7 +3,6 @@ layout: blog-detail
 post-type: blog
 by: Eugene Yokota
 title: "Last mile towards sbt 2"
-published: true
 ---
 
 > This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [sbt 2 Stable Release and Maintenance](https://contributors.scala-lang.org/t/sbt-2-production-ready-roadmap/7351). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
