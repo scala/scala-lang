@@ -35,7 +35,14 @@ Thanks to the community effort, we already have [60+ plugins](https://www.scala-
 
 Under the sbt 2 workstream, Anatolii from Scala Center has created [the sbt2-compat plugin](/blog/2026/03/02/sbt2-compat.html), which bridges the source-level differences between sbt 1.x and 2.x. This allows cross-building of a plugin, aiding the migration process. Also under the STA workstream, Rikito Taniguchi from VirtusLab has created a pull request to [cross build Scala.JS plugin to sbt 2.x (scala-js#5314)](https://github.com/scala-js/scala-js/pull/5314).
 
-Independently, Play (see [playframework#13319](https://github.com/playframework/playframework/issues/13319)) and Scala Native (see [scala-native#4768](https://github.com/scala-native/scala-native/pull/4768)) projects have been working towards sbt 2.x support as well.
+|       Plugin | Version | Published | Notes |
+|-------------:|--------:|:---------:|--------:|
+| Scala Native | `0.5.11` |     ✅     |  |
+| sbt-assembly | `2.3.1` |     ✅     |  |
+| Play | `3.1.0-M9` | ⚠️ | Pending scripted tests. |
+| Scala.JS     | n/a |  n/a  | Pending [scala-js#5314](https://github.com/scala-js/scala-js/pull/5314) |
+
+Independently, Play and Scala Native projects have been working towards sbt 2.x support as well.
 
 ## Tooling support and documentation
 
@@ -45,13 +52,14 @@ Documentation has been reorganized and partly rewritten as [The book of sbt](htt
 
 ## Locking down to 2.0.x branch
 
-- We have now created the `2.0.x` branch, so by default, all pull requests will target sbt 2.1. Only the critical bug fixes will be backported to the `2.0.x` branch.
+We have now created the `2.0.x` branch, so by default, all pull requests will target sbt 2.1. Only the critical bug fixes will be backported to the `2.0.x` branch.
+
 - On March 26, we released [sbt 2.0.0-RC10](https://eed3si9n.com/sbt-2.0.0-RC10), kicking off the last mile process.
 - On April 7, we released [sbt 2.0.0-RC11](https://eed3si9n.com/sbt-2.0.0-RC11).
 
 **Next steps**: Please try using [the latest RC](https://github.com/sbt/sbt/releases) on your projects, and check out the newly updated documentation. If you find bugs or missing documentation, please let us know by creating [an issue on GitHub](https://github.com/sbt/sbt/issues).
 
-We will likely release a few more release candidates, but if no critical bugs are found, we will graduate one of them to the final release. So when is sbt 2 coming out? Depending on the bugs we discover, I think it would be in the order of `n * 2` weeks, where `n` is 2, 3, 4...
+We will likely release a few more release candidates, but if no critical bugs are found, we will graduate one of them to the final release. So when is sbt 2 coming out? Depending on the bugs we discover, we are hopeful that it can happen in a few weeks to a few months.
 
 ## Participation
 
