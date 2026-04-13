@@ -21,7 +21,7 @@ sbt 2 is a new major version of sbt. If you're familiar with sbt 1.x, hopefully 
 - Embraces a simpler build.sbt via common settings
 - `test` changed to an incremental test
 - Local and remote cache system that is Bazel-compatible
-- Uses sbtn (native-image client) for shell
+- Uses sbtn (native-image client) for faster startup
 - Project matrix that can cross build subprojects in parallel
 
 <br>
