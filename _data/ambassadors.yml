@@ -11,7 +11,7 @@
 #   bluesky: scala-lang
 #   twitter: scala_lang
 #   github: scala
-#   linkedin: https://www.linkedin.com/in/janedoe/
+#   linkedin: https://www.linkedin.com/in/janedoe
 #   mastodon: https://fosstodon.org/@janedoe
 #   meetup: https://www.meetup.com/your/url/here
 
@@ -30,7 +30,7 @@
   city: Lausanne, Switzerland
   discord: darjutak
   github: darjutak
-  linkedin: https://www.linkedin.com/in/darjajovanovic/
+  linkedin: https://www.linkedin.com/in/darjajovanovic
 
 - name: Salar Rahmanian
   description: Scala developer and enthusiast. I <a href="https://lu.ma/scala">organize Scala events</a> around San Francisco Bay Area, California. I am also the creator of <a href="https://www.scalanews.net">Scala News</a>.
@@ -38,7 +38,7 @@
   city: San Francisco Bay Area, California, USA
   discord: softinio
   github: softinio
-  linkedin: https://www.linkedin.com/in/salarrahmanian/
+  linkedin: https://www.linkedin.com/in/salarrahmanian
   twitter: SalarRahmanian
   mastodon: https://social.softinio.com/@softinio
 
@@ -56,7 +56,7 @@
   discord: SethTisue
   github: SethTisue
   mastodon: https://fosstodon.org/@SethTisue
-  linkedin: https://www.linkedin.com/in/sethtisue/
+  linkedin: https://www.linkedin.com/in/sethtisue
 
 - name: Daniel Ciocîrlan
   description: Scala developer and instructor. Creator of <a href="https://rockthejvm.com">Rock the JVM</a>, an online learning platform dedicated to training software engineers on Scala and all major libraries and tools in the Scala ecosystem.
@@ -65,16 +65,16 @@
   discord: danielciocirlan
   github: rockthejvm
   twitter: rockthejvm
-  linkedin: https://linkedin.com/in/danielciocirlan/
+  linkedin: https://linkedin.com/in/danielciocirlan
 
 - name: Łukasz Sowa
   description: Managing partner @ Iterators, organizer of ScalaWAW meetup, programme committee member of several Scala-related conferences, Scala open source contributor.
-  image: https://www.luksow.com/assets/img/me.jpg
+  image: https://luksow.com/photo.jpg
   city: Warsaw, Poland
   discord: luksow
   twitter: luksow
   github: luksow
-  linkedin: https://www.linkedin.com/in/luksow/
+  linkedin: https://www.linkedin.com/in/luksow
   mastodon: https://fosstodon.org/@luksow
   meetup: https://www.meetup.com/ScalaWAW/
 
@@ -84,7 +84,7 @@
   city: Warsaw, Poland
   discord: gedochao
   github: Gedochao
-  linkedin: https://www.linkedin.com/in/piotr-ch/
+  linkedin: https://www.linkedin.com/in/piotr-ch
 
 - name: Zainab Ali
   description: London Scala User Group organizer, conference speaker, open source contributor and maintainer
@@ -92,7 +92,7 @@
   city: London, England
   discord: zainabali
   github: zainab-ali
-  linkedin: https://www.linkedin.com/in/zainab-ali-fp/
+  linkedin: https://www.linkedin.com/in/zainab-ali-fp
 
 - name: Paweł Marks
   description: Coordinator in Scala Org, Scala 3 Release Officer. Enthusiastic about spreading love for Scala.
@@ -101,7 +101,7 @@
   discord: kordyjan
   github: Kordyjan
   twitter: Kordyjan
-  linkedin: https://www.linkedin.com/in/pawel-marks/
+  linkedin: https://www.linkedin.com/in/pawel-marks
 
 - name: Maciej Gorywoda
   description: Product Marketing Manager at JetBrains, IntelliJ Scala team. Runs <a href="https://www.youtube.com/@makingthematrix/videos">an educational Scala YouTube channel</a>.
@@ -110,7 +110,7 @@
   discord: makingthematrix
   twitter: makingthematrix
   github: makingthematrix
-  linkedin: https://www.linkedin.com/in/mgorywoda/
+  linkedin: https://www.linkedin.com/in/mgorywoda
 
 - name: Lucas Nouguier
   description: Master's student in Computer Science at Polytech Montpellier & Software Engineer Assistant at Teads. Also part of the ScalaIO org.
@@ -119,14 +119,14 @@
   discord: iusildra
   twitter: LucasNouguier
   github: iusildra
-  linkedin: https://www.linkedin.com/in/lucas-nouguier/
+  linkedin: https://www.linkedin.com/in/lucas-nouguier
 
 - name: Monica McGuigan
   description: Conference speaker, data engineering, functional programmer at JPMorgan.
   image: /ambassadors/monica.jpg
   city: London, England
   discord: monmcguigan
-  linkedin: https://www.linkedin.com/in/monica-mcguigan/
+  linkedin: https://www.linkedin.com/in/monica-mcguigan
 
 - name: Jakub Kozłowski
   description: Open-source contributor and maintainer, conference speaker and <a href="https://www.youtube.com/@kubukoz">small-time YouTuber</a>.
@@ -136,14 +136,14 @@
   github: kubukoz
   twitter: kubukoz
   mastodon: https://mstdn.party/@kubukoz
-  linkedin: https://www.linkedin.com/in/%F0%9F%91%BE-jakub-koz%C5%82owski-5ab49542/
+  linkedin: https://www.linkedin.com/in/%F0%9F%91%BE-jakub-koz%C5%82owski-5ab49542
 
 - name: Anatolii Kmetiuk
   description: Scala Center graduate, enthusiastic about getting newcomers passionate about Scala and pointing them in the right direction.
   image: https://github.com/anatoliykmetyuk.png
   city: Tokyo, Japan
   email: anatoliykmetyuk@gmail.com
-  linkedin: https://www.linkedin.com/in/akmetiuk/
+  linkedin: https://www.linkedin.com/in/akmetiuk
 
 - name: Nicolas Rinaudo
   description: Enjoys functional programming in statically typed programming languages
@@ -151,7 +151,7 @@
   city: Fontainebleau, France
   twitter: NicolasRinaudo
   github: nrinaudo
-  linkedin: https://www.linkedin.com/in/nicolasrinaudo/
+  linkedin: https://www.linkedin.com/in/nicolasrinaudo
   mastodon: https://functional.cafe/@NicolasRinaudo
 
 - name: Rikito Taniguchi
