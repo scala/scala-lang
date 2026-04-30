@@ -1,6 +1,6 @@
 ---
 optionId: js-dom-api
-scastieLink: 'https://scastie.scala-lang.org/CQ70LFpbRJuWEDfGxbuYeQ'
+scastieLink: 'https://scastie.scala-lang.org/8i8u5uafRsuqDIsMuTsarQ'
 codeTitle: 'Target the Web with Scala.js on the frontend'
 description: "Share code full-stack, interact with the DOM or use any JS library."
 ---

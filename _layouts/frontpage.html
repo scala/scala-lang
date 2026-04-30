@@ -4,6 +4,8 @@
 {% include headertop.html %}
 {% include headerbottom.html %}
 
+{% include scala-days-countdown.html %}
+
 <div class="navigation-fade-screen"></div>
 <!-- Header -->
   <header id="site-header" class="header-home">
@@ -16,8 +18,7 @@
         </p>
         <span class="hide"><i class="fa fa-close"></i></span>
       </div>
-      {% include scala-days-countdown.html %}
-      {% include scala-days-sponsors.html %}
+      <!-- Include the following file here to enable the Scala Days sponsors banners: scala-days-sponsors.html -->
       <div class="wrap">
         <!-- Navigation -->
         <nav class="navigation" role="menu">
@@ -69,7 +70,7 @@
                   Latest Release: {{ scala_next_release.version }}
                 </a>
                 <a href="/download/{{ scala_lts_release.version }}.html" class="button">
-                  LTS Release: {{ scala_lts_release.version }}
+                  Latest LTS Release: {{ scala_lts_release.version }}
                 </a>
               </div>
             </div>
@@ -125,7 +126,6 @@
       </div>
     </div>
   </header>
-
 
 <main id="site-main">
 

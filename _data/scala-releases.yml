@@ -1,19 +1,19 @@
 - category: current_version
-  title: Current 3.7.x release
-  version: 3.7.2
-  release_date: August 1, 2025
+  title: Current 3.8.x release
+  version: 3.8.3
+  release_date: March 31, 2026
 - category: current_version
   title: Current 3.3.x LTS release
-  version: 3.3.6
-  release_date: May 8, 2025
+  version: 3.3.7
+  release_date: October 13, 2025
 - category: current_version
   title: Current 2.13.x release
-  version: 2.13.16
-  release_date: January 15, 2025
+  version: 2.13.18
+  release_date: November 24, 2025
 - category: maintenance_version
   title: Latest 2.12.x maintenance release
-  version: 2.12.20
-  release_date: September 4, 2024
+  version: 2.12.21
+  release_date: December 11, 2025
 - category: maintenance_version
   title: Last 2.11.x maintenance release
   version: 2.11.12

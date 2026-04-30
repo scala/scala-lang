@@ -50,7 +50,7 @@
   twitter: RomanowskiKr
 
 - name: Seth Tisue
-  description: Scala Discord moderator, Scala 2 compiler team member (at <a href="https://akka.io">Akka</a>). Also work on Scala 3, Scala websites, more. Based in Reno, but visit SF Bay Area often.
+  description: Scala Core Team member, Scala Center contractor, main Scala Discord moderator. In Reno, but available for travel to SF Bay Area.
   image: /ambassadors/seth.jpg
   city: Reno, Nevada, USA
   discord: SethTisue
@@ -128,15 +128,6 @@
   discord: monmcguigan
   linkedin: https://www.linkedin.com/in/monica-mcguigan
 
-- name: Jonathan Winandy
-  description: Data Engineering Manager, Org at Scala.IO, Scala-FR discord admin
-  image: /ambassadors/jonathanw.jpeg
-  city: Nantes, France
-  discord: ahoyjon
-  twitter: ahoy_jon
-  github: ahoy-jon
-  linkedin: https://www.linkedin.com/in/jwinandy
-
 - name: Jakub Kozłowski
   description: Open-source contributor and maintainer, conference speaker and <a href="https://www.youtube.com/@kubukoz">small-time YouTuber</a>.
   image: https://github.com/kubukoz.png
@@ -170,3 +161,25 @@
   discord: tanishiking
   github: tanishiking
   twitter: tanishiking25
+
+- name: Arman Bilge
+  pronouns: he/him
+  description: Open source mentor, maintainer of <a href="https://typelevel.org/">Typelevel</a> libraries, and Executive Director of the <a href="https://typelevel.org/foundation/">Typelevel Foundation</a>. Friendly! 👋😊
+  image: https://typelevel.org/img/authors/arman.jpg
+  city: Seattle & Berkeley, USA
+  email: arman@typelevel.org
+  discord: armanbilge
+  github: armanbilge
+  bluesky: armanbil.ge
+  mastodon: https://fosstodon.org/@armanbilge
+  linkedin: https://www.linkedin.com/in/armanbilge/
+
+- name: Antonio Jimenez
+  pronouns: he/him
+  description: Scala Engineer and Functional Programming enthusiast. Conference speaker, Summer of Code mentor, and <a href="https://typelevel.org/">Typelevel</a> contributor. Always happy to help! 🙂
+  image: /ambassadors/antonio.jpg
+  city: Lausanne, Switzerland
+  email: antonio.jimenez.nieto@gmail.com
+  discord: antonio.jimenez
+  github: antoniojimeneznieto
+  linkedin: https://www.linkedin.com/in/antonio-jimenez-75a893400/

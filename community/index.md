@@ -84,7 +84,7 @@ Scala-oriented Discord servers operated by the community include:
   Scala code from Smithy files.
 - **[indigo](https://discord.gg/b5CD47g)**: the Indigo, Scala 2D game engine
   based on functional programming
-- **[Scala Space](https://discord.gg/vcHsmEQx)**: Discord server for VirtusLab's
+- **[Scala Space](https://discord.gg/5qhe6Nf8tk)**: Discord server for VirtusLab's
   and Software Mill's open source projects
 - **[Business4s](https://bit.ly/business4s-discord)**: Scala community focused
   on product development and business
@@ -149,6 +149,7 @@ when they haven't had a Scala event in the last year.)
 #### North America
 
  - [Atlanta](https://www.meetup.com/atlanta-scala)
+ - [Boston](https://www.meetup.com/boston-area-scala-enthusiasts/)
  - [Dallas](https://www.meetup.com/dallas-scala-enthusiasts)
  - [San Francisco](http://www.meetup.com/SF-Scala/)
  - [SF Bay Area (Bay Area Scala)](https://lu.ma/scala)
@@ -283,7 +284,6 @@ Staying current:
 - [Scala.js](https://www.scala-js.org) compiles Scala code to JavaScript
 - [Scala Native](https://www.scala-native.org) compiles Scala code to LLVM for
   native execution
-- [Scala on Android](https://scala-android.org) community site
 
 The [Scala Discord](https://discord.com/invite/scala) has #scala-js, #scala-native, and #scala-android channels.
 

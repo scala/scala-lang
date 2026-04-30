@@ -89,13 +89,13 @@ listed above,
 
 * contact one of the moderators active on that channel if you can identify
   them, or
-* send an e-mail to [Scala-CoC@epfl.ch](mailto:Scala-CoC@epfl.ch), which
+* send an e-mail to [coc@scala-lang.org](mailto:coc@scala-lang.org), which
   forwards to general moderators at the Scala Center, or
 * send an e-mail to one of the following general moderators if you want to
   choose who you are talking to:
   * Seth Tisue, Scala Core Team ([seth@tisue.net](mailto:seth@tisue.net))
   * Lukas Rytz, Akka ([lukas.rytz@akka.io](mailto:lukas.rytz@akka.io))
-  * Sébastien Doeraene, Scala Center ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
+  * Sébastien Doeraene, EPFL ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
   * Tomasz Godzik, VirtusLab ([tgodzik@virtuslab.com](mailto:tgodzik@virtuslab.com))
 
 ### Examples of unacceptable behavior
