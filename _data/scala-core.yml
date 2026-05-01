@@ -5,7 +5,7 @@
 #   email: scala.center@epfl.ch
 #   twitter: scala_lang
 #   github: scala
-#   linkedin: https://www.linkedin.com/in/janedoe/
+#   linkedin: https://www.linkedin.com/in/janedoe
 #   mastodon: https://fosstodon.org/@janedoe
 
 - name: Martin Odersky
@@ -14,7 +14,7 @@
   city: Lausanne, Switzerland
   github: odersky
   twitter: odersky
-  linkedin: https://www.linkedin.com/in/odersky/
+  linkedin: https://www.linkedin.com/in/odersky
   org: EPFL
 
 - name: Oliver Bračevac
@@ -22,7 +22,7 @@
   image: /scala-core/oliver-bracevac.jpeg
   city: Lausanne, Switzerland
   github: bracevac
-  linkedin: https://www.linkedin.com/in/oliverbracevac2407/
+  linkedin: https://www.linkedin.com/in/oliverbracevac2407
   org: EPFL
 
 - name: Piotr Chabelski
@@ -31,7 +31,7 @@
   city: Warsaw, Poland
   discord: gedochao
   github: Gedochao
-  linkedin: https://www.linkedin.com/in/piotr-ch/
+  linkedin: https://www.linkedin.com/in/piotr-ch
   org: VirtusLab
 
 - name: Sébastien Doeraene
@@ -49,7 +49,7 @@
   city: Bern, Switzerland
   discord: lrytz
   github: lrytz
-  linkedin: https://www.linkedin.com/in/lukas-rytz-a33267b6/
+  linkedin: https://www.linkedin.com/in/lukas-rytz-a33267b6
   org: Akka
 
 - name: Tomasz Godzik
@@ -60,7 +60,7 @@
   github: tgodzik
   twitter: TomekGodzik
   mastodon: https://fosstodon.org/@tgodzik
-  linkedin: https://www.linkedin.com/in/tomasz-godzik-53300782/
+  linkedin: https://www.linkedin.com/in/tomasz-godzik-53300782
   org: VirtusLab
 
 - name: Wojciech Mazur
@@ -70,7 +70,7 @@
   discord: wmazur
   github: WojciechMazur
   twitter: WojciechM_dev
-  linkedin: https://www.linkedin.com/in/wojciech-mazur-3970a8121/
+  linkedin: https://www.linkedin.com/in/wojciech-mazur-3970a8121
   org: VirtusLab
 
 - name: Seth Tisue
@@ -80,5 +80,5 @@
   discord: SethTisue
   github: SethTisue
   mastodon: https://fosstodon.org/@SethTisue
-  linkedin: https://www.linkedin.com/in/sethtisue/
+  linkedin: https://www.linkedin.com/in/sethtisue
   org: independent
