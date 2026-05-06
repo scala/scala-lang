@@ -49,63 +49,30 @@ includeTOC: false
     <br/>
     <h3 style="text-align: center;">Ambassadors</h3>
     <p>
-      We are in the process of onboarding additional Ambassadors. Expect this list to grow considerably in the coming weeks and months. See our <a href="https://scala-lang.org/blog/2024/03/28/ambassadors-initiative.html">blog post</a> for more on this.
+      We are in the process of onboarding additional Ambassadors. Expect this list to grow. See our <a href="https://scala-lang.org/blog/2024/03/28/ambassadors-initiative.html">blog post</a> for more on this.
     </p>
+    <h3 style="text-align: center;">Europe</h3>
     <div class="ambassadors">
       {% for ambassador in site.data.ambassadors %}
-        <div class="ambassador-item">
-            <img src="{{ambassador.image}}" alt="{{ambassador.name}}" class="ambassador-image" style="width: 100px; height: 100px; display: inline;">
-          <p class="ambassador-name">
-            <b>{{ambassador.name}}</b>
-            {% if ambassador.pronouns %}
-              <small>{{ambassador.pronouns}}</small>
-            {% endif %}
-          </p>
-          <p class="ambassador-city">
-            <i class="fa-solid fa-location-dot"></i> {{ambassador.city}}
-            {% if ambassador.discord %}
-            <br><i class="fa-brands fa-discord"></i> {{ambassador.discord}}
-            {% endif %}
-          </p>
-          <p class="ambassador-contact">
-            {% if ambassador.email %}
-              <a href="mailto:{{ambassador.email}}">
-                <i class="fa-regular fa-envelope"></i>
-              </a>
-            {% endif %}
-            {% if ambassador.twitter %}
-              <a href="https://twitter.com/{{ambassador.twitter}}" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-            {% endif %}
-            {% if ambassador.mastodon %}
-              <a href="{{ambassador.mastodon}}" target="_blank">
-                <i class="fa-brands fa-mastodon"></i>
-              </a>
-            {% endif %}
-            {% if ambassador.bluesky %}
-              <a href="https://bsky.app/profile/{{ambassador.bluesky}}" target="_blank">
-                <i class="fa-brands fa-bluesky"></i>
-              </a>
-            {% endif %}
-            {% if ambassador.github %}
-              <a href="https://github.com/{{ambassador.github}}" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            {% endif %}
-            {% if ambassador.linkedin %}
-              <a href="{{ambassador.linkedin}}" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            {% endif %}
-            {% if ambassador.meetup %}
-              <a href="{{ambassador.meetup}}" target="_blank">
-                <i class="fa-brands fa-meetup"></i>
-              </a>
-            {% endif %}
-          </p>
-          <p class="ambassador-description">{{ambassador.description}}</p>
-        </div>
+        {% if ambassador.continent == 'Europe' %}
+          {% include ambassador.html %}
+        {% endif %}
+      {% endfor %}
+    </div class="ambassadors">
+    <h3 style="text-align: center;">North America</h3>
+    <div class="ambassadors">
+      {% for ambassador in site.data.ambassadors %}
+        {% if ambassador.continent == 'North America' %}
+          {% include ambassador.html %}
+        {% endif %}
+      {% endfor %}
+    </div class="ambassadors">
+    <h3 style="text-align: center;">Asia</h3>
+    <div class="ambassadors">
+      {% for ambassador in site.data.ambassadors %}
+        {% if ambassador.continent == 'Asia' %}
+          {% include ambassador.html %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>
