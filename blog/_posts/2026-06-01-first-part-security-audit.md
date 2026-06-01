@@ -10,9 +10,11 @@ description: The first part of the security audit funded by the Sovereign Tech F
 
 The Scala Center is proud to share the first results of the security audit of Scala carried out in collaboration with [Open Source Technology Improvement Fund](https://ostif.org/) and the security researchers at [Quarkslab](https://github.com/scala/scala-lang/blob/ddfc6996a8a1c66cc891261f57684a41ec5268b6/blog/_posts/2026-06-01-first-part-security-audit.md). The audit was divided into two major parts: an assessment of the Scala 3 compiler and Scala standard library codebases, and a separate review of Scala's supply-chain security.
 
-This first publication focuses on the compiler and standard library audit. Since many reported security issues in Scala ecosystems involve the standard library, the audit aimed to strengthen the security and robustness of Scala's core components through a combination of manual code review and automated tooling, including fuzzing and Java deserialization gadget finders.
+This [first publication](https://ostif.org/wp-content/uploads/2026/05/26-01-2527-REP-scala-security-audit-V1.0.pdf) focuses on the compiler and standard library audit. Since many reported security issues in Scala ecosystems involve the standard library, the audit aimed to strengthen the security and robustness of Scala's core components through a combination of manual code review and automated tooling, including fuzzing and Java deserialization gadget finders.
 
 ## Results
+
+Read the full report [here](https://ostif.org/wp-content/uploads/2026/05/26-01-2527-REP-scala-security-audit-V1.0.pdf).
 
 No critical or major security issues were identified during the audit. However, the review uncovered 5 medium severity issues, 1 low severity issue, and 2 informational findings, all of which have since been addressed by the Scala maintainers. All of these issues are fixed as of the date of this blog post, both for the 3.3 LTS branch and for the main 3.8 branch. 
 
