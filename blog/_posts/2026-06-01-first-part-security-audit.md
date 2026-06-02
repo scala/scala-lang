@@ -1,7 +1,7 @@
 ---  
 layout: blog-detail  
 post-type: blog  
-By: Darja Jovanovic, Solal Pirelli, Scala Center  
+by: Darja Jovanovic, Solal Pirelli, Scala Center
 title: Scala Codebase Security Audit Complete  
 description: The first part of the security audit funded by the Sovereign Tech Fund is done, no critical issues were found.  
 ---
