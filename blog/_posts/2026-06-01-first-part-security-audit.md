@@ -22,7 +22,7 @@ Importantly, these issues do not affect typical users compiling Scala code local
 
 ## Fixes
 
-All reported issues were fixed before the publication of this blog post, both in the Scala 3.3 LTS branch and in the main Scala 3.8 development branch.
+All reported issues were present in 3.8-RC1 and fixed before the publication of this blog post, both in the Scala 3.3 LTS branch and in the main Scala 3.8 development branch.
 
 One example was a medium severity issue in [the compiler's handling of TASTy files](https://github.com/scala/scala3/pull/25676). The compiler did not validate that certain offsets were nonnegative, which could lead to an infinite loop when processing a maliciously crafted TASTy file containing unexpected negative offsets. The fix introduced additional validation not only for this specific case, but more generally for parsing variable-length TASTy integers, helping prevent similar classes of issues in the future.
 
@@ -30,15 +30,15 @@ One example was a medium severity issue in [the compiler's handling of TASTy fil
 
 | Severity | Description | Perimeter | Fixes |
 | :---- | :---- | :---- | :---- |
-| Medium | `scala.sys.Process.ProcessBuilderImpl.AbstractFunction0` may be used as a deserialization gadget | Scala standard library (Scala 3.8-RC1) | [https://github.com/scala/scala3/pull/25679](https://github.com/scala/scala3/pull/25679) |
-| Medium | Stored XSS vulnerability in Scaladoc | Scala Scaladoc (Scala 3.8-RC1) | [https://github.com/scala/scala3/pull/25681](https://github.com/scala/scala3/pull/25681) |
-| Medium | Unexpected return value in `scala.collection.SeqOps.indexOfSlice` on empty sequences | Scala standard library (Scala 3.8-RC1) | Invalid, Scala behaves the same as other languages here. |
-| Medium | Uncaught `ParseException` in `scala.sys.process.Parser.tokenize` on unmatched quotes | Scala standard library (Scala 3.8-RC1) | [https://github.com/scala/scala3/pull/25675](https://github.com/scala/scala3/pull/25675) |
-| Medium | Infinite loop during section loading in `dotty.tools.dotc.core.tasty.TastyUnpickler` | Scala 3 compiler (Scala 3.8-RC1) | [https://github.com/scala/scala3/pull/25676](https://github.com/scala/scala3/pull/25676) |
-| Low | Potential command injection in GitHub Action CI/CD scripts | Scala GitHub Action workflows (Scala 3.8-RC1) | [https://github.com/scala/scala3/pull/25677](https://github.com/scala/scala3/pull/25677) |
-| Low | Scala Java-produced bytecode could lead to conflicts because the compiler does not check for conflicts between generated and user-defined methods | Scala 3 compiler (Scala 3.8-RC1) | Acceptable, no evidence it leads to any security issue. |
-| Informational | Use of a non-cryptographically secure random number generator | Scala 3 compiler (Scala 3.8-RC1) | [https://github.com/scala/scala3/pull/25660](https://github.com/scala/scala3/pull/25660) |
-| Informational | `TastyPrinter` silently skips `.tasty` files in subdirectories of a `.jar` | `scalac -print-tasty` (Scala 3.8-RC1) | [https://github.com/scala/scala3/pull/26082](https://github.com/scala/scala3/pull/26082) |
+| Medium | `scala.sys.Process.ProcessBuilderImpl.AbstractFunction0` may be used as a deserialization gadget | Standard library | [https://github.com/scala/scala3/pull/25679](https://github.com/scala/scala3/pull/25679) |
+| Medium | Stored XSS vulnerability | Scaladoc (Scala 3.8-RC1) | [Issue 25681](https://github.com/scala/scala3/pull/25681) |
+| Medium | Unexpected return value in `scala.collection.SeqOps.indexOfSlice` on empty sequences | Standard library | Invalid, Scala behaves the same as other languages here. |
+| Medium | Uncaught `ParseException` in `scala.sys.process.Parser.tokenize` on unmatched quotes | Standard library | [Issue 25675](https://github.com/scala/scala3/pull/25675) |
+| Medium | Infinite loop during section loading in `dotty.tools.dotc.core.tasty.TastyUnpickler` | Compiler | [Issue 25676](https://github.com/scala/scala3/pull/25676) |
+| Low | Potential command injection in GitHub Action CI/CD scripts | GitHub Action workflows | [Issue 25677](https://github.com/scala/scala3/pull/25677) |
+| Low | Scala JVM bytecode could lead to conflicts between generated and user-defined methods | Compiler | Acceptable, no evidence it leads to any security issue. |
+| Info | Use of a non-cryptographically secure random number generator | Compiler | [Issue 25660](https://github.com/scala/scala3/pull/25660) |
+| Info | `TastyPrinter` silently skips `.tasty` files in subdirectories of a `.jar` | `scalac -print-tasty` | [Issue 26082](https://github.com/scala/scala3/pull/26082) |
 
 ## How to report future security issues
 
