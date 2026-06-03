@@ -30,7 +30,7 @@ One example was a medium severity issue in [the compiler's handling of TASTy fil
 
 | Severity | Description | Perimeter | Fixes |
 | :---- | :---- | :---- | :---- |
-| Medium | `scala.sys.Process.ProcessBuilderImpl.AbstractFunction0` may be used as a deserialization gadget | Standard library | [https://github.com/scala/scala3/pull/25679](https://github.com/scala/scala3/pull/25679) |
+| Medium | `scala.sys.Process.ProcessBuilderImpl.AbstractFunction0` may be used as a deserialization gadget | Standard library | [Issue 25679](https://github.com/scala/scala3/pull/25679) |
 | Medium | Stored XSS vulnerability | Scaladoc (Scala 3.8-RC1) | [Issue 25681](https://github.com/scala/scala3/pull/25681) |
 | Medium | Unexpected return value in `scala.collection.SeqOps.indexOfSlice` on empty sequences | Standard library | Invalid, Scala behaves the same as other languages here. |
 | Medium | Uncaught `ParseException` in `scala.sys.process.Parser.tokenize` on unmatched quotes | Standard library | [Issue 25675](https://github.com/scala/scala3/pull/25675) |
