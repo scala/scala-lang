@@ -3,7 +3,7 @@ layout: blog-detail
 post-type: blog
 by: Seth Tisue, Scala Core Team
 title: Improving Scala's docs and website
-description: Here are our plans for improving Scala's documentation and website, based on community feedback.
+description: Our plans for improving Scala's documentation and website, based on community feedback.
 ---
 
 > This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
