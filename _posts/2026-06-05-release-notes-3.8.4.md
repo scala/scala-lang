@@ -5,8 +5,6 @@ title: "Scala 3.8.4 is now available!"
 by: Wojciech Mazur, VirtusLab
 ---
 
-# Scala 3.8.4 is now available!
-
 ## Release highlights
 
 ### Security audit fixes
