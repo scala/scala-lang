@@ -18,7 +18,45 @@ Scala 3.8.4 includes improvements and fixes for issues discovered during the [Sc
 
 ### `:help` syntax for all compiler settings ([#26052](https://github.com/scala/scala3/pull/26052))
 
-You can now use `:help` in the REPL and other contexts to get documentation for any compiler setting, not just a fixed subset. This makes it easier to discover and understand available options without leaving your workflow.
+You can now append `:help` to any compiler setting to see its documentation—not just a fixed subset as before. This works wherever you pass compiler options, making it easier to discover available flags without leaving your workflow.
+
+With the Scala runner, add `:help` to a flag on the command line when running a script or project:
+
+```
+> scala test.scala -Xkind-projector:help
+-Xkind-projector  Allow `*` as type lambda placeholder to be compatible with
+                  kind projector. When invoked as -Xkind-projector:underscores
+                  will repurpose `_` to be a type parameter placeholder, this
+                  will disable usage of underscore as a wildcard.
+                  Default disable
+                  Choices: disable, , underscores
+```
+
+In the REPL, pass the same flag through `:settings`:
+
+```
+scala> :settings -Wunused:help
+-Wunused  Enable or disable specific `unused` warnings
+          Choices:
+          - nowarn,
+          - all,
+          - imports :
+                Warn if an import selector is not referenced.,
+          - privates :
+                Warn if a private member is unused,
+          - locals :
+                Warn if a local definition is unused,
+          - explicits :
+                Warn if an explicit parameter is unused,
+          - implicits :
+                Warn if an implicit parameter is unused,
+          - params :
+                Enable -Wunused:explicits,implicits,
+          - patvars :
+                Warn if a variable bound in a pattern is unused,
+          - linted :
+                Enable -Wunused:imports,privates,locals,implicits
+```
 
 ### Upgrade to Scala CLI 1.14.0
 
