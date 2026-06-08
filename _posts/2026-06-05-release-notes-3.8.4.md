@@ -18,7 +18,7 @@ Scala 3.8.4 includes improvements and fixes for issues discovered during the [Sc
 
 ### `:help` syntax for all compiler settings ([#26052](https://github.com/scala/scala3/pull/26052))
 
-You can now append `:help` to any compiler setting to see its documentation—not just a fixed subset as before. This works wherever you pass compiler options, making it easier to discover available flags without leaving your workflow.
+You can now append `:help` to any compiler setting to see its documentation — not just a fixed subset as before. This works wherever you pass compiler options, making it easier to discover available flags without leaving your workflow.
 
 With the Scala runner, add `:help` to a flag on the command line when running a script or project:
 
