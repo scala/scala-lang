@@ -63,7 +63,7 @@ F.1/F.2/F.3 are for class-level documentation, F.5 for the methods within those 
 
 Work on **improving our API documentation** (Scaladoc) is already well underway. A series of PRs has already been merged and others are in the pipeline. These PRs were created with the help of AI-based tooling developed by Bill Venners and Chua Chee Seng. The process of doing this work with AI assistance will be documented, and the results described, in a future blog post by Bill.
 
-Thanks to work done by the Scala 3 compiler team, the infrastructure is now in place for **compiler checking of code samples** in the standard library Scaladoc and Scala 3 language. Many of the already-merged PRs take advantage of this new checking capability.
+Thanks to work done by Oliver Bračevac (from the Scala 3 compiler team), the infrastructure is now in place for **compiler checking of code samples** in the standard library Scaladoc and Scala 3 language. Many of the already-merged PRs take advantage of this new checking capability.
 
 The goals of the API doc work are:
 
