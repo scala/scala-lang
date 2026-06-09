@@ -67,12 +67,12 @@ Thanks to work done by the Scala 3 compiler team, the infrastructure is now in p
 
 The goals of the API doc work are:
 
-* Ensure all code samples in the documentation are checked by the compiler.
-* Ensure every class has at least basic class-level documentation.
-* Ensure every method has at least basic documentation.
-* Further improve and expand any especially important or especially low-quality documentation.
-* Strive for all documentation to include applied, practical examples.
-* Make sure method-level documentation meets minimum standards such as including `@param`, `@return`, and `@throws` annotations.
+* Ensure all code samples in the documentation are **checked by the compiler**.
+* Ensure every class has at least **basic class-level documentation**.
+* Ensure every method has at least **basic method-level documentation**.
+* Make sure method-level documentation **meets minimum standards** such as including `@param`, `@return`, and `@throws` annotations.
+* Further **improve and expand** any especially important or especially low-quality documentation.
+* Strive for all documentation to include **applied, practical examples**.
 
 ## What else is planned?
 
