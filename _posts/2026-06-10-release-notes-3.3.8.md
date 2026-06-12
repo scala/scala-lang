@@ -24,7 +24,7 @@ compatibility, by testing over 1500 projects in the
   command is running ask for confirmation before exiting.
   [#24127](https://github.com/scala/scala3/pull/24127)
 - Numerous linting and presentation compiler improvements and fixes.
-- New '-YfutureLazyVals' options that allows to compile with new lazy val
+- New `-Yfuture-lazy-vals` options that allows to compile with new lazy val
   implementation compatible with all JDK 9+
   [#637](https://github.com/scala/scala3-lts/pull/637)
 
