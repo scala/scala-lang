@@ -153,3 +153,13 @@
   location:
     longitude: 7.16896
     latitude:  49.60773
+- institution: Warsaw University of Technology, Warsaw, Poland
+  name: Maciej Gorywoda
+  location:
+    longitude: 21.010556
+    latitude: 52.220278
+- institution: University of Warsaw, Warsaw, Poland
+  name: Maciej Gorywoda
+  location:
+    longitude: 21.019167
+    latitude: 52.240278
