@@ -12,7 +12,9 @@ One of the tasks funded under the STA project is to improve Scala's API document
 
 Quality writing requires iteration. You write a draft, review it (or have someone else review it), then improve it. You repeat this process until you're happy with the quality. One way to achieve quality with generative AI, therefore, is to delegate the writing part to the AI model and review it yourself, but this doesn't scale. An AI model can generate content at a much greater rate than you can review it. Because of this, we decided to use the ["LLM as a judge"](https://en.wikipedia.org/wiki/LLM-as-a-Judge) technique in an attempt to raise the quality of the output as high as possible prior to asking humans to review it.
 
-Another way we tried to raise the quality of the AI output prior to human review is to use _harnesses_ to orchestrate the AI work. First, we wrote a `todo-writer` application that reformatted doc comments for consistency and inserted text markers in the standard library source to precisely indicate where we wanted an AI to insert focused documentation. Then we created a script to drive the filling-in process. Finally, we attempted to keep the review tasks for humans to a reasonable size. The rest of this post describes five techniques that formed our overall approach.
+Another way we tried to raise the quality of the AI output prior to human review is to use _harnesses_ to orchestrate the AI work. First, we wrote a `todo-writer` application that reformatted doc comments for consistency and inserted text markers in the standard library source to precisely indicate where we wanted an AI to insert focused documentation. Then we created a script to drive the filling-in process. Finally, we attempted to keep the review tasks for humans to a reasonable size.
+
+The rest of this post describes five techniques that formed our overall approach.
 
 ## Technique 1: Push work onto deterministic code
 
