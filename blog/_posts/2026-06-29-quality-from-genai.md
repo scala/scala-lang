@@ -34,7 +34,7 @@ def updated[V1 >: V](key: K, value: V1): CC[K, V1]
 
 Each `TODO FILL IN` is one precise marker, which turned the AIs' job from the open-ended "find and improve the documentation" into the mechanical "replace this text with the right content." We could now focus the models on exactly those spots, with nothing about where to write or what needed writing left to their judgment.
 
-The principle underneath this technique is to use determinism wherever you can. Lean on a deterministic program for every part of the job that does not genuinely require judgment, and strip out any nondeterminism that is not essential. Every piece of the job you hand to deterministic code is a piece the AI cannot get wrong.
+The principle underneath this technique is to use determinism wherever you can. Lean on a deterministic program for every part of the job that does not genuinely require judgment, and strip out any nondeterminism that is not essential. _Every piece of the job you hand to deterministic code is a piece the AI cannot get wrong._
 
 ## Technique 2: Enforce a deterministic process
 
