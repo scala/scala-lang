@@ -16,7 +16,7 @@ Another way we tried to raise the quality of the AI output prior to human review
 
 ## Technique 1: Push work onto deterministic code
 
-The [first pull request](https://github.com/scala/scala3/pull/24754) we submitted, which made the style of existing documentation more consistent, was done simply by asking an AI model to find the and make the changes, and reviewing the results. This prompting technique worked fine given the scope of those changes.
+The [first pull request](https://github.com/scala/scala3/pull/24754) we submitted, which made the style of existing documentation more consistent, was done simply by asking an AI model to find and make the changes, and then reviewing the results. This prompting technique worked fine given the limited scope of those changes.
 
 Next, we wrote and ran a Scala application to convert wikidoc to markdown, the recommended markup language for Scala 3, and ran it across the entire standard library. We hoped this would make the documentation in the source code nicer for humans to work with. We also felt it would provide a more consistent canvas on which into ask AI models to fill in missing documentation. This resulted in our [second pull request](https://github.com/scala/scala3/pull/25113). The application we used was [`todo-writer`](https://github.com/artimahub/scala3/tree/feature-todo-writer/todo-writer), run with the `--migrate-markdown` command line argument.
 
