@@ -80,7 +80,12 @@ Everything described here filled in tags on declarations that already had a Scal
 
 For that next batch I want to elaborate the review side of the loop. Instead of a single reviewer, I plan to run several reviews of each change, including reviews by different AI models, so that more eyes, and more kinds of eyes, weigh in before any human does. The aim is the same as before: push the quality as high as the machines can take it, so that by the time a human takes over, the documentation is already good.
 
-
 ## About the author
 
 Bill Venners is president of [Artima, Inc.](https://www.artima.com) He is the lead developer of the ScalaTest and Scalactic open source libraries and coauthor of [Programming in Scala, Fifth Edition](https://www.artima.com/shop/programming_in_scala_5ed) and [Advanced Programming in Scala, Fifth Edition](https://www.artima.com/shop/advanced_programming_in_scala_5ed).
+
+## About the Scala Center
+
+The Scala Center has been entrusted with coordinating the commissioned Scala work for the Sovereign Tech Fund. The Scala Center is an independent, not-for-profit center sponsored by [corporate members and individual backers like you](/blog/2023/09/11/scala-center-fundraising.html) to promote and facilitate Scala. If you would like to participate and/or see more of these types of efforts, please reach out to your manager to see if your company can donate engineering time or membership to the Scala Center.
+
+See [The Scala Center Fundraising Campaign](/blog/2023/09/11/scala-center-fundraising.html) for more details.
