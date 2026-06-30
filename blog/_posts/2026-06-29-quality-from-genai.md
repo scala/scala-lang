@@ -1,7 +1,7 @@
 ---
 layout: blog-detail
 post-type: blog
-by: Bill Venners, Artima, Inc.
+by: Bill Venners (Artima, Inc.)
 title: Coaxing quality output from generative AI
 description: Practical techniques for getting high-quality results from generative AI.
 ---
