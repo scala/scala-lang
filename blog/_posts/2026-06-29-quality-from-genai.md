@@ -38,7 +38,7 @@ The principle underneath this technique is to use determinism wherever you can. 
 
 ## Technique 2: Enforce a deterministic process
 
-Another way we used determinism was by defining and enforcing a _process_ through a shell script that called into the AI model, rather than asking an AI to run the entire task. This kind of orchestration is often called an "AI harness," which both implies that an AI workhorse is being constrained as well as that it is being put to productive use.
+Another way we used determinism was by defining and enforcing a _process_ through a shell script that called into the AI model, rather than asking an AI to run the entire task. This kind of orchestration is often called an "AI harness," which both implies that an AI workhorse is being constrained as well as being put to productive use.
 
 Our harness used two git branches. Once `todo-writer` had inserted the `TODO FILL IN` markers, we committed its output one file at a time, so that every file landed in its own commit, each carrying the same message: `Todo-writer added TODOs for @param, @tparam, and @return tags.` A small helper, [`commit-each-file.sh`](https://github.com/artimahub/scala3/blob/b8eb945dd37192706a88fa645475b7fd97182b0f/todo-writer/commit-each-file.sh), did this slicing. The effect was to turn the whole task into an ordered queue of single-file commits on a *source* branch, with nothing else mixed in.
 
