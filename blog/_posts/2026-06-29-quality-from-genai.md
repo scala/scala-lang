@@ -46,7 +46,7 @@ The loop itself, [`fill-todos-loop.sh`](https://github.com/artimahub/scala3/blob
 
 The cherry-picking played a critical role: it was the loop's iterator. Each source commit was exactly one unit of work, so cherry-picking popped the next file off the queue in order. The AI model never had to decide for itself which files needed attention or in what sequence, because that was settled when the queue was built. It also guaranteed that the output kept the same clean shape as the input, one commit per file, which later let us regroup the finished commits into review-sized pull requests. And because a file that had already been processed no longer appeared in the not-yet-applied range, the run was naturally restartable and could proceed in batches.
 
-The benefit of this harness was to keep the AIs focused on small, isolated tasks inside a fixed create, review, and refine process. That process takes time, but not my time: I ran it overnight while I slept, with deliberate pauses between files to spread out my token usage. If you need a task to finish faster in wall-clock terms, you can design processes that run in parallel.
+The benefit of this harness was to keep the AIs focused on small, isolated tasks inside a fixed process of create, review, and refine. That process takes time, but not my time: I ran it overnight while I slept, with deliberate pauses between files to spread out my token usage. (Note that if you need a task to finish faster in wall-clock terms, you can design processes that run in parallel.)
 
 ## Technique 3: Give the AI a fresh, focused context
 
