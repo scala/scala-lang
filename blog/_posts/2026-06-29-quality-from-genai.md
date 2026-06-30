@@ -50,7 +50,7 @@ The benefit of this harness was to keep the AIs focused on small, isolated tasks
 
 ## Technique 3: Give the AI a fresh, focused context
 
-Our script gave the AI a fresh context for every step, not just for every file. For a single file the writer filled the TODOs in a fresh context, the reviewer judged the result in a second fresh context, and the refiner applied the review in a third, with nothing carried between them except the file itself and the reviewer's written feedback. I kept each of those contexts as small as possible for two reasons: as context length increases, model quality often declines; and a larger context consumes more tokens on every turn. Although I was on a monthly subscription, I still did not want to burn more tokens than necessary.
+Our script gave the AI a fresh context for every step, not just for every file. For a single file the writer filled the TODOs in a fresh context, the reviewer judged the result in a second fresh context, and the refiner applied the review in a third, with nothing carried between them except the file itself and the reviewer's written feedback. I kept each of those contexts as small as possible for two reasons: as context length increases, output quality can decline, and a larger context consumes more tokens on every turn. Although I was on a monthly subscription, I still did not want to burn more tokens than necessary.
 
 That is also what gave the review step its independence. Because the reviewer started fresh, it never saw the reasoning the writer had used, so it came to the documentation cold even though it was the exact same AI model. Another approach is to use a different model for review, to reduce the chance that the reviewer shares the writer's blind spots.
 
