@@ -18,8 +18,8 @@ work with 47 Degrees to make efforts like Scala Exercises a first-class, go-to
 educational offering for new newcomers to Scala.
 
 “Providing valuable open sourced content to the  Scala ecosystem has always been
-a priority for our company,” said 47 Degrees CEO [Nick
-Elsberry](https://twitter.com/nickelsberry). “The opportunity to work alongside
+a priority for our company,” said 47 Degrees CEO Nick
+Elsberry. “The opportunity to work alongside
 the Scala Center gives us the ability to hone our efforts and focus our
 contributions on projects that will be most beneficial to the evolution of the
 language and its growing user base.”

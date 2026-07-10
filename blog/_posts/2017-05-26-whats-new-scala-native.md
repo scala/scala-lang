@@ -144,7 +144,7 @@ fast startup time!
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en">
   <p lang="en" dir="ltr">
     <a href="https://twitter.com/adriaanm">@adriaanm</a>
-    <a href="https://twitter.com/den_sh">@den_sh</a>
+    @den_sh
     <a href="https://twitter.com/scala_native">@scala_native</a> OMG IT WORKS :D 30x faster!
     <a href="https://t.co/M7V9udU5bT">pic.twitter.com/M7V9udU5bT</a>
   </p>
