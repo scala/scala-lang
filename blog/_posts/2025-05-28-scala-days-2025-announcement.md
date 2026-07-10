@@ -4,7 +4,7 @@ category: blog
 title: "Scala Days 2025 - Functional Programming And The Real World"
 by: Darja Jovanovic
 ---
-The [Scala Days Program Committee](https://scaladays.org/#committee) is proud to announce the 2025 [conference program](https://archives.scaladays.org/2025/schedule). It's buzzing with awesome talks, and there's something for everyone! A special thank you for their work, time, and expertise over the past couple of months ❤️
+The [Scala Days Program Committee](https://archives.scaladays.org/2025/#committee) is proud to announce the 2025 [conference program](https://archives.scaladays.org/2025/schedule). It's buzzing with awesome talks, and there's something for everyone! A special thank you for their work, time, and expertise over the past couple of months ❤️
 
 The Scala Days 2025 theme is **Functional Programming And The Real World**. The event will feature keynotes from Evan Czaplicki (creator of Elm), Martin Odersky (lead designer of Scala), and Ralf Jung (Rust core-team member), followed by four tracks across two days, bringing over fifty speakers to the stage. That is the most comprehensive tour of the Scala ecosystem yet.
 
@@ -17,7 +17,7 @@ Beyond the program, being a part of Scala Days means being in great company. It�
 
 ## About the program
 
-[The Program Committee](https://scaladays.org/#committee) has crafted a two-day program across four parallel tracks—complete with keynotes and panels—each designed for a different audience. While we’ve worked hard to minimize topic overlap, we know you may still face tough choices between sessions. Don’t worry: every talk will be recorded and made available on the [Scala Days YouTube channel](https://www.youtube.com/channel/UCOHg8YCiyMVRRxb3mJT_0Mg), so you can catch up on anything you miss. Read on to set your track expectations.
+[The Program Committee](https://archives.scaladays.org/2025/#committee) has crafted a two-day program across four parallel tracks—complete with keynotes and panels—each designed for a different audience. While we’ve worked hard to minimize topic overlap, we know you may still face tough choices between sessions. Don’t worry: every talk will be recorded and made available on the [Scala Days YouTube channel](https://www.youtube.com/channel/UCOHg8YCiyMVRRxb3mJT_0Mg), so you can catch up on anything you miss. Read on to set your track expectations.
 
 **Curious about what makes Scala *Scala***? We invite you to check out Panorama track (stage 1). This track is set to showcase each corner of the Scala ecosystem - from language features, tooling innovation, discussing the future of the community and language, to creative talks and more. This is a great track for newcomers who want to gain an insight into where they can head out next, for seasoned conference-goers to get an overview of where Scala is headed, and everyone in between.
 
