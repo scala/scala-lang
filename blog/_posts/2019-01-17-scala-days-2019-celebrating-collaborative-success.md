@@ -86,7 +86,7 @@ Please send us a [direct email](mailto:info@scaladays.org) to initiate this conv
 We would like to showcase some of the history. Please share your “throwbacks” and tag us on Twitter [@ScalaDays](https://twitter.com/scaladays), we would like to hear from you and include some of your stories and photos in overall promotion.
 
 ### Even MORE
-If you don’t find yourself in any of the above, you can always hit that button: share, write - spread the word #happybirthdayscala. Follow us: [@scaladays](https://twitter.com/scaladays) [@darjutak](https://twitter.com/darjutak) [@scala_lang](https://twitter.com/scala_lang) [@EPFLevents](https://twitter.com/EPFLevents) for up-to-date information.
+If you don’t find yourself in any of the above, you can always hit that button: share, write - spread the word #happybirthdayscala. Follow us: [@scaladays](https://twitter.com/scaladays) [@darjutak](https://twitter.com/darjutak) [@scala_lang](https://twitter.com/scala_lang) @EPFLevents for up-to-date information.
 
 ## 2019 Organising team and partners
 

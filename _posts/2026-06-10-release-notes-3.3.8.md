@@ -1,7 +1,7 @@
 ---
 category: release
 permalink: /news/3.3.8/
-title: "Scala 3.3.8 is now available!"
+title: "Scala 3.3.8 LTS is now available!"
 by: Tomasz Godzik, VirtusLab
 ---
 

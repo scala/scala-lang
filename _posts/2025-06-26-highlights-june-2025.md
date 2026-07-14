@@ -29,13 +29,13 @@ The event will feature keynotes from Evan Czaplicki (creator of Elm), Martin Ode
 That is the most comprehensive tour of the Scala ecosystem yet.
 
 Before the main conference, we will begin the week with two-day hands-on workshops.
-Scala newcomers will have the opportunity to participate in [ScalaBridge](https://scaladays.org/blog/scalabridge-lausanne/).
+Scala newcomers will have the opportunity to participate in [ScalaBridge](https://archives.scaladays.org/2025/blog/scalabridge-lausanne/).
 If you plan to come to Lausanne by train, check out this fantastic community-organized [Scala Train that runs from London and Paris to Lausanne](https://www.meetup.com/london-scala/events/307435835/).
 By travelling together, attendees can enjoy sustainable travel and make connections with each other before the conference begins.
 We hope you get inspired and organize your local community in this or another fun way!
 
-[Discover the program](https://scaladays.org/schedule) and [how the program committee selected the talks](https://www.scala-lang.org/blog/2025/05/28/scala-days-2025-announcement.html).
-[Buy your tickets now](https://scaladays.org/tickets), and join us for Scala Days 2025.
+[Discover the program](https://archives.scaladays.org/2025/schedule) and [how the program committee selected the talks](https://www.scala-lang.org/blog/2025/05/28/scala-days-2025-announcement.html).
+[Buy your tickets now](https://archives.scaladays.org/2025/tickets), and join us for Scala Days 2025.
 
 ### Scalar 2025
 
