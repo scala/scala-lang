@@ -11,7 +11,7 @@ As part of our ongoing work on the sbt 2 release, we’ve been reviewing bug rep
 
 ## TL;DR
 
-We recommend removing the `serverConnectionType` setting (not set by default), or upgrading to sbt 1.12.15 / sbt 2.0.6 or later by putting the following in `project/build.properties`:
+Only builds that explicitly set `serverConnectionType` are affected. You can remove the setting from your build, or upgrade to sbt 1.12.15 / sbt 2.0.6 or later by putting the following in `project/build.properties`:
 
 ```scala
 sbt.version=1.12.15
