@@ -7,8 +7,6 @@ title: "Fixing a remote execution vulnerability in sbt"
 
 > This post covers work done under the [Sovereign Tech Fund investment](https://www.scala-lang.org/blog/2026/01/27/sta-invests-in-scala.html) umbrella: [sbt 2 Stable Release and Maintenance](https://contributors.scala-lang.org/t/sbt-2-production-ready-roadmap/7351). The work is coordinated by the [Scala Center](https://scala.epfl.ch/).
 
-As part of our ongoing work on the sbt 2 release, we’ve been reviewing bug reports and pull requests.
-
 ## TL;DR
 
 Only builds that explicitly set `serverConnectionType` are affected. You can remove the setting from your build, or upgrade to sbt 1.12.15 / sbt 2.0.6 or later by putting the following in `project/build.properties`:
@@ -21,7 +19,9 @@ Note that installing a new `sbt` command does not affect the sbt version used by
 
 ## The vulnerability
 
-The sbt team received a security report [GHSA-m2pw-22cj-jq4v](https://github.com/sbt/sbt/security/advisories/GHSA-m2pw-22cj-jq4v) from [Arpit Jain](https://github.com/arpitjain099) that an attacker is able to execute arbitrary code remotely via the sbt server when the `serverConnectionType` is set to `ConnectionType.Tcp`.
+As part of our ongoing work on the sbt 2 release, we've been reviewing bug reports and pull requests.
+
+Recently we received a security report [GHSA-m2pw-22cj-jq4v](https://github.com/sbt/sbt/security/advisories/GHSA-m2pw-22cj-jq4v) from [Arpit Jain](https://github.com/arpitjain099) that an attacker is able to execute arbitrary code remotely via the sbt server when the `serverConnectionType` is set to `ConnectionType.Tcp`.
 
 By default, sbt uses UNIX domain sockets on Linux and macOS, and named pipes on Windows, but this can be changed to TCP using the following setting:
 
