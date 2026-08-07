@@ -37,7 +37,7 @@ In a normal sequence, using TCP would go through a token authentication so only 
 
 The primary fix was to make sure all LSP-like endpoints are protected behind authorization when using TCP. The fix is available in sbt 1.12.15 and 2.0.6. The remediation was implemented by Eugene and Anatolii using GitHub's private fork feature. The full advisory is available as [GHSA-m2pw-22cj-jq4v](https://github.com/sbt/sbt/security/advisories/GHSA-m2pw-22cj-jq4v).
 
-We recommend removing the `serverConnectionType` setting, or upgrading to a patched version sbt 1.12.15 / sbt 2.0.6 or later.
+We recommend removing the `serverConnectionType` setting from your build, or upgrading to a patched version sbt 1.12.15 / sbt 2.0.6 or later.
 
 ## AI tooling
 
