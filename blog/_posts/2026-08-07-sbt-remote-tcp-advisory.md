@@ -17,7 +17,7 @@ Only builds that explicitly set `serverConnectionType` are affected. You can rem
 sbt.version=1.12.15
 ```
 
-Note that installing a new runner does not affect the sbt version used for the build.
+Note that installing a new `sbt` command does not affect the sbt version used by each individual build.
 
 ## The vulnerability
 
