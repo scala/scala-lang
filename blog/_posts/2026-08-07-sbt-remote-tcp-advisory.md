@@ -42,7 +42,7 @@ We recommend removing the `serverConnectionType` setting from your build, or upg
 ## AI tooling
 
 When Claude Mythos 5 was announced, it was widely reported that the LLM had reached the ability to discover new vulnerabilities in software. Subsequent availability of Claude Fable 5 and competing models have put the idea to the test. In the security report, the reporter has noted that he used AI assistance for the code audit and for drafting this report, and including detailed tracing of functions across multiple source files.
-When we prompted Claude Code to discover vulnerabilities, it downgraded to Opus 5, but was able to discovered the same remote execution bug.
+When we prompted Claude Code to discover vulnerabilities, it downgraded to Opus 5, but was able to discover the same remote execution bug.
 
 We're thankful that the vulnerability was reported to the sbt team. If you find one please report through [GitHub advisories](https://github.com/sbt/sbt/security/advisories).
 
