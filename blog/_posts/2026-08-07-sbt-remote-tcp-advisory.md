@@ -21,7 +21,7 @@ Note that installing a new `sbt` command does not affect the sbt version used by
 
 ## The vulnerability
 
-sbt team received a security report [GHSA-m2pw-22cj-jq4v](https://github.com/sbt/sbt/security/advisories/GHSA-m2pw-22cj-jq4v) from [Arpit Jain](https://github.com/arpitjain099) that an attacker is able to execute arbitrary code remotely via the sbt server when the `serverConnectionType` is set to `ConnectionType.Tcp`.
+The sbt team received a security report [GHSA-m2pw-22cj-jq4v](https://github.com/sbt/sbt/security/advisories/GHSA-m2pw-22cj-jq4v) from [Arpit Jain](https://github.com/arpitjain099) that an attacker is able to execute arbitrary code remotely via the sbt server when the `serverConnectionType` is set to `ConnectionType.Tcp`.
 
 By default, sbt uses UNIX domain socket on Linux and macOS, and named pipes on Windows, but this can be changed to TCP using the following setting:
 
