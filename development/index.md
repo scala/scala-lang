@@ -290,7 +290,7 @@ This means that:
 * Pull requests will be reviewed and, when feasible, merged.
 * Releases will continue indefinitely, typically every 3 to 6 months. (This cadence may slow down over time.)
 
-Most Scala 2 maintenance is done by the Scala team at [Akka](https://akka.io) (the company formerly known as Lightbend), in coordination with the Scala Center and the Scala 3 team.
+Most Scala 2 maintenance is done by the Scala team at [VirtusLab](https://virtuslab.com/), in coordination with the Scala Center and the Scala 3 team.
 
 These remarks apply to Scala 2 itself, that is, the compiler and standard library. Making effective use of Scala 2 also depends on a healthy tooling and library ecosystem. Much of that ecosystem is outside of our direct control, but we help maintainers as much as we can.
 
@@ -314,6 +314,4 @@ It remains available and it is usable in some contexts, but it is no longer main
 
 ## Commercial support for Scala
 
-Akka offers [commercial support](https://akka.io) for Scala. The Scala team at Akka are the primary maintainers of Scala 2. They are very active in Scala 3 development as well. The Akka libraries are fully supported on both Scala 2 and Scala 3.
-
-VirtusLab offers [commercial support](https://virtuslab.com/expertise/scala/) for Scala as well. Their team manages Scala 3 releases and development. VirtusLab provides services to modernise Scala projects, including Scala 3 migration.
+VirtusLab offers [commercial support](https://virtuslab.com/expertise/scala/) for Scala. Their team manages Scala releases and development. VirtusLab provides services to modernise Scala projects, including Scala 3 migration.

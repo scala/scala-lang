@@ -42,11 +42,6 @@ syntax highlighting.
 
 These forums are covered by the [Scala Code of Conduct](../conduct.html).
 
-Akka operates a Discourse forum as well:
-
-- **[discuss.akka.io](https://discuss.akka.io)**: For discussion of
-  the Akka libraries, Akka SDK, and reactive architectures.
-
 ## Chat rooms
 
 Our main chat platform is Discord, and the main Scala server is:
@@ -278,6 +273,11 @@ Staying current:
 - [Scala Times](https://scalatimes.com) includes library releases
 - [#ThisWeekInScala](https://medium.com/disney-streaming/tagged/thisweekinscala)
   includes library releases
+
+Forums for particular ecosystems:
+
+- **[discuss.akka.io](https://discuss.akka.io)**: For discussion of
+  the Akka libraries, Akka SDK, and reactive architectures.
 
 ## Non-JVM platforms
 
