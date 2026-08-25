@@ -94,7 +94,7 @@ listed above,
 * send an e-mail to one of the following general moderators if you want to
   choose who you are talking to:
   * Seth Tisue, Scala Core Team ([seth@tisue.net](mailto:seth@tisue.net))
-  * Lukas Rytz, Akka ([lukas.rytz@akka.io](mailto:lukas.rytz@akka.io))
+  * Lukas Rytz, VirtusLab ([lrytz@virtuslab.com](mailto:lrytz@virtuslab.com))
   * Sébastien Doeraene, EPFL ([sebastien.doeraene@epfl.ch](mailto:sebastien.doeraene@epfl.ch))
   * Tomasz Godzik, VirtusLab ([tgodzik@virtuslab.com](mailto:tgodzik@virtuslab.com))
 
