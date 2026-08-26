@@ -11,11 +11,10 @@ Scala was created by [Prof. Martin Odersky](https://lampwww.epfl.ch/~odersky/)
 at [EPFL](https://www.epfl.ch).
 
 The Scala language and associated websites are cooperative projects of the following
-four groups:
+three groups:
 
 * the [Scala Center](https://scala.epfl.ch) at [EPFL](https://www.epfl.ch)
 * the Scala 3 team in Martin's research group [LAMP](https://lamp.epfl.ch) (also at EPFL)
-* the Scala team at [Akka](https://akka.io)
 * the Scala team at [VirtusLab](https://virtuslab.com)
 
 and the Scala community more broadly, with participation from many
@@ -30,10 +29,8 @@ The Scala Center focuses on coordinating governance, education (especially
 online courses), documentation, open source community outreach, and tooling.
 Community participation in all of these efforts is strongly encouraged.
 
-Scala 2 maintenance is primarily handled by the Scala team at Akka. That
-team also participates in Scala 3 development.
-
-VirtusLab focuses on infrastructure and tooling for Scala 3.
+VirtusLab focuses on infrastructure and tooling for Scala 3 and also
+handles maintenance of Scala 2.
 
 Scala 3 development is done by the compiler team currently listed at
 [Scala Compiler Team](/maintainers/) page and Scala 2 maintainers list is
