@@ -332,14 +332,27 @@ For a practical overview of the migration work behind this release, watch [Migra
 
 The [Open Community Build](https://github.com/VirtusLab/community-build3) results shown there are encouraging: **about 1,780 of nearly 2,000 projects** build on Scala 3.9 with no or minimal changes, mostly thanks to the compiler's built-in rewrites.
 
+### Recommended upgrade order
+
+A newer compiler should still compile against the libraries you already use. A newer library may require a newer compiler, so do not bump dependencies first.
+
+Upgrade in this order, and let CI pass and commit after each step:
+
+1. Upgrade the **build tool** if required.
+2. Move to **JDK** 17 or later, while staying on the current Scala version where possible.
+3. Upgrade **Scala.js** if the project uses it.
+4. Upgrade **Scala**, including the compiler rewrites below. If you use separate Scala version stepping stones, commit each one.
+5. Upgrade **libraries** after the Scala bump.
+
+For many projects, the migration is just the JDK update and the Scala version bump.
+For larger codebases, it is easier to treat the migration as a sequence of small, reviewable compiler-assisted changes than to diagnose every incompatibility after one big jump.
+
 ### Compiler built-in rewrites
 
-1. Move the project to JDK 17 or later first, while staying on your current Scala version where possible.
-2. Prefer the latest versions of your libraries, so you are not mixing a new compiler with stale artifacts.
-3. Pick a Scala compiler to run the rewrites on:
+1. Pick a Scala compiler to run the rewrites on:
    - Start with **Scala 3.7.4** if the codebase often passes explicit arguments to standard-library methods that now need `using`. 3.7.4 is the last release before the standard library was compiled with Scala 3, and it can insert those `using` clauses before the 3.8 library boundary.
    - Start with **Scala 3.9.0** if the codebase uses a lot of `with` types. 3.9 improved the rewrite of `with` to `&`; the same flags on 3.7.4 could emit code that does not compile.
-4. With that compiler, apply the `-source:3.x-migration` rewrites in order for each minor you are crossing, always with `-rewrite`: `-source:3.4-migration`, `-source:3.5-migration`, `-source:3.6-migration`, `-source:3.7-migration`, `-source:3.8-migration`, then `-source:3.9-migration`.
+2. With that compiler, apply the `-source:3.x-migration` rewrites in order for each minor you are crossing, always with `-rewrite`: `-source:3.4-migration`, `-source:3.5-migration`, `-source:3.6-migration`, `-source:3.7-migration`, `-source:3.8-migration`, then `-source:3.9-migration`.
 
    ```scala
    scalacOptions ++= Seq("-source:3.4-migration", "-rewrite")
@@ -356,11 +369,16 @@ The [Open Community Build](https://github.com/VirtusLab/community-build3) result
    | `-source:3.8-migration` | &bull; refutable pattern bindings such as `val hd :: tl = xs` gain `.runtimeChecked`<br>&bull; `: @unchecked` ascriptions are rewritten to `.runtimeChecked` |
    | `-source:3.9-migration` | &bull; backtick identifiers that contain `$` |
 
-5. Some changes have no automatic rewrite. Fix those by hand as the compiler reports them.
-6. Review each generated diff as ordinary source, then bump to Scala 3.9.0, drop the temporary migration flags, and run the full test suite.
+3. Some changes have no automatic rewrite. Fix those by hand as the compiler reports them.
+4. Review each generated diff as ordinary source, then bump to Scala 3.9.0, drop the temporary migration flags, and run the full test suite.
 
-For many projects, the migration is just the JDK update and the Scala version bump.
-For larger codebases, it is easier to treat the migration as a sequence of small, reviewable compiler-assisted changes than to diagnose every incompatibility after one big jump.
+If a change is hard to apply, for example when using illegal match types after [SIP-56](https://docs.scala-lang.org/sips/match-types-spec.html), you can compile that code with `-source:3.x` so Scala 3.9 treats the sources as if they were compiled with that earlier version:
+
+```scala
+scalacOptions += "-source:3.3"
+```
+
+Use this only for a subproject that is otherwise hard to migrate: newer language features stay unavailable until you remove the flag. The older language source rules are respected on a best-effort basis, it should be used as a temporal solution.
 
 ### Scala 2.13 consumers via TASTy Reader
 
