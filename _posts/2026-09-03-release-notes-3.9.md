@@ -96,7 +96,6 @@ The rules are:
 
 - A marker is matched on severity and line number only.
   The text following it is not checked, so it can carry an explanation for readers.
-- Repeat the marker when a single line is expected to produce several diagnostics, as in `// error // error`.
 - `// warn` checks warnings the same way.
 - Every diagnostic must be accounted for: an unmarked error or warning fails the run, and a snippet with no markers must compile cleanly.
 
