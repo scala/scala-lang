@@ -45,16 +45,26 @@ This is useful for APIs where conversion is part of the intended design, but whe
 Scala 3.8 introduced `into` as a preview feature; Scala 3.9 makes it part of the stable language.
 
 ```scala
-import scala.Conversion
-import scala.Conversion.into
+//> using scala 3.9
 
-def appendAll[A](xs: List[A], ys: into[IterableOnce[A]]): List[A] =
+// Prefer `into` as a soft modifier when you control the conversion target.
+into trait IntoIterableOnce[A] extends IterableOnce[A]
+
+def appendAll[A](xs: List[A], ys: IntoIterableOnce[A]): List[A] =
   xs ++ ys
 
-given Conversion[Array[Int], IterableOnce[Int]] = _.iterator
+// Use `into[T]` when you can't change the target type definition.
+def prependAll[A](xs: Conversion.into[IterableOnce[A]], ys: List[A]): List[A] =
+  xs.iterator.toList ++ ys
 
-val values = appendAll(List(1, 2), Array(3, 4))
-// values == List(1, 2, 3, 4)
+given [A]: Conversion[Array[A], IntoIterableOnce[A]] = arr =>
+  new IntoIterableOnce[A]:
+    def iterator: Iterator[A] = arr.iterator
+
+given [A]: Conversion[Array[A], IterableOnce[A]] = _.iterator
+
+val appended = appendAll(List(1, 2), Array(3, 4))
+val prepended = prependAll(Array(1, 2), List(3, 4))
 ```
 
 ### Documentation snippets can declare the errors they expect
