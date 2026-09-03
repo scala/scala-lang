@@ -60,7 +60,7 @@ val values = appendAll(List(1, 2), Array(3, 4))
 ### Documentation snippets can declare the errors they expect
 
 Scaladoc can compile the code snippets it finds in documentation, which stops examples from quietly rotting as a project changes.
-Scala 3.9 lets a snippet [also declare the errors and warnings it is meant to produce](https://github.com/scala/scala3/pull/25713), on the exact lines where they belong.
+Scala 3.9 allows a snippet [to also declare the errors and warnings it is meant to produce](https://github.com/scala/scala3/pull/25713), on the exact lines where they belong.
 
 Documentation for a library with compile-time constraints often needs to show code that must not compile: a macro reporting a custom error, an API enforcing capability or capture requirements, or a type-level constraint being violated.
 Until now such a snippet could only claim that it failed somewhere. There was no way to say which line should fail, or whether to expect an error or a warning.
@@ -417,6 +417,7 @@ A glimpse of what is coming:
 - **Features entering preview:** [SIP-61 Unroll](https://docs.scala-lang.org/sips/unroll-default-arguments.html), [SIP-75 relaxed lambda syntax](https://github.com/scala/improvement-proposals/pull/118), and [SIP-68 referenceable package objects](https://github.com/scala/improvement-proposals/pull/100).
 - **Experimental** [inline and specialized traits](https://github.com/scala/scala3/pull/26156), bringing specialization to Scala 3.
 - **[Pattern matching on Java records](https://github.com/scala/scala3/pull/26497)**.
+- Support for select `using` directives within the REPL, including [dep](https://github.com/scala/scala3/pull/26507), [toolkit](https://github.com/scala/scala3/pull/26788) and [jar](https://github.com/scala/scala3/pull/26726), with more to come.
 
 ---
 
