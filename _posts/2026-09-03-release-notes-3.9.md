@@ -378,7 +378,7 @@ If a change is hard to apply, for example when using illegal match types after [
 scalacOptions += "-source:3.3"
 ```
 
-Use this only for a subproject that is otherwise hard to migrate: newer language features stay unavailable until you remove the flag. The older language source rules are respected on a best-effort basis, it should be used as a temporal solution.
+Use this only for a subproject that is otherwise hard to migrate: newer language features stay unavailable until you remove the flag. The older language source rules are respected on a best-effort basis, it should be used as a temporary solution.
 
 ### Scala 2.13 consumers via TASTy Reader
 
