@@ -90,7 +90,7 @@ The rules are:
 - `// warn` checks warnings the same way.
 - Every diagnostic must be accounted for: an unmarked error or warning fails the run, and a snippet with no markers must compile cleanly.
 
-Snippets in Scaladoc comments are configured through the same path-based setting and honour the markers too, but the intended use is documentation pages.
+Snippets in Scaladoc comments are configured through the same path-based setting and honour the markers as well, but the intended use is documentation pages.
 Snippets in comments written with the legacy wiki syntax are not checked at all, as before.
 
 ### Scala CLI updates
@@ -127,7 +127,7 @@ Both modes are opt-in, and the easiest way to reach for them is a `using` direct
 Writing `//> using slothAgent` instead of `//> using sloth` rewrites each class as it is loaded rather than patching the classpath up front, which is the more practical choice when running tests.
 
 The same options are available on the Scala runner, as `--sloth` and `--sloth-agent`.
-Either way the feature is experimental, so it has to be unlocked with `--power`:
+In both cases the feature is experimental, so it has to be unlocked with `--power`:
 
 ```bash
 scala --power run Main.scala --sloth
@@ -258,7 +258,7 @@ The sections below summarise the most important changes in each minor.
 #### Notable changes
 
 - The `scala` command itself became the Scala runner, implemented by [Scala CLI](https://scala-cli.virtuslab.org/), so it now compiles, runs, tests, and packages single-module projects.
-- Best-effort compilation emits BETASTy for code that does not compile, which keeps IDE features working while you type.
+- Experimental best-effort compilation emits BETASTy for code that does not compile, which keeps IDE features working while you type.
 - Pipelined builds are supported, enabled in sbt with `ThisBuild / usePipelining := true`.
 - `var` members are allowed in type refinements, as in `type A = { var number: Int }`.
 - Integer literals can be written in base 2, as in `0b1000_0010`.
