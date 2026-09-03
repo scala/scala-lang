@@ -105,12 +105,9 @@ Snippets in comments written with the legacy wiki syntax are not checked at all,
 
 ### Scala CLI updates
 
-The parser for Scala CLI `using` directives has moved into a compiler module `org.scala-lang::scala3-directives-parser:3.9.0`.
-This gives tools a shared implementation for parsing build and dependency directives in Scala source files and allows custom use outside of Scala CLI.
+Scala 3.9 updates Scala CLI, which brings new features:
 
-Scala 3.9 also updates Scala CLI, which brings new features:
-
-- The REPL can start **JShell**, so a project's classpath can be explored from Java as well as from Scala.
+- The REPL can start **JShell**, so a project's classpath can be explored from Java as well as from Scala. Try it with `scala repl --jshell`.
 - Tests can be written against **JUnit 5 (Jupiter)**, not only the JUnit 4 interface shipped previously.
 - `export` can target **sbt 2.x**, allowing rapid conversion of a project to sbt.
 - **WebAssembly** is supported experimentally, matching the new Scala.js backend.
@@ -144,6 +141,9 @@ scala --power run Main.scala --sloth
 ```
 
 See the Scala CLI [v1.15.0](https://github.com/VirtusLab/scala-cli/releases/tag/v1.15.0) and [v1.16.0](https://github.com/VirtusLab/scala-cli/releases/tag/v1.16.0) release notes for the full list of changes.
+
+The parser for Scala CLI `using` directives has moved into a compiler module `org.scala-lang::scala3-directives-parser:3.9.0`.
+This gives tools a shared implementation for parsing build and dependency directives in Scala source files and allows custom use outside of Scala CLI.
 
 ### Scala.js 1.22
 
