@@ -26,7 +26,7 @@ Since the ecosystem is an essential element of the user experience, the health o
 - In March 2026, Anatolii created [sbt2-compat plugin](/blog/2026/03/02/sbt2-compat.html), which absorbs the changes between sbt 1.x and 2.x.
 - Beyond tooling, we've actively sent pull requests to migrate the plugins.
 
-I'm happy to report that as of this writing (September, 2026), [Scaladex](https://index.scala-lang.org/search?platform=sbt2) reports **172 plugins** are available for sbt 2.x. Many thanks to community effort by volunteers like Kenji Yoshida and many others. In this post, I'd like to highlight some the plugin updates.
+I'm happy to report that as of this writing (September 2026), [Scaladex](https://index.scala-lang.org/search?platform=sbt2) lists **172 plugins** are available for sbt 2.x. Many thanks for the community effort by volunteers like Kenji Yoshida and many others. In this post, I'd like to highlight some of the plugin updates.
 
 ## Plugin updates
 
