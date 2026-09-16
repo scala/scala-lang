@@ -52,7 +52,7 @@ There's a new plugin for sbt 2.x called [sbt-matrix-sources](https://github.com/
 
 ### sbt-buildinfo 0.13.2
 
-[sbt-buildinfo 0.13.2](https://github.com/sbt/sbt-buildinfo/releases/tag/v0.13.2) was published recently for sbt 1.x and 2.x. sbt-buildinfo is a small code generator that I created a while back to lift build information into the library code. sbt-buildinfo 0.13.2 features a bug fix contributed by Lukas Rytz (VirtusLab) that should avoid running the tasks out-of-graph on sbt 2.x.
+[sbt-buildinfo 0.13.2](https://github.com/sbt/sbt-buildinfo/releases/tag/v0.13.2) was published recently for sbt 1.x and 2.x. sbt-buildinfo is a small code generator that I created a while back to give project code access to information in the build definition. sbt-buildinfo 0.13.2 features a bug fix contributed by Lukas Rytz (VirtusLab) that should avoid running the tasks out-of-graph on sbt 2.x.
 
 ### sbt-github-actions 0.32.0
 
