@@ -23,7 +23,7 @@ Since the ecosystem is an essential element of the user experience, the health o
 - Over the years, we have centralized major plugins to [GitHub sbt](https://github.com/sbt) organization. This lets us add new maintainers to the plugin who can review the PRs.
 - Created the [sbt 2.x plugin migration](https://github.com/sbt/sbt/wiki/sbt-2.x-plugin-migration) wiki page to coordinate the migration effort.
 - We locked down the ABI for 2.x with 2.0.0-RC1, which was released in August 2025. This gave a head start for the plugin authors to cross publish before sbt 2.0 came out.
-- In March 2026, Anatolii created [sbt2-compat plugin](/blog/2026/03/02/sbt2-compat.html), which absorbs the changes between sbt 1.x and 2.x.
+- In March 2026, Anatolii Kmetiuk (Scala Center) created [sbt2-compat plugin](/blog/2026/03/02/sbt2-compat.html), which adds a compatibility layer so that the same plugin can target both sbt 1 and sbt 2.
 - Beyond tooling, we've actively sent pull requests to migrate the plugins.
 
 I'm happy to report that as of this writing (September 2026), [Scaladex](https://index.scala-lang.org/search?platform=sbt2) lists **172 plugins** available for sbt 2.x. Many thanks for the community effort by volunteers like Kenji Yoshida and many others.
@@ -66,7 +66,7 @@ There's a new plugin for sbt 2.x called [sbt-matrix-sources](https://github.com/
 
 ### sbt-salad-days 0.2.0
 
-[sbt-salad-days](https://eed3si9n.com/reducing-scaladoc-file-size-with-sbt-salad-days/) is a plugin I created to reduce the Scaladoc JAR size for Maven Central publishing.
+[sbt-salad-days](https://eed3si9n.com/reducing-scaladoc-file-size-with-sbt-salad-days/) is a plugin I created to reduce the Scaladoc JAR size for Maven Central publishing. This is an interim solution while we wait for a fix to be merged upstream in various Scala versions.
 
 ### sbt-site 1.8.0
 
