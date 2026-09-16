@@ -50,7 +50,7 @@ There's a new plugin for sbt 2.x called [sbt-matrix-sources](https://github.com/
 
 ### sbt-git 3.0.0-RC1
 
-[sbt-git 3.0.0-RC1](https://github.com/sbt/sbt-git/releases/tag/v3.0.0-RC1) was published recently for sbt 1.x and 2.x. sbt-git 3.x features a shift to use system `git` by default as opposed to JGit. This was contributed by Matthias Kurz.
+[sbt-git 3.0.0-RC1](https://github.com/sbt/sbt-git/releases/tag/v3.0.0-RC1) was published recently for sbt 1.x and 2.x. sbt-git 3.x features a shift to use system `git` by default as opposed to JGit. This was contributed by Matthias Kurz, from the Play framework project.
 
 ### sbt-buildinfo 0.13.2
 
