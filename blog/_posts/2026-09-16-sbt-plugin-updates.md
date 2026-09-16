@@ -22,7 +22,7 @@ Since the ecosystem is an essential element of the user experience, the health o
 
 - Over the years, we have centralized major plugins to [GitHub sbt](https://github.com/sbt) organization. This lets us add new maintainers to the plugin who can review the PRs.
 - Created the [sbt 2.x plugin migration](https://github.com/sbt/sbt/wiki/sbt-2.x-plugin-migration) wiki page to coordinate the migration effort.
-- We locked down the ABI for 2.x with 2.0.0-RC1, which was released in August 2025. This gave head start for the plugin authors to cross publish before sbt 2.0 came out.
+- We locked down the ABI for 2.x with 2.0.0-RC1, which was released in August 2025. This gave a head start for the plugin authors to cross publish before sbt 2.0 came out.
 - In March 2026, Anatolii created [sbt2-compat plugin](/blog/2026/03/02/sbt2-compat.html), which absorbs the changes between sbt 1.x and 2.x.
 - Beyond tooling, we've actively sent pull requests to migrate the plugins.
 
