@@ -8,14 +8,14 @@ by: Tomasz Godzik, VirtusLab
 Scala 3.3.9 LTS is now available!
 
 This patch release backports most of the bugfixes and some of the improvements
-introduced in the Scala Next series to the Scala 3.9.0 release. All of the
-backported changes were proven to not break either binary or source
-compatibility, by testing over 1500 projects in the
+introduced in the latest Scala Next 3.9.0. All of the backported changes were
+proven to not break either binary or source compatibility, by testing over 1500
+projects in the
 [Scala 3 Open Community Build](https://github.com/VirtusLab/community-build3).
 
 # Notable changes
 
-- Stop using custom fonts for Scaladoc to reduce javadoc jar size
+- Stop using custom fonts for Scaladoc, to reduce doc jar size
   [#26393](https://github.com/scala/scala3/pull/26393)
 - Improve Java generic signatures for higher-kinded types, value classes
   [#25540](https://github.com/scala/scala3/pull/25540)
@@ -36,6 +36,6 @@ For a full list of changes and contributor credits, please refer to the
 ## Scala LTS Release Notice
 
 The next planned LTS 3.3 release will include updates introduced until last
-Scala 3.10.x before 3.11. We'll continue to backport bug fixes and improvements
-from the Scala Since the next LTS 3.9.0 has been released, we will continue to
-support 3.3.x series for the next year.
+Scala 3.10.x before 3.11. We'll continue to backport eligible bug fixes and
+improvements from the Scala Next series. Because the next LTS 3.9.0 has now been
+released, we will continue to support the 3.3.x series for the next year.
