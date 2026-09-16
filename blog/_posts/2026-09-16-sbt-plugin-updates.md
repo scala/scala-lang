@@ -46,15 +46,15 @@ libraryDependencies += "org.scala-js" %% "scalajs-dom" % "2.8.0"
 
 ### sbt-matrix-sources 0.1.0
 
-There's a new plugin for sbt 2.x called [sbt-matrix-sources](https://github.com/sbt/sbt-matrix-sources), created by Albert Meltzer ([@kitbellew](https://github.com/kitbellew)). This plugin adds `<platform_part>/src/main/<language_part>` to the source directory like `js/src/main/scala`. This provide an sbt-crossproject emulation on top of the project matrix to smooth out the sbt 2.x migration.
+There's a new plugin for sbt 2.x called [sbt-matrix-sources](https://github.com/sbt/sbt-matrix-sources), created by [Albert Meltzer](https://github.com/kitbellew). This plugin adds `<platform_part>/src/main/<language_part>` to the source directory like `js/src/main/scala`. This provide an sbt-crossproject emulation on top of the project matrix to smooth out the sbt 2.x migration.
 
 ### sbt-git 3.0.0-RC1
 
-[sbt-git 3.0.0-RC1](https://github.com/sbt/sbt-git/releases/tag/v3.0.0-RC1) was published recently for sbt 1.x and 2.x. sbt-git 3.x features a shift to use system `git` by default as opposed to JGit. This was contributed by Matthias Kurz, from the Play framework project.
+[sbt-git 3.0.0-RC1](https://github.com/sbt/sbt-git/releases/tag/v3.0.0-RC1) was published recently for sbt 1.x and 2.x. sbt-git 3.x features a shift to use system `git` by default as opposed to JGit. This was contributed by [Matthias Kurz](https://github.com/mkurz), from the Play framework project.
 
 ### sbt-buildinfo 0.13.2
 
-[sbt-buildinfo 0.13.2](https://github.com/sbt/sbt-buildinfo/releases/tag/v0.13.2) was published recently for sbt 1.x and 2.x. sbt-buildinfo is a small code generator that I created a while back to give project code access to information in the build definition. sbt-buildinfo 0.13.2 features a bug fix contributed by Lukas Rytz (VirtusLab) that should avoid running the tasks out-of-graph on sbt 2.x.
+[sbt-buildinfo 0.13.2](https://github.com/sbt/sbt-buildinfo/releases/tag/v0.13.2) was published recently for sbt 1.x and 2.x. sbt-buildinfo is a small code generator that I created a while back to give project code access to information in the build definition. sbt-buildinfo 0.13.2 features a bug fix contributed by [Lukas Rytz](https://github.com/lrytz) (VirtusLab) that should avoid running the tasks out-of-graph on sbt 2.x.
 
 ### sbt-github-actions 0.32.0
 
@@ -62,7 +62,7 @@ There's a new plugin for sbt 2.x called [sbt-matrix-sources](https://github.com/
 
 ### sbt-assembly 2.5.0
 
-[sbt-assembly 2.5.0](https://github.com/sbt/sbt-assembly/releases/tag/v2.5.0) was released a few weeks ago for sbt 1.x and 2.x. Recent contributions include an update to make shading errors fail the build, by Stas Shevchenko (Evolution), and artifact caching, by Dmitrii Naumenko (JetBrains).
+[sbt-assembly 2.5.0](https://github.com/sbt/sbt-assembly/releases/tag/v2.5.0) was released a few weeks ago for sbt 1.x and 2.x. Recent contributions include an update to make shading errors fail the build, by [Stas Shevchenko](https://github.com/stasimus) (Evolution), and artifact caching, by [Dmitrii Naumenko](https://github.com/unkarjedy) (JetBrains).
 
 ### sbt-salad-days 0.2.0
 
