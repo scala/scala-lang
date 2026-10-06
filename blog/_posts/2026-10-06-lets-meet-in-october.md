@@ -4,7 +4,6 @@ post-type: blog
 category: blog
 title: "Let's meet in October"
 date: 2026-10-06
-published: false
 description: "Join us at Scala Days 2026 in Berlin next week, follow the conference online, or meet your local Scala community this October."
 ---
 
