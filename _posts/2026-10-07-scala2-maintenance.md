@@ -5,8 +5,8 @@ title: "VirtusLab assumes responsibility for Scala 2 maintenance"
 by: Tomasz Godzik, VirtusLab
 ---
 
-We are happy to announce that VirtusLab has assumed responsibility for
-maintenance of Scala 2. This means that VirtusLab, in coordination with the
+We are happy to announce that **VirtusLab has assumed responsibility for
+maintenance of Scala 2**. This means that VirtusLab, in coordination with the
 Scala Center and the Scala Core Team, now manages the development of both Scala
 2 and Scala 3.
 
@@ -32,7 +32,5 @@ to contact us.
 The next Scala 2.12 and 2.13 releases are being planned and discussed on these
 threads on the Scala Contributors forum:
 
-Scala 2.12.22:
-[https://contributors.scala-lang.org/t/scala-2-12-22-release-planning/7309](https://contributors.scala-lang.org/t/scala-2-12-22-release-planning/7309)
-Scala 2.13.19:
-[https://contributors.scala-lang.org/t/scala-2-13-19-release-planning/7293](https://contributors.scala-lang.org/t/scala-2-13-19-release-planning/7293)
+* Scala 2.12.22: [https://contributors.scala-lang.org/t/scala-2-12-22-release-planning/7309](https://contributors.scala-lang.org/t/scala-2-12-22-release-planning/7309)
+* Scala 2.13.19: [https://contributors.scala-lang.org/t/scala-2-13-19-release-planning/7293](https://contributors.scala-lang.org/t/scala-2-13-19-release-planning/7293)
