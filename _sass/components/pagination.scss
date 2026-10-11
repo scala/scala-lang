@@ -4,6 +4,8 @@
 .pagination {
   margin-top: $padding-medium;
   @include display(flex);
+  flex-wrap: wrap;
+  row-gap: 2px;
   @include align-items(center);
   @include justify-content(center);
 
