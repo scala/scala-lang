@@ -9,7 +9,7 @@ by: Wojciech Mazur, VirtusLab
 
 We are happy to announce **Scala 3.10.0**, the first release of the new [Scala Next]({{ site.baseurl }}/news/3.9/#what-does-lts-mean) series.
 
-This release stabilizes [SIP-67](https://docs.scala-lang.org/sips/67.html), moves three SIPs into preview, and starts dropping language features that have been deprecated for several minor releases.
+This release stabilizes [SIP-67](https://docs.scala-lang.org/sips/67.html), moves three SIPs into preview, and starts dropping legacy language features that have been deprecated for several minor releases.
 
 Scala 3.3 LTS and Scala 3.9 LTS put compatibility with Scala 2.13 first.
 Now, nearly five years after Scala 3.0, Scala 3.10 starts removing legacy syntax and features that have been deprecated for several minor releases.
@@ -18,12 +18,14 @@ The standard library also starts using more Scala 3 features, such as `inline` a
 Binary compatibility is preserved: libraries compiled with earlier Scala 3 versions keep working.
 Code that still uses deprecated features needs to be updated, and macros and compiler plugins can break when the trees they inspect change shape.
 If you publish a library and want the longest support window, Scala 3.9 LTS remains the recommended version to build against.
+As of Scala 3.10, cross-compilation with Scala 2 is no longer supported.
+Some libraries might remain cross-compilable, but it is expected that cross-compiled libraries will remain on Scala 3.9 LTS indefinitely.
 
 ## Highlights
 
-- [SIP-67](#sip-67-strict-equality-pattern-matching): pattern matching under `strictEquality` no longer needs `CanEqual` - now stable.
+- [SIP-67](#sip-67-strict-equality-pattern-matching): pattern matching under `strictEquality` no longer needs `CanEqual` - now stable. (But strict equality remains an opt-in feature.)
 - Three SIPs move to preview behind `-preview`: [`@unroll`](#sip-61-unroll-default-arguments), [relaxed lambda syntax](#sip-75-relaxed-lambda-syntax), and [referenceable package objects](#sip-68-referenceable-package-objects).
-- Deprecated syntax such as `A with B` is now an error; see [Breaking changes](#breaking-changes).
+- Deprecated syntax previously retained for compatibility with Scala 2, such as `A with B`, is now an error; see [Breaking changes](#breaking-changes).
 - The compiler reports `Recursion limit exceeded` instead of crashing with a `StackOverflowError` ([details](#compiler-fuel)).
 - Scala is now also distributed as `.deb` and `.rpm` packages.
 
@@ -41,6 +43,7 @@ The sections below walk through the most common issues in more detail.
 
 > **Library maintainers:** if you ship macros or compiler plugins, add a CI job that builds against Scala Next nightly releases (or against release candidates once they are available).
 > Several of the fixes listed below were found by the [Open Community Build](https://github.com/VirtusLab/community-build3); a job in your own repository finds such problems earlier.
+> Before checking a 3.10 artifact with [MiMa](https://github.com/scala-garden/mima), upgrade to **[MiMa 1.2.0](https://github.com/scala-garden/mima/releases/tag/v1.2.0) or later**: that release adds Scala 3.9 and 3.10 support and fixes several false positives.
 
 ### Inaccessible companion implicits are no longer found
 
@@ -65,8 +68,7 @@ Make the companion public, or move the `given` to a public object.
 
 ### Stronger constant folding during inlining
 
-This change ([#25731](https://github.com/scala/scala3/pull/25731)) was [held back from Scala 3.9.0]({{ site.baseurl }}/news/3.9/) so that the new LTS would keep working with libraries published at the time.
-It fixes several inlining bugs, but it also makes compilation fail for macros that generate ill-typed code, which previously happened to work.
+[Stronger constant folding during inlining](https://github.com/scala/scala3/pull/25731) fixes several inlining bugs, but it also makes compilation fail for macros that generate ill-typed code, which previously happened to work.
 Scala 3.10 also [checks that a macro expansion has the type the macro claimed](https://github.com/scala/scala3/pull/25756).
 
 **If you use the ZIO ecosystem, upgrade these libraries before upgrading the compiler.** The fixed versions are:
@@ -123,13 +125,12 @@ scala.Option<scala.Function1<java.lang.Integer, java.lang.String>>
 
 The JVM method *descriptor* is unchanged, so Scala binary linking keeps working.
 What changes is what Java compilers and bytecode tools read from that signature.
-[MiMa](https://github.com/scala-garden/mima) may report `IncompatibleSignatureProblem` when you republish ([#27063](https://github.com/scala/scala3/issues/27063) is one example).
-Upgrade to **[MiMa 1.2.0](https://github.com/scala-garden/mima/releases/tag/v1.2.0) or later** before checking a 3.10 artifact: that release adds Scala 3.9 and 3.10 support and fixes several false positives.
+[MiMa](https://github.com/scala-garden/mima) may report `IncompatibleSignatureProblem` when you republish ([#27063](https://github.com/scala/scala3/issues/27063) is one example); see the library-maintainers note above for the MiMa version to use.
 If you mix Scala and Java, also check that Java call sites still type-check against the tighter signature.
 
 Primitive and value-class results inside higher-kinded type lambdas are now boxed as well; previously they could crash the compiler's JVM backend ([#26787](https://github.com/scala/scala3/pull/26787)).
 
-### Recursion runs out of fuel instead of overflowing the stack
+### Recursion runs out of "fuel" instead of overflowing the stack
 
 The compiler no longer catches `StackOverflowError` to stop runaway type checking ([#25937](https://github.com/scala/scala3/pull/25937)).
 Very deep types that used to compile by luck may now fail until you raise `-Xmax-fuel` and usually `-Xss`.
@@ -138,7 +139,7 @@ See [Fuel-limited recursion](#compiler-fuel) for how that works and which flags 
 ### Other compatibility notes
 
 - Deprecated no-op compiler settings are removed, including `-Youtput-only-tasty` ([#26169](https://github.com/scala/scala3/pull/26169), [#26170](https://github.com/scala/scala3/pull/26170), [#26171](https://github.com/scala/scala3/pull/26171)).
-- Bytecode generation uses the upstream ASM library instead of the scala-asm fork ([#26772](https://github.com/scala/scala3/pull/26772)). Tools that depended on the `scala-asm` artifact transitively may need a dependency update.
+- Bytecode generation uses the stock ASM library instead of the scala-asm fork ([#26772](https://github.com/scala/scala3/pull/26772)). Tools that depended on the `scala-asm` artifact transitively may need a dependency update.
 
 ## New stable features
 
@@ -279,7 +280,8 @@ Its type is the type of the package object, so it only includes members of the p
 
 ## New experimental features
 
-Experimental features carry neither source nor binary compatibility guarantees between any compiler versions - they can be changed or removed at any time until stabilized as `preview` features.
+Experimental features carry neither source nor binary compatibility guarantees between any compiler versions.
+They can be changed or removed at any time until stabilized as `preview` features.
 Enable them with `-experimental`, or with a specific `-language:experimental.*` option as in the snippets below.
 A *Pre-SIP* feature is a design that has not yet been submitted as a SIP.
 
@@ -441,11 +443,10 @@ The REPL also gained `:save` and `:replay`: `:save <path>` writes the session's 
 
 ### Standard library and tooling
 
-- `IArray` now has `IsSeq` and `BuildFrom` instances ([#24552](https://github.com/scala/scala3/pull/24552), [#24674](https://github.com/scala/scala3/pull/24674)), so more collection operations work without converting to `Array`.
+- `IArray` now has `Factory`, `IsSeq` and `BuildFrom` instances ([#24552](https://github.com/scala/scala3/pull/24552), [#24674](https://github.com/scala/scala3/pull/24674)), so more collection operations work without converting to `Array`.
 - `scala.util.ChainingOps` methods (`tap`, `pipe`) are `inline` ([#24725](https://github.com/scala/scala3/pull/24725)).
 - Several standard-library collection operations allocate less; `ArrayDeque.clear` is now O(1) ([#26288](https://github.com/scala/scala3/pull/26288)).
 - Scaladoc no longer crashes on mixed class/module API packages, keeps the current page when switching versions, and finds members whose names end in `!` or `$`.
-  <!-- TODO(author): add Scaladoc PR links for mixed class/module packages, version-switch navigation, and members ending in ! or $ -->
 
 ## What's next?
 
