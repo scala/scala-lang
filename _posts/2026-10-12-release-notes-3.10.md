@@ -7,30 +7,40 @@ by: Wojciech Mazur, VirtusLab
 
 # Scala 3.10 released!
 
-We are happy to announce **Scala 3.10.0**, starting a new Scala Next series.
+We are happy to announce **Scala 3.10.0**, the first release of the new [Scala Next]({{ site.baseurl }}/news/3.9/#what-does-lts-mean) series.
 
-This release stabilises [SIP-67](https://docs.scala-lang.org/sips/67.html), moves three SIPs into preview, and starts dropping language features that have been deprecated for several minors.
+This release stabilizes [SIP-67](https://docs.scala-lang.org/sips/67.html), moves three SIPs into preview, and starts dropping language features that have been deprecated for several minor releases.
 
-Scala 3.9 LTS remains the recommended publishing baseline for libraries that want the long support window.
-Scala 3.3 LTS aimed for maximal compatibility with Scala 2.13, and 3.9 LTS continues that approach.
-Starting with Scala 3.10, after nearly five years of Scala 3, we begin dropping legacy syntax and features that have already been deprecated.
+Scala 3.3 LTS and Scala 3.9 LTS put compatibility with Scala 2.13 first.
+Now, nearly five years after Scala 3.0, Scala 3.10 starts removing legacy syntax and features that have been deprecated for several minor releases.
 The standard library also starts using more Scala 3 features, such as `inline` and extension methods.
-We keep source and binary compatibility, but macros and compiler plugins can break when the new AST shapes no longer match the trees they were written against.
+
+Binary compatibility is preserved: libraries compiled with earlier Scala 3 versions keep working.
+Code that still uses deprecated features needs to be updated, and macros and compiler plugins can break when the trees they inspect change shape.
+If you publish a library and want the longest support window, Scala 3.9 LTS remains the recommended version to build against.
+
+## Highlights
+
+- [SIP-67](#sip-67-strict-equality-pattern-matching): pattern matching under `strictEquality` no longer needs `CanEqual` - now stable.
+- Three SIPs move to preview behind `-preview`: [`@unroll`](#sip-61-unroll-default-arguments), [relaxed lambda syntax](#sip-75-relaxed-lambda-syntax), and [referenceable package objects](#sip-68-referenceable-package-objects).
+- Deprecated syntax such as `A with B` is now an error; see [Breaking changes](#breaking-changes).
+- The compiler reports `Recursion limit exceeded` instead of crashing with a `StackOverflowError` ([details](#compiler-fuel)).
+- Scala is now also distributed as `.deb` and `.rpm` packages.
 
 ## Breaking changes
 
-Starting with Scala 3.10, you should expect deprecated language features to become errors in Scala Next.
-Macros and compiler plugins take most of the hit, but they are not the only surface that can fail.
+Most projects can upgrade without code changes.
+Macros and compiler plugins are affected most, but not exclusively.
+Expect problems in a few areas:
 
-Typical cases fall into a few buckets:
-
-- APIs that were easy to rely on by accident (for example a private companion given, or a custom `->` defined via an implicit class)
+- APIs that were easy to rely on by accident (for example, a `given` defined in a private companion object, or a custom `->` defined via an implicit class)
 - Syntax that has been deprecated for several releases already
-- Standard-library improvements where common operations became `inline` or extension methods for performance and clarity - these keep source and binary compatibility for normal call sites, but they change the trees macros see, so applications typically need a dependency upgrade rather than local source changes
+- Standard library operations that became `inline` or extension methods for performance. Normal call sites are unaffected, but macros see different trees, so you usually just need to upgrade the affected library.
 
-The sections below walk through the better-known issues in more detail.
+The sections below walk through the most common issues in more detail.
 
-> **Library maintainers:** if you ship macros or compiler plugins, we recommend a CI job against Scala Next nightlies (or the current minor once an RC exists). Those surfaces are the ones most often affected, and a job in your own repository catches them earlier than the [Open Community Build](https://github.com/VirtusLab/community-build3), which is how several of the compatibility PRs below were found.
+> **Library maintainers:** if you ship macros or compiler plugins, add a CI job that builds against Scala Next nightly releases (or against release candidates once they are available).
+> Several of the fixes listed below were found by the [Open Community Build](https://github.com/VirtusLab/community-build3); a job in your own repository finds such problems earlier.
 
 ### Inaccessible companion implicits are no longer found
 
@@ -50,26 +60,26 @@ api.describe
 ```
 
 The specification has always required an eligible implicit to be accessible at the point of the call.
-If a library you maintain still hides givens in a private companion, publish a fix before users move to 3.10 - they usually cannot repair it from the consuming project.
+If a library you maintain still hides givens in a private companion, publish a fix before users move to 3.10 - users usually cannot work around it in their own code.
+Make the companion public, or move the `given` to a public object.
 
 ### Stronger constant folding during inlining
 
-[Stronger constant folding during inlining](https://github.com/scala/scala3/pull/25731) was [left out of Scala 3.9.0]({{ site.baseurl }}/news/3.9/) so the new LTS would keep working with libraries published at the time.
-It fixes several inlining bugs, and it also exposes macros that splice ill-typed trees.
+This change ([#25731](https://github.com/scala/scala3/pull/25731)) was [held back from Scala 3.9.0]({{ site.baseurl }}/news/3.9/) so that the new LTS would keep working with libraries published at the time.
+It fixes several inlining bugs, but it also makes compilation fail for macros that generate ill-typed code, which previously happened to work.
 Scala 3.10 also [checks that a macro expansion has the type the macro claimed](https://github.com/scala/scala3/pull/25756).
 
-**ZIO ecosystem users should upgrade those libraries first**, then bump the compiler.
-Fixes already published include:
+**If you use the ZIO ecosystem, upgrade these libraries before upgrading the compiler.** The fixed versions are:
 
-- [zio/zio#10725](https://github.com/zio/zio/pull/10725), shipped in **ZIO 2.1.26**
-- [zio/zio-blocks#1584](https://github.com/zio/zio-blocks/pull/1584), in the **0.0.54** line
-- [zio/izumi-reflect#598](https://github.com/zio/izumi-reflect/pull/598), in **izumi-reflect 3.0.10**
-- [kitlangton/neotype#517](https://github.com/kitlangton/neotype/pull/517), in **neotype 0.7.2** (that release also covers the `Rich*` change below)
+- **ZIO 2.1.26** ([zio/zio#10725](https://github.com/zio/zio/pull/10725))
+- **zio-blocks 0.0.54** ([zio/zio-blocks#1584](https://github.com/zio/zio-blocks/pull/1584))
+- **izumi-reflect 3.0.10** ([zio/izumi-reflect#598](https://github.com/zio/izumi-reflect/pull/598))
+- **neotype 0.7.2** ([kitlangton/neotype#517](https://github.com/kitlangton/neotype/pull/517)), which also covers the `Rich*` change below
 
 ### Primitive `Rich*` wrappers are extension methods
 
 [`runtime.RichInt` and the other `Rich*` implicit classes are gone](https://github.com/scala/scala3/pull/23872).
-Operations such as `until`, `to`, `abs`, and `max` are now extension methods on the primitive companions.
+Operations such as `until`, `to`, `abs`, and `max` are now extension methods defined in the companion objects of `Int`, `Long`, and the other primitive types.
 Call sites that just use `1 to 10` keep working.
 Macros that inspected the old `Rich*` symbols, or that assumed `Predef` still inserted those implicit classes, need to match the extension-method shape instead.
 
@@ -81,22 +91,27 @@ The `a -> b` pair syntax is now an [inline extension method](https://github.com/
 Two practical consequences:
 
 - Quote patterns such as `case '{ ($a: String) -> ($b: Any) }` no longer match, because the tree is no longer an `ArrowAssoc` conversion.
-- A user-defined `->` on an **implicit class** can stop winning over `Predef.->`, because extension methods do not use the same "most specific" priority as implicit classes ([scala/scala3#26851](https://github.com/scala/scala3/issues/26851)). A user-defined **extension** `->` still takes precedence. If you ship a DSL that defines `->` via an implicit class, switch it to an extension method.
+- If your library defines `->` through an **implicit class**, `Predef.->` may now be chosen instead, because extension methods and implicit classes are prioritized differently ([#26851](https://github.com/scala/scala3/issues/26851)). A `->` defined as an **extension method** still takes precedence. If you ship a DSL that defines `->` via an implicit class, change it to an extension method.
 
 ### `A with B` is an error
 
 `with` as a type operator has warned since Scala 3.4 and is an [error in 3.10](https://github.com/scala/scala3/pull/26545).
-`-source:3.4-migration -rewrite` rewrites `A with B` to `A & B`.
-A typed pattern needs extra parentheses, matching that rewrite: `case x: (A & B) =>`.
+On Scala 3.10, `-source:3.4-migration -rewrite` rewrites `A with B` to `A & B`.
+In typed patterns, the intersection must be wrapped in parentheses: `case x: (A & B) =>`. The rewrite adds them for you.
 
 ### `this` is illegal in top-level definitions
 
-A top-level definition is not allowed to refer to [`this`](https://github.com/scala/scala3/pull/26448).
-There is no enclosing instance for that reference to mean.
+Top-level definitions using `this` are now rejected ([#26448](https://github.com/scala/scala3/pull/26448)).
+A top-level definition has no enclosing class, so `this` has nothing meaningful to refer to.
+Previously the reference resolved to the synthetic package object for the file, which was almost never what authors intended:
+
+```scala
+val self = this // error in 3.10
+```
 
 ### Java generic signatures are more precise
 
-[#25944](https://github.com/scala/scala3/pull/25944) boxes primitive arguments in the classfile `Signature` attribute.
+The compiler now uses boxed types for primitive type arguments in the generic signature stored in class files ([#25944](https://github.com/scala/scala3/pull/25944)).
 For a type such as `Option[Int => String]`, the generic signature is now more precise:
 
 ```text
@@ -107,35 +122,32 @@ scala.Option<scala.Function1<java.lang.Integer, java.lang.String>>
 ```
 
 The JVM method *descriptor* is unchanged, so Scala binary linking keeps working.
-What changes is what Java compilers and bytecode tools read from that signature:
+What changes is what Java compilers and bytecode tools read from that signature.
+[MiMa](https://github.com/scala-garden/mima) may report `IncompatibleSignatureProblem` when you republish ([#27063](https://github.com/scala/scala3/issues/27063) is one example).
+Upgrade to **[MiMa 1.2.0](https://github.com/scala-garden/mima/releases/tag/v1.2.0) or later** before checking a 3.10 artifact: that release adds Scala 3.9 and 3.10 support and fixes several false positives.
+If you mix Scala and Java, also check that Java call sites still type-check against the tighter signature.
 
-- [MiMa](https://github.com/scala-garden/mima) reports `IncompatibleSignatureProblem` when you republish. Upgrade to **[MiMa 1.2.0](https://github.com/scala-garden/mima/releases/tag/v1.2.0) or later** (1.2.1 is current) before checking a 3.10 artifact: that release adds Scala 3.9 and 3.10 support and drops several false positives.
-- Java call sites can start seeing a tighter type argument.
-
-Library authors may see extra MiMa reports on signatures when they republish; [scala/scala3#27063](https://github.com/scala/scala3/issues/27063) is one example. If you mix Scala and Java, check that Java call sites still type-check.
-
-[#26787](https://github.com/scala/scala3/pull/26787) also boxes primitive and value-class results inside higher-kinded type lambdas, which previously could crash the JVM backend.
+Primitive and value-class results inside higher-kinded type lambdas are now boxed as well; previously they could crash the compiler's JVM backend ([#26787](https://github.com/scala/scala3/pull/26787)).
 
 ### Recursion runs out of fuel instead of overflowing the stack
 
 The compiler no longer catches `StackOverflowError` to stop runaway type checking ([#25937](https://github.com/scala/scala3/pull/25937)).
-It spends a fuel budget instead, so you get a `Recursion limit exceeded` error rather than a JVM crash.
-Very deep types that used to compile by luck may now fail until you raise `-Xmax-fuel`.
+Very deep types that used to compile by luck may now fail until you raise `-Xmax-fuel` and usually `-Xss`.
 See [Fuel-limited recursion](#compiler-fuel) for how that works and which flags to set.
 
 ### Other compatibility notes
 
 - Deprecated no-op compiler settings are removed, including `-Youtput-only-tasty` ([#26169](https://github.com/scala/scala3/pull/26169), [#26170](https://github.com/scala/scala3/pull/26170), [#26171](https://github.com/scala/scala3/pull/26171)).
-- Bytecode generation uses stock ASM rather than the old scala-asm fork ([#26772](https://github.com/scala/scala3/pull/26772)).
+- Bytecode generation uses the upstream ASM library instead of the scala-asm fork ([#26772](https://github.com/scala/scala3/pull/26772)). Tools that depended on the `scala-asm` artifact transitively may need a dependency update.
 
 ## New stable features
 
-### [SIP-67: Strict equality pattern matching](https://docs.scala-lang.org/sips/67.html)
+### [SIP-67: Strict equality pattern matching](https://docs.scala-lang.org/sips/67.html) {#sip-67-strict-equality-pattern-matching}
 
 With `strictEquality`, `x == y` needs a `CanEqual` instance, so you cannot compare unrelated types by accident.
 Until now that also got in the way of ordinary pattern matching: matching on an enum case or case object is implemented with `==` under the hood, so the compiler asked for `CanEqual` even when you only wrote `match`.
 
-SIP-67, experimental since Scala 3.8, fixes that and is now enabled by default.
+SIP-67, experimental since Scala 3.8, is now stable, so it applies whenever `strictEquality` is enabled.
 You can match on enums and ADTs under `strictEquality` without proving `CanEqual`, while `==` itself stays strict.
 
 ```scala
@@ -153,20 +165,24 @@ def eqIsStillIllegal(x: Foo, y: Foo) =
 
 def eval(x: Foo): Int =
   x match
-    case Foo.Bar      => 0
+    case Foo.Bar      => 0 // previously required CanEqual[Foo, Foo]
     case Foo.Baz(fun) => fun(0)
 ```
 
 ## New preview features
 
-Preview features are enabled with `-preview`.
-The experimental language imports that previously gated these SIPs are deprecated and tell you to switch to that flag.
+Preview features are enabled with `-preview` (for example `scalacOptions += "-preview"` in sbt, or `scala -preview` / `//> using options -preview` with Scala CLI).
+The experimental language imports that previously gated these SIPs are deprecated; using them prints a warning that points you to `-preview`.
 
-### [SIP-61: Unroll default arguments](https://docs.scala-lang.org/sips/61.html)
+### [SIP-61: Unroll default arguments](https://docs.scala-lang.org/sips/61.html) {#sip-61-unroll-default-arguments}
 
-New parameters must be **appended**. `@unroll` marks the first new defaulted parameter of a release, and every parameter to its right must also have a default.
-The compiler checks that annotated parameters (and those after them) have defaults; it does **not** check that you placed `@unroll` on the right boundary for your API history - that is solely on you.
-Each `@unroll` emits an invisible binary forwarder that drops that parameter and everything after it.
+Adding a parameter with a default value to a public method is source compatible, but not binary compatible: the old JVM method signature disappears, so code compiled against the previous version of your library fails at runtime with `NoSuchMethodError`.
+`@unroll` tells the compiler to keep the old signatures as forwarders - methods that exist in the bytecode but cannot be called from Scala source.
+
+New parameters must be **appended**.
+`@unroll` marks the first parameter added in each version of your library, and every parameter to its right must also have a default.
+The compiler checks that annotated parameters (and those after them) have defaults.
+The compiler does not check that `@unroll` is placed at the right version boundary; that is your responsibility.
 Keep an `@unroll` at every previous binary boundary when you add another wave of parameters.
 
 ```scala
@@ -176,17 +192,16 @@ Keep an `@unroll` at every previous binary boundary when you add another wave of
 import scala.annotation.unroll
 
 object Api:
-  // Generated binary API also includes invisible forwarders:
-  //   greet(name)                                 // since 1.0
-  //   greet(name, excited, punctuation)           // since 1.1
-  //   greet(name, excited, punctuation, color)    // since 1.2
+  // Invisible forwarders generated by @unroll:
+  //   greet(name)                        // v1.0
+  //   greet(name, excited, punctuation)  // v1.1
   final def greet(
-      // since v1.0
+      // v1.0
       name: String,
-      // since v1.1
+      // v1.1
       @unroll excited: Boolean = true,
       punctuation: String = "!",
-      // since v1.2
+      // v1.2
       @unroll color: String = "blue"
   ): String =
     val base = s"Hello, $name"
@@ -194,20 +209,20 @@ object Api:
     s"$text[$color]"
 ```
 
-New Scala callers, compiling against the latest version of API do not need the forwarders: they see the full method and omit trailing arguments via ordinary Scala defaults.
+New Scala callers compiling against the latest version of the API do not need the forwarders: they see the full method and omit trailing arguments via ordinary Scala defaults.
 The forwarders exist for **already-compiled** clients that linked against an older JVM signature such as `greet(String)`.
-They are marked invisible, so new source resolution does not pick them; only the binary API keeps them.
 Without `@unroll`, defaults alone never emit those older overloads, so old binaries fail to link.
 You can append parameters this way, but you **cannot remove** them later: dropping a parameter removes a binary entry point and breaks existing callers.
 Use [MiMa](https://github.com/scala-garden/mima) against your previous artifacts to catch a missing forwarder or a dropped parameter before you publish.
-If V1.2 annotated only `color`, you would keep the V1.1 `greet(name, excited, punctuation)` entry point but drop the V1.0 `greet(name)` one.
+If v1.2 had annotated only `color`, the v1.1 entry point `greet(name, excited, punctuation)` would be kept but the v1.0 entry point `greet(name)` would be lost.
 
-### [SIP-75: Relaxed lambda syntax](https://docs.scala-lang.org/sips/75.html)
+### [SIP-75: Relaxed lambda syntax](https://docs.scala-lang.org/sips/75.html) {#sip-75-relaxed-lambda-syntax}
 
-Fewer-braces application with `:` already allowed an indented lambda.
+[Fewer-braces](https://docs.scala-lang.org/scala3/reference/other-new-features/indentation.html) application with `:` already allowed an indented lambda.
 SIP-75 now allows the lambda on the same line as well, so `:` means application whether the body is indented or written inline.
 A same-line lambda extends to the end of the line.
-It does not accept wildcard syntax: write the full form with `=>` or `?=>` and named parameters. `xs.map: _ + 1` is rejected; use `xs.map: x => x + 1` instead.
+Placeholder syntax (`_`) is not supported; write a lambda with named parameters and `=>` or `?=>`.
+For example, `xs.map: _ + 1` is rejected; write `xs.map: x => x + 1` instead.
 
 ```scala
 //> using scala 3.10.0
@@ -215,7 +230,7 @@ It does not accept wildcard syntax: write the full form with `=>` or `?=>` and n
 
 def newSyntax(xs: Option[Int]) =
   xs.map: v => v + 1
-    .filter: v => v > 3 && v < 8
+  .filter: v => v > 3 && v < 8
 
 def oldSyntax(xs: Option[Int]) =
   xs.map: v =>
@@ -226,17 +241,18 @@ def oldSyntax(xs: Option[Int]) =
 val sums = Seq((1, 2), (3, 4)).map: (a, b) => a + b
 ```
 
-Two single-line lambdas on the same line are rejected, following the SIP amendment.
-The new reading also does not apply immediately inside parentheses, so `(x: Int => Int)` stays a type ascription.
+In both forms above, `.filter` continues the chain started by `xs.map`; the indentation of the lambda body does not change how the following `.filter` attaches.
+Two single-line lambdas on the same line are rejected ([SIP amendment](https://docs.scala-lang.org/sips/75.html)): `xs.map: x => ys.map: y => x + y` must wrap the inner lambda in parentheses.
+The new rule also does not apply immediately inside parentheses, so `(x: Int => Int)` stays a type ascription.
 
-### [SIP-68: Referenceable package objects](https://docs.scala-lang.org/sips/68.html)
+### [SIP-68: Referenceable package objects](https://docs.scala-lang.org/sips/68.html) {#sip-68-referenceable-package-objects}
 
 You could always call members on a package object (`lib.json.encode(...)`), but until now you could not treat the package object itself as a value the way a normal `object` works.
 `val api = lib.json` failed with "package is not a value"; the workaround was `` lib.json.`package` ``.
 SIP-68 removes that irregularity, so the direct form now works.
 
-Package objects were [listed among features that may eventually go away](https://docs.scala-lang.org/scala3/reference/dropped-features/package-objects.html) in favor of top-level definitions, but despite that earlier announcement there is not yet a concrete removal plan.
-Until that story changes, making them referenceable like normal objects removes a long-standing wart rather than investing in a dead end.
+Package objects are [listed among features that may eventually be dropped](https://docs.scala-lang.org/scala3/reference/dropped-features/package-objects.html), but there is no concrete plan to remove them.
+Until there is, they should behave like ordinary objects.
 
 ```scala
 //> using scala 3.10.0
@@ -258,23 +274,18 @@ object Demo:
   roundTrip(lib.json, 42)
 ```
 
-The expansion only applies when the package object is used standalone (`lib.json`), not in a longer select such as `lib.json.encode`.
-The value has the type of the package object, not of every definition that happens to live in that package.
+`lib.json` is treated as `` lib.json.`package` `` only when it is used on its own, not in a longer selection such as `lib.json.encode`.
+Its type is the type of the package object, so it only includes members of the package object itself, not top-level definitions from other files in the same package.
 
 ## New experimental features
 
-Experimental features carry neither source nor binary compatibility guarantees between any compiler versions - these can be changes or removed at any time until stabilized as `preview` features.
+Experimental features carry neither source nor binary compatibility guarantees between any compiler versions - they can be changed or removed at any time until stabilized as `preview` features.
+Enable them with `-experimental`, or with a specific `-language:experimental.*` option as in the snippets below.
+A *Pre-SIP* feature is a design that has not yet been submitted as a SIP.
 
 ### Pre-SIP: Inline traits and specialized traits
 
-[Inline traits and specialized traits](https://github.com/scala/scala3/pull/26156) are a new attempt at specialization in Scala 3, replacing Scala 2's `@specialized`.
-
-An `inline trait` does not stay as a shared superclass whose methods are erased to `Object`.
-When a concrete class extends `Cell[T]` with `T = Int` (here via `new Cell[T](value) {}` inside `Cell.apply`), the compiler pastes the trait's members into that class with `T` already replaced by `Int`, so the implementation stores and returns a primitive `int`.
-
-That alone is not enough for calls through a `Cell[Int]` typed reference: erasure would still see a generic `Cell` interface, so `c.get` would return `Object` and need unboxing.
-A `Specialized` context bound asks the compiler to also emit a specialized interface (for example `Cell$$sp$scala$Int` with `get(): Int`) and to route those calls through it.
-In the snippet below, `bump` therefore compiles to an unboxed `get` plus `iadd`, not `get`/`unboxToInt`/`iadd`.
+[Inline traits and specialized traits](https://github.com/scala/scala3/pull/26156) are a new attempt at specialization in Scala 3, a Scala 3 successor to Scala 2's `@specialized`, which Scala 3 does not support.
 
 ```scala
 //> using scala 3.10.0
@@ -294,16 +305,24 @@ def bump(c: Cell[Int]): Int =
   println(bump(Cell(41)))
 ```
 
-See the [reference](https://docs.scala-lang.org/scala3/reference/experimental/specialized-traits.html) for the generated layout, richer examples such as specialized numeric vectors, and the current restrictions.
+An `inline trait` does not stay as a shared superclass whose methods are erased to `Object`.
+When a concrete class extends `Cell[T]` with `T = Int`, the compiler copies the trait's members into that class with `T` already replaced by `Int`, so the implementation stores and returns a primitive `int`.
+
+That alone is not enough for calls through a reference whose static type is `Cell[Int]`: erasure would still see a generic `Cell` interface, so `c.get` would return `Object` and need unboxing.
+A `Specialized` context bound asks the compiler to also emit a specialized interface (for example `Cell$$sp$scala$Int` with `get(): Int`) and to route those calls through it, so `bump` reads the value without boxing (an unboxed `get` followed by `iadd`, instead of `get`, `unboxToInt`, `iadd`).
+
+See the [reference](https://scala-lang.org/api/3.10.0/docs/experimental/specialized-traits.html) for the generated layout, richer examples such as specialized numeric vectors, and the current restrictions.
 
 ### Pre-SIP: Spec strings
 
 [Spec strings](https://github.com/scala/scala3/pull/26486) put a coding agent's prompt in the source file, right where the generated code should live.
 You write the signature and the intent; the agent is expected to fill in the body (and later keep that body aligned when the intent changes).
-The compiler only accepts the syntax and erases the string at runtime — IDE, build, or agent-loop tooling is what invokes the model and reconciles the two sides.
+The compiler only checks the syntax and does not keep the string in the bytecode - IDE, build, or agent-loop tooling is what invokes the model and reconciles the two sides.
+No such tooling ships with 3.10.0 yet; the feature is available so that tool authors can experiment.
 
-`'''spec` is a dedented string literal enabled by `import scala.language.experimental.magic` (modular agent interface code).
-Markdown backticks can name real Scala symbols such as `` `Date` ``, so rename and navigation work across the prompt.
+Spec strings use a new triple-single-quote literal, `'''spec … '''`, whose content is dedented.
+They are enabled by `import scala.language.experimental.magic` (`magic` is short for *modular agent interface code*).
+Markdown backticks can name real Scala symbols such as `` `Date` ``, so IDE rename and go-to-definition also work inside the prompt.
 
 A typical starting point leaves the body to the agent:
 
@@ -330,10 +349,10 @@ Edits in the other direction work the same way: change the body by hand and the 
 Scala 3.10 ships with Scala CLI **1.17.1**.
 See the [v1.17.0](https://github.com/VirtusLab/scala-cli/releases/tag/v1.17.0) and [v1.17.1](https://github.com/VirtusLab/scala-cli/releases/tag/v1.17.1) notes for the full list; the main additions are:
 
-- JEP 512 flexible main methods on JDK 25+ (and on JDK 21+ with `--enable-preview`)
+- Java instance main methods and `void main()` without a class ([JEP 512](https://openjdk.org/jeps/512)), on JDK 25+ (or JDK 21+ with `--enable-preview`)
 - Individual files as resources with `--resource` or `//> using resource`
 - `//> using exclude` in `.sc` scripts
-- `-d` paths that end in `.jar` emit a library JAR, matching `scalac`
+- Passing a `-d` path ending in `.jar` now produces a library JAR, as `scalac` does
 - The `lts` version tag now resolves to the Scala **3.9** LTS series (use `3.3.lts` to stay on 3.3)
 
 ### Deb and RPM packages
@@ -342,7 +361,7 @@ The recommended way to install Scala remains a version manager such as [Coursier
 Those tools still give you the easiest upgrades and the ability to switch between Scala versions.
 
 Scala 3.10 also ships the distribution as **`.deb` and `.rpm`** packages ([#26858](https://github.com/scala/scala3/pull/26858)), so you can install it through the usual package managers on Debian/Ubuntu and Fedora/RHEL-family systems when that fits your environment better.
-The packages were smoke-tested on recent Debian, Ubuntu, Fedora, AlmaLinux, and openSUSE releases.
+The packages are published as [GitHub release assets](https://github.com/scala/scala3/releases) alongside the existing archives, the same way Windows `.msi` installers are.
 
 ## Other changes worth noting
 
@@ -354,8 +373,9 @@ Catching `StackOverflowError` was unreliable, and the crash was hard to relate b
 From Scala 3.10, recursive compiler work spends **fuel** ([#25937](https://github.com/scala/scala3/pull/25937)): a counter of how deeply the compiler may nest fuel-checked operations such as subtype tests, match-type reduction, or inlining before it gives up.
 Each nested entry costs one unit of fuel; when the counter hits zero, compilation stops with `Recursion limit exceeded` and a short list of the recurring operations, instead of a stack overflow.
 
-The fuel budget is set with the compiler option `-Xmax-fuel`. The default is 550 units, sized so a typical JVM stack would usually run out of fuel before overflowing.
-If the error is from a type or expansion that is *meant* to be that deep, raise the limit, for example `-Xmax-fuel:2000`, **and** give the compiler a larger stack with `-Xss` (in sbt, put it in `.jvmopts`).
+The fuel budget is set with the compiler option `-Xmax-fuel`.
+The default is 550, chosen so that, with a typical JVM stack size, the compiler runs out of fuel before the stack overflows.
+If the error comes from a type or expansion that is *meant* to be that deep, raise the limit, for example `-Xmax-fuel:2000`, **and** give the compiler a larger stack with `-Xss` (in sbt, put it in `.jvmopts`; with Scala CLI, `//> using javaOpt -Xss8m` or `--java-opt -Xss8m`).
 Raising fuel without raising the stack often just turns the error into a real `StackOverflowError`.
 
 Fuel is separate from `-Xmax-inlines` (default 32), which caps how many successive inline expansions are allowed.
@@ -363,12 +383,14 @@ Deep recursive inlines also spend fuel while the expansion is typed, so raising 
 
 If you get a `StackOverflowError` on 3.10 without changing `-Xmax-fuel` or the stack size, that is a compiler bug: fuel should run out first. [Please report it](https://github.com/scala/scala3/issues/new/choose).
 
-For the details, including Scala.js where you cannot grow the stack, see [Compiling deeply nested code](https://docs.scala-lang.org/overviews/compiler-options/compiling-deeply-nested-code.html).
+For the details, including hosts where you cannot grow the stack when the compiler itself runs there, see [Compiling deeply nested code](https://docs.scala-lang.org/overviews/compiler-options/compiling-deeply-nested-code.html).
 
 ### Pattern matching on Java records
 
-Java records can be used as extractor patterns, including generic records and varargs components.
-A user-defined `unapply` still takes precedence.
+Java records can be used as extractor patterns, including generic records and varargs components ([#26497](https://github.com/scala/scala3/pull/26497)).
+A static `unapply` already defined on the record class still takes precedence.
+
+Given these Java records, compiled as part of the same project or coming from a dependency:
 
 ```java
 public record Point(int x, int y) {}
@@ -388,7 +410,6 @@ public record Labels(int count, String... names) {}
     case Labels(count, names*) => println(s"$count: ${names.mkString(",")}")
 ```
 
-
 ### `\s` space escape
 
 String literals accept `\s` as a space, including in interpolators ([#26515](https://github.com/scala/scala3/pull/26515)).
@@ -405,7 +426,7 @@ println(f"a\sb")   // a b
 
 ### REPL
 
-The Scala REPL now accepts selected `//> using` directives in the same input as the code that follows them: [`dep`](https://github.com/scala/scala3/pull/26507), [`toolkit`](https://github.com/scala/scala3/pull/26788), and [`jar`](https://github.com/scala/scala3/pull/26726).
+You can now type `//> using dep`, `//> using toolkit`, and `//> using jar` directives directly in the REPL, on their own or followed by code in the same input ([#26507](https://github.com/scala/scala3/pull/26507), [#26788](https://github.com/scala/scala3/pull/26788), [#26726](https://github.com/scala/scala3/pull/26726)).
 Do not mix them with `:` REPL commands in a single input.
 
 ```text
@@ -414,26 +435,27 @@ scala> //> using toolkit default
 val res0: os.Path = ...
 ```
 
-It also gained `:save` and `:replay`, can print results with `-Yrepl-print-tostring`, and enables `-deprecation` and `-feature` by default.
+The REPL also gained `:save` and `:replay`: `:save <path>` writes the session's inputs to a file, and `:replay` resets the REPL and re-runs those commands.
+`-Yrepl-print-tostring` ([#26435](https://github.com/scala/scala3/pull/26435)) prints results with `toString` instead of the default pretty-printer.
+`-deprecation` and `-feature` are enabled by default in the REPL.
 
 ### Standard library and tooling
 
-- `IArray` got `IsSeq` and `BuildFrom` instances, so more collection operations work without converting to `Array`.
-- `scala.util.ChainingOps` methods (`tap`, `pipe`) are `inline`.
-- Several standard-library collection operations allocate less; `ArrayDeque.clear` is now O(1).
+- `IArray` now has `IsSeq` and `BuildFrom` instances ([#24552](https://github.com/scala/scala3/pull/24552), [#24674](https://github.com/scala/scala3/pull/24674)), so more collection operations work without converting to `Array`.
+- `scala.util.ChainingOps` methods (`tap`, `pipe`) are `inline` ([#24725](https://github.com/scala/scala3/pull/24725)).
+- Several standard-library collection operations allocate less; `ArrayDeque.clear` is now O(1) ([#26288](https://github.com/scala/scala3/pull/26288)).
 - Scaladoc no longer crashes on mixed class/module API packages, keeps the current page when switching versions, and finds members whose names end in `!` or `$`.
-
-The full list is in the [Scala 3.10.0 release notes](https://github.com/scala/scala3/releases/tag/3.10.0).
+  <!-- TODO(author): add Scaladoc PR links for mixed class/module packages, version-switch navigation, and members ending in ! or $ -->
 
 ## What's next?
 
-**Scala 3.10.1** is already cut. Its first RC will follow shortly after 3.10.0.
+The release branch for **Scala 3.10.1** has already been cut, and its first release candidate will follow shortly.
 
 We plan one further patch, **Scala 3.10.2**, a few weeks later.
-After that the line moves on to **Scala 3.11**, expected around **March or April 2027**.
+After that, development moves on to **Scala 3.11**, expected around **March or April 2027**.
 
 Scala 3.9 LTS continues as the long-term publishing baseline.
 
 ---
 
-The full changelog for Scala 3.10.0 can as always be found in the [release notes on GitHub](https://github.com/scala/scala3/releases/tag/3.10.0).
+As always, the full changelog is available in the [release notes on GitHub](https://github.com/scala/scala3/releases/tag/3.10.0).
