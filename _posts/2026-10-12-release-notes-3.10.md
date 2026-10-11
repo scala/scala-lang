@@ -15,14 +15,15 @@ Scala 3.3 LTS and Scala 3.9 LTS put compatibility with Scala 2.13 first.
 Now, nearly five years after Scala 3.0, Scala 3.10 starts removing legacy syntax and features that have been deprecated for several minor releases.
 The standard library also starts using more Scala 3 features, such as `inline` and extension methods.
 
-Binary compatibility is preserved: libraries compiled with earlier Scala 3 versions keep working.
-Code that still uses deprecated features needs to be updated, and macros and compiler plugins can break when the trees they inspect change shape.
+Binary compatibility is preserved: libraries compiled with earlier Scala 3 versions keep working, including those that used features now removed.
+Source that still uses those features must be updated to compile with 3.10.
+Macros and compiler plugins may need to be adapted to changed internal representations (details below).
 If you publish a library and want the longest support window, Scala 3.9 LTS remains the recommended version to build against.
 
-As of Scala 3.10, cross-compilation with Scala 2 is no longer supported.
+Cross-compilation between Scala 2 and 3.10 is no longer supported because of the removed legacy features.
 Some libraries might remain cross-compilable, but it is expected that cross-compiled libraries will remain on Scala 3.9 LTS indefinitely.
 
-Before checking a 3.10 artifact with [MiMa](https://github.com/scala-garden/mima), upgrade to **[MiMa 1.2.0](https://github.com/scala-garden/mima/releases/tag/v1.2.0) or later**: that release adds Scala 3.9 and 3.10 support and fixes several false positives.
+Before checking a 3.10 artifact with [MiMa](https://github.com/scala-garden/mima), upgrade to **[MiMa 1.2.1](https://github.com/scala-garden/mima/releases/tag/v1.2.1) or later**: that release adds Scala 3.9 and 3.10 support and fixes several false positives.
 
 ## Highlights
 
@@ -127,7 +128,7 @@ scala.Option<scala.Function1<java.lang.Integer, java.lang.String>>
 
 The JVM method *descriptor* is unchanged, so Scala binary linking keeps working.
 What changes is what Java compilers and bytecode tools read from that signature.
-[MiMa](https://github.com/scala-garden/mima) may report `IncompatibleSignatureProblem` when you republish ([#27063](https://github.com/scala/scala3/issues/27063) is one example); use MiMa 1.2.0 or later, as noted in the introduction.
+[MiMa](https://github.com/scala-garden/mima) may report `IncompatibleSignatureProblem` when you republish ([#27063](https://github.com/scala/scala3/issues/27063) is one example); use MiMa 1.2.1 or later, as noted in the introduction.
 If you mix Scala and Java, also check that Java call sites still type-check against the tighter signature.
 
 Primitive and value-class results inside higher-kinded type lambdas are now boxed as well; previously they could crash the compiler's JVM backend ([#26787](https://github.com/scala/scala3/pull/26787)).
