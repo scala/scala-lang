@@ -315,37 +315,6 @@ A `Specialized` context bound asks the compiler to also emit a specialized inter
 
 See the [reference](https://scala-lang.org/api/3.10.0/docs/experimental/specialized-traits.html) for the generated layout, richer examples such as specialized numeric vectors, and the current restrictions.
 
-### Pre-SIP: Spec strings
-
-[Spec strings](https://github.com/scala/scala3/pull/26486) put a coding agent's prompt in the source file, right where the generated code should live.
-You write the signature and the intent; the agent is expected to fill in the body (and later keep that body aligned when the intent changes).
-The compiler only checks the syntax and does not keep the string in the bytecode - IDE, build, or agent-loop tooling is what invokes the model and reconciles the two sides.
-No such tooling ships with 3.10.0 yet; the feature is available so that tool authors can experiment.
-
-Spec strings use a new triple-single-quote literal, `'''spec … '''`, whose content is dedented.
-They are enabled by `import scala.language.experimental.magic` (`magic` is short for *modular agent interface code*).
-Markdown backticks can name real Scala symbols such as `` `Date` ``, so IDE rename and go-to-definition also work inside the prompt.
-
-A typical starting point leaves the body to the agent:
-
-```scala
-//> using scala 3.10.0
-
-import language.experimental.magic
-
-type Date = (day: Int, month: Int, year: Int)
-
-def parseDate(str: String): Option[Date] =
-  '''spec
-  Parse date string into a `Date` structure
-  '''
-  ???
-```
-
-On the next agent pass, `???` is replaced with an implementation that matches the prompt.
-If you later tighten the spec to require the format `"day/month/year"`, tooling should notice the drift and rewrite the generated body (for example switching `split("-")` to `split("/")`) rather than leaving stale code behind.
-Edits in the other direction work the same way: change the body by hand and the agent updates the spec to describe it.
-
 ## Scala CLI and distribution
 
 Scala 3.10 ships with Scala CLI **1.17.1**.
