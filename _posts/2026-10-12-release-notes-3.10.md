@@ -285,6 +285,40 @@ They can be changed or removed at any time until stabilized as `preview` feature
 Enable them with `-experimental`, or with a specific `-language:experimental.*` option as in the snippets below.
 A *Pre-SIP* feature is a design that has not yet been submitted as a SIP.
 
+### [SIP-72: Dedented string literals](https://github.com/scala/improvement-proposals/pull/112)
+
+[Dedented string literals](https://github.com/scala/scala3/pull/26332) are an experimental implementation of SIP-72.
+Enable them with `-language:experimental.dedentedStringLiterals`, or `import language.experimental.dedentedStringLiterals`.
+
+They introduce a `'''` multiline literal that strips indentation in the language, so you do not need `.stripMargin`.
+The opening `'''` must be followed by a newline, and the closing `'''` must sit on its own indented line.
+The compiler removes the first newline after the opener, the final newline before the closer, and common leading indentation up to the closer's column.
+Indent content further than the closer if you want leading spaces kept in the string.
+Interpolators such as `s'''...'''` and `f'''...'''` work the same way.
+
+```scala
+//> using scala 3.10.0
+//> using options -language:experimental.dedentedStringLiterals
+
+def plain =
+  '''
+  i am cow
+  hear me moo
+  '''
+
+def indented =
+  '''
+    i am cow
+    hear me moo
+  '''
+
+@main def run(): Unit =
+  println(plain)    // i am cow\nhear me moo
+  println(indented) //   i am cow\n  hear me moo
+```
+
+See the [reference](https://scala-lang.org/api/3.10.0/docs/experimental/dedented-string-literals.html) for the full rules and more examples.
+
 ### Pre-SIP: Inline traits and specialized traits
 
 [Inline traits and specialized traits](https://github.com/scala/scala3/pull/26156) are a new attempt at specialization in Scala 3, a Scala 3 successor to Scala 2's `@specialized`, which Scala 3 does not support.
