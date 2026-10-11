@@ -18,6 +18,7 @@ The standard library also starts using more Scala 3 features, such as `inline` a
 Binary compatibility is preserved: libraries compiled with earlier Scala 3 versions keep working.
 Code that still uses deprecated features needs to be updated, and macros and compiler plugins can break when the trees they inspect change shape.
 If you publish a library and want the longest support window, Scala 3.9 LTS remains the recommended version to build against.
+
 As of Scala 3.10, cross-compilation with Scala 2 is no longer supported.
 Some libraries might remain cross-compilable, but it is expected that cross-compiled libraries will remain on Scala 3.9 LTS indefinitely.
 
@@ -134,7 +135,7 @@ Primitive and value-class results inside higher-kinded type lambdas are now boxe
 ### Recursion runs out of "fuel" instead of overflowing the stack
 
 The compiler no longer catches `StackOverflowError` to stop runaway type checking ([#25937](https://github.com/scala/scala3/pull/25937)).
-Very deep types that used to compile by luck may now fail until you raise `-Xmax-fuel` and usually `-Xss`.
+Very deep types that used to compile may now fail until you raise `-Xmax-fuel` and usually `-Xss`.
 See [Fuel-limited recursion](#compiler-fuel) for how that works and which flags to set.
 
 ### Other compatibility notes
