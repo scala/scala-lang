@@ -21,6 +21,8 @@ If you publish a library and want the longest support window, Scala 3.9 LTS rema
 As of Scala 3.10, cross-compilation with Scala 2 is no longer supported.
 Some libraries might remain cross-compilable, but it is expected that cross-compiled libraries will remain on Scala 3.9 LTS indefinitely.
 
+Before checking a 3.10 artifact with [MiMa](https://github.com/scala-garden/mima), upgrade to **[MiMa 1.2.0](https://github.com/scala-garden/mima/releases/tag/v1.2.0) or later**: that release adds Scala 3.9 and 3.10 support and fixes several false positives.
+
 ## Highlights
 
 - [SIP-67](#sip-67-strict-equality-pattern-matching): pattern matching under `strictEquality` no longer needs `CanEqual` - now stable. (But strict equality remains an opt-in feature.)
@@ -43,7 +45,6 @@ The sections below walk through the most common issues in more detail.
 
 > **Library maintainers:** if you ship macros or compiler plugins, add a CI job that builds against Scala Next nightly releases (or against release candidates once they are available).
 > Several of the fixes listed below were found by the [Open Community Build](https://github.com/VirtusLab/community-build3); a job in your own repository finds such problems earlier.
-> Before checking a 3.10 artifact with [MiMa](https://github.com/scala-garden/mima), upgrade to **[MiMa 1.2.0](https://github.com/scala-garden/mima/releases/tag/v1.2.0) or later**: that release adds Scala 3.9 and 3.10 support and fixes several false positives.
 
 ### Inaccessible companion implicits are no longer found
 
@@ -125,7 +126,7 @@ scala.Option<scala.Function1<java.lang.Integer, java.lang.String>>
 
 The JVM method *descriptor* is unchanged, so Scala binary linking keeps working.
 What changes is what Java compilers and bytecode tools read from that signature.
-[MiMa](https://github.com/scala-garden/mima) may report `IncompatibleSignatureProblem` when you republish ([#27063](https://github.com/scala/scala3/issues/27063) is one example); see the library-maintainers note above for the MiMa version to use.
+[MiMa](https://github.com/scala-garden/mima) may report `IncompatibleSignatureProblem` when you republish ([#27063](https://github.com/scala/scala3/issues/27063) is one example); use MiMa 1.2.0 or later, as noted in the introduction.
 If you mix Scala and Java, also check that Java call sites still type-check against the tighter signature.
 
 Primitive and value-class results inside higher-kinded type lambdas are now boxed as well; previously they could crash the compiler's JVM backend ([#26787](https://github.com/scala/scala3/pull/26787)).
