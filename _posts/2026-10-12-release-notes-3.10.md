@@ -450,7 +450,6 @@ The REPL also gained `:save` and `:replay`: `:save <path>` writes the session's 
 ### Standard library and tooling
 
 - `IArray` now has `Factory`, `IsSeq` and `BuildFrom` instances ([#24552](https://github.com/scala/scala3/pull/24552), [#24674](https://github.com/scala/scala3/pull/24674)), so more collection operations work without converting to `Array`.
-- `scala.util.ChainingOps` methods (`tap`, `pipe`) are `inline` ([#24725](https://github.com/scala/scala3/pull/24725)).
 - Several standard-library collection operations allocate less; `ArrayDeque.clear` is now O(1) ([#26288](https://github.com/scala/scala3/pull/26288)).
 - Scaladoc no longer crashes on mixed class/module API packages, keeps the current page when switching versions, and finds members whose names end in `!` or `$`.
 
