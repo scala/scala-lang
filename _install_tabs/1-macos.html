@@ -4,11 +4,12 @@ tabLabel: macOS
 ---
 <div class="text-step wrap-inline">
   <div class="wrap">
-    <p>Run the following command in your terminal, following the on-screen instructions:</p>
+    <p>Install Scala with <a href="https://brew.sh/" target="_blank">Homebrew</a> by running the following command in your terminal:</p>
     {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-brew %}
-    {% assign homebrewAlt = "Alternatively for Apple Silicon, or if you don't use Homebrew:" %}
+    {% assign homebrewAlt = "Alternatively, if you don't use Homebrew:" %}
     {% capture homebrewDetail %}
     <div class="wrap-narrow">
+      <p>Install Scala with <code>cs setup</code>, the Scala installer powered by Coursier, following the on-screen instructions.</p>
       <p>On the Apple Silicon (M1, M2, …) architecture:</p>
       {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.macOS-arm64 %}
       <p>Otherwise, on the x86-64 architecture:</p>
