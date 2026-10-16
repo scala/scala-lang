@@ -4,3 +4,4 @@ macOS-x86-64: curl -fL https://github.com/coursier/coursier/releases/latest/down
 macOS-arm64: curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-aarch64-apple-darwin.gz | gzip -d > cs && chmod +x cs && (xattr -d com.apple.quarantine cs || true) && ./cs setup
 macOS-brew: brew install scala
 windows-link: https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-win32.zip
+windows-choco: choco install scala
