@@ -6,5 +6,18 @@ tabLabel: Windows
   <div class="wrap">
     <p>Download and execute <a href="{{site.data.setup-scala.windows-link}}">the Scala
         installer for Windows</a> based on Coursier, and follow the on-screen instructions.</p>
+    {% assign chocolateyAlt = "Alternatively, if you use Chocolatey:" %}
+    {% capture chocolateyDetail %}
+    <div class="wrap-narrow">
+      <p>Install the <a href="https://community.chocolatey.org/packages/scala" target="_blank">Scala package</a>
+        with <a href="https://chocolatey.org/" target="_blank">Chocolatey</a> by running the following command in your terminal:</p>
+      {% include code-snippet.html language='bash' codeSnippet=site.data.setup-scala.windows-choco %}
+    </div>
+    {% endcapture %}
+    {% include alt-details.html
+      id='scala-windows-chocolatey'
+      title=chocolateyAlt
+      detail=chocolateyDetail
+    %}
   </div>
 </div>
