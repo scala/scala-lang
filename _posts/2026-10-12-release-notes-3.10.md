@@ -468,13 +468,13 @@ As always, the full changelog is available in the [release notes on GitHub](http
 
 This release was made possible by the joint work of [EPFL](https://www.epfl.ch/), [VirtusLab](https://virtuslab.com/expertise/scala) and the [Scala Center](https://scala.epfl.ch/), together with the wider Scala community. Thank you to everyone who contributed.
 
-<a href="https://virtuslab.com/expertise/scala"><img src="{{ site.baseurl }}/resources/img/orgs/virtuslab-logo.png" alt="VirtusLab" style="height: 64px; width: auto;"></a>
+<p style="margin-bottom: 4px; line-height: 0;"><a href="https://virtuslab.com/expertise/scala"><img src="{{ site.baseurl }}/resources/img/orgs/virtuslab-logo.png" alt="VirtusLab" style="height: 64px; width: auto; margin: 0;"></a></p>
 
 **About VirtusLab**
 
 VirtusLab is a software engineering company and a long-term core contributor to the Scala ecosystem. Its engineers help maintain the Scala 2 and Scala 3 compilers, manage their releases, and build key tools including Scala CLI, the Metals language server and the Open Community Build. Learn more at [virtuslab.com/expertise/scala](https://virtuslab.com/expertise/scala).
 
-<a href="https://www.epfl.ch/"><img src="{{ site.baseurl }}/resources/img/epfl-logo.svg" alt="EPFL" style="height: 48px; width: auto; margin-right: 2.5em; vertical-align: middle;"></a><a href="https://scala.epfl.ch/"><img src="{{ site.baseurl }}/resources/img/orgs/scala-center-logo.png" alt="Scala Center" style="height: 48px; width: auto; vertical-align: middle;"></a>
+<p style="margin-top: 10px; margin-bottom: 4px; line-height: 0;"><a href="https://www.epfl.ch/"><img src="{{ site.baseurl }}/resources/img/epfl-logo.svg" alt="EPFL" style="height: 48px; width: auto; margin: 0 2.5em 0 0; vertical-align: middle;"></a><a href="https://scala.epfl.ch/"><img src="{{ site.baseurl }}/resources/img/orgs/scala-center-logo.png" alt="Scala Center" style="height: 48px; width: auto; margin: 0; vertical-align: middle;"></a></p>
 
 **About EPFL and the Scala Center**
 
