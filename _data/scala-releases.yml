@@ -5,7 +5,7 @@
 - category: current_version
   title: Current 3.3.x LTS release
   version: 3.3.9
-  release_date: October 27, 2026
+  release_date: October 28, 2026
 # Keep this after every other 3.x current_version whose title contains "LTS".
 # frontpage.html and download.html assign Latest LTS from the last such entry.
 - category: current_version
