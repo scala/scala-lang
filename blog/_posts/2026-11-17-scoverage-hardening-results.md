@@ -10,7 +10,7 @@ description: "A wrap-up of the commissioned Scoverage hardening work: broader co
 
 ## Summary
 
-We've been working throughout 2026 on making Scoverage more reliable in Scala 3. As the commissioned work comes to a close, this article reports on the results. We have successfully enabled coverage testing across the wider compiler test suite, fixed breakages encountered in process achieving a 99.5% pass rate, and for the 0.5% tests not working with coverage yet, identified a systematic root cause to be resolved as future work.
+We've been working throughout 2026 on making Scoverage more reliable in Scala 3. As the project comes to a close, this article reports on the results. We have successfully enabled coverage testing across the wider compiler test suite, fixed breakages encountered in process achieving a 99.5% pass rate, and for the 0.5% tests not working with coverage yet, identified a systematic root cause to be resolved as future work.
 
 ## What is coverage?
 
@@ -32,7 +32,7 @@ The test passes, but it only tests the free shipping case. The paid-shipping bra
 
 In Scala 3, coverage instrumentation is built directly into the compiler. You can enable it with the `-coverage-out:DIR` compiler option, where `DIR` is the directory where you'd like coverage telemetry to be recorded. The compiler writes a map of instrumented statements, and the instrumented program records which of them execute at runtime.
 
-The [Scoverage plugin and reporting libraries](https://github.com/scoverage/scalac-scoverage-plugin) provide the reporting and visualization of this data. In Scala 3, the instrumentation itself comes from the compiler, so a separate compiler plugin is not needed. See [Code Coverage for Scala 3](https://www.scala-lang.org/api/3.4.1/docs/docs/internals/coverage.html) for documentation. You can visualize the reports as HTML using [sbt-scoverage](https://github.com/scoverage/sbt-scoverage).
+The [Scoverage plugin and reporting libraries](https://github.com/scoverage/scalac-scoverage-plugin) provide the reporting and visualization of this data. In Scala 3, the instrumentation itself comes from the compiler, so a separate compiler plugin is not needed. See [Code Coverage for Scala 3](https://nightly.scala-lang.org/docs/internals/coverage.html) for documentation. You can visualize the reports as HTML using [sbt-scoverage](https://github.com/scoverage/sbt-scoverage).
 
 ## Interactions with the language
 
