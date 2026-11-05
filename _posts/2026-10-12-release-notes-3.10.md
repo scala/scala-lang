@@ -466,6 +466,8 @@ Scala 3.9 LTS continues as the long-term publishing baseline.
 
 As always, the full changelog is available in the [release notes on GitHub](https://github.com/scala/scala3/releases/tag/3.10.0).
 
+## Credits
+
 This release was made possible by the joint work of [EPFL](https://www.epfl.ch/), [VirtusLab](https://virtuslab.com/expertise/scala) and the [Scala Center](https://scala.epfl.ch/), together with the wider Scala community. Thank you to everyone who contributed.
 
 <p style="margin-bottom: 4px; line-height: 0;"><a href="https://virtuslab.com/expertise/scala"><img src="{{ site.baseurl }}/resources/img/orgs/virtuslab-logo.png" alt="VirtusLab" style="height: 64px; width: auto; margin: 0;"></a></p>
