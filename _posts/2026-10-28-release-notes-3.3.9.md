@@ -64,4 +64,4 @@ VirtusLab is a software engineering company and a long-term core contributor to 
 
 **About EPFL and the Scala Center**
 
-Scala was created at EPFL in Lausanne, Switzerland, by Martin Odersky's research group. EPFL still leads much of the language's design and compiler research. The Scala Center, a not-for-profit centre at EPFL, supports Scala's open-source ecosystem, tooling and education. Learn more at [scala.epfl.ch](https://scala.epfl.ch).
+Scala was created at EPFL in Lausanne, Switzerland, by Martin Odersky's research group, LAMP. LAMP still leads much of the language's design and compiler research. The Scala Center, a not-for-profit centre at EPFL, supports Scala's open-source ecosystem, tooling and education. Learn more at [scala.epfl.ch](https://scala.epfl.ch).

@@ -19,7 +19,7 @@ The compiler now warns when `synchronized` is called on an instance of a Java va
 
 The bundled Scala CLI has been upgraded from 1.17.1 to **1.18.0**. Highlights include:
 
-- Scala CLI itself now requires Java 17 or newer. You can still compile and run your code using older JVMs, for example with `--jvm 8` or `--jvm 11`.
+- The JVM launcher no longer starts on JDK 11–16 by downloading JDK 17 and relaunching. Start it on Java 17 or newer. Your code can still be compiled and run on older JVMs, for example with `--jvm 8` or `--jvm 11`.
 - `scala fix` removes deprecated comma separators from `//> using` directives.
 - Java snippets, Java source read from standard input, and Java blocks in Markdown now support `enum`s, `record`s, package-private classes, and JEP 512 compact source files.
 
@@ -81,4 +81,4 @@ VirtusLab is a software engineering company and a long-term core contributor to 
 
 **About EPFL and the Scala Center**
 
-Scala was created at EPFL in Lausanne, Switzerland, by Martin Odersky's research group. EPFL still leads much of the language's design and compiler research. The Scala Center, a not-for-profit centre at EPFL, supports Scala's open-source ecosystem, tooling and education. Learn more at [scala.epfl.ch](https://scala.epfl.ch).
+Scala was created at EPFL in Lausanne, Switzerland, by Martin Odersky's research group, LAMP. LAMP still leads much of the language's design and compiler research. The Scala Center, a not-for-profit centre at EPFL, supports Scala's open-source ecosystem, tooling and education. Learn more at [scala.epfl.ch](https://scala.epfl.ch).
