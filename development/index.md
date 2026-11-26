@@ -181,7 +181,8 @@ relevant information can be found below.
 ### Scala 3 LTS
 
 **Scala 3 LTS** is a designated **minor** version that is the **preferred target
-version for libraries**. Currently, it is the Scala 3.3.x series.
+version for libraries**. Currently, it is the Scala 3.9.x series. Scala 3.3.x 
+series is the previous LTS line that ends in September 2027.
 
 It is possible to use a library if it was published with the same minor version
 (x in 3.x.y) or lower than the one you use. There are 2 main reasons for
